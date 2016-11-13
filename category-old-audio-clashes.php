@@ -1,5 +1,3 @@
-
-
 <?php get_header(); ?>
 
 <?php get_sidebar(); ?>
@@ -13,7 +11,7 @@
 		if ( have_posts() ) : ?>
 
 <div id="news_section">
-<h1>Categories</h1>
+<h1>Categories-Old-Audio</h1>
             
 <div class="news_box">
 

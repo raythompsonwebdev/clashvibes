@@ -1,8 +1,17 @@
-
-
 <?php get_header(); ?>
-
 <?php get_sidebar(); ?>
+<div id="clashvibes_content">
+ 	
+<?php
+$original_query = $wp_query;
+$wp_query = null;
+$args = array(
+'category_name'=> 'video-clashes',
+'post_type' => 'sound_clash_video',
+'post_count' => '4'
+);
+$wp_query = new WP_Query($args);
+?>
 
 <div id="clashvibes_content">
  	 	
@@ -13,7 +22,7 @@
 		if ( have_posts() ) : ?>
 
 <div id="news_section">
-<h1>Categories</h1>
+<h1>Categories-Audio</h1>
             
 <div class="news_box">
 

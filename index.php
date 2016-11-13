@@ -13,7 +13,7 @@
 $original_query = $wp_query;
 $wp_query = null;
 $args = array(
-'posts_per_page' => 1,
+'posts_per_page' => 3,
 'post_type' => 'post',
 'paged' => $paged
 );

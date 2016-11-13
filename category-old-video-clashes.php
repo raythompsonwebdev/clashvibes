@@ -13,7 +13,7 @@
 		if ( have_posts() ) : ?>
 
 <div id="news_section">
-<h1>Categories</h1>
+<h1>Categories-Old-Video</h1>
             
 <div class="news_box">
 

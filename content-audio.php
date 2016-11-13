@@ -1,16 +1,23 @@
 
-<?php
+<<?php
 
 $original_query = $wp_query;
 $wp_query = null;
-$args = array('category_name'=> 'Audio-clashes', 'post_type' => 'post' ,'post_count' => '10'
-);
+$args = array(
+    'category_name'=> 'new-audio-clashes',  
+    'post_type' => 'sound_clash_audio',
+    'post_count' => '5',
+    'posts_per_page' => '5'
+    );
 
 $wp_query = new WP_Query($args);
 
 ?>
 
-<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
+<?php 
+
+if ( $wp_query-> have_posts() ) :  while ( have_posts() ) : $wp_query-> the_post(); 
+?>
 
 <section class="new_released_box">
 <article class="thumb"><?php the_post_thumbnail(); ?></article>

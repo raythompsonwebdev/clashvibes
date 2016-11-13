@@ -84,9 +84,15 @@ add_theme_support( 'post-formats', array(
 
 
 if ( function_exists( 'register_nav_menus' ) ) {
-	register_nav_menus(	array(  'main' => 'Main Nav', 
-								'Secondary' => 'Secondary',
-								'mobile' => 'mobile' ));
+	register_nav_menus(	
+            array(  
+                'main' => 'Main Nav', 
+                'Secondary' => 'Secondary',
+                'mobile' => 'mobile',
+                'Audio-Nav' => 'audio-nav',
+                'Video-Nav' => 'video-nav'
+                       
+            ));
 	
 }
 

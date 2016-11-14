@@ -26,31 +26,33 @@ $wp_query = new WP_Query($args);
   			
 <article class="post group"<?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-<section class="byline"> Date <?php the_time('jS F Y') ?> at <?php the_time('g:i a'); ?><br />
-Written by <?php the_author() ?></section>
-
+<header class="entry-header"> 
+  <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+<section class="byline"> 
+    <span> Date <?php the_time('jS F Y') ?></span><span> at <?php the_time('g:i a'); ?>
+    </span><span>Written by <?php the_author() ?><span>
+</section>
+</header>
 <article class="thumb"><?php the_post_thumbnail(); ?></article>
 
-<section class="newsExcerpt"><?php the_excerpt();?>
-
-</section>
+<section class="newsExcerpt"><?php the_excerpt();?></section>
 
 <br/>
 
-<section class="byline">
-Posted in category<?php the_category(', ') ?> <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
+<footer class="byline">
+Posted in category<?php the_category(', ') ?> 
+    <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
 <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
 <br/>
-<p><?php $lastmodified = get_the_modified_time('U'); $posted = get_the_time('U');
-			if ($lastmodified > $posted) {
-			echo "Edited " . human_time_diff(get_the_time('U'),	get_the_modified_time('U')) . " later";
-			}?>
+<p>
+    <?php $lastmodified = get_the_modified_time('U'); $posted = get_the_time('U');
+    if ($lastmodified > $posted) {
+    echo "Edited " . human_time_diff(get_the_time('U'),	get_the_modified_time('U')) . " later";
+    }?>
 </p>
 
-	</section>
-
-		</article>
+</footer>
+</article>
 
 	<?php endwhile; ?>
 	<?php else: ?>

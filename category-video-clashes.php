@@ -20,9 +20,9 @@ $wp_query = new WP_Query($args);
 <section class="clashvibes_right_panel_fullwidth">
 <?php// Check if there are any posts to display
 		if ( have_posts() ) : ?>
-
-<div id="news_section">
 <h1>Categories-Video</h1>
+<div id="news_section">
+
             
 <div class="news_box">
 
@@ -38,6 +38,7 @@ $wp_query = new WP_Query($args);
 <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
 
 <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+
 <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
 
 <div class="entry">

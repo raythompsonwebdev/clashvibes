@@ -10,8 +10,6 @@
 <section class="clashvibes_right_panel_fullwidth">
 
 <?php if ( have_posts() ) : ?>
-
-<div id="news_section">
 <h1><?php // Output the category title
       if ( is_category() ) { single_cat_title(); } 
       // Output the tag title
@@ -20,6 +18,8 @@
 
       } else { _e('Browsing the Archive', 'clashvibes'); }
     ?></h1>
+<div id="news_section">
+
      <?php while ( have_posts() ) : the_post(); ?>       
 
 <div class="news_box">

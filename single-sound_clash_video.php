@@ -13,18 +13,22 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 <header class="entry-header">
-    audio
-<h1 class="entry-title">Sound Clash Profile: <span><?php the_title(); ?></span></h1>
+<h1 class="entry-title">
+    <span>Sound Clash Video: <a href="<?php the_permalink() ?>"><?php the_title(); ?></a></span>
+</h1>
 
-<span class="byline"> Date <?php the_time('jS F Y') ?> at <?php the_time('g:i a'); ?><br />
-Written by <?php the_author() ?></span>
+<section class="byline"> 
+    <span> Date <?php the_time('jS F Y') ?></span>
+    <span> at <?php the_time('g:i a'); ?></span>
+    <span>Written by <?php the_author() ?><span>
+</section>
 
 </header>
 
  <figure class="thumb"><?php the_post_thumbnail(); ?></figure> 
  
 <section class="newsExcerpt"><?php the_content();?></section>
- 
+ <br/>
  <footer class="speaker-meta">
 <span>Clashed at: <?php echo get_post_meta($post->ID,'sound_clash__business', true); ?></span>
 <span>Visit <a href="<?php echo get_post_meta($post->ID,'sound_clash_website_url', true); ?>">

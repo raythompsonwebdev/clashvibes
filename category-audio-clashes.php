@@ -20,9 +20,9 @@ $wp_query = new WP_Query($args);
 <section class="clashvibes_right_panel_fullwidth">
 <?php// Check if there are any posts to display
 		if ( have_posts() ) : ?>
-
-<div id="news_section">
 <h1>Categories-Audio</h1>
+<div id="news_section">
+
             
 <div class="news_box">
 

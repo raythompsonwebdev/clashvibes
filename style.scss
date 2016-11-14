@@ -1,0 +1,851 @@
+/*
+Theme Name: Clashvibes
+Theme URI: http://www.envato.com
+Description: Reggae sound clashes.
+Version: 1.0
+Author: Mr Bullitan
+Author URI: 
+*/
+
+/**GENERAL CLASSES (alpha order)**/
+
+.left-col{
+    width: 66%;
+    float: left;
+}
+
+.right-col{
+    float: right;
+    width: 32%;
+    margin-left: 2%;
+}
+
+#mep_0{width:50%; margin:auto;}
+
+.left{
+    float: left; 
+    display:block; 
+    height:40px; 
+    margin:0 5%; 
+    color:#000; 
+    line-height: 40px;
+    a{margin:0; height:100%; line-height:40px;}
+}
+
+.right{
+    float: left;
+    display:inline-block;
+    height:40px;
+    color:#000;
+    a{margin:0;height:100%;line-height:40px;}
+}
+
+
+/* self-clear floats */
+
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }  
+
+.clearfix { display: inline-block; }
+
+.clearfix:before,.group:before,.group:after {  content: "";  display: table;}
+
+.group:after {  clear: both;}
+
+.group {  *zoom: 1;}
+
+img#wpstats{display:none; width:1px;}
+
+img{ width:100%; max-width:100%; height:auto;}
+
+body {	
+    margin:0;	
+    padding:0;	
+    line-height: 1.5em;	
+    font-family:  Helvetica, Arial, sans-serif;
+    font-size: 1em;	
+    color: #000;	
+    background-color: #ffffff;
+    .myaudio{width:50%; display:block; }
+}
+
+h1,h2,h3,h4 {
+    margin:0 ;	
+    padding: 0 ;
+    font-size: 1em;	
+    font-weight: bold;	
+    color: #fff;
+    background: #000000; 
+    clear:both;
+    width: 100%;
+    height: 50px;
+    
+}
+
+a{color:#fff; text-decoration:none; font-size:1em;}
+
+
+#container {
+    margin: 0px auto;	
+    width: 85%;	
+    height:auto;
+    h1 {
+        margin:1% 0; 
+        width:100%;
+        a {cursor:text;color:#4F4F4F;font-size:1em;width:100%; display:block;}
+        a:hover {text-decoration:none;}
+    }
+       
+    header { width:100%;	padding: 0 ; height:100px;	margin:0 ;}
+
+    /*--- Menu ---*/
+    nav{ 
+        display:block;	
+        width: 100%; 
+        height: 51px; 
+        margin-bottom:1%; 
+        margin: 0 0 1% 0; 
+        padding:0;
+        ul {margin: 0;	
+            padding: 0 ;
+            list-style: none;
+            li{display: inline-block; 
+               float: left;	
+               width: 160px;	
+               height: 50px;
+               margin-right:1%;
+               a{   
+                    width: 100%;
+                    background-color:#000;	
+                    height: 84%;	
+                    padding: 0;	
+                    font-size: 0.9em;
+                    line-height:40px;	
+                    font-weight: bold;	
+                    text-align: center;	
+                    text-decoration: none;	
+                    color: #fff;
+                    display:block;
+                    &:hover{ background-color:#86ad1c; color:#000;}
+               }
+               .lastmenu{border-right: none;}
+
+            }
+        }
+    }
+
+  
+
+    /* End of Form */
+    /* 
+    define width and height of list item (slide)
+    entire slider area will adjust according to the parameters provided here
+    */
+    #clashvibes_content_front{
+        
+        #clashvibes_banner{
+            width: 98%;  
+            height: 400px; 
+            display: block;  
+            clear: both; 
+            margin: 1% ;
+            background-color: #fec92d;
+            #slider { 
+                margin:0; 
+                padding:0; 
+                list-style:none; 
+                li { width:100%; overflow:hidden; padding:0; margin:0; }
+                                           
+            }
+            
+
+            p#controls { margin:0; position:relative; }
+            #nextBtn { display:block; margin:0; overflow:hidden; width:29px; height:29px; position:absolute; left:7px; top:-220px; }
+            #nextBtn { left:97%; }
+            #prevBtn a { display:block; width:29px; height:29px; background:url(images/l_arrow.gif) no-repeat 0 0; }
+            #nextBtn a { display:block; width:29px; height:29px; background:url(images/r_arrow.gif) no-repeat 0 0; }
+            
+        } 
+        
+        
+    } 
+    
+    
+}/* container */
+
+/*------------ Header --------------- */
+#clashvibes_title {float: left; width: 300px; display:block;}
+
+#clashvibes_login {
+    margin-top: 3%;
+    width: 100%; 
+    display:block; 
+    height: 45px; 
+    padding: 2%;
+    form{	
+        margin: 0;	
+        padding: 0;
+        .form_row{	margin-bottom: 10px;text-align: left;}
+        
+        label {	text-align: left; color:#fff; font-size:1.5em; line-height:1.4em; margin:0px 20px 0px 10px;}
+        
+        input[type="text"]{ width:60%; height:30px; line-height:1.5em; display:inline-block;float: left;}
+        input[type="submit"]{
+            background-color:#e9001c; 
+            width:30%; 
+            margin:0 0 0 2%; 
+            display:inline-block;
+            height:35px;
+            color:#fec92d;
+            border:none;
+            outline:none;
+            &:hover{background-color:#fec92d; color:#d1181e;border:none;outline:none; cursor:pointer;}
+        }
+     
+    }
+    /* ----- Form ----- */
+}
+
+/* -------------- End of Header------------------ */
+
+/********** slider **********/
+.slider {
+    background: url(images/bg_slider.gif) top center repeat-x; 
+    margin:0 auto; 
+    padding:0; 
+    height:378px;
+    div.slice1 { margin:0 auto; width:890px; padding:0;}
+    div div div { margin:0; padding:0; width:880px;  border:0;}
+    div div div p.img { float:right; width:483px; padding:29px 0 0 0; margin:0;}
+    div div div h2 {width:378px; float: left; font-size:1.5em; font-family:Arial, Helvetica, sans-serif; color:#fff;  margin:1% auto; padding:1% ; line-height:1.5em; }
+    div div div p { width:378px; float: left; font-family:Arial, Helvetica, sans-serif; font-size:1em; color:#262626; margin:0; padding:20px 0 0 10px; line-height:1.8em;}
+  
+}
+
+/********* slider2 ************/
+.slider2 {
+    background: #fff url(images/slider_bg2.gif) top repeat-x; 
+    margin:0 auto; 
+    padding:0; 
+    height:89px;
+    
+}
+.slider2_resize { 
+    width:950px; 
+    margin:0 auto;
+    padding:0;
+    h2 {width:445px; float: left; font:bold 36px Arial, Helvetica, sans-serif; color:#fff; margin:2% 0; padding:20px 0 0 30px; line-height:1.2em; text-transform:uppercase;}
+    p { width:350px; float: right; font:normal 11px   Arial, Helvetica, sans-serif; color:#212121; margin:0; padding:20px 0 0 10px; line-height:1.8em;}
+}
+
+#clashvibes li a:hover, nav li .current{color: #FFCC33;}
+/*--- End of Menu ---*/
+
+/*--- Content ---*/
+#clashvibes_content { 
+    padding: 0 ; 
+    margin:auto;
+}
+
+/*--- Left Column---*/
+#clashvibes_left_column {
+    float: left;
+    margin: 0 0 1% 0;
+    background-color: #86ad1c;	
+    padding: 0px;
+    width:21%;	
+    list-style:none;
+    border:#000 solid 4px;
+    display:block;
+    h1{ 
+        font-size:1.5em; 
+        text-align:center; 
+        background-color:#fff; 
+        color:#000; 
+        margin:0; 
+        padding:0;
+        height:40px; 
+        line-height:40px;
+    }
+    a{
+        font-size:0.85em;
+        height: 100%;	
+        padding: 0;		
+        line-height:40px;
+        text-align:center;	
+        text-decoration: none; 
+        width:100%;	
+        color: #CCCCCC;
+        list-style:none;
+        margin:0px;
+    }
+    
+    .comment-author-link{font-size:0.9em; margin:0; padding:0;}
+    
+    .left_col_box {	
+        margin: 0;	
+        color: #AAA;
+        list-style:none;
+        ul {	
+            margin: 0;	
+            padding:0;
+            li{ list-style:none; 
+                text-align:center; 
+                height:40px; 
+                line-height:40px; 
+                color:#333;
+                 a{
+                    font-size:0.85em;	
+                    height: 100%;	
+                    padding: 0;		
+                    line-height:40px;
+                    text-align:center;	
+                    text-decoration: none; 
+                    width:100%;	
+                    color: #CCCCCC;
+                    list-style:none;
+                    margin:0px;
+                 }
+            } 
+        }
+    }
+    
+    .blog_box {	
+        
+	list-style:none;
+        width: 96%;
+        margin: 0 auto;
+        p{ font-family:Arial, Helvetica, sans-serif; margin-left:5px; }
+        h3 {
+           a{font-size: 1em;color: #d3a401;text-align:center;}  
+        }
+        .widget { 
+            width:100%; 
+            display:block;
+            h3{
+                background-color:#658905; 
+                text-align:center; 
+                height:40px; 
+                line-height:40px; 
+                margin:3% 0; 
+                padding:0; 
+                font-size:1.2em;
+                
+            }
+
+        }
+        ul{
+            padding:0; 
+            margin:0;
+            li {
+                list-style:none;
+                display:block;
+                line-height:40px;
+                text-align:center;
+                
+                a{
+                    padding:0; 
+                    margin:0 0 1% 0; 
+                    text-align:center; 
+                    display:block;
+                    text-decoration:none;
+                    background-color:#d1181e;
+                    color: #000;
+                    &:hover{ color: #000; background-color: #fec92d;}
+                }
+                
+            }
+        }
+        span{	color: #99836c;}
+    
+    }
+}
+/*--- End of Left Column---*/
+
+/*--- Right Column---*/
+#clashvibes_right_column {
+    background-color: #86ad1c;	
+    float: right;	
+    margin: 0 0 1% 0;	
+    padding: 0;		
+    border:#000 solid 4px;	
+    display:block; 
+    width:77%;
+    h1{ 
+        font-size:1.7em; 
+        height:30px; 
+        line-height:30px; 
+        clear:both; 
+        margin:0; 
+        padding:2% 0; 
+        width:98%;
+    }
+    .clashvibes_right_panel_fullwidth { 
+        float:left; 
+        width: 96%; 
+        min-height:720px;	
+        padding: 2%; 
+        height:auto; 
+        margin:0 ; 
+        display:block;
+        
+        /*blog*/
+        .post{
+            width:96%; 
+            color:#000; 
+            background-color:#fff; 
+            padding:2%; 
+            display:block;
+            margin-bottom: 1%;
+            audio{width:80%; margin:0 auto; display:block;}
+            
+            .byline{
+                height:auto; 
+                color:#000;
+                display:block;
+                span{ 
+                    font-size:0.9em; 
+                    padding:0;
+                    line-height:30px;
+                    height:30px; 
+                    margin:0;
+                    color:#000; 
+                    width:auto;
+                    display:block; 
+                }
+            }
+
+            h3{ 
+                font-size:1.1em; 
+                height:40px; 
+                line-height:40px; 
+                padding:0; 
+                margin:0; 
+                color:#fff;
+                text-indent:1%;
+                a{ color:#fff;}
+            }
+            
+            figure.thumb{width:20%; margin:5% auto;}
+            .newExcerpt{height:auto;}
+            p{color:#000; font-size:0.9em;}
+            ul figure{width:90%; margin:0 auto; padding:0;}
+            .thumb{max-width:30%; margin: 5% auto; border:2px #fff solid;}
+
+        }
+
+        /*blog end*/
+
+    }
+
+    .sound_clash_audio,{
+        background-color:#fff;
+        margin: 1%;
+        width:96%;
+        padding:1%;
+        audio{width:80%; margin:0 auto; display:block;}
+        header.entry-header{
+            display:block; 
+            height:auto;
+            
+            h1.entry-title{
+                background-color:red; 
+                padding: 0 1%;
+                width: 98%;
+                height: 50px; 
+                line-height:50px;
+                color:#fff;
+                span{
+                    padding:0;
+                    height:30px; 
+                    margin:0;
+                    color:#fff; 
+                    width:auto;
+                    display:inline-block;
+                    height:100%;
+                    
+                    a{color:#000;display: inline;}
+                }
+           
+            }
+            .byline{
+                height:auto; 
+                color:#000;
+                display:block;
+                background-color: #fec92d;
+                span{
+                    padding:0;
+                    height:30px;
+                    line-height:30px;
+                    margin:0;
+                    color:#000; 
+                    width:auto;
+                    display:block;
+                    font-size:0.9em;
+                    a{color:#000; display: inline;}
+                  
+                }
+            }
+           
+        }
+        
+        figure.thumb{width:20%; margin:5%;}
+                        
+        footer.speaker-meta{ 
+            color:#000; 
+            padding:0; 
+            margin:0;  
+            display:inline-block; 
+            width:100%;
+            background-color: #86ad1c;
+            span{
+                display:block; 
+                height:30px; 
+                line-height:30px;
+                width:auto;
+                color:#000;
+                font-size:0.9em;
+                a{color:#000; display:block;width:auto; height:100%;}
+            }
+        }
+               
+    }
+    
+    .sound_clash_video{
+        background-color:#fff;
+        margin:1%;
+        width:96%;
+        padding:1%;
+        audio{width:80%; margin:0 auto; display:block;}
+        header.entry-header{
+            display:block; 
+            height:auto;
+            
+            h1.entry-title{
+                background-color:blue; 
+                padding: 0px;
+                width: 100%;
+                height: 50px; 
+                line-height:50px;
+                color:#fff;
+                
+                span{
+                    padding:0;
+                    line-height:50px;
+                    
+                    height:50px; 
+                    margin:0;
+                    color:#fff; 
+                    width:auto;
+                    display:inline-block;
+                    a{color:#000;display: inline;}
+                }
+           
+            }
+            .byline{
+                height:auto; 
+                color:#000;
+                display:block;
+                span{
+                    padding:0;
+                    line-height:30px;
+                    height:30px; 
+                    margin:0;
+                    color:#000; 
+                    width:auto;
+                    display:block;
+                    font-size:0.9em;
+                    a{color:#000; display: inline;}
+                    
+                }
+            }
+           
+        }
+        
+        figure.thumb{width:20%; margin:5%;}
+                        
+        footer.speaker-meta{ 
+            color:#000; 
+            padding:0; 
+            margin:0;  
+            display:inline-block; 
+            width:100%;
+            background-color: #86ad1c;
+            span{
+                display:block; 
+                height:30px; 
+                line-height:30px;
+                color:#000;
+                font-size:0.9em;
+                a{color:#000;}
+            }
+        }
+               
+    }
+           
+}
+
+#clashvibes_content_front {
+    padding: 0 ; 
+    width:100%; 
+    margin:auto;
+    #clashvibes_right_column_front { 
+    //float: none; 
+    background-color: #fec92d;
+    min-height:720px;  
+    margin:0 0 1% 0; 
+    padding: 0px;   
+    border: 6px solid #000;    
+    display: block;    
+    width: 99%;
+    h1{ 
+            display:block;
+            
+            text-indent : 1%;
+            font-size:1.5em; 
+            height:40px; 
+            line-height:40px; 
+            clear:both; 
+            margin:0 0 1% 0; 
+            padding:2% auto; 
+        }
+    
+    #new_released_section {	
+        
+        width: 100%;	
+        margin: 0 0 1% 0;
+        //display:inline-block;
+        display:-webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+        -webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+      	-webkit-align-items: flex-end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+        -webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+        
+        
+
+    }
+    .new_released_box {	
+        float: left;
+        width: 16.6%; 
+        height:auto;	
+        padding:1%; 
+        margin: 1% 0 1% 0.5%;
+        border:#000 solid 4px; 
+        height:auto; 
+        background-color:#86ad1c;
+        h3{
+            margin:0; 
+            color:#fff; 
+            font-size:0.85em; 
+            height:auto; 
+            text-align:center;  
+            padding:1% 0; 
+            line-height:23px;
+            width: 98%;
+        }
+        a{
+            font-size:90%; 
+            width:100%; 
+            text-align:center; 
+            color:#000; 
+            background-color:#e21319;
+            display:block;
+            
+            &:hover{font-size:90%; color:#fec92d; background-color:#9c281b;width:100%;}
+        }
+        .thumb{ width:90%; background-color:#000; height:auto; border:4px solid #fff;margin:5% auto;}
+        .rantsection { 
+            height: 30px; 
+            margin:2% 0 ; 
+            display:block;
+            .star {float: left; height: auto;width: 20%;border: 0px;margin:0px ; display: inline-block; padding:0;}
+        }
+        .more_button{
+            margin:0; 
+            padding:0;
+            a.read_more{font-size:0.75em; color:#000; margin:5% 0;padding: 0;}
+        }
+
+    }
+    
+}
+}
+
+.clashvibes_right_panel_fullwidth { 
+    float:left; 
+    width: 96%; 
+    min-height:720px;	
+    padding: 2%; 
+    height:auto; 
+    margin:0 ; 
+    display:block;
+    
+
+    /*blog*/
+    .post{
+        width:96%; 
+        color:#000; 
+        background-color:#fff; 
+        padding:2%; 
+        display:inline-block; 
+        float:left;
+        .byline{
+            height:50px; 
+            color:#000;
+            p{padding:0; margin:0;color:#fff;}
+            a{height:50px; font-size:1.2em; display:inline-block; width:auto; color:#fff;line-height: 50px;  }
+
+        }
+                
+        h3{ 
+            font-size:1.1em; 
+            height:40px; 
+            line-height:40px; 
+            padding:0; 
+            margin:0; 
+            color:#000;
+            a{ font-size:1.1em; color:#000;}
+        }
+        figure.thumb{width:20%;}
+        .newExcerpt{height:auto;}
+        p{color:#000; font-size:0.9em;}
+        ul figure{width:90%; margin:0 auto; padding:0;}
+        .thumb{max-width:30%; margin: 5% auto; border:2px #fff solid;}
+        
+    }
+    
+    /*blog end*/
+
+}
+
+.clashvibes_right_panel_fullwidth_content {	
+    float: left;
+    width: 620px;
+    padding: 0 ;
+    p{text-align: justify; width:100%; color:#000;}
+}
+
+#news_section { 
+    float:left;	
+    width: 100%;
+    margin: 0 ;	
+    border:#fff solid 1px;	
+    padding:0;
+    h1{width:98%; padding: 0;height: 40px;line-height: 40px;margin: 1% auto;}
+    
+    
+}
+
+.news_box {	
+    float: left;	
+    width: 100%;	
+    margin: 0 ;
+    h2{font-size:1.1em; line-height:50px; text-align:left; margin:0.5em auto; padding:0; width:98%;}
+    ul{
+        list-style:none;
+        margin:0 auto; 
+        padding:0; 
+        width:98%;
+        .archive-meta p{color:#fff;}
+        .postmetadata{display:inline-block;}
+        h2{width:100%;font-size:1em;}
+        small{margin:0.5em 0; display:inline-block;width:100%;}
+        .entry p{ height:auto; color:#fff; display:inline-block; padding:1em 0;}
+    }
+    img{	float: left;	width: 110px;	margin: 3px 10px 0 0;	border: 1px solid #333333;}
+    p{	margin: 0;	padding: 0;}
+
+}
+
+#topdownload_section {	
+    	
+    width: 43.5%;	
+    padding: 2%;	
+    margin: 1%;	
+    background-color: #86ad1c;
+    color: #fff;	
+    border: #000 solid 1px; 
+    display:inline-block;
+    h1{ 
+        font-size: 1.3em;   
+        height: 30px;   
+        line-height: 30px;  
+        padding:2% 0; 
+        clear: both; 
+        margin: 0; 
+        color:#fff;
+    }
+
+}
+
+.topdownload_box {
+    width: 100%;	
+    margin:0 0 1% 0;
+    color: #000;
+    font-weight: bold;	
+    border-bottom: 1px solid #6b5946; 
+    height:40px;
+    span{
+        background-color:#fff;	
+        font-weight: normal; 
+        height:40px; 
+        width:11%; 
+        padding:0; 
+        display:block; 
+        float:left;
+        a{  
+            height:100%; 
+            font-size:0.8em; 
+            line-height:40px;  
+            padding:0; 
+            background-color:#fec92d;; 
+            display:block; 
+            margin:0; 
+            text-align:center;
+            color:#9c281b;
+            &:hover{background-color:#9c281b;color:#fec92d;}
+        }
+
+    }
+
+}
+/*--- topdownload box ---*/
+
+* html .topdownload_box {	margin: 0 15px 10px 7px;}
+
+.title_singer{text-indent: 1%; background-color:#fff;float: left;width:89%; color:#000; height:100%; line-height:40px; font-size:0.9em; display:inline-block;}
+/*--- End of Right Column---*/
+/*--- End of Content ---*/
+
+/* ----- Footer ----- */
+#clashvibes_footer {	
+    clear: both;	
+    padding: 15px 0;	
+    width: 100%;
+    text-align: center;	
+    color: #fff;	
+    background: #000;	
+    text-align: center;	
+    font-size:100%;
+    border:#fff solid 1px;
+    a{ 
+        width:15%;	
+        color: #fff; 
+        display:inline-block; 
+        height:40px; 
+        line-height:40px;
+        &:hover{	color: #cccc66;}
+    }
+    p{  clear:both;  text-align:left; font-size:0.75em; display:block; text-indent:3%;}
+
+    
+
+}
+
+/* ----- End of Footer ----- */

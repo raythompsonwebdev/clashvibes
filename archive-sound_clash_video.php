@@ -5,12 +5,10 @@
        
     <section id="clashvibes_right_column_front">
    
-  
+  <h1>Sound Clash Video</h1>
 
 <section id="new_released_section">
-        
-<h1>Sound Clash Audio</h1>
-
+       
 
 <?php
 $original_query = $wp_query;

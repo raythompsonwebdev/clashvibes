@@ -396,7 +396,7 @@ a{color:#fff; text-decoration:none; font-size:1em;}
             padding:2%; 
             display:block;
             margin-bottom: 1%;
-            audio{width:80%; margin:0 auto; display:block;}
+            .audio-play{width:85%; margin:0 auto; display:block;}
             
             .byline{
                 height:auto; 
@@ -442,13 +442,19 @@ a{color:#fff; text-decoration:none; font-size:1em;}
         margin: 1%;
         width:96%;
         padding:1%;
-        audio{width:80%; margin:0 auto; display:block;}
+        .audio-play{
+            width:85%; 
+            margin:0 auto; 
+            display:block;
+            .mejs-controls .mejs-play button {  background-position: 0 0; background-color:#000;}
+            .mejs-container .mejs-controls{background: #000;}
+        }
         header.entry-header{
             display:block; 
             height:auto;
             
             h1.entry-title{
-                background-color:red; 
+                background-color: #d1181e; 
                 padding: 0 1%;
                 width: 98%;
                 height: 50px; 
@@ -473,6 +479,7 @@ a{color:#fff; text-decoration:none; font-size:1em;}
                 display:block;
                 background-color: #fec92d;
                 span{
+                    
                     padding:0;
                     height:30px;
                     line-height:30px;
@@ -482,13 +489,13 @@ a{color:#fff; text-decoration:none; font-size:1em;}
                     display:block;
                     font-size:0.9em;
                     a{color:#000; display: inline;}
-                  
+                    
                 }
             }
            
         }
         
-        figure.thumb{width:20%; margin:5%;}
+        figure.thumb{width:20%; margin:5% auto;}
                         
         footer.speaker-meta{ 
             color:#000; 
@@ -515,7 +522,7 @@ a{color:#fff; text-decoration:none; font-size:1em;}
         margin:1%;
         width:96%;
         padding:1%;
-        audio{width:80%; margin:0 auto; display:block;}
+        .audio-play{width:85%; margin:0 auto; display:block;}
         header.entry-header{
             display:block; 
             height:auto;
@@ -561,7 +568,7 @@ a{color:#fff; text-decoration:none; font-size:1em;}
            
         }
         
-        figure.thumb{width:20%; margin:5%;}
+        figure.thumb{width:20%; margin:5% auto;}
                         
         footer.speaker-meta{ 
             color:#000; 

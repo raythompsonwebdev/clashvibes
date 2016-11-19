@@ -1,41 +1,55 @@
 <?php get_header(); ?>
-
 <?php get_sidebar(); ?>
+<div id="clashvibes_content">
+
+<?php
+$original_query = $wp_query;
+$wp_query = null;
+$args = array(
+'category_name'=> 'old-audio-clashes',
+'post_type' => 'sound_clash_audio',
+'post_count' => '3'
+);
+$wp_query = new WP_Query($args);
+?>
 
 <div id="clashvibes_content">
- 	 	
+
 <section id="clashvibes_right_column">
 
 <section class="clashvibes_right_panel_fullwidth">
-<?php// Check if there are any posts to display
-		if ( have_posts() ) : ?>
+
+<h1 class="archive-title">Category:<?php single_cat_title(); ?></h1>
+
 
 <div id="news_section">
-<h1>Categories-Old-Audio</h1>
-            
-<div class="news_box">
+  <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
 
-<ul>
+<div class="news_box">
+  <header class="archive-header">
+
 <?php
 // Display optional category description
  if ( category_description() ) : ?>
-
 <div class="archive-meta"><?php echo category_description(); ?></div>
 <?php endif; ?>
-
-
-<?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
-
 <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
+
+<div class="archive-meta"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></div>
+</header>
+
+
+<figure class="thumb"><?php the_post_thumbnail(); ?></figure>
 
 <div class="entry">
+
 <?php the_content(); ?>
 
- <p class="postmetadata"><?php
-  comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
-?></p>
 </div>
+</br/>
+<footer class="postmetadata"><?php
+ comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
+?></footer>
 
 <?php endwhile; else: ?>
 <p><?php _e('No posts were found. Sorry!'); ?></p>

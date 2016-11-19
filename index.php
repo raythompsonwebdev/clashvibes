@@ -2,9 +2,9 @@
 
 <?php get_sidebar(); ?>
 <div id="clashvibes_content">
- 	
- 	
- 	
+
+
+
 	<section id="clashvibes_right_column">
 
 <section class="clashvibes_right_panel_fullwidth">
@@ -22,25 +22,25 @@ $wp_query = new WP_Query($args);
 
 <?php if ($wp_query->have_posts()):?>
 <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
- 				
-  			
+
+
 <article class="post group"<?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-<header class="entry-header"> 
+<header class="entry-header">
   <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-<section class="byline"> 
+<section class="byline">
     <span> Date <?php the_time('jS F Y') ?></span><span> at <?php the_time('g:i a'); ?>
     </span><span>Written by <?php the_author() ?><span>
 </section>
 </header>
-<article class="thumb"><?php the_post_thumbnail(); ?></article>
+<figure class="thumb"><?php the_post_thumbnail(); ?></figure>
 
 <section class="newsExcerpt"><?php the_excerpt();?></section>
 
 <br/>
 
 <footer class="byline">
-Posted in category<?php the_category(', ') ?> 
+Posted in category<?php the_category(', ') ?>
     <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
 <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
 <br/>
@@ -56,15 +56,15 @@ Posted in category<?php the_category(', ') ?>
 
 	<?php endwhile; ?>
 	<?php else: ?>
-		
+
 		<h1>No posts to show</h1>
 			<p>Sorry, we got nada. Nothing. Bupkis. Zippo. Diddly-squat. Sorry to disappoint.</p>
-				<?php endif; wp_reset_query();?>	
+				<?php endif; wp_reset_query();?>
 
-				
+
 <div class="clearfix"></div>
 </section><!-- end of clashvibes_right_panel_fullwidth -->
-	
+
 
 </section><!-- end of right panel -->
 

@@ -6,9 +6,9 @@
 $original_query = $wp_query;
 $wp_query = null;
 $args = array(
-'category_name'=> 'audio-clashes',
-'post_type' => 'sound_clash_audio',
-'post_count' => '4'
+'category_name'=> 'new-releases',
+'post_type' => array('sound_clash_audio', 'sound_clash_video'),
+'post_count' => '5'
 );
 $wp_query = new WP_Query($args);
 ?>
@@ -21,10 +21,10 @@ $wp_query = new WP_Query($args);
 
 <h1 class="archive-title">Category:<?php single_cat_title(); ?></h1>
 
+
 <div id="news_section">
 
-    <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
-
+  <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
 <div class="news_box">
   <header class="archive-header">
 

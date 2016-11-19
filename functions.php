@@ -1,6 +1,6 @@
 <?php
 define( 'TEMPPATH', get_bloginfo('stylesheet_directory'));
-define( 'IMAGES', TEMPPATH. "/images"); 
+define( 'IMAGES', TEMPPATH. "/images");
 
 
 function fix_ie8() {if (strpos($_SERVER['HTTP_USER_AGENT'],"MSIE 8")) {header("X-UA-Compatible: IE=7");}}
@@ -30,7 +30,7 @@ load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
 add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 80, 80, true );
+set_post_thumbnail_size( 170, 170, true );
 
 add_theme_support( 'title-tag' );
 
@@ -43,7 +43,6 @@ $args = array(
     'uploads'       => true,
 );
 add_theme_support( 'custom-header', $args );
-
 
 $defaults = array(
 	'default-color'          => '',
@@ -84,16 +83,16 @@ add_theme_support( 'post-formats', array(
 
 
 if ( function_exists( 'register_nav_menus' ) ) {
-	register_nav_menus(	
-            array(  
-                'main' => 'Main Nav', 
+	register_nav_menus(
+            array(
+                'main' => 'Main Nav',
                 'Secondary' => 'Secondary',
                 'mobile' => 'mobile',
                 'Audio-Nav' => 'audio-nav',
                 'Video-Nav' => 'video-nav'
-                       
+
             ));
-	
+
 }
 
 
@@ -128,7 +127,7 @@ add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
 /* To register my css styles I use the function below:*/
 
 function enqueue_extra_styles(){
-wp_register_style( 'custom-style', get_stylesheet_directory_uri() . '/master.css', array(), '1', 'true' );	
+wp_register_style( 'custom-style', get_stylesheet_directory_uri() . '/master.css', array(), '1', 'true' );
 
 wp_register_style( 'third-custom-style', get_stylesheet_directory_uri() . '/reset.css', array(), '1', 'true' );
 
@@ -197,5 +196,3 @@ function register_my_menu() {
 add_action( 'init', 'register_my_menu' );
 
 ?>
-
-

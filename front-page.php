@@ -17,7 +17,7 @@
  <h1>Latest Sound Clashes </h1>
         <section id="new_released_section">
 
-           
+
             <?php
             $original_query = $wp_query;
             $wp_query = null;
@@ -39,11 +39,11 @@
 
                         <div class="rantsection">
 
-                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" /> 
-                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />  
-                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" /> 
-                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" /> 
-                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/whitestar.gif" alt="star" /> 
+                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
+                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
+                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
+                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
+                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/whitestar.gif" alt="star" />
 
                         </div>
 
@@ -59,7 +59,7 @@
             wp_reset_query(); ?>
 <div class="clearfix"></div>
         </section><!--End of news release section-->
-    
+
 
         <div>
         <section id="topdownload_section">
@@ -69,25 +69,25 @@
                 $original_query = $wp_query;
                 $wp_query = null;
                 $args = array(
-                    'category_name' => 'audio-clashes',
+                    'category_name' => 'new-audio-clashes',
                     'post_type' => 'sound_clash_audio',
                     'post_count' => '4'
                 );
                 $wp_query = new WP_Query($args);
             ?>
-   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>         
+   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <section class="topdownload_box">
                 <section class="title_singer"><?php the_title() ?></section>
-                <span class="download_button"><a class="download_button" href="<?php the_permalink() ?>">Listen</a></span> 
+                <span class="download_button"><a class="download_button" href="<?php the_permalink() ?>">Listen</a></span>
             </section>
-            
+
              <?php endwhile;
             else: ?>
                 <p>Oops! There are no posts to display.</p>
             <?php endif;
             wp_reset_query(); ?>
-                
-           
+
+
 
         </section>
 
@@ -98,25 +98,25 @@
                 $original_query = $wp_query;
                 $wp_query = null;
                 $args = array(
-                    
+                    'category_name' => 'new-video-clashes',
                     'post_type' => 'sound_clash_video',
                     'post_count' => '4'
                 );
                 $wp_query = new WP_Query($args);
             ?>
-   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>         
+   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <section class="topdownload_box">
                 <section class="title_singer"><?php the_title() ?></section>
-                <span class="download_button"><a class="download_button" href="<?php the_permalink() ?>">Listen</a></span> 
+                <span class="download_button"><a class="download_button" href="<?php the_permalink() ?>">Listen</a></span>
             </section>
-            
+
              <?php endwhile;
             else: ?>
                 <p>Oops! There are no posts to display.</p>
             <?php endif;
             wp_reset_query(); ?>
-                
-           
+
+
 
         </section>
             <div>
@@ -125,7 +125,3 @@
 
 </div>
 <?php get_footer(); ?>
-
-
-
-

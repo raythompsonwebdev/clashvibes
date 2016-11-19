@@ -11,12 +11,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 <header class="entry-header">
-<h1 class="entry-title"><span> Sound Clash Audio: <a href="<?php the_permalink() ?>"><?php the_title(); ?></a></span></h1>
+    
+<h1 class="entry-title">
+    <span> Sound Clash Audio: <a href="<?php the_permalink() ?>"><?php the_title(); ?></a></span>
+</h1>
 
 <section class="byline"> 
     <span> Date <?php the_time('jS F Y') ?></span>
-    <span> at <?php the_time('g:i a'); ?>
-    </span><span>Written by <?php the_author() ?><span>
+    <span> at <?php the_time('g:i a'); ?></span>
+    <span>Written by <?php the_author() ?><span>
 </section>          
 
 </header>

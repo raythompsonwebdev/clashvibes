@@ -4,52 +4,55 @@
 
 <?php get_sidebar(); ?>
 
-<div id="clashvibes_content">
- 	 	
-<section id="clashvibes_right_column">
+		<div id="clashvibes_content">
 
-<section class="clashvibes_right_panel_fullwidth">
-<?php// Check if there are any posts to display
-		if ( have_posts() ) : ?>
+		<section id="clashvibes_right_column">
 
-<div id="news_section">
-<h1>Categories</h1>
-            
-<div class="news_box">
+		<section class="clashvibes_right_panel_fullwidth">
 
-<ul>
-<?php
-// Display optional category description
- if ( category_description() ) : ?>
-
-<div class="archive-meta"><?php echo category_description(); ?></div>
-<?php endif; ?>
+		<h1 class="archive-title">Category:<?php single_cat_title(); ?></h1>
 
 
-<?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
+		<div id="news_section">
 
-<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
+  <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+		<div class="news_box">
+		  <header class="archive-header">
 
-<div class="entry">
-<?php the_content(); ?>
+		<?php
+		// Display optional category description
+		 if ( category_description() ) : ?>
+		<div class="archive-meta"><?php echo category_description(); ?></div>
+		<?php endif; ?>
+		<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
- <p class="postmetadata"><?php
-  comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
-?></p>
-</div>
+		<div class="archive-meta"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></div>
+		</header>
 
-<?php endwhile; else: ?>
-<p><?php _e('No posts were found. Sorry!'); ?></p>
-<?php endif; ?>
 
-<!--end of Comment box-->
-</div>
+		<figure class="thumb"><?php the_post_thumbnail(); ?></figure>
 
-</div><!-- end of news -->
+		<div class="entry">
 
-</section>
-</section><!-- end of right panel -->
+		<?php the_content(); ?>
 
-</div>
-<?php get_footer(); ?>
+		</div>
+		</br/>
+		<footer class="postmetadata"><?php
+		 comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
+		?></footer>
+
+		<?php endwhile; else: ?>
+		<p><?php _e('No posts were found. Sorry!'); ?></p>
+		<?php endif; ?>
+
+		<!--end of Comment box-->
+		</div>
+
+		</div><!-- end of news -->
+
+		</section>
+		</section><!-- end of right panel -->
+
+		</div>
+		<?php get_footer(); ?>

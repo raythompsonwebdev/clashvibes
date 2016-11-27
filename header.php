@@ -10,10 +10,9 @@
 <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width">
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>
-
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 
@@ -41,14 +40,14 @@
         <?php $logo= get_option('clashvibes_logo', IMAGES.'/logo-1.png'); ?>
             <img src="<?php print $logo; ?>" alt="<?php bloginfo('name'); ?>" />
         </section>
-        
-        
+
+
     </header>
-	
-	
+
+
  <nav>
      	<ul>
-			<?php wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' )); ?>         
-        </ul>  
+			<?php wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' )); ?>
+        </ul>
 </nav>
 <?php if(!is_front_page()) : ?> <?php endif; ?>

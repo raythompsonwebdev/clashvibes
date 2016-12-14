@@ -37,7 +37,7 @@
 
 	<header>
     	<section id="clashvibes_title">
-        <?php $logo= get_option('clashvibes_logo', IMAGES.'/logo-1.png'); ?>
+        <?php $logo= get_option('clashvibes_logo', IMAGES.'/Clashvibes-version-2-database-page_03.gif'); ?>
             <img src="<?php print $logo; ?>" alt="<?php bloginfo('name'); ?>" />
         </section>
 

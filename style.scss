@@ -98,15 +98,15 @@ a{color:$color; text-decoration:none; font-size:1em;}
         a:hover {text-decoration:none;}
     }
 
-    header { width:100%;	padding: 0 ; height:100px;	margin:0 ;}
+    header { width:100%;	padding: 0 ; height:75px;	margin:0 ;}
 
     /*--- Menu ---*/
     nav{
         display:block;
         width: 100%;
-        height: 51px;
+        height: 45px;
         margin-bottom:1%;
-        margin: 0 0 1% 0;
+        margin: 0 0 0.5% 0;
         padding:0;
         ul {margin: 0;
             padding: 0 ;
@@ -117,18 +117,18 @@ a{color:$color; text-decoration:none; font-size:1em;}
                height: 50px;
                margin-right:1%;
                a{
-                    width: 100%;
-                    background-color:$color4;
-                    height: 84%;
-                    padding: 0;
-                    font-size: 0.9em;
-                    line-height:40px;
-                    font-weight: bold;
-                    text-align: center;
-                    text-decoration: none;
-                    color: $color;
-                    display:block;
-                    &:hover{ background-color:$color1; color:$color4;}
+                   width: 100%;
+                   background-color:$color4;
+                   height: 84%;
+                   padding: 0;
+                   font-size: 0.9em;
+                   line-height:40px;
+                   font-weight: bold;
+                   text-align: center;
+                   text-decoration: none;
+                   color: $color;
+                   display:block;
+                   &:hover{ background-color:$color1; color:$color4;}
                }
                .lastmenu{border-right: none;}
 
@@ -180,7 +180,7 @@ a{color:$color; text-decoration:none; font-size:1em;}
 
 #clashvibes_login {
     margin-top: 3%;
-    width: 100%;
+    width: 96%;
     display:block;
     height: 45px;
     padding: 2%;
@@ -296,7 +296,7 @@ a{color:$color; text-decoration:none; font-size:1em;}
                 height:40px;
                 line-height:40px;
                 color:$color4;
-                 a{
+                a{
                     font-size:0.85em;
                     height: 100%;
                     padding: 0;
@@ -307,19 +307,19 @@ a{color:$color; text-decoration:none; font-size:1em;}
                     color: $color9;
                     list-style:none;
                     margin:0px;
-                 }
+                }
             }
         }
     }
 
     .blog_box {
 
-	list-style:none;
+        list-style:none;
         width: 96%;
         margin: 0 auto;
         p{ font-family: $font-main; margin-left:5px; }
         h3 {
-           a{font-size: 1em;color: #d3a401;text-align:center;}
+            a{font-size: 1em;color: #d3a401;text-align:center;}
         }
         .widget {
             width:100%;
@@ -614,15 +614,15 @@ a{color:$color; text-decoration:none; font-size:1em;}
     width:100%;
     margin:auto;
     #clashvibes_right_column_front {
-    //float: none;
-    background-color: $color2;
-    min-height:720px;
-    margin:0 0 1% 0;
-    padding: 0px;
-    border: 6px solid $color4;
-    display: block;
-    width: 99%;
-    h1{
+        //float: none;
+        background-color: $color2;
+        min-height:720px;
+        margin:0 0 1% 0;
+        padding: 0px;
+        border: 6px solid $color4;
+        display: block;
+        width: 99%;
+        h1{
             display:block;
 
             text-indent : 1%;
@@ -634,72 +634,73 @@ a{color:$color; text-decoration:none; font-size:1em;}
             padding:2% auto;
         }
 
-    #new_released_section {
+        #new_released_section {
 
-        width: 100%;
-        margin: 0 0 1% 0;
-        //display:inline-block;
-        display:-webkit-flex;
-      	display: -ms-flexbox;
-      	display: flex;
-        -webkit-flex-flow: row wrap;
-      	-ms-flex-flow: row wrap;
-      	flex-flow: row wrap;
-      	-webkit-align-items: flex-end;
-      	-ms-flex-align: end;
-      	align-items: flex-end;
-        -webkit-justify-content: flex-start;
-      	-ms-flex-pack: start;
-      	justify-content: flex-start;
+            width: 100%;
+            margin: 0 0 1% 0;
+            //display:inline-block;
+            display:-webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            
+            -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
 
 
 
-    }
-    .new_released_box {
-        float: left;
-        width: 16.6%;
-        height:auto;
-        padding:1%;
-        margin: 1% 0 1% 0.5%;
-        border:$color4 solid 4px;
-        height:auto;
-        background-color:$color1;
-        h3{
-            margin:0;
-            color:$color;
-            font-size:0.85em;
+        }
+        .new_released_box {
+            float: left;
+            width: 16.6%;
             height:auto;
-            text-align:center;
-            padding:1% 0;
-            line-height:23px;
-            width: 98%;
-        }
-        a{
-            font-size:90%;
-            width:100%;
-            text-align:center;
-            color:#000;
-            background-color:$color6;
-            display:block;
+            padding:1%;
+            margin: 0;
+            border:$color4 solid 4px;
+            height:auto;
+            background-color:$color1;
+            -webkit-align-items: center;
+            -ms-flex-pack: center;
+            align-items: center;
+            h3{
+                margin:0;
+                color:$color;
+                font-size:0.85em;
+                height:auto;
+                text-align:center;
+                padding:1% 0;
+                line-height:23px;
+                width: 98%;
+            }
+            a{
+                font-size:90%;
+                width:100%;
+                text-align:center;
+                color:#000;
+                background-color:$color6;
+                display:block;
 
-            &:hover{font-size:90%; color:$color2; background-color:$color5;width:100%;}
-        }
-        .thumb{ width:90%; background-color:$color4; height:auto; border:4px solid $color4; margin:5% auto;}
-        .rantsection {
-            height: 30px;
-            margin:2% 0 ;
-            display:block;
-            .star {float: left; height: auto;width: 20%;border: 0px;margin:0px ; display: inline-block; padding:0;}
-        }
-        .more_button{
-            margin:0;
-            padding:0;
-            a.read_more{font-size:0.75em; color:$color4; margin:5% 0;padding: 0;}
+                &:hover{font-size:90%; color:$color2; background-color:$color5;width:100%;}
+            }
+            .thumb{ width:90%; background-color:$color4; height:auto; border:4px solid $color4; margin:5% auto;}
+            .rantsection {
+                height: 30px;
+                margin:2% 0 ;
+                display:block;
+                .star {float: left; height: auto;width: 20%;border: 0px;margin:0px ; display: inline-block; padding:0;}
+            }
+            .more_button{
+                margin:0;
+                padding:0;
+                a.read_more{font-size:0.75em; color:$color4; margin:5% 0;padding: 0;}
+            }
+
         }
 
     }
-
-}
 }
 
 .clashvibes_right_panel_fullwidth {
@@ -775,15 +776,16 @@ a{color:$color; text-decoration:none; font-size:1em;}
             width:100%;
             background-color:#fff;
             .archive-meta{
-              color:$color4;
-              a{  color:$color4; display: inline-block; width: auto;}
+                color:$color4;
+                text-indent:1%;
+                a{  color:$color4; display: inline-block; width: auto;}
             }
             h2{
-              width:100%;
-              font-size:1em;
-              line-height:50px;
-              text-indent:1%;
-              a{height:100%; font-size:1.2em; display: inline-block; width: auto;}
+                width:100%;
+                font-size:1em;
+                line-height:50px;
+
+                a{text-indent:1%; height:100%; font-size:1.2em; display: inline-block; width: 100%;}
             }
 
         }
@@ -791,27 +793,27 @@ a{color:$color; text-decoration:none; font-size:1em;}
         p{	margin: 0;	padding: 0;}
 
         .thumb{
-          width:20%;
-          margin:5% auto;
-          img{margin:0;}
+            width:20%;
+            margin:5% auto;
+            img{margin:0;}
         }
         .entry{
-          .audio-play{
-              width:85%;
-              margin:0 auto;
-              display:block;
-              .mejs-controls .mejs-play button {  background-position: 0 0; background-color:#000;}
-              .mejs-container .mejs-controls{background: $color4;}
-          }
-          .video-play{width:45%; margin:0 auto; display:block; height: 300px;}
+            .audio-play{
+                width:85%;
+                margin:0 auto;
+                display:block;
+                .mejs-controls .mejs-play button {  background-position: 0 0; background-color:#000;}
+                .mejs-container .mejs-controls{background: $color4;}
+            }
+            .video-play{width:45%; margin:0 auto; display:block; height: 300px;}
 
         }
 
         footer.postmetadata{
-          display:block;
-          height:60px;
-          width:100%;
-          span.comments-link{display:block;}
+            display:block;
+            height:60px;
+            width:100%;
+            span.comments-link{display:block;}
         }
 
     }

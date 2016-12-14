@@ -479,14 +479,14 @@ a {
   #container header {
     width: 100%;
     padding: 0;
-    height: 100px;
+    height: 75px;
     margin: 0; }
   #container nav {
     display: block;
     width: 100%;
-    height: 51px;
+    height: 45px;
     margin-bottom: 1%;
-    margin: 0 0 1% 0;
+    margin: 0 0 0.5% 0;
     padding: 0; }
     #container nav ul {
       margin: 0;
@@ -565,7 +565,7 @@ a {
 
 #clashvibes_login {
   margin-top: 3%;
-  width: 100%;
+  width: 96%;
   display: block;
   height: 45px;
   padding: 2%;
@@ -1045,21 +1045,21 @@ a {
       -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-      -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-      align-items: flex-end;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-      justify-content: flex-start; }
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: space-around;
+      justify-content: space-around; }
     #clashvibes_content_front #clashvibes_right_column_front .new_released_box {
       float: left;
       width: 16.6%;
       height: auto;
       padding: 1%;
-      margin: 1% 0 1% 0.5%;
+      margin: 0;
       border: #000000 solid 4px;
       height: auto;
-      background-color: #86ad1c; }
+      background-color: #86ad1c;
+      -webkit-align-items: cleft;
+      -ms-flex-align: center;
+      align-items: center; }
       #clashvibes_content_front #clashvibes_right_column_front .new_released_box h3 {
         margin: 0;
         color: #ffffff;
@@ -1196,7 +1196,8 @@ a {
       width: 100%;
       background-color: #fff; }
       #news_section .news_box .archive-header .archive-meta {
-        color: #000000; }
+        color: #000000;
+        text-indent: 1%; }
         #news_section .news_box .archive-header .archive-meta a {
           color: #000000;
           display: inline-block;
@@ -1204,13 +1205,13 @@ a {
       #news_section .news_box .archive-header h2 {
         width: 100%;
         font-size: 1em;
-        line-height: 50px;
-        text-indent: 1%; }
+        line-height: 50px; }
         #news_section .news_box .archive-header h2 a {
+          text-indent: 1%;
           height: 100%;
           font-size: 1.2em;
           display: inline-block;
-          width: auto; }
+          width: 100%; }
     #news_section .news_box p {
       margin: 0;
       padding: 0; }

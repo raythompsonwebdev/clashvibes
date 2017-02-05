@@ -479,7 +479,7 @@ a {
   #container header {
     width: 100%;
     padding: 0;
-    height: 75px;
+    height: 70px;
     margin: 0; }
   #container nav {
     display: block;
@@ -830,7 +830,7 @@ a {
         #clashvibes_right_column .clashvibes_right_panel_fullwidth .post .audio-play .mejs-container .mejs-controls {
           background: #000000; }
       #clashvibes_right_column .clashvibes_right_panel_fullwidth .post .video-play {
-        width: 45%;
+        width: 71%;
         margin: 0 auto;
         display: block;
         height: 300px; }
@@ -892,8 +892,8 @@ a {
       height: auto; }
       #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title {
         background-color: #d1181e;
-        padding: 0 1%;
-        width: 98%;
+        padding: 0;
+        width: 100%;
         height: 50px;
         line-height: 50px;
         color: #ffffff;
@@ -904,11 +904,14 @@ a {
           margin: 0;
           color: #ffffff;
           width: 100%;
-          display: inline-block;
+          display: block;
           height: 100%; }
           #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title span a {
             color: #000;
-            display: inline; }
+            display: inline;
+            cursor: pointer; }
+            #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title span a:hover {
+              color: #fff; }
       #clashvibes_right_column .sound_clash_audio header.entry-header .byline {
         height: auto;
         color: #000;
@@ -918,9 +921,9 @@ a {
           padding: 0;
           height: 30px;
           line-height: 30px;
-          margin: 0;
+          margin: 0 auto;
           color: #000;
-          width: auto;
+          width: 98%;
           display: block;
           font-size: 0.9em; }
           #clashvibes_right_column .sound_clash_audio header.entry-header .byline span a {
@@ -954,10 +957,13 @@ a {
     width: 96%;
     padding: 1%; }
     #clashvibes_right_column .sound_clash_video .video-play {
-      width: 45%;
+      width: 50%;
       margin: 0 auto;
       display: block;
-      height: 300px; }
+      height: 400px; }
+      #clashvibes_right_column .sound_clash_video .video-play iframe {
+        width: 100%;
+        height: 100%; }
     #clashvibes_right_column .sound_clash_video header.entry-header {
       display: block;
       height: auto; }
@@ -1045,20 +1051,20 @@ a {
       -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-      -webkit-justify-content: space-around;
-      -ms-flex-pack: space-around;
-      justify-content: space-around; }
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; }
     #clashvibes_content_front #clashvibes_right_column_front .new_released_box {
       float: left;
       width: 16.6%;
       height: auto;
       padding: 1%;
-      margin: 0;
+      margin: 0 auto;
       border: #000000 solid 4px;
       height: auto;
       background-color: #86ad1c;
-      -webkit-align-items: cleft;
-      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -ms-flex-pack: center;
       align-items: center; }
       #clashvibes_content_front #clashvibes_right_column_front .new_released_box h3 {
         margin: 0;
@@ -1189,19 +1195,56 @@ a {
     float: left;
     width: 100%;
     margin: 1% 0; }
+    #news_section .news_box h2 {
+      text-indent: 1%;
+      line-height: 50px; }
+    #news_section .news_box ul {
+      margin: 0;
+      padding: 0; }
+      #news_section .news_box ul li {
+        list-style: none;
+        text-align: center;
+        line-height: 40px;
+        color: #000000; }
+        #news_section .news_box ul li ul {
+          padding: 1% 0;
+          background-color: #000000; }
+          #news_section .news_box ul li ul li.cat-item {
+            width: 90%;
+            margin: 1% auto;
+            background-color: #86ad1c; }
+            #news_section .news_box ul li ul li.cat-item:hover {
+              background-color: #fec92d; }
+        #news_section .news_box ul li a {
+          font-size: 0.85em;
+          height: 100%;
+          padding: 0;
+          line-height: 40px;
+          text-align: center;
+          text-decoration: none;
+          width: 100%;
+          color: #cccccc;
+          list-style: none;
+          margin: 0px;
+          display: block; }
     #news_section .news_box .archive-header {
       list-style: none;
       margin: 0 auto;
       padding: 0;
       width: 100%;
-      background-color: #fff; }
+      background-color: #fff;
+      height: auto; }
       #news_section .news_box .archive-header .archive-meta {
         color: #000000;
-        text-indent: 1%; }
-        #news_section .news_box .archive-header .archive-meta a {
-          color: #000000;
-          display: inline-block;
-          width: auto; }
+        text-indent: 1%;
+        height: auto; }
+        #news_section .news_box .archive-header .archive-meta span {
+          display: block;
+          width: 100%; }
+          #news_section .news_box .archive-header .archive-meta span a {
+            color: #000000;
+            display: inline-block;
+            width: auto; }
       #news_section .news_box .archive-header h2 {
         width: 100%;
         font-size: 1em;
@@ -1230,10 +1273,13 @@ a {
       #news_section .news_box .entry .audio-play .mejs-container .mejs-controls {
         background: #000000; }
     #news_section .news_box .entry .video-play {
-      width: 45%;
-      margin: 0 auto;
+      width: 40%;
+      margin: 5% auto;
       display: block;
       height: 300px; }
+      #news_section .news_box .entry .video-play iframe {
+        width: 100%;
+        height: 100%; }
     #news_section .news_box footer.postmetadata {
       display: block;
       height: 60px;

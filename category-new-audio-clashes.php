@@ -35,7 +35,10 @@ $wp_query = new WP_Query($args);
 <?php endif; ?>
 <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
-<div class="archive-meta"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></div>
+<div class="archive-meta">
+  <span>Date: <?php the_time('F jS, Y') ?> </span>  <span>by <?php the_author_posts_link() ?>
+</span>
+</div>
 </header>
 
 

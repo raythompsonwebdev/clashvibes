@@ -38,16 +38,13 @@ $args = array('type' => 'monthly' );
  $args = array('title_li' => '' );
 
 wp_list_categories(); ?>
+
 </ul>
 
 <?php endwhile; else: ?>
 
 <p><?php _e('No posts were found. Sorry!'); ?></p>
 <?php endif; ?>
-
-<div class="navi">
-<div class="right"><?php previous_posts_link('Previous'); ?> / <?php next_posts_link('Next'); ?></div>
-</div>
 
 </div>
 

@@ -1051,21 +1051,25 @@ a {
       -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-      justify-content: flex-start; }
+      -webkit-align-items: center;
+      -ms-flex-pack: center;
+      align-items: center; }
     #clashvibes_content_front #clashvibes_right_column_front .new_released_box {
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: space-between;
+      justify-content: space-between;
+      -webkit-flex-basis: 16.6%;
+      /* Safari 6.1+ */
+      flex-basis: 16.6%;
       float: left;
-      width: 16.6%;
       height: auto;
       padding: 1%;
       margin: 0 auto;
       border: #000000 solid 4px;
-      height: auto;
-      background-color: #86ad1c;
-      -webkit-align-items: center;
-      -ms-flex-pack: center;
-      align-items: center; }
+      background-color: #86ad1c; }
       #clashvibes_content_front #clashvibes_right_column_front .new_released_box h3 {
         margin: 0;
         color: #ffffff;

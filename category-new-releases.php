@@ -46,7 +46,7 @@ $wp_query = new WP_Query($args);
 
 <div class="entry">
 
-<?php the_content(); ?>
+<a class="download_button" href="<?php the_permalink() ?>">Listen</a>
 
 </div>
 </br/>

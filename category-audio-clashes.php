@@ -8,7 +8,7 @@ $wp_query = null;
 $args = array(
 'category_name'=> 'audio-clashes',
 'post_type' => 'sound_clash_audio',
-'post_count' => '4'
+'post_count' => '5'
 );
 $wp_query = new WP_Query($args);
 ?>
@@ -44,12 +44,27 @@ $wp_query = new WP_Query($args);
 
 <figure class="thumb"><?php the_post_thumbnail(); ?></figure>
 
-<div class="entry">
+<section class="newsExcerpt">
 
-<?php the_content(); ?>
+<a class="download_button" href="<?php the_permalink() ?>">Listen</a>
+  <!--<div id="audio_controls">
+    
+	    <div id="play_toggle" class="player-button">PLAY</div>
+            
+                <div id="progress">
+                  <div id="load_progress"></div>
+                  <div id="play_progress"></div>
+                </div>
+            
+                    <div id="time">
+                      <div id="duration">00:00</div>  
+                      <div id="current_time">00:00</div>  
+                      
+                    </div>
+ </div>-->
 
-</div>
-</br/>
+    </section>
+<br/>
 <footer class="postmetadata"><?php
  comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
 ?></footer>

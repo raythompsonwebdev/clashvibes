@@ -84,7 +84,7 @@ h1,h2,h3,h4 {
 
 }
 
-a{color:$color; text-decoration:none; font-size:1em;}
+a{color:$color; text-decoration:none; font-size:1em; display: block;}
 
 
 #container {
@@ -396,14 +396,36 @@ a{color:$color; text-decoration:none; font-size:1em;}
             padding:2%;
             display:block;
             margin-bottom: 1%;
+            
             .audio-play{
                 width:85%;
                 margin:0 auto;
                 display:block;
-                .mejs-controls .mejs-play button {  background-position: 0 0; background-color:#000;}
-                .mejs-container .mejs-controls{background: $color4;}
+                
             }
-            .video-play{width:71%;margin:0 auto; display:block; height: 300px;}
+            #audio_controls{
+                    
+                #play_toggle{ width:20%; display:block; float:left;}
+
+                #progress{
+                    width:60%;
+                    display:inline-block;
+
+                    #play_progress{background-color:#c90;}
+                    load_progress{background-color:#ccc;}
+
+                }
+
+                #time{
+                    width:20%;
+                    display:inline-block;
+
+                    #duration{}
+                    #current_time{}
+                }
+
+            }
+            .video-play{width:45%; margin:0 auto; display:block; height: 300px;}
 
             .byline{
                 height:auto;
@@ -433,8 +455,9 @@ a{color:$color; text-decoration:none; font-size:1em;}
             }
 
             figure.thumb{width:20%; margin:5% auto;}
-            .newsExcerpt{
+            section.newsExcerpt{
                 height:auto;
+                a.download_button{display:block; width:30%; height:auto; line-height:30px; margin:0 auto;}
 
 
             }
@@ -453,12 +476,37 @@ a{color:$color; text-decoration:none; font-size:1em;}
         margin: 1%;
         width:96%;
         padding:1%;
-        .audio-play{
+       .audio-play{
             width:85%;
             margin:0 auto;
             display:block;
-            .mejs-controls .mejs-play button {  background-position: 0 0; background-color:#000;}
-            .mejs-container .mejs-controls{background: $color4;}
+            
+        }
+        #audio_controls{
+            height: 49px;
+            width: 90%;
+            margin:2% auto;
+            
+            #play_toggle{ display: inline-block; width:20%;text-align:center;  float:left; color:#000; line-height:49px; background-color:red;}
+
+            #progress{
+                width: 59%;
+                display: inline-block;
+                height: 24px;
+                background-color:#c90;
+                #play_progress{background-color:#c90; display: inline-block;height: 24px;}
+                #load_progress{background-color:#ccc; height: 24px;}
+
+            }
+
+            #time{
+                width:20%;
+                display:inline-block;
+                float:right;
+                #duration{background-color:#ccc; display:block;}
+                #current_time{background-color:#c90;display:block;}
+            }
+
         }
 
         header.entry-header{
@@ -475,7 +523,7 @@ a{color:$color; text-decoration:none; font-size:1em;}
                 font-size:1.3em;
                 span{
                     padding:0;
-                    height:30px;
+                    height:50px;
                     margin:0;
                     color:$color;
                     width:100%;
@@ -497,13 +545,13 @@ a{color:$color; text-decoration:none; font-size:1em;}
                 background-color: $color2;
                 span{
                     padding:0;
-                    height:30px;
-                    line-height:30px;
+                    
+                    line-height:35px;
                     margin:0 auto;
                     color:#000;
                     width:98%;
                     display:block;
-                    font-size:0.9em;
+                    font-size:0.85em;
                     a{color:#000; display: inline;}
 
                 }
@@ -538,13 +586,7 @@ a{color:$color; text-decoration:none; font-size:1em;}
         margin:1%;
         width:96%;
         padding:1%;
-        .video-play{
-            width:50%; 
-            margin:0 auto; 
-            display:block;
-            height: 400px;
-            iframe{width:100%; height:100%;}
-        }
+        .video-play{width:45%; margin:0 auto; display:block; height: 300px;}
 
         header.entry-header{
             display:block;
@@ -552,11 +594,12 @@ a{color:$color; text-decoration:none; font-size:1em;}
 
             h1.entry-title{
                 background-color:blue;
-                padding: 0 1%;
-                width: 98%;
+                padding: 0;
+                width: 100%;
                 height: 50px;
                 line-height:50px;
                 color:$color;
+                background-color:$color2;
                 font-size:1.3em;
                 span{
                     padding:0;
@@ -577,13 +620,15 @@ a{color:$color; text-decoration:none; font-size:1em;}
                 display:block;
                 span{
                     padding:0;
-                    line-height:30px;
-                    height:30px;
+                    line-height:35px;
+                    font-size: 0.85em;
                     margin:0;
                     color:$color4;
+                    background-color:$color6;
                     width:auto;
                     display:block;
-                    font-size:0.9em;
+                    
+                    text-indent: 2%;
                     a{color:$color4; display: inline;}
 
                 }
@@ -650,30 +695,28 @@ a{color:$color; text-decoration:none; font-size:1em;}
             -webkit-flex-flow: row wrap;
             -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-            -webkit-align-items: center;
-            -ms-flex-pack: center;
-            align-items: center;
-               
+            -webkit-align-items: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+            -webkit-justify-content: flex-start;
+            -ms-flex-pack: flex-start;
+            justify-content: flex-start;
+
+
+
         }
         .new_released_box {
-            -webkit-flex: 0 1 auto;
-            -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-            -webkit-justify-content: space-between;
-	        -ms-flex-pack: space-between;
-	        justify-content: space-between;
-            -webkit-flex-basis: 16.6%; /* Safari 6.1+ */            
-
-            flex-basis:16.6%;
+            -webkit-flex: 0 1 16.30%;
+            -ms-flex: 0 1 16.30%;
+            flex: 0 1 16.30%;
             float: left;
-            //width: 16.6%;
+            width: 16.30%;
             height:auto;
             padding:1%;
-            margin: 0 auto;
+            margin: 0.5%;
             border:$color4 solid 4px;
+            height:auto;
             background-color:$color1;
-            
-            
             
             h3{
                 margin:0;
@@ -685,25 +728,30 @@ a{color:$color; text-decoration:none; font-size:1em;}
                 line-height:23px;
                 width: 98%;
             }
-            a{
+            
+            
+            a {
                 font-size:90%;
                 width:100%;
                 text-align:center;
                 color:#000;
                 background-color:$color6;
                 display:block;
+                margin:3% auto;
 
                 &:hover{font-size:90%; color:$color2; background-color:$color5;width:100%;}
             }
+            
             .thumb{ width:90%; background-color:$color4; height:auto; border:4px solid $color4; margin:5% auto;}
             .rantsection {
                 height: 30px;
-                margin:2% 0 ;
-                display:block;
+                margin: 2% auto;
+                display: block;
+                width: 65%;
                 .star {float: left; height: auto;width: 20%;border: 0px;margin:0px ; display: inline-block; padding:0;}
             }
             .more_button{
-                margin:0;
+                margin:3 auto;
                 padding:0;
                 a.read_more{font-size:0.75em; color:$color4; margin:5% 0;padding: 0;}
             }
@@ -830,6 +878,8 @@ a{color:$color; text-decoration:none; font-size:1em;}
                 span{
                     display:block;
                     width:100%;
+                    line-height:35px;
+                    font-size:0.85em;
                     a{  color:$color4; display: inline-block; width: auto;}
                 }
                 
@@ -839,12 +889,28 @@ a{color:$color; text-decoration:none; font-size:1em;}
                 font-size:1em;
                 line-height:50px;
 
-                a{text-indent:1%; height:100%; font-size:1.2em; display: inline-block; width: 100%;}
+                a{text-indent: 0; height:98%; font-size:1.2em; display: inline-block; width: 100%;}
             }
 
         }
 
         p{margin: 0;padding: 0;}
+        
+        section.newsExcerpt{
+            height:auto;
+            a.download_button{
+                display:block; 
+                width:30%; 
+                height:auto; 
+                line-height:30px; 
+                margin:0 auto; 
+                text-align:center; 
+                background-color:$color3;
+                &:hover{background-color:$color2; color:$color3;}
+            }
+
+
+        }
 
         .thumb{
             width:20%;
@@ -856,17 +922,19 @@ a{color:$color; text-decoration:none; font-size:1em;}
                 width:85%;
                 margin:0 auto;
                 display:block;
-                .mejs-controls .mejs-play button {  background-position: 0 0; background-color:#000;}
-                .mejs-container .mejs-controls{background: $color4;}
+                
             }
-            .video-play{
-                width:40%; 
-                margin:5% auto; 
-                display:block;
-                height: 300px;
-                iframe{width:100%; height:100%;}
+            .video-play{width:45%; margin:0 auto; display:block; height: 300px;}
+            a.download_button{
+                display:block; 
+                width:30%; 
+                height:auto; 
+                line-height:30px; 
+                margin:0 auto; 
+                text-align:center; 
+                background-color:$color3;
+                &:hover{background-color:$color2; color:$color3;}
             }
-
         }
 
         footer.postmetadata{

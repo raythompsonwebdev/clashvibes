@@ -16,7 +16,7 @@ $wp_query = null;
 $args = array(
 'category_name'=> 'audio-clashes',
 'post_type' => 'sound_clash_audio',
-'post_count' => '4'
+'post_count' => '5'
 );
 $wp_query = new WP_Query($args);
 ?>
@@ -38,7 +38,11 @@ $wp_query = new WP_Query($args);
 
 </div>
 
-<section class="more_button"><?php the_excerpt(); ?></section>
+<section class="more_button">
+    
+ <a class="download_button" href="<?php the_permalink() ?>">Listen</a>
+        
+</section>
 
 
 </section>

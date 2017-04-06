@@ -19,7 +19,7 @@
             $args = array(
                 'category_name' => 'new-releases',
                 'post_type' => array('sound_clash_audio','sound_clash_video'),
-                'post_count' => '4'
+                'post_count' => '5'
             );
             $wp_query = new WP_Query($args);
             ?>
@@ -34,15 +34,15 @@
 
                         <div class="rantsection">
 
-                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
-                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
-                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
-                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
-                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/3/2015/08/whitestar.gif" alt="star" />
+                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/2/2017/04/yellowstar.gif" alt="star" />
+                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/2/2017/04/yellowstar.gif" alt="star" />
+                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/2/2017/04/yellowstar.gif" alt="star" />
+                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/2/2017/04/yellowstar.gif" alt="star" />
+                            <img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/2/2017/04/whitestar.gif" alt="star" />
 
                         </div>
 
-                        <span class="more_button"><?php the_excerpt(); ?></span>
+                        <span class="more_button"><a class="download_button" href="<?php the_permalink() ?>">Listen</a></span>
 
 
                     </section>
@@ -52,7 +52,8 @@
                 <p>Oops! There are no posts to display.</p>
             <?php endif;
             wp_reset_query(); ?>
-<div class="clearfix"></div>
+
+                <div class="clearfix"></div>
         </section><!--End of news release section-->
 
 

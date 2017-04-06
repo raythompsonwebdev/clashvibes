@@ -8,7 +8,7 @@ $wp_query = null;
 $args = array(
 'category_name'=> 'old-video-clashes',
 'post_type' => 'sound_clash_video',
-'post_count' => '3'
+'post_count' => '5'
 );
 $wp_query = new WP_Query($args);
 ?>

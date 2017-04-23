@@ -2,57 +2,70 @@
 
 <?php get_header(); ?>
 
-<?php get_sidebar(); ?>
+<?php  get_sidebar();  ?>
 
-		<div id="clashvibes_content">
+<div id="clashvibes_content">
 
-		<section id="clashvibes_right_column">
+<section id="clashvibes_right_column">
 
-		<section class="clashvibes_right_panel_fullwidth">
+<section class="clashvibes_right_panel_fullwidth">
 
-		<h1 class="archive-title">Category:<?php single_cat_title(); ?></h1>
-
-
-		<div id="news_section">
-
-  <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
-		<div class="news_box">
-		  <header class="archive-header">
-
-		<?php
-		// Display optional category description
-		 if ( category_description() ) : ?>
-		<div class="archive-meta"><?php echo category_description(); ?></div>
-		<?php endif; ?>
-		<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
-		<div class="archive-meta"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></div>
-		</header>
+<h1 class="archive-title">Category1:<?php single_cat_title(); ?></h1>
 
 
-		<figure class="thumb"><?php the_post_thumbnail(); ?></figure>
+<div id="news_section">
 
-		<div class="entry">
+<?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
 
-		<?php the_content(); ?>
+<div class="news_box">
 
-		</div>
-		</br/>
-		<footer class="postmetadata"><?php
-		 comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
-		?></footer>
+<header class="archive-header">
 
-		<?php endwhile; else: ?>
-		<p><?php _e('No posts were found. Sorry!'); ?></p>
-		<?php endif; ?>
+<?php
+// Display optional category description
+ if ( category_description() ) : ?>
 
-		<!--end of Comment box-->
-		</div>
+    <div class="archive-meta">
+    <?php echo category_description(); ?>
+</div>
 
-		</div><!-- end of news -->
+    <?php endif; ?>
 
-		</section>
-		</section><!-- end of right panel -->
+<h2>
+    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?>
+    </a>
+</h2>
 
-		</div>
-		<?php get_footer(); ?>
+<div class="archive-meta"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?>
+</div>
+</header>
+
+
+<figure class="thumb"><?php the_post_thumbnail(); ?></figure>
+
+<div class="entry">
+
+<?php the_content(); ?>
+
+</div>
+
+</br>
+
+<footer class="postmetadata"><?php
+ comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
+?></footer>
+
+<?php endwhile; else: ?>
+<p><?php _e('No posts were found. Sorry!'); ?></p>
+<?php endif; ?>
+
+<!--end of Comment box-->
+</div>
+
+</div><!-- end of news -->
+
+</section>
+</section><!-- end of right panel -->
+
+</div>
+<?php get_footer(); ?>

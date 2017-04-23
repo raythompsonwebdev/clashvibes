@@ -9,34 +9,38 @@
 <section id="clashvibes_right_column">
 
     <section class="clashvibes_right_panel_fullwidth">
-
-        <?php
-            $original_query = $wp_query;
-            $wp_query = null;
-            $args = array(
-            'posts_per_page' => 3,
-            'post_type' => 'post',
-            'paged' => $paged
-            );
-            $wp_query = new WP_Query($args);
-        ?>
-
-        <?php if ($wp_query->have_posts()):?>
-        <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-
+ 
+    <?php if (have_posts()) : ?>
 
 <article class="post group"<?php post_class() ?> id="post-<?php the_ID(); ?>">
+   
+            <header class="page-header">
+                <h1 class="page-title">
+                    <?php
+                    $current_term = get_queried_object();
+                    $taxonomy = get_taxonomy($current_term->taxonomy);
+                    echo $taxonomy->label . ':' . $current_term->name;
+                    ?>
+                </h1>
+                    <?php
+                    // Show an optional term description.
+                    $term_description = term_description();
+                    if (!empty($term_description)) :
+                        printf('<div class="taxonomy-description">%s</div>', $term_description);
+                    endif;
+                    ?>
+            </header><!-- .page-header -->
 
-    <header class="entry-header">
-  
-<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                <?php
+                if (is_author() && get_the_author_meta('description')) {
+                    echo '<div class="author-index shorter">';
+                    get_template_part('inc/author', 'box');
+                    echo '</div>';
+                }
+                ?>
 
-<section class="byline">
-    <span> Date <?php the_time('jS F Y') ?></span><span> at <?php the_time('g:i a'); ?>
-    </span><span>Written by <?php the_author() ?><span>
-</section>
-  
-</header>
+            <?php /* Start the Loop */ ?>
+            <?php while (have_posts()) : the_post(); ?>
     
     <figure class="thumb"><?php the_post_thumbnail(); ?></figure>
 

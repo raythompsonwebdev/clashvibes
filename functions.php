@@ -26,7 +26,6 @@ function filter_wp_title( $title ) {
 if ( ! isset( $content_width ) ) {$content_width = 600;};
 
 
-
 load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
 
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
@@ -96,6 +95,48 @@ if ( function_exists( 'register_nav_menus' ) ) {
             ));
 
 }
+
+//map area
+function audio_widgets_init() {
+    register_sidebar( array(
+        'name' => 'Audio-Nav',
+        'id' => 'Audio-Nav',
+        'before_widget' => '<div class="blog_box">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'audio_widgets_init' );
+
+
+//social media widget area
+function video_widgets_init() {
+    register_sidebar( array(
+    'name' => 'Video-Nav',
+    'id' => 'Video-Nav',
+    'before_widget' => '<div class="blog_box">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'video_widgets_init' );
+
+
+//contact form area
+function contact_widgets_init() {
+    register_sidebar( array(
+    'name' => 'contact',
+    'id' => 'contact',
+    'before_widget' => '<div id="contactform">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>',
+    ) );
+
+}
+add_action( 'widgets_init', 'contact_widgets_init' );
 
 
 //function net_remove_jquery() {

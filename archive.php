@@ -16,7 +16,7 @@
       elseif ( is_tag() ) { single_tag_title();
       // For everything else
 
-      } else { _e('Browsing the Archive', 'clashvibes'); }
+      } else { _e('Browsing the Archives-Page', 'clashvibes'); }
     ?></h1>
 <div id="news_section">
 

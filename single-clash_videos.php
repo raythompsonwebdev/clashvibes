@@ -1,9 +1,8 @@
 
-
-
 <?php get_header(); ?>
 	  
-<?php get_sidebar(); ?>
+<?php get_sidebar('video'); ?>
+
 <div id="clashvibes_content">
  	
 <section id="clashvibes_right_column">
@@ -14,24 +13,30 @@
 
 <header class="entry-header">
 <h1 class="entry-title">
-    <span>Sound Clash Video: <a href="<?php the_permalink() ?>"><?php the_title(); ?></a></span>
+    <span>Sound Clash Video:</span> <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 </h1>
 
 <section class="byline"> 
-    <span> Date <?php the_time('jS F Y') ?></span>
-    <span> at <?php the_time('g:i a'); ?></span>
-    <span>Written by <?php the_author() ?><span>
+    <span>Uploaded by :<?php the_author() ?><span>
+    <span> Date: <?php the_time('jS F Y') ?></span>
+    <span> at :<?php the_time('g:i a'); ?></span>
 </section>
 
 </header>
 
  <figure class="thumb"><?php the_post_thumbnail(); ?></figure> 
  
-<section class="newsExcerpt"><?php the_content();?></section>
- <br/>
+
+ <section class="newsExcerpt"><?php the_content();?></section>
+
+
+<br/>
+ 
+ 
+ 
  <footer class="speaker-meta">
 <span>Clashed at: <?php echo get_post_meta($post->ID,'sound_clash__business', true); ?></span>
-<span>Visit <a href="<?php echo get_post_meta($post->ID,'sound_clash_website_url', true); ?>">
+<span>Clash Location <a href="<?php echo get_post_meta($post->ID,'sound_clash_website_url', true); ?>">
 <?php echo get_post_meta($post->ID, 'sound_clash_website_name', true); ?></a></span>
 <span>Comes from: <?php echo get_post_meta($post->ID,'sound_clash_location', true); ?></span>
 </footer>
@@ -43,6 +48,7 @@
 <?php endif; ?>
 
 </section><!-- end of clashvibes_right_panel_fullwidth -->
+</div>
 <?php get_footer(); ?>
 
 

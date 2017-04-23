@@ -1,24 +1,23 @@
 <aside id="clashvibes_left_column">
 
- <h1>Search</h1>
+ <h1>Search Video</h1>
 
 <section id="clashvibes_login">
     <?php get_search_form(); ?>
 </section>
+<div class="blog_box">
 
-<article class="blog_box">
-    
+<?php wp_nav_menu( array('menu' => 'Video-Nav', 'container' => 'nav' )); ?>
+       
+</div>
+ 
     <?php if ( !function_exists( 'dynamic_sidebar' ) || 
-    !dynamic_sidebar('Primary Sidebar') ) : ?>               
-        
-    <article class="widget">
-        <h3 class="widget-title">Hello World!</h3>
-
-        </article>
+    !dynamic_sidebar('Video-Nav') ) : ?>               
+   
     <?php endif; ?>
 
-</article>
-      
+
+ <div class="clearfix"></div>
                                             
 </aside>
 

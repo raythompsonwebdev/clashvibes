@@ -5,7 +5,7 @@
 
     <section id="clashvibes_right_column_front">
 
-  <h1>Sound Clash Audio</h1>
+  <h1>Sound Clash Video Archives</h1>
 
 <section id="new_released_section">
 
@@ -14,14 +14,14 @@
 $original_query = $wp_query;
 $wp_query = null;
 $args = array(
-'category_name'=> 'audio-clashes',
-'post_type' => 'sound_clash_audio',
-'post_count' => '5'
+
+'post_type' => 'clash_videos',
+'post_count' => '10'
 );
 $wp_query = new WP_Query($args);
 ?>
 
-<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
+<?php if ( $wp_query->have_posts() ) :  while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
 <section class="new_released_box">
 
@@ -38,11 +38,7 @@ $wp_query = new WP_Query($args);
 
 </div>
 
-<section class="more_button">
-    
- <a class="download_button" href="<?php the_permalink() ?>">Listen</a>
-        
-</section>
+<section class="more_button"><?php the_excerpt(); ?></section>
 
 
 </section>
@@ -56,7 +52,5 @@ $wp_query = new WP_Query($args);
 
 
 </div>
-
-
 
     <?php get_footer(); ?>

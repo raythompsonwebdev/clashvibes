@@ -39,7 +39,7 @@
 
 <div class="archive-meta">
   <!-- Display Title and Author Name -->
-   <span>Uploaded by :<?php the_author() ?><span>
+    <span>Uploaded by :<?php the_author() ?></span>
     <span> Clash Location: <?php echo esc_html( get_post_meta( get_the_ID(), 'movie_director', true ) ); ?> </span>
     <span> Clash year :<?php the_terms( $post->ID, 'movie_reviews_movie_genre' ,  ' ' ); ?></span>
                 

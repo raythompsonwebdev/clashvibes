@@ -189,12 +189,15 @@ wp_register_style( 'third-custom-style', get_stylesheet_directory_uri() . '/rese
 wp_register_style( 'titilium', get_stylesheet_directory_uri() . '/fonts/kelson_regular/stylesheet.css', array(), '1', 'true' );
 
 wp_register_style( 'kelson', get_stylesheet_directory_uri() . '/fonts/font-style.css', array(), '1', 'true' );
+    
+wp_register_style('awesome',get_stylesheet_directory_uri() . '/fontawesome/css/font-awesome.min.css', false,'1.1','all' );
 
 
 wp_enqueue_style( 'custom-style' );
 wp_enqueue_style('third-custom-style');
 wp_enqueue_style('titilium');
 wp_enqueue_style('kelson');
+wp_enqueue_style('awesome');
 
 }
 

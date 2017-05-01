@@ -43,7 +43,7 @@
 
 <div class="archive-meta">
   <!-- Display Title and Author Name -->
-   <span>Uploaded by :<?php the_author() ?><span>
+    <span>Uploaded by :<?php the_author() ?></span>
     <span> Date: <?php the_time('jS F Y') ?></span>
     <span> at :<?php the_time('g:i a'); ?></span>
                 
@@ -58,7 +58,7 @@
 <?php the_excerpt(); ?>
 
 </div>
-</br/>
+<br/>
 <footer class="postmetadata"><?php
  comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
 ?></footer>

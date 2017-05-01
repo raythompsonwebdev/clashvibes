@@ -1,10 +1,17 @@
 /*
 Theme Name: Clashvibes
-Theme URI: http://www.envato.com
+Theme URI: http://www.clashvibes.com
 Description: Reggae sound clashes.
 Version: 1.0
 Author: Mr Bullitan
 Author URI:
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom-header, custom-background,editor-style
+clashvibes WordPress Theme, Copyright 2014 Raymond Thompson
+clashvibes is distributed under the terms of the GNU GPL
+Text Domain: clashvibes
+Domain Path: /language
 */
 
 /**GENERAL CLASSES (alpha order)**/
@@ -56,6 +63,10 @@ Author URI:
 
 .group {  *zoom: 1;}
 
+.postbox{
+    
+}
+
 img#wpstats{display:none; width:1px;}
 
 img{ width:100%; max-width:100%; height:auto;}
@@ -67,7 +78,7 @@ body {
     font-family: $font-main;
     font-size: 1em;
     color: #000;
-    background-color: $color;
+    background-color: $color2;
     .myaudio{width:50%; display:block; }
 }
 
@@ -81,6 +92,7 @@ h1,h2,h3,h4 {
     clear:both;
     width: 100%;
     height: 50px;
+    font-family: $font-main;
 
 }
 
@@ -91,6 +103,7 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
     margin: 0px auto;
     width: 85%;
     height:auto;
+    font-family: $font-main;
     h1 {
         margin:1% 0;
         width:100%;
@@ -126,6 +139,7 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
                    font-weight: bold;
                    text-align: center;
                    text-decoration: none;
+                   font-family: $font-main;
                    color: $color;
                    display:block;
                    &:hover{ background-color:$color1; color:$color4;}
@@ -258,8 +272,8 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
     h1{
         font-size:1.5em;
         text-align:center;
-        background-color:$color;
-        color:#000;
+        background-color:#000;
+        color:$color;
         margin:0;
         padding:0;
         height:40px;
@@ -373,6 +387,7 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
     display:block;
     width:77%;
     
+    //global post
     h1{
         font-size:1.5em;
         height:30px;
@@ -397,21 +412,25 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
     header.entry-header{
         height: auto;
         display: block;
-    }
-    
-    section.byline{
-        height:100px;
-        display:block;
-        background-color:#fff;
-        span{
-            width:100%;
+        section.byline{
+            height:123px;
             display:block;
-            height:33px;
-            line-height:33px;
             background-color:#fff;
+            span{
+                text-indent:1%;
+                width:100%;
+                display:block;
+                height:40px;
+                line-height:40px;
+                
+                font-size:0.95em;
+                background-color:$colors;
+                border-bottom:1px solid $color1; 
+            }
         }
+        
     }
-            
+             
     figure.thumb{
         width:20%; 
         margin:5% auto;
@@ -420,21 +439,43 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
     
     footer.speaker-meta{
         background-color:#fff;
-        span{
-            width:100%;
+        
+        height: 160px;
+        ul.post-meta{
             display:block;
-            height:33px;
-            line-height:33px;
+            
+            height: 100%;
+            
+            li{
+                list-style:none;
+                line-height:40px;
+                height:40px;
+                
+                span{
+                    width:20%;
+                    display:inline-block;
+                    height:40px;
+                    line-height:40px;
+                   
+                
+                    background-color:$colors;
+                }
+            
+            }
+             
         }
+        
     }
+    //end of global post
     
+    //audio/video player
     .audio-play{
         width:85%;
         margin:0 auto;
         display:block;
 
     }
-            
+    
     #audio_controls{
         height:55px;
                     
@@ -467,14 +508,16 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
         }
 
     }
+        
     .video-play{width:45%; margin:0 auto; display:block; height: 300px;}
     
-    article.clash_audio, article.post{
+    //custom posts and regular post
+    article.clash_videos, article.clash_audio, article.post{
         display:block;
         
-        header{
+        header.entry-header{
             height:auto;
-        
+            display: block;
             h1{
                 font-size:1.5em;
                 height:30px;
@@ -485,24 +528,33 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
                 width:100%;
                 text-indent:1%;
                 a{
-                    width:71%;
+                    width:70%;
                     display:inline-block;
+                    font-size: 1.1em
 
                 }
                 span{
                     display:inline-block;
-                    width: 27%;
+                    width: 28%;
+                    float: left;
+                    font-size: 0.95em;
+                    
 
                 }
             }
+            
             section.byline{
-                height:100px;
+                height:123px;
                 display:block;
                 span{
                     width:100%;
-                    display:block;
-                    height:30px;
-                    line-height:30px;
+                    height:40px;
+                    line-height:40px;
+                    background-color:$colors;
+                    border-bottom:1px solid $color1; 
+                    color:#fff;
+                    
+                   
                 }
             }
 
@@ -520,18 +572,38 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
         }
         
         footer.speaker-meta{
-            span{
-                width:100%;
+            background-color:#fff;
+            display: block;
+            height: 160px;
+            ul.post-meta{
                 display:block;
-                height:30px;
-                line-height:30px;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+
+                li{
+                    list-style:none;
+                    line-height:40px;
+                    height:40px;
+
+                    span{
+                        width:20%;
+                        display:inline-block;
+                        height:40px;
+                        line-height:40px;
+                        text-indent:1%;
+                        font-size:0.95em;
+                        background-color:$colors;
+                        color:#fff;
+                    }
+
+                }
+
             }
+
         }
         
     }
-      
-    
-   
     
     .clashvibes_right_panel_fullwidth {
         float:left;
@@ -662,22 +734,19 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
                 }
 
             }
-            .byline{
-                height:auto;
-                color:#000;
+            
+            
+            section.byline{
+                height:123px;
                 display:block;
-                background-color: $color2;
                 span{
-                    padding:0;
+                    width:100%;
+                    height:40px;
+                    line-height:40px;
+                    background-color:$colors;
+                    border-bottom:1px solid $color1; 
                     
-                    line-height:35px;
-                    margin:0 auto;
-                    color:#000;
-                    width:98%;
-                    display:block;
-                    font-size:0.85em;
-                    a{color:#000; display: inline;}
-
+                   
                 }
             }
 
@@ -686,21 +755,33 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
         figure.thumb{width:20%; margin:5% auto;}
 
         footer.speaker-meta{
-            color:#000;
-            padding:0;
-            margin:0;
-            display:inline-block;
-            width:100%;
-            background-color: $color1;
-            span{
+            background-color:#fff;
+            display: block;
+            height: 160px;
+            ul.post-meta{
                 display:block;
-                height:30px;
-                line-height:30px;
-                width:auto;
-                color:$color4;
-                font-size:0.9em;
-                a{color:$color4; display:block;width:auto; height:100%;}
+                margin: 0;
+                padding: 0;
+                height: 100%;
+
+                li{
+                    list-style:none;
+                    line-height:40px;
+                    height:40px;
+
+                    span{
+                        width:20%;
+                        display:inline-block;
+                        height:40px;
+                        line-height:40px;
+                        text-indent:1%;
+                        font-size:0.95em;
+                    }
+
+                }
+
             }
+
         }
 
     }
@@ -763,28 +844,37 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
         figure.thumb{width:20%; margin:5% auto;}
 
         footer.speaker-meta{
-            color:$color4;
-            padding:0;
-            margin:0;
-            display:inline-block;
-            width:100%;
-            background-color: #86ad1c;
-            span{
+            background-color:#fff;
+            display: block;
+            height: 160px;
+            ul.post-meta{
                 display:block;
-                height:30px;
-                line-height:30px;
-                color:$color4;
-                font-size:0.9em;
-                a{color:$color4;}
+                margin: 0;
+                padding: 0;
+                height: 100%;
+
+                li{
+                    list-style:none;
+                    line-height:40px;
+                    height:40px;
+
+                    span{
+                        width:20%;
+                        display:inline-block;
+                        height:40px;
+                        line-height:40px;
+                        text-indent:1%;
+                        font-size:0.95em;
+                    }
+
+                }
+
             }
+
         }
 
     } 
-                
-  
-
-    
-
+ 
 }
 
 #clashvibes_content_front {
@@ -793,11 +883,11 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
     margin:auto;
     #clashvibes_right_column_front {
         //float: none;
-        background-color: $color2;
+        background-color: $color;
         min-height:720px;
         margin:0 0 1% 0;
         padding: 0px;
-        border: 6px solid $color4;
+        border: 4px solid $color4;
         display: block;
         width: 99%;
         h1{
@@ -810,6 +900,7 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
             clear:both;
             margin:0 0 1% 0;
             padding:2% auto;
+            font-family: $font-main;
         }
 
         #new_released_section {
@@ -840,10 +931,10 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
             flex: 0 1 15.90%;
             float: left;
             width: 15.90%;
-            height:350px;
+            height:325px;
             padding:1%;
             margin: 0.5em;
-            border:$color4 solid 4px;
+            border:$colors solid 4px;
             background-color:$color1;
             
                        
@@ -853,7 +944,7 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
                 font-size:0.85em;
                 height:auto;
                 text-align:center;
-                padding:1% 0;
+                padding:0;
                 line-height:23px;
                 width: 98%;
             }
@@ -864,14 +955,14 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
                 width:100%;
                 text-align:center;
                 color:#000;
-                background-color:$color6;
+                background-color:$color2;
                 display:block;
                 margin:3% auto;
 
-                &:hover{font-size:90%; color:$color2; background-color:$color5;width:100%;}
+                &:hover{font-size:90%; background-color:$color6;width:100%;}
             }
             
-            .thumb{ width:90%; background-color:$color4; height:auto; border:4px solid $color4; margin:5% auto;}
+            .thumb{ width:80%; background-color:$color4; height:auto; border:4px solid $colors; margin:5% auto;}
             .rantsection {
                 height: 30px;
                 margin: 2% auto;
@@ -1035,7 +1126,7 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
 
     /*blog*/
     .post{
-        width:96%;
+        width:80%;
         color:$color4;
         background-color:$color;
         padding:2%;
@@ -1080,12 +1171,12 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
 
 #topdownload_section {
 
-    width: 43.5%;
+    width: 43%;
     padding: 2%;
     margin: 1%;
     background-color: $color1;
     color: $color;
-    border: $color4 solid 1px;
+    border: $colors solid 4px;
     display:inline-block;
     h1{
         font-size: 1.3em;
@@ -1109,8 +1200,9 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
     span{
         background-color:$color;
         font-weight: normal;
+        font-size: 0.95em;
         height:40px;
-        width:11%;
+        width:20%;
         padding:0;
         display:block;
         float:left;
@@ -1123,8 +1215,8 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
             display:block;
             margin:0;
             text-align:center;
-            color:$color5;
-            &:hover{background-color:$color5;color:$color2;}
+            color:#000;
+            &:hover{background-color:$color6;color:$color2; font-weight:bold;}
         }
 
     }
@@ -1134,7 +1226,7 @@ a{color:$color; text-decoration:none; font-size:1em; display: block;}
 
 * html .topdownload_box {	margin: 0 15px 10px 7px;}
 
-.title_singer{text-indent: 1%; background-color:$color;float: left;width:89%; color:$color4; height:100%; line-height:40px; font-size:0.9em; display:inline-block;}
+.title_singer{text-indent: 1%; background-color:$color;float: left;width:80%; color:$color4; height:100%; line-height:40px; font-size:0.85em; display:inline-block;}
 /*--- End of Right Column---*/
 /*--- End of Content ---*/
 

@@ -40,8 +40,8 @@
 <div class="archive-meta">
   <!-- Display Title and Author Name -->
    <span>Uploaded by :<?php the_author() ?><span>
-    <span> Clash Location: <?php echo esc_html( get_post_meta( get_the_ID(), 'movie_director', true ) ); ?> </span>
-    <span> Clash year :<?php the_terms( $post->ID, 'movie_reviews_movie_genre' ,  ' ' ); ?></span>
+    <span> Date: <?php the_time('jS F Y') ?></span>
+    <span> at :<?php the_time('g:i a'); ?></span>
                 
 </div>
 </header>
@@ -51,7 +51,7 @@
 
 <div class="entry">
 
-<?php the_content(); ?>
+<?php the_excerpt(); ?>
 
 </div>
 </br/>

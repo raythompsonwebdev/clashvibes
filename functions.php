@@ -23,12 +23,23 @@ function filter_wp_title( $title ) {
 	return $filtered_title;
 }
 
-if ( ! isset( $content_width ) ) {$content_width = 600;};
+add_editor_style('custom-editor-style.css'  );
 
+//theme set up
+if ( ! function_exists( 'my_theme_setup' ) ) :
+
+function my_theme_setup(){
+
+    function wpb_add_google_fonts() {
+
+      wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
+    }
+
+if ( ! isset( $content_width ) ) {$content_width = 600;};
 
 load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
 
-add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+add_theme_support( 'post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat') );
 
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 170, 170, true );
@@ -77,26 +88,24 @@ $defaults = array(
 //$my_post_formats = array( 'quote', 'chat', 'audio', 'gallery' );
 //add_theme_support( 'post-formats', $my_post_formats );
 
-
-add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
-	) );
-
+}
+endif; // my_theme_setup end
+add_action('after_setup_theme', 'my_theme_setup');
 
 if ( function_exists( 'register_nav_menus' ) ) {
-	register_nav_menus(
-            array(
-                'main' => 'Main Nav',
-                'Secondary' => 'Secondary',
-                'mobile' => 'mobile',
-                'Audio-Nav' => 'audio-nav',
-                'Video-Nav' => 'video-nav'
+    register_nav_menus(
+        array(
+            'main' => 'Main Nav',
+            'Secondary' => 'Secondary',
+            'mobile' => 'mobile',
+            'Audio-Nav' => 'audio-nav',
+            'Video-Nav' => 'video-nav'
 
-            ));
+        ));
 
 }
 
-//map area
+//Audio area
 function audio_widgets_init() {
     register_sidebar( array(
         'name' => 'Audio-Nav',
@@ -109,8 +118,7 @@ function audio_widgets_init() {
 }
 add_action( 'widgets_init', 'audio_widgets_init' );
 
-
-//social media widget area
+//Video area
 function video_widgets_init() {
     register_sidebar( array(
     'name' => 'Video-Nav',
@@ -122,7 +130,6 @@ function video_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'video_widgets_init' );
-
 
 //contact form area
 function contact_widgets_init() {
@@ -139,23 +146,6 @@ function contact_widgets_init() {
 add_action( 'widgets_init', 'contact_widgets_init' );
 
 
-//function net_remove_jquery() {
-//if ( ! is_admin() && wp_script_is('jquery' ) ) {
-//wp_deregister_script('jquery');
-//}
-//}
-//add_action('wp_enqueue_scripts', 'net_
-//remove_jquery');
-
-//if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
-//function my_jquery_enqueue() {
- // wp_deregister_script('jquery');
-  // wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
-  // wp_enqueue_script('jquery');
-//}
-
-
-
 function my_audio_own() {
     
 if(is_singular()){
@@ -169,7 +159,6 @@ if(is_singular()){
 
 }
 add_action( 'wp_enqueue_scripts', 'my_audio_own' );
-
 
 
 function my_scripts_own() {
@@ -192,14 +181,20 @@ add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
 /* To register my css styles I use the function below:*/
 
 function enqueue_extra_styles(){
+    
 wp_register_style( 'custom-style', get_stylesheet_directory_uri() . '/master.css', array(), '1', 'true' );
 
 wp_register_style( 'third-custom-style', get_stylesheet_directory_uri() . '/reset.css', array(), '1', 'true' );
 
+wp_register_style( 'titilium', get_stylesheet_directory_uri() . '/fonts/kelson_regular/stylesheet.css', array(), '1', 'true' );
+
+wp_register_style( 'kelson', get_stylesheet_directory_uri() . '/fonts/font-style.css', array(), '1', 'true' );
+
 
 wp_enqueue_style( 'custom-style' );
-
 wp_enqueue_style('third-custom-style');
+wp_enqueue_style('titilium');
+wp_enqueue_style('kelson');
 
 }
 

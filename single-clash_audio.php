@@ -17,9 +17,9 @@
                         </h1>
 
                         <section class="byline"> 
-                            <span>Uploaded by :<?php the_author() ?><span>
-                                    <span> Date: <?php the_time('jS F Y') ?></span>
-                                    <span> at :<?php the_time('g:i a'); ?></span>
+                            <span>Uploaded by :<?php the_author() ?></span>
+                              <span> Date: <?php the_time('jS F Y') ?></span>
+                               <span> at :<?php the_time('g:i a'); ?></span>
 
                                     </section>          
 
@@ -51,10 +51,7 @@
                                     <br/>
 
                                     <footer class="speaker-meta">
-                                        <span>Clashed at: <?php echo get_post_meta($post->ID, 'sound_clash__business', true); ?></span>
-                                        <span>Clash Location <a href="<?php echo get_post_meta($post->ID, 'sound_clash_website_url', true); ?>">
-                                                <?php echo get_post_meta($post->ID, 'sound_clash_website_name', true); ?></a></span>
-                                        <span>Comes from: <?php echo get_post_meta($post->ID, 'sound_clash_location', true); ?></span>
+                                        <?php the_meta(); ?>
                                     </footer>
 
 

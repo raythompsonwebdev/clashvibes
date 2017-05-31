@@ -386,7 +386,7 @@ th {
   display: block;
   height: 40px;
   margin: 0 5%;
-  color: #000;
+  color: #000000;
   line-height: 40px; }
   .left a {
     margin: 0;
@@ -397,7 +397,7 @@ th {
   float: left;
   display: inline-block;
   height: 40px;
-  color: #000; }
+  color: #000000; }
   .right a {
     margin: 0;
     height: 100%;
@@ -432,7 +432,9 @@ img#wpstats {
 img {
   width: 100%;
   max-width: 100%;
-  height: auto; }
+  height: auto;
+  border: none;
+  outline: none; }
 
 body {
   margin: 0;
@@ -440,7 +442,7 @@ body {
   line-height: 1.5em;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   font-size: 1em;
-  color: #000;
+  color: #000000;
   background-color: #fec92d; }
   body .myaudio {
     width: 50%;
@@ -464,879 +466,284 @@ a {
   font-size: 1em;
   display: block; }
 
-#container {
-  margin: 0px auto;
-  width: 85%;
-  height: auto;
-  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-  /*--- Menu ---*/
-  /* End of Form */
-  /*
-  define width and height of list item (slide)
-  entire slider area will adjust according to the parameters provided here
-  */ }
-  #container h1 {
-    margin: 1% 0;
-    width: 100%; }
-    #container h1 a {
-      cursor: text;
-      color: #9c281b;
-      font-size: 1em;
-      width: 100%;
-      display: block; }
-    #container h1 a:hover {
-      text-decoration: none; }
-  #container header {
-    width: 100%;
-    padding: 0;
-    height: 70px;
-    margin: 0; }
-  #container nav {
-    display: block;
-    width: 100%;
-    height: 45px;
-    margin-bottom: 1%;
-    margin: 0 0 0.5% 0;
-    padding: 0; }
-    #container nav ul {
-      margin: 0;
-      padding: 0;
-      list-style: none; }
-      #container nav ul li {
-        display: inline-block;
-        float: left;
-        width: 160px;
-        height: 50px;
-        margin-right: 1%; }
-        #container nav ul li a {
-          width: 100%;
-          background-color: #000000;
-          height: 84%;
-          padding: 0;
-          font-size: 0.9em;
-          line-height: 40px;
-          font-weight: bold;
-          text-align: center;
-          text-decoration: none;
-          font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-          color: #ffffff;
-          display: block; }
-          #container nav ul li a:hover {
-            background-color: #86ad1c;
-            color: #000000; }
-        #container nav ul li .lastmenu {
-          border-right: none; }
-  #container #clashvibes_content_front #clashvibes_banner {
-    width: 98%;
-    height: 400px;
-    display: block;
-    clear: both;
-    margin: 1%;
-    background-color: #fec92d; }
-    #container #clashvibes_content_front #clashvibes_banner #slider {
-      margin: 0;
-      padding: 0;
-      list-style: none; }
-      #container #clashvibes_content_front #clashvibes_banner #slider li {
+@media only screen and (max-width: 1920px) {
+  #container {
+    margin: 0px auto;
+    width: 80%;
+    height: auto;
+    font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+    /*--- Menu ---*/
+    /* End of Form */
+    /*
+    define width and height of list item (slide)
+    entire slider area will adjust according to the parameters provided here
+    */ }
+    #container h1 {
+      margin: 1% 0;
+      width: 100%; }
+      #container h1 a {
+        cursor: text;
+        color: #9c281b;
+        font-size: 1em;
         width: 100%;
-        overflow: hidden;
+        display: block; }
+        #container h1 a:hover {
+          text-decoration: none; }
+    #container header {
+      width: 100%;
+      padding: 0;
+      height: 70px;
+      margin: 0; }
+    #container nav {
+      display: block;
+      width: 100%;
+      height: 45px;
+      margin-bottom: 1%;
+      margin: 0 0 0.5% 0;
+      padding: 0; }
+      #container nav ul {
+        margin: 0;
         padding: 0;
-        margin: 0; }
-    #container #clashvibes_content_front #clashvibes_banner p#controls {
-      margin: 0;
-      position: relative; }
-    #container #clashvibes_content_front #clashvibes_banner #nextBtn {
+        list-style: none; }
+        #container nav ul li {
+          display: inline-block;
+          float: left;
+          width: 160px;
+          height: 50px;
+          margin-right: 1%; }
+          #container nav ul li a {
+            width: 100%;
+            background-color: #000000;
+            height: 84%;
+            padding: 0;
+            font-size: 0.9em;
+            line-height: 40px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+            color: #ffffff;
+            display: block; }
+            #container nav ul li a:hover {
+              background-color: #86ad1c;
+              color: #000000; }
+          #container nav ul li .lastmenu {
+            border-right: none; }
+    #container #clashvibes_content_front #clashvibes_banner {
+      width: 98%;
+      height: 400px;
       display: block;
-      margin: 0;
-      overflow: hidden;
-      width: 29px;
-      height: 29px;
-      position: absolute;
-      left: 7px;
-      top: -220px; }
-    #container #clashvibes_content_front #clashvibes_banner #nextBtn {
-      left: 97%; }
-    #container #clashvibes_content_front #clashvibes_banner #prevBtn a {
-      display: block;
-      width: 29px;
-      height: 29px;
-      background: url(images/l_arrow.gif) no-repeat 0 0; }
-    #container #clashvibes_content_front #clashvibes_banner #nextBtn a {
-      display: block;
-      width: 29px;
-      height: 29px;
-      background: url(images/r_arrow.gif) no-repeat 0 0; }
+      clear: both;
+      margin: 1%;
+      background-color: #fec92d; }
+      #container #clashvibes_content_front #clashvibes_banner #slider {
+        margin: 0;
+        padding: 0;
+        list-style: none; }
+        #container #clashvibes_content_front #clashvibes_banner #slider li {
+          width: 100%;
+          overflow: hidden;
+          padding: 0;
+          margin: 0; }
+      #container #clashvibes_content_front #clashvibes_banner p#controls {
+        margin: 0;
+        position: relative; }
+      #container #clashvibes_content_front #clashvibes_banner #nextBtn {
+        display: block;
+        margin: 0;
+        overflow: hidden;
+        width: 29px;
+        height: 29px;
+        position: absolute;
+        left: 7px;
+        top: -220px; }
+      #container #clashvibes_content_front #clashvibes_banner #nextBtn {
+        left: 97%; }
+      #container #clashvibes_content_front #clashvibes_banner #prevBtn a {
+        display: block;
+        width: 29px;
+        height: 29px;
+        background: url(images/l_arrow.gif) no-repeat 0 0; }
+      #container #clashvibes_content_front #clashvibes_banner #nextBtn a {
+        display: block;
+        width: 29px;
+        height: 29px;
+        background: url(images/r_arrow.gif) no-repeat 0 0; }
 
-/* container */
-/*------------ Header --------------- */
-#clashvibes_title {
-  float: left;
-  width: 300px;
-  display: block; }
-
-#clashvibes_login {
-  margin-top: 3%;
-  width: 96%;
-  display: block;
-  height: 45px;
-  padding: 2%;
-  /* ----- Form ----- */ }
-  #clashvibes_login form {
-    margin: 0;
-    padding: 0; }
-    #clashvibes_login form .form_row {
-      margin-bottom: 10px;
-      text-align: left; }
-    #clashvibes_login form label {
-      text-align: left;
-      color: #ffffff;
-      font-size: 1.5em;
-      line-height: 1.4em;
-      margin: 0px 20px 0px 10px; }
-    #clashvibes_login form input[type="text"] {
-      width: 65%;
-      height: 30px;
-      line-height: 1.5em;
-      display: inline-block;
-      float: left; }
-    #clashvibes_login form input[type="submit"] {
-      background-color: #e9001c;
-      width: 30%;
-      margin: 0 0 0 2%;
-      display: inline-block;
-      height: 35px;
-      color: #fec92d;
-      border: none;
-      outline: none; }
-      #clashvibes_login form input[type="submit"]:hover {
-        background-color: #fec92d;
-        color: #d1181e;
-        border: none;
-        outline: none;
-        cursor: pointer; }
-
-/* -------------- End of Header------------------ */
-/********** slider **********/
-.slider {
-  background: url(images/bg_slider.gif) top center repeat-x;
-  margin: 0 auto;
-  padding: 0;
-  height: 378px; }
-  .slider div.slice1 {
-    margin: 0 auto;
-    width: 890px;
-    padding: 0; }
-  .slider div div div {
-    margin: 0;
-    padding: 0;
-    width: 880px;
-    border: 0; }
-  .slider div div div p.img {
-    float: right;
-    width: 483px;
-    padding: 29px 0 0 0;
-    margin: 0; }
-  .slider div div div h2 {
-    width: 378px;
+  /* container */
+  /*------------ Header --------------- */
+  #clashvibes_title {
     float: left;
-    font-size: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
-    margin: 1% auto;
-    padding: 1%;
-    line-height: 1.5em; }
-  .slider div div div p {
-    width: 378px;
-    float: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    color: #262626;
-    margin: 0;
-    padding: 20px 0 0 10px;
-    line-height: 1.8em; }
+    width: 300px;
+    display: block; }
 
-/********* slider2 ************/
-.slider2 {
-  background: #ffffff url(images/slider_bg2.gif) top repeat-x;
-  margin: 0 auto;
-  padding: 0;
-  height: 89px; }
-
-.slider2_resize {
-  width: 950px;
-  margin: 0 auto;
-  padding: 0; }
-  .slider2_resize h2 {
-    width: 445px;
-    float: left;
-    font: bold 36px Arial, Helvetica, sans-serif;
-    color: #fff;
-    margin: 2% 0;
-    padding: 20px 0 0 30px;
-    line-height: 1.2em;
-    text-transform: uppercase; }
-  .slider2_resize p {
-    width: 350px;
-    float: right;
-    font: normal 11px   Arial, Helvetica, sans-serif;
-    color: #212121;
-    margin: 0;
-    padding: 20px 0 0 10px;
-    line-height: 1.8em; }
-
-#clashvibes li a:hover, nav li .current {
-  color: #FFCC33; }
-
-/*--- End of Menu ---*/
-/*--- Content ---*/
-#clashvibes_content {
-  padding: 0;
-  margin: auto; }
-
-/*--- Left Column---*/
-#clashvibes_left_column {
-  float: left;
-  margin: 0 0 1% 0;
-  background-color: #86ad1c;
-  padding: 0px;
-  width: 21%;
-  list-style: none;
-  border: #000 solid 4px;
-  display: block; }
-  #clashvibes_left_column h1 {
-    font-size: 1.5em;
-    text-align: center;
-    background-color: #000;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    height: 40px;
-    line-height: 40px; }
-  #clashvibes_left_column a {
-    font-size: 0.85em;
-    height: 100%;
-    padding: 0;
-    line-height: 40px;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    color: #cccccc;
-    list-style: none;
-    margin: 0px; }
-  #clashvibes_left_column .comment-author-link {
-    font-size: 0.9em;
-    margin: 0;
-    padding: 0; }
-  #clashvibes_left_column .left_col_box {
-    margin: 0;
-    color: #000000;
-    list-style: none; }
-    #clashvibes_left_column .left_col_box ul {
+  #clashvibes_login {
+    margin-top: 3%;
+    width: 96%;
+    display: block;
+    height: 45px;
+    padding: 2%;
+    /* ----- Form ----- */ }
+    #clashvibes_login form {
       margin: 0;
       padding: 0; }
-      #clashvibes_left_column .left_col_box ul li {
-        list-style: none;
-        text-align: center;
-        height: 40px;
-        line-height: 40px;
-        color: #000000; }
-        #clashvibes_left_column .left_col_box ul li a {
-          font-size: 0.85em;
-          height: 100%;
-          padding: 0;
-          line-height: 40px;
-          text-align: center;
-          text-decoration: none;
-          width: 100%;
-          color: #cccccc;
-          list-style: none;
-          margin: 0px; }
-  #clashvibes_left_column .blog_box {
-    list-style: none;
-    width: 96%;
-    margin: 0 auto; }
-    #clashvibes_left_column .blog_box p {
-      font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-      margin-left: 5px; }
-    #clashvibes_left_column .blog_box h3 a {
-      font-size: 1em;
-      color: #d3a401;
-      text-align: center; }
-    #clashvibes_left_column .blog_box nav.menu-video-nav-container {
-      height: auto; }
-    #clashvibes_left_column .blog_box .widget {
-      width: 100%;
-      display: block; }
-      #clashvibes_left_column .blog_box .widget h3 {
-        background-color: #658905;
-        text-align: center;
-        height: 40px;
-        line-height: 40px;
-        margin: 3% 0;
-        padding: 0;
-        font-size: 1.2em; }
-    #clashvibes_left_column .blog_box ul, #clashvibes_left_column .blog_box ul#menu-video-nav {
-      padding: 0;
-      margin: 0; }
-      #clashvibes_left_column .blog_box ul li, #clashvibes_left_column .blog_box ul li#menu-item, #clashvibes_left_column .blog_box ul#menu-video-nav li, #clashvibes_left_column .blog_box ul#menu-video-nav li#menu-item {
-        list-style: none;
-        display: block;
-        line-height: 40px;
-        text-align: center;
-        width: 100%; }
-        #clashvibes_left_column .blog_box ul li a, #clashvibes_left_column .blog_box ul li#menu-item a, #clashvibes_left_column .blog_box ul#menu-video-nav li a, #clashvibes_left_column .blog_box ul#menu-video-nav li#menu-item a {
-          padding: 0;
-          margin: 0 0 1% 0;
-          text-align: center;
-          display: block;
-          text-decoration: none;
-          background-color: #d1181e;
-          color: #000000; }
-          #clashvibes_left_column .blog_box ul li a:hover, #clashvibes_left_column .blog_box ul li#menu-item a:hover, #clashvibes_left_column .blog_box ul#menu-video-nav li a:hover, #clashvibes_left_column .blog_box ul#menu-video-nav li#menu-item a:hover {
-            color: #000;
-            background-color: #fec92d; }
-    #clashvibes_left_column .blog_box span {
-      color: #99836c; }
-
-/*--- End of Left Column---*/
-/*--- Right Column---*/
-#clashvibes_right_column {
-  background-color: #86ad1c;
-  float: right;
-  margin: 0 0 1% 0;
-  padding: 0;
-  border: #000 solid 4px;
-  display: block;
-  width: 77%; }
-  #clashvibes_right_column h1 {
-    font-size: 1.5em;
-    height: 30px;
-    line-height: 30px;
-    clear: both;
-    margin: 0;
-    padding: 2% 0;
-    width: 100%;
-    text-indent: 1%; }
-    #clashvibes_right_column h1 a {
-      width: 71%;
-      display: inline-block; }
-    #clashvibes_right_column h1 span {
-      display: inline-block;
-      width: 27%; }
-  #clashvibes_right_column header.entry-header {
-    height: auto;
-    display: block; }
-    #clashvibes_right_column header.entry-header section.byline {
-      height: 123px;
-      display: block;
-      background-color: #fff; }
-      #clashvibes_right_column header.entry-header section.byline span {
-        text-indent: 1%;
-        width: 100%;
-        display: block;
-        height: 40px;
-        line-height: 40px;
-        font-size: 0.95em;
-        background-color: #719118;
-        border-bottom: 1px solid #86ad1c; }
-  #clashvibes_right_column figure.thumb {
-    width: 20%;
-    margin: 5% auto; }
-    #clashvibes_right_column figure.thumb img {
-      margin: 0; }
-  #clashvibes_right_column footer.speaker-meta {
-    background-color: #fff;
-    height: 160px; }
-    #clashvibes_right_column footer.speaker-meta ul.post-meta {
-      display: block;
-      height: 100%; }
-      #clashvibes_right_column footer.speaker-meta ul.post-meta li {
-        list-style: none;
-        line-height: 40px;
-        height: 40px; }
-        #clashvibes_right_column footer.speaker-meta ul.post-meta li span {
-          width: 20%;
-          display: inline-block;
-          height: 40px;
-          line-height: 40px;
-          background-color: #719118; }
-  #clashvibes_right_column .audio-play {
-    width: 85%;
-    margin: 0 auto;
-    display: block; }
-  #clashvibes_right_column #audio_controls {
-    height: 55px; }
-    #clashvibes_right_column #audio_controls #play_toggle {
-      width: 20%;
-      display: block;
-      float: left;
-      height: auto;
-      line-height: 50px;
-      text-align: center; }
-    #clashvibes_right_column #audio_controls #progress {
-      width: 60%;
-      display: inline-block;
-      height: 25px; }
-      #clashvibes_right_column #audio_controls #progress #play_progress {
-        background-color: #c90;
-        height: 25px; }
-      #clashvibes_right_column #audio_controls #progress load_progress {
-        background-color: #ccc;
-        height: 25px; }
-    #clashvibes_right_column #audio_controls #time {
-      width: 20%;
-      display: inline-block;
-      float: right; }
-      #clashvibes_right_column #audio_controls #time #duration {
-        text-align: center; }
-      #clashvibes_right_column #audio_controls #time #current_time {
-        text-align: center; }
-  #clashvibes_right_column .video-play {
-    width: 45%;
-    margin: 0 auto;
-    display: block;
-    height: 300px; }
-  #clashvibes_right_column article.clash_videos, #clashvibes_right_column article.clash_audio, #clashvibes_right_column article.post {
-    display: block; }
-    #clashvibes_right_column article.clash_videos header.entry-header, #clashvibes_right_column article.clash_audio header.entry-header, #clashvibes_right_column article.post header.entry-header {
-      height: auto;
-      display: block; }
-      #clashvibes_right_column article.clash_videos header.entry-header h1, #clashvibes_right_column article.clash_audio header.entry-header h1, #clashvibes_right_column article.post header.entry-header h1 {
+      #clashvibes_login form .form_row {
+        margin-bottom: 10px;
+        text-align: left; }
+      #clashvibes_login form label {
+        text-align: left;
+        color: #ffffff;
         font-size: 1.5em;
+        line-height: 1.4em;
+        margin: 0px 20px 0px 10px; }
+      #clashvibes_login form input[type="text"] {
+        width: 65%;
         height: 30px;
-        line-height: 30px;
-        clear: both;
-        margin: 0;
-        padding: 2% 0;
-        width: 100%;
-        text-indent: 1%; }
-        #clashvibes_right_column article.clash_videos header.entry-header h1 a, #clashvibes_right_column article.clash_audio header.entry-header h1 a, #clashvibes_right_column article.post header.entry-header h1 a {
-          width: 70%;
-          display: inline-block;
-          font-size: 1.1em; }
-        #clashvibes_right_column article.clash_videos header.entry-header h1 span, #clashvibes_right_column article.clash_audio header.entry-header h1 span, #clashvibes_right_column article.post header.entry-header h1 span {
-          display: inline-block;
-          width: 28%;
-          float: left;
-          font-size: 0.95em; }
-      #clashvibes_right_column article.clash_videos header.entry-header section.byline, #clashvibes_right_column article.clash_audio header.entry-header section.byline, #clashvibes_right_column article.post header.entry-header section.byline {
-        height: 123px;
-        display: block; }
-        #clashvibes_right_column article.clash_videos header.entry-header section.byline span, #clashvibes_right_column article.clash_audio header.entry-header section.byline span, #clashvibes_right_column article.post header.entry-header section.byline span {
-          width: 100%;
-          height: 40px;
-          line-height: 40px;
-          background-color: #719118;
-          border-bottom: 1px solid #86ad1c;
-          color: #fff; }
-    #clashvibes_right_column article.clash_videos figure.thumb, #clashvibes_right_column article.clash_audio figure.thumb, #clashvibes_right_column article.post figure.thumb {
-      width: 20%;
-      margin: 5% auto; }
-      #clashvibes_right_column article.clash_videos figure.thumb img, #clashvibes_right_column article.clash_audio figure.thumb img, #clashvibes_right_column article.post figure.thumb img {
-        margin: 0; }
-    #clashvibes_right_column article.clash_videos section.newsExcerpt, #clashvibes_right_column article.clash_audio section.newsExcerpt, #clashvibes_right_column article.post section.newsExcerpt {
-      display: block; }
-    #clashvibes_right_column article.clash_videos footer.speaker-meta, #clashvibes_right_column article.clash_audio footer.speaker-meta, #clashvibes_right_column article.post footer.speaker-meta {
-      background-color: #fff;
-      display: block;
-      height: 160px; }
-      #clashvibes_right_column article.clash_videos footer.speaker-meta ul.post-meta, #clashvibes_right_column article.clash_audio footer.speaker-meta ul.post-meta, #clashvibes_right_column article.post footer.speaker-meta ul.post-meta {
-        display: block;
-        margin: 0;
-        padding: 0;
-        height: 100%; }
-        #clashvibes_right_column article.clash_videos footer.speaker-meta ul.post-meta li, #clashvibes_right_column article.clash_audio footer.speaker-meta ul.post-meta li, #clashvibes_right_column article.post footer.speaker-meta ul.post-meta li {
-          list-style: none;
-          line-height: 40px;
-          height: 40px; }
-          #clashvibes_right_column article.clash_videos footer.speaker-meta ul.post-meta li span, #clashvibes_right_column article.clash_audio footer.speaker-meta ul.post-meta li span, #clashvibes_right_column article.post footer.speaker-meta ul.post-meta li span {
-            width: 20%;
-            display: inline-block;
-            height: 40px;
-            line-height: 40px;
-            text-indent: 1%;
-            font-size: 0.95em;
-            background-color: #719118;
-            color: #fff; }
-  #clashvibes_right_column .clashvibes_right_panel_fullwidth {
-    float: left;
-    width: 96%;
-    min-height: 720px;
-    padding: 2%;
-    height: auto;
-    margin: 0;
-    display: block;
-    /*blog*/
-    /*blog end*/ }
-    #clashvibes_right_column .clashvibes_right_panel_fullwidth .post {
-      width: 96%;
-      color: #000;
-      background-color: #ffffff;
-      padding: 2%;
-      display: block;
-      margin-bottom: 1%; }
-      #clashvibes_right_column .clashvibes_right_panel_fullwidth .post .byline {
-        height: auto;
-        color: #000000;
-        display: block; }
-        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post .byline span {
-          font-size: 0.9em;
-          padding: 0;
-          line-height: 30px;
-          height: 30px;
-          margin: 0;
-          color: #000;
-          width: auto;
-          display: block; }
-      #clashvibes_right_column .clashvibes_right_panel_fullwidth .post h3 {
-        font-size: 1.1em;
-        height: 40px;
-        line-height: 40px;
-        padding: 0;
-        margin: 0;
-        color: #ffffff;
-        text-indent: 1%; }
-        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post h3 a {
-          color: #ffffff; }
-      #clashvibes_right_column .clashvibes_right_panel_fullwidth .post figure.thumb {
-        width: 20%;
-        margin: 5% auto; }
-      #clashvibes_right_column .clashvibes_right_panel_fullwidth .post section.newsExcerpt {
-        height: auto; }
-        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post section.newsExcerpt a.download_button {
-          display: block;
-          width: 30%;
-          height: auto;
-          line-height: 30px;
-          margin: 0 auto; }
-      #clashvibes_right_column .clashvibes_right_panel_fullwidth .post p {
-        color: #000000;
-        font-size: 0.9em; }
-      #clashvibes_right_column .clashvibes_right_panel_fullwidth .post ul figure {
-        width: 90%;
-        margin: 0 auto;
-        padding: 0; }
-      #clashvibes_right_column .clashvibes_right_panel_fullwidth .post .thumb {
-        max-width: 30%;
-        margin: 5% auto;
-        border: 2px #fff solid; }
-  #clashvibes_right_column .sound_clash_audio {
-    background-color: #ffffff;
-    margin: 1%;
-    width: 96%;
-    padding: 1%; }
-    #clashvibes_right_column .sound_clash_audio .audio-play {
-      width: 85%;
-      margin: 0 auto;
-      display: block; }
-    #clashvibes_right_column .sound_clash_audio #audio_controls {
-      height: 49px;
-      width: 90%;
-      margin: 2% auto; }
-      #clashvibes_right_column .sound_clash_audio #audio_controls #play_toggle {
+        line-height: 1.5em;
         display: inline-block;
-        width: 20%;
-        text-align: center;
-        float: left;
-        color: #000;
-        line-height: 49px;
-        background-color: red; }
-      #clashvibes_right_column .sound_clash_audio #audio_controls #progress {
-        width: 59%;
+        float: left; }
+      #clashvibes_login form input[type="submit"] {
+        background-color: #e9001c;
+        width: 30%;
+        margin: 0 0 0 2%;
         display: inline-block;
-        height: 24px;
-        background-color: #c90; }
-        #clashvibes_right_column .sound_clash_audio #audio_controls #progress #play_progress {
-          background-color: #c90;
-          display: inline-block;
-          height: 24px; }
-        #clashvibes_right_column .sound_clash_audio #audio_controls #progress #load_progress {
-          background-color: #ccc;
-          height: 24px; }
-      #clashvibes_right_column .sound_clash_audio #audio_controls #time {
-        width: 20%;
-        display: inline-block;
-        float: right; }
-        #clashvibes_right_column .sound_clash_audio #audio_controls #time #duration {
-          background-color: #ccc;
-          display: block; }
-        #clashvibes_right_column .sound_clash_audio #audio_controls #time #current_time {
-          background-color: #c90;
-          display: block; }
-    #clashvibes_right_column .sound_clash_audio header.entry-header {
-      display: block;
-      height: auto; }
-      #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title {
-        background-color: #d1181e;
-        padding: 0;
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        color: #ffffff;
-        font-size: 1.3em; }
-        #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title span {
-          padding: 0;
-          height: 50px;
-          margin: 0;
-          color: #ffffff;
-          width: 100%;
-          display: block;
-          height: 100%; }
-          #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title span a {
-            color: #000;
-            display: inline;
-            cursor: pointer; }
-            #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title span a:hover {
-              color: #fff; }
-      #clashvibes_right_column .sound_clash_audio header.entry-header section.byline {
-        height: 123px;
-        display: block; }
-        #clashvibes_right_column .sound_clash_audio header.entry-header section.byline span {
-          width: 100%;
-          height: 40px;
-          line-height: 40px;
-          background-color: #719118;
-          border-bottom: 1px solid #86ad1c; }
-    #clashvibes_right_column .sound_clash_audio figure.thumb {
-      width: 20%;
-      margin: 5% auto; }
-    #clashvibes_right_column .sound_clash_audio footer.speaker-meta {
-      background-color: #fff;
-      display: block;
-      height: 160px; }
-      #clashvibes_right_column .sound_clash_audio footer.speaker-meta ul.post-meta {
-        display: block;
-        margin: 0;
-        padding: 0;
-        height: 100%; }
-        #clashvibes_right_column .sound_clash_audio footer.speaker-meta ul.post-meta li {
-          list-style: none;
-          line-height: 40px;
-          height: 40px; }
-          #clashvibes_right_column .sound_clash_audio footer.speaker-meta ul.post-meta li span {
-            width: 20%;
-            display: inline-block;
-            height: 40px;
-            line-height: 40px;
-            text-indent: 1%;
-            font-size: 0.95em; }
-  #clashvibes_right_column .sound_clash_video {
-    background-color: #ffffff;
-    margin: 1%;
-    width: 96%;
-    padding: 1%; }
-    #clashvibes_right_column .sound_clash_video .video-play {
-      width: 45%;
-      margin: 0 auto;
-      display: block;
-      height: 300px; }
-    #clashvibes_right_column .sound_clash_video header.entry-header {
-      display: block;
-      height: auto; }
-      #clashvibes_right_column .sound_clash_video header.entry-header h1.entry-title {
-        background-color: blue;
-        padding: 0;
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        color: #ffffff;
-        background-color: #fec92d;
-        font-size: 1.3em; }
-        #clashvibes_right_column .sound_clash_video header.entry-header h1.entry-title span {
-          padding: 0;
-          line-height: 50px;
-          width: 100%;
-          height: 50px;
-          margin: 0;
-          color: #ffffff;
-          display: inline-block; }
-          #clashvibes_right_column .sound_clash_video header.entry-header h1.entry-title span a {
-            color: #000000;
-            display: inline; }
-      #clashvibes_right_column .sound_clash_video header.entry-header .byline {
-        height: auto;
-        color: #000000;
-        display: block; }
-        #clashvibes_right_column .sound_clash_video header.entry-header .byline span {
-          padding: 0;
-          line-height: 35px;
-          font-size: 0.85em;
-          margin: 0;
-          color: #000000;
-          background-color: #e21319;
-          width: auto;
-          display: block;
-          text-indent: 2%; }
-          #clashvibes_right_column .sound_clash_video header.entry-header .byline span a {
-            color: #000000;
-            display: inline; }
-    #clashvibes_right_column .sound_clash_video figure.thumb {
-      width: 20%;
-      margin: 5% auto; }
-    #clashvibes_right_column .sound_clash_video footer.speaker-meta {
-      background-color: #fff;
-      display: block;
-      height: 160px; }
-      #clashvibes_right_column .sound_clash_video footer.speaker-meta ul.post-meta {
-        display: block;
-        margin: 0;
-        padding: 0;
-        height: 100%; }
-        #clashvibes_right_column .sound_clash_video footer.speaker-meta ul.post-meta li {
-          list-style: none;
-          line-height: 40px;
-          height: 40px; }
-          #clashvibes_right_column .sound_clash_video footer.speaker-meta ul.post-meta li span {
-            width: 20%;
-            display: inline-block;
-            height: 40px;
-            line-height: 40px;
-            text-indent: 1%;
-            font-size: 0.95em; }
+        height: 35px;
+        color: #fec92d;
+        border: none;
+        outline: none; }
+        #clashvibes_login form input[type="submit"]:hover {
+          background-color: #fec92d;
+          color: #d1181e;
+          border: none;
+          outline: none;
+          cursor: pointer; }
 
-#clashvibes_content_front {
-  padding: 0;
-  width: 100%;
-  margin: auto; }
-  #clashvibes_content_front #clashvibes_right_column_front {
-    background-color: #ffffff;
-    min-height: 720px;
-    margin: 0 0 1% 0;
-    padding: 0px;
-    border: 4px solid #000000;
-    display: block;
-    width: 99%; }
-    #clashvibes_content_front #clashvibes_right_column_front h1 {
-      display: block;
-      text-indent: 1%;
-      font-size: 1.5em;
-      height: 40px;
-      line-height: 40px;
-      clear: both;
-      margin: 0 0 1% 0;
-      padding: 2% auto;
-      font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif; }
-    #clashvibes_content_front #clashvibes_right_column_front #new_released_section {
-      width: 100%;
-      margin: 0 0 1% 0;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: flex-start;
-      justify-content: flex-start;
-      -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-      align-items: stretch; }
-    #clashvibes_content_front #clashvibes_right_column_front .new_released_box {
-      -webkit-flex: 0 1 15.90%;
-      -ms-flex: 0 1 15.90%;
-      flex: 0 1 15.90%;
+  /* -------------- End of Header------------------ */
+  /********** slider **********/
+  .slider {
+    background: url(images/bg_slider.gif) top center repeat-x;
+    margin: 0 auto;
+    padding: 0;
+    height: 378px; }
+    .slider div.slice1 {
+      margin: 0 auto;
+      width: 890px;
+      padding: 0; }
+    .slider div div div {
+      margin: 0;
+      padding: 0;
+      width: 880px;
+      border: 0; }
+    .slider div div div p.img {
+      float: right;
+      width: 483px;
+      padding: 29px 0 0 0;
+      margin: 0; }
+    .slider div div div h2 {
+      width: 378px;
       float: left;
-      width: 15.90%;
-      height: 325px;
+      font-size: 1.5em;
+      font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+      color: #ffffff;
+      margin: 1% auto;
       padding: 1%;
-      margin: 0.5em;
-      border: #719118 solid 4px;
-      background-color: #86ad1c; }
-      #clashvibes_content_front #clashvibes_right_column_front .new_released_box h3 {
-        margin: 0;
-        color: #ffffff;
-        font-size: 0.85em;
-        height: auto;
-        text-align: center;
-        padding: 0;
-        line-height: 23px;
-        width: 98%; }
-      #clashvibes_content_front #clashvibes_right_column_front .new_released_box a {
-        font-size: 90%;
-        width: 100%;
-        text-align: center;
-        color: #000;
-        background-color: #fec92d;
-        display: block;
-        margin: 3% auto; }
-        #clashvibes_content_front #clashvibes_right_column_front .new_released_box a:hover {
-          font-size: 90%;
-          background-color: #e21319;
-          width: 100%; }
-      #clashvibes_content_front #clashvibes_right_column_front .new_released_box .thumb {
-        width: 80%;
-        background-color: #000000;
-        height: auto;
-        border: 4px solid #719118;
-        margin: 5% auto; }
-      #clashvibes_content_front #clashvibes_right_column_front .new_released_box .rantsection {
-        height: 30px;
-        margin: 2% auto;
-        display: block;
-        width: 65%; }
-        #clashvibes_content_front #clashvibes_right_column_front .new_released_box .rantsection .star {
-          float: left;
-          height: auto;
-          width: 20%;
-          border: 0px;
-          margin: 0px;
-          display: inline-block;
-          padding: 0; }
-      #clashvibes_content_front #clashvibes_right_column_front .new_released_box .more_button {
-        margin: 3 auto;
-        padding: 0; }
-        #clashvibes_content_front #clashvibes_right_column_front .new_released_box .more_button a.read_more {
-          font-size: 0.75em;
-          color: #000000;
-          margin: 5% 0;
-          padding: 0; }
+      line-height: 1.5em; }
+    .slider div div div p {
+      width: 378px;
+      float: left;
+      font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+      font-size: 1em;
+      color: #262626;
+      margin: 0;
+      padding: 20px 0 0 10px;
+      line-height: 1.8em; }
 
-.clashvibes_right_panel_fullwidth {
-  float: left;
-  width: 96%;
-  min-height: 720px;
-  padding: 2%;
-  height: auto;
-  margin: 0;
-  display: block;
-  /*blog*/
-  /*blog end*/ }
-  .clashvibes_right_panel_fullwidth #news_section {
-    float: left;
-    width: 100%;
-    margin: 0;
+  /********* slider2 ************/
+  .slider2 {
+    background: #ffffff url(images/slider_bg2.gif) top repeat-x;
+    margin: 0 auto;
+    padding: 0;
+    height: 89px; }
+
+  .slider2_resize {
+    width: 950px;
+    margin: 0 auto;
     padding: 0; }
-    .clashvibes_right_panel_fullwidth #news_section h1 {
-      width: 98%;
+    .slider2_resize h2 {
+      width: 445px;
+      float: left;
+      font: bold 36px "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+      color: #ffffff;
+      margin: 2% 0;
+      padding: 20px 0 0 30px;
+      line-height: 1.2em;
+      text-transform: uppercase; }
+    .slider2_resize p {
+      width: 350px;
+      float: right;
+      font: normal 11px "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+      color: #262626;
+      margin: 0;
+      padding: 20px 0 0 10px;
+      line-height: 1.8em; }
+
+  #clashvibes li a:hover, nav li .current {
+    color: #fec92d; }
+
+  /*--- End of Menu ---*/
+  /*--- Content ---*/
+  #clashvibes_content {
+    padding: 0;
+    margin: auto; }
+
+  /*--- Left Column---*/
+  #clashvibes_left_column {
+    float: left;
+    margin: 0 0 1% 0;
+    background-color: #86ad1c;
+    padding: 0px;
+    width: 21%;
+    list-style: none;
+    border: #000000 solid 4px;
+    display: block; }
+    #clashvibes_left_column h1 {
+      font-size: 1.3em;
+      text-align: center;
+      background-color: #000000;
+      color: #ffffff;
+      margin: 0;
       padding: 0;
       height: 40px;
+      line-height: 40px; }
+    #clashvibes_left_column a {
+      font-size: 0.8em;
+      height: 100%;
+      padding: 0;
       line-height: 40px;
-      margin: 1% auto; }
-    .clashvibes_right_panel_fullwidth #news_section .news_box {
-      float: left;
+      text-align: center;
+      text-decoration: none;
       width: 100%;
-      margin: 1% 0; }
-      .clashvibes_right_panel_fullwidth #news_section .news_box h2 {
-        text-indent: 1%;
-        line-height: 50px; }
-      .clashvibes_right_panel_fullwidth #news_section .news_box ul {
+      color: #cccccc;
+      list-style: none;
+      margin: 0px; }
+    #clashvibes_left_column .comment-author-link {
+      font-size: 0.9em;
+      margin: 0;
+      padding: 0; }
+    #clashvibes_left_column .left_col_box {
+      margin: 0;
+      color: #000000;
+      list-style: none; }
+      #clashvibes_left_column .left_col_box ul {
         margin: 0;
         padding: 0; }
-        .clashvibes_right_panel_fullwidth #news_section .news_box ul li {
+        #clashvibes_left_column .left_col_box ul li {
           list-style: none;
           text-align: center;
+          height: 40px;
           line-height: 40px;
           color: #000000; }
-          .clashvibes_right_panel_fullwidth #news_section .news_box ul li ul {
-            padding: 1% 0;
-            background-color: #000000; }
-            .clashvibes_right_panel_fullwidth #news_section .news_box ul li ul li.cat-item {
-              width: 90%;
-              margin: 1% auto;
-              background-color: #86ad1c; }
-              .clashvibes_right_panel_fullwidth #news_section .news_box ul li ul li.cat-item:hover {
-                background-color: #fec92d; }
-          .clashvibes_right_panel_fullwidth #news_section .news_box ul li a {
+          #clashvibes_left_column .left_col_box ul li a {
             font-size: 0.85em;
             height: 100%;
             padding: 0;
@@ -1346,47 +753,693 @@ a {
             width: 100%;
             color: #cccccc;
             list-style: none;
-            margin: 0px;
-            display: block; }
-      .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header {
-        list-style: none;
-        margin: 0 auto;
-        padding: 0;
-        width: 100%;
-        background-color: #fff;
+            margin: 0px; }
+    #clashvibes_left_column .blog_box {
+      list-style: none;
+      width: 96%;
+      margin: 0 auto; }
+      #clashvibes_left_column .blog_box p {
+        font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+        margin-left: 5px; }
+      #clashvibes_left_column .blog_box h3 a {
+        font-size: 1em;
+        color: #d3a401;
+        text-align: center; }
+      #clashvibes_left_column .blog_box nav.menu-video-nav-container {
         height: auto; }
-        .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header .archive-meta {
-          color: #000000;
-          text-indent: 1%;
-          height: 123px; }
-          .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header .archive-meta span {
+      #clashvibes_left_column .blog_box .widget {
+        width: 100%;
+        display: block; }
+        #clashvibes_left_column .blog_box .widget h3 {
+          background-color: #658905;
+          text-align: center;
+          height: 40px;
+          line-height: 40px;
+          margin: 3% 0;
+          padding: 0;
+          font-size: 1.2em; }
+      #clashvibes_left_column .blog_box ul, #clashvibes_left_column .blog_box ul#menu-video-nav {
+        padding: 0;
+        margin: 0; }
+        #clashvibes_left_column .blog_box ul li, #clashvibes_left_column .blog_box ul li#menu-item, #clashvibes_left_column .blog_box ul#menu-video-nav li, #clashvibes_left_column .blog_box ul#menu-video-nav li#menu-item {
+          list-style: none;
+          display: block;
+          line-height: 40px;
+          text-align: center;
+          width: 100%; }
+          #clashvibes_left_column .blog_box ul li a, #clashvibes_left_column .blog_box ul li#menu-item a, #clashvibes_left_column .blog_box ul#menu-video-nav li a, #clashvibes_left_column .blog_box ul#menu-video-nav li#menu-item a {
+            padding: 0;
+            margin: 0 0 1% 0;
+            text-align: center;
             display: block;
+            text-decoration: none;
+            background-color: #d1181e;
+            color: #000000; }
+            #clashvibes_left_column .blog_box ul li a:hover, #clashvibes_left_column .blog_box ul li#menu-item a:hover, #clashvibes_left_column .blog_box ul#menu-video-nav li a:hover, #clashvibes_left_column .blog_box ul#menu-video-nav li#menu-item a:hover {
+              color: #000000;
+              background-color: #fec92d; }
+      #clashvibes_left_column .blog_box span {
+        color: #99836c; }
+
+  /*--- End of Left Column---*/
+  /*--- Right Column---*/
+  #clashvibes_right_column {
+    background-color: #86ad1c;
+    float: right;
+    margin: 0 0 1% 0;
+    padding: 0;
+    border: #000000 solid 4px;
+    display: block;
+    width: 77%; }
+    #clashvibes_right_column h1 {
+      font-size: 1.5em;
+      height: 30px;
+      line-height: 30px;
+      clear: both;
+      margin: 0;
+      padding: 2% 0;
+      width: 100%;
+      text-indent: 1%; }
+      #clashvibes_right_column h1 a {
+        width: 71%;
+        display: inline-block; }
+      #clashvibes_right_column h1 span {
+        display: inline-block;
+        width: 27%; }
+    #clashvibes_right_column header.entry-header {
+      height: auto;
+      display: block; }
+      #clashvibes_right_column header.entry-header section.byline {
+        height: 123px;
+        display: block;
+        background-color: #ffffff; }
+        #clashvibes_right_column header.entry-header section.byline span {
+          text-indent: 1%;
+          width: 100%;
+          display: block;
+          height: 40px;
+          line-height: 40px;
+          font-size: 0.95em;
+          background-color: #719118;
+          border-bottom: 1px solid #86ad1c; }
+    #clashvibes_right_column figure.thumb {
+      width: 20%;
+      margin: 5% auto; }
+      #clashvibes_right_column figure.thumb img {
+        margin: 0; }
+    #clashvibes_right_column footer.speaker-meta {
+      background-color: #ffffff;
+      height: 160px; }
+      #clashvibes_right_column footer.speaker-meta ul.post-meta {
+        display: block;
+        height: 100%; }
+        #clashvibes_right_column footer.speaker-meta ul.post-meta li {
+          list-style: none;
+          line-height: 40px;
+          height: 40px; }
+          #clashvibes_right_column footer.speaker-meta ul.post-meta li span {
+            width: 20%;
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            background-color: #719118; }
+    #clashvibes_right_column .audio-play {
+      width: 85%;
+      margin: 0 auto;
+      display: block; }
+    #clashvibes_right_column #audio_controls {
+      height: 55px;
+      width: 85%;
+      display: block;
+      margin: 0 auto; }
+      #clashvibes_right_column #audio_controls #play_toggle {
+        width: 20%;
+        display: block;
+        float: left;
+        height: auto;
+        line-height: 50px;
+        text-align: center;
+        background-color: #719118; }
+        #clashvibes_right_column #audio_controls #play_toggle:hover {
+          cursor: pointer; }
+      #clashvibes_right_column #audio_controls #progress {
+        width: 60%;
+        display: inline-block;
+        height: 25px; }
+        #clashvibes_right_column #audio_controls #progress #play_progress {
+          background-color: #fec92d;
+          height: 25px; }
+        #clashvibes_right_column #audio_controls #progress load_progress {
+          background-color: #e9001c;
+          height: 25px; }
+      #clashvibes_right_column #audio_controls #time {
+        width: 20%;
+        display: inline-block;
+        float: right;
+        background-color: #d1181e; }
+        #clashvibes_right_column #audio_controls #time #duration {
+          text-align: center;
+          color: #000000;
+          font-size: 0.9em; }
+        #clashvibes_right_column #audio_controls #time #current_time {
+          text-align: center;
+          color: #000000;
+          font-size: 0.9em; }
+    #clashvibes_right_column .video-play {
+      width: 45%;
+      margin: 0 auto;
+      display: block;
+      height: 300px; }
+    #clashvibes_right_column article.clash_videos, #clashvibes_right_column article.clash_audio, #clashvibes_right_column article.post {
+      display: block; }
+      #clashvibes_right_column article.clash_videos header.entry-header, #clashvibes_right_column article.clash_audio header.entry-header, #clashvibes_right_column article.post header.entry-header {
+        height: auto;
+        display: block; }
+        #clashvibes_right_column article.clash_videos header.entry-header h1, #clashvibes_right_column article.clash_audio header.entry-header h1, #clashvibes_right_column article.post header.entry-header h1 {
+          font-size: 1.5em;
+          height: 30px;
+          line-height: 30px;
+          clear: both;
+          margin: 0;
+          padding: 2% 0;
+          width: 100%;
+          text-indent: 1%; }
+          #clashvibes_right_column article.clash_videos header.entry-header h1 a, #clashvibes_right_column article.clash_audio header.entry-header h1 a, #clashvibes_right_column article.post header.entry-header h1 a {
+            width: 70%;
+            display: inline-block;
+            font-size: 1.1em; }
+          #clashvibes_right_column article.clash_videos header.entry-header h1 span, #clashvibes_right_column article.clash_audio header.entry-header h1 span, #clashvibes_right_column article.post header.entry-header h1 span {
+            display: inline-block;
+            width: 20%;
+            float: left;
+            font-size: 0.9em; }
+        #clashvibes_right_column article.clash_videos header.entry-header section.byline, #clashvibes_right_column article.clash_audio header.entry-header section.byline, #clashvibes_right_column article.post header.entry-header section.byline {
+          height: 123px;
+          display: block; }
+          #clashvibes_right_column article.clash_videos header.entry-header section.byline span, #clashvibes_right_column article.clash_audio header.entry-header section.byline span, #clashvibes_right_column article.post header.entry-header section.byline span {
             width: 100%;
             height: 40px;
             line-height: 40px;
-            font-size: 0.95em;
+            background-color: #719118;
+            border-bottom: 1px solid #86ad1c;
+            color: #ffffff; }
+      #clashvibes_right_column article.clash_videos figure.thumb, #clashvibes_right_column article.clash_audio figure.thumb, #clashvibes_right_column article.post figure.thumb {
+        width: 12%;
+        margin: 5% auto; }
+        #clashvibes_right_column article.clash_videos figure.thumb img, #clashvibes_right_column article.clash_audio figure.thumb img, #clashvibes_right_column article.post figure.thumb img {
+          margin: 0;
+          display: block; }
+      #clashvibes_right_column article.clash_videos section.newsExcerpt, #clashvibes_right_column article.clash_audio section.newsExcerpt, #clashvibes_right_column article.post section.newsExcerpt {
+        display: block; }
+      #clashvibes_right_column article.clash_videos footer.speaker-meta, #clashvibes_right_column article.clash_audio footer.speaker-meta, #clashvibes_right_column article.post footer.speaker-meta {
+        background-color: #ffffff;
+        display: block;
+        height: 160px; }
+        #clashvibes_right_column article.clash_videos footer.speaker-meta ul.post-meta, #clashvibes_right_column article.clash_audio footer.speaker-meta ul.post-meta, #clashvibes_right_column article.post footer.speaker-meta ul.post-meta {
+          display: block;
+          margin: 0;
+          padding: 0;
+          height: 100%; }
+          #clashvibes_right_column article.clash_videos footer.speaker-meta ul.post-meta li, #clashvibes_right_column article.clash_audio footer.speaker-meta ul.post-meta li, #clashvibes_right_column article.post footer.speaker-meta ul.post-meta li {
+            list-style: none;
+            line-height: 40px;
+            height: 40px;
+            font-size: 0.9em; }
+            #clashvibes_right_column article.clash_videos footer.speaker-meta ul.post-meta li span, #clashvibes_right_column article.clash_audio footer.speaker-meta ul.post-meta li span, #clashvibes_right_column article.post footer.speaker-meta ul.post-meta li span {
+              width: 15%;
+              display: inline-block;
+              height: 40px;
+              line-height: 40px;
+              text-indent: 1%;
+              font-size: 0.95em;
+              background-color: #719118;
+              color: #fff; }
+    #clashvibes_right_column .clashvibes_right_panel_fullwidth {
+      float: left;
+      width: 96%;
+      min-height: 720px;
+      padding: 2%;
+      height: auto;
+      margin: 0;
+      display: block;
+      /*blog*/
+      /*blog end*/ }
+      #clashvibes_right_column .clashvibes_right_panel_fullwidth .post {
+        width: 96%;
+        color: #000;
+        background-color: #ffffff;
+        padding: 2%;
+        display: block;
+        margin-bottom: 1%; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post .byline {
+          height: auto;
+          color: #000000;
+          display: block; }
+          #clashvibes_right_column .clashvibes_right_panel_fullwidth .post .byline span {
+            font-size: 0.9em;
+            padding: 0;
+            line-height: 30px;
+            height: 30px;
+            margin: 0;
+            color: #000;
+            width: auto;
+            display: block; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post h3 {
+          font-size: 1.1em;
+          height: 40px;
+          line-height: 40px;
+          padding: 0;
+          margin: 0;
+          color: #ffffff;
+          text-indent: 1%; }
+          #clashvibes_right_column .clashvibes_right_panel_fullwidth .post h3 a {
+            color: #ffffff; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post figure.thumb {
+          width: 20%;
+          margin: 5% auto; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post section.newsExcerpt {
+          height: auto; }
+          #clashvibes_right_column .clashvibes_right_panel_fullwidth .post section.newsExcerpt a.download_button {
+            display: block;
+            width: 30%;
+            height: auto;
+            line-height: 30px;
+            margin: 0 auto; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post p {
+          color: #000000;
+          font-size: 0.9em; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post ul figure {
+          width: 90%;
+          margin: 0 auto;
+          padding: 0; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post .thumb {
+          max-width: 30%;
+          margin: 5% auto;
+          border: 2px #719118 solid; }
+    #clashvibes_right_column .sound_clash_audio {
+      background-color: #ffffff;
+      margin: 1%;
+      width: 96%;
+      padding: 1%; }
+      #clashvibes_right_column .sound_clash_audio .audio-play {
+        width: 85%;
+        margin: 0 auto;
+        display: block; }
+      #clashvibes_right_column .sound_clash_audio #audio_controls {
+        height: 49px;
+        width: 90%;
+        margin: 2% auto; }
+        #clashvibes_right_column .sound_clash_audio #audio_controls #play_toggle {
+          display: inline-block;
+          width: 20%;
+          text-align: center;
+          float: left;
+          color: #000000;
+          line-height: 49px;
+          background-color: #719118; }
+        #clashvibes_right_column .sound_clash_audio #audio_controls #progress {
+          width: 59%;
+          display: inline-block;
+          height: 24px; }
+          #clashvibes_right_column .sound_clash_audio #audio_controls #progress #play_progress {
+            background-color: #fec92d;
+            display: inline-block;
+            height: 24px; }
+          #clashvibes_right_column .sound_clash_audio #audio_controls #progress #load_progress {
+            background-color: #e9001c;
+            height: 24px; }
+        #clashvibes_right_column .sound_clash_audio #audio_controls #time {
+          width: 20%;
+          display: inline-block;
+          float: right; }
+          #clashvibes_right_column .sound_clash_audio #audio_controls #time #duration {
+            background-color: #000000;
+            color: #ffffff;
+            display: block; }
+          #clashvibes_right_column .sound_clash_audio #audio_controls #time #current_time {
+            background-color: #000000;
+            color: #ffffff;
+            display: block; }
+      #clashvibes_right_column .sound_clash_audio header.entry-header {
+        display: block;
+        height: auto; }
+        #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title {
+          background-color: #d1181e;
+          padding: 0;
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          color: #ffffff;
+          font-size: 1.3em; }
+          #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title span {
+            padding: 0;
+            height: 50px;
+            margin: 0;
+            color: #ffffff;
+            width: 100%;
+            display: block;
+            height: 100%; }
+            #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title span a {
+              color: #000;
+              display: inline;
+              cursor: pointer; }
+              #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title span a:hover {
+                color: #ffffff; }
+        #clashvibes_right_column .sound_clash_audio header.entry-header section.byline {
+          height: 123px;
+          display: block; }
+          #clashvibes_right_column .sound_clash_audio header.entry-header section.byline span {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
             background-color: #719118;
             border-bottom: 1px solid #86ad1c; }
-            .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header .archive-meta span a {
-              color: #000000;
+      #clashvibes_right_column .sound_clash_audio figure.thumb {
+        width: 20%;
+        margin: 5% auto; }
+      #clashvibes_right_column .sound_clash_audio footer.speaker-meta {
+        background-color: #fff;
+        display: block;
+        height: 160px; }
+        #clashvibes_right_column .sound_clash_audio footer.speaker-meta ul.post-meta {
+          display: block;
+          margin: 0;
+          padding: 0;
+          height: 100%; }
+          #clashvibes_right_column .sound_clash_audio footer.speaker-meta ul.post-meta li {
+            list-style: none;
+            line-height: 40px;
+            height: 40px; }
+            #clashvibes_right_column .sound_clash_audio footer.speaker-meta ul.post-meta li span {
+              width: 20%;
               display: inline-block;
-              width: auto; }
-        .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header h2 {
-          width: 100%;
-          font-size: 1em;
-          line-height: 50px; }
-          .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header h2 a {
-            text-indent: 0;
-            height: 98%;
-            font-size: 1.2em;
-            display: inline-block;
-            width: 100%; }
-      .clashvibes_right_panel_fullwidth #news_section .news_box p {
-        margin: 0;
-        padding: 0; }
-      .clashvibes_right_panel_fullwidth #news_section .news_box section.newsExcerpt {
+              height: 40px;
+              line-height: 40px;
+              text-indent: 1%;
+              font-size: 0.95em; }
+    #clashvibes_right_column .sound_clash_video {
+      background-color: #ffffff;
+      margin: 1%;
+      width: 96%;
+      padding: 1%; }
+      #clashvibes_right_column .sound_clash_video .video-play {
+        width: 45%;
+        margin: 0 auto;
+        display: block;
+        height: 300px; }
+      #clashvibes_right_column .sound_clash_video header.entry-header {
+        display: block;
         height: auto; }
-        .clashvibes_right_panel_fullwidth #news_section .news_box section.newsExcerpt a.download_button {
+        #clashvibes_right_column .sound_clash_video header.entry-header h1.entry-title {
+          background-color: blue;
+          padding: 0;
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          color: #ffffff;
+          background-color: #fec92d;
+          font-size: 1.3em; }
+          #clashvibes_right_column .sound_clash_video header.entry-header h1.entry-title span {
+            padding: 0;
+            line-height: 50px;
+            width: 100%;
+            height: 50px;
+            margin: 0;
+            color: #ffffff;
+            display: inline-block; }
+            #clashvibes_right_column .sound_clash_video header.entry-header h1.entry-title span a {
+              color: #000000;
+              display: inline; }
+        #clashvibes_right_column .sound_clash_video header.entry-header .byline {
+          height: auto;
+          color: #000000;
+          display: block; }
+          #clashvibes_right_column .sound_clash_video header.entry-header .byline span {
+            padding: 0;
+            line-height: 35px;
+            font-size: 0.85em;
+            margin: 0;
+            color: #000000;
+            background-color: #e21319;
+            width: auto;
+            display: block;
+            text-indent: 2%; }
+            #clashvibes_right_column .sound_clash_video header.entry-header .byline span a {
+              color: #000000;
+              display: inline; }
+      #clashvibes_right_column .sound_clash_video figure.thumb {
+        width: 20%;
+        margin: 5% auto; }
+      #clashvibes_right_column .sound_clash_video footer.speaker-meta {
+        background-color: #ffffff;
+        display: block;
+        height: 160px; }
+        #clashvibes_right_column .sound_clash_video footer.speaker-meta ul.post-meta {
+          display: block;
+          margin: 0;
+          padding: 0;
+          height: 100%; }
+          #clashvibes_right_column .sound_clash_video footer.speaker-meta ul.post-meta li {
+            list-style: none;
+            line-height: 40px;
+            height: 40px; }
+            #clashvibes_right_column .sound_clash_video footer.speaker-meta ul.post-meta li span {
+              width: 20%;
+              display: inline-block;
+              height: 40px;
+              line-height: 40px;
+              text-indent: 1%;
+              font-size: 0.95em; }
+
+  #clashvibes_content_front {
+    padding: 0;
+    width: 100%;
+    margin: auto; }
+    #clashvibes_content_front #clashvibes_right_column_front {
+      background-color: #ffffff;
+      min-height: 720px;
+      margin: 0 0 1% 0;
+      padding: 0px;
+      border: 4px solid #000000;
+      display: block;
+      width: 99%; }
+      #clashvibes_content_front #clashvibes_right_column_front h1 {
+        display: block;
+        text-indent: 1%;
+        font-size: 1.3em;
+        height: 40px;
+        line-height: 40px;
+        clear: both;
+        margin: 0 0 1% 0;
+        padding: 2% auto;
+        font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif; }
+      #clashvibes_content_front #clashvibes_right_column_front #new_released_section {
+        width: 100%;
+        margin: 0 0 1% 0;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: flex-start;
+        justify-content: flex-start;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch; }
+        #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          float: left;
+          width: 16.35%;
+          height: 310px;
+          padding: 1%;
+          margin: 0.5em;
+          border: #719118 solid 4px;
+          background-color: #86ad1c; }
+          #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h3 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 0.85em;
+            height: auto;
+            text-align: center;
+            padding: 0;
+            line-height: 23px;
+            width: 98%; }
+          #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box a {
+            font-size: 0.9em;
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+            background-color: #fec92d;
+            display: block;
+            margin: 0;
+            height: 100%; }
+            #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box a:hover {
+              font-weight: bold;
+              background-color: #e21319;
+              width: 100%; }
+          #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .thumb {
+            width: 55%;
+            background-color: #000000;
+            height: auto;
+            border: 4px solid #719118;
+            margin: 5% auto; }
+          #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .rantsection {
+            height: 30px;
+            margin: 2% auto;
+            display: block;
+            width: 45%; }
+            #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .rantsection .star {
+              float: left;
+              height: auto;
+              width: 20%;
+              border: 0px;
+              margin: 0px;
+              display: inline-block;
+              padding: 0; }
+          #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .more_button {
+            padding: 0;
+            display: block;
+            height: 40px; }
+            #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .more_button a.read_more, #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .more_button a.download_button {
+              font-size: 0.9em;
+              color: #000000;
+              margin: 0;
+              padding: 0;
+              line-height: 40px;
+              height: 100%;
+              display: block; }
+
+  .clashvibes_right_panel_fullwidth {
+    float: left;
+    width: 96%;
+    min-height: 720px;
+    padding: 2%;
+    height: auto;
+    margin: 0;
+    display: block;
+    /*blog*/
+    /*blog end*/ }
+    .clashvibes_right_panel_fullwidth #news_section {
+      float: left;
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+      .clashvibes_right_panel_fullwidth #news_section h1 {
+        width: 98%;
+        padding: 0;
+        height: 40px;
+        line-height: 40px;
+        margin: 1% auto; }
+      .clashvibes_right_panel_fullwidth #news_section p {
+        font-size: 0.95em;
+        line-height: 1.6em;
+        width: 98%;
+        margin: 0 auto;
+        display: block; }
+      .clashvibes_right_panel_fullwidth #news_section .news_box {
+        float: left;
+        width: 100%;
+        margin: 1% 0; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box h2 {
+          text-indent: 1%;
+          line-height: 50px; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box ul {
+          margin: 0;
+          padding: 0; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box ul li {
+            list-style: none;
+            text-align: center;
+            line-height: 40px;
+            color: #000000; }
+            .clashvibes_right_panel_fullwidth #news_section .news_box ul li ul {
+              padding: 1% 0;
+              background-color: #000000; }
+              .clashvibes_right_panel_fullwidth #news_section .news_box ul li ul li.cat-item {
+                width: 90%;
+                margin: 1% auto;
+                background-color: #86ad1c; }
+                .clashvibes_right_panel_fullwidth #news_section .news_box ul li ul li.cat-item:hover {
+                  background-color: #fec92d; }
+            .clashvibes_right_panel_fullwidth #news_section .news_box ul li a {
+              font-size: 0.85em;
+              height: 100%;
+              padding: 0;
+              line-height: 40px;
+              text-align: center;
+              text-decoration: none;
+              width: 100%;
+              color: #cccccc;
+              list-style: none;
+              margin: 0px;
+              display: block; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header {
+          list-style: none;
+          margin: 0 auto;
+          padding: 0;
+          width: 100%;
+          background-color: #ffffff;
+          height: auto; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header .archive-meta {
+            color: #000000;
+            text-indent: 1%;
+            height: 123px; }
+            .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header .archive-meta span {
+              display: block;
+              width: 100%;
+              height: 40px;
+              line-height: 40px;
+              font-size: 0.9em;
+              background-color: #719118;
+              border-bottom: 1px solid #86ad1c; }
+              .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header .archive-meta span a {
+                color: #000000;
+                display: inline-block;
+                width: auto; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header h2 {
+            width: 100%;
+            font-size: 1em;
+            line-height: 50px; }
+            .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header h2 a {
+              text-indent: 0;
+              height: 98%;
+              font-size: 1.2em;
+              display: inline-block;
+              width: 100%; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box p {
+          margin: 0;
+          padding: 0; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box section.newsExcerpt {
+          height: auto; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box section.newsExcerpt a.download_button {
+            display: block;
+            width: 30%;
+            height: auto;
+            line-height: 30px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #d1181e; }
+            .clashvibes_right_panel_fullwidth #news_section .news_box section.newsExcerpt a.download_button:hover {
+              background-color: #fec92d;
+              color: #d1181e; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box .thumb {
+          width: 12%;
+          margin: 5% auto; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box .thumb img {
+            margin: 0; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box .entry .audio-play {
+          width: 85%;
+          margin: 0 auto;
+          display: block; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box .entry .video-play {
+          width: 45%;
+          margin: 0 auto;
+          display: block;
+          height: 300px; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box .entry a.read_more {
           display: block;
           width: 30%;
           height: auto;
@@ -1394,233 +1447,997 @@ a {
           margin: 0 auto;
           text-align: center;
           background-color: #d1181e; }
-          .clashvibes_right_panel_fullwidth #news_section .news_box section.newsExcerpt a.download_button:hover {
+          .clashvibes_right_panel_fullwidth #news_section .news_box .entry a.read_more:hover {
             background-color: #fec92d;
             color: #d1181e; }
-      .clashvibes_right_panel_fullwidth #news_section .news_box .thumb {
-        width: 20%;
-        margin: 5% auto; }
-        .clashvibes_right_panel_fullwidth #news_section .news_box .thumb img {
-          margin: 0; }
-      .clashvibes_right_panel_fullwidth #news_section .news_box .entry .audio-play {
-        width: 85%;
-        margin: 0 auto;
-        display: block; }
-      .clashvibes_right_panel_fullwidth #news_section .news_box .entry .video-play {
-        width: 45%;
-        margin: 0 auto;
-        display: block;
-        height: 300px; }
-      .clashvibes_right_panel_fullwidth #news_section .news_box .entry a.download_button {
-        display: block;
-        width: 30%;
-        height: auto;
-        line-height: 30px;
-        margin: 0 auto;
-        text-align: center;
-        background-color: #d1181e; }
-        .clashvibes_right_panel_fullwidth #news_section .news_box .entry a.download_button:hover {
-          background-color: #fec92d;
-          color: #d1181e; }
-      .clashvibes_right_panel_fullwidth #news_section .news_box footer.postmetadata {
-        display: block;
-        height: 60px;
-        width: 100%; }
-        .clashvibes_right_panel_fullwidth #news_section .news_box footer.postmetadata span.comments-link {
-          display: block; }
-  .clashvibes_right_panel_fullwidth .post {
-    width: 80%;
-    color: #000000;
-    background-color: #ffffff;
-    padding: 2%;
-    display: inline-block;
-    float: left; }
-    .clashvibes_right_panel_fullwidth .post .byline {
-      height: 50px;
-      color: #000; }
-      .clashvibes_right_panel_fullwidth .post .byline p {
+        .clashvibes_right_panel_fullwidth #news_section .news_box footer.postmetadata {
+          display: block;
+          height: 60px;
+          width: 100%;
+          background-color: #719118; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box footer.postmetadata a.comments-link {
+            display: block;
+            color: #ffffff;
+            padding: 1%; }
+    .clashvibes_right_panel_fullwidth .post {
+      width: 80%;
+      color: #000000;
+      background-color: #ffffff;
+      padding: 2%;
+      display: inline-block;
+      float: left; }
+      .clashvibes_right_panel_fullwidth .post .byline {
+        height: 50px;
+        color: #000000; }
+        .clashvibes_right_panel_fullwidth .post .byline p {
+          padding: 0;
+          margin: 0;
+          color: #ffffff; }
+        .clashvibes_right_panel_fullwidth .post .byline a {
+          height: 50px;
+          font-size: 1.2em;
+          display: inline-block;
+          width: auto;
+          color: #ffffff;
+          line-height: 50px; }
+      .clashvibes_right_panel_fullwidth .post h3 {
+        font-size: 1.1em;
+        height: 40px;
+        line-height: 40px;
         padding: 0;
         margin: 0;
-        color: #ffffff; }
-      .clashvibes_right_panel_fullwidth .post .byline a {
-        height: 50px;
-        font-size: 1.2em;
-        display: inline-block;
-        width: auto;
-        color: #ffffff;
-        line-height: 50px; }
-    .clashvibes_right_panel_fullwidth .post h3 {
-      font-size: 1.1em;
-      height: 40px;
-      line-height: 40px;
-      padding: 0;
-      margin: 0;
-      color: #000000; }
-      .clashvibes_right_panel_fullwidth .post h3 a {
-        font-size: 1.1em;
         color: #000000; }
-    .clashvibes_right_panel_fullwidth .post figure.thumb {
-      width: 20%; }
-    .clashvibes_right_panel_fullwidth .post .newExcerpt {
-      height: auto; }
-    .clashvibes_right_panel_fullwidth .post p {
-      color: #000000;
-      font-size: 0.9em; }
-    .clashvibes_right_panel_fullwidth .post ul figure {
-      width: 90%;
-      margin: 0 auto;
-      padding: 0; }
-    .clashvibes_right_panel_fullwidth .post .thumb {
-      max-width: 30%;
-      margin: 5% auto;
-      border: 2px #ffffff solid; }
-
-.clashvibes_right_panel_fullwidth_content {
-  float: left;
-  width: 620px;
-  padding: 0; }
-  .clashvibes_right_panel_fullwidth_content p {
-    text-align: justify;
-    width: 100%;
-    color: #000000; }
-
-#topdownload_section {
-  width: 43%;
-  padding: 2%;
-  margin: 1%;
-  background-color: #86ad1c;
-  color: #ffffff;
-  border: #719118 solid 4px;
-  display: inline-block; }
-  #topdownload_section h1 {
-    font-size: 1.3em;
-    height: 30px;
-    line-height: 30px;
-    padding: 2% 0;
-    clear: both;
-    margin: 0;
-    color: #ffffff; }
-
-.topdownload_box {
-  width: 100%;
-  margin: 0 0 1% 0;
-  color: #000;
-  font-weight: bold;
-  border-bottom: 1px solid #6b5946;
-  height: 40px; }
-  .topdownload_box span {
-    background-color: #ffffff;
-    font-weight: normal;
-    font-size: 0.95em;
-    height: 40px;
-    width: 20%;
-    padding: 0;
-    display: block;
-    float: left; }
-    .topdownload_box span a {
-      height: 100%;
-      font-size: 0.8em;
-      line-height: 40px;
-      padding: 0;
-      background-color: #fec92d;
-      display: block;
-      margin: 0;
-      text-align: center;
-      color: #000; }
-      .topdownload_box span a:hover {
-        background-color: #e21319;
-        color: #fec92d;
-        font-weight: bold; }
-
-/*--- topdownload box ---*/
-* html .topdownload_box {
-  margin: 0 15px 10px 7px; }
-
-.title_singer {
-  text-indent: 1%;
-  background-color: #ffffff;
-  float: left;
-  width: 80%;
-  color: #000000;
-  height: 100%;
-  line-height: 40px;
-  font-size: 0.85em;
-  display: inline-block; }
-
-/*--- End of Right Column---*/
-/*--- End of Content ---*/
-/* ----- Footer ----- */
-#clashvibes_footer {
-  clear: both;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-  color: #ffffff;
-  background: #000000;
-  text-align: center;
-  font-size: 1em;
-  height: 200px;
-  margin-bottom: 2%; }
-  #clashvibes_footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: left;
-    width: 17%; }
-    #clashvibes_footer ul li {
-      height: 40px;
-      line-height: 40px;
-      width: 100%;
-      text-indent: 5%; }
-      #clashvibes_footer ul li a {
-        width: 100%;
-        color: #ffffff;
-        display: inline-block;
-        height: 100%;
-        line-height: 40px;
-        text-align: left;
+        .clashvibes_right_panel_fullwidth .post h3 a {
+          font-size: 1.1em;
+          color: #000000; }
+      .clashvibes_right_panel_fullwidth .post figure.thumb {
+        width: 20%; }
+      .clashvibes_right_panel_fullwidth .post .newExcerpt {
+        height: auto; }
+      .clashvibes_right_panel_fullwidth .post p {
+        color: #000000;
         font-size: 0.9em; }
-        #clashvibes_footer ul li a:hover {
-          color: #cccc66; }
-  #clashvibes_footer ul#footer-content {
-    width: 77%;
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    height: 100%; }
-    #clashvibes_footer ul#footer-content li {
-      text-indent: 0; }
-      #clashvibes_footer ul#footer-content li a {
-        text-align: center; }
-  #clashvibes_footer ul#social-media-box {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    width: 5%; }
-    #clashvibes_footer ul#social-media-box li {
-      height: 40px;
-      line-height: 40px;
-      width: 100%; }
-      #clashvibes_footer ul#social-media-box li a {
-        width: 100%;
-        color: #ffffff;
-        display: inline-block;
-        height: 100%;
-        line-height: 40px; }
-        #clashvibes_footer ul#social-media-box li a span {
-          display: block; }
-          #clashvibes_footer ul#social-media-box li a span i {
-            color: #fff;
-            font-size: 1.8em;
-            line-height: 40px;
-            display: block;
-            text-align: center; }
-            #clashvibes_footer ul#social-media-box li a span i:hover {
-              color: #cccc66;
-              font-size: 1.9em; }
+      .clashvibes_right_panel_fullwidth .post ul figure {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0; }
+      .clashvibes_right_panel_fullwidth .post .thumb {
+        max-width: 30%;
+        margin: 5% auto;
+        border: 2px #ffffff solid; }
 
-/* ----- End of Footer ----- */
+  .clashvibes_right_panel_fullwidth_content {
+    float: left;
+    width: 620px;
+    padding: 0; }
+    .clashvibes_right_panel_fullwidth_content p {
+      text-align: justify;
+      width: 100%;
+      color: #000000; }
+
+  #topdownload_section {
+    width: 43%;
+    padding: 2%;
+    margin: 1%;
+    background-color: #86ad1c;
+    color: #ffffff;
+    border: #719118 solid 4px;
+    display: inline-block; }
+    #topdownload_section h1 {
+      font-size: 1.3em;
+      height: 30px;
+      line-height: 30px;
+      padding: 2% 0;
+      clear: both;
+      margin: 0;
+      color: #ffffff; }
+
+  .topdownload_box {
+    width: 100%;
+    margin: 0 0 1% 0;
+    color: #000000;
+    font-weight: bold;
+    border-bottom: 1px solid #6b5946;
+    height: 40px; }
+    .topdownload_box span {
+      background-color: #ffffff;
+      font-weight: normal;
+      font-size: 0.95em;
+      height: 40px;
+      width: 20%;
+      padding: 0;
+      display: block;
+      float: left; }
+      .topdownload_box span a {
+        height: 100%;
+        font-size: 1em;
+        line-height: 40px;
+        padding: 0;
+        background-color: #fec92d;
+        display: block;
+        margin: 0;
+        text-align: center;
+        color: #000000; }
+        .topdownload_box span a:hover {
+          background-color: #e21319;
+          color: #fec92d;
+          font-weight: bold; }
+
+  /*--- topdownload box ---*/
+  * html .topdownload_box {
+    margin: 0 15px 10px 7px; }
+
+  .title_singer {
+    text-indent: 1%;
+    background-color: #ffffff;
+    float: left;
+    width: 80%;
+    color: #000000;
+    height: 100%;
+    line-height: 40px;
+    font-size: 0.85em;
+    display: inline-block; }
+
+  /*--- End of Right Column---*/
+  /*--- End of Content ---*/
+  /* ----- Footer ----- */
+  #clashvibes_footer {
+    clear: both;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    background: #000000;
+    text-align: center;
+    font-size: 1em;
+    height: 200px;
+    margin-bottom: 2%; }
+    #clashvibes_footer ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      float: left;
+      width: 17%; }
+      #clashvibes_footer ul li {
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        text-indent: 5%; }
+        #clashvibes_footer ul li a {
+          width: 100%;
+          color: #ffffff;
+          display: inline-block;
+          height: 100%;
+          line-height: 40px;
+          text-align: left;
+          font-size: 0.9em; }
+          #clashvibes_footer ul li a:hover {
+            color: #cccc66; }
+    #clashvibes_footer ul#footer-content {
+      width: 77%;
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%; }
+      #clashvibes_footer ul#footer-content li {
+        text-indent: 0; }
+        #clashvibes_footer ul#footer-content li a {
+          text-align: center; }
+    #clashvibes_footer ul#social-media-box {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      width: 5%; }
+      #clashvibes_footer ul#social-media-box li {
+        width: 100%;
+        height: 50px; }
+        #clashvibes_footer ul#social-media-box li a {
+          width: 100%;
+          color: #ffffff;
+          display: inline-block;
+          height: 100%;
+          line-height: 50px; }
+          #clashvibes_footer ul#social-media-box li a span {
+            display: block; }
+            #clashvibes_footer ul#social-media-box li a span i {
+              color: #ffffff;
+              font-size: 1.8em;
+              line-height: 50px;
+              display: block;
+              text-align: center; }
+              #clashvibes_footer ul#social-media-box li a span i:hover {
+                color: #cccc66;
+                font-size: 1.9em; }
+
+  /* ----- End of Footer ----- */ }
+@media only screen and (max-width: 1440px) {
+  #container {
+    width: 80%;
+    /*--- Menu ---*/
+    /* End of Form */
+    /*
+    define width and height of list item (slide)
+    entire slider area will adjust according to the parameters provided here
+    */ }
+    #container h1 {
+      margin: 1% 0; }
+      #container h1 a {
+        cursor: text;
+        font-size: 1em; }
+        #container h1 a:hover {
+          text-decoration: none; }
+    #container header {
+      height: 70px; }
+    #container nav {
+      height: 45px; }
+      #container nav ul li {
+        width: 160px;
+        height: 50px;
+        margin-right: 1%; }
+        #container nav ul li a {
+          height: 84%;
+          font-size: 0.85em;
+          line-height: 40px; }
+          #container nav ul li a:hover {
+            background-color: #86ad1c;
+            color: #000000; }
+        #container nav ul li .lastmenu {
+          border-right: none; }
+    #container #clashvibes_content_front #clashvibes_banner {
+      width: 98%;
+      height: 400px;
+      clear: both;
+      margin: 1%; }
+      #container #clashvibes_content_front #clashvibes_banner #slider {
+        padding: 0;
+        list-style: none; }
+        #container #clashvibes_content_front #clashvibes_banner #slider li {
+          overflow: hidden; }
+      #container #clashvibes_content_front #clashvibes_banner p#controls {
+        margin: 0;
+        position: relative; }
+      #container #clashvibes_content_front #clashvibes_banner #nextBtn {
+        width: 29px;
+        height: 29px;
+        left: 7px;
+        top: -220px; }
+      #container #clashvibes_content_front #clashvibes_banner #nextBtn {
+        left: 97%; }
+      #container #clashvibes_content_front #clashvibes_banner #prevBtn a {
+        display: block;
+        width: 29px;
+        height: 29px; }
+      #container #clashvibes_content_front #clashvibes_banner #nextBtn a {
+        display: block;
+        width: 29px;
+        height: 29px; }
+
+  /* container */
+  /*------------ Header --------------- */
+  #clashvibes_title {
+    width: 300px; }
+
+  #clashvibes_login {
+    margin-top: 3%;
+    width: 96%;
+    height: 45px;
+    padding: 2%;
+    /* ----- Form ----- */ }
+    #clashvibes_login form {
+      margin: 0;
+      padding: 0; }
+      #clashvibes_login form .form_row {
+        margin-bottom: 10px;
+        text-align: left; }
+      #clashvibes_login form label {
+        font-size: 1.4em;
+        line-height: 1.4em;
+        margin: 0px 20px 0px 10px; }
+      #clashvibes_login form input[type="text"] {
+        width: 65%;
+        height: 30px;
+        line-height: 1.5em; }
+      #clashvibes_login form input[type="submit"] {
+        width: 30%;
+        margin: 0 0 0 2%;
+        height: 35px; }
+        #clashvibes_login form input[type="submit"]:hover {
+          border: none;
+          outline: none;
+          cursor: pointer; }
+
+  /* -------------- End of Header------------------ */
+  /********** slider **********/
+  .slider {
+    margin: 0 auto;
+    height: 378px; }
+    .slider div.slice1 {
+      margin: 0 auto;
+      width: 890px; }
+    .slider div div div {
+      width: 880px;
+      border: 0; }
+    .slider div div div p.img {
+      float: right;
+      width: 483px;
+      padding: 29px 0 0 0; }
+    .slider div div div h2 {
+      width: 378px;
+      font-size: 1.5em;
+      margin: 1% auto;
+      padding: 1%;
+      line-height: 1.5em; }
+    .slider div div div p {
+      width: 378px;
+      font-size: 1em;
+      padding: 20px 0 0 10px;
+      line-height: 1.8em; }
+
+  /********* slider2 ************/
+  .slider2 {
+    margin: 0 auto;
+    padding: 0;
+    height: 89px; }
+
+  .slider2_resize {
+    width: 950px;
+    margin: 0 auto;
+    padding: 0; }
+    .slider2_resize h2 {
+      width: 445px;
+      font: bold 36px "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+      margin: 2% 0;
+      padding: 20px 0 0 30px;
+      line-height: 1.2em; }
+    .slider2_resize p {
+      width: 350px;
+      font: normal 11px "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+      padding: 20px 0 0 10px;
+      line-height: 1.8em; }
+
+  #clashvibes li a:hover, nav li .current {
+    color: #fec92d; }
+
+  /*--- End of Menu ---*/
+  /*--- Content ---*/
+  #clashvibes_content {
+    padding: 0;
+    margin: auto; }
+
+  /*--- Left Column---*/
+  #clashvibes_left_column {
+    margin: 0 0 1% 0;
+    width: 21%;
+    border: #000000 solid 4px; }
+    #clashvibes_left_column h1 {
+      font-size: 1.2em; }
+    #clashvibes_left_column a {
+      font-size: 0.75em;
+      line-height: 40px; }
+    #clashvibes_left_column .comment-author-link {
+      font-size: 0.9em;
+      margin: 0;
+      padding: 0; }
+    #clashvibes_left_column .left_col_box {
+      margin: 0;
+      list-style: none; }
+      #clashvibes_left_column .left_col_box ul {
+        margin: 0;
+        padding: 0; }
+        #clashvibes_left_column .left_col_box ul li {
+          height: 40px;
+          line-height: 40px; }
+          #clashvibes_left_column .left_col_box ul li a {
+            font-size: 0.85em;
+            line-height: 40px;
+            list-style: none; }
+    #clashvibes_left_column .blog_box {
+      list-style: none;
+      width: 96%;
+      margin: 0 auto; }
+      #clashvibes_left_column .blog_box p {
+        margin-left: 5px; }
+      #clashvibes_left_column .blog_box h3 a {
+        font-size: 1em;
+        text-align: center; }
+      #clashvibes_left_column .blog_box nav.menu-video-nav-container {
+        height: auto; }
+      #clashvibes_left_column .blog_box .widget {
+        width: 100%; }
+        #clashvibes_left_column .blog_box .widget h3 {
+          height: 40px;
+          line-height: 40px;
+          margin: 3% 0;
+          font-size: 1.2em; }
+      #clashvibes_left_column .blog_box ul, #clashvibes_left_column .blog_box ul#menu-video-nav {
+        padding: 0;
+        margin: 0; }
+        #clashvibes_left_column .blog_box ul li, #clashvibes_left_column .blog_box ul li#menu-item, #clashvibes_left_column .blog_box ul#menu-video-nav li, #clashvibes_left_column .blog_box ul#menu-video-nav li#menu-item {
+          display: block;
+          line-height: 40px; }
+          #clashvibes_left_column .blog_box ul li a, #clashvibes_left_column .blog_box ul li#menu-item a, #clashvibes_left_column .blog_box ul#menu-video-nav li a, #clashvibes_left_column .blog_box ul#menu-video-nav li#menu-item a {
+            padding: 0;
+            margin: 0 0 1% 0; }
+            #clashvibes_left_column .blog_box ul li a:hover, #clashvibes_left_column .blog_box ul li#menu-item a:hover, #clashvibes_left_column .blog_box ul#menu-video-nav li a:hover, #clashvibes_left_column .blog_box ul#menu-video-nav li#menu-item a:hover {
+              color: #000000;
+              background-color: #fec92d; }
+      #clashvibes_left_column .blog_box span {
+        color: #99836c; }
+
+  /*--- End of Left Column---*/
+  /*--- Right Column---*/
+  #clashvibes_right_column {
+    margin: 0 0 1% 0;
+    border: #000000 solid 4px;
+    width: 77%; }
+    #clashvibes_right_column h1 {
+      font-size: 1.5em;
+      height: 30px;
+      line-height: 30px;
+      padding: 2% 0;
+      text-indent: 1%; }
+      #clashvibes_right_column h1 a {
+        width: 71%; }
+      #clashvibes_right_column h1 span {
+        width: 27%; }
+    #clashvibes_right_column header.entry-header {
+      height: auto;
+      display: block; }
+      #clashvibes_right_column header.entry-header section.byline {
+        height: 123px; }
+        #clashvibes_right_column header.entry-header section.byline span {
+          text-indent: 1%;
+          font-size: 0.9em; }
+    #clashvibes_right_column figure.thumb {
+      width: 20%;
+      margin: 5% auto; }
+      #clashvibes_right_column figure.thumb img {
+        margin: 0; }
+    #clashvibes_right_column footer.speaker-meta {
+      background-color: #ffffff;
+      height: 160px; }
+      #clashvibes_right_column footer.speaker-meta ul.post-meta {
+        display: block;
+        height: 100%; }
+        #clashvibes_right_column footer.speaker-meta ul.post-meta li {
+          list-style: none;
+          line-height: 40px;
+          height: 40px; }
+          #clashvibes_right_column footer.speaker-meta ul.post-meta li span {
+            width: 20%;
+            height: 40px;
+            line-height: 40px;
+            background-color: #719118; }
+    #clashvibes_right_column .audio-play {
+      width: 85%;
+      margin: 0 auto;
+      display: block; }
+    #clashvibes_right_column #audio_controls {
+      height: 55px;
+      width: 85%;
+      margin: 0 auto; }
+      #clashvibes_right_column #audio_controls #play_toggle {
+        width: 20%;
+        line-height: 50px; }
+        #clashvibes_right_column #audio_controls #play_toggle:hover {
+          cursor: pointer; }
+      #clashvibes_right_column #audio_controls #progress {
+        width: 60%;
+        height: 25px; }
+        #clashvibes_right_column #audio_controls #progress #play_progress {
+          background-color: #fec92d;
+          height: 25px; }
+        #clashvibes_right_column #audio_controls #progress load_progress {
+          background-color: #e9001c;
+          height: 25px; }
+      #clashvibes_right_column #audio_controls #time {
+        width: 20%; }
+        #clashvibes_right_column #audio_controls #time #duration {
+          font-size: 0.9em; }
+        #clashvibes_right_column #audio_controls #time #current_time {
+          font-size: 0.9em; }
+    #clashvibes_right_column .video-play {
+      width: 45%;
+      margin: 0 auto;
+      display: block;
+      height: 300px; }
+    #clashvibes_right_column article.clash_videos, #clashvibes_right_column article.clash_audio, #clashvibes_right_column article.post {
+      display: block; }
+      #clashvibes_right_column article.clash_videos header.entry-header, #clashvibes_right_column article.clash_audio header.entry-header, #clashvibes_right_column article.post header.entry-header {
+        height: auto; }
+        #clashvibes_right_column article.clash_videos header.entry-header h1, #clashvibes_right_column article.clash_audio header.entry-header h1, #clashvibes_right_column article.post header.entry-header h1 {
+          font-size: 1.5em;
+          height: 30px;
+          line-height: 30px;
+          padding: 2% 0;
+          text-indent: 1%; }
+          #clashvibes_right_column article.clash_videos header.entry-header h1 a, #clashvibes_right_column article.clash_audio header.entry-header h1 a, #clashvibes_right_column article.post header.entry-header h1 a {
+            width: 70%;
+            font-size: 1em; }
+          #clashvibes_right_column article.clash_videos header.entry-header h1 span, #clashvibes_right_column article.clash_audio header.entry-header h1 span, #clashvibes_right_column article.post header.entry-header h1 span {
+            width: 25%;
+            font-size: 0.86em; }
+        #clashvibes_right_column article.clash_videos header.entry-header section.byline, #clashvibes_right_column article.clash_audio header.entry-header section.byline, #clashvibes_right_column article.post header.entry-header section.byline {
+          height: 163px;
+          display: block; }
+          #clashvibes_right_column article.clash_videos header.entry-header section.byline span, #clashvibes_right_column article.clash_audio header.entry-header section.byline span, #clashvibes_right_column article.post header.entry-header section.byline span {
+            height: 40px;
+            line-height: 40px; }
+      #clashvibes_right_column article.clash_videos figure.thumb, #clashvibes_right_column article.clash_audio figure.thumb, #clashvibes_right_column article.post figure.thumb {
+        width: 15%;
+        margin: 5% auto; }
+        #clashvibes_right_column article.clash_videos figure.thumb img, #clashvibes_right_column article.clash_audio figure.thumb img, #clashvibes_right_column article.post figure.thumb img {
+          margin: 0;
+          display: block; }
+      #clashvibes_right_column article.clash_videos section.newsExcerpt, #clashvibes_right_column article.clash_audio section.newsExcerpt, #clashvibes_right_column article.post section.newsExcerpt {
+        display: block; }
+      #clashvibes_right_column article.clash_videos footer.speaker-meta, #clashvibes_right_column article.clash_audio footer.speaker-meta, #clashvibes_right_column article.post footer.speaker-meta {
+        height: 160px; }
+        #clashvibes_right_column article.clash_videos footer.speaker-meta ul.post-meta, #clashvibes_right_column article.clash_audio footer.speaker-meta ul.post-meta, #clashvibes_right_column article.post footer.speaker-meta ul.post-meta {
+          display: block;
+          height: 100%; }
+          #clashvibes_right_column article.clash_videos footer.speaker-meta ul.post-meta li, #clashvibes_right_column article.clash_audio footer.speaker-meta ul.post-meta li, #clashvibes_right_column article.post footer.speaker-meta ul.post-meta li {
+            font-size: 0.9em; }
+            #clashvibes_right_column article.clash_videos footer.speaker-meta ul.post-meta li span, #clashvibes_right_column article.clash_audio footer.speaker-meta ul.post-meta li span, #clashvibes_right_column article.post footer.speaker-meta ul.post-meta li span {
+              width: 17%;
+              text-indent: 1%;
+              font-size: 0.9em; }
+    #clashvibes_right_column .clashvibes_right_panel_fullwidth {
+      width: 96%;
+      min-height: 720px;
+      padding: 2%;
+      height: auto;
+      /*blog*/
+      /*blog end*/ }
+      #clashvibes_right_column .clashvibes_right_panel_fullwidth .post {
+        width: 96%;
+        padding: 2%;
+        margin-bottom: 1%; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post .byline {
+          height: auto;
+          display: block; }
+          #clashvibes_right_column .clashvibes_right_panel_fullwidth .post .byline span {
+            font-size: 0.9em;
+            line-height: 30px;
+            height: 30px; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post h3 {
+          font-size: 1.1em;
+          height: 40px;
+          line-height: 40px;
+          text-indent: 1%; }
+          #clashvibes_right_column .clashvibes_right_panel_fullwidth .post h3 a {
+            color: #ffffff; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post figure.thumb {
+          width: 20%;
+          margin: 5% auto; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post section.newsExcerpt {
+          height: auto; }
+          #clashvibes_right_column .clashvibes_right_panel_fullwidth .post section.newsExcerpt a.download_button {
+            display: block;
+            width: 30%;
+            line-height: 30px;
+            margin: 0 auto; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post p {
+          color: #000000;
+          font-size: 0.9em; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post ul figure {
+          width: 90%;
+          margin: 0 auto; }
+        #clashvibes_right_column .clashvibes_right_panel_fullwidth .post .thumb {
+          max-width: 30%;
+          margin: 5% auto;
+          border: 2px #719118 solid; }
+    #clashvibes_right_column .sound_clash_audio {
+      margin: 1%;
+      width: 96%;
+      padding: 1%; }
+      #clashvibes_right_column .sound_clash_audio .audio-play {
+        width: 85%;
+        margin: 0 auto; }
+      #clashvibes_right_column .sound_clash_audio #audio_controls {
+        height: 49px;
+        width: 90%;
+        margin: 2% auto; }
+        #clashvibes_right_column .sound_clash_audio #audio_controls #play_toggle {
+          width: 20%;
+          line-height: 49px; }
+        #clashvibes_right_column .sound_clash_audio #audio_controls #progress {
+          width: 59%;
+          display: inline-block;
+          height: 24px; }
+          #clashvibes_right_column .sound_clash_audio #audio_controls #progress #play_progress {
+            height: 24px; }
+          #clashvibes_right_column .sound_clash_audio #audio_controls #progress #load_progress {
+            height: 24px; }
+        #clashvibes_right_column .sound_clash_audio #audio_controls #time {
+          width: 20%;
+          display: inline-block;
+          float: right; }
+          #clashvibes_right_column .sound_clash_audio #audio_controls #time #duration {
+            display: block; }
+          #clashvibes_right_column .sound_clash_audio #audio_controls #time #current_time {
+            display: block; }
+      #clashvibes_right_column .sound_clash_audio header.entry-header {
+        display: block;
+        height: auto; }
+        #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title {
+          height: 50px;
+          line-height: 50px;
+          font-size: 1.3em; }
+          #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title span {
+            height: 50px; }
+            #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title span a {
+              color: #000;
+              display: inline;
+              cursor: pointer; }
+              #clashvibes_right_column .sound_clash_audio header.entry-header h1.entry-title span a:hover {
+                color: #ffffff; }
+        #clashvibes_right_column .sound_clash_audio header.entry-header section.byline {
+          height: 123px;
+          display: block; }
+          #clashvibes_right_column .sound_clash_audio header.entry-header section.byline span {
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #86ad1c; }
+      #clashvibes_right_column .sound_clash_audio figure.thumb {
+        width: 20%;
+        margin: 5% auto; }
+      #clashvibes_right_column .sound_clash_audio footer.speaker-meta {
+        display: block;
+        height: 160px; }
+        #clashvibes_right_column .sound_clash_audio footer.speaker-meta ul.post-meta {
+          display: block; }
+          #clashvibes_right_column .sound_clash_audio footer.speaker-meta ul.post-meta li {
+            list-style: none;
+            line-height: 40px;
+            height: 40px; }
+            #clashvibes_right_column .sound_clash_audio footer.speaker-meta ul.post-meta li span {
+              width: 20%;
+              height: 40px;
+              line-height: 40px;
+              text-indent: 1%;
+              font-size: 0.95em; }
+    #clashvibes_right_column .sound_clash_video {
+      margin: 1%;
+      width: 96%;
+      padding: 1%; }
+      #clashvibes_right_column .sound_clash_video .video-play {
+        width: 45%;
+        margin: 0 auto;
+        height: 300px; }
+      #clashvibes_right_column .sound_clash_video header.entry-header {
+        display: block;
+        height: auto; }
+        #clashvibes_right_column .sound_clash_video header.entry-header h1.entry-title {
+          background-color: #262626;
+          height: 50px;
+          line-height: 50px;
+          font-size: 1.3em; }
+          #clashvibes_right_column .sound_clash_video header.entry-header h1.entry-title span {
+            line-height: 50px;
+            height: 50px;
+            color: #ffffff;
+            display: inline-block; }
+            #clashvibes_right_column .sound_clash_video header.entry-header h1.entry-title span a {
+              color: #000000;
+              display: inline; }
+        #clashvibes_right_column .sound_clash_video header.entry-header .byline {
+          height: auto;
+          color: #000000;
+          display: block; }
+          #clashvibes_right_column .sound_clash_video header.entry-header .byline span {
+            line-height: 35px;
+            font-size: 0.85em;
+            color: #000000;
+            background-color: #e21319;
+            text-indent: 2%; }
+            #clashvibes_right_column .sound_clash_video header.entry-header .byline span a {
+              color: #000000;
+              display: inline; }
+      #clashvibes_right_column .sound_clash_video figure.thumb {
+        width: 20%;
+        margin: 5% auto; }
+      #clashvibes_right_column .sound_clash_video footer.speaker-meta {
+        background-color: #ffffff;
+        height: 160px; }
+        #clashvibes_right_column .sound_clash_video footer.speaker-meta ul.post-meta {
+          display: block;
+          height: 100%; }
+          #clashvibes_right_column .sound_clash_video footer.speaker-meta ul.post-meta li {
+            list-style: none;
+            line-height: 40px;
+            height: 40px; }
+            #clashvibes_right_column .sound_clash_video footer.speaker-meta ul.post-meta li span {
+              width: 20%;
+              height: 40px;
+              line-height: 40px;
+              text-indent: 1%;
+              font-size: 0.95em; }
+
+  #clashvibes_content_front {
+    padding: 0;
+    margin: auto; }
+    #clashvibes_content_front #clashvibes_right_column_front {
+      min-height: 720px;
+      margin: 0 0 1% 0;
+      padding: 0px;
+      border: 4px solid #000000;
+      display: block;
+      width: 99%; }
+      #clashvibes_content_front #clashvibes_right_column_front h1 {
+        text-indent: 1%;
+        font-size: 1.3em;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 0 1% 0;
+        padding: 2% auto; }
+      #clashvibes_content_front #clashvibes_right_column_front #new_released_section {
+        width: 100%;
+        margin: 0 0 1% 0; }
+        #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          width: 15.87%;
+          height: 275px;
+          padding: 1%;
+          margin: 0.5em;
+          border: #719118 solid 4px; }
+          #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h3 {
+            font-size: 0.8em;
+            line-height: 23px;
+            width: 98%; }
+          #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box a {
+            font-size: 0.9em; }
+            #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box a:hover {
+              font-weight: bold;
+              width: 100%; }
+          #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .thumb {
+            width: 55%;
+            height: auto;
+            border: 4px solid #719118;
+            margin: 5% auto; }
+          #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .rantsection {
+            height: 30px;
+            margin: 2% auto;
+            width: 45%; }
+            #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .rantsection .star {
+              width: 20%; }
+          #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .more_button {
+            padding: 0;
+            height: 40px; }
+            #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .more_button a.read_more, #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box .more_button a.download_button {
+              font-size: 0.9em;
+              line-height: 40px; }
+
+  .clashvibes_right_panel_fullwidth {
+    float: left;
+    width: 96%;
+    min-height: 720px;
+    padding: 2%;
+    /*blog*/
+    /*blog end*/ }
+    .clashvibes_right_panel_fullwidth #news_section {
+      float: left;
+      padding: 0; }
+      .clashvibes_right_panel_fullwidth #news_section h1 {
+        width: 98%;
+        height: 40px;
+        line-height: 40px;
+        margin: 1% auto; }
+      .clashvibes_right_panel_fullwidth #news_section p {
+        font-size: 0.95em;
+        line-height: 1.6em;
+        width: 98%;
+        margin: 0 auto; }
+      .clashvibes_right_panel_fullwidth #news_section .news_box {
+        float: left;
+        width: 100%;
+        margin: 1% 0; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box h2 {
+          text-indent: 1%;
+          line-height: 50px; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box ul {
+          margin: 0;
+          padding: 0; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box ul li {
+            line-height: 40px; }
+            .clashvibes_right_panel_fullwidth #news_section .news_box ul li ul {
+              padding: 1% 0; }
+              .clashvibes_right_panel_fullwidth #news_section .news_box ul li ul li.cat-item {
+                width: 90%;
+                margin: 1% auto; }
+                .clashvibes_right_panel_fullwidth #news_section .news_box ul li ul li.cat-item:hover {
+                  background-color: #fec92d; }
+            .clashvibes_right_panel_fullwidth #news_section .news_box ul li a {
+              font-size: 0.85em;
+              line-height: 40px; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header {
+          list-style: none; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header .archive-meta {
+            color: #000000;
+            text-indent: 1%;
+            height: 123px; }
+            .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header .archive-meta span {
+              height: 40px;
+              line-height: 40px;
+              font-size: 0.9em;
+              border-bottom: 1px solid #86ad1c; }
+              .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header .archive-meta span a {
+                color: #000000;
+                display: inline-block;
+                width: auto; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header h2 {
+            width: 100%;
+            font-size: 1em;
+            line-height: 50px; }
+            .clashvibes_right_panel_fullwidth #news_section .news_box .archive-header h2 a {
+              text-indent: 0;
+              height: 98%;
+              font-size: 1.2em; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box p {
+          margin: 0;
+          padding: 0; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box section.newsExcerpt {
+          height: auto; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box section.newsExcerpt a.download_button {
+            width: 30%;
+            line-height: 30px;
+            margin: 0 auto; }
+            .clashvibes_right_panel_fullwidth #news_section .news_box section.newsExcerpt a.download_button:hover {
+              background-color: #fec92d;
+              color: #d1181e; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box .thumb {
+          width: 12%;
+          margin: 5% auto; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box .thumb img {
+            margin: 0; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box .entry .audio-play {
+          width: 85%; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box .entry .video-play {
+          width: 45%;
+          height: 300px; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box .entry a.read_more {
+          width: 30%;
+          line-height: 30px; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box .entry a.read_more:hover {
+            background-color: #fec92d;
+            color: #d1181e; }
+        .clashvibes_right_panel_fullwidth #news_section .news_box footer.postmetadata {
+          height: 60px;
+          background-color: #719118; }
+          .clashvibes_right_panel_fullwidth #news_section .news_box footer.postmetadata a.comments-link {
+            display: block;
+            color: #ffffff;
+            padding: 1%; }
+    .clashvibes_right_panel_fullwidth .post {
+      width: 80%;
+      padding: 2%; }
+      .clashvibes_right_panel_fullwidth .post .byline {
+        height: 50px;
+        color: #000000; }
+        .clashvibes_right_panel_fullwidth .post .byline p {
+          padding: 0;
+          margin: 0; }
+        .clashvibes_right_panel_fullwidth .post .byline a {
+          height: 50px;
+          font-size: 1.2em;
+          display: inline-block;
+          line-height: 50px; }
+      .clashvibes_right_panel_fullwidth .post h3 {
+        font-size: 1.1em;
+        height: 40px;
+        line-height: 40px; }
+        .clashvibes_right_panel_fullwidth .post h3 a {
+          font-size: 1.1em;
+          color: #000000; }
+      .clashvibes_right_panel_fullwidth .post figure.thumb {
+        width: 20%; }
+      .clashvibes_right_panel_fullwidth .post .newExcerpt {
+        height: auto; }
+      .clashvibes_right_panel_fullwidth .post p {
+        color: #000000;
+        font-size: 0.9em; }
+      .clashvibes_right_panel_fullwidth .post ul figure {
+        width: 90%;
+        margin: 0 auto; }
+      .clashvibes_right_panel_fullwidth .post .thumb {
+        max-width: 30%;
+        margin: 5% auto;
+        border: 2px #ffffff solid; }
+
+  .clashvibes_right_panel_fullwidth_content {
+    float: left;
+    width: 620px;
+    padding: 0; }
+    .clashvibes_right_panel_fullwidth_content p {
+      text-align: justify;
+      width: 100%; }
+
+  #topdownload_section {
+    width: 43%;
+    padding: 2%;
+    margin: 1%;
+    border: #719118 solid 4px; }
+    #topdownload_section h1 {
+      font-size: 1.3em;
+      height: 30px;
+      line-height: 30px;
+      padding: 2% 0;
+      clear: both;
+      color: #ffffff; }
+
+  .topdownload_box {
+    margin: 0 0 1% 0;
+    color: #000000;
+    border-bottom: 1px solid #6b5946;
+    height: 40px; }
+    .topdownload_box span {
+      font-size: 0.9em;
+      height: 40px;
+      width: 20%; }
+      .topdownload_box span a {
+        height: 100%;
+        font-size: 1em;
+        line-height: 40px; }
+        .topdownload_box span a:hover {
+          background-color: #e21319;
+          color: #fec92d;
+          font-weight: bold; }
+
+  /*--- topdownload box ---*/
+  * html .topdownload_box {
+    margin: 0 15px 10px 7px; }
+
+  .title_singer {
+    width: 80%;
+    font-size: 0.8em; }
+
+  /*--- End of Right Column---*/
+  /*--- End of Content ---*/
+  /* ----- Footer ----- */
+  #clashvibes_footer {
+    clear: both;
+    padding: 10px 0;
+    height: 200px;
+    margin-bottom: 2%; }
+    #clashvibes_footer ul {
+      width: 17%; }
+      #clashvibes_footer ul li {
+        height: 40px;
+        line-height: 40px;
+        text-indent: 5%; }
+        #clashvibes_footer ul li a {
+          width: 100%;
+          line-height: 40px;
+          font-size: 0.9em; }
+          #clashvibes_footer ul li a:hover {
+            color: #cccc66; }
+    #clashvibes_footer ul#footer-content {
+      width: 77%; }
+      #clashvibes_footer ul#footer-content li {
+        text-indent: 0; }
+        #clashvibes_footer ul#footer-content li a {
+          text-align: center; }
+    #clashvibes_footer ul#social-media-box {
+      width: 5%; }
+      #clashvibes_footer ul#social-media-box li {
+        width: 100%;
+        height: 50px; }
+        #clashvibes_footer ul#social-media-box li a {
+          line-height: 50px; }
+          #clashvibes_footer ul#social-media-box li a span {
+            display: block; }
+            #clashvibes_footer ul#social-media-box li a span i {
+              color: #ffffff;
+              font-size: 1.8em;
+              line-height: 50px; }
+              #clashvibes_footer ul#social-media-box li a span i:hover {
+                color: #cccc66;
+                font-size: 1.9em; }
+
+  /* ----- End of Footer ----- */ }
 
 /*# sourceMappingURL=style.css.map */

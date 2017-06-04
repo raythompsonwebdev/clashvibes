@@ -41,7 +41,12 @@
             <img src="<?php print $logo; ?>" alt="<?php bloginfo('name'); ?>" />
         </section>
 
-
+            <span id="socialmediatop"> 
+                <a class="social-icon linkedin-icon" href="" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-instagram"></i></span></a>
+                <a class="social-icon linkedin-icon" href="" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-twitter"></i></span></a>
+                <a class="social-icon linkedin-icon" href="" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-facebook"></i></span></a>
+                <a class="social-icon linkedin-icon" href="" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-google"></i></span></a>
+            </span>
     </header>
 
 

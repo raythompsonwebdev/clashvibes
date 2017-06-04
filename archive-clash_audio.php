@@ -23,29 +23,35 @@ $wp_query = new WP_Query($args);
 
 <?php if ( $wp_query->have_posts() ) :  while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
-<section class="new_released_box">
+<article class="new_released_box">
 
-<article class="thumb"><?php the_post_thumbnail(); ?></article>
+<h1><?php the_title() ?></h1>
 
-<h3><?php the_title() ?></h3>
+		<figure class="thumb">
+		<?php the_post_thumbnail(); ?>
 
-<div class="rantsection">
-<img class="star" src="<?php bloginfo('url');?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
-        <img class="star" src="<?php bloginfo('url');?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
-        <img class="star" src="<?php bloginfo('url');?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
-        <img class="star" src="<?php bloginfo('url');?>/wp-content/uploads/sites/3/2015/08/yellowstar.gif" alt="star" />
-        <img class="star" src="<?php bloginfo('url');?>/wp-content/uploads/sites/3/2015/08/whitestar.gif" alt="star" />
+		<figcaption>
+<!--			<span class="rantsection">
 
-</div>
+				<img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/2/2017/04/yellowstar.gif" alt="star" />
+				<img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/2/2017/04/yellowstar.gif" alt="star" />
+				<img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/2/2017/04/yellowstar.gif" alt="star" />
+				<img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/2/2017/04/yellowstar.gif" alt="star" />
+				<img class="star" src="<?php bloginfo('url'); ?>/wp-content/uploads/sites/2/2017/04/whitestar.gif" alt="star" />
 
-<section class="more_button">
-    
- <a class="download_button" href="<?php the_permalink() ?>">Listen</a>
-        
-</section>
+			</span>-->
+
+			<span class="more_button"><a class="download_button" href="<?php the_permalink() ?>">Listen</a></span>
 
 
-</section>
+		</figcaption>
+
+		</figure>
+
+
+</article>
+
+
 
 <?php endwhile; else: ?>
     

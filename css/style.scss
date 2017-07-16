@@ -453,9 +453,9 @@ a{
     /*--- Left Column---*/
     #clashvibes_left_column {
         float: left;
-        margin: 0 0 1% 0;
+        margin: 0 ;
         background-color: $color;
-        padding: 0px;
+        padding: 0;
         width:21%;
         list-style:none;
         border:$color4 solid 4px;
@@ -537,8 +537,43 @@ a{
                     letter-spacing:0.05em;
                 }
             }
-            nav.menu-video-nav-container{
+            nav{
                 height:auto;
+                
+                ul,
+                ul#menu-audio_nav,
+                ul#menu-video_nav{
+                    padding:0;
+                    margin: 0.5em 0;
+                    height:auto;
+                    @include clearfix();
+                    li, 
+                    li#menu-item {
+                        list-style:none;
+                        display:block;
+                        line-height:40px;
+                        text-align:center;
+                        width:100%;
+                        a{
+                            padding:0;
+                            height:100%;
+                            margin:0 0 1% 0;
+                            text-align:center;
+                            display:block;
+                            text-decoration:none;
+                            background-color:$color4;
+                            color: $color;
+                            letter-spacing:0.05em;
+                            @include originTran( 50% 50%);
+                            @include Transition(all 0.2s linear 0s);
+                            &:hover{ 
+                                color: $color4; 
+                                background-color: $color2;
+                            }
+                        }
+
+                    }
+                }
             }
             .widget {
                 width:100%;
@@ -555,34 +590,7 @@ a{
                 }
 
             }
-            ul,ul#menu-video-nav{
-                padding:0;
-                margin:0;
-                li, li#menu-item {
-                    list-style:none;
-                    display:block;
-                    line-height:40px;
-                    text-align:center;
-                    width:100%;
-                    a{
-                        padding:0;
-                        margin:0 0 1% 0;
-                        text-align:center;
-                        display:block;
-                        text-decoration:none;
-                        background-color:$color4;
-                        color: $color;
-                        letter-spacing:0.05em;
-                        @include originTran( 50% 50%);
-                        @include Transition(all 0.2s linear 0s);
-                        &:hover{ 
-                            color: $color4; 
-                            background-color: $color2;
-                        }
-                    }
-
-                }
-            }
+            
             span{	color: $color11a;}
 
         }
@@ -608,7 +616,7 @@ a{
             margin:0;
             padding:2% 0;
             width:100%;
-            text-indent:1%;
+            text-indent:2%;
             a{
                 width:71%;
                 display:inline-block;
@@ -629,7 +637,7 @@ a{
                 display:block;
                 background-color:$color;
                 span{
-                    text-indent:1%;
+                    text-indent:2%;
                     width:100%;
                     display:block;
                     height:40px;
@@ -774,7 +782,7 @@ a{
                     }
                     span{
                         display:inline-block;
-                        width: 20%;
+                        width: 25%;
                         float: left;
                         font-size: 0.9em;
                         text-indent:0.5em;
@@ -1192,7 +1200,7 @@ a{
             width: 99%;
             h1{
                 display:block;
-                text-indent : 1%;
+                text-indent : 2%;
                 font-size:1.3em;
                 height:40px;
                 line-height:40px;
@@ -1377,7 +1385,7 @@ a{
                 width: 100%;
                 margin: 1% 0 ;
 
-                h2{ text-indent:1%; line-height:50px;}
+                h2{ text-indent:2%; line-height:50px;}
 
                 ul {
                     margin: 0;
@@ -1585,9 +1593,9 @@ a{
 
     ul#topdownload_section {
 
-        width: 45.2%;
-        padding: 1%;
-        margin: 1%;
+        width: 46.3%;
+        padding: 0.5em;
+        margin: 0.5em;
         background-color: $color;
         color: $color4;
         border: $color4 solid 4px;
@@ -1614,7 +1622,7 @@ a{
             list-style:none;
             border: 1px solid #000;
             span.title_singer{
-                text-indent: 1%; 
+                text-indent: 2%; 
                 background-color:$color;
                 width:80%; 
                 color:$color4; 
@@ -1766,7 +1774,7 @@ a{
     #container {
         width: 85%;
         h1 {
-            margin:1% 0;
+            margin:0;
             a {
                 font-size:0.9em;
                 &:hover {
@@ -1977,7 +1985,7 @@ a{
 
     /*--- Left Column---*/
     #clashvibes_left_column {
-        margin: 0 0 1% 0;
+        margin: 0;
         width:21%;
         h1{
             font-size:1.2em;
@@ -2020,8 +2028,32 @@ a{
                     font-size: 0.9em;
                 }
             }
-            nav.menu-video-nav-container{
+            nav{
                 height:auto;
+                
+                ul,
+                ul#menu-audio_nav,
+                ul#menu-video_nav{
+                    padding:0;
+                    margin: 0.5em 0;
+                    height: auto;
+                    @include clearfix();
+                    li, 
+                    li#menu-item {
+                        line-height:40px;
+                        margin-bottom: 1%;
+                        a{
+                            margin:0 0 1% 0;
+                            letter-spacing:0.05em;
+                            &:hover{ 
+                                color: $color4; 
+                                background-color: $color2;
+                            }
+                        }
+
+                    }
+                }
+                
             }
             .widget {
                 width:100%;
@@ -2032,23 +2064,7 @@ a{
                     font-size:1.15em;
                 }
             }
-            ul,ul#menu-video-nav{
-                padding:0;
-                margin:0;
-                li, li#menu-item {
-                    line-height:40px;
-                    margin-bottom: 1%;
-                    a{
-                        margin:0 0 1% 0;
-                        letter-spacing:0.05em;
-                        &:hover{ 
-                            color: $color4; 
-                            background-color: $color2;
-                        }
-                    }
-
-                }
-            }
+            
             span{	
                 color: $color11a;
             }
@@ -2192,7 +2208,7 @@ a{
 
                     }
                     span{
-                        width: 20%;
+                        width: 25%;
                         font-size: 0.85em;
                         text-indent:0.5em;
 
@@ -2485,7 +2501,7 @@ a{
             margin:0 0 1% 0;
             width: 99%;
             h1{
-                font-size:1.3em;
+                font-size:1.25em;
                 height:40px;
                 line-height:40px;
                 letter-spacing:0.05em;
@@ -2495,18 +2511,18 @@ a{
                 margin: 0 0 1% 0;
                 
                 .new_released_box {
-                    width: 17.99%;
+                    width: 17.86%;
                     height:310px;
                     margin: 0.5em;
 
                     h1{
-                        font-size:0.9em;
+                        font-size:0.85em;
                         line-height:30px;
                         letter-spacing:0.05em;
                     }
 
                     a {
-                        font-size:0.9em;
+                        font-size:0.8em;
                         letter-spacing:0.05em;
 
                         &:hover{
@@ -2748,9 +2764,9 @@ a{
 
     ul#topdownload_section {
 
-        width: 45.2%;
-        padding: 1%;
-        margin: 1%;
+        width: 46.3%;
+        padding: 0.5em;
+        margin: 0.5em;
 
         h1{
             font-size: 1.2em;

@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+get_header();
+
+$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+?>
+
 <?php get_sidebar('audio'); ?>
 <div id="clashvibes_content">
 
@@ -7,7 +12,7 @@
     $wp_query = null;
     $args = array(
     'post_type' => 'clash_audio',
-    'post_count' => '5' ,   
+    'post_count' => '5' ,
     'tax_query' => array(
             array(
                 'taxonomy' => 'audio-category',
@@ -15,7 +20,7 @@
                 'terms' => '2k2-clashes'
             )
     )
-    
+
     );
     $wp_query = new WP_Query($args);
 ?>
@@ -26,7 +31,13 @@
 
 <section class="clashvibes_right_panel_fullwidth">
 
-<h1 class="archive-title">Category:<?php single_cat_title(); ?></h1>
+<h1 class="archive-title">Category:<?php echo apply_filters( 'the_title', $term->name ); ?> </h1>
+
+<?php if ( !empty( $term->description ) ): ?>
+    <div class="archive-description">
+      <?php echo esc_html($term->description); ?>
+    </div>
+    <?php endif; ?>
 
 <div id="news_section">
   <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
@@ -46,7 +57,7 @@
     <span>Uploaded by :<?php the_author() ?></span>
     <span> Date: <?php the_time('jS F Y') ?></span>
     <span> at :<?php the_time('g:i a'); ?></span>
-                
+
 </div>
 </header>
 

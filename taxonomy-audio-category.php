@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <?php get_sidebar('audio'); ?>
-<div id="clashvibes_content">
 
 <?php
     $original_query = $wp_query;
@@ -54,7 +53,7 @@
 <?php the_content(); ?>
 
 </div>
-</br/>
+<br/>
 <footer class="postmetadata"><?php
  comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
 ?></footer>
@@ -67,7 +66,7 @@
 </div>
 
 </div><!-- end of news -->
-
+	
 </section>
 </section><!-- end of right panel -->
 

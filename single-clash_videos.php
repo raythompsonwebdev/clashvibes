@@ -27,7 +27,15 @@
  <figure class="thumb"><?php the_post_thumbnail(); ?></figure> 
  
 
- <section class="newsExcerpt"><?php the_content();?></section>
+ <section class="newsExcerpt">
+ <?php the_content();?>
+ 
+ <!--you tube api -->
+ 
+ 
+ 
+ 
+ </section>
 
 
 <br/>

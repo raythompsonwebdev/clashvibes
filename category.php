@@ -49,7 +49,7 @@
 
 </div>
 
-</br>
+<br>
 
 <footer class="postmetadata"><?php
  comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');

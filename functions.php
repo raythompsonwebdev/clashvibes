@@ -9,7 +9,9 @@ add_action('send_headers','fix_ie8');    // for WordPress
 add_filter( 'wp_title', 'filter_wp_title' );
 
 add_filter( 'widget_text', 'shortcode_unautop' );
-add_filter( 'widget_text', 'do_shortcode' );
+add_filter( 'widget_text', array( $wp_embed, 'run_shortcode' ), 8 );
+add_filter( 'widget_text', array( $wp_embed, 'autoembed'), 8 );
+add_filter( 'widget_text', 'do_shortcode');
 
 function filter_wp_title( $title ) {
 	global $page, $paged;

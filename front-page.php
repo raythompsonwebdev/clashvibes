@@ -5,7 +5,10 @@
 
     <section id="clashvibes_right_column_front">
 
-        <section id="clashvibes_banner"></section>
+        <section id="clashvibes_banner">
+            
+            
+        </section>
 
         <h1>Latest Sound Clashes </h1>
         
@@ -129,7 +132,7 @@ wp_reset_query();
                                 'terms' => 'top-video',
                             )
                         ),
-                        'post_type' => 'clash_video',
+                        'post_type' => 'clash_videos',
                         'post_count' => '5'
                     );
                     $wp_query = new WP_Query($args);
@@ -137,7 +140,7 @@ wp_reset_query();
                     <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                     <li class="topdownload_box">
                         <span class="title_singer"><?php the_title() ?></span>
-                        <span><a href="<?php the_permalink() ?>" title="listen to music">Listen</a></span>
+                        <span><a href="<?php the_permalink() ?>" title="listen to music">View</a></span>
                     </li>
 
                     <?php endwhile; else:  ?>

@@ -2,16 +2,6 @@
 <?php get_sidebar(); ?>
 <div id="clashvibes_content">
 
-<?php
-$original_query = $wp_query;
-$wp_query = null;
-$args = array(
-'category_name'=> 'new-releases',
-'post_type' => array('sound_clash_audio', 'sound_clash_video'),
-'post_count' => '5'
-);
-$wp_query = new WP_Query($args);
-?>
 
 <div id="clashvibes_content">
 
@@ -19,12 +9,31 @@ $wp_query = new WP_Query($args);
 
 <section class="clashvibes_right_panel_fullwidth">
 
+<?php
+    $original_query = $wp_query;
+    $wp_query = null;
+    $args = array(
+        'tax_query' => array(
+
+            array(
+                'taxonomy' => 'video-category',
+                'field' => 'slug',
+                
+            )
+        ),
+        'post_type' => 'clash_videos',
+        'post_count' => '10'
+    );
+    $wp_query = new WP_Query($args);
+    ?>
+   
+
 <h1 class="archive-title">Category:<?php single_cat_title(); ?></h1>
 
 
 <div id="news_section">
 
-  <?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+ <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 <div class="news_box">
   <header class="archive-header">
 
@@ -49,7 +58,7 @@ $wp_query = new WP_Query($args);
 <a class="download_button" href="<?php the_permalink() ?>">Listen</a>
 
 </div>
-</br/>
+<br/>
 <footer class="postmetadata"><?php
  comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
 ?></footer>

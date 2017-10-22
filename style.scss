@@ -164,6 +164,30 @@ a{
             padding: 0 ; 
             height:70px;
             margin:0 ;
+            span#socialmediatop{ 
+                float:right;
+                width:20%;
+                display:block;
+                height:40px;
+                a{
+                    height: 100%;
+                    display:inline-block;
+                    color:$color4;
+                    width: 23.5%;
+                    text-align:center;
+
+                    span{
+                        display:block;
+                        height: 100%;
+                        i{
+                            font-size:1.4em;
+                            display:block;
+                            height:100%;
+                            line-height:40px;
+                        }
+                    }
+                }
+            }
         }
 
         /*--- Menu ---*/
@@ -672,10 +696,12 @@ a{
                 #play_progress{
                     background-color:$color2; 
                     height: 25px;
+                    
                 }
-                load_progress{
+                #load_progress{
                     background-color:$color8; 
                     height: 25px;
+                    
                 }
 
             }
@@ -685,15 +711,22 @@ a{
                 display:inline-block;
                 float: right;
                 background-color:$color3; 
+                height: 50px;
                 #duration{
                     text-align:center;
                     color:$color4;
+                    background-color:$color11;
                     font-size:0.9em;
+                    height: 25px;
+                    line-height:25px;
                 }
                 #current_time{
                     text-align:center;
                     color:$color4;
+                    background-color:$color10;
                     font-size:0.9em;
+                    height: 25px;
+                    line-height:25px;
                 }
             }
 
@@ -751,8 +784,10 @@ a{
             }
 
             figure.thumb{
-                width: 12%; 
-                margin:5% auto;
+                width: 15%; 
+                margin:2% 0 2% 2%;
+                float:left;
+                display:inline-block;
                 img{
                     margin:0;
                     display:block;
@@ -760,7 +795,9 @@ a{
             }
 
             section.newsExcerpt{
-                display:block;
+                float:right;
+                display:inline-block;
+                width:80%;
 
             }
 
@@ -768,6 +805,7 @@ a{
                 background-color:$color;
                 display: block;
                 height: 160px;
+                clear:both;
                 ul.post-meta{
                     display:block;
                     margin: 0;

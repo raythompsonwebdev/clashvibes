@@ -10,11 +10,6 @@
 <?php wp_nav_menu( array('menu' => 'Video-Nav', 'container' => 'nav' )); ?>
        
 </div>
- 
-    <?php if ( !function_exists( 'dynamic_sidebar' ) || 
-    !dynamic_sidebar('Video-Nav') ) : ?>               
-   
-    <?php endif; ?>
 
 
  <div class="clearfix"></div>

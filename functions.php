@@ -39,7 +39,7 @@ if ( ! isset( $content_width ) ) {$content_width = 600;};
 
 load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
 
-add_theme_support( 'post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat') );
+add_theme_support( 'post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio' ) );
 
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 170, 170, true );
@@ -85,8 +85,7 @@ $defaults = array(
 
 );
 
-//$my_post_formats = array( 'quote', 'chat', 'audio', 'gallery' );
-//add_theme_support( 'post-formats', $my_post_formats );
+
 
 }
 endif; // my_theme_setup end

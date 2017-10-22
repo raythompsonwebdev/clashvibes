@@ -10,7 +10,9 @@
     
 <section id="clashvibes_right_column_front">
 
-<h1>Privacy Page</h1>
+<h1><?php the_title(); ?> Page</h1>
+   
+    <?php the_content(); ?>
     
 </section><!-- end of right panel -->
 

@@ -5,71 +5,15 @@
 <div id="clashvibes_content">
 
 
-
 <section id="clashvibes_right_column">
 
     <section class="clashvibes_right_panel_fullwidth">
 
-        <?php
-            $original_query = $wp_query;
-            $wp_query = null;
-            $args = array(
-            'posts_per_page' => 3,
-            'post_type' => 'post',
-            'paged' => $paged
-            );
-            $wp_query = new WP_Query($args);
-        ?>
+<?php get_template_part('Templates/content', get_post_format()); ?>
 
-        <?php if ($wp_query->have_posts()):?>
-        <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-
-
-<article class="post group"<?php post_class() ?> id="post-<?php the_ID(); ?>">
-
-    <header class="entry-header">
-  
-<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-
-<section class="byline">
-    <span> Date <?php the_time('jS F Y') ?></span><span> at <?php the_time('g:i a'); ?>
-    </span><span>Written by <?php the_author() ?><span>
-</section>
-  
-</header>
-    
-    <figure class="thumb"><?php the_post_thumbnail(); ?></figure>
-
-    <section class="newsExcerpt"><?php the_excerpt();?></section>
-
-    <br/>
-
-    <footer class="byline">
-    Posted in category :<?php the_category(', ') ?>
-    <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
-<a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
-<br/>
-<p>
-    <?php $lastmodified = get_the_modified_time('U'); $posted = get_the_time('U');
-    if ($lastmodified > $posted) {
-    echo "Edited " . human_time_diff(get_the_time('U'),	get_the_modified_time('U')) . " later";
-    }?>
-</p>
-
-</footer>
-</article>
-
-<?php endwhile; ?>
-<?php else: ?>
-
-<h1>No posts to show</h1>
-<p>Sorry, we got nada. Nothing. Bupkis. Zippo. Diddly-squat. Sorry to disappoint.</p>
-<?php endif; wp_reset_query();?>
-
-
-<div class="clearfix"></div>
 </section><!-- end of clashvibes_right_panel_fullwidth -->
 
 </section><!-- end of right panel -->
 
+</div>
 <?php get_footer(); ?>

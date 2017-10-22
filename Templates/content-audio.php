@@ -1,3 +1,4 @@
+
 <audio id="result_player" >
      <source src="audio/" type='audio/mpeg' />
      <source src="audio/" type='audio/ogg' />
@@ -5,8 +6,6 @@
      <p>Your browser does not support HTML5 audio.</p>
    </audio>
   
-
-
 <br/>
 <div id="audio_controls">
     
@@ -23,3 +22,4 @@
                     </div>
  </div>
 
+<div class="clearfix"></div>

@@ -30,7 +30,7 @@
                                     <section class="newsExcerpt">
                                         <?php the_content(); ?>
 
-                              <?php get_template_part('content' , 'audio-player'); ?>
+                              <?php get_template_part('Templates/content' , 'audio'); ?>
 
                                     </section>
 

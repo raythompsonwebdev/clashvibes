@@ -24,18 +24,19 @@
 
 </header>
 
- <figure class="thumb"><?php the_post_thumbnail(); ?></figure> 
- 
 
- <section class="newsExcerpt">
+
+
+ 
+ <div class="video-play">
  <?php the_content();?>
  
  <!--you tube api -->
  
+ </div>
  
  
- 
- </section>
+
 
 
 <br/>

@@ -50,13 +50,20 @@
                     </h1>
 
                     <figure class="thumb">
+                       
                         <?php the_post_thumbnail(); ?>
 
                         <figcaption>
-
-                            <span class="more_button"><a href="<?php the_permalink() ?>">Listen</a></span>
-
-
+                            
+                                                
+                    <?php if ('clash_audio' == get_post_type()) : ?>
+                           <span class="more_button"><a href=" <?php the_permalink() ?> ">Listen</a></span>
+                           
+                           <?php else : ?>
+                           
+                           <span class="more_button"><a href=" <?php the_permalink() ?> ">View</a></span>
+                           <?php endif; ?>
+                           
                         </figcaption>
 
                     </figure>

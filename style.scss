@@ -109,7 +109,7 @@ body {
     font-family: $font-main;
     font-size: 1em;
     color: $color4;
-    background-color: $color2;
+    background-color: $color;
     .myaudio{
         width:50%; 
         display:block; 
@@ -135,6 +135,7 @@ a{
     text-decoration:none; 
     font-size:1em; 
     display: block;
+    font-family: $font-main;
 }
 
 @media only screen and (max-width: 1920px) {
@@ -144,6 +145,7 @@ a{
         width: 80%;
         height:auto;
         font-family: $font-main;
+        @include box-sizing($type: border-box);
         h1 {
             margin:1% 0;
             width:100%;
@@ -153,6 +155,7 @@ a{
                 font-size:1em;
                 width:100%; 
                 display:block;
+
                 &:hover {
                     text-decoration:none;
                 }
@@ -164,6 +167,7 @@ a{
             padding: 0 ; 
             height:70px;
             margin:0 ;
+
             span#socialmediatop{ 
                 float:right;
                 width:20%;
@@ -195,38 +199,43 @@ a{
             display:block;
             width: 100%;
             height: 45px;
-            margin-bottom:1%;
-            margin: 0 0 0.5% 0;
             padding:0;
-            ul {margin: 0;
+            ul {
+                margin: 0;
                 padding: 0 ;
                 list-style: none;
-                li{display: inline-block;
-                   float: left;
-                   width: 160px;
-                   height: 50px;
-                   margin-right:1%;
-                   a{
-                       width: 100%;
-                       background-color:$color4;
-                       height: 84%;
-                       padding: 0;
-                       font-size: 0.9em;
-                       line-height:40px;
-                       font-weight: bold;
-                       text-align: center;
-                       text-decoration: none;
-                       font-family: $font-main;
-                       color: $color;
-                       display:block;
-                       &:hover{ 
-                           background-color:$color1; 
-                           color:$color4;
-                       }
-                   }
-                   .lastmenu{
-                       border-right: none;
-                   }
+                li{
+                    display: inline-block;
+                    float: left;
+                    width: 160px;
+                    height: 40px;
+                    margin-right:1%;
+                    a{
+                        width: 100%;
+                        background-color:$color4;
+                        height: 100%;
+                        padding: 0;
+                        font-size: 0.9em;
+                        line-height:40px;
+                        font-weight: bold;
+                        text-align: center;
+                        text-decoration: none;
+                        font-family: $font-main;
+                        color: $color;
+                        display:block;
+                        letter-spacing:0.05em;
+                        font-weight: normal;
+                        @include Transition(all 0.2s linear 0s);
+                        &:hover{ 
+                            background-color:$color1; 
+                            color:$color4;
+                            font-weight: bold;
+                            letter-spacing:0.055em;
+                        }
+                    }
+                    .lastmenu{
+                        border-right: none;
+                    }
 
                 }
             }
@@ -330,17 +339,17 @@ a{
                 float: left;
             }
             input[type="submit"]{
-                background-color:$color8;
+                background-color:$color4;
                 width:30%;
                 margin:0 0 0 2%;
                 display:inline-block;
                 height:35px;
-                color:$color2;
+                color:$color;
                 border:none;
                 outline:none;
                 &:hover{
                     background-color:$color2; 
-                    color:$color3;
+                    color:$color4;
                     border:none;
                     outline:none; 
                     cursor:pointer;
@@ -444,9 +453,9 @@ a{
     /*--- Left Column---*/
     #clashvibes_left_column {
         float: left;
-        margin: 0 0 1% 0;
-        background-color: $color1;
-        padding: 0px;
+        margin: 0 ;
+        background-color: $color;
+        padding: 0;
         width:21%;
         list-style:none;
         border:$color4 solid 4px;
@@ -460,6 +469,7 @@ a{
             padding:0;
             height:40px;
             line-height:40px;
+            letter-spacing:0.05em;
         }
         a{
             font-size:0.8em;
@@ -472,6 +482,7 @@ a{
             color: $color9;
             list-style:none;
             margin:0px;
+            letter-spacing:0.05em;
         }
 
         .comment-author-link{
@@ -503,6 +514,7 @@ a{
                         color: $color9;
                         list-style:none;
                         margin:0px;
+                        letter-spacing:0.05em;
                     }
                 }
             }
@@ -522,10 +534,46 @@ a{
                     font-size: 1em;
                     color: $color2a;
                     text-align:center;
+                    letter-spacing:0.05em;
                 }
             }
-            nav.menu-video-nav-container{
+            nav{
                 height:auto;
+                
+                ul,
+                ul#menu-audio_nav,
+                ul#menu-video_nav{
+                    padding:0;
+                    margin: 0.5em 0;
+                    height:auto;
+                    @include clearfix();
+                    li, 
+                    li#menu-item {
+                        list-style:none;
+                        display:block;
+                        line-height:40px;
+                        text-align:center;
+                        width:100%;
+                        a{
+                            padding:0;
+                            height:100%;
+                            margin:0 0 1% 0;
+                            text-align:center;
+                            display:block;
+                            text-decoration:none;
+                            background-color:$color4;
+                            color: $color;
+                            letter-spacing:0.05em;
+                            @include originTran( 50% 50%);
+                            @include Transition(all 0.2s linear 0s);
+                            &:hover{ 
+                                color: $color4; 
+                                background-color: $color2;
+                            }
+                        }
+
+                    }
+                }
             }
             .widget {
                 width:100%;
@@ -542,28 +590,7 @@ a{
                 }
 
             }
-            ul,ul#menu-video-nav{
-                padding:0;
-                margin:0;
-                li, li#menu-item {
-                    list-style:none;
-                    display:block;
-                    line-height:40px;
-                    text-align:center;
-                    width:100%;
-                    a{
-                        padding:0;
-                        margin:0 0 1% 0;
-                        text-align:center;
-                        display:block;
-                        text-decoration:none;
-                        background-color:$color3;
-                        color: $color4;
-                        &:hover{ color: $color4; background-color: $color2;}
-                    }
-
-                }
-            }
+            
             span{	color: $color11a;}
 
         }
@@ -572,7 +599,7 @@ a{
 
     /*--- Right Column---*/
     #clashvibes_right_column {
-        background-color: $color1;
+        background-color: $color;
         float: right;
         margin: 0 0 1% 0;
         padding: 0;
@@ -589,7 +616,7 @@ a{
             margin:0;
             padding:2% 0;
             width:100%;
-            text-indent:1%;
+            text-indent:2%;
             a{
                 width:71%;
                 display:inline-block;
@@ -610,12 +637,11 @@ a{
                 display:block;
                 background-color:$color;
                 span{
-                    text-indent:1%;
+                    text-indent:2%;
                     width:100%;
                     display:block;
                     height:40px;
                     line-height:40px;
-
                     font-size:0.95em;
                     background-color:$colors;
                     border-bottom:1px solid $color1; 
@@ -649,8 +675,6 @@ a{
                         display:inline-block;
                         height:40px;
                         line-height:40px;
-
-
                         background-color:$colors;
                     }
 
@@ -671,37 +695,39 @@ a{
 
         #audio_controls{
             height: 55px;
-            width: 85%;
+            width: 75%;
             display: block;
             margin: 0 auto;
+            border:$color4 solid 4px;
 
             #play_toggle{ 
                 width:20%; 
                 display:block; 
                 float:left;
                 height: auto;
-                line-height: 50px;
+                line-height: 55px;
                 text-align:center;
                 background-color:$colors;
+                @include originTran( 50% 50%);
+                @include Transition(all 0.2s linear 0s);
                 &:hover{
                     cursor:pointer;
+                    font-size:1.1em;
                 }
             }
 
             #progress{
                 width:60%;
                 display:inline-block;
-                height: 25px;
+                height: 27.5px;
 
                 #play_progress{
                     background-color:$color2; 
-                    height: 25px;
-                    
+                    height: 27.5px;
                 }
                 #load_progress{
                     background-color:$color8; 
-                    height: 25px;
-                    
+                    height: 27.5px;
                 }
 
             }
@@ -710,32 +736,41 @@ a{
                 width:20%;
                 display:inline-block;
                 float: right;
-                background-color:$color3; 
-                height: 50px;
+                background-color:$color4; 
                 #duration{
                     text-align:center;
-                    color:$color4;
-                    background-color:$color11;
-                    font-size:0.9em;
-                    height: 25px;
-                    line-height:25px;
+                    color:$color;
+                    font-size:0.8em;
+                    height: 27.5px;
+                    line-height: 27.5px;
                 }
                 #current_time{
                     text-align:center;
-                    color:$color4;
-                    background-color:$color10;
-                    font-size:0.9em;
-                    height: 25px;
-                    line-height:25px;
+                    color:$color;
+                    font-size:0.8em;
+                    height: 27.5px;
+                    line-height: 27.5px;
                 }
             }
 
         }
 
-        .video-play{width:45%; margin:0 auto; display:block; height: 300px;}
+        .video-play{
+            width:100%; 
+            margin:0 auto; 
+            display:block; 
+            height: auto;
+            iframe{
+                margin:auto;
+                display:block;
+            
+            }
+        }
 
         //custom posts and regular post
-        article.clash_videos, article.clash_audio, article.post{
+        article.clash_videos, 
+        article.clash_audio, 
+        article.post{
             display:block;
 
             header.entry-header{
@@ -749,18 +784,20 @@ a{
                     margin:0;
                     padding:2% 0;
                     width:100%;
-                    text-indent:1%;
+                    text-indent:0;
                     a{
                         width:70%;
                         display:inline-block;
-                        font-size: 1.1em
+                        font-size: 1.1em;
+                        letter-spacing: 0.05em;
 
                     }
                     span{
                         display:inline-block;
-                        width: 20%;
+                        width: 25%;
                         float: left;
                         font-size: 0.9em;
+                        text-indent:0.5em;
 
 
                     }
@@ -774,8 +811,9 @@ a{
                         height:40px;
                         line-height:40px;
                         background-color:$colors;
-                        border-bottom:1px solid $color1; 
+                        border-bottom:1px solid $color; 
                         color:$color;
+                        letter-spacing:0.05em;
 
 
                     }
@@ -785,9 +823,13 @@ a{
 
             figure.thumb{
                 width: 15%; 
-                margin:2% 0 2% 2%;
+                margin:3%;
                 float:left;
                 display:inline-block;
+                border:4px solid $color4;
+                @include originTran( 50% 50%);
+                @include box-sizing($type: border-box);
+                @include Transition( all 0.2s linear 0s);
                 img{
                     margin:0;
                     display:block;
@@ -795,36 +837,40 @@ a{
             }
 
             section.newsExcerpt{
-                float:right;
                 display:inline-block;
-                width:80%;
+                width: 78%;
 
             }
 
             footer.speaker-meta{
-                background-color:$color;
+                clear:both;
+                background-color:$color4;
                 display: block;
                 height: 160px;
-                clear:both;
+                margin: 0;
+                padding: 0;
+
                 ul.post-meta{
                     display:block;
                     margin: 0;
                     padding: 0;
                     height: 100%;
+                    letter-spacing:0.05em;
 
                     li{
                         list-style:none;
-                        line-height:40px;
+                        line-height:39px;
                         height:40px;
                         font-size:0.9em;
+                        color:$color;
 
                         span{
-                            width:15%;
+                            width:20%;
                             display:inline-block;
                             height:40px;
                             line-height:40px;
                             text-indent:1%;
-                            font-size:0.95em;
+                            font-size:1em;
                             background-color:$colors;
                             color:#fff;
                         }
@@ -882,21 +928,32 @@ a{
                     a{ color:$color;}
                 }
 
-                figure.thumb{width:20%; margin:5% auto;}
+                figure.thumb{
+                    width:30%;
+                    max-width:30%; 
+                    margin:5% auto;
+                    border:4px solid $color4;
+                    @include originTran( 50% 50%);
+                    @include box-sizing($type: border-box);
+                    @include Transition( all 0.2s linear 0s);
+                }
                 section.newsExcerpt{
                     height:auto;
-                    a.download_button{display:block; width:30%; height:auto; line-height:30px; margin:0 auto;}
+                    a.download_button{
+                        display:block; 
+                        width:30%; 
+                        height:auto; 
+                        line-height:30px; 
+                        margin:0 auto;
+                    }
 
 
                 }
                 p{color:$color4; font-size:0.9em;}
                 ul figure{width:90%; margin:0 auto; padding:0;}
-                .thumb{max-width:30%; margin: 5% auto; border:2px $colors solid;}
 
             }
-
             /*blog end*/
-
         }
 
         .sound_clash_audio{
@@ -983,6 +1040,8 @@ a{
                             color:#000;
                             display: inline;
                             cursor:pointer;
+                            @include originTran( 50% 50%);
+                            @include Transition(all 0.2s linear 0s);
                             &:hover{color:$color;}
                         }
                     }
@@ -1091,7 +1150,7 @@ a{
                         font-size: 0.85em;
                         margin:0;
                         color:$color4;
-                        background-color:$color6;
+                        background-color:$color;
                         width:auto;
                         display:block;
 
@@ -1157,7 +1216,7 @@ a{
             width: 99%;
             h1{
                 display:block;
-                text-indent : 1%;
+                text-indent : 2%;
                 font-size:1.3em;
                 height:40px;
                 line-height:40px;
@@ -1165,6 +1224,7 @@ a{
                 margin:0 0 1% 0;
                 padding:2% auto;
                 font-family: $font-main;
+                letter-spacing:0.05em;
             }
 
             #new_released_section {
@@ -1190,25 +1250,26 @@ a{
                     -ms-flex: 0 1 auto;
                     flex: 0 1 auto;
                     float: left;
-                    width: 16.35%;
+                    width: 18.35%;
                     height:310px;
-                    padding:1%;
+                    padding:0;
                     margin: 0.5em;
-                    border:$colors solid 4px;
-                    background-color:$color1;
+                    border:$color4 solid 4px;
+                    background-color:$color;
 
 
-                    h3{
+                    h1{
                         margin:0;
                         color:$color;
-                        font-size:0.85em;
+                        font-size:0.9em;
                         height:auto;
                         text-align:center;
                         padding:0;
-                        line-height:23px;
-                        width: 98%;
+                        line-height:30px;
+                        width: 100%;
+                        letter-spacing:0.05em;
+                        font-weight: normal;
                     }
-
 
                     a {
                         font-size:0.9em;
@@ -1219,49 +1280,84 @@ a{
                         display:block;
                         margin:0;
                         height: 100%;
+                        letter-spacing:0.05em;
 
                         &:hover{
                             font-weight:bold; 
-                            background-color:$color6;
+                            background-color:$color3;
                             width:100%;
                         }
                     }
 
-                    .thumb{ 
-                        width:55%; 
-                        background-color:$color4; 
+                    figure.thumb{ 
+                        width:60%; 
                         height:auto; 
-                        border:4px solid $colors; 
                         margin:5% auto;
-                    }
-                    .rantsection {
-                        height: 30px;
-                        margin: 2% auto;
-                        display: block;
-                        width: 45%;
-                        .star {
-                            float: left; 
-                            height: auto;
-                            width: 20%;
-                            border: 0px;
-                            margin:0px ; 
-                            display: inline-block; 
-                            padding:0;
+                        @include originTran( 50% 50%);
+                        @include box-sizing($type: border-box);
+                        @include Transition( all 0.2s linear 0s);
+
+                        &:hover{ 
+                            cursor:pointer;
+                            border:none;
+                            width:65%;
+
                         }
-                    }
-                    .more_button{
-                        padding:0;
-                        display: block;
-                        height: 40px;
-                        a.read_more, a.download_button{
-                            font-size:0.9em; 
-                            color:$color4; 
-                            margin:0;
-                            padding: 0;
-                            line-height:40px;
-                            height:100%;
-                            display:block;
+                        img{ 
+                            border:4px solid $color4;
+                            @include box-sizing($type: border-box);
+
                         }
+
+                        figcaption{
+
+                            span.rantsection {
+                                height: 30px;
+                                margin: 2% auto;
+                                display: block;
+                                width: 45%;
+                                img.star {
+                                    float: left; 
+                                    height: auto;
+                                    width: 20%;
+                                    border: 0px;
+                                    margin:0px ; 
+                                    display: inline-block; 
+                                    padding:0;
+                                }
+                            }
+
+                            span.more_button{
+                                padding:0;
+                                display: block;
+                                height: 40px;
+                                border-left:4px solid $color4;
+                                border-bottom:4px solid $color4;
+                                border-right:4px solid $color4;
+                                a{
+                                    font-size:0.9em; 
+                                    color:$color; 
+                                    background-color:$color4;
+                                    margin:0;
+                                    padding: 0;
+                                    line-height:40px;
+                                    height:100%;
+                                    display:block;
+                                    letter-spacing:0.05em;
+                                    @include originTran( 50% 50%);
+                                    @include box-sizing($type: border-box);
+                                    @include Transition( all 0.2s linear 0s);
+                                    &:hover{
+                                        color:$color4;
+                                        background-color:$color1;
+                                        letter-spacing:0.055em;
+                                        font-weight:bold;
+                                    }
+                                }
+                            }
+                        }
+
+
                     }
                 }
             }
@@ -1289,6 +1385,7 @@ a{
                 height: 40px;
                 line-height: 40px;
                 margin: 1% auto;
+                letter-spacing:0.05em;
             }
 
             p{
@@ -1304,7 +1401,7 @@ a{
                 width: 100%;
                 margin: 1% 0 ;
 
-                h2{ text-indent:1%; line-height:50px;}
+                h2{ text-indent:2%; line-height:50px;}
 
                 ul {
                     margin: 0;
@@ -1358,17 +1455,29 @@ a{
                             height:40px;
                             line-height:40px;
                             font-size:0.9em;
-                            background-color:$colors;
-                            border-bottom:1px solid $color1;
-                            a{  color:$color4; display: inline-block; width: auto;}
+                            background-color:$color1;
+                            color:$color4;
+                            border-bottom:1px solid $color;
+                            letter-spacing:0.05em;
+                            a{  
+                                color:$color4; 
+                                display: inline-block; 
+                                width: auto;
+                            }
                         }
                     }
                     h2{
                         width:100%;
                         font-size:1em;
                         line-height:50px;
+                        letter-spacing:0.05em;
 
-                        a{text-indent: 0; height:98%; font-size:1.2em; display: inline-block; width: 100%;}
+                        a{text-indent: 0; 
+                          height:98%; 
+                          font-size:1.2em; 
+                          display: inline-block; 
+                          width: 100%;
+                        }
                     }
                 }
 
@@ -1409,8 +1518,9 @@ a{
                         line-height:30px; 
                         margin:0 auto; 
                         text-align:center; 
-                        background-color:$color3;
-                        &:hover{background-color:$color2; color:$color3;}
+                        background-color:$color4;
+                        color:$color;
+                        &:hover{background-color:$color2; color:$color4;}
                     }
                 }
 
@@ -1497,15 +1607,16 @@ a{
         }
     }
 
-    #topdownload_section {
+    ul#topdownload_section {
 
-        width: 43%;
-        padding: 2%;
-        margin: 1%;
-        background-color: $color1;
-        color: $color;
-        border: $colors solid 4px;
+        width: 46.3%;
+        padding: 0.5em;
+        margin: 0.5em;
+        background-color: $color;
+        color: $color4;
+        border: $color4 solid 4px;
         display:inline-block;
+
         h1{
             font-size: 1.3em;
             height: 30px;
@@ -1515,59 +1626,71 @@ a{
             margin: 0;
             color:$color;
         }
-    }
 
-    .topdownload_box {
-        width: 100%;
-        margin:0 0 1% 0;
-        color: $color4;
-        font-weight: bold;
-        border-bottom: 1px solid $color11;
-        height:40px;
-        span{
-            background-color:$color;
-            font-weight: normal;
-            font-size: 0.95em;
+        li.topdownload_box {
+            width: 99.5%;
+            margin:0 0 1% 0;
+            color: $color4;
+            font-weight: bold;
             height:40px;
-            width:20%;
-            padding:0;
-            display:block;
-            float:left;
-            a{
-                height:100%;
-                font-size:1em;
-                line-height:40px;
+            letter-spacing:0.05em;
+            padding: 0;
+            list-style:none;
+            border: 1px solid #000;
+            span.title_singer{
+                text-indent: 2%; 
+                background-color:$color;
+                width:80%; 
+                color:$color4; 
+                height:100%; 
+                line-height:40px; 
+                font-size:0.85em; 
+                display:inline-block;
+                font-weight: normal;
+                float:left;
+            }
+            span{
+                background-color:$color;
+                font-weight: normal;
+                font-size: 0.95em;
+                height:40px;
+                width:20%;
                 padding:0;
-                background-color:$color2;;
-                display:block;
-                margin:0;
-                text-align:center;
-                color:$color4;
-                &:hover{
-                    background-color:$color6;
-                    color:$color2; 
-                    font-weight:bold;
+                display:inline-block;
+                a{
+                    height:100%;
+                    font-size:1em;
+                    line-height:40px;
+                    padding:0;
+                    background-color:$color4;;
+                    display:block;
+                    margin:0;
+                    text-align:center;
+                    color:$color;
+                    letter-spacing:0.05em;
+                    font-weight: normal;
+                    @include originTran( 50% 50%);
+                    @include Transition(all 0.2s linear 0s);
+                    border-left:$color4 1px solid;
+
+                    &:hover{
+                        background-color:$color1;
+                        color:$color4; 
+                        font-weight:bold;
+                        letter-spacing:0.055em;
+                    }
                 }
             }
         }
     }
+
+
     /*--- topdownload box ---*/
 
     * html .topdownload_box {	
         margin: 0 15px 10px 7px;
     }
 
-    .title_singer{
-        text-indent: 1%; 
-        background-color:$color;
-        float: left;
-        width:80%; 
-        color:$color4; 
-        height:100%; 
-        line-height:40px; 
-        font-size:0.85em; 
-        display:inline-block;
-    }
     /*--- End of Right Column---*/
     /*--- End of Content ---*/
 
@@ -1605,7 +1728,7 @@ a{
                     text-align:left;
                     font-size:0.9em;
 
-                    &:hover{color: $color10;}
+                    &:hover{color: $color10; font-weight: bold;}
                 }
             }
         }
@@ -1617,6 +1740,7 @@ a{
             margin:0;
             padding: 0;
             height:100%;
+            font-weight: normal;
             li{
                 text-indent: 0;
                 a{ text-align:center;}
@@ -1664,13 +1788,11 @@ a{
 @media only screen and (max-width: 1440px) {
 
     #container {
-        width: 80%;
-
+        width: 85%;
         h1 {
-            margin:1% 0;
+            margin:0;
             a {
-                cursor:text;
-                font-size:1em;
+                font-size:0.9em;
                 &:hover {
                     text-decoration:none;
                 }
@@ -1679,6 +1801,22 @@ a{
 
         header { 
             height:70px;
+
+            span#socialmediatop{ 
+                width:20%;
+                height:40px;
+                a{
+                    width: 23.5%;
+
+                    span{
+                        display:block;
+                        i{
+                            font-size:1.3em;
+                            line-height:40px;
+                        }
+                    }
+                }
+            }
         }
 
         /*--- Menu ---*/
@@ -1687,18 +1825,14 @@ a{
 
             ul {
 
+                list-style: none;
                 li{
-
-                    width: 160px;
-                    height: 50px;
-                    margin-right:1%;
+                    height: 40px;
                     a{
-                        height: 84%;
                         font-size: 0.85em;
-                        line-height:40px;
+                        letter-spacing:0.05em;
                         &:hover{ 
-                            background-color:$color1; 
-                            color:$color4;
+                            letter-spacing:0.055em;
                         }
                     }
                     .lastmenu{
@@ -1719,10 +1853,9 @@ a{
             #clashvibes_banner{
                 width: 98%;
                 height: 400px;
-                clear: both;
                 margin: 1% ;
+
                 #slider {
-                    padding:0;
                     list-style:none;
                     li { 
                         overflow:hidden; 
@@ -1742,12 +1875,10 @@ a{
                     left:97%; 
                 }
                 #prevBtn a { 
-                    display:block; 
                     width:29px; 
                     height:29px; 
                 }
                 #nextBtn a { 
-                    display:block; 
                     width:29px; 
                     height:29px; 
                 }
@@ -1777,7 +1908,7 @@ a{
             }
 
             label {	
-                font-size:1.4em; 
+                font-size:1.5em; 
                 line-height:1.4em; 
                 margin:0px 20px 0px 10px;
             }
@@ -1792,8 +1923,6 @@ a{
                 margin:0 0 0 2%;
                 height:35px;
                 &:hover{
-                    border:none;
-                    outline:none; 
                     cursor:pointer;
                 }
             }
@@ -1814,12 +1943,12 @@ a{
         }
         div div div { 
             width:880px;  
-            border:0;
         }
         div div div p.img { 
             float:right; 
             width:483px; 
             padding:29px 0 0 0; 
+            margin:0;
         }
         div div div h2 {
             width:378px; 
@@ -1847,17 +1976,15 @@ a{
     .slider2_resize {
         width:950px;
         margin:0 auto;
-        padding:0;
         h2 {
             width:445px; 
-            font:bold 36px $font-main; 
             margin:2% 0; 
             padding:20px 0 0 30px; 
             line-height:1.2em; 
+            text-transform:uppercase;
         }
         p { 
             width:350px; 
-            font:normal 11px $font-main; 
             padding:20px 0 0 10px; 
             line-height:1.8em;
         }
@@ -1874,22 +2001,18 @@ a{
 
     /*--- Left Column---*/
     #clashvibes_left_column {
-        margin: 0 0 1% 0;
+        margin: 0;
         width:21%;
-        border:$color4 solid 4px;
         h1{
             font-size:1.2em;
-      
         }
         a{
-            font-size:0.75em;
+            font-size:0.8em;
             line-height:40px;
         }
 
         .comment-author-link{
             font-size:0.9em; 
-            margin:0; 
-            padding:0;
         }
 
         .left_col_box {
@@ -1904,15 +2027,13 @@ a{
                     a{
                         font-size:0.85em;
                         line-height:40px;
-                        list-style:none;
+                        letter-spacing:0.05em;
                     }
                 }
             }
         }
 
         .blog_box {
-
-            list-style:none;
             width: 96%;
             margin: 0 auto;
             p{ 
@@ -1920,12 +2041,35 @@ a{
             }
             h3 {
                 a{
-                    font-size: 1em;
-                    text-align:center;
+                    font-size: 0.9em;
                 }
             }
-            nav.menu-video-nav-container{
+            nav{
                 height:auto;
+                
+                ul,
+                ul#menu-audio_nav,
+                ul#menu-video_nav{
+                    padding:0;
+                    margin: 0.5em 0;
+                    height: auto;
+                    @include clearfix();
+                    li, 
+                    li#menu-item {
+                        line-height:40px;
+                        margin-bottom: 1%;
+                        a{
+                            margin:0 0 1% 0;
+                            letter-spacing:0.05em;
+                            &:hover{ 
+                                color: $color4; 
+                                background-color: $color2;
+                            }
+                        }
+
+                    }
+                }
+                
             }
             .widget {
                 width:100%;
@@ -1933,29 +2077,13 @@ a{
                     height:40px;
                     line-height:40px;
                     margin:3% 0;
-                    font-size:1.2em;
-
-                }
-
-            }
-            ul,ul#menu-video-nav{
-                padding:0;
-                margin:0;
-                li, li#menu-item {
-                    display:block;
-                    line-height:40px;
-                    a{
-                        padding:0;
-                        margin:0 0 1% 0;
-                        &:hover{ 
-                            color: $color4; 
-                            background-color: $color2;
-                        }
-                    }
-
+                    font-size:1.15em;
                 }
             }
-            span{	color: $color11a;}
+            
+            span{	
+                color: $color11a;
+            }
 
         }
     }
@@ -1964,22 +2092,19 @@ a{
     /*--- Right Column---*/
     #clashvibes_right_column {
         margin: 0 0 1% 0;
-        border:$color4 solid 4px;
         width:77%;
 
         //global post
         h1{
-            font-size:1.5em;
+            font-size:1.4em;
             height:30px;
             line-height:30px;
             padding:2% 0;
             text-indent:1%;
             a{
                 width:71%;
-
             }
             span{
-
                 width: 27%;
 
             }
@@ -1990,12 +2115,13 @@ a{
             display: block;
             section.byline{
                 height:123px;
-
                 span{
-                    text-indent:1%;
-                    font-size: 0.9em;
+                    height:40px;
+                    line-height:40px;
+                    font-size:0.9em;
                 }
             }
+
         }
 
         figure.thumb{
@@ -2014,7 +2140,6 @@ a{
                 height: 100%;
 
                 li{
-                    list-style:none;
                     line-height:40px;
                     height:40px;
 
@@ -2022,9 +2147,6 @@ a{
                         width:20%;
                         height:40px;
                         line-height:40px;
-
-
-                        background-color:$colors;
                     }
 
                 }
@@ -2037,35 +2159,31 @@ a{
         //audio/video player
         .audio-play{
             width:85%;
-            margin:0 auto;
-            display:block;
-
         }
 
         #audio_controls{
             height: 55px;
-            width: 85%;
-            margin: 0 auto;
+            width: 60%;
 
             #play_toggle{ 
                 width:20%; 
-                line-height: 50px;
+                height: auto;
+                line-height: 55px;
                 &:hover{
                     cursor:pointer;
+                    font-size:1.1em;
                 }
             }
 
             #progress{
                 width:60%;
-                height: 25px;
+                height: 27.5px;
 
                 #play_progress{
-                    background-color:$color2; 
-                    height: 25px;
+                    height: 27.5px;
                 }
                 load_progress{
-                    background-color:$color8; 
-                    height: 25px;
+                    height: 27.5px;
                 }
 
             }
@@ -2073,18 +2191,20 @@ a{
             #time{
                 width:20%;
                 #duration{
-
-                    font-size:0.9em;
+                    font-size:0.8em;
+                    height: 27.5px;
+                    line-height: 27.5px;
                 }
                 #current_time{
-
-                    font-size:0.9em;
+                    font-size:0.8em;
+                    height: 27.5px;
+                    line-height: 27.5px;
                 }
             }
 
         }
 
-        .video-play{width:45%; margin:0 auto; display:block; height: 300px;}
+        .video-play{width:45%;height: 300px;}
 
         //custom posts and regular post
         article.clash_videos, article.clash_audio, article.post{
@@ -2092,20 +2212,21 @@ a{
 
             header.entry-header{
                 height:auto;
+                display: block;
                 h1{
                     font-size:1.5em;
                     height:30px;
                     line-height:30px;
-                    padding:2% 0;
-                    text-indent:1%;
+                    text-indent:0;
                     a{
                         width:70%;
-                        font-size: 1em
+                        font-size: 1em;
 
                     }
                     span{
                         width: 25%;
-                        font-size: 0.86em;
+                        font-size: 0.85em;
+                        text-indent:0.5em;
 
 
                     }
@@ -2113,18 +2234,20 @@ a{
 
                 section.byline{
                     height:123px;
-                    display:block;
                     span{
                         height:40px;
                         line-height:40px;
-
+                        border-bottom:1px solid $color; 
+                        letter-spacing:0.05em;
+                        font-size: 0.85em;
                     }
                 }
             }
 
             figure.thumb{
-                width: 15%; 
+                width: 20%; 
                 margin:5% auto;
+                border:4px solid $color4;
                 img{
                     margin:0;
                     display:block;
@@ -2138,25 +2261,24 @@ a{
 
             footer.speaker-meta{
                 height: 160px;
+
                 ul.post-meta{
-                    display:block;
-                    height: 100%;
+                    letter-spacing:0.05em;
 
                     li{
+                        line-height:39px;
+                        height:40px;
                         font-size:0.9em;
 
                         span{
-                            width:17%;
-                            text-indent:1%;
-                            font-size:0.9em;
+                            width:20%;
+                            height:40px;
+                            line-height:40px;
+                            font-size:0.85em;
                         }
-
                     }
-
                 }
-
             }
-
         }
 
         .clashvibes_right_panel_fullwidth {
@@ -2168,21 +2290,20 @@ a{
             /*blog*/
             .post{
                 width:96%;
+                color:#000;
                 padding:2%;
-                margin-bottom: 1%;
-
                 .byline{
                     height:auto;
-                    display:block;
                     span{
                         font-size:0.9em;
                         line-height:30px;
                         height:30px;
+                        color:#000;
                     }
                 }
 
                 h3{
-                    font-size:1.1em;
+                    font-size:1em;
                     height:40px;
                     line-height:40px;
                     text-indent:1%;
@@ -2190,13 +2311,14 @@ a{
                 }
 
                 figure.thumb{
-                    width:20%; 
+                    width:30%;
+                    max-width:30%; 
                     margin:5% auto;
+                    border:4px solid $color4;
                 }
                 section.newsExcerpt{
                     height:auto;
                     a.download_button{
-                        display:block; 
                         width:30%; 
                         line-height:30px; 
                         margin:0 auto;
@@ -2205,23 +2327,14 @@ a{
 
                 }
                 p{
-                    color:$color4; 
                     font-size:0.9em;
                 }
                 ul figure{
                     width:90%; 
                     margin:0 auto; 
                 }
-                .thumb{
-                    max-width:30%; 
-                    margin: 5% auto; 
-                    border:2px $colors solid;
-                }
-
             }
-
             /*blog end*/
-
         }
 
         .sound_clash_audio{
@@ -2231,7 +2344,6 @@ a{
             .audio-play{
                 width:85%;
                 margin:0 auto;
-
             }
             #audio_controls{
                 height: 49px;
@@ -2241,14 +2353,13 @@ a{
                 #play_toggle{ 
                     width:20%;
                     line-height:49px; 
-
                 }
 
                 #progress{
                     width: 59%;
-                    display: inline-block;
                     height: 24px;
                     #play_progress{
+                        display: inline-block;
                         height: 24px;
                     }
                     #load_progress{
@@ -2259,8 +2370,7 @@ a{
 
                 #time{
                     width:20%;
-                    display:inline-block;
-                    float:right;
+
                     #duration{
                         display:block;
                     }
@@ -2281,11 +2391,9 @@ a{
                     font-size:1.3em;
                     span{
                         height:50px;
-
                         a{
                             color:#000;
                             display: inline;
-                            cursor:pointer;
                             &:hover{color:$color;}
                         }
                     }
@@ -2297,27 +2405,25 @@ a{
                     height:123px;
                     display:block;
                     span{
-
                         height:40px;
                         line-height:40px;
-                        border-bottom:1px solid $color1; 
-
-
                     }
                 }
-
             }
 
-            figure.thumb{width:20%; margin:5% auto;}
+            figure.thumb{
+                width:20%; 
+                margin:5% auto;
+            }
 
             footer.speaker-meta{
+                background-color:#fff;
                 display: block;
                 height: 160px;
                 ul.post-meta{
                     display:block;
 
                     li{
-                        list-style:none;
                         line-height:40px;
                         height:40px;
 
@@ -2326,7 +2432,7 @@ a{
                             height:40px;
                             line-height:40px;
                             text-indent:1%;
-                            font-size:0.95em;
+                            font-size:0.9em;
                         }
                     }
                 }
@@ -2348,18 +2454,16 @@ a{
                 height:auto;
 
                 h1.entry-title{
-                    background-color:$font-color;
+                    background-color:blue;
                     height: 50px;
                     line-height:50px;
                     font-size:1.3em;
                     span{
                         line-height:50px;
                         height:50px;
-                        color:$color;
 
                         display:inline-block;
                         a{
-                            color:$color4;
                             display: inline;
                         }
                     }
@@ -2367,35 +2471,28 @@ a{
                 }
                 .byline{
                     height:auto;
-                    color:$color4;
                     display:block;
                     span{
                         line-height:35px;
-                        font-size: 0.85em;
-                        color:$color4;
-                        background-color:$color6;
+                        font-size: 0.8em;
                         text-indent: 2%;
                         a{
-                            color:$color4; 
                             display: inline;
                         }
-
                     }
                 }
-
             }
 
-            figure.thumb{width:20%; margin:5% auto;}
+            figure.thumb{
+                width:20%; 
+                margin:5% auto;
+            }
 
             footer.speaker-meta{
-                background-color:$color;
                 height: 160px;
                 ul.post-meta{
-                    display:block;
                     height: 100%;
-
                     li{
-                        list-style:none;
                         line-height:40px;
                         height:40px;
 
@@ -2404,7 +2501,7 @@ a{
                             height:40px;
                             line-height:40px;
                             text-indent:1%;
-                            font-size:0.95em;
+                            font-size:0.9em;
                         }
                     }
                 }
@@ -2413,78 +2510,81 @@ a{
     }
 
     #clashvibes_content_front {
-        padding: 0 ;
         margin:auto;
         #clashvibes_right_column_front {
             //float: none;
             min-height:720px;
             margin:0 0 1% 0;
-            padding: 0px;
-            border: 4px solid $color4;
-            display: block;
             width: 99%;
             h1{
-                text-indent : 1%;
-                font-size:1.3em;
+                font-size:1.25em;
                 height:40px;
                 line-height:40px;
-                margin:0 0 1% 0;
-                padding:2% auto;
+                letter-spacing:0.05em;
             }
 
             #new_released_section {
-
-                width: 100%;
                 margin: 0 0 1% 0;
-
+                
                 .new_released_box {
-                    -webkit-flex: 0 1 auto;
-                    -ms-flex: 0 1 auto;
-                    flex: 0 1 auto;
-                    width: 15.87%;
-                    height:275px;
-                    padding:1%;
+                    width: 17.86%;
+                    height:310px;
                     margin: 0.5em;
-                    border:$colors solid 4px;
 
-
-
-                    h3{
-                        font-size:0.8em;
-                        line-height:23px;
-                        width: 98%;
+                    h1{
+                        font-size:0.85em;
+                        line-height:30px;
+                        letter-spacing:0.05em;
                     }
 
-
                     a {
-                        font-size:0.9em;
+                        font-size:0.8em;
+                        letter-spacing:0.05em;
 
                         &:hover{
                             font-weight:bold; 
-                            width:100%;
                         }
                     }
 
-                    .thumb{ 
-                        width:55%; 
+                    figure.thumb{ 
+                        width:65%; 
                         height:auto; 
-                        border:4px solid $colors; 
-                        margin:5% auto;
-                    }
-                    .rantsection {
-                        height: 30px;
-                        margin: 2% auto;
-                        width: 45%;
-                        .star {
-                            width: 20%;
+                        margin:11% auto;
+
+                        &:hover{ 
+                            cursor:pointer;
+                            border:none;
+                            width:70%;
+
                         }
-                    }
-                    .more_button{
-                        padding:0;
-                        height: 40px;
-                        a.read_more, a.download_button{
-                            font-size:0.9em; 
-                            line-height:40px;
+                        img{ 
+                            border:4px solid $color4;
+                        }
+
+                        figcaption{
+
+                            span.rantsection {
+                                height: 30px;
+                                margin: 2% auto;
+                                width: 45%;
+                                img.star {
+                                    height: auto;
+                                    width: 20%;
+                                }
+                            }
+
+                            span.more_button{
+                                height: 40px;
+                                a{
+                                    font-size:0.9em; 
+                                    line-height:40px;
+                                    letter-spacing:0.05em;
+                                    &:hover{
+                                        letter-spacing:0.055em;
+                                        font-weight:bold;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -2493,15 +2593,11 @@ a{
     }
 
     .clashvibes_right_panel_fullwidth {
-        float:left;
         width: 96%;
         min-height:720px;
         padding: 2%;
-
         #news_section {
             float:left;
-
-            padding:0;
             h1{
                 width:98%; 
                 height: 40px;
@@ -2510,7 +2606,7 @@ a{
             }
 
             p{
-                font-size:0.95em;
+                font-size:0.9em;
                 line-height:1.6em;
                 width:98%;
                 margin:0 auto;
@@ -2521,58 +2617,60 @@ a{
                 width: 100%;
                 margin: 1% 0 ;
 
-                h2{ text-indent:1%; line-height:50px;}
+                h2{ 
+                    text-indent:1%; 
+                    line-height:50px;
+                }
 
                 ul {
                     margin: 0;
                     padding:0;
 
                     li{ 
+                        list-style:none;
                         line-height:40px;
                         ul{
                             padding: 1% 0;
                             li.cat-item{
                                 width:90%;
                                 margin:1% auto;
-                                &:hover{background-color:$color2;}
+                                &:hover{
+                                    background-color:$color2;
+                                }
                             }
                         }
 
                         a{
-                            font-size:0.85em;
+                            font-size:0.8em;
                             line-height:40px;
                         }
                     }
                 }
 
                 .archive-header{
-                    list-style:none;
+                    margin:0 auto;
+                    height:auto;
                     .archive-meta{
-                        color:$color4;
                         text-indent:1%;
                         height:123px;
                         span{
                             height:40px;
                             line-height:40px;
                             font-size:0.9em;
-                            border-bottom:1px solid $color1;
                             a{  
-                                color:$color4; 
-                                display: inline-block; 
                                 width: auto;
                             }
                         }
-
                     }
                     h2{
-                        width:100%;
-                        font-size:1em;
+                        font-size:0.9em;
                         line-height:50px;
+                        letter-spacing:0.05em;
 
                         a{
                             text-indent: 0; 
                             height:98%; 
-                            font-size:1.2em; 
+                            font-size:1.1em; 
                         }
                     }
                 }
@@ -2601,27 +2699,28 @@ a{
                 .entry{
                     .audio-play{
                         width:85%;
+                        margin:0 auto;
                     }
                     .video-play{
                         width:45%; 
+                        margin:0 auto; 
                         height: 300px;
                     }
                     a.read_more{
                         width:30%; 
+                        height:auto; 
                         line-height:30px; 
+                        margin:0 auto; 
                         &:hover{
                             background-color:$color2; 
-                            color:$color3;
+                            color:$color4;
                         }
                     }
                 }
 
                 footer.postmetadata{
                     height:60px;
-                    background-color:$colors;
                     a.comments-link{
-                        display:block;
-                        color:$color;
                         padding:1%;
                     }
                 }
@@ -2634,113 +2733,106 @@ a{
             padding:2%;
             .byline{
                 height:50px;
-                color:$color4;;
                 p{
                     padding:0; 
-                    margin:0;
+                    a{
+                        height:50px; 
+                        font-size:1.1em; 
+                        width:auto; 
+                        line-height: 50px;  
+                    }
                 }
-                a{
-                    height:50px; 
-                    font-size:1.2em; 
-                    display:inline-block; 
-                    line-height: 50px;  
-                }
-            }
 
-            h3{
-                font-size:1.1em;
-                height:40px;
-                line-height:40px;
-                a{ 
-                    font-size:1.1em; 
-                    color:$color4;
+                h3{
+                    font-size:1.1em;
+                    height:40px;
+                    line-height:40px;
+                    a{ 
+                        font-size:1.1em; 
+                    }
                 }
             }
+                        
             figure.thumb{width:20%;}
+            
             .newExcerpt{height:auto;}
             p{
-                color:$color4; 
                 font-size:0.9em;
             }
             ul figure{
                 width:90%; 
-                margin:0 auto; 
             }
             .thumb{
                 max-width:30%; 
                 margin: 5% auto; 
                 border:2px $color solid;
             }
-        }
         /*blog end*/
+        }
     }
 
     .clashvibes_right_panel_fullwidth_content {
-        float: left;
         width: 620px;
-        padding: 0 ;
         p{
             text-align: justify; 
-            width:100%; 
         }
     }
 
-    #topdownload_section {
+    ul#topdownload_section {
 
-        width: 43%;
-        padding: 2%;
-        margin: 1%;
-        border: $colors solid 4px;
+        width: 46.3%;
+        padding: 0.5em;
+        margin: 0.5em;
+
         h1{
-            font-size: 1.3em;
+            font-size: 1.2em;
             height: 30px;
             line-height: 30px;
             padding:2% 0;
             clear: both;
-            color:$color;
         }
-    }
 
-    .topdownload_box {
-        margin:0 0 1% 0;
-        color: $color4;
-        border-bottom: 1px solid $color11;
-        height:40px;
-        span{
-            font-size: 0.9em;
+        li.topdownload_box {
+            width: 99.5%;
+            margin:0 0 1% 0;
             height:40px;
-            width:20%;
-            a{
-                height:100%;
-                font-size:1em;
-                line-height:40px;
-                &:hover{
-                    background-color:$color6;
-                    color:$color2; 
-                    font-weight:bold;
+            letter-spacing:0.05em;
+            border: 1px solid #000;
+            span.title_singer{
+                width:80%; 
+                line-height:40px; 
+                font-size:0.8em; 
+            }
+            span{
+                font-size: 0.9em;
+                height:40px;
+                width:20%;
+                a{
+                    font-size:0.9em;
+                    line-height:40px;
+                    letter-spacing:0.05em;
+                    &:hover{
+                        font-weight:bold;
+                        letter-spacing:0.055em;
+                    }
                 }
             }
         }
     }
+
     /*--- topdownload box ---*/
 
     * html .topdownload_box {	
         margin: 0 15px 10px 7px;
     }
 
-    .title_singer{
-        width:80%; 
-        font-size:0.8em; 
-    }
     /*--- End of Right Column---*/
     /*--- End of Content ---*/
 
     /* ----- Footer ----- */
     #clashvibes_footer {
-        clear: both;
         padding: 10px 0;
         height:200px;
-        margin-bottom:2%;
 
         ul{
             width:17%;
@@ -2752,9 +2844,13 @@ a{
                 a{
                     width:100%;
                     line-height:40px;
-                    font-size:0.9em;
+                    font-size:0.85em;
+                    letter-spacing:0.05em;
 
-                    &:hover{color: $color10;}
+                    &:hover{
+                        color: $color10; 
+                        font-weight: bold;
+                    }
                 }
             }
         }
@@ -2763,31 +2859,33 @@ a{
             width:77%; 
             li{
                 text-indent: 0;
-                a{ text-align:center;}
+                a{ 
+                    text-align:center;
+                }
+
             }
         }
 
         ul#social-media-box{
-
+            display: inline-block;
             width:5%;
 
             li{
-
                 width:100%;
                 height:50px;
                 a{
+                    display:inline-block;
                     line-height:50px;
 
 
                     span {
                         display:block;
                         i{ 
-                            color:$color; 
-                            font-size: 1.8em;
+                            font-size: 1.7em;
                             line-height: 50px;
                             &:hover{
                                 color: $color10; 
-                                font-size: 1.9em;
+                                font-size: 1.8em;
                             }
                         }
                     }
@@ -2796,5 +2894,4 @@ a{
         }
     }
     /* ----- End of Footer ----- */
-
 }

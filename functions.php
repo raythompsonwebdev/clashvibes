@@ -25,7 +25,7 @@ function filter_wp_title( $title ) {
 	return $filtered_title;
 }
 
-add_editor_style('custom-editor-style.css'  );
+add_editor_style('custom-editor-style.css' );
 
 //theme set up
 if ( ! function_exists( 'my_theme_setup' ) ) :
@@ -189,7 +189,7 @@ wp_register_style( 'third-custom-style', get_stylesheet_directory_uri() . '/rese
 
 //wp_register_style( 'kelson', get_stylesheet_directory_uri() . '/fonts/kelson_regular/stylesheet.css', array(), '1', 'true' );
 
-//wp_register_style( 'titilium', get_stylesheet_directory_uri() . '/fonts/font-style.css', array(), '1', 'true' );
+wp_register_style( 'titilium', get_stylesheet_directory_uri() . '/fonts/font-style.css', array(), '1', 'true' );
     
 wp_register_style('awesome', get_stylesheet_directory_uri() . '/fontawesome/css/font-awesome.min.css', false,'1.1','all' );
 

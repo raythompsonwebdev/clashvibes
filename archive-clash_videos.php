@@ -62,7 +62,7 @@
 
                         <figcaption>
 
-                            <span class="more_button"><a href="<?php the_permalink() ?>">Listen</a></span>
+                            <span class="more_button"><a href="<?php the_permalink() ?>">View</a></span>
 
 
                         </figcaption>

@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header(); 
+$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+?>
 <?php get_sidebar('audio'); ?>
 
 <?php
@@ -21,7 +23,7 @@
 
 <section class="clashvibes_right_panel_fullwidth">
 
-<h1 class="archive-title">Audio Category:<?php single_cat_title(); ?></h1>
+<h1 class="archive-title">Audio Category: <?php single_cat_title(); ?></h1>
 
 <div id="news_section">
   <?php if ( $wp_query->have_posts() ) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>

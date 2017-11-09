@@ -29,10 +29,6 @@
 				?></h1>
 
 
-
-
-    
-
         <section id="new_released_section">
 
 

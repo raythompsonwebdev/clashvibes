@@ -107,6 +107,7 @@ wp_reset_query();
                     ?>
                     <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                     <li class="topdownload_box">
+                        <span class="image_thumb"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute() ?>"><?php the_post_thumbnail(); ?></a></span>
                         <span class="title_singer"><?php the_title() ?></span>
                         <span><a href="<?php the_permalink() ?>" title="Listen to download">Listen</a></span>
                     </li>
@@ -146,6 +147,7 @@ wp_reset_query();
                     ?>
                     <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                     <li class="topdownload_box">
+                       <span class="image_thumb"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute() ?>"><?php the_post_thumbnail(); ?></a></span>
                         <span class="title_singer"><?php the_title() ?></span>
                         <span><a href="<?php the_permalink() ?>" title="listen to music">View</a></span>
                     </li>

@@ -31,7 +31,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 <section class="clashvibes_right_panel_fullwidth">
 
-<h1 class="archive-title">Category:<?php echo apply_filters( 'the_title', $term->name ); ?> </h1>
+<h1 class="archive-title">Audio Category: <?php echo apply_filters( 'the_title', $term->name ); ?> </h1>
 
 <?php if ( !empty( $term->description ) ): ?>
     <div class="archive-description">

@@ -24,12 +24,14 @@
                                     </section>          
 
                                     </header>
+                                    
+                                
 
-                                    <figure class="thumb"><?php the_post_thumbnail(); ?></figure> 
+                                    <figure class="thumb"><?php the_post_thumbnail('featured-image'); ?></figure> 
 
                                     <section class="newsExcerpt">
-                                        <?php the_content(); ?>
-
+                                       
+                            
                               <?php get_template_part('Templates/content' , 'audio'); ?>
 
                                     </section>

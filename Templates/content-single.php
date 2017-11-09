@@ -13,7 +13,7 @@
 
 </header>
     
-<figure class="thumb"><?php the_post_thumbnail(); ?></figure> 
+<figure class="thumb"><?php the_post_thumbnail('featured-image'); ?></figure> 
 
 <section class="newsExcerpt"><?php the_content(); ?></section>
 

@@ -23,21 +23,8 @@
 </section>
 
 </header>
-
-
-
-
- 
- <div class="video-play">
- <?php the_content();?>
- 
- <!--you tube api -->
- 
- </div>
- 
- 
-
-
+                              
+<?php get_template_part('Templates/content' , 'video'); ?>
 
 <br/>
  

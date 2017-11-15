@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <?php if (strpos($_SERVER['HTTP_USER_AGENT'],"MSIE 8")) {header("X-UA-Compatible: IE=7");} ?>
 
@@ -10,17 +11,47 @@
   <!--[if !(IE 7) | !(IE 8)  ]><!-->
   <html <?php language_attributes(); ?>>
   <!--<![endif]-->
+=======
+<!DOCTYPE html >
+<!--[if IE 7]>
+<html class="ie ie7" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html <?php language_attributes(); ?>>
+<!--<![endif]-->
+>>>>>>> origin/master
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width">
+<?php if (is_search()) { ?>
+	   <meta name="robots" content="noindex, nofollow" /> 
+<?php } ?>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="msvalidate.01" content="4CB214A27E0A9871DDFEF492EF5A6AD2" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-
+<title><?php bloginfo('name');?></title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+<<<<<<< HEAD
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+=======
+<link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css" />
+<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+
+<!--[if IE]>
+<link href="css/ie6.css" rel="stylesheet" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+<!--[if IE]>
+<script src="/js/html5.js"></script>
+<![endif]-->
+
+>>>>>>> origin/master
 
 <?php wp_head(); ?>
 </head>

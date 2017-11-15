@@ -38,10 +38,16 @@ function my_theme_setup(){
 
       wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
     }
-
+	
 	//add editor styles
 add_editor_style( array( 'styles/custom-editor-style.css','fonts/kelson_regular/stylesheet.css' ) );
 
+<<<<<<< HEAD
+	//add editor styles
+add_editor_style( array( 'styles/custom-editor-style.css','fonts/kelson_regular/stylesheet.css' ) );
+
+=======
+>>>>>>> origin/master
 if ( ! isset( $content_width ) ) {$content_width = 800;};
 
 load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
@@ -49,11 +55,15 @@ load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
 add_theme_support( 'post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio' ) );
 
 add_theme_support( 'post-thumbnails' );
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> origin/master
 set_post_thumbnail_size( 170, 170, true );
 
-add_theme_support( 'title-tag' );
 
+<<<<<<< HEAD
 $args = array(
 
 	'width'   => 300,
@@ -62,15 +72,26 @@ $args = array(
 
 );
 add_theme_support( 'custom-header', $args);
+=======
+>>>>>>> origin/master
 
-$defaults = array(
-	'default-color'          => '',
-	'default-image'          => '',
-	'wp-head-callback'       => '_custom_background_cb',
-	'admin-head-callback'    => '',
-	'admin-preview-callback' => ''
-);
-add_theme_support( 'custom-background', $defaults );
+add_theme_support( 'title-tag' );
+	
+$args = array(
+		'width'         => 325,
+		'height'        => 65,
+		'default-image' => get_template_directory_uri() . '/images/logo-1.png',
+	);
+	add_theme_support( 'custom-header', $args );
+
+	$defaults = array(
+		'default-color'          => '',
+	//	'default-image'          => get_template_directory_uri() . '/images/bg.jpg',
+		'wp-head-callback'       => '_custom_background_cb',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => ''
+	);
+	add_theme_support( 'custom-background', $defaults );
 
 add_theme_support( 'automatic-feed-links' );
 
@@ -91,6 +112,24 @@ $defaults = array(
 
 );
 add_theme_support( 'nav-menus',$defaults );
+<<<<<<< HEAD
+=======
+	
+$defaults = array(
+	'before'           => '<p>' . __( 'Pages:', 'clashvibes' ),
+	'after'            => '</p>',
+	'link_before'      => '',
+	'link_after'       => '',
+	'next_or_number'   => 'number',
+	'separator'        => ' ',
+	'nextpagelink'     => __( 'Next page', 'clashvibes'),
+	'previouspagelink' => __( 'Previous page', 'clashvibes' ),
+	'pagelink'         => '%',
+	'echo'             => 1
+	);
+
+wp_link_pages( $defaults );
+>>>>>>> origin/master
 
 
 }
@@ -158,6 +197,14 @@ function my_audio_own() {
 if(is_singular()){
 
     wp_register_script( 'audio', get_template_directory_uri() . '/js/audio.js', array('jquery'),'1.0.0', 'true' );
+    
+    //wp_register_script( 'jplayer', get_template_directory_uri() . '/js/jPlayer-2.9.2/dist/jplayer/jquery.jplayer.min.js', array('jquery'),'1.0.0', 'true' );
+    
+   // wp_register_script( 'jplayer-audio', get_template_directory_uri() . '/js/jplayer-audio.js', array('jquery'),'1.0.0', 'true' );
+    
+    //wp_enqueue_script( 'jplayer' );
+    
+   // wp_enqueue_script( 'jplayer-audio' );
 
     //wp_register_script( 'jplayer', get_template_directory_uri() . '/js/jPlayer-2.9.2/dist/jplayer/jquery.jplayer.min.js', array('jquery'),'1.0.0', 'true' );
 
@@ -177,10 +224,17 @@ add_action( 'wp_enqueue_scripts', 'my_audio_own' );
 
 
 function my_scripts_own() {
+<<<<<<< HEAD
 
     if(is_front_page()){
 
 
+=======
+    
+    if(is_front_page()){
+        
+        
+>>>>>>> origin/master
     }
 
 
@@ -197,9 +251,15 @@ wp_register_style( 'custom-style', get_stylesheet_directory_uri() . '/master.css
 wp_register_style( 'third-custom-style', get_stylesheet_directory_uri() . '/reset.css', array(), '1', 'true' );
 
 wp_register_style( 'kelson', get_stylesheet_directory_uri() . '/fonts/kelson_regular/stylesheet.css', array(), '1', 'true' );
+<<<<<<< HEAD
 
 wp_register_style( 'titilium', get_stylesheet_directory_uri() . '/fonts/font-style.css', array(), '1', 'true' );
 
+=======
+
+wp_register_style( 'titilium', get_stylesheet_directory_uri() . '/fonts/font-style.css', array(), '1', 'true' );
+    
+>>>>>>> origin/master
 wp_register_style('awesome', get_stylesheet_directory_uri() . '/fontawesome/css/font-awesome.min.css', false,'1.1','all' );
 
 

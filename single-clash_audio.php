@@ -24,27 +24,15 @@
                                     </section>          
 
                                     </header>
+                                    
+                                
 
-                                    <figure class="thumb"><?php the_post_thumbnail(); ?></figure> 
+                                    <figure class="thumb"><?php the_post_thumbnail('featured-image'); ?></figure> 
 
                                     <section class="newsExcerpt">
-                                        <?php the_content(); ?>
-
-                                        <div id="audio_controls">
-
-                                            <div id="play_toggle" class="player-button">PLAY</div>
-
-                                            <div id="progress">
-                                                <div id="load_progress"></div>
-                                                <div id="play_progress"></div>
-                                            </div>
-
-                                            <div id="time">
-                                                <div id="duration">00:00</div>  
-                                                <div id="current_time">00:00</div>  
-
-                                            </div>
-                                        </div>
+                                       
+                            
+                              <?php get_template_part('Templates/content' , 'audio'); ?>
 
                                     </section>
 

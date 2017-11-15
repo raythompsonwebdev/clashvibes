@@ -1,15 +1,20 @@
 <?php
+
 define( 'TEMPPATH', get_bloginfo('stylesheet_directory'));
+
 define( 'IMAGES', TEMPPATH. "/images");
 
 
 function fix_ie8() {if (strpos($_SERVER['HTTP_USER_AGENT'],"MSIE 8")) {header("X-UA-Compatible: IE=7");}}
-add_action('bb_send_headers','fix_ie8');  // for bbPress
+
+
 add_action('send_headers','fix_ie8');    // for WordPress
 add_filter( 'wp_title', 'filter_wp_title' );
 
 add_filter( 'widget_text', 'shortcode_unautop' );
-add_filter( 'widget_text', 'do_shortcode' );
+add_filter( 'widget_text', array( $wp_embed, 'run_shortcode' ), 8 );
+add_filter( 'widget_text', array( $wp_embed, 'autoembed'), 8 );
+add_filter( 'widget_text', 'do_shortcode');
 
 function filter_wp_title( $title ) {
 	global $page, $paged;
@@ -23,7 +28,6 @@ function filter_wp_title( $title ) {
 	return $filtered_title;
 }
 
-add_editor_style('custom-editor-style.css'  );
 
 //theme set up
 if ( ! function_exists( 'my_theme_setup' ) ) :
@@ -35,26 +39,29 @@ function my_theme_setup(){
       wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
     }
 
-if ( ! isset( $content_width ) ) {$content_width = 600;};
+	//add editor styles
+add_editor_style( array( 'styles/custom-editor-style.css','fonts/kelson_regular/stylesheet.css' ) );
+
+if ( ! isset( $content_width ) ) {$content_width = 800;};
 
 load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
 
-add_theme_support( 'post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat') );
+add_theme_support( 'post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio' ) );
 
 add_theme_support( 'post-thumbnails' );
+
 set_post_thumbnail_size( 170, 170, true );
 
 add_theme_support( 'title-tag' );
 
 $args = array(
-    'flex-width'    => true,
-    'width'         => 240,
-    'flex-height'   => false,
-    'height'        => 120,
-    'default-image' => get_template_directory_uri() . '/img/header.jpg',
-    'uploads'       => true,
+
+	'width'   => 300,
+	'height'  => 80,
+	'default-image' => get_template_directory() . '/images/logo-1.png'
+
 );
-add_theme_support( 'custom-header', $args );
+add_theme_support( 'custom-header', $args);
 
 $defaults = array(
 	'default-color'          => '',
@@ -67,7 +74,6 @@ add_theme_support( 'custom-background', $defaults );
 
 add_theme_support( 'automatic-feed-links' );
 
-add_theme_support( 'nav-menus',$defaults );
 
 $defaults = array(
 	'default-image'          => '',
@@ -84,13 +90,14 @@ $defaults = array(
 	'admin-preview-callback' => '',
 
 );
+add_theme_support( 'nav-menus',$defaults );
 
-//$my_post_formats = array( 'quote', 'chat', 'audio', 'gallery' );
-//add_theme_support( 'post-formats', $my_post_formats );
 
 }
+
 endif; // my_theme_setup end
 add_action('after_setup_theme', 'my_theme_setup');
+
 
 if ( function_exists( 'register_nav_menus' ) ) {
     register_nav_menus(
@@ -147,31 +154,34 @@ add_action( 'widgets_init', 'contact_widgets_init' );
 
 
 function my_audio_own() {
-    
+
 if(is_singular()){
-    
+
     wp_register_script( 'audio', get_template_directory_uri() . '/js/audio.js', array('jquery'),'1.0.0', 'true' );
+
+    //wp_register_script( 'jplayer', get_template_directory_uri() . '/js/jPlayer-2.9.2/dist/jplayer/jquery.jplayer.min.js', array('jquery'),'1.0.0', 'true' );
+
+   // wp_register_script( 'jplayer-audio', get_template_directory_uri() . '/js/jplayer-audio.js', array('jquery'),'1.0.0', 'true' );
+
+    //wp_enqueue_script( 'jplayer' );
+
+   // wp_enqueue_script( 'jplayer-audio' );
 
     wp_enqueue_script( 'audio' );
 
     wp_enqueue_script('jquery');
-}    
+}
 
 }
 add_action( 'wp_enqueue_scripts', 'my_audio_own' );
 
 
 function my_scripts_own() {
-    
-if(is_front_page()){
-    wp_register_script( 'slider', get_template_directory_uri() . '/js/easySlider1.5.js', array('jquery'),'1.0.0', 'true' );
 
-    wp_enqueue_script( 'slider' );
+    if(is_front_page()){
 
-    wp_enqueue_script('jquery');
-    
-}    
 
+    }
 
 
 }
@@ -181,15 +191,15 @@ add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
 /* To register my css styles I use the function below:*/
 
 function enqueue_extra_styles(){
-    
+
 wp_register_style( 'custom-style', get_stylesheet_directory_uri() . '/master.css', array(), '1', 'true' );
 
 wp_register_style( 'third-custom-style', get_stylesheet_directory_uri() . '/reset.css', array(), '1', 'true' );
 
-//wp_register_style( 'kelson', get_stylesheet_directory_uri() . '/fonts/kelson_regular/stylesheet.css', array(), '1', 'true' );
+wp_register_style( 'kelson', get_stylesheet_directory_uri() . '/fonts/kelson_regular/stylesheet.css', array(), '1', 'true' );
 
-//wp_register_style( 'titilium', get_stylesheet_directory_uri() . '/fonts/font-style.css', array(), '1', 'true' );
-    
+wp_register_style( 'titilium', get_stylesheet_directory_uri() . '/fonts/font-style.css', array(), '1', 'true' );
+
 wp_register_style('awesome', get_stylesheet_directory_uri() . '/fontawesome/css/font-awesome.min.css', false,'1.1','all' );
 
 
@@ -202,6 +212,33 @@ wp_enqueue_style('awesome');
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_extra_styles');
+
+//ie 8 styles and scripts
+function ie_scripts() {
+
+	// Load the Internet Explorer specific stylesheet.
+	wp_enqueue_style( 'clashvibes-ie', get_template_directory_uri() . '/ie.css', array(), '1.0' );
+	wp_style_add_data( 'clashvibes-ie', 'conditional', 'lte IE 9' );
+
+    // Load the CustomEvent Script.
+	//wp_enqueue_script( 'clashvibes-iejs', get_template_directory_uri() . '/js/ie8.js', array(), '1.0' );
+	//wp_script_add_data( 'clashvibes-iejs', 'conditional', 'lte IE 9' );
+
+	// Load the html5.
+	//wp_enqueue_script( 'clashvibes-html5', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
+	//wp_script_add_data( 'clashvibes-html5', 'conditional', 'lte IE 9' );
+
+	// Load the Selectivizr.
+	//wp_enqueue_script( 'clashvibes-selectivizr', get_template_directory_uri() . '/js/selectivizr-min.js', array('jquery'), '3.7.3');
+	//wp_script_add_data( 'clashvibesm-selectivizr', 'conditional', 'lte IE 9' );
+
+	// Load the respond.
+	//wp_enqueue_script( 'clashvibes-respond', get_template_directory_uri() . '/js/Respond-master/src/respond.js', array(), '1.0.0');
+
+	//wp_script_add_data( 'clashvibes-respond', 'conditional', 'lte IE 9' );
+
+}
+add_action( 'wp_enqueue_scripts', 'ie_scripts' );
 
 /**
  * End of enqueue scripts and styles
@@ -259,4 +296,3 @@ function register_my_menu() {
 add_action( 'init', 'register_my_menu' );
 
 ?>
-

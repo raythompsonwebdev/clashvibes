@@ -10,7 +10,13 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
     $wp_query = null;
     $args = array(
         
-    'category' => 'video-category',
+    'tax_query' => array(
+            array(
+                'taxonomy' => 'video-category',
+                'field' => 'slug',
+                'terms' => '2000s-video'
+            )
+    ),
     'post_type' => 'clash_videos',
     'post_count' => '3'    
    

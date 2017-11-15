@@ -11,12 +11,6 @@
 <?php wp_nav_menu( array('menu' => 'Audio-Nav', 'container' => 'nav' )); ?>
        
 </div>
- 
-    <?php if ( !function_exists( 'dynamic_sidebar' ) || 
-    !dynamic_sidebar('Audio-Nav') ) : ?>               
-        
-  
-    <?php endif; ?>
 
        <div class="clearfix"></div>                                      
 </aside>

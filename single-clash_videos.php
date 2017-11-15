@@ -23,12 +23,8 @@
 </section>
 
 </header>
-
- <figure class="thumb"><?php the_post_thumbnail(); ?></figure> 
- 
-
- <section class="newsExcerpt"><?php the_content();?></section>
-
+                              
+<?php get_template_part('Templates/content' , 'video'); ?>
 
 <br/>
  

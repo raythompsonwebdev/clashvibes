@@ -167,24 +167,43 @@ function contact_widgets_init() {
 }
 add_action( 'widgets_init', 'contact_widgets_init' );
 
+/* To register my css styles I use the function below:*/
+
+function enqueue_extra_styles(){
+    
+	wp_register_style( 'custom-style', get_stylesheet_directory_uri() . '/master.css', array(), '1', 'true' );
+	
+	wp_register_style( 'third-custom-style', get_stylesheet_directory_uri() . '/reset.css', array(), '1', 'true' );
+	
+	wp_register_style( 'kelson', get_stylesheet_directory_uri() . '/fonts/kelson_regular/stylesheet.css', array(), '1', 'true' );
+	
+	wp_register_style( 'titilium', get_stylesheet_directory_uri() . '/fonts/font-style.css', array(), '1', 'true' );
+			
+	wp_register_style('awesome', get_stylesheet_directory_uri() . '/fontawesome/css/font-awesome.min.css', false,'1.1','all' );
+	
+	
+	wp_enqueue_style( 'custom-style' );
+	wp_enqueue_style('third-custom-style');
+	wp_enqueue_style('titilium');
+	wp_enqueue_style('kelson');
+	wp_enqueue_style('awesome');
+	
+	}
+	
+	add_action('wp_enqueue_scripts', 'enqueue_extra_styles');
 
 function my_audio_own() {
-    
 if(is_singular()){
     
     wp_register_script( 'audio', get_template_directory_uri() . '/js/audio.js', array('jquery'),'1.0.0', 'true' );
     
     //wp_register_script( 'jplayer', get_template_directory_uri() . '/js/jPlayer-2.9.2/dist/jplayer/jquery.jplayer.min.js', array('jquery'),'1.0.0', 'true' );
-    
-   // wp_register_script( 'jplayer-audio', get_template_directory_uri() . '/js/jplayer-audio.js', array('jquery'),'1.0.0', 'true' );
-    
+    // wp_register_script( 'jplayer-audio', get_template_directory_uri() . '/js/jplayer-audio.js', array('jquery'),'1.0.0', 'true' );
     //wp_enqueue_script( 'jplayer' );
-    
-   // wp_enqueue_script( 'jplayer-audio' );
+    // wp_enqueue_script( 'jplayer-audio' );
 
     wp_enqueue_script( 'audio' );
 
-    wp_enqueue_script('jquery');
 }    
 
 }
@@ -193,40 +212,12 @@ add_action( 'wp_enqueue_scripts', 'my_audio_own' );
 
 function my_scripts_own() {
     
-    if(is_front_page()){
-        
-        
-    }
+	wp_register_script( 'main', get_template_directory_uri() . '/js/main.js', array('jquery'),'1.0.0', 'true' );
+	wp_enqueue_script( 'main' );
 
 
 }
-
 add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
-
-/* To register my css styles I use the function below:*/
-
-function enqueue_extra_styles(){
-    
-wp_register_style( 'custom-style', get_stylesheet_directory_uri() . '/master.css', array(), '1', 'true' );
-
-wp_register_style( 'third-custom-style', get_stylesheet_directory_uri() . '/reset.css', array(), '1', 'true' );
-
-wp_register_style( 'kelson', get_stylesheet_directory_uri() . '/fonts/kelson_regular/stylesheet.css', array(), '1', 'true' );
-
-wp_register_style( 'titilium', get_stylesheet_directory_uri() . '/fonts/font-style.css', array(), '1', 'true' );
-    
-wp_register_style('awesome', get_stylesheet_directory_uri() . '/fontawesome/css/font-awesome.min.css', false,'1.1','all' );
-
-
-wp_enqueue_style( 'custom-style' );
-wp_enqueue_style('third-custom-style');
-wp_enqueue_style('titilium');
-wp_enqueue_style('kelson');
-wp_enqueue_style('awesome');
-
-}
-
-add_action('wp_enqueue_scripts', 'enqueue_extra_styles');
 
 /**
  * End of enqueue scripts and styles

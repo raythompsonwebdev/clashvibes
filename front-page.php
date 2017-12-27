@@ -57,17 +57,17 @@
                             
                                                 
                     <?php if ('clash_audio' == get_post_type()) : ?>
-                           <span class="more_button"><a href=" <?php the_permalink() ?> ">Listen</a></span>
+                           <span class="more_button"><a href=" <?php the_permalink() ?> " title="Listen to <?php the_title_attribute() ?>">Listen</a></span>
                            
                            <?php else : ?>
                            
-                           <span class="more_button"><a href=" <?php the_permalink() ?> ">View</a></span>
+                           <span class="more_button"><a href=" <?php the_permalink() ?> " title="View <?php the_title_attribute() ?> Video">View</a></span>
                            <?php endif; ?>
                            
                         </figcaption>
 
                     </figure>
-
+                    <div class="clearfix"></div> 
                 </article>
 
                 <?php endwhile;
@@ -78,12 +78,12 @@ else:
 wp_reset_query();
 ?>
 
-                <div class="clearfix"></div>
+     
         </section>
         <!--End of news release section-->
 
 
-        <div>
+        <div id="topdownload_section_ctner">
             <!--Top 10 Audio Section-->
             <ul id="topdownload_section">
 
@@ -107,9 +107,9 @@ wp_reset_query();
                     ?>
                     <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                     <li class="topdownload_box">
-                        <span class="image_thumb"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute() ?>"><?php the_post_thumbnail(); ?></a></span>
+                        <span class="image_thumb"><a href="" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail(); ?></a></span>
                         <span class="title_singer"><?php the_title() ?></span>
-                        <span><a href="<?php the_permalink() ?>" title="Listen to download">Listen</a></span>
+                        <span><a href="<?php the_permalink() ?>" title="Listen to <?php the_title_attribute() ?>">Listen</a></span>
                     </li>
 
                     <?php endwhile;
@@ -123,7 +123,7 @@ wp_reset_query();
 
 
             </ul>
-            
+            <div class="clearfix"></div> 
             <!--Top 10 Video Section-->
             <ul id="topdownload_section">
 
@@ -147,9 +147,9 @@ wp_reset_query();
                     ?>
                     <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                     <li class="topdownload_box">
-                       <span class="image_thumb"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute() ?>"><?php the_post_thumbnail(); ?></a></span>
+                       <span class="image_thumb"><a href="" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail(); ?></a></span>
                         <span class="title_singer"><?php the_title() ?></span>
-                        <span><a href="<?php the_permalink() ?>" title="listen to music">View</a></span>
+                        <span><a href="<?php the_permalink() ?>" title="View <?php the_title_attribute() ?> Video">View</a></span>
                     </li>
 
                     <?php endwhile; else:  ?>

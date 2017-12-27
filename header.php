@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+<!doctype html>
+<?php if (strpos($_SERVER['HTTP_USER_AGENT'],"MSIE 8")) {header("X-UA-Compatible: IE=7");} ?>
+
+  <!--[if IE 7]>
+  <html class="ie ie7" <?php language_attributes(); ?>>
+  <![endif]-->
+  <!--[if IE 8]>
+  <html class="ie ie8" <?php language_attributes(); ?>>
+  <![endif]-->
+  <!--[if !(IE 7) | !(IE 8)  ]><!-->
+  <html <?php language_attributes(); ?>>
+  <!--<![endif]-->
+=======
 <!DOCTYPE html >
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -8,6 +22,7 @@
 <!--[if !(IE 7) | !(IE 8)  ]><!-->
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
+>>>>>>> origin/master
 <head>
 <?php if (is_search()) { ?>
 	   <meta name="robots" content="noindex, nofollow" /> 
@@ -21,6 +36,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+<<<<<<< HEAD
+<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+=======
 <link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 
@@ -33,6 +51,7 @@
 <script src="/js/html5.js"></script>
 <![endif]-->
 
+>>>>>>> origin/master
 
 <?php wp_head(); ?>
 </head>
@@ -46,7 +65,7 @@
             <img src="<?php print $logo; ?>" alt="<?php bloginfo('name'); ?>" />
         </section>
 
-            <span id="socialmediatop"> 
+            <span id="socialmediatop">
                 <a class="social-icon linkedin-icon" href="" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-instagram"></i></span></a>
                 <a class="social-icon linkedin-icon" href="" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-twitter"></i></span></a>
                 <a class="social-icon linkedin-icon" href="" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-facebook"></i></span></a>

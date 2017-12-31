@@ -24,8 +24,6 @@
                                     </section>          
 
                                     </header>
-                                    
-                                
 
                                     <figure class="thumb"><?php the_post_thumbnail('featured-image'); ?></figure> 
 

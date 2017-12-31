@@ -136,6 +136,18 @@ a {
 
 @media only screen and (max-width: 1920px) {
 
+    button#toggle-nav{
+        
+        display:none;
+        
+    }
+    
+    button#side-bar-btn{
+        
+        display:none;
+        
+    }
+    
     #container {
         margin-right:auto;
         margin-left:auto;
@@ -244,11 +256,11 @@ a {
         #clashvibes_content_front {
 
             #clashvibes_banner {
-                width: 96.5%;
+                width: 99%;
                 height: 400px;
                 display: inline-block;
                 clear: both;
-                margin: 1em;
+                margin: 0.5%;
                 background-color: $color2;
                 #slider {
                     margin: 0;
@@ -416,7 +428,7 @@ a {
             padding: 0;
             width: 21%;
             list-style: none;
-            border: $color4 solid 4px;
+            
             display: block;
             h1 {
                 font-size: 1.3em;
@@ -495,7 +507,9 @@ a {
                         letter-spacing: 0.05em;
                     }
                 }
-                nav {
+
+                nav.menu-video-nav-container,
+                nav.menu-audio-nav-container{
                     height: auto;
 
                     ul,
@@ -595,7 +609,7 @@ a {
             float: right;
             margin: 0 0 1% 0;
             padding: 0;
-            border: $color4 solid 4px;
+            
             display: block;
             width: 77%; //global post
             h1 {
@@ -686,7 +700,7 @@ a {
 
             #audio_controls {
                 height: 55px;
-                width: 96%;
+                width: 97%;
                 display: block;
                 margin: 0 auto;
                 border: $color4 solid 4px;
@@ -779,18 +793,19 @@ a {
                         text-indent: 0;
                         background-color:$color4;
                         a {
-                            width: 70%;
+                            width: auto;
                             display: inline-block;
-                            font-size: 1em;
+                            font-size: 0.95em;
                             letter-spacing: 0.03em;
 
                         }
                         span {
                             display: inline-block;
-                            width: 21%;
+                            width: auto;
                             float: left;
-                            font-size: 0.9em;
+                            font-size: 1em;
                             text-indent: 0.5em;
+                            margin-right:1%;
 
 
                         }
@@ -832,6 +847,7 @@ a {
                     display: block;
                     width: 70%;
                     margin:auto;
+                    
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
@@ -840,13 +856,53 @@ a {
                             width: 100%;
                             .jp-gui {
                                 width: 100%;
+                                font-size: 0.9em;
                                 height: auto;
                                 display: block;
+                                .jp-controls{
+                                    width:20%;
+                                    float:left;
+                                    display:inline-block;
+                                    button.jp-play,
+                                    button.jp-stop{
+                                        display: inline-block;
+                                        width: 50%;
+                                        text-align: center;
+                                        float: left;
+                                        color: $color4;
+                                        line-height: 53px;
+                                        background-color: $colors;
+                                        border:none;
+                                        outline:none;
+                                    }
+                                }
+
+                                .jp-progress{
+                                    width: 35%;
+                                    float:left;
+                                    display: inline-block;
+                                    height: 55px;
+                                    .jp-seek-bar {
+                                        background-color: $color2;
+                                        display: inline-block;
+                                        line-height: 55px;
+                                        height: 55px;
+                                        .jp-play-bar {
+                                            background-color: $color8;
+                                            line-height: 55px;
+                                            height: 55px;
+                                        }
+
+                                    }
+                                    
+
+                                }
                                 .jp-volume-controls {
-                                    display: block;
-                                    height: 50px;
-                                    width: 100%;
-                                    margin-bottom: 0.2em;
+                                    float:left;
+                                    display: inline-block;
+                                    height: 55px;
+                                    width: 26%;
+                                    
                                     .jp-mute {
                                         height: 100%;
                                         display: inline-block;
@@ -875,107 +931,61 @@ a {
                                     }
                                 }
 
-                                .jp-controls-holder {
-                                    height: auto;
-                                    width: 100%;
-                                    margin: 0;
-                                    .jp-controls {
-                                        height: 40px;
-                                        width: 25%;
-                                        float: left;
-                                        display: block;
-                                        margin-bottom: 0.5em;
-
-                                        .jp-play {
-                                            display: inline-block;
-                                            width: 49%;
-                                            text-align: center;
-                                            float: left;
-                                            color: $color4;
-                                            line-height: 35px;
-                                            background-color: $colors;
-                                            border: none;
-                                            margin-right: 0.1em;
-
-                                        }
-                                        .jp-stop {
-
-                                            display: inline-block;
-                                            width: 49%;
-                                            text-align: center;
-
-                                            color: $color4;
-                                            line-height: 35px;
-                                            background-color: $colors;
-                                            border: none;
-
-                                        }
-
-                                    }
-
-                                    .jp-progress {
-                                        width: 52%;
-                                        float: left;
-                                        display: inline-block;
-                                        height: 40px;
-                                        background-color: $color3;
-                                        margin-right: 0.2em;
-                                        .jp-seek-bar {
-                                            background-color: $color2;
-                                            display: inline-block;
-                                            height: 22px;
-                                            .jp-play-bar {
-
-                                                background-color: $color8;
-                                                height: 22px;
-
-                                            }
-
-                                        }
-                                    }
-
+                                .jp-time-holder{
+                                    width:19%;
+                                    display:inline-block;
+                                    
                                     .jp-current-time {
-                                        width: 10%;
+                                        width: 30%;
                                         background-color: $color2a;
                                         color: $color;
                                         display: inline-block;
-                                        line-height: 40px;
-                                        height: 40px;
+                                        line-height: 55px;
+                                        height: auto;
                                         text-align: center;
 
                                     }
                                     .jp-duration {
-                                        width: 10%;
+                                        width: 30%;
                                         background-color: $color3;
                                         color: $color;
                                         display: inline-block;
                                         text-align: center;
-                                        line-height: 40px;
-                                        height: 40px;
+                                        line-height: 55px;
+                                        height: auto;
 
                                     }
 
                                     .jp-toggles {
-                                        clear: both;
-                                        margin-top: 0.2em;
+                                        display:inline-block;
+                                        
+                                        width: 34%;
                                         .jp-repeat {
                                             display: inline-block;
-                                            width: 49%;
                                             text-align: center;
                                             color: $color4;
-                                            line-height: 35px;
+                                            line-height: 55px;
                                             background-color: $colors;
                                             border: none;
+                                            height:auto;
 
                                         }
 
                                     }
-
                                 }
+                                
+                            }
+                            .jp-details{
+                                clear:both;
+                                height:50px;
+                                line-height:50px;
+                                margin-top: 0.2em;
+                                display:block;
+                                background-color: $colors;
                             }
                         }
                     }
-
+                    
                 }
 
                 footer.speaker-meta {
@@ -1406,7 +1416,7 @@ a {
                         flex: 0 0 auto;
                         float: left;
                         width: 19%; //19%;
-                        min-height: 360px;
+                        min-height: 350px;
                         padding: 0;
                         margin: 0.5%;
                         background-color: $color2;
@@ -1444,18 +1454,18 @@ a {
                         }
 
                         figure.thumb {
-                            width: 60%;
+                            width: 50%;
                             height: auto;
                             margin: 4% auto;
                             @include originTran( 50% 50%);
                             @include box-sizing($type: border-box);
                             @include Transition( all 0.2s linear 0s);
-                            border: 2px solid $color2a;
+                            
                             &:hover {
                                 cursor: pointer;
                                 border: none;
-                                width: 65%;
-                                border: 2px solid $color2a;
+                                width: 55%;
+                                
                             }
                             img {
                                 
@@ -1486,9 +1496,12 @@ a {
                                     padding: 0;
                                     display: none;
                                     height: 40px;
-                                    border-top: 2px solid $color4;
+                                    
+                                    position:relative;
+                                    z-index:2;
                                    
                                     a {
+                                        
                                         font-size: 0.9em;
                                         color: $color4;
                                         background-color: $color2a;
@@ -2061,7 +2074,8 @@ a {
                 list-style: none;
                 li {
                     
-                    width: 13%;
+                    margin-right: 0.4em;
+                    width: 13.2%;
                     a {
                         font-size: 0.8em;
                         
@@ -2081,7 +2095,7 @@ a {
         #clashvibes_content_front {
 
             #clashvibes_banner {
-                width: 96.5%;
+                width: 99%;
 				
                 #slider {
                     list-style: none;
@@ -2130,9 +2144,11 @@ a {
                 input[type="submit"] {
                     width: 30%;
                     height: 35px;
+                    font-size:0.9em;
 
                     &:hover {
                         cursor: pointer;
+                        font-size:0.9em;
                     }
                 }
 
@@ -2188,7 +2204,8 @@ a {
                         letter-spacing: 0.05em;
                     }
                 }
-                nav {
+                nav.menu-video-nav-container,
+                nav.menu-audio-nav-container {
                     height: auto;
 
                     ul,
@@ -2312,7 +2329,7 @@ a {
 
             #audio_controls {
                 height: 55px;
-                width: 96%;
+                width: 97%;
 
                 #play_toggle {
                     width: 20%;
@@ -2371,16 +2388,16 @@ a {
                     display: block;
                     h1 {
                         font-size: 1.45em;
-                        padding: 2% 0;
+                        
                         a {
-                            width: 70%;
+                            width: auto;
                             font-size: 0.9em;
 
                         }
                         span {
-                            width: 22%;
-                            font-size: 0.8em;
-                            text-indent: 0.5em;
+                            width: auto;
+                            font-size: 0.95em;
+                            
 
 
                         }
@@ -3201,7 +3218,8 @@ a {
                 list-style: none;
                 li {
                     
-                    width: 13%;
+                    margin-right: 0.3em;
+                    width: 13.5%;
                     a {
                         font-size: 0.8em;
                         
@@ -3221,7 +3239,7 @@ a {
         #clashvibes_content_front {
 
             #clashvibes_banner {
-                width: 96.5%;
+                width: 99%;
 				
                 #slider {
                     list-style: none;
@@ -3261,12 +3279,13 @@ a {
                 }
 
                 input[type="text"] {
-                    width: 65%;
+                    width: 64%;
                     line-height: 1.5em;
+
                 }
                 input[type="submit"] {
                     width: 30%;
-                    height: 35px;
+                    font-size:0.8em;
 
                     &:hover {
                         cursor: pointer;
@@ -3325,7 +3344,8 @@ a {
                         letter-spacing: 0.05em;
                     }
                 }
-                nav {
+                nav.menu-video-nav-container,
+                nav.menu-audio-nav-container {
                     height: auto;
 
                     ul,
@@ -3448,7 +3468,7 @@ a {
 
             #audio_controls {
                 height: 55px;
-                width: 96%;
+                width: 97%;
 
                 #play_toggle {
                     width: 20%;
@@ -3507,16 +3527,16 @@ a {
                     display: block;
                     h1 {
                         font-size: 1.4em;
-                        padding: 2% 0;
+                        
                         a {
-                            width: 70%;
+                            width: auto;
                             font-size: 0.85em;
 
                         }
                         span {
-                            width: 22%;
-                            font-size: 0.8em;
-                            text-indent: 0.5em;
+                            width: auto;
+                            font-size: 0.9em;
+                            
 
 
                         }
@@ -3921,6 +3941,7 @@ a {
                     width: 100%;
                     .new_released_box {
                         width: 19%;
+                        min-height: 300px;
                         h1 {
                             font-size: 0.8em;
                             line-height: 25px;
@@ -4312,7 +4333,7 @@ a {
             height: 70px;
 
             span#socialmediatop {
-                width: 23%;
+                width: 25%;
 
                 a {
                     display: inline-block;
@@ -4337,8 +4358,8 @@ a {
 
                 list-style: none;
                 li {
-                    
-                    width: 13%;
+                    margin-right: 0.2em;
+                    width: 13.8%;
                     a {
                         font-size: 0.7em;
                         
@@ -4358,7 +4379,7 @@ a {
         #clashvibes_content_front {
 
             #clashvibes_banner {
-                width: 96.5%;
+                width: 99%;
 				
                 #slider {
                     list-style: none;
@@ -4403,7 +4424,7 @@ a {
                 }
                 input[type="submit"] {
                     width: 30%;
-                    height: 35px;
+                    font-size:0.75em;
 
                     &:hover {
                         cursor: pointer;
@@ -4462,7 +4483,8 @@ a {
                         letter-spacing: 0.05em;
                     }
                 }
-                nav {
+                nav.menu-video-nav-container,
+                nav.menu-audio-nav-container {
                     height: auto;
 
                     ul,
@@ -4585,7 +4607,7 @@ a {
 
             #audio_controls {
                 height: 55px;
-                width: 96%;
+                
 
                 #play_toggle {
                     width: 20%;
@@ -4644,16 +4666,16 @@ a {
                     display: block;
                     h1 {
                         font-size: 1.3em;
-                        padding: 2% 0;
+                        
                         a {
-                            width: 70%;
-                            font-size: 0.85em;
+                            width: auto;
+                            font-size: 0.8em;
 
                         }
                         span {
-                            width: 22%;
-                            font-size: 0.8em;
-                            text-indent: 0.5em;
+                            width: auto;
+                            font-size: 0.85em;
+                            
 
 
                         }
@@ -4663,7 +4685,7 @@ a {
                         height: 123px;
                         display: block;
                         span {
-							font-size:0.9em;
+				font-size:0.85em;
 
 
                         }
@@ -4780,7 +4802,7 @@ a {
                             font-size: 0.8em;
 
                             span {
-                                width: 20%;
+                                width: 25%;
                                 text-indent: 1%;
                                 font-size: 0.9em;
                             }
@@ -5057,10 +5079,11 @@ a {
                 #new_released_section {
                     width: 100%;
                     .new_released_box {
-                        width: 19%;
+                        width: 24%;
+                        min-height: 260px;
                         h1 {
-                            font-size: 0.8em;
-                            line-height: 25px;
+                            font-size: 0.75em;
+                            line-height: 20px;
                             width: auto;
                         }
 
@@ -5075,10 +5098,10 @@ a {
                         }
 
                         figure.thumb {
-                            width: 70%;
+                            width:50%;
                             &:hover {
                                 cursor: pointer;
-                                width: 75%;
+                                width: 55%;
                             }
                             img {
                                 
@@ -5101,7 +5124,7 @@ a {
 
                                    
                                     a {
-                                        font-size: 0.8em;
+                                        font-size: 0.75em;
                                         letter-spacing: 0.05em;
                                         &:hover {
                                             color: $color4;
@@ -5351,6 +5374,5898 @@ a {
                             
                             &:hover {
                                 letter-spacing: 0.055em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*--- End of Right Column---*/
+        /*--- End of Content ---*/
+        /* ----- Footer ----- */
+        #clashvibes_footer {
+            padding: 10px 0;
+            height: 200px;
+            margin-bottom: 2%;
+
+            ul {
+                float: left;
+                width: 12%;
+
+                li {
+                    width: 100%;
+                    text-indent: 5%;
+                    a {
+                        font-size: 0.8em;
+
+                        &:hover {
+
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            ul#footer-content {
+                width: 82%;
+                height: 100%;
+                li {
+                    text-indent: 0;
+                    a {
+                        text-align: center;
+                    }
+
+                }
+            }
+
+            ul#social-media-box {
+                width: 5%;
+
+                li {
+                    width: 100%;
+                    height: 50px;
+                    a {
+                        width: 100%;
+                        height: 100%;
+
+
+                        span {
+                            display: block;
+                            i {
+                                font-size: 1.6em;
+                                line-height: 50px;
+                                &:hover {
+                                    color: $color10;
+                                    font-size: 1.7em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* ----- End of Footer ----- */
+    }
+   
+}
+
+@media only screen and (max-width: 800px) {
+
+	#container {
+        width: 96%;
+        h1 {
+            
+            width: 100%;
+            a {
+                font-size: 0.8em;
+                display: block;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        /********** header **********/
+        header {
+            height: 70px;
+
+            span#socialmediatop {
+                width: 28%;
+
+                a {
+                    display: inline-block;
+                    width: 23.5%;
+
+                    span {
+                        display: block;
+                        height: 100%;
+                        i {
+                            font-size: 1.05em;
+                        }
+                    }
+                }
+            }
+        }
+
+        /********** navigation **********/
+        nav {
+            height: 45px;
+
+            ul {
+
+                list-style: none;
+                li {
+                    margin-right: 0.1em;
+                    width: 13.98%;
+                    a {
+                        font-size: 0.6em;
+                        
+                        
+                        &:hover {
+                            letter-spacing: 0.02em;
+
+                        }
+                    }
+                    .lastmenu {
+                        border-right: none;
+                    }
+
+                }
+            }
+        }
+
+        /********** front page **********/
+        #clashvibes_content_front {
+
+            #clashvibes_banner {
+                width: 99%;
+				
+                #slider {
+                    list-style: none;
+                    li {
+
+                        overflow: hidden;
+
+                    }
+                }
+               
+            }
+
+        }
+
+
+        #clashvibes_title {
+            float: left;
+            
+            display: block;
+        }
+
+
+        /********** login form **********/
+        #clashvibes_login {
+            width: 96%;
+            form {
+                margin: 0;
+                padding: 0;
+                .form_row {
+                    margin-bottom: 10px;
+                    text-align: left;
+                }
+
+                label {
+                    text-align: left;
+                    font-size: 1.4em;
+                }
+
+                input[type="text"] {
+                    width: 64%;
+                    line-height: 1.3em;
+                }
+                input[type="submit"] {
+                    width: 30%;
+                    font-size: 0.7em;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+            /* ----- Form ----- */
+        }
+
+        /*--- Content ---*/
+        #clashvibes_content {
+            padding: 0;
+                        
+        }
+
+        /*--- Left Column---*/
+        #clashvibes_left_column {
+            width: 21%;
+            h1 {
+                font-size: 1em;
+            }
+            a {
+                font-size: 0.75em;
+            }
+
+            .comment-author-link {
+                font-size: 0.75em;
+            }
+
+            .left_col_box {
+                margin: 0;
+                list-style: none;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style: none;
+                        a {
+                            font-size: 0.75em;
+                            
+                        }
+                    }
+                }
+            } //side bar navigation blog and custom posts
+            .blog_box {
+
+                width: 96%;
+
+                p {
+                    margin-left: 5px;
+                }
+                h3 {
+                    a {
+                        font-size: 0.8em;
+                        letter-spacing: 0.05em;
+                    }
+                }
+                nav.menu-video-nav-container,
+                nav.menu-audio-nav-container {
+                    height: auto;
+
+                    ul,
+                    ul#menu-audio_nav,
+                    ul#menu-video_nav {
+                        margin: 0.5em 0;
+                        @include clearfix();
+                        li,
+                        li#menu-item {
+                            display: block;
+                            a {
+                                padding: 0;
+                                margin: 0 0 1% 0;
+                                &:hover {
+                                    color: $color4;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                .widget {
+                    width: 100%;
+                    display: block;
+                    h3 {
+                        font-size: 1.1em;
+
+                    }
+                    ul {
+                        margin: 0.5em 0;
+                        @include clearfix();
+                        li {
+                            margin-bottom: 0.2em;
+                            a {
+                                margin: 0 0 1% 0;
+                                &:hover {
+                                    color: $color4;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+                span {
+                    color: $color11a;
+                }
+
+            }
+        }
+        /*--- End of Left Column---*/
+        /*--- Right Column---*/
+        #clashvibes_right_column {
+            margin: 0 0 1% 0;
+            h1 {
+                font-size: 1.2em;
+                padding: 0.5em 0;
+                a {
+                    width: 71%;
+                    display: inline-block;
+
+                }
+                span {
+                    display: inline-block;
+                    width: 27%;
+
+                }
+            }
+
+            header.entry-header {
+                height: auto;
+                display: block;
+                section.byline {
+                    height: 123px;
+                    span {
+                        text-indent: 0.5em;
+                        font-size: 0.85em;
+                    }
+                }
+
+            }
+
+            figure.thumb {
+                width: 20%;
+                margin: 5% auto;
+                img {
+                    margin: 0;
+                }
+            }
+
+            footer.speaker-meta {
+                background-color: $color;
+
+                height: 160px;
+                ul.post-meta {
+                    display: block;
+
+                    height: 100%;
+
+                    li {
+                        list-style: none;
+
+                        span {
+                            width: 20%;
+                        }
+
+                    }
+
+                }
+
+            } //end of global post
+            //audio/video player
+            .audio-play {
+                width: 85%;
+                margin: 0 auto;
+                display: block;
+
+            }
+
+            #audio_controls {
+                height: 55px;
+                
+
+                #play_toggle {
+                    width: 20%;
+                    line-height: 55px;
+                    font-size:1em;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                #progress {
+                    width: 60%;
+                    display: inline-block;
+                    height: 27.5px;
+
+                    #play_progress {
+                        height: 27.5px;
+                    }
+                    #load_progress {
+                        height: 27.5px;
+                    }
+
+                }
+
+                #time {
+                    width: 20%;
+                    #duration {
+                        font-size: 0.75em;
+                        height: 27.5px;
+                        line-height: 27.5px;
+                    }
+                    #current_time {
+                        font-size: 0.75em;
+                        height: 27.5px;
+                        line-height: 27.5px;
+                    }
+                }
+
+            }
+
+            .video-play {
+                margin: 0 auto;
+                iframe {
+                    margin: auto;
+                    display: block;
+
+                }
+            } //custom posts and regular post
+            article.clash_videos,
+            article.clash_audio,
+            article.post {
+                display: block;
+
+                header.entry-header {
+                    height: auto;
+                    display: block;
+                    h1 {
+                        font-size: 1.2em;
+                        
+                        a {
+                            width: auto;
+                            font-size: 0.75em;
+
+                        }
+                        span {
+                            width: auto;
+                            font-size: 0.8em;
+                            text-indent: 0.25em;
+                            
+
+
+                        }
+                    }
+
+                    section.byline {
+                        height: 123px;
+                        display: block;
+                        span {
+							font-size:0.8em;
+
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 25%;
+                    margin: 3% auto;
+                    img {
+                        margin: 0;
+                        display: block;
+                    }
+                }
+
+                section.newsExcerpt {
+                    display: block;
+                    width: 70%;
+                    margin:auto;
+                    div#jp_container_1 {
+                        display: block;
+                        width: 100%;
+
+                        .jp-type-single {
+                            width: 100%;
+                            .jp-gui {
+                                height: auto;
+                                display: block;
+                                .jp-volume-controls {
+                                    height: 50px;
+                                    margin-bottom: 0.2em;
+                                    .jp-mute {
+                                        width: 49%;
+                                        line-height: 35px;
+                                        margin-right: 0.1em;
+
+                                    }
+                                    .jp-volume-max {
+                                        width: 49%;
+                                        line-height: 35px;
+                                        margin-right: 0.1em;
+
+                                    }
+                                }
+
+                                .jp-controls-holder {
+                                    height: auto;
+                                    width: 100%;
+                                    margin: 0;
+                                    .jp-controls {
+                                        width: 25%;
+                                        margin-bottom: 0.5em;
+
+                                        .jp-play {
+                                            width: 49%;
+                                            line-height: 35px;
+                                            margin-right: 0.1em;
+
+                                        }
+                                        .jp-stop {
+                                            width: 49%;
+                                            text-align: center;
+                                            line-height: 35px;
+                                        }
+
+                                    }
+
+                                    .jp-progress {
+                                        width: 52%;
+                                        margin-right: 0.2em;
+                                        .jp-seek-bar {
+                                            display: inline-block;
+                                            height: 22px;
+                                            .jp-play-bar {
+                                                height: 22px;
+
+                                            }
+
+                                        }
+                                    }
+
+                                    .jp-current-time {
+                                        width: 10%;
+
+                                    }
+                                    .jp-duration {
+                                        width: 10%;
+                                     }
+
+                                    .jp-toggles {
+                                        clear: both;
+                                        margin-top: 0.2em;
+                                        .jp-repeat {
+                                            width: 49%;
+                                            line-height: 35px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                footer.speaker-meta {
+                    height: 160px;
+
+                    ul.post-meta {
+                        letter-spacing: 0.05em;
+
+                        li {
+                            line-height: 39px;
+                            height: 40px;
+                            font-size: 0.8em;
+
+                            span {
+                                width: 30%;
+                                text-indent: 1%;
+                                font-size: 0.9em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .clashvibes_right_panel_fullwidth {
+                float: left;
+                width: 96%;
+                min-height: 720px;
+                padding: 2%;
+
+                /*blog*/
+                .post {
+                    width: 96%;
+                    padding: 2%;
+                    margin-bottom: 1%;
+
+                    .byline {
+                        height: auto;
+                        span {
+                            font-size: 0.9em;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1em;
+                        text-indent: 1%;
+                        a {
+                            color: $color;
+                        }
+                    }
+
+                    figure.thumb {
+                        width: 30%;
+                        max-width: 30%;
+                        margin: 5% auto;
+                    }
+                    section.newsExcerpt {
+                        height: auto;
+                        a.download_button {
+                            width: 30%;
+                            margin: 0 auto;
+                        }
+
+
+                    }
+                    p {
+                        font-size: 0.9em;
+                    }
+                    ul figure {
+                        width: 90%;
+                    }
+
+                }
+                /*blog end*/
+            }
+
+            .sound_clash_audio {
+                margin: 1%;
+                width: 96%;
+                padding: 1%;
+
+                .audio-play {
+                    width: 85%;
+                    margin: 0 auto;
+                    display: block;
+
+                }
+
+                #audio_controls {
+                    height: 49px;
+                    width: 90%;
+                    margin: 2% auto;
+
+                    #play_toggle {
+                        width: 20%;
+                        line-height: 49px;
+                    }
+
+                    #progress {
+                        width: 59%;
+                        height: 24px;
+                        #play_progress {
+                            height: 24px;
+                        }
+                        #load_progress {
+                            background-color: $color8;
+                            height: 24px;
+                        }
+
+                    }
+
+                    #time {
+                        width: 20%;
+                        display: inline-block;
+                        float: right;
+                        #duration {
+                            background-color: $color4;
+                            color: $color;
+                            display: block;
+                        }
+                        #current_time {
+                            background-color: $color4;
+                            color: $color;
+                            display: block;
+                        }
+                    }
+
+                }
+
+                header.entry-header {
+                    display: block;
+                    height: auto;
+
+                    h1.entry-title {
+
+                        font-size: 1.25em;
+                        span {
+                            height: 50px;
+                            a {
+                                color: #000;
+                                &:hover {
+                                    color: $color;
+                                }
+                            }
+                        }
+
+                    }
+
+
+                    section.byline {
+                        height: 123px;
+                        display: block;
+                        span {
+                            height: 40px;
+                            line-height: 40px;
+
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 20%;
+                    margin: 5% auto;
+                }
+
+                footer.speaker-meta {
+                    display: block;
+                    height: 160px;
+                    ul.post-meta {
+                        display: block;
+                        height: 100%;
+
+                        li {
+                            list-style: none;
+                            line-height: 40px;
+                            height: 40px;
+
+                            span {
+                                width: 20%;
+                                text-indent: 1%;
+                                font-size: 0.95em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .sound_clash_video {
+                background-color: $color;
+                margin: 1%;
+                width: 96%;
+                padding: 1%;
+                .video-play {
+                    width: 45%;
+                }
+
+                header.entry-header {
+                    display: block;
+                    height: auto;
+
+                    h1.entry-title {
+                        font-size: 1.2em;
+                        span {
+                            color: $color;
+
+                            display: inline-block;
+                            a {
+                                color: $color4;
+                                display: inline;
+                            }
+                        }
+
+                    }
+                    .byline {
+                        height: auto;
+                        color: $color4;
+                        display: block;
+                        span {
+                            padding: 0;
+                            line-height: 35px;
+                            font-size: 0.85em;
+                            text-indent: 2%;
+                            a {
+                                color: $color4;
+                                display: inline;
+                            }
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 20%;
+                    margin: 5% auto;
+                }
+
+                footer.speaker-meta {
+                    background-color: $color;
+                    display: block;
+                    height: 160px;
+                    ul.post-meta {
+                        height: 100%;
+
+                        li {
+                            list-style: none;
+                            line-height: 40px;
+                            height: 40px;
+
+                            span {
+                                width: 20%;
+                                text-indent: 1%;
+                                font-size: 0.95em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        #clashvibes_content_front {
+            padding: 0;
+            width: 100%;
+            margin: auto;
+            #clashvibes_right_column_front {
+                //float: none;
+                min-height: 720px;
+                width: 100%;
+                h1 {
+                    
+                    font-size: 1em;
+                    letter-spacing: 0.05em;
+                }
+
+                #new_released_section {
+                    width: 100%;
+                    .new_released_box {
+                        width: 24%;
+                        min-height: 260px;
+                        h1 {
+                            font-size: 0.8em;
+                            line-height: 20px;
+                            width: auto;
+                        }
+
+                        a {
+                            font-size: 0.8em;
+                            text-align: center;
+                            letter-spacing: 0.05em;
+
+                            &:hover {
+                                font-weight: bold;
+                            }
+                        }
+
+                        figure.thumb {
+                            width: 60%;
+                            &:hover {
+                                cursor: pointer;
+                                width: 65%;
+                            }
+                            img {
+                                
+                                @include box-sizing($type: border-box);
+
+                            }
+
+                            figcaption {
+
+                                span.rantsection {
+                                    height: 30px;
+                                    width: 45%;
+                                    img.star {
+                                        width: 20%;
+                                    }
+                                }
+
+                                span.more_button {
+                                    height: 40px;
+
+                                   
+                                    a {
+                                        font-size: 0.7em;
+                                        letter-spacing: 0.05em;
+                                        &:hover {
+                                            color: $color4;
+                                            background-color: $color1;
+                                            letter-spacing: 0.055em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .clashvibes_right_panel_fullwidth {
+            width: 96%;
+            min-height: 720px;
+            padding: 2%;
+
+            #news_section {
+                float: left;
+                width: 100%;
+                margin: 0;
+
+                padding: 0;
+                h1 {
+                    width: 98%;
+                    letter-spacing: 0.05em;
+                }
+
+                p {
+                    font-size: 0.85em;
+                    width: 98%;
+                }
+
+                .news_box {
+                    float: left;
+                    margin: 1% 0;
+
+                    h2 {
+                        text-indent: 0.5em;
+                        line-height: 50px;
+                    }
+
+                    ul {
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            line-height: 40px;
+                            color: $color4;
+                            ul {
+                                padding: 1% 0;
+                                li.cat-item {
+                                    width: 90%;
+                                    margin: 1% auto;
+                                    &:hover {
+                                        background-color: $color2;
+                                    }
+                                }
+                            }
+
+                            a {
+                                font-size: 0.8em;
+                                line-height: 40px;
+                            }
+                        }
+                    }
+
+                    .archive-header {
+                        margin: 0 auto;
+                        .archive-meta {
+                            text-indent: 1%;
+                            height: 123px;
+                            span {
+                                font-size: 0.85em;
+                                letter-spacing: 0.05em;
+                                a {
+                                    display: inline-block;
+                                    width: auto;
+                                }
+                            }
+                        }
+                        h2 {
+                            width: 100%;
+                            font-size: 0.9em;
+                            
+
+                            a {
+                                
+                                height: 98%;
+                                font-size: 1.1em;
+                            }
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    section.newsExcerpt {
+                        height: auto;
+                        a.download_button {
+                            width: 30%;
+                            line-height: 30px;
+                            &:hover {
+                                color: $color3;
+                            }
+                        }
+                    }
+
+                    .thumb {
+                        width: 16%;
+
+                        img {
+                            margin: 0;
+                        }
+                    }
+
+                    .entry {
+                        .audio-play {
+                            width: 85%;
+
+                        }
+                        .video-play {
+                            width: 45%;
+                            height: 300px;
+                        }
+                        a.read_more {
+							font-size:0.9em;
+                            &:hover {
+                                color: $color4;
+                            }
+                        }
+                    }
+
+                    footer.postmetadata {
+                        height: 60px;
+                        width: 100%;
+                        a.comments-link {
+                            display: block;
+                            padding: 1%;
+                        }
+                    }
+                }
+            }
+
+            /*blog*/
+            .post {
+                width: 80%;
+                padding: 2%;
+                float: left;
+                .byline {
+                    height: 50px;
+                    ;
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
+                    a {
+                        font-size: 1.15em;
+                        display: inline-block;
+                    }
+                }
+
+                h3 {
+                    font-size: 1em;
+                    a {
+                        font-size: 1.1em;
+
+                    }
+                }
+                figure.thumb {
+                    width: 20%;
+                }
+                .newExcerpt {
+                    height: auto;
+                }
+                p {
+
+                    font-size: 0.9em;
+                }
+                ul figure {
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: 0;
+                }
+                .thumb {
+                    max-width: 30%;
+                    margin: 5% auto;
+                }
+            }
+            /*blog end*/
+        }
+
+        .clashvibes_right_panel_fullwidth_content {
+            float: left;
+            width: 620px;
+            padding: 0;
+            p {
+                text-align: justify;
+                width: 100%;
+            }
+        }
+
+        #topdownload_section_ctner{
+            padding:0.5em;
+            height:auto;
+
+            ul#topdownload_section {
+
+                width: 48.79%;
+                padding: 0.5em;
+                display: inline-block;
+
+                h1 {
+                    font-size: 1em;
+                    clear: both;
+
+                }
+
+                li.topdownload_box {
+                    width: 100%;
+                    
+                    letter-spacing: 0.05em;
+                    span.image_thumb {
+                        width: 10%;
+                        a{
+                            background-color: $color2;
+                            img{
+                                @include box-sizing($type: border-box);
+                                vertical-align: unset;
+
+                            }
+                        }
+                    }
+                    span.title_singer {
+                        width: 75%;
+                        font-size: 0.6em;
+                        text-indent: 0.5em;
+                    }
+                    span {
+                        a {
+                            
+                            font-size: 0.7em;
+                            letter-spacing: 0.05em;
+                            
+                            &:hover {
+                                
+                                letter-spacing: 0.05em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*--- End of Right Column---*/
+        /*--- End of Content ---*/
+        /* ----- Footer ----- */
+        #clashvibes_footer {
+            padding: 10px 0;
+            height: 200px;
+            margin-bottom: 2%;
+
+            ul {
+                float: left;
+                width: 12%;
+
+                li {
+                    width: 100%;
+                    text-indent: 5%;
+                    a {
+                        font-size: 0.8em;
+
+                        &:hover {
+
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            ul#footer-content {
+                width: 82%;
+                height: 100%;
+                li {
+                    text-indent: 0;
+                    a {
+                        text-align: center;
+                    }
+
+                }
+            }
+
+            ul#social-media-box {
+                width: 5%;
+
+                li {
+                    width: 100%;
+                    height: 50px;
+                    a {
+                        width: 100%;
+                        height: 100%;
+
+
+                        span {
+                            display: block;
+                            i {
+                                font-size: 1.6em;
+                                line-height: 50px;
+                                &:hover {
+                                    color: $color10;
+                                    font-size: 1.7em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* ----- End of Footer ----- */
+    }
+   
+}
+
+//tablet
+
+@media only screen and (max-width: 667px) {
+
+	#container {
+        width: 98%;
+        h1 {
+            
+            width: 100%;
+            a {
+                font-size: 0.8em;
+                display: block;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        /********** header **********/
+        header {
+            height: 70px;
+
+            span#socialmediatop {
+                width: 32%;
+
+                a {
+                    display: inline-block;
+                    width: 23.5%;
+
+                    span {
+                        display: block;
+                        height: 100%;
+                        i {
+                            font-size: 1.05em;
+                        }
+                    }
+                }
+            }
+        }
+
+        /********** navigation **********/
+        nav {
+            height: 45px;
+
+            ul {
+
+                list-style: none;
+                li {
+                    margin-right: 0.1em;
+                    width: 13.98%;
+                    a {
+                        font-size: 0.6em;
+                        
+                        
+                        &:hover {
+                            letter-spacing: 0.02em;
+
+                        }
+                    }
+                    .lastmenu {
+                        border-right: none;
+                    }
+
+                }
+            }
+        }
+
+        /********** front page **********/
+        #clashvibes_content_front {
+
+            #clashvibes_banner {
+                width: 99%;
+				
+                #slider {
+                    list-style: none;
+                    li {
+
+                        overflow: hidden;
+
+                    }
+                }
+               
+            }
+
+        }
+
+
+        #clashvibes_title {
+            float: left;
+            
+            display: block;
+        }
+
+
+        /********** login form **********/
+        #clashvibes_login {
+            width: 96%;
+            form {
+                margin: 0;
+                padding: 0;
+                .form_row {
+                    
+                    text-align: left;
+                }
+
+                label {
+                    text-align: left;
+                    font-size: 1.4em;
+                }
+
+                input[type="text"] {
+                    width: 63%;
+                    line-height: 1.4em;
+                }
+                input[type="submit"] {
+                    width: 30%;
+                    height: 35px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+            /* ----- Form ----- */
+        }
+
+        /*--- Content ---*/
+        #clashvibes_content {
+            padding: 0;
+                        
+        }
+
+        /*--- Left Column---*/
+        #clashvibes_left_column {
+            width: 21%;
+            h1 {
+                font-size: 0.9em;
+            }
+            a {
+                font-size: 0.75em;
+            }
+
+            .comment-author-link {
+                font-size: 0.75em;
+            }
+
+            .left_col_box {
+                margin: 0;
+                list-style: none;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style: none;
+                        a {
+                            font-size: 0.75em;
+                            
+                        }
+                    }
+                }
+            } //side bar navigation blog and custom posts
+            .blog_box {
+
+                width: 96%;
+
+                p {
+                    margin-left: 5px;
+                }
+                h3 {
+                    a {
+                        font-size: 0.8em;
+                        letter-spacing: 0.05em;
+                    }
+                }
+                nav.menu-video-nav-container,
+                nav.menu-audio-nav-container {
+                    height: auto;
+
+                    ul,
+                    ul#menu-audio_nav,
+                    ul#menu-video_nav {
+                        margin: 0.5em 0;
+                        @include clearfix();
+                        li,
+                        li#menu-item {
+                            display: block;
+                            a {
+                                padding: 0;
+                                margin: 0 0 1% 0;
+                                &:hover {
+                                    color: $color4;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                .widget {
+                    width: 100%;
+                    display: block;
+                    h3 {
+                        font-size: 1.1em;
+
+                    }
+                    ul {
+                        margin: 0.5em 0;
+                        @include clearfix();
+                        li {
+                            margin-bottom: 0.2em;
+                            a {
+                                margin: 0 0 1% 0;
+                                &:hover {
+                                    color: $color4;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+                span {
+                    color: $color11a;
+                }
+
+            }
+        }
+        /*--- End of Left Column---*/
+        /*--- Right Column---*/
+        #clashvibes_right_column {
+            margin: 0 0 1% 0;
+            h1 {
+                font-size: 1.2em;
+                padding: 0.5em 0;
+                a {
+                    width: 71%;
+                    display: inline-block;
+
+                }
+                span {
+                    display: inline-block;
+                    width: 27%;
+
+                }
+            }
+
+            header.entry-header {
+                height: auto;
+                display: block;
+                section.byline {
+                    height: 123px;
+                    span {
+                        text-indent: 0.5em;
+                        font-size: 0.85em;
+                    }
+                }
+
+            }
+
+            figure.thumb {
+                width: 20%;
+                margin: 5% auto;
+                img {
+                    margin: 0;
+                }
+            }
+
+            footer.speaker-meta {
+                background-color: $color;
+
+                height: 160px;
+                ul.post-meta {
+                    display: block;
+
+                    height: 100%;
+
+                    li {
+                        list-style: none;
+
+                        span {
+                            width: 20%;
+                        }
+
+                    }
+
+                }
+
+            } //end of global post
+            //audio/video player
+            .audio-play {
+                width: 85%;
+                margin: 0 auto;
+                display: block;
+
+            }
+
+            #audio_controls {
+                height: 55px;
+                
+
+                #play_toggle {
+                    width: 20%;
+                    line-height: 55px;
+                    font-size:1em;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                #progress {
+                    width: 60%;
+                    display: inline-block;
+                    height: 27.5px;
+
+                    #play_progress {
+                        height: 27.5px;
+                    }
+                    #load_progress {
+                        height: 27.5px;
+                    }
+
+                }
+
+                #time {
+                    width: 20%;
+                    #duration {
+                        font-size: 0.75em;
+                        height: 27.5px;
+                        line-height: 27.5px;
+                    }
+                    #current_time {
+                        font-size: 0.75em;
+                        height: 27.5px;
+                        line-height: 27.5px;
+                    }
+                }
+
+            }
+
+            .video-play {
+                margin: 0 auto;
+                iframe {
+                    margin: auto;
+                    display: block;
+
+                }
+            } //custom posts and regular post
+            article.clash_videos,
+            article.clash_audio,
+            article.post {
+                display: block;
+
+                header.entry-header {
+                    height: auto;
+                    display: block;
+                    h1 {
+                        font-size: 1.2em;
+                        
+                        a {
+                            width: auto;
+                            font-size: 0.75em;
+
+                        }
+                        span {
+                            width: auto;
+                            font-size: 0.8em;
+                            
+
+
+                        }
+                    }
+
+                    section.byline {
+                        height: 123px;
+                        display: block;
+                        span {
+                            font-size:0.75em;
+
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 30%;
+                    margin: 3% auto;
+                    img {
+                        margin: 0;
+                        display: block;
+                    }
+                }
+
+                section.newsExcerpt {
+                    display: block;
+                    width: 90%;
+                    margin:auto;
+
+                    div#jp_container_1 {
+                        display: block;
+                        width: 100%;
+
+                        .jp-type-single {
+                            width: 100%;
+                            .jp-gui {
+                                height: auto;
+                                display: block;
+                                .jp-volume-controls {
+                                    height: 50px;
+                                    margin-bottom: 0.2em;
+                                    .jp-mute {
+                                        width: 49%;
+                                        line-height: 35px;
+                                        margin-right: 0.1em;
+
+                                    }
+                                    .jp-volume-max {
+                                        width: 49%;
+                                        line-height: 35px;
+                                        margin-right: 0.1em;
+
+                                    }
+                                }
+
+                                .jp-controls-holder {
+                                    height: auto;
+                                    width: 100%;
+                                    margin: 0;
+                                    .jp-controls {
+                                        width: 25%;
+                                        margin-bottom: 0.5em;
+
+                                        .jp-play {
+                                            width: 49%;
+                                            line-height: 35px;
+                                            margin-right: 0.1em;
+
+                                        }
+                                        .jp-stop {
+                                            width: 49%;
+                                            text-align: center;
+                                            line-height: 35px;
+                                        }
+
+                                    }
+
+                                    .jp-progress {
+                                        width: 52%;
+                                        margin-right: 0.2em;
+                                        .jp-seek-bar {
+                                            display: inline-block;
+                                            height: 22px;
+                                            .jp-play-bar {
+                                                height: 22px;
+
+                                            }
+
+                                        }
+                                    }
+
+                                    .jp-current-time {
+                                        width: 10%;
+
+                                    }
+                                    .jp-duration {
+                                        width: 10%;
+                                     }
+
+                                    .jp-toggles {
+                                        clear: both;
+                                        margin-top: 0.2em;
+                                        .jp-repeat {
+                                            width: 49%;
+                                            line-height: 35px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                footer.speaker-meta {
+                    height: 160px;
+
+                    ul.post-meta {
+                        letter-spacing: 0.05em;
+
+                        li {
+                            line-height: 39px;
+                            height: 40px;
+                            font-size: 0.8em;
+
+                            span {
+                                width: 30%;
+                                text-indent: 0.5%;
+                                font-size: 0.85em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .clashvibes_right_panel_fullwidth {
+                float: left;
+                width: 96%;
+                min-height: 720px;
+                padding: 2%;
+
+                /*blog*/
+                .post {
+                    width: 96%;
+                    padding: 2%;
+                    margin-bottom: 1%;
+
+                    .byline {
+                        height: auto;
+                        span {
+                            font-size: 0.9em;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1em;
+                        text-indent: 1%;
+                        a {
+                            color: $color;
+                        }
+                    }
+
+                    figure.thumb {
+                        width: 30%;
+                        max-width: 30%;
+                        margin: 5% auto;
+                    }
+                    section.newsExcerpt {
+                        height: auto;
+                        a.download_button {
+                            width: 30%;
+                            margin: 0 auto;
+                        }
+
+
+                    }
+                    p {
+                        font-size: 0.9em;
+                    }
+                    ul figure {
+                        width: 90%;
+                    }
+
+                }
+                /*blog end*/
+            }
+
+            .sound_clash_audio {
+                margin: 1%;
+                width: 96%;
+                padding: 1%;
+
+                .audio-play {
+                    width: 85%;
+                    margin: 0 auto;
+                    display: block;
+
+                }
+
+                #audio_controls {
+                    height: 49px;
+                    width: 90%;
+                    margin: 2% auto;
+
+                    #play_toggle {
+                        width: 20%;
+                        line-height: 49px;
+                    }
+
+                    #progress {
+                        width: 59%;
+                        height: 24px;
+                        #play_progress {
+                            height: 24px;
+                        }
+                        #load_progress {
+                            background-color: $color8;
+                            height: 24px;
+                        }
+
+                    }
+
+                    #time {
+                        width: 20%;
+                        display: inline-block;
+                        float: right;
+                        #duration {
+                            background-color: $color4;
+                            color: $color;
+                            display: block;
+                        }
+                        #current_time {
+                            background-color: $color4;
+                            color: $color;
+                            display: block;
+                        }
+                    }
+
+                }
+
+                header.entry-header {
+                    display: block;
+                    height: auto;
+
+                    h1.entry-title {
+
+                        font-size: 1.25em;
+                        span {
+                            height: 50px;
+                            a {
+                                color: #000;
+                                &:hover {
+                                    color: $color;
+                                }
+                            }
+                        }
+
+                    }
+
+
+                    section.byline {
+                        height: 123px;
+                        display: block;
+                        span {
+                            height: 40px;
+                            line-height: 40px;
+
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 20%;
+                    margin: 5% auto;
+                }
+
+                footer.speaker-meta {
+                    display: block;
+                    height: 160px;
+                    ul.post-meta {
+                        display: block;
+                        height: 100%;
+
+                        li {
+                            list-style: none;
+                            line-height: 40px;
+                            height: 40px;
+
+                            span {
+                                width: 20%;
+                                text-indent: 1%;
+                                font-size: 0.95em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .sound_clash_video {
+                background-color: $color;
+                margin: 1%;
+                width: 96%;
+                padding: 1%;
+                .video-play {
+                    width: 45%;
+                }
+
+                header.entry-header {
+                    display: block;
+                    height: auto;
+
+                    h1.entry-title {
+                        font-size: 1.2em;
+                        span {
+                            color: $color;
+
+                            display: inline-block;
+                            a {
+                                color: $color4;
+                                display: inline;
+                            }
+                        }
+
+                    }
+                    .byline {
+                        height: auto;
+                        color: $color4;
+                        display: block;
+                        span {
+                            padding: 0;
+                            line-height: 35px;
+                            font-size: 0.85em;
+                            text-indent: 2%;
+                            a {
+                                color: $color4;
+                                display: inline;
+                            }
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 20%;
+                    margin: 5% auto;
+                }
+
+                footer.speaker-meta {
+                    background-color: $color;
+                    display: block;
+                    height: 160px;
+                    ul.post-meta {
+                        height: 100%;
+
+                        li {
+                            list-style: none;
+                            line-height: 40px;
+                            height: 40px;
+
+                            span {
+                                width: 20%;
+                                text-indent: 1%;
+                                font-size: 0.95em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        #clashvibes_content_front {
+            padding: 0;
+            width: 100%;
+            margin: auto;
+            #clashvibes_right_column_front {
+                //float: none;
+                min-height: 720px;
+                width: 100%;
+                h1 {
+                    
+                    font-size: 1.2em;
+                    letter-spacing: 0.05em;
+                }
+
+                #new_released_section {
+                    width: 100%;
+                    .new_released_box {
+                        width: 32%;
+                        min-height: 260px;
+                        h1 {
+                            font-size: 0.8em;
+                            line-height: 20px;
+                            width: auto;
+                        }
+
+                        a {
+                            font-size: 0.8em;
+                            text-align: center;
+                            letter-spacing: 0.05em;
+
+                            &:hover {
+                                font-weight: bold;
+                            }
+                        }
+
+                        figure.thumb {
+                            width: 60%;
+                            &:hover {
+                                cursor: pointer;
+                                width: 65%;
+                            }
+                            img {
+                                
+                                @include box-sizing($type: border-box);
+
+                            }
+
+                            figcaption {
+
+                                span.rantsection {
+                                    height: 30px;
+                                    width: 45%;
+                                    img.star {
+                                        width: 20%;
+                                    }
+                                }
+
+                                span.more_button {
+                                    height: 40px;
+
+                                   
+                                    a {
+                                        font-size: 0.8em;
+                                        letter-spacing: 0.05em;
+                                        &:hover {
+                                            color: $color4;
+                                            background-color: $color1;
+                                            letter-spacing: 0.055em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .clashvibes_right_panel_fullwidth {
+            width: 96%;
+            min-height: 720px;
+            padding: 2%;
+
+            #news_section {
+                float: left;
+                width: 100%;
+                margin: 0;
+
+                padding: 0;
+                h1 {
+                    width: 98%;
+                    letter-spacing: 0.05em;
+                }
+
+                p {
+                    font-size: 0.85em;
+                    width: 98%;
+                }
+
+                .news_box {
+                    float: left;
+                    margin: 1% 0;
+
+                    h2 {
+                        text-indent: 0.5em;
+                        line-height: 50px;
+                    }
+
+                    ul {
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            line-height: 40px;
+                            color: $color4;
+                            ul {
+                                padding: 1% 0;
+                                li.cat-item {
+                                    width: 90%;
+                                    margin: 1% auto;
+                                    &:hover {
+                                        background-color: $color2;
+                                    }
+                                }
+                            }
+
+                            a {
+                                font-size: 0.8em;
+                                line-height: 40px;
+                            }
+                        }
+                    }
+
+                    .archive-header {
+                        margin: 0 auto;
+                        .archive-meta {
+                            text-indent: 1%;
+                            height: 123px;
+                            span {
+                                font-size: 0.85em;
+                                letter-spacing: 0.05em;
+                                a {
+                                    display: inline-block;
+                                    width: auto;
+                                }
+                            }
+                        }
+                        h2 {
+                            width: 100%;
+                            font-size: 0.9em;
+                            
+
+                            a {
+                                
+                                height: 98%;
+                                font-size: 1.1em;
+                            }
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    section.newsExcerpt {
+                        height: auto;
+                        a.download_button {
+                            width: 30%;
+                            line-height: 30px;
+                            &:hover {
+                                color: $color3;
+                            }
+                        }
+                    }
+
+                    .thumb {
+                        width: 16%;
+
+                        img {
+                            margin: 0;
+                        }
+                    }
+
+                    .entry {
+                        .audio-play {
+                            width: 85%;
+
+                        }
+                        .video-play {
+                            width: 45%;
+                            height: 300px;
+                        }
+                        a.read_more {
+							font-size:0.9em;
+                            &:hover {
+                                color: $color4;
+                            }
+                        }
+                    }
+
+                    footer.postmetadata {
+                        height: 60px;
+                        width: 100%;
+                        a.comments-link {
+                            display: block;
+                            padding: 1%;
+                        }
+                    }
+                }
+            }
+
+            /*blog*/
+            .post {
+                width: 80%;
+                padding: 2%;
+                float: left;
+                .byline {
+                    height: 50px;
+                    ;
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
+                    a {
+                        font-size: 1.15em;
+                        display: inline-block;
+                    }
+                }
+
+                h3 {
+                    font-size: 1em;
+                    a {
+                        font-size: 1.1em;
+
+                    }
+                }
+                figure.thumb {
+                    width: 20%;
+                }
+                .newExcerpt {
+                    height: auto;
+                }
+                p {
+
+                    font-size: 0.9em;
+                }
+                ul figure {
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: 0;
+                }
+                .thumb {
+                    max-width: 30%;
+                    margin: 5% auto;
+                }
+            }
+            /*blog end*/
+        }
+
+        .clashvibes_right_panel_fullwidth_content {
+            float: left;
+            width: 620px;
+            padding: 0;
+            p {
+                text-align: justify;
+                width: 100%;
+            }
+        }
+
+        #topdownload_section_ctner{
+            padding:0.5em;
+            height:auto;
+            -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+
+            ul#topdownload_section {
+
+                width: 95.79%;
+                padding: 0.5em;
+                display: block;
+                margin: 0.25em;
+
+                h1 {
+                    font-size: 1em;
+                    clear: both;
+
+                }
+
+                li.topdownload_box {
+                    width: 100%;
+                    
+                    letter-spacing: 0.05em;
+                    span.image_thumb {
+                        width: 10%;
+                        a{
+                            background-color: $color2;
+                            img{
+                                @include box-sizing($type: border-box);
+                                vertical-align: unset;
+
+                            }
+                        }
+                    }
+                    span.title_singer {
+                        width: 75%;
+                        font-size: 0.8em;
+                        text-indent: 0.5em;
+                    }
+                    span {
+                        a {
+                            
+                            font-size: 0.8em;
+                            letter-spacing: 0.05em;
+                            
+                            &:hover {
+                                
+                                letter-spacing: 0.05em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*--- End of Right Column---*/
+        /*--- End of Content ---*/
+        /* ----- Footer ----- */
+        #clashvibes_footer {
+            padding: 10px 0;
+            height: 200px;
+            margin-bottom: 2%;
+
+            ul {
+                float: left;
+                width: 12%;
+
+                li {
+                    width: 100%;
+                    text-indent: 5%;
+                    a {
+                        font-size: 0.8em;
+
+                        &:hover {
+
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            ul#footer-content {
+                width: 82%;
+                height: 100%;
+                li {
+                    text-indent: 0;
+                    a {
+                        text-align: center;
+                    }
+
+                }
+            }
+
+            ul#social-media-box {
+                width: 5%;
+
+                li {
+                    width: 100%;
+                    height: 50px;
+                    a {
+                        width: 100%;
+                        height: 100%;
+
+
+                        span {
+                            display: block;
+                            i {
+                                font-size: 1.6em;
+                                line-height: 50px;
+                                &:hover {
+                                    color: $color10;
+                                    font-size: 1.7em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* ----- End of Footer ----- */
+    }
+   
+}
+
+
+
+@media only screen and (max-width: 640px) {
+       
+    button#toggle-nav{
+        display: block;
+        position: fixed;
+        top: 4em;
+        left: 89.5%;
+        z-index: 100;
+        height: 50px;
+        width: 60px;
+        background-color:$color4;
+        color:$color;
+        border:none;
+        outline:none;
+        &:hover{
+            background-color:$color7;
+            color:$color4;
+        }
+        
+    }
+    
+    
+    button#side-bar-btn{
+        display: block;
+        position: fixed;
+        top: 4em;
+        left: 1%;
+        z-index: 100;
+        height: 50px;
+        width: 30%;
+        background-color:$color4;
+        color:$color;
+        border:none;
+        outline:none;
+        &:hover{
+            background-color:$color7;
+            color:$color4;
+        }
+        
+    }
+    
+    #container {
+        width: 98%;
+        h1 {
+            
+            width: 100%;
+            a {
+                font-size: 0.8em;
+                display: block;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        /********** header **********/
+        header {
+            height: 120px;
+
+            span#socialmediatop {
+                width: 35%;
+
+                a {
+                    display: inline-block;
+                    width: 23.5%;
+
+                    span {
+                        display: block;
+                        height: 100%;
+                        i {
+                            font-size: 1.05em;
+                        }
+                    }
+                }
+            }
+        }
+
+        /********** navigation **********/
+        nav {
+            position:fixed;
+            z-index:3;
+            height: auto;
+            width: 250px;
+            left:-250px;
+                        
+
+            ul {
+
+                list-style: none;
+                li {
+                    margin-right: 0;
+                    width: 100%;
+                    height: 50px;
+                    a {
+                        font-size: 0.9em;
+                        line-height: 50px;
+                        
+                        
+                        &:hover {
+                            letter-spacing: 0.02em;
+                            line-height: 50px;
+                        }
+                    }
+                    .lastmenu {
+                        border-right: none;
+                    }
+
+                }
+            }
+        }
+
+        /********** front page **********/
+        #clashvibes_content_front {
+
+            #clashvibes_banner {
+                width: 99%;
+				
+                #slider {
+                    list-style: none;
+                    li {
+
+                        overflow: hidden;
+
+                    }
+                }
+               
+            }
+
+        }
+
+
+        #clashvibes_title {
+            float: left;
+            
+            display: block;
+        }
+
+
+        /********** login form **********/
+        #clashvibes_login {
+            width: 96%;
+            form {
+                margin: 0;
+                padding: 0;
+                .form_row {
+                    
+                    text-align: left;
+                }
+
+                label {
+                    text-align: left;
+                    font-size: 1.4em;
+                }
+
+                input[type="text"] {
+                    width: 63%;
+                    line-height: 1.4em;
+                }
+                input[type="submit"] {
+                    width: 30%;
+                    height: 35px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+            /* ----- Form ----- */
+        }
+
+        /*--- Content ---*/
+        #clashvibes_content {
+            padding: 0;
+                        
+        }
+
+        /*--- Left Column---*/
+        #clashvibes_left_column {
+            width: 250px;
+            position: fixed;
+            left: -250px;
+            height: auto;
+            z-index: 100;
+            top:26em;
+            
+            h1 {
+                position: relative;
+                font-size: 0.9em;
+            }
+            a {
+                font-size: 0.75em;
+            }
+
+            .comment-author-link {
+                font-size: 0.75em;
+            }
+
+            .left_col_box {
+                margin: 0;
+                list-style: none;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style: none;
+                        a {
+                            position: relative;
+                            font-size: 0.75em;
+                            
+                        }
+                    }
+                }
+            } //side bar navigation blog and custom posts
+            .blog_box {
+
+                width: 96%;
+
+                p {
+                    margin-left: 5px;
+                }
+                h3 {
+                    a {
+                        font-size: 0.8em;
+                        letter-spacing: 0.05em;
+                    }
+                }
+                
+                nav.menu-video-nav-container,
+                nav.menu-audio-nav-container {
+                    position:unset;
+                    height: auto;
+                    display: block;
+                    ul,
+                    ul#menu-audio_nav,
+                    ul#menu-video_nav {
+                        margin: 0.5em 0;
+                        @include clearfix();
+                        li,
+                        li#menu-item {
+                            display: block;
+                            a {
+                                padding: 0;
+                                margin: 0 0 1% 0;
+                                &:hover {
+                                    color: $color4;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                .widget {
+                    width: 100%;
+                    display: block;
+                    h3 {
+                        font-size: 1.1em;
+
+                    }
+                    ul {
+                        margin: 0.5em 0;
+                        @include clearfix();
+                        li {
+                            margin-bottom: 0.2em;
+                            a {
+                                position: relative;
+                                margin: 0 0 1% 0;
+                                &:hover {
+                                    color: $color4;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+                span {
+                    color: $color11a;
+                }
+
+            }
+        }
+        /*--- End of Left Column---*/
+        /*--- Right Column---*/
+        #clashvibes_right_column {
+            margin: 0 0 1% 0;
+            width: 100%;
+            h1 {
+                font-size: 1.2em;
+                padding: 0.5em 0;
+                a {
+                    width: 71%;
+                    display: inline-block;
+
+                }
+                span {
+                    display: inline-block;
+                    width: 27%;
+
+                }
+            }
+
+            header.entry-header {
+                height: auto;
+                display: block;
+                section.byline {
+                    height: 123px;
+                    span {
+                        text-indent: 0.5em;
+                        font-size: 0.85em;
+                    }
+                }
+
+            }
+
+            figure.thumb {
+                width: 20%;
+                margin: 5% auto;
+                img {
+                    margin: 0;
+                }
+            }
+
+            footer.speaker-meta {
+                background-color: $color;
+
+                height: 160px;
+                ul.post-meta {
+                    display: block;
+
+                    height: 100%;
+
+                    li {
+                        list-style: none;
+
+                        span {
+                            width: 20%;
+                        }
+
+                    }
+
+                }
+
+            } //end of global post
+            //audio/video player
+            .audio-play {
+                width: 85%;
+                margin: 0 auto;
+                display: block;
+
+            }
+
+            #audio_controls {
+                height: 55px;
+                
+
+                #play_toggle {
+                    width: 20%;
+                    line-height: 55px;
+                    font-size:1em;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                #progress {
+                    width: 60%;
+                    display: inline-block;
+                    height: 27.5px;
+
+                    #play_progress {
+                        height: 27.5px;
+                    }
+                    #load_progress {
+                        height: 27.5px;
+                    }
+
+                }
+
+                #time {
+                    width: 20%;
+                    #duration {
+                        font-size: 0.75em;
+                        height: 27.5px;
+                        line-height: 27.5px;
+                    }
+                    #current_time {
+                        font-size: 0.75em;
+                        height: 27.5px;
+                        line-height: 27.5px;
+                    }
+                }
+
+            }
+
+            .video-play {
+                margin: 0 auto;
+                iframe {
+                    margin: auto;
+                    display: block;
+
+                }
+            } //custom posts and regular post
+            article.clash_videos,
+            article.clash_audio,
+            article.post {
+                display: block;
+
+                header.entry-header {
+                    height: auto;
+                    display: block;
+                    h1 {
+                        font-size: 1.1em;
+                        
+                        a {
+                            width: auto;
+                            font-size: 0.9em;
+
+                        }
+                        span {
+                            width: auto;
+                            font-size: 0.95em;
+                            
+
+
+                        }
+                    }
+
+                    section.byline {
+                        height: 123px;
+                        display: block;
+                        span {
+                            font-size:0.85em;
+
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 35%;
+                    margin: 3% auto;
+                    img {
+                        margin: 0;
+                        display: block;
+                    }
+                }
+
+                section.newsExcerpt {
+                    display: block;
+                    width:90%;
+                    margin:auto;
+                    div#jp_container_1 {
+                        display: block;
+                        width: 100%;
+
+                        .jp-type-single {
+                            width: 100%;
+                            .jp-gui {
+                                height: auto;
+                                display: block;
+                                .jp-volume-controls {
+                                    height: 50px;
+                                    margin-bottom: 0.2em;
+                                    .jp-mute {
+                                        width: 49%;
+                                        line-height: 35px;
+                                        margin-right: 0.1em;
+
+                                    }
+                                    .jp-volume-max {
+                                        width: 49%;
+                                        line-height: 35px;
+                                        margin-right: 0.1em;
+
+                                    }
+                                }
+
+                                .jp-controls-holder {
+                                    height: auto;
+                                    width: 100%;
+                                    margin: 0;
+                                    .jp-controls {
+                                        width: 25%;
+                                        margin-bottom: 0.5em;
+
+                                        .jp-play {
+                                            width: 49%;
+                                            line-height: 35px;
+                                            margin-right: 0.1em;
+
+                                        }
+                                        .jp-stop {
+                                            width: 49%;
+                                            text-align: center;
+                                            line-height: 35px;
+                                        }
+
+                                    }
+
+                                    .jp-progress {
+                                        width: 52%;
+                                        margin-right: 0.2em;
+                                        .jp-seek-bar {
+                                            display: inline-block;
+                                            height: 22px;
+                                            .jp-play-bar {
+                                                height: 22px;
+
+                                            }
+
+                                        }
+                                    }
+
+                                    .jp-current-time {
+                                        width: 10%;
+
+                                    }
+                                    .jp-duration {
+                                        width: 10%;
+                                     }
+
+                                    .jp-toggles {
+                                        clear: both;
+                                        margin-top: 0.2em;
+                                        .jp-repeat {
+                                            width: 49%;
+                                            line-height: 35px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                footer.speaker-meta {
+                    height: 160px;
+
+                    ul.post-meta {
+                        letter-spacing: 0.05em;
+
+                        li {
+                            line-height: 39px;
+                            height: 40px;
+                            font-size: 0.8em;
+
+                            span {
+                                width: 30%;
+                                text-indent: 0.5%;
+                                font-size: 0.9em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .clashvibes_right_panel_fullwidth {
+                float: left;
+                width: 96%;
+                min-height: 720px;
+                padding: 2%;
+
+                /*blog*/
+                .post {
+                    width: 96%;
+                    padding: 2%;
+                    margin-bottom: 1%;
+
+                    .byline {
+                        height: auto;
+                        span {
+                            font-size: 0.9em;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1em;
+                        text-indent: 1%;
+                        a {
+                            color: $color;
+                        }
+                    }
+
+                    figure.thumb {
+                        width: 30%;
+                        max-width: 30%;
+                        margin: 5% auto;
+                    }
+                    section.newsExcerpt {
+                        height: auto;
+                        a.download_button {
+                            width: 30%;
+                            margin: 0 auto;
+                        }
+
+
+                    }
+                    p {
+                        font-size: 0.9em;
+                    }
+                    ul figure {
+                        width: 90%;
+                    }
+
+                }
+                /*blog end*/
+            }
+
+            .sound_clash_audio {
+                margin: 1%;
+                width: 96%;
+                padding: 1%;
+
+                .audio-play {
+                    width: 85%;
+                    margin: 0 auto;
+                    display: block;
+
+                }
+
+                #audio_controls {
+                    height: 49px;
+                    width: 90%;
+                    margin: 2% auto;
+
+                    #play_toggle {
+                        width: 20%;
+                        line-height: 49px;
+                    }
+
+                    #progress {
+                        width: 59%;
+                        height: 24px;
+                        #play_progress {
+                            height: 24px;
+                        }
+                        #load_progress {
+                            background-color: $color8;
+                            height: 24px;
+                        }
+
+                    }
+
+                    #time {
+                        width: 20%;
+                        display: inline-block;
+                        float: right;
+                        #duration {
+                            background-color: $color4;
+                            color: $color;
+                            display: block;
+                        }
+                        #current_time {
+                            background-color: $color4;
+                            color: $color;
+                            display: block;
+                        }
+                    }
+
+                }
+
+                header.entry-header {
+                    display: block;
+                    height: auto;
+
+                    h1.entry-title {
+
+                        font-size: 1.25em;
+                        span {
+                            height: 50px;
+                            a {
+                                color: #000;
+                                &:hover {
+                                    color: $color;
+                                }
+                            }
+                        }
+
+                    }
+
+
+                    section.byline {
+                        height: 123px;
+                        display: block;
+                        span {
+                            height: 40px;
+                            line-height: 40px;
+
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 20%;
+                    margin: 5% auto;
+                }
+
+                footer.speaker-meta {
+                    display: block;
+                    height: 160px;
+                    ul.post-meta {
+                        display: block;
+                        height: 100%;
+
+                        li {
+                            list-style: none;
+                            line-height: 40px;
+                            height: 40px;
+
+                            span {
+                                width: 20%;
+                                text-indent: 1%;
+                                font-size: 0.95em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .sound_clash_video {
+                background-color: $color;
+                margin: 1%;
+                width: 96%;
+                padding: 1%;
+                .video-play {
+                    width: 45%;
+                }
+
+                header.entry-header {
+                    display: block;
+                    height: auto;
+
+                    h1.entry-title {
+                        font-size: 1.2em;
+                        span {
+                            color: $color;
+
+                            display: inline-block;
+                            a {
+                                color: $color4;
+                                display: inline;
+                            }
+                        }
+
+                    }
+                    .byline {
+                        height: auto;
+                        color: $color4;
+                        display: block;
+                        span {
+                            padding: 0;
+                            line-height: 35px;
+                            font-size: 0.85em;
+                            text-indent: 2%;
+                            a {
+                                color: $color4;
+                                display: inline;
+                            }
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 20%;
+                    margin: 5% auto;
+                }
+
+                footer.speaker-meta {
+                    background-color: $color;
+                    display: block;
+                    height: 160px;
+                    ul.post-meta {
+                        height: 100%;
+
+                        li {
+                            list-style: none;
+                            line-height: 40px;
+                            height: 40px;
+
+                            span {
+                                width: 20%;
+                                text-indent: 1%;
+                                font-size: 0.95em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        #clashvibes_content_front {
+            padding: 0;
+            width: 100%;
+            margin: auto;
+            #clashvibes_right_column_front {
+                //float: none;
+                min-height: 720px;
+                width: 100%;
+                h1 {
+                    
+                    font-size: 1.1em;
+                    letter-spacing: 0.05em;
+                }
+
+                #new_released_section {
+                    width: 100%;
+                    .new_released_box {
+                        width: 32%;
+                        min-height: 275px;
+                        h1 {
+                            font-size: 0.85em;
+                            line-height: 20px;
+                            width: auto;
+                        }
+
+                        a {
+                            font-size: 0.8em;
+                            text-align: center;
+                            letter-spacing: 0.05em;
+
+                            &:hover {
+                                font-weight: bold;
+                            }
+                        }
+
+                        figure.thumb {
+                            width: 60%;
+                            &:hover {
+                                cursor: pointer;
+                                width: 65%;
+                            }
+                            img {
+                                
+                                @include box-sizing($type: border-box);
+
+                            }
+
+                            figcaption {
+
+                                span.rantsection {
+                                    height: 30px;
+                                    width: 45%;
+                                    img.star {
+                                        width: 20%;
+                                    }
+                                }
+
+                                span.more_button {
+                                    height: 40px;
+
+                                   
+                                    a {
+                                        font-size: 0.8em;
+                                        letter-spacing: 0.05em;
+                                        &:hover {
+                                            color: $color4;
+                                            background-color: $color1;
+                                            letter-spacing: 0.055em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .clashvibes_right_panel_fullwidth {
+            width: 96%;
+            min-height: 720px;
+            padding: 2%;
+
+            #news_section {
+                float: left;
+                width: 100%;
+                margin: 0;
+
+                padding: 0;
+                h1 {
+                    width: 98%;
+                    letter-spacing: 0.05em;
+                }
+
+                p {
+                    font-size: 0.85em;
+                    width: 98%;
+                }
+
+                .news_box {
+                    float: left;
+                    margin: 1% 0;
+
+                    h2 {
+                        text-indent: 0.5em;
+                        line-height: 50px;
+                    }
+
+                    ul {
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            line-height: 40px;
+                            color: $color4;
+                            ul {
+                                padding: 1% 0;
+                                li.cat-item {
+                                    width: 90%;
+                                    margin: 1% auto;
+                                    &:hover {
+                                        background-color: $color2;
+                                    }
+                                }
+                            }
+
+                            a {
+                                font-size: 0.8em;
+                                line-height: 40px;
+                            }
+                        }
+                    }
+
+                    .archive-header {
+                        margin: 0 auto;
+                        .archive-meta {
+                            text-indent: 1%;
+                            height: 123px;
+                            span {
+                                font-size: 0.85em;
+                                letter-spacing: 0.05em;
+                                a {
+                                    display: inline-block;
+                                    width: auto;
+                                }
+                            }
+                        }
+                        h2 {
+                            width: 100%;
+                            font-size: 0.9em;
+                            
+
+                            a {
+                                
+                                height: 98%;
+                                font-size: 1.1em;
+                            }
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    section.newsExcerpt {
+                        height: auto;
+                        a.download_button {
+                            width: 30%;
+                            line-height: 30px;
+                            &:hover {
+                                color: $color3;
+                            }
+                        }
+                    }
+
+                    .thumb {
+                        width: 16%;
+
+                        img {
+                            margin: 0;
+                        }
+                    }
+
+                    .entry {
+                        .audio-play {
+                            width: 85%;
+
+                        }
+                        .video-play {
+                            width: 45%;
+                            height: 300px;
+                        }
+                        a.read_more {
+							font-size:0.9em;
+                            &:hover {
+                                color: $color4;
+                            }
+                        }
+                    }
+
+                    footer.postmetadata {
+                        height: 60px;
+                        width: 100%;
+                        a.comments-link {
+                            display: block;
+                            padding: 1%;
+                        }
+                    }
+                }
+            }
+
+            /*blog*/
+            .post {
+                width: 80%;
+                padding: 2%;
+                float: left;
+                .byline {
+                    height: 50px;
+                    ;
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
+                    a {
+                        font-size: 1.15em;
+                        display: inline-block;
+                    }
+                }
+
+                h3 {
+                    font-size: 1em;
+                    a {
+                        font-size: 1.1em;
+
+                    }
+                }
+                figure.thumb {
+                    width: 20%;
+                }
+                .newExcerpt {
+                    height: auto;
+                }
+                p {
+
+                    font-size: 0.9em;
+                }
+                ul figure {
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: 0;
+                }
+                .thumb {
+                    max-width: 30%;
+                    margin: 5% auto;
+                }
+            }
+            /*blog end*/
+        }
+
+        .clashvibes_right_panel_fullwidth_content {
+            float: left;
+            width: 620px;
+            padding: 0;
+            p {
+                text-align: justify;
+                width: 100%;
+            }
+        }
+
+        #topdownload_section_ctner{
+            padding:0.5em;
+            height:auto;
+            -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+
+            ul#topdownload_section {
+
+                width: 95.79%;
+                padding: 0.5em;
+                display: block;
+                margin: 0.25em;
+
+                h1 {
+                    font-size: 1em;
+                    clear: both;
+
+                }
+
+                li.topdownload_box {
+                    width: 100%;
+                    
+                    letter-spacing: 0.05em;
+                    span.image_thumb {
+                        width: 10%;
+                        a{
+                            background-color: $color2;
+                            img{
+                                @include box-sizing($type: border-box);
+                                vertical-align: unset;
+
+                            }
+                        }
+                    }
+                    span.title_singer {
+                        width: 75%;
+                        font-size: 0.75em;
+                        text-indent: 0.5em;
+                    }
+                    span {
+                        a {
+                            
+                            font-size: 0.8em;
+                            letter-spacing: 0.05em;
+                            
+                            &:hover {
+                                
+                                letter-spacing: 0.05em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*--- End of Right Column---*/
+        /*--- End of Content ---*/
+        /* ----- Footer ----- */
+        #clashvibes_footer {
+            padding: 10px 0;
+            height: 200px;
+            margin-bottom: 2%;
+
+            ul {
+                float: left;
+                width: 12%;
+
+                li {
+                    width: 100%;
+                    text-indent: 5%;
+                    a {
+                        font-size: 0.8em;
+
+                        &:hover {
+
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            ul#footer-content {
+                width: 82%;
+                height: 100%;
+                li {
+                    text-indent: 0;
+                    a {
+                        text-align: center;
+                    }
+
+                }
+            }
+
+            ul#social-media-box {
+                width: 5%;
+
+                li {
+                    width: 100%;
+                    height: 50px;
+                    a {
+                        width: 100%;
+                        height: 100%;
+
+
+                        span {
+                            display: block;
+                            i {
+                                font-size: 1.6em;
+                                line-height: 50px;
+                                &:hover {
+                                    color: $color10;
+                                    font-size: 1.7em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* ----- End of Footer ----- */
+    }
+   
+}
+
+
+//mobile
+@media only screen and (max-width: 480px) {
+       
+    button#toggle-nav{
+        position: fixed;
+        top: 4em;
+        left: 85.5%;
+        &:hover{
+            background-color:$color7;
+            color:$color4;
+        }
+        
+    }
+    
+    
+    button#side-bar-btn{
+        display: block;
+        position: fixed;
+        top: 4em;
+        left: 1%;
+        height: 50px;
+        width: 30%;
+        &:hover{
+            background-color:$color7;
+            color:$color4;
+        }
+        
+    }
+    
+    #container {
+        width: 98%;
+        h1 {
+            
+            width: 100%;
+            a {
+                font-size: 0.8em;
+                display: block;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        /********** header **********/
+        header {
+            height: 120px;
+
+            span#socialmediatop {
+                width: 40%;
+
+                a {
+                    display: inline-block;
+                    width: 23.5%;
+
+                    span {
+                        display: block;
+                        height: 100%;
+                        i {
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+
+        /********** navigation **********/
+        nav {
+            position:fixed;
+            z-index:3;
+            height: auto;
+            width: 250px;
+            left:-250px;
+                        
+
+            ul {
+
+                list-style: none;
+                li {
+                    margin-right: 0;
+                    width: 100%;
+                    a {
+                        font-size: 0.9em;
+                        
+                        
+                        &:hover {
+                            letter-spacing: 0.02em;
+
+                        }
+                    }
+                    .lastmenu {
+                        border-right: none;
+                    }
+
+                }
+            }
+        }
+
+        /********** front page **********/
+        #clashvibes_content_front {
+
+            #clashvibes_banner {
+                width: 99%;
+				
+                #slider {
+                    list-style: none;
+                    li {
+
+                        overflow: hidden;
+
+                    }
+                }
+               
+            }
+
+        }
+
+
+        #clashvibes_title {
+            float: left;
+            width:215px;
+            display: block;
+        }
+
+
+        /********** login form **********/
+        #clashvibes_login {
+            width: 96%;
+            form {
+                margin: 0;
+                padding: 0;
+                .form_row {
+                    
+                    text-align: left;
+                }
+
+                label {
+                    text-align: left;
+                    font-size: 1.4em;
+                }
+
+                input[type="text"] {
+                    width: 63%;
+                    line-height: 1.4em;
+                }
+                input[type="submit"] {
+                    width: 30%;
+                    height: 35px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+            /* ----- Form ----- */
+        }
+
+        /*--- Content ---*/
+        #clashvibes_content {
+            padding: 0;
+                        
+        }
+
+        /*--- Left Column---*/
+        #clashvibes_left_column {
+            width: 250px;
+            position: fixed;
+            left: -250px;
+            height: auto;
+            z-index: 100;
+            top:26em;
+            
+            h1 {
+                position: relative;
+                font-size: 0.9em;
+            }
+            a {
+                font-size: 0.75em;
+            }
+
+            .comment-author-link {
+                font-size: 0.75em;
+            }
+
+            .left_col_box {
+                margin: 0;
+                list-style: none;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style: none;
+                        a {
+                            position: relative;
+                            font-size: 0.75em;
+                            
+                        }
+                    }
+                }
+            } //side bar navigation blog and custom posts
+            .blog_box {
+
+                width: 96%;
+
+                p {
+                    margin-left: 5px;
+                }
+                h3 {
+                    a {
+                        font-size: 0.8em;
+                        letter-spacing: 0.05em;
+                    }
+                }
+                
+                nav.menu-video-nav-container,
+                nav.menu-audio-nav-container {
+                    position:unset;
+                    height: auto;
+                    display: block;
+                    ul,
+                    ul#menu-audio_nav,
+                    ul#menu-video_nav {
+                        margin: 0.5em 0;
+                        @include clearfix();
+                        li,
+                        li#menu-item {
+                            display: block;
+                            a {
+                                padding: 0;
+                                margin: 0 0 1% 0;
+                                &:hover {
+                                    color: $color4;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                .widget {
+                    width: 100%;
+                    display: block;
+                    h3 {
+                        font-size: 1.1em;
+
+                    }
+                    ul {
+                        margin: 0.5em 0;
+                        @include clearfix();
+                        li {
+                            margin-bottom: 0.2em;
+                            a {
+                                position: relative;
+                                margin: 0 0 1% 0;
+                                &:hover {
+                                    color: $color4;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+                span {
+                    color: $color11a;
+                }
+
+            }
+        }
+        /*--- End of Left Column---*/
+        /*--- Right Column---*/
+        #clashvibes_right_column {
+            margin: 0 0 1% 0;
+            width: 100%;
+            h1 {
+                font-size: 1.2em;
+                padding: 0.5em 0;
+                a {
+                    width: 71%;
+                    display: inline-block;
+
+                }
+                span {
+                    display: inline-block;
+                    width: 27%;
+
+                }
+            }
+
+            header.entry-header {
+                height: auto;
+                display: block;
+                section.byline {
+                    height: 123px;
+                    span {
+                        text-indent: 0.5em;
+                        font-size: 0.85em;
+                    }
+                }
+
+            }
+
+            figure.thumb {
+                width: 20%;
+                margin: 5% auto;
+                img {
+                    margin: 0;
+                }
+            }
+
+            footer.speaker-meta {
+                background-color: $color;
+
+                height: 160px;
+                ul.post-meta {
+                    display: block;
+
+                    height: 100%;
+
+                    li {
+                        list-style: none;
+
+                        span {
+                            width: 20%;
+                        }
+
+                    }
+
+                }
+
+            } //end of global post
+            //audio/video player
+            .audio-play {
+                width: 85%;
+                margin: 0 auto;
+                display: block;
+
+            }
+
+            #audio_controls {
+                height: 55px;
+                
+
+                #play_toggle {
+                    width: 20%;
+                    line-height: 55px;
+                    font-size:1em;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                #progress {
+                    width: 60%;
+                    display: inline-block;
+                    height: 27.5px;
+
+                    #play_progress {
+                        height: 27.5px;
+                    }
+                    #load_progress {
+                        height: 27.5px;
+                    }
+
+                }
+
+                #time {
+                    width: 20%;
+                    #duration {
+                        font-size: 0.75em;
+                        height: 27.5px;
+                        line-height: 27.5px;
+                    }
+                    #current_time {
+                        font-size: 0.75em;
+                        height: 27.5px;
+                        line-height: 27.5px;
+                    }
+                }
+
+            }
+
+            .video-play {
+                margin: 0 auto;
+                iframe {
+                    margin: auto;
+                    display: block;
+
+                }
+            } //custom posts and regular post
+            article.clash_videos,
+            article.clash_audio,
+            article.post {
+                display: block;
+
+                header.entry-header {
+                    height: auto;
+                    display: block;
+                    h1 {
+                        font-size: 1.1em;
+                        
+                        a {
+                            width: auto;
+                            font-size: 0.9em;
+
+                        }
+                        span {
+                            width: auto;
+                            font-size: 0.95em;
+                            
+
+
+                        }
+                    }
+
+                    section.byline {
+                        height: 123px;
+                        display: block;
+                        span {
+                            font-size:0.8em;
+
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 40%;
+                    margin: 3% auto;
+                    img {
+                        margin: 0;
+                        display: block;
+                    }
+                }
+
+                section.newsExcerpt {
+                    display: block;
+                    width: 90%;
+                    margin:auto;
+                    div#jp_container_1 {
+                        display: block;
+                        width: 100%;
+
+                        .jp-type-single {
+                            width: 100%;
+                            .jp-gui {
+                                height: auto;
+                                display: block;
+                                .jp-volume-controls {
+                                    height: 50px;
+                                    margin-bottom: 0.2em;
+                                    .jp-mute {
+                                        width: 49%;
+                                        line-height: 35px;
+                                        margin-right: 0.1em;
+
+                                    }
+                                    .jp-volume-max {
+                                        width: 49%;
+                                        line-height: 35px;
+                                        margin-right: 0.1em;
+
+                                    }
+                                }
+
+                                .jp-controls-holder {
+                                    height: auto;
+                                    width: 100%;
+                                    margin: 0;
+                                    .jp-controls {
+                                        width: 25%;
+                                        margin-bottom: 0.5em;
+
+                                        .jp-play {
+                                            width: 49%;
+                                            line-height: 35px;
+                                            margin-right: 0.1em;
+
+                                        }
+                                        .jp-stop {
+                                            width: 49%;
+                                            text-align: center;
+                                            line-height: 35px;
+                                        }
+
+                                    }
+
+                                    .jp-progress {
+                                        width: 52%;
+                                        margin-right: 0.2em;
+                                        .jp-seek-bar {
+                                            display: inline-block;
+                                            height: 22px;
+                                            .jp-play-bar {
+                                                height: 22px;
+
+                                            }
+
+                                        }
+                                    }
+
+                                    .jp-current-time {
+                                        width: 10%;
+
+                                    }
+                                    .jp-duration {
+                                        width: 10%;
+                                     }
+
+                                    .jp-toggles {
+                                        clear: both;
+                                        margin-top: 0.2em;
+                                        .jp-repeat {
+                                            width: 49%;
+                                            line-height: 35px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                footer.speaker-meta {
+                    height: 160px;
+
+                    ul.post-meta {
+                        letter-spacing: 0.05em;
+
+                        li {
+                            line-height: 39px;
+                            height: 40px;
+                            font-size: 0.8em;
+
+                            span {
+                                width: 30%;
+                                text-indent: 0.5%;
+                                font-size: 0.9em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .clashvibes_right_panel_fullwidth {
+                float: left;
+                width: 96%;
+                min-height: 720px;
+                padding: 2%;
+
+                /*blog*/
+                .post {
+                    width: 96%;
+                    padding: 2%;
+                    margin-bottom: 1%;
+
+                    .byline {
+                        height: auto;
+                        span {
+                            font-size: 0.9em;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1em;
+                        text-indent: 1%;
+                        a {
+                            color: $color;
+                        }
+                    }
+
+                    figure.thumb {
+                        width: 30%;
+                        max-width: 30%;
+                        margin: 5% auto;
+                    }
+                    section.newsExcerpt {
+                        height: auto;
+                        a.download_button {
+                            width: 30%;
+                            margin: 0 auto;
+                        }
+
+
+                    }
+                    p {
+                        font-size: 0.9em;
+                    }
+                    ul figure {
+                        width: 90%;
+                    }
+
+                }
+                /*blog end*/
+            }
+
+            .sound_clash_audio {
+                margin: 1%;
+                width: 96%;
+                padding: 1%;
+
+                .audio-play {
+                    width: 85%;
+                    margin: 0 auto;
+                    display: block;
+
+                }
+
+                #audio_controls {
+                    height: 49px;
+                    width: 90%;
+                    margin: 2% auto;
+
+                    #play_toggle {
+                        width: 20%;
+                        line-height: 49px;
+                    }
+
+                    #progress {
+                        width: 59%;
+                        height: 24px;
+                        #play_progress {
+                            height: 24px;
+                        }
+                        #load_progress {
+                            background-color: $color8;
+                            height: 24px;
+                        }
+
+                    }
+
+                    #time {
+                        width: 20%;
+                        display: inline-block;
+                        float: right;
+                        #duration {
+                            background-color: $color4;
+                            color: $color;
+                            display: block;
+                        }
+                        #current_time {
+                            background-color: $color4;
+                            color: $color;
+                            display: block;
+                        }
+                    }
+
+                }
+
+                header.entry-header {
+                    display: block;
+                    height: auto;
+
+                    h1.entry-title {
+
+                        font-size: 1.25em;
+                        span {
+                            height: 50px;
+                            a {
+                                color: #000;
+                                &:hover {
+                                    color: $color;
+                                }
+                            }
+                        }
+
+                    }
+
+
+                    section.byline {
+                        height: 123px;
+                        display: block;
+                        span {
+                            height: 40px;
+                            line-height: 40px;
+
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 20%;
+                    margin: 5% auto;
+                }
+
+                footer.speaker-meta {
+                    display: block;
+                    height: 160px;
+                    ul.post-meta {
+                        display: block;
+                        height: 100%;
+
+                        li {
+                            list-style: none;
+                            line-height: 40px;
+                            height: 40px;
+
+                            span {
+                                width: 20%;
+                                text-indent: 1%;
+                                font-size: 0.95em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .sound_clash_video {
+                background-color: $color;
+                margin: 1%;
+                width: 96%;
+                padding: 1%;
+                .video-play {
+                    width: 45%;
+                }
+
+                header.entry-header {
+                    display: block;
+                    height: auto;
+
+                    h1.entry-title {
+                        font-size: 1.2em;
+                        span {
+                            color: $color;
+
+                            display: inline-block;
+                            a {
+                                color: $color4;
+                                display: inline;
+                            }
+                        }
+
+                    }
+                    .byline {
+                        height: auto;
+                        color: $color4;
+                        display: block;
+                        span {
+                            padding: 0;
+                            line-height: 35px;
+                            font-size: 0.85em;
+                            text-indent: 2%;
+                            a {
+                                color: $color4;
+                                display: inline;
+                            }
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 20%;
+                    margin: 5% auto;
+                }
+
+                footer.speaker-meta {
+                    background-color: $color;
+                    display: block;
+                    height: 160px;
+                    ul.post-meta {
+                        height: 100%;
+
+                        li {
+                            list-style: none;
+                            line-height: 40px;
+                            height: 40px;
+
+                            span {
+                                width: 20%;
+                                text-indent: 1%;
+                                font-size: 0.95em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        #clashvibes_content_front {
+            padding: 0;
+            width: 100%;
+            margin: auto;
+            #clashvibes_right_column_front {
+                //float: none;
+                min-height: 720px;
+                width: 100%;
+                h1 {
+                    
+                    font-size: 1em;
+                    letter-spacing: 0.05em;
+                }
+
+                #new_released_section {
+                    width: 100%;
+                    .new_released_box {
+                        width: 49%;
+                        min-height: 290px;
+                        h1 {
+                            font-size: 0.85em;
+                            line-height: 20px;
+                            width: auto;
+                        }
+
+                        a {
+                            font-size: 0.75em;
+                            text-align: center;
+                            letter-spacing: 0.05em;
+
+                            &:hover {
+                                font-weight: bold;
+                            }
+                        }
+
+                        figure.thumb {
+                            width: 50%;
+                            &:hover {
+                                cursor: pointer;
+                                width: 55%;
+                            }
+                            img {
+                                
+                                @include box-sizing($type: border-box);
+
+                            }
+
+                            figcaption {
+
+                                span.rantsection {
+                                    height: 30px;
+                                    width: 45%;
+                                    img.star {
+                                        width: 20%;
+                                    }
+                                }
+
+                                span.more_button {
+                                    height: 40px;
+
+                                   
+                                    a {
+                                        font-size: 0.8em;
+                                        letter-spacing: 0.05em;
+                                        &:hover {
+                                            color: $color4;
+                                            background-color: $color1;
+                                            letter-spacing: 0.055em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .clashvibes_right_panel_fullwidth {
+            width: 96%;
+            min-height: 720px;
+            padding: 2%;
+
+            #news_section {
+                float: left;
+                width: 100%;
+                margin: 0;
+
+                padding: 0;
+                h1 {
+                    width: 98%;
+                    letter-spacing: 0.05em;
+                }
+
+                p {
+                    font-size: 0.85em;
+                    width: 98%;
+                }
+
+                .news_box {
+                    float: left;
+                    margin: 1% 0;
+
+                    h2 {
+                        text-indent: 0.5em;
+                        line-height: 50px;
+                    }
+
+                    ul {
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            line-height: 40px;
+                            color: $color4;
+                            ul {
+                                padding: 1% 0;
+                                li.cat-item {
+                                    width: 90%;
+                                    margin: 1% auto;
+                                    &:hover {
+                                        background-color: $color2;
+                                    }
+                                }
+                            }
+
+                            a {
+                                font-size: 0.8em;
+                                line-height: 40px;
+                            }
+                        }
+                    }
+
+                    .archive-header {
+                        margin: 0 auto;
+                        .archive-meta {
+                            text-indent: 1%;
+                            height: 123px;
+                            span {
+                                font-size: 0.85em;
+                                letter-spacing: 0.05em;
+                                a {
+                                    display: inline-block;
+                                    width: auto;
+                                }
+                            }
+                        }
+                        h2 {
+                            width: 100%;
+                            font-size: 0.9em;
+                            
+
+                            a {
+                                
+                                height: 98%;
+                                font-size: 1.1em;
+                            }
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    section.newsExcerpt {
+                        height: auto;
+                        a.download_button {
+                            width: 30%;
+                            line-height: 30px;
+                            &:hover {
+                                color: $color3;
+                            }
+                        }
+                    }
+
+                    .thumb {
+                        width: 16%;
+
+                        img {
+                            margin: 0;
+                        }
+                    }
+
+                    .entry {
+                        .audio-play {
+                            width: 85%;
+
+                        }
+                        .video-play {
+                            width: 45%;
+                            height: 300px;
+                        }
+                        a.read_more {
+							font-size:0.9em;
+                            &:hover {
+                                color: $color4;
+                            }
+                        }
+                    }
+
+                    footer.postmetadata {
+                        height: 60px;
+                        width: 100%;
+                        a.comments-link {
+                            display: block;
+                            padding: 1%;
+                        }
+                    }
+                }
+            }
+
+            /*blog*/
+            .post {
+                width: 80%;
+                padding: 2%;
+                float: left;
+                .byline {
+                    height: 50px;
+                    ;
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
+                    a {
+                        font-size: 1.15em;
+                        display: inline-block;
+                    }
+                }
+
+                h3 {
+                    font-size: 1em;
+                    a {
+                        font-size: 1.1em;
+
+                    }
+                }
+                figure.thumb {
+                    width: 20%;
+                }
+                .newExcerpt {
+                    height: auto;
+                }
+                p {
+
+                    font-size: 0.9em;
+                }
+                ul figure {
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: 0;
+                }
+                .thumb {
+                    max-width: 30%;
+                    margin: 5% auto;
+                }
+            }
+            /*blog end*/
+        }
+
+        .clashvibes_right_panel_fullwidth_content {
+            float: left;
+            width: 620px;
+            padding: 0;
+            p {
+                text-align: justify;
+                width: 100%;
+            }
+        }
+
+        #topdownload_section_ctner{
+            padding:0.5em;
+            height:auto;
+            
+
+            ul#topdownload_section {
+
+                width: 95.79%;
+                padding: 0.5em;
+                display: block;
+                margin: 0.25em;
+
+                h1 {
+                    font-size: 1em;
+                    clear: both;
+
+                }
+
+                li.topdownload_box {
+                    width: 100%;
+                    
+                    letter-spacing: 0.05em;
+                    span.image_thumb {
+                        width: 10%;
+                        a{
+                            background-color: $color2;
+                            img{
+                                @include box-sizing($type: border-box);
+                                vertical-align: unset;
+
+                            }
+                        }
+                    }
+                    span.title_singer {
+                        width: 75%;
+                        font-size: 0.7em;
+                        text-indent: 0.5em;
+                    }
+                    span {
+                        a {
+                            
+                            font-size: 0.8em;
+                            letter-spacing: 0.05em;
+                            
+                            &:hover {
+                                
+                                letter-spacing: 0.05em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*--- End of Right Column---*/
+        /*--- End of Content ---*/
+        /* ----- Footer ----- */
+        #clashvibes_footer {
+            padding: 10px 0;
+            height: 200px;
+            margin-bottom: 2%;
+
+            ul {
+                float: left;
+                width: 12%;
+
+                li {
+                    width: 100%;
+                    text-indent: 5%;
+                    a {
+                        font-size: 0.8em;
+
+                        &:hover {
+
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            ul#footer-content {
+                width: 82%;
+                height: 100%;
+                li {
+                    text-indent: 0;
+                    a {
+                        text-align: center;
+                    }
+
+                }
+            }
+
+            ul#social-media-box {
+                width: 5%;
+
+                li {
+                    width: 100%;
+                    height: 50px;
+                    a {
+                        width: 100%;
+                        height: 100%;
+
+
+                        span {
+                            display: block;
+                            i {
+                                font-size: 1.6em;
+                                line-height: 50px;
+                                &:hover {
+                                    color: $color10;
+                                    font-size: 1.7em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* ----- End of Footer ----- */
+    }
+   
+}
+
+@media only screen and (max-width: 360px) {
+       
+    button#toggle-nav{
+        position: fixed;
+        top: 4em;
+        left: 81.5%;
+        &:hover{
+            background-color:$color7;
+            color:$color4;
+        }
+        
+    }
+    
+    
+    button#side-bar-btn{
+        display: block;
+        position: fixed;
+        top: 4em;
+        left: 1%;
+        height: 50px;
+        width: 30%;
+        &:hover{
+            background-color:$color7;
+            color:$color4;
+        }
+        
+    }
+    
+    #container {
+        width: 98%;
+        h1 {
+            
+            width: 100%;
+            a {
+                font-size: 0.8em;
+                display: block;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        /********** header **********/
+        header {
+            height: 115px;
+
+            span#socialmediatop {
+                width: 40%;
+
+                a {
+                    display: inline-block;
+                    width: 23%;
+
+                    span {
+                        display: block;
+                        height: 100%;
+                        i {
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+            }
+        }
+
+        /********** navigation **********/
+        nav {
+            position:fixed;
+            z-index:3;
+            height: auto;
+            width: 250px;
+            left:-250px;
+                        
+
+            ul {
+
+                list-style: none;
+                li {
+                    margin-right: 0;
+                    width: 100%;
+                    a {
+                        font-size: 0.9em;
+                        
+                        
+                        &:hover {
+                            letter-spacing: 0.02em;
+
+                        }
+                    }
+                    .lastmenu {
+                        border-right: none;
+                    }
+
+                }
+            }
+        }
+
+        /********** front page **********/
+        #clashvibes_content_front {
+
+            #clashvibes_banner {
+                width: 99%;
+				
+                #slider {
+                    list-style: none;
+                    li {
+
+                        overflow: hidden;
+
+                    }
+                }
+               
+            }
+
+        }
+
+
+        #clashvibes_title {
+            float: left;
+            width:190px;
+            display: block;
+        }
+
+
+        /********** login form **********/
+        #clashvibes_login {
+            width: 96%;
+            form {
+                margin: 0;
+                padding: 0;
+                .form_row {
+                    
+                    text-align: left;
+                }
+
+                label {
+                    text-align: left;
+                    font-size: 1.4em;
+                }
+
+                input[type="text"] {
+                    width: 63%;
+                    line-height: 1.4em;
+                }
+                input[type="submit"] {
+                    width: 30%;
+                    height: 35px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+            /* ----- Form ----- */
+        }
+
+        /*--- Content ---*/
+        #clashvibes_content {
+            padding: 0;
+                        
+        }
+
+        /*--- Left Column---*/
+        #clashvibes_left_column {
+            width: 250px;
+            position: fixed;
+            left: -250px;
+            height: auto;
+            z-index: 100;
+            top:26em;
+            
+            h1 {
+                position: relative;
+                font-size: 0.9em;
+            }
+            a {
+                font-size: 0.75em;
+            }
+
+            .comment-author-link {
+                font-size: 0.75em;
+            }
+
+            .left_col_box {
+                margin: 0;
+                list-style: none;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style: none;
+                        a {
+                            position: relative;
+                            font-size: 0.75em;
+                            
+                        }
+                    }
+                }
+            } //side bar navigation blog and custom posts
+            .blog_box {
+
+                width: 96%;
+
+                p {
+                    margin-left: 5px;
+                }
+                h3 {
+                    a {
+                        font-size: 0.8em;
+                        letter-spacing: 0.05em;
+                    }
+                }
+                
+                nav.menu-video-nav-container,
+                nav.menu-audio-nav-container {
+                    position:unset;
+                    height: auto;
+                    display: block;
+                    ul,
+                    ul#menu-audio_nav,
+                    ul#menu-video_nav {
+                        margin: 0.5em 0;
+                        @include clearfix();
+                        li,
+                        li#menu-item {
+                            display: block;
+                            a {
+                                padding: 0;
+                                margin: 0 0 1% 0;
+                                &:hover {
+                                    color: $color4;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                .widget {
+                    width: 100%;
+                    display: block;
+                    h3 {
+                        font-size: 1.1em;
+
+                    }
+                    ul {
+                        margin: 0.5em 0;
+                        @include clearfix();
+                        li {
+                            margin-bottom: 0.2em;
+                            a {
+                                position: relative;
+                                margin: 0 0 1% 0;
+                                &:hover {
+                                    color: $color4;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+                span {
+                    color: $color11a;
+                }
+
+            }
+        }
+        /*--- End of Left Column---*/
+        /*--- Right Column---*/
+        #clashvibes_right_column {
+            margin: 0 0 1% 0;
+            width: 100%;
+            h1 {
+                font-size: 1.2em;
+                padding: 0.5em 0;
+                a {
+                    width: 71%;
+                    display: inline-block;
+
+                }
+                span {
+                    display: inline-block;
+                    width: 27%;
+
+                }
+            }
+
+            header.entry-header {
+                height: auto;
+                display: block;
+                section.byline {
+                    height: 123px;
+                    span {
+                        text-indent: 0.5em;
+                        font-size: 0.85em;
+                    }
+                }
+
+            }
+
+            figure.thumb {
+                width: 20%;
+                margin: 5% auto;
+                img {
+                    margin: 0;
+                }
+            }
+
+            footer.speaker-meta {
+                background-color: $color;
+
+                height: 160px;
+                ul.post-meta {
+                    display: block;
+
+                    height: 100%;
+
+                    li {
+                        list-style: none;
+
+                        span {
+                            width: 20%;
+                        }
+
+                    }
+
+                }
+
+            } //end of global post
+            //audio/video player
+            .audio-play {
+                width: 85%;
+                margin: 0 auto;
+                display: block;
+
+            }
+
+            #audio_controls {
+                height: 55px;
+                
+
+                #play_toggle {
+                    width: 20%;
+                    line-height: 55px;
+                    font-size:1em;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                #progress {
+                    width: 60%;
+                    display: inline-block;
+                    height: 27.5px;
+
+                    #play_progress {
+                        height: 27.5px;
+                    }
+                    #load_progress {
+                        height: 27.5px;
+                    }
+
+                }
+
+                #time {
+                    width: 20%;
+                    #duration {
+                        font-size: 0.75em;
+                        height: 27.5px;
+                        line-height: 27.5px;
+                    }
+                    #current_time {
+                        font-size: 0.75em;
+                        height: 27.5px;
+                        line-height: 27.5px;
+                    }
+                }
+
+            }
+
+            .video-play {
+                margin: 0 auto;
+                iframe {
+                    margin: auto;
+                    display: block;
+
+                }
+            } //custom posts and regular post
+            article.clash_videos,
+            article.clash_audio,
+            article.post {
+                display: block;
+
+                header.entry-header {
+                    height: auto;
+                    display: block;
+                    h1 {
+                        font-size: 1em;
+                        
+                        a {
+                            width: auto;
+                            font-size: 0.9em;
+
+                        }
+                        span {
+                            width: auto;
+                            font-size: 0.95em;
+                            
+
+
+                        }
+                    }
+
+                    section.byline {
+                        height: 123px;
+                        display: block;
+                        span {
+                            font-size:0.75em;
+
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 40%;
+                    margin: 3% auto;
+                    img {
+                        margin: 0;
+                        display: block;
+                    }
+                }
+
+                section.newsExcerpt {
+                    display: block;
+                    width: 90%;
+                    margin:auto;
+                    div#jp_container_1 {
+                        display: block;
+                        width: 100%;
+
+                        .jp-type-single {
+                            width: 100%;
+                            .jp-gui {
+                                height: auto;
+                                display: block;
+                                .jp-volume-controls {
+                                    height: 50px;
+                                    margin-bottom: 0.2em;
+                                    .jp-mute {
+                                        width: 49%;
+                                        line-height: 35px;
+                                        margin-right: 0.1em;
+
+                                    }
+                                    .jp-volume-max {
+                                        width: 49%;
+                                        line-height: 35px;
+                                        margin-right: 0.1em;
+
+                                    }
+                                }
+
+                                .jp-controls-holder {
+                                    height: auto;
+                                    width: 100%;
+                                    margin: 0;
+                                    .jp-controls {
+                                        width: 25%;
+                                        margin-bottom: 0.5em;
+
+                                        .jp-play {
+                                            width: 49%;
+                                            line-height: 35px;
+                                            margin-right: 0.1em;
+
+                                        }
+                                        .jp-stop {
+                                            width: 49%;
+                                            text-align: center;
+                                            line-height: 35px;
+                                        }
+
+                                    }
+
+                                    .jp-progress {
+                                        width: 52%;
+                                        margin-right: 0.2em;
+                                        .jp-seek-bar {
+                                            display: inline-block;
+                                            height: 22px;
+                                            .jp-play-bar {
+                                                height: 22px;
+
+                                            }
+
+                                        }
+                                    }
+
+                                    .jp-current-time {
+                                        width: 10%;
+
+                                    }
+                                    .jp-duration {
+                                        width: 10%;
+                                     }
+
+                                    .jp-toggles {
+                                        clear: both;
+                                        margin-top: 0.2em;
+                                        .jp-repeat {
+                                            width: 49%;
+                                            line-height: 35px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                footer.speaker-meta {
+                    height: 160px;
+
+                    ul.post-meta {
+                        letter-spacing: 0.05em;
+
+                        li {
+                            line-height: 39px;
+                            height: 40px;
+                            font-size: 0.8em;
+
+                            span {
+                                width: 30%;
+                                text-indent: 0.5%;
+                                font-size: 0.9em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .clashvibes_right_panel_fullwidth {
+                float: left;
+                width: 96%;
+                min-height: 720px;
+                padding: 2%;
+
+                /*blog*/
+                .post {
+                    width: 96%;
+                    padding: 2%;
+                    margin-bottom: 1%;
+
+                    .byline {
+                        height: auto;
+                        span {
+                            font-size: 0.9em;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1em;
+                        text-indent: 1%;
+                        a {
+                            color: $color;
+                        }
+                    }
+
+                    figure.thumb {
+                        width: 30%;
+                        max-width: 30%;
+                        margin: 5% auto;
+                    }
+                    section.newsExcerpt {
+                        height: auto;
+                        a.download_button {
+                            width: 30%;
+                            margin: 0 auto;
+                        }
+
+
+                    }
+                    p {
+                        font-size: 0.9em;
+                    }
+                    ul figure {
+                        width: 90%;
+                    }
+
+                }
+                /*blog end*/
+            }
+
+            .sound_clash_audio {
+                margin: 1%;
+                width: 96%;
+                padding: 1%;
+
+                .audio-play {
+                    width: 85%;
+                    margin: 0 auto;
+                    display: block;
+
+                }
+
+                #audio_controls {
+                    height: 49px;
+                    width: 90%;
+                    margin: 2% auto;
+
+                    #play_toggle {
+                        width: 20%;
+                        line-height: 49px;
+                    }
+
+                    #progress {
+                        width: 59%;
+                        height: 24px;
+                        #play_progress {
+                            height: 24px;
+                        }
+                        #load_progress {
+                            background-color: $color8;
+                            height: 24px;
+                        }
+
+                    }
+
+                    #time {
+                        width: 20%;
+                        display: inline-block;
+                        float: right;
+                        #duration {
+                            background-color: $color4;
+                            color: $color;
+                            display: block;
+                        }
+                        #current_time {
+                            background-color: $color4;
+                            color: $color;
+                            display: block;
+                        }
+                    }
+
+                }
+
+                header.entry-header {
+                    display: block;
+                    height: auto;
+
+                    h1.entry-title {
+
+                        font-size: 1.25em;
+                        span {
+                            height: 50px;
+                            a {
+                                color: #000;
+                                &:hover {
+                                    color: $color;
+                                }
+                            }
+                        }
+
+                    }
+
+
+                    section.byline {
+                        height: 123px;
+                        display: block;
+                        span {
+                            height: 40px;
+                            line-height: 40px;
+
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 20%;
+                    margin: 5% auto;
+                }
+
+                footer.speaker-meta {
+                    display: block;
+                    height: 160px;
+                    ul.post-meta {
+                        display: block;
+                        height: 100%;
+
+                        li {
+                            list-style: none;
+                            line-height: 40px;
+                            height: 40px;
+
+                            span {
+                                width: 20%;
+                                text-indent: 1%;
+                                font-size: 0.95em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .sound_clash_video {
+                background-color: $color;
+                margin: 1%;
+                width: 96%;
+                padding: 1%;
+                .video-play {
+                    width: 45%;
+                }
+
+                header.entry-header {
+                    display: block;
+                    height: auto;
+
+                    h1.entry-title {
+                        font-size: 1.2em;
+                        span {
+                            color: $color;
+
+                            display: inline-block;
+                            a {
+                                color: $color4;
+                                display: inline;
+                            }
+                        }
+
+                    }
+                    .byline {
+                        height: auto;
+                        color: $color4;
+                        display: block;
+                        span {
+                            padding: 0;
+                            line-height: 35px;
+                            font-size: 0.85em;
+                            text-indent: 2%;
+                            a {
+                                color: $color4;
+                                display: inline;
+                            }
+
+                        }
+                    }
+
+                }
+
+                figure.thumb {
+                    width: 20%;
+                    margin: 5% auto;
+                }
+
+                footer.speaker-meta {
+                    background-color: $color;
+                    display: block;
+                    height: 160px;
+                    ul.post-meta {
+                        height: 100%;
+
+                        li {
+                            list-style: none;
+                            line-height: 40px;
+                            height: 40px;
+
+                            span {
+                                width: 20%;
+                                text-indent: 1%;
+                                font-size: 0.95em;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        #clashvibes_content_front {
+            padding: 0;
+            width: 100%;
+            margin: auto;
+            #clashvibes_right_column_front {
+                //float: none;
+                min-height: 720px;
+                width: 100%;
+                h1 {
+                    
+                    font-size: 1em;
+                    letter-spacing: 0.05em;
+                }
+
+                #new_released_section {
+                    width: 100%;
+                    -webkit-flex-flow: column wrap;
+                    -ms-flex-flow: column wrap;
+                    flex-flow: column wrap;
+                    -webkit-align-items: center;
+                    -ms-flex-align: center;
+                    align-items:center;
+
+                    .new_released_box {
+                        width: 85%;
+                        min-height: 290px;
+                        margin: 4.5%;
+                        h1 {
+                            font-size: 0.8em;
+                            line-height: 20px;
+                            width: auto;
+                        }
+
+                        a {
+                            font-size: 0.75em;
+                            text-align: center;
+                            letter-spacing: 0.05em;
+
+                            &:hover {
+                                font-weight: bold;
+                            }
+                        }
+
+                        figure.thumb {
+                            width: 45%;
+                            &:hover {
+                                cursor: pointer;
+                                width: 50%;
+                            }
+                            img {
+                                
+                                @include box-sizing($type: border-box);
+
+                            }
+
+                            figcaption {
+
+                                span.rantsection {
+                                    height: 30px;
+                                    width: 45%;
+                                    img.star {
+                                        width: 20%;
+                                    }
+                                }
+
+                                span.more_button {
+                                    height: 40px;
+
+                                   
+                                    a {
+                                        font-size: 0.8em;
+                                        letter-spacing: 0.05em;
+                                        &:hover {
+                                            color: $color4;
+                                            background-color: $color1;
+                                            letter-spacing: 0.055em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .clashvibes_right_panel_fullwidth {
+            width: 96%;
+            min-height: 720px;
+            padding: 2%;
+
+            #news_section {
+                float: left;
+                width: 100%;
+                margin: 0;
+
+                padding: 0;
+                h1 {
+                    width: 98%;
+                    letter-spacing: 0.05em;
+                }
+
+                p {
+                    font-size: 0.85em;
+                    width: 98%;
+                }
+
+                .news_box {
+                    float: left;
+                    margin: 1% 0;
+
+                    h2 {
+                        text-indent: 0.5em;
+                        line-height: 50px;
+                    }
+
+                    ul {
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            line-height: 40px;
+                            color: $color4;
+                            ul {
+                                padding: 1% 0;
+                                li.cat-item {
+                                    width: 90%;
+                                    margin: 1% auto;
+                                    &:hover {
+                                        background-color: $color2;
+                                    }
+                                }
+                            }
+
+                            a {
+                                font-size: 0.8em;
+                                line-height: 40px;
+                            }
+                        }
+                    }
+
+                    .archive-header {
+                        margin: 0 auto;
+                        .archive-meta {
+                            text-indent: 1%;
+                            height: 123px;
+                            span {
+                                font-size: 0.85em;
+                                letter-spacing: 0.05em;
+                                a {
+                                    display: inline-block;
+                                    width: auto;
+                                }
+                            }
+                        }
+                        h2 {
+                            width: 100%;
+                            font-size: 0.9em;
+                            
+
+                            a {
+                                
+                                height: 98%;
+                                font-size: 1.1em;
+                            }
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    section.newsExcerpt {
+                        height: auto;
+                        a.download_button {
+                            width: 30%;
+                            line-height: 30px;
+                            &:hover {
+                                color: $color3;
+                            }
+                        }
+                    }
+
+                    .thumb {
+                        width: 16%;
+
+                        img {
+                            margin: 0;
+                        }
+                    }
+
+                    .entry {
+                        .audio-play {
+                            width: 85%;
+
+                        }
+                        .video-play {
+                            width: 45%;
+                            height: 300px;
+                        }
+                        a.read_more {
+							font-size:0.9em;
+                            &:hover {
+                                color: $color4;
+                            }
+                        }
+                    }
+
+                    footer.postmetadata {
+                        height: 60px;
+                        width: 100%;
+                        a.comments-link {
+                            display: block;
+                            padding: 1%;
+                        }
+                    }
+                }
+            }
+
+            /*blog*/
+            .post {
+                width: 80%;
+                padding: 2%;
+                float: left;
+                .byline {
+                    height: 50px;
+                    ;
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
+                    a {
+                        font-size: 1.15em;
+                        display: inline-block;
+                    }
+                }
+
+                h3 {
+                    font-size: 1em;
+                    a {
+                        font-size: 1.1em;
+
+                    }
+                }
+                figure.thumb {
+                    width: 20%;
+                }
+                .newExcerpt {
+                    height: auto;
+                }
+                p {
+
+                    font-size: 0.9em;
+                }
+                ul figure {
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: 0;
+                }
+                .thumb {
+                    max-width: 30%;
+                    margin: 5% auto;
+                }
+            }
+            /*blog end*/
+        }
+
+        .clashvibes_right_panel_fullwidth_content {
+            float: left;
+            width: 620px;
+            padding: 0;
+            p {
+                text-align: justify;
+                width: 100%;
+            }
+        }
+
+        #topdownload_section_ctner{
+            padding:0.5em;
+            height:auto;
+            
+
+            ul#topdownload_section {
+
+                width: 95.79%;
+                padding: 0.5em;
+                display: block;
+                margin: 0.25em;
+
+                h1 {
+                    font-size: 0.9em;
+                    clear: both;
+
+                }
+
+                li.topdownload_box {
+                    width: 100%;
+                    
+                    letter-spacing: 0.05em;
+                    span.image_thumb {
+                        width: 12%;
+                        a{
+                            background-color: $color2;
+                            img{
+                                @include box-sizing($type: border-box);
+                                vertical-align: unset;
+
+                            }
+                        }
+                    }
+                    span.title_singer {
+                        width: 73%;
+                        font-size: 0.6em;
+                        text-indent: 0.5em;
+                    }
+                    span {
+                        a {
+                            
+                            font-size: 0.7em;
+                            letter-spacing: 0.05em;
+                            
+                            &:hover {
+                                
+                                letter-spacing: 0.05em;
                             }
                         }
                     }

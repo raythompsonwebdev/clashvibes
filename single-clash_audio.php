@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 
-<?php get_sidebar('audio'); ?>
-
 <div id="clashvibes_content">
-
+<?php get_sidebar('audio'); ?>
     <section id="clashvibes_right_column">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -27,12 +25,12 @@
 
                                     <figure class="thumb"><?php the_post_thumbnail('featured-image'); ?></figure> 
 
-                                    <section class="newsExcerpt">
+                                    <div class="newsExcerpt">
                                        
                             
                               <?php get_template_part('Templates/content' , 'audio'); ?>
 
-                                    </section>
+                                    </div>
 
                                     <br/>
 

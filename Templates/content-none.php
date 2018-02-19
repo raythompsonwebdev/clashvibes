@@ -9,10 +9,10 @@
 
 ?>
 
-<article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
+<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 <section class="<?php if ( is_404() ) { echo 'error-404'; } else { echo 'no-results'; } ?> not-found">
-	<header class="byline">
+	<header class="entry-header">
 		<h1 class="page-title">
 			<?php 
 			if ( is_404() ) { esc_html_e( 'Page not available', 'raythompsonwebdev-com' );
@@ -26,7 +26,7 @@
 		</h1>
 	</header><!-- .page-header -->
 
-	<div class="entry">
+	<div class="newsExcerpt">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
 			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'raythompsonwebdev-com' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>

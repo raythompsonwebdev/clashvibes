@@ -3,11 +3,11 @@
    <?php while (have_posts()) : the_post(); ?>
 
 
-<article class="post group"<?php post_class() ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 <header class="entry-header">
 
-<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 
 <section class="byline">
 <span> Date <?php the_time('jS F Y') ?></span>
@@ -17,9 +17,9 @@
 
 </header>
 
-    <figure class="thumb"><?php the_post_thumbnail(); ?></figure>
+    <figure class="thumb"><?php the_post_thumbnail('featured-image'); ?></figure>
 
-    <section class="newsExcerpt"><?php the_excerpt();?></section>
+    <div class="newsExcerpt"><?php the_excerpt();?></div>
 
     <br/>
 

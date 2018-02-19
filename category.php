@@ -2,70 +2,78 @@
 
 <?php get_header(); ?>
 
-<?php  get_sidebar();  ?>
+<?php get_sidebar(); ?>
 
 <div id="clashvibes_content">
 
-<section id="clashvibes_right_column">
-
-<section class="clashvibes_right_panel_fullwidth">
-
-<h1 class="archive-title">Category1:<?php single_cat_title(); ?></h1>
+    <section id="clashvibes_right_column">
 
 
-<div id="news_section">
-
-<?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
-
-<div class="news_box">
-
-<header class="archive-header">
-
-<?php
-// Display optional category description
- if ( category_description() ) : ?>
-
-    <div class="archive-meta">
-    <?php echo category_description(); ?>
-</div>
-
-    <?php endif; ?>
-
-<h2>
-    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?>
-    </a>
-</h2>
-
-<div class="archive-meta"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?>
-</div>
-</header>
+        <h1 class="archive-title">Category1:<?php single_cat_title(); ?></h1>
 
 
-<figure class="thumb"><?php the_post_thumbnail(); ?></figure>
+        <!--Post loop start -->
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
 
-<div class="entry">
 
-<?php the_content(); ?>
+                <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-</div>
+                    <header class="entry-header">
 
-<br>
+                        <h1>
+                            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                        </h1>
 
-<footer class="postmetadata"><?php
- comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
-?></footer>
+                        <?php if (category_description()) : ?>
 
-<?php endwhile; else: ?>
-<p><?php _e('No posts were found. Sorry!'); ?></p>
+                            <div class="archive-meta">
+                                <?php echo category_description(); ?>
+                            </div>
+                        <?php endif; ?>
+                        <section class="byline">
+                            <span> Date <?php the_time('jS F Y') ?></span>
+                            <span> at <?php the_time('g:i a'); ?></span>
+                            <span>Written by <?php the_author() ?></span>
+                        </section>
+
+                    </header>
+
+                    <figure class="thumb"><?php the_post_thumbnail(); ?></figure>
+
+                    <div class="newsExcerpt"><?php the_content(); ?></div>
+
+                    <br>
+
+                    <footer class="byline">
+                        Posted in category :<?php the_category(', ') ?>
+                        <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
+                        <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
+                        <br/>
+                        <p>
+                            <?php
+                            $lastmodified = get_the_modified_time('U');
+                            $posted = get_the_time('U');
+                            if ($lastmodified > $posted) {
+                                echo "Edited " . human_time_diff(get_the_time('U'), get_the_modified_time('U')) . " later";
+                            }
+                            ?>
+                        </p>
+
+                    </footer>
+
+                <?php endwhile;
+            else:
+                ?>
+                <p><?php _e('No posts were found. Sorry!'); ?></p>
 <?php endif; ?>
 
-<!--end of Comment box-->
-</div>
 
-</div><!-- end of news -->
 
-</section>
-</section><!-- end of right panel -->
+        </article><!-- end of news -->
+
+
+    </section><!-- end of right panel -->
 
 </div>
 <?php get_footer(); ?>

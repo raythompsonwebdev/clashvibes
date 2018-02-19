@@ -52,7 +52,7 @@ add_theme_support( 'post-thumbnails' );
 	
 set_post_thumbnail_size( 170, 170, true );
 
-
+add_image_size( 'featured-image', 783, 9999 );
 
 add_theme_support( 'title-tag' );
 	
@@ -104,7 +104,6 @@ $defaults = array(
 	'pagelink'         => '%',
 	'echo'             => 1
 	);
-
 wp_link_pages( $defaults );
 
 
@@ -248,7 +247,8 @@ if ( function_exists( 'register_sidebar' ) ) {
 
 function excerpt_read_more_link($output) {
  global $post;
- return $output . '<a href="'. get_permalink($post->ID) . '" class="read_more"> Listen...</a>';
+ 
+ return $output . '<a href="'. get_permalink($post->ID) . '" class="read_more"> Continue...</a>';
 }
 add_filter('the_excerpt', 'excerpt_read_more_link');
 

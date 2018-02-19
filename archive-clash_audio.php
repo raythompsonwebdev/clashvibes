@@ -5,33 +5,11 @@
 
     <section id="clashvibes_right_column_front">
 
-
-        <h1><?php
-
-					if ( is_category() ) {
-						single_cat_title();
-					} elseif ( is_tag() ) {
-						single_tag_title();
-					} elseif ( is_author() ) {
-						the_post();
-						echo 'Author Archives: ' . get_the_author();
-						rewind_posts();
-					} elseif ( is_day() ) {
-						echo 'Daily Archives: ' . get_the_date();
-					} elseif ( is_month() ) {
-						echo 'Monthly Archives: ' . get_the_date('F Y');
-					} elseif ( is_year() ) {
-						echo 'Yearly Archives: ' . get_the_date('Y');
-					} else {
-						echo 'Sound Clash Audio Archives:';
-					}
-
-				?></h1>
-
-
-
-
-    
+                <?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					
+				?>
+        </h1>
 
         <section id="new_released_section">
 

@@ -1,9 +1,10 @@
 
 <?php get_header(); ?>
 	  
-<?php get_sidebar('video'); ?>
+
 
 <div id="clashvibes_content">
+    <?php get_sidebar('video'); ?>
  	
 <section id="clashvibes_right_column">
       

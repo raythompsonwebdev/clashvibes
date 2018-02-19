@@ -1,9 +1,9 @@
 <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>    
-<article class="post group"<?php post_class() ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 <header class="entry-header">
 
-<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 
 <section class="byline">
 <span> Date <?php the_time('jS F Y') ?></span>
@@ -15,7 +15,7 @@
     
 <figure class="thumb"><?php the_post_thumbnail('featured-image'); ?></figure> 
 
-<section class="newsExcerpt"><?php the_content(); ?></section>
+<div class="newsExcerpt"><?php the_content(); ?></div>
 
 
 <br/>     
@@ -24,7 +24,6 @@
 Posted in category :<?php the_category(', ') ?>
 <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
 <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
-<br/>
 <p>
 <?php $lastmodified = get_the_modified_time('U'); $posted = get_the_time('U');
 if ($lastmodified > $posted) {

@@ -8,10 +8,15 @@
 
 <ul id="footer-content">
 
-<li><a href="http://www.raythompsonwebdev.co.uk"><strong>Copyright © Raythompsonwebdev</strong></a></li>
-<li><?php bloginfo('name'); ?></li> 
+<li><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clashvibes' ) ); ?>"><?php
+				/* translators: %s: CMS name, i.e. WordPress. */
+				printf( esc_html__( 'Proudly powered by %s', 'clashvibes' ), 'WordPress' );
+			?></a></li>
 <li><?=date('Y');?>. All Rights Reserved</li>
-
+<li><?php
+				/* translators: 1: Theme name, 2: Theme author. */
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'clashvibes' ), 'clashvibes', '<a href="http://www.raythompsonwebdev.co.uk">raythompsonwebdev</a>' );
+			?></li>
 </ul>
 
 <ul id="social-media-box">
@@ -28,7 +33,7 @@
 
  
 </footer>
- 
+</div>
 <?php wp_footer(); ?> 
 
 </body>

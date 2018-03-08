@@ -60,7 +60,7 @@ function my_theme_setup(){
     }
 	
 	//add editor styles
-add_editor_style( array( 'styles/custom-editor-style.css','fonts/kelson_regular/stylesheet.css' ) );
+add_editor_style( array( 'styles/custom-editor-style.css','fonts/fontawesome/css/font-awesome.min.css' ) );
 
 
 add_theme_support( 'post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio' ) );

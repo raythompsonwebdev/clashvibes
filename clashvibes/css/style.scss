@@ -462,22 +462,29 @@ Domain Path: /language
                 label {
                     text-align: left;
                     color: $color;
-                    font-size: 1.5em;
-                    line-height: 1.4em;
-                    margin: 0 1em 0 0.5em;
+                    font-size: 1em;
+                    line-height: 30px;
+                    margin: 0 ;
+                    height: auto;
+                    display: block;
+                    span.screen-reader-text{
+                        width:100%;
+                        display:block;
+
+                    }
+                    input[type="search"] {
+                        width: 98%;
+                        height: 30px;
+                        line-height: 30px;
+                        display: inline-block;
+                    }
                 }
 
-                input[type="text"] {
-                    width: 65%;
-                    height: 30px;
-                    line-height: 1.5em;
-                    display: inline-block;
-                    float: left;
-                }
+               
                 input[type="submit"] {
                     background-color: $color4;
-                    width: 30%;
-                    margin: 0 0 0 2%;
+                    width: 100%;
+                    margin-top: 0.5em;
                     display: inline-block;
                     height: 35px;
                     color: $color;
@@ -687,7 +694,7 @@ Domain Path: /language
             margin: 0 0 1% 0;
             padding: 2%;
             display: block;
-            width: 74%; //global post
+            width: 74%; 
             h1 {
                 font-size: 1.5em;
                 height: 40px;
@@ -717,6 +724,15 @@ Domain Path: /language
                 background-color: $color;
                 margin-bottom: 1%;
 
+                h1 {
+                    font-size: 1.3em;
+                    height: 45px;
+                    line-height: 45px;
+                    width: 100%;
+                    text-indent: 0.5em;
+                    color:$color4;
+                }
+
                 h2 {
                     font-size: 1.2em;
                     height: 45px;
@@ -739,6 +755,7 @@ Domain Path: /language
                         width: 100%;
                         text-indent: 0.5em;
                         background-color:$color4;
+                        color:$color;
                         a {
                             width: 100%;
                             display: block;
@@ -771,10 +788,11 @@ Domain Path: /language
                         }
                     }
 
-                    section.byline {
+                   div.entry-meta {
                         height: 123px;
                         display: block;
-                        span {
+                        span.posted-on,
+                        span.byline {
                             font-size:0.9em;
                             width: 100%;
                             height: 40px;
@@ -785,6 +803,10 @@ Domain Path: /language
                             letter-spacing: 0.05em;
                             display: block;
                             text-indent: 1em;
+                            a{
+                                width:50%;
+                                display: inline-block;
+                            }
 
 
                         }
@@ -792,6 +814,31 @@ Domain Path: /language
 
                 }
 
+                /*--- blog image---*/
+                
+
+                /*--- custom post images---*/
+                figure.thumb {
+                    width: 20%;
+                    margin: 5% auto;
+                    display: block;
+                    border: 2px solid $color2;
+                    @include originTran( 50% 50%);
+                    @include box-sizing($type: border-box);
+                    @include Transition( all 0.2s linear 0s);
+                    a.post-thumbnail{
+                        width:100%;
+                        margin:1em auto;
+                        display:block;
+                        img{
+                            margin: 0;
+                            display: block;
+    
+                        }
+                    }
+                }
+
+                //custom post header
                 header.archive-header {
                     list-style: none;
                     margin: 0 auto;
@@ -838,7 +885,7 @@ Domain Path: /language
                 }
 
                 //blog footer
-                footer.byline {
+                footer.entry-footer {
                     height: auto;
                     color: $color;
                     text-indent: 0.5em;
@@ -848,7 +895,8 @@ Domain Path: /language
                         margin: 0;
                         color: $color;
                         display: inline-block;
-                        width: 80%;
+                        width: 100%;
+                        height: 35px;
                         span.screen-reader-text{
                             width:75%;
                             display:inline-block;
@@ -860,6 +908,7 @@ Domain Path: /language
                         font-size:1em;
                         color: $color;
                         display:inline-block;
+                        line-height:35px;
                     }
                     a.comments-count {
                         height: 50px;
@@ -873,11 +922,12 @@ Domain Path: /language
                     p {
                         color: $color;
                         font-size: 0.9em;
-                        line-height:30px;
+                        line-height:35px;
                         display:block;
                     }
                 }
 
+                //Global
                 .audio-play {
                     width: 85%;
                     margin: 0 auto;
@@ -890,59 +940,63 @@ Domain Path: /language
                     display: block;
                     height: 300px;
                 }
-                //text
-                p {
-                    color: $color4;
-                    font-size: 0.9em;
-                }
+               
+                
+                //regular post entry
+                div.entry-content{
+                    width: 98%;
+                    margin:auto;
+                    height:auto;
 
-                ul{
-                    list-style:none;
-                    margin:0 auto;
-                    padding:0;
-                    color:$color4;
-                    width:90%;
-
-                    li{
+                    //text
+                    p {
+                        color: $color4;
+                        font-size: 0.9em;
+                        line-height:1.9em;
                         display:block;
-                        line-height:40px;
-                        width:100%;
-                        background-color:$color2;
-                        text-indent:0.5em;
-
                     }
-                }
 
-                //image
-                ul figure {
-                    width: 90%;
-                    margin: 0 auto;
-                    padding: 0;
-                }
+                    ul{
+                        list-style:none;
+                        margin:0 auto;
+                        padding:0;
+                        color:$color4;
+                        width:90%;
+                        figure {
+                            width: 90%;
+                            margin: 0 auto;
+                            padding: 0;
+                        }
 
-                //image
-                figure.thumb {
-                    width: 20%;
-                    width: 30%;;
-                    margin: 5% auto;
-                    display: block;
-                    border: 2px solid $color2;
-                    @include originTran( 50% 50%);
-                    @include box-sizing($type: border-box);
-                    @include Transition( all 0.2s linear 0s);
-                    img {
-                        margin: 0;
+                        li{
+                            display:block;
+                            line-height:40px;
+                            width:100%;
+                            background-color:$color2;
+                            text-indent:0.5em;
+
+                        }
+                    }
+                    
+                    a.read_more{
                         display: block;
+                        width: 30%;
+                        height: auto;
+                        line-height: 30px;
+                        margin: 0 auto;
+                        border: 2px solid $color2;
+                        color: $color4;
+                        text-align:center;
                     }
                 }
 
-                //entry
-                div.newsExcerpt {
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
                     display: block;
                     width: 70%;
                     margin:auto;
-                    a.download_button,
-                    a.read_more{
+                    a.download_button{
                         display: block;
                         width: 30%;
                         height: auto;
@@ -1043,16 +1097,11 @@ Domain Path: /language
                     }
 
                     //video
-                    .video-play {
+                    iframe {
                         width: 100%;
                         margin: 0 auto;
                         display: block;
-                        height: auto;
-                        iframe {
-                            margin: auto;
-                            display: block;
-
-                        }
+                     
                     }
 
                     div#jp_container_1 {
@@ -1194,7 +1243,6 @@ Domain Path: /language
                     }
 
                 }
-
                 
                 //custom-post-footer
                 footer.speaker-meta {

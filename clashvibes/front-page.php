@@ -73,7 +73,21 @@
                 <?php endwhile;
 else:
     ?>
-                <p>Oops! There are no new Clashes to display.</p>
+                <article class="new_released_box">
+
+<figure class="thumb">
+    
+
+    <figcaption>
+
+        <p>Sorry! No new clashes to display.</p>
+
+
+    </figcaption>
+
+</figure>
+
+</article>
                 <?php endif;
 wp_reset_query();
 ?>

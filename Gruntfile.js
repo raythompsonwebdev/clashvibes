@@ -39,7 +39,7 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'css/style.css': 'css/style.scss'
+                    'clashvibes/css/style.css': 'clashvibes/css/style.scss'
                             /*where file goes-----/where file from*/
                 }
             },
@@ -50,7 +50,7 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'style-min.css': 'css/style.scss'
+                    'clashvibes/style-min.css': 'clashvibes/css/style.scss'
                             /*where file goes-----/where file from*/
                 }
             }
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
          * JS Hint
          */
         jshint: {
-            files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
+            files: ['Gruntfile.js', 'clashvibes/js/**/*.js', 'clashvibes/test/**/*.js'],
             options: {
                 // options here to override JSHint defaults
 

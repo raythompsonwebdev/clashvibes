@@ -5,24 +5,44 @@
 
         <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-            <header class="archive-header">
+            	<header class="entry-header">
+		<?php
+		if ( is_singular() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else :
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
+?>
+	
+		<div class="entry-meta">
+			<?php
+				clashvibes_posted_on();
+				clashvibes_posted_by();
+			?>
+		</div><!-- .entry-meta -->
 
-                <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
-                <div class="archive-meta">
-                    <!-- Display Title and Author Name -->
-                    <span>Uploaded by :<?php the_author() ?></span>
-                    <span> Date: <?php the_time('jS F Y') ?></span>
-                    <span> at :<?php the_time('g:i a'); ?></span>
+	</header><!-- .entry-header -->
 
-                </div>
-            </header>
+            <figure class="thumb">
+				<?php clashvibes_post_thumbnail(); ?>
+				</figure>
 
-            <figure class="thumb"><?php the_post_thumbnail(); ?></figure>
+            <div class="entry-content">
+           
 
-            <div class="newsExcerpt">
-
-                <?php the_excerpt(); 
+                <?php the_excerpt(sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			)); 
                 
                 wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
@@ -31,10 +51,9 @@
 
             </div>
             <br/>
-            <footer class="postmetadata">
-                <?php clashvibes_entry_footer(); ?>
-            </footer>
 
+			<br/>
+			<br/>
         <?php endwhile;
     else: ?>
         <?php get_template_part('template-parts/content', 'none'); ?>

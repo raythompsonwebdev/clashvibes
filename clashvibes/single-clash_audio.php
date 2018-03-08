@@ -4,50 +4,10 @@
 <?php get_sidebar('audio'); ?>
     <section id="clashvibes_right_column">
 
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php get_template_part('template-parts/content', 'audio'); ?>
 
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    </section><!-- end of clashvibes_right_panel_fullwidth -->
 
-                    <header class="entry-header">
-
-                        <h1 class="entry-title">
-                            <span> Sound Clash Audio:</span> <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-                        </h1>
-
-                        <section class="byline"> 
-                            <span>Uploaded by :<?php the_author() ?></span>
-                              <span> Date: <?php the_time('jS F Y') ?></span>
-                               <span> at :<?php the_time('g:i a'); ?></span>
-
-                                    </section>          
-
-                                    </header>
-
-                                    <figure class="thumb"><?php the_post_thumbnail('featured-image'); ?></figure> 
-
-                                    <div class="newsExcerpt">
-                                       
-                            
-                              <?php get_template_part('template-parts/content' , 'audio'); ?>
-
-                                    </div>
-
-                                    <br/>
-
-                                    <footer class="speaker-meta">
-                                        <?php the_meta(); ?>
-                                    </footer>
-
-
-                                    </article>
-                                <?php endwhile;
-                            else:
-                                ?>
-                                <?php get_template_part('template-parts/content', 'none'); ?>
-<?php endif; ?>
-
-                            </section><!-- end of clashvibes_right_panel_fullwidth -->
-
-                            </div><!-- end of right panel -->
+</div><!-- end of right panel -->
 
 <?php get_footer(); ?>

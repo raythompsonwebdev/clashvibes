@@ -14,7 +14,7 @@ if ( ! function_exists( 'clashvibes_posted_on' ) ) :
 	function clashvibes_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> - Updated:<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf( $time_string,
@@ -126,7 +126,7 @@ function clashvibes_post_thumbnail() {
 	if ( is_singular() ) :
 	?>
 
-	<div class="post-thumbnail">
+	<div class="thumb">
 		<?php the_post_thumbnail(); ?>
 	</div><!-- .post-thumbnail -->
 

@@ -20,20 +20,14 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-<link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css" />
-
 <!--[if IE]>
 <script src="/js/html5.js"></script>
 <![endif]-->
 
-<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
-
 <?php wp_head(); ?>
 </head>
-<body >
-    
-
-        
+<body <?php body_class(); ?> >
+            
  <button id="toggle-nav">Menu</button>
 
     
@@ -41,7 +35,7 @@
 
 	<header>
     	<section id="clashvibes_title">
-        <?php $logo= get_option('clashvibes_logo', get_template_directory() . '/Clashvibes-version-2-database-page_03.gif'); ?>
+        <?php $logo= get_option('clashvibes_logo', get_template_directory_uri() . '/images/Clashvibes-version-2-database-page_03.gif'); ?>
             <img src="<?php print $logo; ?>" alt="<?php bloginfo('name'); ?>" />
         </section>
 

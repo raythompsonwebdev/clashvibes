@@ -39,9 +39,13 @@
 
                     </header>
 
-                    <figure class="thumb"><?php the_post_thumbnail(); ?></figure>
+                    <figure class="thumb">
+                        <?php the_post_thumbnail(); ?>
+                        </figure>
 
-                    <div class="newsExcerpt"><?php the_content(); ?></div>
+                    <div class="entry-content">
+                        <?php the_content(); ?>
+                        </div>
 
                     <br>
 

@@ -50,9 +50,23 @@
                 </article>
 
                 <?php endwhile;
-else:
-    ?>
-                <?php get_template_part('template-parts/content', 'none'); ?>
+            else:
+                ?>
+                <article class="new_released_box">
+
+                <figure class="thumb">
+                    
+
+                    <figcaption>
+
+                        <p>Sorry! No Audio clashes to display.</p>
+
+
+                    </figcaption>
+
+                </figure>
+
+                </article>
                 <?php endif;
 wp_reset_query();
 ?>

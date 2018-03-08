@@ -56,7 +56,21 @@
                 <?php endwhile;
 else:
     ?>
-                <?php get_template_part('template-parts/content', 'none'); ?>
+                <article class="new_released_box">
+
+<figure class="thumb">
+    
+
+    <figcaption>
+
+        <p>Sorry! No Video clashes to display.</p>
+
+
+    </figcaption>
+
+</figure>
+
+</article>
                 <?php endif;
 wp_reset_query();
 ?>

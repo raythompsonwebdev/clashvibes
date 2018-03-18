@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
   }
     
   var audio = document.getElementById("result_player");
-
+ 
   // Play/Pause ============================//
   $("#play_button").bind("click", function(){
     $(this).audio.play();
@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
       $(this).html('<i class="fa fa-pause" aria-hidden="true" title="Pause"></i>');
     } else {
       audio.pause();
-      $(this).html('<i class="fa fa-play-circle" aria-hidden="true" title="Play"></i>');
+      $(this).html('<i class="fa fa-play" aria-hidden="true" title="Play"></i>');
     }
   });
 
@@ -73,6 +73,28 @@ jQuery(document).ready(function($) {
     seconds = (seconds >= 10) ? seconds : "0" + seconds;
     return minutes + ":" + seconds;
   }
+
+  //volume
+  var volume = document.getElementById('volume');
+
+  $(volume).bind("change", function(event){
+    audio.volume = event.target.value;
+    });
+
+    //update
+function updateseekmax(event){
+  if( event.target.duration ){
+  seek.max = event.target.duration;
+  }
+  }
+  function updateplaybackmax(event){
+  if( event.target.duration ){
+  playback.max = event.target.duration;
+  }
+  }
+  
+  audio.addEventListener('durationchange', updateseekmax);
+  audio.addEventListener('durationchange', updateplaybackmax);
 
 });//end of jquery
 

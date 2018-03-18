@@ -34,7 +34,9 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
+	<figure class="thumb">
 	<?php clashvibes_post_thumbnail(); ?>
+	</figure>
 
 	<div class="entry-content">
 		<?php

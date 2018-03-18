@@ -53,3 +53,40 @@ function clashvibes_customize_preview_js() {
 	wp_enqueue_script( 'clashvibes-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'clashvibes_customize_preview_js' );
+
+/**
+ * Inject Customizer CSS when appropriate
+ */
+
+function clashvibes_customizer_css() {
+	$header_color = get_theme_mod('clashvibes_header_color');
+	
+	?>
+
+<style type="text/css">
+			.site-branding {
+					background: <?php echo get_theme_mod( 'clashvibes_header_color' ); ?>;
+					background-color: <?php echo $header_color; ?>
+			}
+
+			.category-list a:hover,
+			.entry-meta a:hover,
+			.tag-links a:hover,
+			.widget-area a:hover,
+			.nav-links a:hover,
+			.comment-meta a:hover,
+			.continue-reading a,
+			.entry-title a:hover,
+			.entry-content a,
+			.comment-content a {
+					color: <?php echo get_theme_mod( 'clashvibes_link_color' ); ?>;
+			}
+
+			.border-custom {
+					border: <?php echo get_theme_mod( 'clashvibes_link_color' ); ?> solid 1px;
+			}
+
+	</style>
+	<?php
+}
+add_action( 'wp_head', 'clashvibes_customizer_css' );

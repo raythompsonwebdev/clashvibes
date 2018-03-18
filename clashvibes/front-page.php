@@ -49,7 +49,7 @@
                         <?php the_title() ?>
                     </h1>
 
-                    <figure class="thumb">
+                    <figure class="thumbaud">
                        
                         <?php the_post_thumbnail(); ?>
 
@@ -57,11 +57,11 @@
                             
                                                 
                     <?php if ('clash_audio' == get_post_type()) : ?>
-                           <span class="more_button"><a href=" <?php the_permalink() ?> " title="Listen to <?php the_title_attribute() ?>">Listen</a></span>
+                           <span class="Morebutton"><a href=" <?php the_permalink() ?> " title="Listen to <?php the_title_attribute() ?>">Listen</a></span>
                            
                            <?php else : ?>
                            
-                           <span class="more_button"><a href=" <?php the_permalink() ?> " title="View <?php the_title_attribute() ?> Video">View</a></span>
+                           <span class="Morebutton"><a href=" <?php the_permalink() ?> " title="View <?php the_title_attribute() ?> Video">View</a></span>
                            <?php endif; ?>
                            
                         </figcaption>
@@ -75,7 +75,7 @@ else:
     ?>
                 <article class="new_released_box">
 
-<figure class="thumb">
+<figure class="thumbaud">
     
 
     <figcaption>

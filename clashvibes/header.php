@@ -34,9 +34,34 @@
 <div id="container">
 
 	<header>
+    <div class="site-logo">
+        <?php $site_title = get_bloginfo('name'); ?>
+        <a href=" <?php echo esc_url(home_url('/')); ?>" rel="home">
+            <div class="screen-reader-text">
+                <?php printf(esc_html__('Go to the home page of %1$s', 'clashvibes'), $site_title); ?>
+            </div>
+            <?php
+            if (has_custom_logo()) {
+                the_custom_logo();
+            } else {
+                ?>
+                <div class="site-firstletter" aria-hidden="true">
+                    <?php echo substr($site_title, 0, 1); ?>
+                </div>
+            <?php } ?>
+        </a>
+    </div>
     	<section id="clashvibes_title">
-        <?php $logo= get_option('clashvibes_logo', get_template_directory_uri() . '/images/Clashvibes-version-2-database-page_03.gif'); ?>
-            <img src="<?php print $logo; ?>" alt="<?php bloginfo('name'); ?>" />
+            
+            <h1>Clashvibes</h1>
+            <?php $description = get_bloginfo('description', 'display');
+
+            if ($description || is_customize_preview()) :
+                ?>
+
+                <h2 class="site-description"><?php echo $description; ?></h2>
+    
+        <?php endif; ?>
         </section>
 
         <span id="socialmediatop"> 

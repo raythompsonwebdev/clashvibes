@@ -39,12 +39,12 @@
                         <?php the_title();?>
                     </h1>
 
-                    <figure class="thumb">
+                    <figure class="thumbvid">
                         <?php the_post_thumbnail(); ?>
 
                         <figcaption>
 
-                            <span class="more_button"><a href="<?php the_permalink() ?>">View</a></span>
+                            <span class="Morebutton"><a href="<?php the_permalink() ?>" >View</a></span>
 
 
                         </figcaption>

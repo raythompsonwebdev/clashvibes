@@ -25,6 +25,14 @@ function clashvibes_custom_header_setup() {
 		'flex-height'            => true,
 		'wp-head-callback'       => 'clashvibes_header_style',
 	) ) );
+	add_theme_support(
+		'custom-logo', array(
+		'width' => 96,
+		'height' => 96,
+		'flex-width' => false,
+		'flex-height' => false,
+		)
+);
 }
 add_action( 'after_setup_theme', 'clashvibes_custom_header_setup' );
 
@@ -35,8 +43,15 @@ if ( ! function_exists( 'clashvibes_header_style' ) ) :
 	 * @see clashvibes_custom_header_setup().
 	 */
 	function clashvibes_header_style() {
-		$header_text_color = get_header_textcolor();
 
+		add_theme_support( 'custom-logo', array(
+	    'width' => 96,
+	    'height' => 96,
+	    'flex-width' => false,
+	    'flex-height' => false,
+	) );
+
+		$header_text_color = get_header_textcolor();
 		/*
 		 * If no custom options for text are set, let's bail.
 		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).

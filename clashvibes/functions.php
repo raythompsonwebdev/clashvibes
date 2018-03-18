@@ -70,8 +70,8 @@ add_theme_support( 'title-tag' );
 	
 $args = array(
 		'width'         => 325,
-		'height'        => 65,
-		'default-image' => get_template_directory_uri() . '/images/logo-1.png',
+		'height'        => 65
+	//	'default-image' => get_template_directory_uri() . '/images/logo-1.png',
 	);
 	add_theme_support( 'custom-header', $args );
 
@@ -99,7 +99,9 @@ $args = array(
         'admin-head-callback'    => '',
         'admin-preview-callback' => '',
 
-    );
+		);
+
+	
     add_theme_support( 'nav-menus',$defaults );
 	
     $defaults = array(
@@ -138,6 +140,8 @@ function clashvibes_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
+
+
 
 
 if ( function_exists( 'register_nav_menus' ) ) {
@@ -195,15 +199,12 @@ add_action( 'widgets_init', 'contact_widgets_init' );
 
 function enqueue_extra_styles(){
     
-    wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri() );
-    
-	wp_register_style( 'custom-style', get_stylesheet_directory_uri() . '/master.css', array(), '1', 'true' );
-	
+    wp_enqueue_style( 'style', get_stylesheet_uri() );
+    	
 	wp_register_style( 'third-custom-style', get_stylesheet_directory_uri() . '/reset.css', array(), '1', 'true' );
 			
-	wp_register_style('awesome', get_stylesheet_directory_uri() . '/fontawesome/css/font-awesome.min.css', false,'1.1','all' );
+	wp_register_style('awesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', false,'1.1','all' );
 		
-	wp_enqueue_style( 'custom-style' );
 	wp_enqueue_style('third-custom-style');
 	wp_enqueue_style('awesome');
 	
@@ -213,7 +214,8 @@ add_action('wp_enqueue_scripts', 'enqueue_extra_styles');
 
 add_action( 'wp_enqueue_scripts', 'my_audio_own' );	
 function my_audio_own() {
-	if(is_singular()){
+
+	if( "clash_audio" == get_post_type()){
 			
 		 wp_register_script( 'audio', get_template_directory_uri() . '/js/audio.js', array('jquery'),'1.0.0', 'true' );
 			
@@ -227,15 +229,16 @@ function my_audio_own() {
 	}    
 }
 
-add_action( 'wp_enqueue_scripts', 'my_video_own' );	
-function my_video_own() {
-	if(is_singular()){
-			
-		 wp_register_script( 'video', get_template_directory_uri() . '/js/video.js', array('jquery'),'1.0.0', 'true' );
-			wp_enqueue_script( 'video' );
+//add_action( 'wp_enqueue_scripts', 'my_video_own' );	
+//function my_video_own() {
 
-	}    
-}
+//	if( "clash_videos" == get_post_type()){
+			
+//		 wp_register_script( 'video', get_template_directory_uri() . '/js/video.js', array('jquery'),'1.0.0', 'true' );
+//			wp_enqueue_script( 'video' );
+
+//	}    
+//}
 
 function clashvibes_scripts() {
     
@@ -297,6 +300,87 @@ if ( function_exists( 'register_sidebar' ) ) {
 		'after_title' => '</h3>',
 	) );
 }
+
+
+
+if ( ! function_exists( 'clashvibes_com_attachment_nav' ) ) :
+/**
+ * Display navigation to next/previous image in attachment pages.
+ */
+function clashvibes_attachment_nav() {
+	?>
+	<nav class="navigation post-navigation" role="navigation">
+		<div class="post-nav-box clear">
+			<h2 class="screen-reader-text"><?php _e( 'Attachment post navigation', 'clashvibes' ); ?></h2>
+			<div class="nav-links">
+				<div class="nav-previous">
+					<?php previous_image_link( false, '<span class="post-title">Previous image</span>' ); ?>
+				</div>
+				<div class="nav-next">
+					<?php next_image_link( false, '<span class="post-title">Next image</span>' ); ?>
+				</div>
+			</div><!-- .nav-links -->
+
+
+		</div>
+	</nav>
+
+
+	<?php
+}
+endif;
+
+if ( ! function_exists( 'clashvibes_attached_image' ) ) :
+/**
+ * Print the attached image with a link to the next attached image.
+ * Appropriated from Twenty Fourteen 1.0
+ */
+function clashvibes_attached_image() {
+	$post = get_post();
+	/**
+	 * Filter the default attachment size.
+	 */
+	$attachment_size = apply_filters( 'clashvibes_attachment_size', array( 810, 810 ) );
+	$next_attachment_url = wp_get_attachment_url();
+	/*
+	 * Grab the IDs of all the image attachments in a gallery so we can get the URL
+	 * of the next adjacent image in a gallery, or the first image (if we're
+	 * looking at the last image in a gallery), or, in a gallery of one, just the
+	 * link to that image file.
+	 */
+	$attachment_ids = get_posts( array(
+		'post_parent'    => $post->post_parent,
+		'fields'         => 'ids',
+		'numberposts'    => -1,
+		'post_status'    => 'inherit',
+		'post_type'      => 'attachment',
+		'post_mime_type' => 'image',
+		'order'          => 'ASC',
+		'orderby'        => 'menu_order ID',
+	) );
+	// If there is more than 1 attachment in a gallery...
+	if ( count( $attachment_ids ) > 1 ) {
+		foreach ( $attachment_ids as $attachment_id ) {
+			if ( $attachment_id == $post->ID ) {
+				$next_id = current( $attachment_ids );
+				break;
+			}
+		}
+		// get the URL of the next image attachment...
+		if ( $next_id ) {
+			$next_attachment_url = get_attachment_link( $next_id );
+		}
+		// or get the URL of the first image attachment.
+		else {
+			$next_attachment_url = get_attachment_link( array_shift( $attachment_ids ) );
+		}
+	}
+	printf( '<a href="%1$s" rel="attachment">%2$s</a>',
+		esc_url( $next_attachment_url ),
+		wp_get_attachment_image( $post->ID, $attachment_size )
+	);
+}
+endif;
 
 
 /**

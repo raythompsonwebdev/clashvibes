@@ -35,12 +35,12 @@
                         <?php the_title() ?>
                     </h1>
 
-                    <figure class="thumb">
+                    <figure class="thumbaud">
                         <?php the_post_thumbnail(); ?>
 
                         <figcaption>
 
-                            <span class="more_button"><a href="<?php the_permalink() ?>">Listen</a></span>
+                            <span class="Morebutton"><a href="<?php the_permalink() ?>">Listen</a></span>
 
 
                         </figcaption>

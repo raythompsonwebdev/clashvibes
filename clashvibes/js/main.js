@@ -2,14 +2,21 @@
 
 jQuery(document).ready(function($) {
   
-  $('figure.thumb').on('hover', function(){
+$('figure.thumbaud').on('hover', function(){
     
     var element = this;
         
-    $(element).find('span.more_button').slideToggle(250).css({'display': 'block', 'top': '0px', 'opacity': '1'});
+    $(element).find('span.Morebutton').slideToggle(250).css({'display': 'block', 'top': '0px', 'opacity': '1'});
 
 });
 
+$('figure.thumbvid').on('hover', function(){
+    
+  var element = this;
+      
+  $(element).find('span.Morebutton').slideToggle(250).css({'display': 'block', 'top': '0px', 'opacity': '1'});
+
+});
 
 $('button#toggle-nav').on('click', function(event){
 
@@ -61,9 +68,6 @@ $('button#side-bar-btn').on('click', function(event){
    
 
 });
-
-
-
 
 
 });//end of jquery

@@ -26,7 +26,18 @@ endif; ?>
 
 </header>
 
-<figure class="thumb"><?php the_post_thumbnail('featured-image'); ?></figure> 
+<figure class="thumb">
+
+    <?php the_post_thumbnail('featured-image'); ?>
+    
+    <figcaption>
+
+        <span class="more_button"><a href="<?php the_permalink() ?>">Listen</a></span>
+
+
+    </figcaption>
+
+</figure> 
 
 <div class="audioExcerpt">
 
@@ -61,10 +72,10 @@ $meta = get_post_meta($post->ID, 'clash-url', true);
 //$meta = get_post_meta(get_the_ID(), 'clash-url', true);
 ?>
 
-<source src="./audio/<?php echo $meta; ?>.mp3" type='audio/mp3' type='audio/mpeg' />
+<source src="<?php get_template_directory_uri() ;?>/wordpress/wp-content/themes/clashvibes/audio/<?php print_r($meta); ?>.mp3" type='audio/mp3' type='audio/mpeg' />
 
-<source src="./audio/<?php print_r($meta); ?>.ogg" type='audio/ogg' />
-<source src="./audio/<?php echo $meta; ?>.m4a" type='audio/mp4' />
+<source src="<?php get_template_directory_uri() ;?>/wordpress/wp-content/themes/clashvibes/audio/<?php print_r($meta); ?>.ogg" type='audio/ogg' />
+<source src="<?php get_template_directory_uri() ;?>/wordpress/wp-content/themes/clashvibes/audio/<?php print_r($meta); ?>.m4a" type='audio/mp4' />
 
 
 <p>Your browser does not support HTML5 audio.</p>
@@ -72,7 +83,7 @@ $meta = get_post_meta($post->ID, 'clash-url', true);
 <br/>
 <div id="audio_controls">
 
-<button id="play_toggle" class="player-button"><i class="fa fa-play-circle" aria-hidden="true"></i></button>
+<button id="play_toggle" class="player-button">PLAY</i></button>
 
 <div id="progress">
 <span id="load_progress"></span>
@@ -83,8 +94,18 @@ $meta = get_post_meta($post->ID, 'clash-url', true);
 <span id="current_time">00:00</span>  
 <span id="duration">00:00</span>
 </div>
+<div class="clearfix"></div>
+<label id="volume_bar" for="volume">Volume</label>
+<input type="range" id="volume" title="volume"min="0" max="1" step="0.1" value="1">
+<div id="video_seek">
+        <label for="seek">Seek</label>
+        <input type="range" id="seek" title="seek" min="0" value="0" max="0">
+        </div>
+
+
 </div>
 <div class="clearfix"></div>
+
 
 
 </div>

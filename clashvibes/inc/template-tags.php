@@ -145,3 +145,4 @@ function clashvibes_post_thumbnail() {
 	<?php endif; // End is_singular().
 }
 endif;
+

@@ -61,13 +61,123 @@ Domain Path: /language
         header {
             width: 100%;
             padding: 0;
-            height: 70px;
+            height: 80px;
             margin: 0;
-
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            
+            .site-logo {
+                position: relative;
+                top: 0.5em;
+                left: 0;
+                width: 3.4em;
+                height: 3.5em;
+                -webkit-flex: 0 0 auto;
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+                display: inline-block;
+                a {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    background: $color1;
+                    color: $color4;
+                    text-decoration: none;
+                    line-height: 50px;
+                    width: 98%;
+                    @include originTran( 50% 50%);
+                    @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+                    height: auto;
+                    /* Text meant only for screen readers. */
+                    div.screen-reader-text {
+                        clip: rect(1px, 1px, 1px, 1px);
+                        position: absolute !important;
+                        height: 1px;
+                        width: 1px;
+                        overflow: hidden;
+                        &:focus {
+                            background-color: #f1f1f1;
+                            border-radius: 3px;
+                            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+                            clip: auto !important;
+                            color: #21759b;
+                            display: block;
+                            font-size: 14px;
+                            font-size: 0.875rem;
+                            font-weight: bold;
+                            height: auto;
+                            left: 5px;
+                            line-height: normal;
+                            padding: 15px 23px 14px;
+                            text-decoration: none;
+                            top: 5px;
+                            width: auto;
+                            z-index: 100000;
+                            /* Above WP toolbar. */
+                        }
+                        
+                    }
+                    div.site-firstletter {
+                        font-family: $font-main;
+                        font-size: 4em;
+                        font-weight: normal;
+                        text-align: center;
+                        margin: 0;
+                        padding: 0;
+                        height:100%;
+                    }
+                    
+                }
+                
+            }
+            .site-logo a:focus,
+            .site-logo a:hover {
+                outline: 2px solid white;
+            }
+            
+            .site-logo a:focus .site-firstletter,
+            .site-logo a:hover .site-firstletter {
+                background: $color4;
+                color: $color8;
+                font-weight: normal;
+                text-align: center;
+            }
             #clashvibes_title {
-                float: left;
-                width: 20%;
-                display: block;
+                width: 76%;
+                display: inline-block;
+                h1{
+                    color:$color2;
+                    margin:0;
+                    padding:0;
+                    line-height:45px;
+                    font-size:2.5em;
+                    text-indent: 0.1em;
+                }
+                h2.site-description{
+                    text-indent: 0.5em;
+                    float: none;
+                    color:$color2;
+                    display: block;
+                    width: 100%;
+                    line-height: 20px;
+                    font-size: 0.75em;
+                    font-weight: normal;
+                    padding: 0;
+                    clear: left;
+
+                }
             }
 
             span#socialmediatop {
@@ -75,6 +185,9 @@ Domain Path: /language
                 width: 20%;
                 display: block;
                 height: 40px;
+                -webkit-flex: 0 0 auto;
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
                 a {
                     height: 100%;
                     display: inline-block;
@@ -106,12 +219,24 @@ Domain Path: /language
                 margin: 0;
                 padding: 0;
                 list-style: none;
+                -webkit-flex-flow: row wrap;
+                -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+                -webkit-align-items: flex-start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                justify-content:flex-start;
                 li {
                     display: inline-block;
                     float: left;
                     width: 13%;
                     height: 40px;
                     margin-right: 0.5em;
+                    -webkit-flex: 0 0 auto;
+                    -ms-flex: 0 0 auto;
+                    flex: 0 0 auto;
                     a {
                         width: 100%;
                         background-color: $color4;
@@ -179,7 +304,7 @@ Domain Path: /language
                     letter-spacing: 0.05em;
                 }
 
-                #new_released_section {
+                div.results{
                     padding: 0;
                     width: 100%;
                     margin: 0 0 0.5em 0; 
@@ -192,11 +317,12 @@ Domain Path: /language
                     -webkit-justify-content: flex-start;
                     -ms-flex-pack: start;
                     justify-content: flex-start;
-                    -webkit-align-items: stretch;
-                    -ms-flex-align: stretch;
-                    align-items: stretch;
+                    -webkit-align-items: flex-start;
+                    -ms-flex-align: start;
+                    align-items: flex-start;
 
-                    .new_released_box {
+                    
+                    article.you_tube_box{
                         -webkit-flex: 0 0 auto;
                         -ms-flex: 0 0 auto;
                         flex: 0 0 auto;
@@ -240,7 +366,135 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
+                        figure.you_tube_thumb {
+                            width: 90%;
+                            height: auto;
+                            margin: 4% auto;
+                            @include originTran( 50% 50%);
+                            @include box-sizing($type: border-box);
+                            @include Transition( all 0.2s linear 0s);
+
+                            &:hover {
+                                cursor: pointer;
+                                border: none;
+                                width: 92%;
+
+                            }
+                            img {
+
+                                @include box-sizing($type: border-box);
+
+
+                            }
+                            li{
+                                list-style:none;
+                                iframe{
+                                    width:100%;
+                                }
+                            }
+
+                            .u_tube {
+                                margin:0;
+                                                               
+                                span.u_tube_button {
+                                    padding: 0;
+                                    //display: none;
+                                    height: 40px;
+                                    position:relative;
+                                    z-index:2;
+
+                                    a {
+
+                                        font-size: 0.9em;
+                                        color: $color4;
+                                        background-color: $color2a;
+                                        margin: 0;
+                                        padding: 0;
+                                        line-height: 40px;
+                                        height: 100%;
+                                        display: block;
+                                        letter-spacing: 0.05em;
+                                        @include originTran( 50% 50%);
+                                        @include box-sizing($type: border-box);
+                                        @include Transition( all 0.2s linear 0s);
+                                        &:hover {
+                                            color: $color2a;
+                                            background-color: $color1;
+                                            letter-spacing: 0.055em;
+                                            font-weight: bold;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                           
+                div.results,
+                #new_released_section {
+                    padding: 0;
+                    width: 100%;
+                    margin: 0 0 0.5em 0; 
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-flex-flow: row wrap;
+                    -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+                    -webkit-justify-content: flex-start;
+                    -ms-flex-pack: start;
+                    justify-content: flex-start;
+                    -webkit-align-items: flex-start;
+                    -ms-flex-align: start;
+                    align-items: flex-start;
+
+                    
+                    .new_released_box{
+                        -webkit-flex: 0 0 auto;
+                        -ms-flex: 0 0 auto;
+                        flex: 0 0 auto;
+                        float: left;
+                        width: 19%; //19%;
+                        min-height: 330px;
+                        padding: 0;
+                        margin: 0.5%;
+                        background-color: $color;
+
+
+                        h1 {
+                            margin: 0;
+                            display:block;
+                            color: $color;
+                            font-size: 0.9em;
+                            height: auto;
+                            text-align: center;
+                            padding: 0.5em;
+                            line-height: 25px;
+                            width: auto;
+                            letter-spacing: 0.03em;
+                            font-weight: bold;
+                        }
+
+                        a {
+                            font-size: 0.9em;
+                            width: 100%;
+                            text-align: center;
+                            color: $color;
+                            background-color: $color2;
+                            display: block;
+                            margin: 0;
+                            height: 100%;
+                            letter-spacing: 0.05em;
+
+                            &:hover {
+                                font-weight: bold;
+                                background-color: $color3;
+                                width: 100%;
+                            }
+                        }
+
+                        figure.thumbaud,
+                        figure.thumbvid {
                             width: 50%;
                             height: auto;
                             margin: 4% auto;
@@ -262,14 +516,14 @@ Domain Path: /language
                             }
 
                             figcaption {
-
-                                span.more_button {
+                                margin:0;
+                                span.Morebutton {
                                     padding: 0;
                                     display: none;
                                     height: 40px;
                                     position:relative;
                                     z-index:2;
-
+                                    display:none;
                                     a {
 
                                         font-size: 0.9em;
@@ -356,9 +610,9 @@ Domain Path: /language
                         -webkit-justify-content: flex-start;
                         -ms-flex-pack: flex-start;
                         justify-content: flex-start;
-                        -webkit-align-items: stretch;
-                        -ms-flex-align: stretch;
-                        align-items: stretch;
+                        -webkit-align-items: flex-start;
+                        -ms-flex-align: start;
+                        align-items: flex-start;
                         width: 100%;
                         margin: 0 0 0.25em 0;
                         color: $color4;
@@ -815,7 +1069,7 @@ Domain Path: /language
                 }
 
                 /*--- blog image---*/
-                
+                         
 
                 /*--- custom post images---*/
                 figure.thumb {
@@ -888,9 +1142,10 @@ Domain Path: /language
                 footer.entry-footer {
                     height: auto;
                     color: $color;
-                    text-indent: 0.5em;
+                    text-indent: 0.25em;
                     background-color: $colors;
                     span {
+                        
                         padding: 0;
                         margin: 0;
                         color: $color;
@@ -898,26 +1153,29 @@ Domain Path: /language
                         width: 100%;
                         height: 35px;
                         span.screen-reader-text{
-                            width:75%;
+                            width:auto;
                             display:inline-block;
                         }
+                        a{
+                            width:auto;
+                            font-size:0.9em;
+                            color: $color;
+                            display:inline-block;
+                            line-height:35px;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
+                        a.comments-count {
+                            height: 50px;
+                            font-size: 1.2em;
+                            display: inline-block;
+                            width: 5%;
+                            color: $color;
+                            line-height: 50px;
+                            text-align:center;
+                        }
 
-                    }
-                    a{
-                        width: 41%;
-                        font-size:1em;
-                        color: $color;
-                        display:inline-block;
-                        line-height:35px;
-                    }
-                    a.comments-count {
-                        height: 50px;
-                        font-size: 1.2em;
-                        display: inline-block;
-                        width: 5%;
-                        color: $color;
-                        line-height: 50px;
-                        text-align:center;
                     }
                     p {
                         color: $color;
@@ -945,7 +1203,8 @@ Domain Path: /language
                 //regular post entry
                 div.entry-content{
                     width: 98%;
-                    margin:auto;
+                    display:block;
+                    margin:0 auto;
                     height:auto;
 
                     //text
@@ -954,6 +1213,14 @@ Domain Path: /language
                         font-size: 0.9em;
                         line-height:1.9em;
                         display:block;
+                        a{
+                            color:$color4;
+                            width: auto;
+                            display: inline-block;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
                     }
 
                     ul{
@@ -1008,7 +1275,7 @@ Domain Path: /language
                     }
 
                     //audio
-                    .audio-play {
+                    #audio-play {
                         width: 85%;
                         margin: 0 auto;
                         display: block;
@@ -1016,13 +1283,14 @@ Domain Path: /language
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
+                    div#audio_controls,
+                    div#videocontrols {
+                        height: auto;
                         width: 97%;
                         display: block;
                         margin: 0 auto;
-                        border: $color4 solid 4px;
-
+                        border: $color5 solid 2px;
+                        padding:0.5em;
                         button#play_toggle {
                             width: 20%;
                             display: inline-block;
@@ -1032,39 +1300,44 @@ Domain Path: /language
                             outline:none;
                             line-height: 55px;
                             text-align: center;
-                            background-color: $colors;
                             font-size:1.1em;
                             @include originTran( 50% 50%);
                             @include Transition(all 0.2s linear 0s);
                             color: $color;
-                            &:hover {
-                                cursor: pointer;
-                                font-weight:bold;
-                                color: $color;
-                                background-color: $color4;
+                            background-color:$color4;
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                color:$color;
-                                font-size:1.5em;
+                            i.fa-play{
+                                font-size:2em;
                                 text-align:center;
                                 display: block;
+                                color: $color;
+                                line-height:53px;
+                                &:hover {
+                                    cursor: pointer;
+                                    font-weight:bold;
+                                    color: $color;
+                                }
                             }
                         }
 
                         div#progress {
-                            width: 60%;
+                            width: 57%;
                             display: inline-block;
-                            height: 27.5px;
+                            height: 28px;
+                            margin:0 0.5em;
 
                             span#play_progress {
                                 background-color: $color2;
-                                height: 27.5px;
+                                height: 28px;
                                 display: block;
                             }
                             span#load_progress {
                                 background-color: $color8;
-                                height: 27.5px;
+                                height: 28px;
                                 display: block;
                             }
 
@@ -1074,26 +1347,72 @@ Domain Path: /language
                             width: 20%;
                             display: inline-block;
                             float: right;
-                            background-color: $color4;
+                            color: $color;
                             letter-spacing: 0.1em;
-                            span#duration {
+                            margin-bottom:0.5em;
+                            span{
+                                
+                                line-height: 27px;
                                 text-align: center;
-                                color: $color;
-                                font-size: 0.85em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+                                font-size: 0.8em;
                                 display: block;
+                                background-color:$color4;
+                                color:$color;
+                            }
+                            span#duration {
+         
                             }
                             span#current_time {
-                                text-align: center;
-                                color: $color;
-                                font-size: 0.85em;
-                                height: 27.5px;
-                                line-height: 27.5px;
-                                display: block;
+                                border-bottom:1px solid #fff;
+                      
+
                             }
                         }
 
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                display:block;
+                                float:left;
+                                line-height:60px;
+                                color:$color;
+                                background-color:$color4;
+                                margin-right:0.5em;
+                                text-align:center;
+                                clear:both;
+                                
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                clear:both;
+                                display:inline-block;
+                                height: 53px;
+                            }
+
+                        }
+
+                       
+                        label{
+                            width:20%;
+                            display:block;
+                            float:left;
+                            line-height:60px;
+                            color:$color;
+                            background-color:$color4;
+                            margin-right:0.5em;
+                            text-align:center;
+                            clear:both;
+                            
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            clear:both;
+                            display:inline-block;
+                            height: 53px;
+                        }
+                        
+                       
                     }
 
                     //video
@@ -1104,6 +1423,7 @@ Domain Path: /language
                      
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
@@ -1618,6 +1938,9 @@ Domain Path: /language
 
             #clashvibes_title {
                 width: 20%;
+                h1{
+                    font-size:2.4em;
+                }
             }
 
             span#socialmediatop {
@@ -1677,60 +2000,117 @@ Domain Path: /language
                     font-size: 1.25em;
                 }
 
-                #new_released_section {
-                    margin: 0 0 0.5em 0; 
+                div.results{
 
-                    .new_released_box {
+                    margin: 0 0 0.5em 0; 
+                     
+                    article.you_tube_box{
+
                         width: 19%; //19%;
                         min-height: 330px;
-                        margin: 0.5%;
 
                         h1 {
-                            font-size: 0.85em;
-                            line-height: 25px;
-                            letter-spacing: 0.03em;
+                            margin: 0;
+                            font-size: 0.9em;
                         }
 
                         a {
-                            font-size: 0.85em;
+                            font-size: 0.9em;
                             letter-spacing: 0.05em;
 
                             &:hover {
                                 font-weight: bold;
+
+                            }
+                        }
+
+                        figure.you_tube_thumb {
+                            width: 90%;
+
+                            &:hover {
+                                width: 92%;
+
+                            }
+                            img {
+
+                                @include box-sizing($type: border-box);
+
+
+                            }
+                            li{
+                                list-style:none;
+                                iframe{
+                                    width:100%;
+                                }
+                            }
+
+                            .u_tube {
+                                margin:0;
+                                                               
+                                span.u_tube_button {
+                                    height: 40px;
+
+                                    a {
+
+                                        font-size: 0.9em;
+   
+                                        &:hover {
+
+                                            letter-spacing: 0.055em;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                           
+                div.results,
+                #new_released_section {
+                    padding: 0;
+                    
+                    .new_released_box{
+                        width: 19%; //19%;
+                        min-height: 330px;
+
+                        h1 {
+                            font-size: 0.9em;
+                        }
+
+                        a {
+                            font-size: 0.9em;
+
+                            &:hover {
+
+                                width: 100%;
                             }
                         }
 
                         figure.thumb {
-                            width: 60%;
+                            width: 50%;
                             margin: 4% auto;
+
                             &:hover {
-                                width: 65%;
+                                width: 55%;
+
                             }
                             img {
                                 @include box-sizing($type: border-box);
+
                             }
 
                             figcaption {
 
-                                span.rantsection {
-                                    height: 30px;
-                                    width: 45%;
-                                    img.star {
-                                        width: 20%;
-                                    }
-                                }
-
                                 span.more_button {
-                                    height: 40px;
-                                    position:relative;
+                                    padding: 0;
                                     a {
-                                        font-size: 0.85em;
-                                        line-height: 40px;
-                                        letter-spacing: 0.05em;
 
+                                        font-size: 0.9em;
+                                        line-height: 40px;
                                         &:hover {
                                             letter-spacing: 0.055em;
-                                            font-weight: bold;
+            
                                         }
                                     }
                                 }

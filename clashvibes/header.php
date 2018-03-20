@@ -94,6 +94,13 @@
 			<?php wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' )); ?>
         </ul>
 </nav>
-<?php if(!is_front_page()) : ?> <?php endif; ?>
+<?php if(!is_front_page()) : ?>
 
-    <button id="side-bar-btn"></button>
+    <button id="side-bar-btn">SideBar</button>
+
+    <?php else : ?>
+
+    <button id="side-bar-btn" style="display:none">SideBar</button>
+
+    
+     <?php endif; ?>

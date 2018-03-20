@@ -161,7 +161,7 @@ Domain Path: /language
                     color:$color2;
                     margin:0;
                     padding:0;
-                    line-height:45px;
+                    line-height:40px;
                     font-size:2.5em;
                     text-indent: 0.1em;
                 }
@@ -1186,20 +1186,14 @@ Domain Path: /language
                 }
 
                 //Global
-                .audio-play {
+                .audio-play,
+                .video-play {
                     width: 85%;
                     margin: 0 auto;
                     display: block;
 
                 }
-                .video-play {
-                    width: 45%;
-                    margin: 0 auto;
-                    display: block;
-                    height: 300px;
-                }
-               
-                
+                               
                 //regular post entry
                 div.entry-content{
                     width: 98%;
@@ -1325,10 +1319,10 @@ Domain Path: /language
                         }
 
                         div#progress {
-                            width: 57%;
+                            width: 59%;
                             display: inline-block;
                             height: 28px;
-                            margin:0 0.5em;
+                            margin:0 0.2em;
 
                             span#play_progress {
                                 background-color: $color2;
@@ -1596,7 +1590,7 @@ Domain Path: /language
                                 height: 40px;
                                 line-height: 40px;
                                 text-indent: 1%;
-                                font-size: 1em;
+                                font-size: 0.9em;
                                 background-color: $colors;
                                 color: $color;
                             }
@@ -1918,7 +1912,7 @@ Domain Path: /language
 
     /********** page container **********/
     #container {
-        width: 85%;
+        width: 90%;
 
         h1 {
             margin: 0.5em 0;
@@ -1937,9 +1931,16 @@ Domain Path: /language
             height: 70px;
 
             #clashvibes_title {
-                width: 20%;
+                width: 76%;
+
                 h1{
+
                     font-size:2.4em;
+
+                }
+                h2.site-description{
+                    line-height: 20px;
+                    font-size: 0.7em;
                 }
             }
 
@@ -2087,30 +2088,29 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
-                            width: 50%;
-                            margin: 4% auto;
-
+                        figure.thumbaud,
+                        figure.thumbvid {
+                            width: 55%;
                             &:hover {
-                                width: 55%;
-
+                                width: 60%;
                             }
                             img {
                                 @include box-sizing($type: border-box);
-
                             }
 
                             figcaption {
+                                margin:0;
+                                span.Morebutton {
 
-                                span.more_button {
-                                    padding: 0;
+                                    height: 40px;
+
                                     a {
 
                                         font-size: 0.9em;
-                                        line-height: 40px;
+      
                                         &:hover {
                                             letter-spacing: 0.055em;
-            
+
                                         }
                                     }
                                 }
@@ -2354,38 +2354,32 @@ Domain Path: /language
             article.clash_audio,
             article.post,
             article.page{
+                display: block;
 
-                margin-bottom: 1%;
+                h1 {
+                    font-size: 1.2em;
+                }
 
                 h2 {
-                    font-size: 1.15em;
-                    text-indent: 0.5em;
+                    font-size: 1.1em;
 
                 }
 
                 header.entry-header {
-                    height: auto;
                     display: block;
                     h1 {
                         font-size: 1.4em;
-                        text-indent: 0.5em;
 
                         a {
-
-                            letter-spacing: 0.03em;
+                            width: 100%;
 
                         }
                         span {
                             text-indent: 0.5em;
-                            margin-right:1%;
-
-
                         }
                     }
                     h2 {
                         font-size: 1.2em;
-                        text-indent: 1%;
-
 
                         a{
                             color:$color;
@@ -2393,230 +2387,267 @@ Domain Path: /language
                         }
                     }
 
-                    section.byline {
-                        height: 123px;
+                   div.entry-meta {
                         display: block;
-                        span {
+                        span.posted-on,
+                        span.byline {
                             font-size:0.85em;
-                            text-indent: 0.5em;
 
+                            a{
+                                width:60%;
 
+                            }
                         }
                     }
-
                 }
 
+                /*--- blog image---*/
+                         
+
+                /*--- custom post images---*/
+                figure.thumb {
+                    width: 25%;
+
+                    a.post-thumbnail{
+                        display:block;
+                        img{
+                            margin: 0;
+  
+                        }
+                    }
+                }
+
+                //custom post header
                 header.archive-header {
+
                     margin: 0 auto;
                     .archive-meta {
                         text-indent: 1%;
-                        height: 123px;
                         span {
-
                             font-size: 0.85em;
-                            letter-spacing: 0.05em;
+
                             a {
-                                display: inline-block;
+ 
                                 width: auto;
                             }
                         }
                     }
                     h2 {
-
-                        letter-spacing: 0.05em;
+                        line-height: 50px;
 
                         a {
-                            text-indent: 1%;
-                            font-size: 1.15em;
+
+                            font-size: 1.1em;
                         }
                     }
                 }
 
                 //blog footer
-                footer.byline {
+                footer.entry-footer {
+                    height: auto;
 
-                    text-indent: 0.5em;
                     span {
 
-                        width: 80%;
+                        height: 35px;
                         span.screen-reader-text{
-                            width:75%;
+                            width:auto;
+                        }
+                        a{
+
+                            font-size:0.85em;
+                            line-height:35px;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
+                        a.comments-count {
+                            font-size: 1.1em;
+                            width: 5%;
                         }
 
                     }
-                    a{
-                        width: 38%;
-                        font-size:0.95em;
-                    }
-                    a.comments-count {
-                        font-size: 1.15em;
-                        width: 5%;
-                    }
                     p {
+
                         font-size: 0.85em;
-                        line-height:30px;
                     }
                 }
 
-                //text
-                p {
-                    font-size: 0.85em;
+                //Global
+                .audio-play,
+                .video-play {
+                    width: 85%;
+
                 }
+                               
+                //regular post entry
+                div.entry-content{
+                    width: 98%;
 
-                ul{
-                    margin:0 auto;
-                    width:90%;
+                    //text
+                    p {
+                        font-size: 0.9em;
+                        line-height:1.9em;
+                        a{
 
-                    li{
-                        line-height:40px;
-                        text-indent:0.5em;
+                            display: inline-block;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
                     }
-                }
 
-                //image
-                ul figure {
-                    width: 90%;
-                    padding: 0;
-                }
+                    ul{
 
-                //image
-                figure.thumb {
-                    width: 20%;
+                        width:90%;
+                        figure {
+                            width: 90%;
 
-                    img {
-                        margin: 0;
+                        }
 
+                        li{
+
+                            line-height:40px;
+                        }
                     }
-                }
-
-                //entry
-                div.newsExcerpt {
-                    display: block;
-                    width: 75%;
-                    a.download_button,
+                    
                     a.read_more{
                         width: 30%;
-                        line-height: 30px;
+
+                    }
+                }
+
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
+                    width: 80%;
+
+                    a.download_button{
+                        width: 30%;
                     }
 
                     //audio
-                    .audio-play {
+                    #audio-play {
                         width: 85%;
-
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
+                    div#audio_controls,
+                    div#videocontrols {
                         width: 97%;
-
+                        padding:0.5em;
                         button#play_toggle {
                             width: 20%;
-                            font-size:1.05em;
-                            &:hover {
-                                cursor: pointer;
-                                font-weight:bold;
+                            line-height: 55px;
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                color:$color;
-                                font-size:1.4em;
+                            i.fa-play{
+                                font-size:1.9em;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                         }
 
                         div#progress {
-                            width: 60%;
-                            height: 27.5px;
+                            width: 59%;
+                            height: 28px;
 
                             span#play_progress {
-                                height: 27.5px;
+                                height: 28px;
+
                             }
                             span#load_progress {
-                                height: 27.5px;
+                                height: 28px;
                             }
                         }
 
                         div#time {
                             width: 20%;
                             letter-spacing: 0.1em;
-                            span#duration {
+                            span{
+                                
+                                line-height: 27px;
                                 font-size: 0.8em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+                            }
+                            span#duration {
+         
                             }
                             span#current_time {
-                                font-size: 0.8em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+                                border-bottom:1px solid #fff;
+                      
                             }
                         }
 
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                line-height:60px;
+                           
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                height: 53px;
+                            }
+                        }
+                       
+                        label{
+                            width:20%;
+                            margin-right:0.5em;
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            height: 53px;
+                        }
                     }
 
                     //video
-                    .video-play {
-                        display: block;
-                        iframe {
-                            margin: auto;
-                        }
+                    iframe {
+                        margin: 0 auto;
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
-
                         .jp-type-single {
                             width: 100%;
                             .jp-gui {
-
-                                font-size: 0.85em;
+                                font-size: 0.9em;
                                 .jp-controls{
                                     width:20%;
-
                                     button.jp-play,
                                     button.jp-stop{
-
                                         width: 50%;
                                         line-height: 53px;
-
                                     }
                                 }
 
                                 .jp-progress{
                                     width: 35%;
-
                                     height: 55px;
                                     .jp-seek-bar {
-
                                         line-height: 55px;
-                                        height: 55px;
                                         .jp-play-bar {
                                             line-height: 55px;
-                                            height: 55px;
                                         }
-
                                     }
-
-
                                 }
                                 .jp-volume-controls {
-
                                     height: 55px;
                                     width: 26%;
 
                                     .jp-mute {
-
                                         width: 49%;
-                                        line-height: 35px;
-
                                         margin-right: 0.1em;
 
                                     }
                                     .jp-volume-max {
+                                        height: 100%;
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
-
                                     }
                                 }
 
@@ -2631,6 +2662,7 @@ Domain Path: /language
                                     .jp-duration {
                                         width: 30%;
                                         line-height: 55px;
+
                                     }
 
                                     .jp-toggles {
@@ -2639,33 +2671,28 @@ Domain Path: /language
                                         width: 34%;
                                         .jp-repeat {
                                             line-height: 55px;
-
                                         }
                                     }
                                 }
                             }
                             .jp-details{
-                                height:50px;
-                                line-height:50px;
                                 margin-top: 0.2em;
                             }
                         }
                     }
                 }
-
+                
                 //custom-post-footer
                 footer.speaker-meta {
-
-                    min-height: 160px;
+                    height: 160px;
 
                     ul.post-meta {
+                        height: 100%;
                         letter-spacing: 0.05em;
 
                         li {
-                            line-height: 39px;
-                            height: 40px;
-                            font-size: 0.85em;
 
+                            font-size: 0.9em;
                             span.post-meta-key {
                                 width: 20%;
                                 font-size: 0.9em;
@@ -2674,7 +2701,7 @@ Domain Path: /language
 
                         p{
                             width:79%;
-                            font-size:0.85em;
+                            font-size: 0.85em;
                         }
                     }
                 }
@@ -2926,7 +2953,17 @@ Domain Path: /language
             height: 70px;
 
             #clashvibes_title {
-                width: 27%;
+                width: 74%;
+
+                h1{
+
+                    font-size:2.3em;
+
+                }
+                h2.site-description{
+                    line-height: 20px;
+                    font-size: 0.7em;
+                }
             }
 
             span#socialmediatop {
@@ -2953,6 +2990,7 @@ Domain Path: /language
                 list-style: none;
                 li {
                     width: 14%;
+                    margin-right: 0.25em;
 
                     a {
                         font-size: 0.8em;
@@ -3007,32 +3045,22 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
-                            width: 65%;
-
+                        figure.thumbaud,
+                        figure.thumbvid {
+                            width: 60%;
                             &:hover {
-                                width: 70%;
+                                width: 65%;
                             }
                             img {
                                 @include box-sizing($type: border-box);
                             }
 
                             figcaption {
-
-                                span.rantsection {
-                                    width: 45%;
-                                    img.star {
-                                        width: 20%;
-                                    }
-                                }
-
-                                span.more_button {
+                                margin:0;
+                                span.Morebutton {
                                     height: 40px;
-
                                     a {
-                                        font-size: 0.8em;
-                                        letter-spacing: 0.05em;
-
+                                        font-size: 0.85em;
                                         &:hover {
                                             letter-spacing: 0.055em;
                                         }
@@ -3269,8 +3297,11 @@ Domain Path: /language
             article.clash_audio,
             article.post,
             article.page{
+                display: block;
 
-                margin-bottom: 1%;
+                h1 {
+                    font-size: 1.2em;
+                }
 
                 h2 {
                     font-size: 1.1em;
@@ -3278,26 +3309,20 @@ Domain Path: /language
                 }
 
                 header.entry-header {
-                    height: auto;
                     display: block;
                     h1 {
-                        font-size: 1.3em;
-                        text-indent: 0.5em;
+                        font-size: 1.2em;
 
                         a {
-
-                            letter-spacing: 0.03em;
+                            width: 100%;
 
                         }
                         span {
                             text-indent: 0.5em;
-
                         }
                     }
                     h2 {
                         font-size: 1.1em;
-                        text-indent: 1%;
-
 
                         a{
                             color:$color;
@@ -3305,242 +3330,277 @@ Domain Path: /language
                         }
                     }
 
-                    section.byline {
-                        height: 123px;
-
-                        span {
+                   div.entry-meta {
+                        display: block;
+                        span.posted-on,
+                        span.byline {
                             font-size:0.8em;
-                            text-indent: 0.5em;
 
+                            a{
+                                width:70%;
 
+                            }
                         }
                     }
-
                 }
 
+                /*--- blog image---*/
+                         
+
+                /*--- custom post images---*/
+                figure.thumb {
+                    width: 30%;
+
+                    a.post-thumbnail{
+                        display:block;
+                        img{
+                            margin: 0;
+  
+                        }
+                    }
+                }
+
+                //custom post header
                 header.archive-header {
+
                     margin: 0 auto;
                     .archive-meta {
                         text-indent: 1%;
-                        height: 123px;
                         span {
+                            font-size: 0.85em;
 
-                            font-size: 0.8em;
-                            letter-spacing: 0.05em;
                             a {
-
+ 
                                 width: auto;
                             }
                         }
                     }
                     h2 {
-                        letter-spacing: 0.05em;
+                        line-height: 50px;
 
                         a {
+
                             font-size: 1.1em;
                         }
                     }
                 }
 
                 //blog footer
-                footer.byline {
+                footer.entry-footer {
+                    height: auto;
 
-                    text-indent: 0.5em;
                     span {
 
-                        width: 80%;
+                        height: 35px;
                         span.screen-reader-text{
-                            width:75%;
+                            width:auto;
+                        }
+                        a{
+
+                            font-size:0.85em;
+                            line-height:35px;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
+                        a.comments-count {
+                            font-size: 1.1em;
+                            width: 5%;
                         }
 
                     }
-                    a{
-                        width: 38%;
-                        font-size:0.9em;
+                    p {
+
+                        font-size: 0.85em;
                     }
-                    a.comments-count {
-                        font-size: 1.1em;
-                        width: 5%;
-                    }
+                }
+
+                //Global
+                .audio-play,
+                .video-play {
+                    width: 85%;
+
+                }
+                               
+                //regular post entry
+                div.entry-content{
+                    width: 98%;
+
+                    //text
                     p {
                         font-size: 0.8em;
-                        line-height:30px;
+                        line-height:1.9em;
+                        a{
+
+                            display: inline-block;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
                     }
-                }
 
-                //text
-                p {
-                    font-size: 0.8em;
-                }
+                    ul{
 
-                ul{
-                    margin:0 auto;
-                    width:90%;
+                        width:90%;
+                        figure {
+                            width: 90%;
 
-                    li{
-                        line-height:40px;
-                        text-indent:0.5em;
+                        }
+
+                        li{
+
+                            line-height:40px;
+                        }
                     }
-                }
-
-                //image
-                ul figure {
-                    width: 90%;
-                    padding: 0;
-                }
-
-                //image
-                figure.thumb {
-                    width: 25%;
-
-                    img {
-                        margin: 0;
-
-                    }
-                }
-
-                //entry
-                div.newsExcerpt {
-                    display: block;
-                    width: 80%;
-                    a.download_button,
+                    
                     a.read_more{
-                        width: 30%;
-                        line-height: 30px;
+                        width: 40%;
+
+                    }
+                }
+
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
+                    width: 85%;
+
+                    a.download_button{
+                        width: 40%;
                     }
 
                     //audio
-                    .audio-play {
-                        width: 85%;
-
+                    #audio-play {
+                        width: 90%;
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
+                    div#audio_controls,
+                    div#videocontrols {
                         width: 97%;
-
+                        padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            font-size:1em;
-                            &:hover {
-                                cursor: pointer;
-                                font-weight:bold;
+                            line-height: 55px;
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                color:$color;
-                                font-size:1.3em;
+                            i.fa-play{
+                                font-size:1.9em;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                         }
 
                         div#progress {
-                            width: 60%;
-                            height: 27.5px;
+                            width: 58%;
+                            height: 28px;
 
                             span#play_progress {
-                                height: 27.5px;
+                                height: 28px;
+
                             }
                             span#load_progress {
-                                height: 27.5px;
+                                height: 28px;
                             }
                         }
 
                         div#time {
                             width: 20%;
                             letter-spacing: 0.1em;
+                            span{
+                                
+                                line-height: 27px;
+                                font-size: 0.75em;
+                            }
                             span#duration {
-                                font-size: 0.8em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+         
                             }
                             span#current_time {
-                                font-size: 0.8em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+                                border-bottom:1px solid #fff;
+                      
                             }
                         }
 
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                line-height:60px;
+                           
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                height: 53px;
+                            }
+                        }
+                       
+                        label{
+                            width:20%;
+                            margin-right:0.5em;
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            height: 53px;
+                        }
                     }
 
                     //video
-                    .video-play {
-                        display: block;
-                        iframe {
-                            margin: auto;
-                        }
+                    iframe {
+                        margin: 0 auto;
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
-
                         .jp-type-single {
                             width: 100%;
                             .jp-gui {
-
                                 font-size: 0.8em;
                                 .jp-controls{
                                     width:20%;
-
                                     button.jp-play,
                                     button.jp-stop{
-
                                         width: 50%;
-                                        line-height: 53px;
 
                                     }
                                 }
 
                                 .jp-progress{
                                     width: 35%;
-
-                                    height: 55px;
                                     .jp-seek-bar {
-
                                         line-height: 55px;
-                                        height: 55px;
                                         .jp-play-bar {
                                             line-height: 55px;
-                                            height: 55px;
                                         }
-
                                     }
-
-
                                 }
                                 .jp-volume-controls {
-
-                                    height: 55px;
                                     width: 26%;
 
                                     .jp-mute {
-
                                         width: 49%;
-                                        line-height: 35px;
 
-                                        margin-right: 0.1em;
 
                                     }
                                     .jp-volume-max {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
-
                                     }
                                 }
 
                                 .jp-time-holder{
                                     width:19%;
-                                    display:inline-block;
+
 
                                     .jp-current-time {
                                         width: 30%;
-                                        line-height: 55px;
+
                                     }
                                     .jp-duration {
                                         width: 30%;
-                                        line-height: 55px;
                                     }
 
                                     .jp-toggles {
@@ -3549,43 +3609,36 @@ Domain Path: /language
                                         width: 34%;
                                         .jp-repeat {
                                             line-height: 55px;
-
                                         }
                                     }
                                 }
                             }
                             .jp-details{
-                                height:50px;
-                                line-height:50px;
                                 margin-top: 0.2em;
                             }
                         }
                     }
                 }
-
+                
                 //custom-post-footer
                 footer.speaker-meta {
-
-                    min-height: 160px;
+                    height: 160px;
 
                     ul.post-meta {
+                        height: 100%;
                         letter-spacing: 0.05em;
 
                         li {
-                            line-height: 39px;
-                            height: 40px;
-                            font-size: 0.8em;
-
+                            font-size: 0.85em;
                             span.post-meta-key {
-                                width: 21%;
+                                width: 20%;
                                 font-size: 0.85em;
-
                             }
                         }
 
                         p{
-                            width:75%;
-                            font-size:0.8em;
+                            width:79%;
+                            font-size: 0.85em;
                         }
                     }
                 }
@@ -3596,14 +3649,12 @@ Domain Path: /language
             float: left;
             h1 {
                 width: 98%;
-                margin: 1% auto;
                 letter-spacing: 0.05em;
             }
 
             p {
                 font-size: 0.9em;
                 line-height: 1.6em;
-                width: 98%;
             }
 
             .news_box {
@@ -3834,10 +3885,20 @@ Domain Path: /language
 
         /********** header *****/
         header {
-            height: 70px;
+            height: 65px;
 
             #clashvibes_title {
-                width: 34%;
+                width: 67%;
+
+                h1{
+
+                    font-size:2.2em;
+
+                }
+                h2.site-description{
+                    line-height: 20px;
+                    font-size: 0.7em;
+                }
             }
 
             span#socialmediatop {
@@ -3863,7 +3924,7 @@ Domain Path: /language
             ul {
                 list-style: none;
                 li {
-                    width: 15.5%;
+                    width: 16%;
                     margin-right: 0.25em;
 
                     a {
@@ -3903,10 +3964,10 @@ Domain Path: /language
 
                     .new_released_box {
                         width: 19%; //19%;
-                        min-height: 300px;
+                        min-height: 250px;
 
                         h1 {
-                            font-size: 0.8em;
+                            font-size: 0.75em;
                             line-height: 20px;
 
                         }
@@ -3920,32 +3981,22 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
-                            width: 70%;
-
+                        figure.thumbaud,
+                        figure.thumbvid {
+                            width: 65%;
                             &:hover {
-                                width: 75%;
+                                width: 70%;
                             }
                             img {
                                 @include box-sizing($type: border-box);
                             }
 
                             figcaption {
-
-                                span.rantsection {
-                                    width: 45%;
-                                    img.star {
-                                        width: 20%;
-                                    }
-                                }
-
-                                span.more_button {
+                                margin:0;
+                                span.Morebutton {
                                     height: 40px;
-
                                     a {
-                                        font-size: 0.85em;
-                                        letter-spacing: 0.05em;
-
+                                        font-size: 0.8em;
                                         &:hover {
                                             letter-spacing: 0.055em;
                                         }
@@ -4187,8 +4238,11 @@ Domain Path: /language
             article.clash_audio,
             article.post,
             article.page{
+                display: block;
 
-                margin-bottom: 1%;
+                h1 {
+                    font-size: 1.2em;
+                }
 
                 h2 {
                     font-size: 1.1em;
@@ -4196,26 +4250,20 @@ Domain Path: /language
                 }
 
                 header.entry-header {
-                    height: auto;
                     display: block;
                     h1 {
                         font-size: 1.1em;
-                        text-indent: 0.5em;
 
                         a {
-
-                            letter-spacing: 0.03em;
+                            width: 100%;
 
                         }
                         span {
                             text-indent: 0.5em;
-
                         }
                     }
                     h2 {
-                        font-size: 1em;
-                        text-indent: 1%;
-
+                        font-size: 1.1em;
 
                         a{
                             color:$color;
@@ -4223,243 +4271,277 @@ Domain Path: /language
                         }
                     }
 
-                    section.byline {
-                        height: 123px;
+                   div.entry-meta {
+                        display: block;
+                        span.posted-on,
+                        span.byline {
+                            font-size:0.75em;
 
-                        span {
-                            font-size:0.8em;
-                            text-indent: 0.5em;
+                            a{
+                                width:80%;
 
-
+                            }
                         }
                     }
-
                 }
 
+                /*--- blog image---*/
+                         
+
+                /*--- custom post images---*/
+                figure.thumb {
+                    width: 30%;
+
+                    a.post-thumbnail{
+                        display:block;
+                        img{
+                            margin: 0;
+  
+                        }
+                    }
+                }
+
+                //custom post header
                 header.archive-header {
+
                     margin: 0 auto;
                     .archive-meta {
                         text-indent: 1%;
-                        height: 123px;
                         span {
                             font-size: 0.8em;
-                            letter-spacing: 0.05em;
-                            a {
 
+                            a {
+ 
                                 width: auto;
                             }
                         }
                     }
                     h2 {
-                        font-size: 1em;
-                        letter-spacing: 0.05em;
+                        line-height: 50px;
 
                         a {
-                            font-size: 1.05em;
+
+                            font-size: 1.1em;
                         }
                     }
                 }
 
                 //blog footer
-                footer.byline {
+                footer.entry-footer {
+                    height: auto;
 
-                    text-indent: 0.5em;
                     span {
 
-                        width: 80%;
+                        height: 35px;
                         span.screen-reader-text{
-                            width:75%;
-                            font-size:0.85em;
+                            width:auto;
+                        }
+                        a{
+
+                            font-size:0.8em;
+                            line-height:35px;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
+                        a.comments-count {
+                            font-size: 1.1em;
+                            width: 5%;
                         }
 
                     }
-                    a{
-                        width: 38%;
-                        font-size:0.8em;
+                    p {
+
+                        font-size: 0.85em;
                     }
-                    a.comments-count {
-                        font-size: 1em;
-                        width: 5%;
-                    }
+                }
+
+                //Global
+                .audio-play,
+                .video-play {
+                    width: 85%;
+
+                }
+                               
+                //regular post entry
+                div.entry-content{
+                    width: 98%;
+
+                    //text
                     p {
                         font-size: 0.8em;
-                        line-height:30px;
+                        line-height:1.9em;
+                        a{
+
+                            display: inline-block;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
                     }
-                }
 
-                //text
-                p {
-                    font-size: 0.8em;
-                }
+                    ul{
 
-                ul{
-                    margin:0 auto;
-                    width:90%;
+                        width:90%;
+                        figure {
+                            width: 90%;
 
-                    li{
-                        line-height:40px;
-                        text-indent:0.5em;
+                        }
+
+                        li{
+
+                            line-height:40px;
+                        }
                     }
-                }
-
-                //image
-                ul figure {
-                    width: 90%;
-                    padding: 0;
-                }
-
-                //image
-                figure.thumb {
-                    width: 25%;
-
-                    img {
-                        margin: 0;
-
-                    }
-                }
-
-                //entry
-                div.newsExcerpt {
-                    display: block;
-                    width: 80%;
-                    a.download_button,
+                    
                     a.read_more{
-                        width: 30%;
-                        line-height: 30px;
+                        width: 40%;
+
+                    }
+                }
+
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
+                    width: 90%;
+
+                    a.download_button{
+                        width: 40%;
                     }
 
                     //audio
-                    .audio-play {
-                        width: 85%;
-
+                    #audio-play {
+                        width: 90%;
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
+                    div#audio_controls,
+                    div#videocontrols {
                         width: 97%;
-
+                        padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            font-size:1em;
-                            &:hover {
-                                cursor: pointer;
-                                font-weight:bold;
+                            line-height: 55px;
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                color:$color;
-                                font-size:1.3em;
+                            i.fa-play{
+                                font-size:1.9em;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                         }
 
                         div#progress {
-                            width: 60%;
-                            height: 27.5px;
+                            width: 58%;
+                            height: 28px;
 
                             span#play_progress {
-                                height: 27.5px;
+                                height: 28px;
+
                             }
                             span#load_progress {
-                                height: 27.5px;
+                                height: 28px;
                             }
                         }
 
                         div#time {
                             width: 20%;
                             letter-spacing: 0.1em;
+                            span{
+                                
+                                line-height: 27px;
+                                font-size: 0.7em;
+                            }
                             span#duration {
-                                font-size: 0.8em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+         
                             }
                             span#current_time {
-                                font-size: 0.8em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+                                border-bottom:1px solid #fff;
+                      
                             }
                         }
 
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                line-height:60px;
+                           
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                height: 53px;
+                            }
+                        }
+                       
+                        label{
+                            width:20%;
+                            margin-right:0.5em;
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            height: 53px;
+                        }
                     }
 
                     //video
-                    .video-play {
-                        display: block;
-                        iframe {
-                            margin: auto;
-                        }
+                    iframe {
+                        margin: 0 auto;
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
-
                         .jp-type-single {
                             width: 100%;
                             .jp-gui {
-
                                 font-size: 0.8em;
                                 .jp-controls{
                                     width:20%;
-
                                     button.jp-play,
                                     button.jp-stop{
-
                                         width: 50%;
-                                        line-height: 53px;
 
                                     }
                                 }
 
                                 .jp-progress{
                                     width: 35%;
-
-                                    height: 55px;
                                     .jp-seek-bar {
-
                                         line-height: 55px;
-                                        height: 55px;
                                         .jp-play-bar {
                                             line-height: 55px;
-                                            height: 55px;
                                         }
-
                                     }
-
-
                                 }
                                 .jp-volume-controls {
-
-                                    height: 55px;
                                     width: 26%;
 
                                     .jp-mute {
-
                                         width: 49%;
-                                        line-height: 35px;
 
-                                        margin-right: 0.1em;
 
                                     }
                                     .jp-volume-max {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
-
                                     }
                                 }
 
                                 .jp-time-holder{
                                     width:19%;
-                                    display:inline-block;
+
 
                                     .jp-current-time {
                                         width: 30%;
-                                        line-height: 55px;
+
                                     }
                                     .jp-duration {
                                         width: 30%;
-                                        line-height: 55px;
                                     }
 
                                     .jp-toggles {
@@ -4468,44 +4550,36 @@ Domain Path: /language
                                         width: 34%;
                                         .jp-repeat {
                                             line-height: 55px;
-
                                         }
                                     }
                                 }
                             }
                             .jp-details{
-                                height:50px;
-                                line-height:50px;
                                 margin-top: 0.2em;
                             }
                         }
                     }
                 }
-
+                
                 //custom-post-footer
                 footer.speaker-meta {
-
-                    min-height: 160px;
+                    height: 160px;
 
                     ul.post-meta {
+                        height: 100%;
                         letter-spacing: 0.05em;
 
                         li {
-                            line-height: 39px;
-                            height: 40px;
-                            font-size: 0.75em;
-
+                            font-size: 0.8em;
                             span.post-meta-key {
-                                width: 21%;
+                                width: 20%;
                                 font-size: 0.8em;
-
                             }
-
                         }
 
                         p{
-                            width:77%;
-                            font-size: 0.75em;
+                            width:79%;
+                            font-size: 0.8em;
                         }
                     }
                 }
@@ -4752,10 +4826,20 @@ Domain Path: /language
 
         /********** header *****/
         header {
-            height: 70px;
+            height: 65px;
 
             #clashvibes_title {
-                width: 40%;
+                width: 61%;
+
+                h1{
+
+                    font-size:2.1em;
+
+                }
+                h2.site-description{
+                    line-height: 20px;
+                    font-size: 0.7em;
+                }
             }
 
             span#socialmediatop {
@@ -4781,8 +4865,8 @@ Domain Path: /language
             ul {
                 list-style: none;
                 li {
-                    width: 16%;
-
+                    width: 16.4%;
+                    margin-right: 0.1em;
                     a {
                         font-size: 0.7em;
 
@@ -4819,8 +4903,8 @@ Domain Path: /language
                     margin: 0 0 0.5em 0; 
 
                     .new_released_box {
-                        width: 19%; //19%;
-                        min-height: 270px;
+                        width: 24%; //19%;
+                        min-height: 250px;
 
                         h1 {
                             font-size: 0.75em;
@@ -4837,32 +4921,22 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
-                            width: 70%;
-
+                        figure.thumbaud,
+                        figure.thumbvid {
+                            width: 65%;
                             &:hover {
-                                width: 75%;
+                                width: 70%;
                             }
                             img {
                                 @include box-sizing($type: border-box);
                             }
 
                             figcaption {
-
-                                span.rantsection {
-                                    width: 45%;
-                                    img.star {
-                                        width: 20%;
-                                    }
-                                }
-
-                                span.more_button {
+                                margin:0;
+                                span.Morebutton {
                                     height: 40px;
-
                                     a {
-                                        font-size: 0.85em;
-                                        letter-spacing: 0.05em;
-
+                                        font-size: 0.8em;
                                         &:hover {
                                             letter-spacing: 0.055em;
                                         }
@@ -5101,8 +5175,11 @@ Domain Path: /language
             article.clash_audio,
             article.post,
             article.page{
+                display: block;
 
-                margin-bottom: 1%;
+                h1 {
+                    font-size: 1.1em;
+                }
 
                 h2 {
                     font-size: 1em;
@@ -5110,26 +5187,20 @@ Domain Path: /language
                 }
 
                 header.entry-header {
-                    height: auto;
                     display: block;
                     h1 {
                         font-size: 1em;
-                        text-indent: 0.5em;
 
                         a {
-
-                            letter-spacing: 0.03em;
+                            width: 100%;
 
                         }
                         span {
                             text-indent: 0.5em;
-
                         }
                     }
                     h2 {
-                        font-size: 0.95em;
-                        text-indent: 1%;
-
+                        font-size: 1em;
 
                         a{
                             color:$color;
@@ -5137,243 +5208,277 @@ Domain Path: /language
                         }
                     }
 
-                    section.byline {
-                        height: 123px;
+                   div.entry-meta {
+                        display: block;
+                        span.posted-on,
+                        span.byline {
+                            font-size:0.7em;
 
-                        span {
-                            font-size:0.75em;
-                            text-indent: 0.5em;
+                            a{
+                                width:80%;
 
-
+                            }
                         }
                     }
-
                 }
 
+                /*--- blog image---*/
+                         
+
+                /*--- custom post images---*/
+                figure.thumb {
+                    width: 35%;
+
+                    a.post-thumbnail{
+                        display:block;
+                        img{
+                            margin: 0;
+  
+                        }
+                    }
+                }
+
+                //custom post header
                 header.archive-header {
+
                     margin: 0 auto;
                     .archive-meta {
                         text-indent: 1%;
-                        height: 123px;
                         span {
-                            font-size: 0.75em;
-                            letter-spacing: 0.05em;
-                            a {
+                            font-size: 0.8em;
 
+                            a {
+ 
                                 width: auto;
                             }
                         }
                     }
                     h2 {
-                        font-size: 1em;
-                        letter-spacing: 0.05em;
+                        line-height: 50px;
 
                         a {
-                            font-size: 1em;
+
+                            font-size: 1.1em;
                         }
                     }
                 }
 
                 //blog footer
-                footer.byline {
+                footer.entry-footer {
+                    height: auto;
 
-                    text-indent: 0.5em;
                     span {
 
-                        width: 80%;
+                        height: 35px;
                         span.screen-reader-text{
-                            width:75%;
+                            width:auto;
+                        }
+                        a{
+
                             font-size:0.8em;
+                            line-height:35px;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
+                        a.comments-count {
+                            font-size: 1.1em;
+                            width: 5%;
                         }
 
                     }
-                    a{
-                        width: 38%;
-                        font-size:0.75em;
-                    }
-                    a.comments-count {
-                        font-size: 1em;
-                        width: 5%;
-                    }
                     p {
-                        font-size: 0.75em;
-                        line-height:30px;
+
+                        font-size: 0.85em;
                     }
                 }
 
-                //text
-                p {
-                    font-size: 0.8em;
+                //Global
+                .audio-play,
+                .video-play {
+                    width: 85%;
+
                 }
+                               
+                //regular post entry
+                div.entry-content{
+                    width: 98%;
 
-                ul{
-                    margin:0 auto;
-                    width:90%;
+                    //text
+                    p {
+                        font-size: 0.8em;
+                        line-height:1.9em;
+                        a{
 
-                    li{
-                        line-height:40px;
-                        text-indent:0.5em;
+                            display: inline-block;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
                     }
-                }
 
-                //image
-                ul figure {
-                    width: 90%;
-                    padding: 0;
-                }
+                    ul{
 
-                //image
-                figure.thumb {
-                    width: 30%;
+                        width:90%;
+                        figure {
+                            width: 90%;
 
-                    img {
-                        margin: 0;
+                        }
 
+                        li{
+
+                            line-height:40px;
+                        }
                     }
-                }
-
-                //entry
-                div.newsExcerpt {
-                    display: block;
-                    width: 80%;
-                    a.download_button,
+                    
                     a.read_more{
-                        width: 30%;
-                        line-height: 30px;
+                        width: 40%;
+
+                    }
+                }
+
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
+                    width: 90%;
+
+                    a.download_button{
+                        width: 40%;
                     }
 
                     //audio
-                    .audio-play {
-                        width: 85%;
-
+                    #audio-play {
+                        width: 90%;
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
+                    div#audio_controls,
+                    div#videocontrols {
                         width: 97%;
-
+                        padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            font-size:1em;
-                            &:hover {
-                                cursor: pointer;
-                                font-weight:bold;
+                            line-height: 55px;
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                color:$color;
-                                font-size:2em;
+                            i.fa-play{
+                                font-size:1.9em;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                         }
 
                         div#progress {
-                            width: 60%;
-                            height: 27.5px;
+                            width: 58%;
+                            height: 28px;
 
                             span#play_progress {
-                                height: 27.5px;
+                                height: 28px;
+
                             }
                             span#load_progress {
-                                height: 27.5px;
+                                height: 28px;
                             }
                         }
 
                         div#time {
                             width: 20%;
                             letter-spacing: 0.1em;
+                            span{
+                                
+                                line-height: 27px;
+                                font-size: 0.7em;
+                            }
                             span#duration {
-                                font-size: 0.8em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+         
                             }
                             span#current_time {
-                                font-size: 0.8em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+                                border-bottom:1px solid #fff;
+                      
                             }
                         }
 
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                line-height:60px;
+                           
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                height: 53px;
+                            }
+                        }
+                       
+                        label{
+                            width:20%;
+                            margin-right:0.5em;
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            height: 53px;
+                        }
                     }
 
                     //video
-                    .video-play {
-                        display: block;
-                        iframe {
-                            margin: auto;
-                        }
+                    iframe {
+                        margin: 0 auto;
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
-
                         .jp-type-single {
                             width: 100%;
                             .jp-gui {
-
                                 font-size: 0.8em;
                                 .jp-controls{
                                     width:20%;
-
                                     button.jp-play,
                                     button.jp-stop{
-
                                         width: 50%;
-                                        line-height: 53px;
 
                                     }
                                 }
 
                                 .jp-progress{
                                     width: 35%;
-
-                                    height: 55px;
                                     .jp-seek-bar {
-
                                         line-height: 55px;
-                                        height: 55px;
                                         .jp-play-bar {
                                             line-height: 55px;
-                                            height: 55px;
                                         }
-
                                     }
-
-
                                 }
                                 .jp-volume-controls {
-
-                                    height: 55px;
                                     width: 26%;
 
                                     .jp-mute {
-
                                         width: 49%;
-                                        line-height: 35px;
 
-                                        margin-right: 0.1em;
 
                                     }
                                     .jp-volume-max {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
-
                                     }
                                 }
 
                                 .jp-time-holder{
                                     width:19%;
-                                    display:inline-block;
+
 
                                     .jp-current-time {
                                         width: 30%;
-                                        line-height: 55px;
+
                                     }
                                     .jp-duration {
                                         width: 30%;
-                                        line-height: 55px;
                                     }
 
                                     .jp-toggles {
@@ -5382,44 +5487,36 @@ Domain Path: /language
                                         width: 34%;
                                         .jp-repeat {
                                             line-height: 55px;
-
                                         }
                                     }
                                 }
                             }
                             .jp-details{
-                                height:50px;
-                                line-height:50px;
                                 margin-top: 0.2em;
                             }
                         }
                     }
                 }
-
+                
                 //custom-post-footer
                 footer.speaker-meta {
-
-                    min-height: 160px;
+                    height: 160px;
 
                     ul.post-meta {
+                        height: 100%;
                         letter-spacing: 0.05em;
 
                         li {
-                            line-height: 39px;
-                            height: 40px;
                             font-size: 0.7em;
-
                             span.post-meta-key {
-                                width: 24%;
-                                
+                                width: 20%;
+                                font-size: 0.75em;
                             }
-
                         }
 
                         p{
-                            width:74%;
-                            font-size: 0.7em;
-                            line-height: 13px;
+                            width:79%;
+                            font-size: 0.8em;
                         }
                     }
                 }
@@ -5668,10 +5765,20 @@ Domain Path: /language
 
         /********** header *****/
         header {
-            height: 70px;
+            height: 65px;
 
             #clashvibes_title {
-                width: 50%;
+                width: 61%;
+
+                h1{
+
+                    font-size:2em;
+
+                }
+                h2.site-description{
+                    line-height: 20px;
+                    font-size: 0.65em;
+                }
             }
 
             span#socialmediatop {
@@ -5736,8 +5843,8 @@ Domain Path: /language
                     margin: 0 0 0.5em 0; 
 
                     .new_released_box {
-                        width: 19%; //19%;
-                        min-height: 250px;
+                        width: 24%;
+                        min-height: 260px;
 
                         h1 {
                             font-size: 0.75em;
@@ -5753,32 +5860,22 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
-                            width: 80%;
-
+                        figure.thumbaud,
+                        figure.thumbvid {
+                            width: 70%;
                             &:hover {
-                                width: 85%;
+                                width: 75%;
                             }
                             img {
                                 @include box-sizing($type: border-box);
                             }
 
                             figcaption {
-
-                                span.rantsection {
-                                    width: 45%;
-                                    img.star {
-                                        width: 20%;
-                                    }
-                                }
-
-                                span.more_button {
+                                margin:0;
+                                span.Morebutton {
                                     height: 40px;
-
                                     a {
                                         font-size: 0.8em;
-                                        letter-spacing: 0.05em;
-
                                         &:hover {
                                             letter-spacing: 0.055em;
                                         }
@@ -5882,10 +5979,10 @@ Domain Path: /language
             width: 21%;
 
             h1 {
-                font-size: 1em;
+                font-size: 0.9em;
             }
             a {
-                font-size: 0.8em;
+                font-size: 0.75em;
                 line-height: 40px;
             }
 
@@ -5939,8 +6036,8 @@ Domain Path: /language
                             line-height: 50px;
                             margin-bottom: 0.2em;
                             a {
-                                font-size:0.75em;
-                                margin: 0 0 1% 0;
+                                font-size:0.7em;
+
                                 &:hover {
                                     color: $color4;
                                 }
@@ -6010,8 +6107,11 @@ Domain Path: /language
             article.clash_audio,
             article.post,
             article.page{
+                display: block;
 
-                margin-bottom: 1%;
+                h1 {
+                    font-size: 1.1em;
+                }
 
                 h2 {
                     font-size: 1em;
@@ -6019,26 +6119,20 @@ Domain Path: /language
                 }
 
                 header.entry-header {
-                    height: auto;
-
+                    display: block;
                     h1 {
                         font-size: 0.9em;
-                        text-indent: 0.5em;
 
                         a {
-
-                            letter-spacing: 0.03em;
+                            width: 100%;
 
                         }
                         span {
                             text-indent: 0.5em;
-
                         }
                     }
                     h2 {
-                        font-size: 0.95em;
-                        text-indent: 1%;
-
+                        font-size: 1em;
 
                         a{
                             color:$color;
@@ -6046,242 +6140,277 @@ Domain Path: /language
                         }
                     }
 
-                    section.byline {
-                        height: 123px;
+                   div.entry-meta {
+                        display: block;
+                        span.posted-on,
+                        span.byline {
+                            font-size:0.65em;
 
-                        span {
-                            font-size:0.75em;
-                            text-indent: 0.5em;
+                            a{
+                                width:80%;
 
-
+                            }
                         }
                     }
-
                 }
 
+                /*--- blog image---*/
+                         
+
+                /*--- custom post images---*/
+                figure.thumb {
+                    width: 35%;
+
+                    a.post-thumbnail{
+                        display:block;
+                        img{
+                            margin: 0;
+  
+                        }
+                    }
+                }
+
+                //custom post header
                 header.archive-header {
+
                     margin: 0 auto;
                     .archive-meta {
                         text-indent: 1%;
-                        height: 123px;
                         span {
-                            font-size: 0.75em;
-                            letter-spacing: 0.05em;
-                            a {
+                            font-size: 0.8em;
 
+                            a {
+ 
                                 width: auto;
                             }
                         }
                     }
                     h2 {
-                        font-size: 1em;
-                        letter-spacing: 0.05em;
+                        line-height: 50px;
 
                         a {
-                            font-size: 1em;
+
+                            font-size: 1.1em;
                         }
                     }
                 }
 
                 //blog footer
-                footer.byline {
+                footer.entry-footer {
+                    height: auto;
 
-                    text-indent: 0.5em;
                     span {
 
-                        width: 80%;
+                        height: 35px;
                         span.screen-reader-text{
-                            width:75%;
+                            width:auto;
+                        }
+                        a{
+
                             font-size:0.8em;
+                            line-height:35px;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
+                        a.comments-count {
+                            font-size: 1.1em;
+                            width: 5%;
                         }
 
                     }
-                    a{
-                        width: 38%;
-                        font-size:0.75em;
-                    }
-                    a.comments-count {
-                        font-size: 1em;
-                        width: 5%;
-                    }
                     p {
-                        font-size: 0.75em;
-                        line-height:30px;
+
+                        font-size: 0.85em;
                     }
                 }
 
-                //text
-                p {
-                    font-size: 0.8em;
-                }
-
-                ul{
-                    margin:0 auto;
-                    width:90%;
-
-                    li{
-                        line-height:40px;
-                        text-indent:0.5em;
-                    }
-                }
-
-                //image
-                ul figure {
-                    width: 90%;
-                    padding: 0;
-                }
-
-                //image
-                figure.thumb {
-                    width: 35%;
-
-                    img {
-                        margin: 0;
-
-                    }
-                }
-
-                //entry
-                div.newsExcerpt {
-                    display: block;
+                //Global
+                .audio-play,
+                .video-play {
                     width: 85%;
-                    a.download_button,
+
+                }
+                               
+                //regular post entry
+                div.entry-content{
+                    width: 98%;
+
+                    //text
+                    p {
+                        font-size: 0.8em;
+                        line-height:1.9em;
+                        a{
+
+                            display: inline-block;
+                            &:hover{
+                                font-weight:bold;
+                            }
+                        }
+                    }
+
+                    ul{
+
+                        width:90%;
+                        figure {
+                            width: 90%;
+
+                        }
+
+                        li{
+
+                            line-height:40px;
+                        }
+                    }
+                    
                     a.read_more{
+                        width: 40%;
+
+                    }
+                }
+
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
+                    width: 96%;
+
+                    a.download_button{
                         width: 40%;
                     }
 
                     //audio
-                    .audio-play {
-                        width: 85%;
-
+                    #audio-play {
+                        width: 90%;
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
+                    div#audio_controls,
+                    div#videocontrols {
                         width: 97%;
-
+                        padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            font-size:1em;
-                            &:hover {
-                                cursor: pointer;
-                                font-weight:bold;
+                            line-height: 55px;
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                color:$color;
-                                font-size:2em;
+                            i.fa-play{
+                                font-size:1.9em;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                         }
 
                         div#progress {
-                            width: 60%;
-                            height: 27.5px;
+                            width: 58%;
+                            height: 28px;
 
                             span#play_progress {
-                                height: 27.5px;
+                                height: 28px;
+
                             }
                             span#load_progress {
-                                height: 27.5px;
+                                height: 28px;
                             }
                         }
 
                         div#time {
                             width: 20%;
                             letter-spacing: 0.1em;
-                            span#duration {
+                            span{
+                                
+                                line-height: 27px;
                                 font-size: 0.7em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+                            }
+                            span#duration {
+         
                             }
                             span#current_time {
-                                font-size: 0.7em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+                                border-bottom:1px solid #fff;
+                      
                             }
                         }
 
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                line-height:60px;
+                           
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                height: 53px;
+                            }
+                        }
+                       
+                        label{
+                            width:20%;
+                            margin-right:0.5em;
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            height: 53px;
+                        }
                     }
 
                     //video
-                    .video-play {
-                        display: block;
-                        iframe {
-                            margin: auto;
-                        }
+                    iframe {
+                        margin: 0 auto;
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
-
                         .jp-type-single {
                             width: 100%;
                             .jp-gui {
-
                                 font-size: 0.8em;
                                 .jp-controls{
                                     width:20%;
-
                                     button.jp-play,
                                     button.jp-stop{
-
                                         width: 50%;
-                                        line-height: 53px;
 
                                     }
                                 }
 
                                 .jp-progress{
                                     width: 35%;
-
-                                    height: 55px;
                                     .jp-seek-bar {
-
                                         line-height: 55px;
-                                        height: 55px;
                                         .jp-play-bar {
                                             line-height: 55px;
-                                            height: 55px;
                                         }
-
                                     }
-
-
                                 }
                                 .jp-volume-controls {
-
-                                    height: 55px;
                                     width: 26%;
 
                                     .jp-mute {
-
                                         width: 49%;
-                                        line-height: 35px;
 
-                                        margin-right: 0.1em;
 
                                     }
                                     .jp-volume-max {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
-
                                     }
                                 }
 
                                 .jp-time-holder{
                                     width:19%;
-                                    display:inline-block;
+
 
                                     .jp-current-time {
                                         width: 30%;
-                                        line-height: 55px;
+
                                     }
                                     .jp-duration {
                                         width: 30%;
-                                        line-height: 55px;
                                     }
 
                                     .jp-toggles {
@@ -6290,46 +6419,42 @@ Domain Path: /language
                                         width: 34%;
                                         .jp-repeat {
                                             line-height: 55px;
-
                                         }
                                     }
                                 }
                             }
                             .jp-details{
-                                height:50px;
-                                line-height:50px;
                                 margin-top: 0.2em;
                             }
                         }
                     }
                 }
-
+                
                 //custom-post-footer
                 footer.speaker-meta {
-
-                    min-height: 160px;
+                    height: 160px;
 
                     ul.post-meta {
+                        height: 100%;
                         letter-spacing: 0.05em;
 
                         li {
-                            line-height: 39px;
-                            height: 40px;
                             font-size: 0.65em;
-
                             span.post-meta-key {
-                                width: 24%;
+                                width: 20%;
+                                font-size: 0.7em;
                             }
-
                         }
 
                         p{
-                            width:74%;
-                            font-size: 0.65em;
+                            width:79%;
+                            font-size: 0.8em;
                         }
                     }
                 }
             }
+
+            
         }
 
         #news_section {
@@ -6580,11 +6705,12 @@ Domain Path: /language
     button#side-bar-btn{
         display: block;
         position: fixed;
-        top: 4em;
+        top: 3.9em;
         left: 1%;
-        z-index: 100;
+        line-height: 50px;
         height: 50px;
-        width: 30%;
+        width: 12%;
+        z-index:100;
         background-color:$color4;
         color:$color;
         border:none;
@@ -6615,7 +6741,17 @@ Domain Path: /language
         header {
             height: 120px;
             #clashvibes_title {
-                width: 50%;
+                width: 54%;
+
+                h1{
+
+                    font-size:2em;
+
+                }
+                h2.site-description{
+                    line-height: 20px;
+                    font-size: 0.7em;
+                }
             }
 
             span#socialmediatop {
@@ -6737,10 +6873,11 @@ Domain Path: /language
 
             h1 {
                 position: relative;
-                font-size: 0.9em;
+                font-size: 1.2em;
             }
             a {
                 font-size: 0.75em;
+                line-height: 45px
             }
 
             .comment-author-link {
@@ -6793,7 +6930,7 @@ Domain Path: /language
                             width:96%;
                             a {
                                 padding: 0;
-                                margin: 0 0 1% 0;
+                                font-size: 0.85em;
                                 &:hover {
                                     color: $color4;
                                 }
@@ -6837,7 +6974,7 @@ Domain Path: /language
         /*--- Right Column---*/
         #clashvibes_right_column {
             margin: 0 0 1% 0;
-            width: 96%;
+            width: 98%;
 
             h1 {
                 font-size: 1.2em;
@@ -6891,6 +7028,19 @@ Domain Path: /language
                         a{
                             color:$color;
 
+                        }
+                    }
+
+                    div.entry-meta {
+                        display: block;
+                        span.posted-on,
+                        span.byline {
+                            font-size:0.65em;
+
+                            a{
+                                width:80%;
+
+                            }
                         }
                     }
 
@@ -6990,146 +7140,148 @@ Domain Path: /language
                 }
 
                 //entry
-                div.newsExcerpt {
-                    display: block;
-                    width: 85%;
-                    a.download_button,
-                    a.read_more{
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
+                    width: 96%;
+
+                    a.download_button{
                         width: 40%;
                     }
 
                     //audio
-                    .audio-play {
-                        width: 85%;
-
+                    #audio-play {
+                        width: 90%;
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
+                    div#audio_controls,
+                    div#videocontrols {
                         width: 97%;
-
+                        padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            font-size:1em;
-                            &:hover {
-                                cursor: pointer;
-                                font-weight:bold;
+                            line-height: 55px;
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                color:$color;
-                                font-size:2em;
+                            i.fa-play{
+                                font-size:1.9em;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                         }
 
                         div#progress {
-                            width: 60%;
-                            height: 27.5px;
+                            width: 58%;
+                            height: 28px;
 
                             span#play_progress {
-                                height: 27.5px;
+                                height: 28px;
+
                             }
                             span#load_progress {
-                                height: 27.5px;
+                                height: 28px;
                             }
                         }
 
                         div#time {
                             width: 20%;
                             letter-spacing: 0.1em;
-                            span#duration {
+                            span{
+                                
+                                line-height: 27px;
                                 font-size: 0.7em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+                            }
+                            span#duration {
+         
                             }
                             span#current_time {
-                                font-size: 0.7em;
-                                height: 27.5px;
-                                line-height: 27.5px;
+                                border-bottom:1px solid #fff;
+                      
                             }
                         }
 
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                line-height:60px;
+                           
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                height: 53px;
+                            }
+                        }
+                       
+                        label{
+                            width:20%;
+                            margin-right:0.5em;
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            height: 53px;
+                        }
                     }
 
                     //video
-                    .video-play {
-                        display: block;
-                        iframe {
-                            margin: auto;
-                        }
+                    iframe {
+                        margin: 0 auto;
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
-
                         .jp-type-single {
                             width: 100%;
                             .jp-gui {
-
                                 font-size: 0.8em;
                                 .jp-controls{
                                     width:20%;
-
                                     button.jp-play,
                                     button.jp-stop{
-
                                         width: 50%;
-                                        line-height: 53px;
 
                                     }
                                 }
 
                                 .jp-progress{
                                     width: 35%;
-
-                                    height: 55px;
                                     .jp-seek-bar {
-
                                         line-height: 55px;
-                                        height: 55px;
                                         .jp-play-bar {
                                             line-height: 55px;
-                                            height: 55px;
                                         }
-
                                     }
-
-
                                 }
                                 .jp-volume-controls {
-
-                                    height: 55px;
                                     width: 26%;
 
                                     .jp-mute {
-
                                         width: 49%;
-                                        line-height: 35px;
 
-                                        margin-right: 0.1em;
 
                                     }
                                     .jp-volume-max {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
-
                                     }
                                 }
 
                                 .jp-time-holder{
                                     width:19%;
-                                    display:inline-block;
+
 
                                     .jp-current-time {
                                         width: 30%;
-                                        line-height: 55px;
+
                                     }
                                     .jp-duration {
                                         width: 30%;
-                                        line-height: 55px;
                                     }
 
                                     .jp-toggles {
@@ -7138,14 +7290,11 @@ Domain Path: /language
                                         width: 34%;
                                         .jp-repeat {
                                             line-height: 55px;
-
                                         }
                                     }
                                 }
                             }
                             .jp-details{
-                                height:50px;
-                                line-height:50px;
                                 margin-top: 0.2em;
                             }
                         }
@@ -7163,10 +7312,11 @@ Domain Path: /language
                         li {
                             line-height: 39px;
                             height: 40px;
-                            font-size: 0.8em;
+                            font-size: 0.65em;
 
                             span.post-meta-key {
                                 width: 24%;
+                                font-size: 0.85em;
                             }
 
                         }
@@ -7344,38 +7494,23 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
-                            width: 70%;
+                        figure.thumbaud,
+                        figure.thumbvid {
+                            width: 65%;
                             &:hover {
-                                cursor: pointer;
-                                width: 75%;
+                                width: 70%;
                             }
                             img {
-
                                 @include box-sizing($type: border-box);
-
                             }
 
                             figcaption {
-
-                                span.rantsection {
-                                    height: 30px;
-                                    width: 45%;
-                                    img.star {
-                                        width: 20%;
-                                    }
-                                }
-
-                                span.more_button {
+                                margin:0;
+                                span.Morebutton {
                                     height: 40px;
-
-
                                     a {
                                         font-size: 0.8em;
-                                        letter-spacing: 0.05em;
                                         &:hover {
-                                            color: $color4;
-                                            background-color: $color1;
                                             letter-spacing: 0.055em;
                                         }
                                     }
@@ -7423,8 +7558,8 @@ Domain Path: /language
                         }
                         span.title_singer {
                             width: 75%;
-                            font-size: 0.75em;
-                            text-indent: 0.25em;
+                            font-size: 0.7em;
+                            text-indent: 0.2em;
                         }
                         span {
                             a {
@@ -7524,17 +7659,16 @@ Domain Path: /language
     
     button#toggle-nav{
 
-        top: 4em;
+        
         left: 87.5%;
         &:hover{
         }
     }
 
     button#side-bar-btn{
-        top: 4em;
+        top: 5em;
         left: 1%;
-        height: 50px;
-        width: 30%;
+        font-size:0.8em;
 
         &:hover{
             background-color:$color7;
@@ -7559,6 +7693,19 @@ Domain Path: /language
         /********** header **********/
         header {
             height: 120px;
+            #clashvibes_title {
+                width: 48%;
+
+                h1{
+
+                    font-size:2em;
+
+                }
+                h2.site-description{
+                    line-height: 20px;
+                    font-size: 0.65em;
+                }
+            }
 
             span#socialmediatop {
                 width: 40%;
@@ -7761,8 +7908,7 @@ Domain Path: /language
         /*--- End of Left Column---*/
         /*--- Right Column---*/
         #clashvibes_right_column {
-            margin: 0 0 1% 0;
-            width: 96%;
+            width: 98%;
 
             h1 {
                 font-size: 1em;
@@ -7793,7 +7939,7 @@ Domain Path: /language
                     height: auto;
 
                     h1 {
-                        font-size: 1em;
+                        font-size: 0.9em;
                         text-indent: 0.5em;
 
                         a {
@@ -7913,132 +8059,148 @@ Domain Path: /language
                 }
 
                 //entry
-                div.newsExcerpt {
-                    display: block;
-                    width: 85%;
-                    a.download_button,
-                    a.read_more{
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
+                    width: 96%;
+
+                    a.download_button{
                         width: 40%;
                     }
 
                     //audio
-                    .audio-play {
-                        width: 85%;
-
+                    #audio-play {
+                        width: 90%;
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
+                    div#audio_controls,
+                    div#videocontrols {
                         width: 97%;
-
+                        padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            font-size:1em;
-                            &:hover {
-                                cursor: pointer;
-
+                            line-height: 55px;
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                font-size:2em;
+                            i.fa-play{
+                                font-size:1.9em;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                         }
 
                         div#progress {
-                            width: 60%;
-                            height: 27.5px;
+                            width: 58%;
+                            height: 28px;
 
                             span#play_progress {
-                                height: 27.5px;
+                                height: 28px;
+
                             }
                             span#load_progress {
-                                height: 27.5px;
+                                height: 28px;
                             }
                         }
 
                         div#time {
                             width: 20%;
                             letter-spacing: 0.1em;
-                            span#duration {
+                            span{
+                                
+                                line-height: 27px;
                                 font-size: 0.7em;
+                            }
+                            span#duration {
+         
                             }
                             span#current_time {
-                                font-size: 0.7em;
-
+                                border-bottom:1px solid #fff;
+                      
                             }
+                        }
+
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                line-height:60px;
+                           
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                height: 53px;
+                            }
+                        }
+                       
+                        label{
+                            width:20%;
+                            margin-right:0.5em;
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            height: 53px;
                         }
                     }
 
                     //video
-                    .video-play {
-                        display: block;
-                        iframe {
-                            margin: auto;
-                        }
+                    iframe {
+                        margin: 0 auto;
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
-
                         .jp-type-single {
                             width: 100%;
                             .jp-gui {
-
                                 font-size: 0.8em;
                                 .jp-controls{
                                     width:20%;
-
                                     button.jp-play,
                                     button.jp-stop{
-
                                         width: 50%;
-                                        line-height: 53px;
+
                                     }
                                 }
 
                                 .jp-progress{
                                     width: 35%;
-
-                                    height: 55px;
                                     .jp-seek-bar {
-
                                         line-height: 55px;
-                                        height: 55px;
                                         .jp-play-bar {
                                             line-height: 55px;
-                                            height: 55px;
                                         }
                                     }
                                 }
                                 .jp-volume-controls {
-
-                                    height: 55px;
                                     width: 26%;
+
                                     .jp-mute {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
+
+
                                     }
                                     .jp-volume-max {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
                                     }
                                 }
 
                                 .jp-time-holder{
                                     width:19%;
-                                    display:inline-block;
+
 
                                     .jp-current-time {
                                         width: 30%;
-                                        line-height: 55px;
+
                                     }
                                     .jp-duration {
                                         width: 30%;
-                                        line-height: 55px;
                                     }
 
                                     .jp-toggles {
@@ -8047,14 +8209,11 @@ Domain Path: /language
                                         width: 34%;
                                         .jp-repeat {
                                             line-height: 55px;
-
                                         }
                                     }
                                 }
                             }
                             .jp-details{
-                                height:50px;
-                                line-height:50px;
                                 margin-top: 0.2em;
                             }
                         }
@@ -8070,17 +8229,16 @@ Domain Path: /language
                         letter-spacing: 0.05em;
 
                         li {
-                            line-height: 39px;
-                            height: 40px;
-                            font-size: 0.8em;
+
+                            font-size: 0.65em;
 
                             span.post-meta-key {
-                                width: 28%;
+                                width: 24%;
                             }
                         }
 
                         p{
-                            width:69%;
+                            width:73%;
                             font-size: 0.75em;
                         }
                     }
@@ -8231,8 +8389,8 @@ Domain Path: /language
                 #new_released_section {
                     width: 100%;
                     .new_released_box {
-                        width: 32%;
-                        min-height: 275px;
+                        width: 49%;
+                        min-height: 310px;
                         h1 {
                             font-size: 0.8em;
                             line-height: 20px;
@@ -8249,38 +8407,23 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
-                            width: 70%;
+                        figure.thumbaud,
+                        figure.thumbvid {
+                            width: 65%;
                             &:hover {
-                                cursor: pointer;
-                                width: 75%;
+                                width: 70%;
                             }
                             img {
-
                                 @include box-sizing($type: border-box);
-
                             }
 
                             figcaption {
-
-                                span.rantsection {
-                                    height: 30px;
-                                    width: 45%;
-                                    img.star {
-                                        width: 20%;
-                                    }
-                                }
-
-                                span.more_button {
+                                margin:0;
+                                span.Morebutton {
                                     height: 40px;
-
-
                                     a {
                                         font-size: 0.8em;
-                                        letter-spacing: 0.05em;
                                         &:hover {
-                                            color: $color4;
-                                            background-color: $color1;
                                             letter-spacing: 0.055em;
                                         }
                                     }
@@ -8303,7 +8446,7 @@ Domain Path: /language
                     width: 95.79%;
                     padding: 0.5em;
                     display: block;
-                    margin: 0.25em;
+                    margin: 0.15em;
 
                     h1 {
                         font-size: 1em;
@@ -8326,8 +8469,7 @@ Domain Path: /language
                         }
                         span.title_singer {
                             width: 75%;
-                            font-size: 0.75em;
-                            text-indent: 0.25em;
+                            font-size: 0.7em;
                         }
                         span {
                             a {
@@ -8425,7 +8567,8 @@ Domain Path: /language
 @media only screen and (max-width: 480px) {
 
     button#toggle-nav{
-        left: 85.5%;
+        left: 86.5%;
+        top:0.25em;
         &:hover{
             background-color:$color7;
 
@@ -8433,8 +8576,8 @@ Domain Path: /language
     }
 
     button#side-bar-btn{
-        top: 4em;
-        width: 30%;
+        top: 4.5em;
+        left:87.5%;
         &:hover{
             background-color:$color7;
 
@@ -8461,14 +8604,28 @@ Domain Path: /language
             height: 120px;
             #clashvibes_title {
                 width: 50%;
+
+                h1{
+
+                    font-size:2em;
+
+                }
+                h2.site-description{
+                    line-height: 20px;
+                    font-size: 0.6em;
+                }
             }
 
             span#socialmediatop {
-                width: 47%;
+                width: 75%;
 
                 a {
                     display: inline-block;
                     width: 23.5%;
+                    &:hover{
+                        background-color:$color7;
+                        color:$color4;
+                    }
 
                     span {
                         display: block;
@@ -8816,132 +8973,148 @@ Domain Path: /language
                 }
 
                 //entry
-                div.newsExcerpt {
-                    display: block;
-                    width: 95%;
-                    a.download_button,
-                    a.read_more{
-                        width: 50%;
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
+                    width: 96%;
+
+                    a.download_button{
+                        width: 40%;
                     }
 
                     //audio
-                    .audio-play {
-                        width: 85%;
-
+                    #audio-play {
+                        width: 90%;
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
+                    div#audio_controls,
+                    div#videocontrols {
                         width: 97%;
-
+                        padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            font-size:1em;
-                            &:hover {
-                                cursor: pointer;
-
+                            line-height: 55px;
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                font-size:2em;
+                            i.fa-play{
+                                font-size:1.9em;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                         }
 
                         div#progress {
-                            width: 60%;
-                            height: 27.5px;
+                            width: 58%;
+                            height: 28px;
 
                             span#play_progress {
-                                height: 27.5px;
+                                height: 28px;
+
                             }
                             span#load_progress {
-                                height: 27.5px;
+                                height: 28px;
                             }
                         }
 
                         div#time {
                             width: 20%;
                             letter-spacing: 0.1em;
-                            span#duration {
+                            span{
+                                
+                                line-height: 27px;
                                 font-size: 0.7em;
+                            }
+                            span#duration {
+         
                             }
                             span#current_time {
-                                font-size: 0.7em;
-
+                                border-bottom:1px solid #fff;
+                      
                             }
+                        }
+
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                line-height:60px;
+                           
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                height: 53px;
+                            }
+                        }
+                       
+                        label{
+                            width:20%;
+                            margin-right:0.5em;
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            height: 53px;
                         }
                     }
 
                     //video
-                    .video-play {
-                        display: block;
-                        iframe {
-                            margin: auto;
-                        }
+                    iframe {
+                        margin: 0 auto;
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
-
                         .jp-type-single {
                             width: 100%;
                             .jp-gui {
-
                                 font-size: 0.8em;
                                 .jp-controls{
                                     width:20%;
-
                                     button.jp-play,
                                     button.jp-stop{
-
                                         width: 50%;
-                                        line-height: 53px;
+
                                     }
                                 }
 
                                 .jp-progress{
                                     width: 35%;
-
-                                    height: 55px;
                                     .jp-seek-bar {
-
                                         line-height: 55px;
-                                        height: 55px;
                                         .jp-play-bar {
                                             line-height: 55px;
-                                            height: 55px;
                                         }
                                     }
                                 }
                                 .jp-volume-controls {
-
-                                    height: 55px;
                                     width: 26%;
+
                                     .jp-mute {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
+
+
                                     }
                                     .jp-volume-max {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
                                     }
                                 }
 
                                 .jp-time-holder{
                                     width:19%;
-                                    display:inline-block;
+
 
                                     .jp-current-time {
                                         width: 30%;
-                                        line-height: 55px;
+
                                     }
                                     .jp-duration {
                                         width: 30%;
-                                        line-height: 55px;
                                     }
 
                                     .jp-toggles {
@@ -8950,14 +9123,11 @@ Domain Path: /language
                                         width: 34%;
                                         .jp-repeat {
                                             line-height: 55px;
-
                                         }
                                     }
                                 }
                             }
                             .jp-details{
-                                height:50px;
-                                line-height:50px;
                                 margin-top: 0.2em;
                             }
                         }
@@ -8985,7 +9155,7 @@ Domain Path: /language
 
                         p{
                             width:68%;
-                            font-size: 0.7em;
+                            font-size: 0.75em;
 
                         }
                     }
@@ -9137,7 +9307,7 @@ Domain Path: /language
                     width: 100%;
                     .new_released_box {
                         width: 49%;
-                        min-height: 300px;
+                        min-height: 275px;
                         h1 {
                             font-size: 0.8em;
                             line-height: 20px;
@@ -9145,7 +9315,7 @@ Domain Path: /language
                         }
 
                         a {
-                            font-size: 0.8em;
+                            font-size: 0.75em;
                             text-align: center;
                             letter-spacing: 0.05em;
 
@@ -9154,38 +9324,23 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
-                            width: 70%;
+                        figure.thumbaud,
+                        figure.thumbvid {
+                            width: 65%;
                             &:hover {
-                                cursor: pointer;
-                                width: 75%;
+                                width: 70%;
                             }
                             img {
-
                                 @include box-sizing($type: border-box);
-
                             }
 
                             figcaption {
-
-                                span.rantsection {
-                                    height: 30px;
-                                    width: 45%;
-                                    img.star {
-                                        width: 20%;
-                                    }
-                                }
-
-                                span.more_button {
+                                margin:0;
+                                span.Morebutton {
                                     height: 40px;
-
-
                                     a {
                                         font-size: 0.8em;
-                                        letter-spacing: 0.05em;
                                         &:hover {
-                                            color: $color4;
-                                            background-color: $color1;
                                             letter-spacing: 0.055em;
                                         }
                                     }
@@ -9230,9 +9385,7 @@ Domain Path: /language
                             }
                         }
                         span.title_singer {
-                            width: 75%;
-                            font-size: 0.7em;
-                            text-indent: 0.2em;
+                            font-size: 0.6em;
                         }
                         span {
                             a {
@@ -9330,6 +9483,7 @@ Domain Path: /language
 
     button#toggle-nav{
         left: 83.5%;
+        top:0.25em;
         &:hover{
             background-color:$color7;
 
@@ -9337,8 +9491,8 @@ Domain Path: /language
     }
 
     button#side-bar-btn{
-        top: 4em;
-        width: 30%;
+        left: 80%;
+        width:20%;
         &:hover{
             background-color:$color7;
 
@@ -9364,18 +9518,27 @@ Domain Path: /language
         header {
             height: 120px;
             #clashvibes_title {
-                width: 50%;
+                width: 48%;
+
+                h1{
+
+                    font-size:1.9em;
+
+                }
+                h2.site-description{
+                    font-size: 0.6em;
+                }
             }
 
             span#socialmediatop {
-                width: 49%;
+                width: 75%;
 
                 a {
-                    display: inline-block;
-                    width: 23%;
+
+                    width: 23.5%;
 
                     span {
-                        display: block;
+
                         height: 100%;
                         i {
                             font-size: 0.8em;
@@ -9600,8 +9763,11 @@ Domain Path: /language
                     height: auto;
 
                     h1 {
-                        font-size: 0.85em;
-                        text-indent: 0.5em;
+                        font-size: 0.8em;
+                        text-indent: 0em;
+                        height: auto;
+                        padding: 0.5em;
+                        width: 96%;
 
                         a {
 
@@ -9609,7 +9775,7 @@ Domain Path: /language
 
                         }
                         span {
-                            text-indent: 0.5em;
+                            text-indent: 0em;
 
                         }
                     }
@@ -9621,6 +9787,20 @@ Domain Path: /language
                         a{
                             color:$color;
 
+                        }
+                    }
+
+                    div.entry-meta {
+                        display: block;
+                        span.posted-on,
+                        span.byline {
+                            font-size:0.65em;
+                            text-indent:0.15em;
+
+                            a{
+                                width:80%;
+
+                            }
                         }
                     }
 
@@ -9711,7 +9891,7 @@ Domain Path: /language
 
                 //image
                 figure.thumb {
-                    width: 35%;
+                    width: 45%;
 
                     img {
                         margin: 0;
@@ -9720,132 +9900,150 @@ Domain Path: /language
                 }
 
                 //entry
-                div.newsExcerpt {
-                    display: block;
-                    width: 95%;
-                    a.download_button,
-                    a.read_more{
-                        width: 50%;
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
+                    width: 96%;
+
+                    a.download_button{
+                        width: 40%;
                     }
 
                     //audio
-                    .audio-play {
-                        width: 85%;
-
+                    #audio-play {
+                        width: 90%;
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
+                    div#audio_controls,
+                    div#videocontrols {
                         width: 97%;
-
+                        padding:0.15em;
                         button#play_toggle {
                             width: 20%;
-                            font-size:1em;
-                            &:hover {
-                                cursor: pointer;
-
+                            line-height: 55px;
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                font-size:2em;
+                            i.fa-play{
+                                font-size:1.7em;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                         }
 
                         div#progress {
                             width: 60%;
-                            height: 27.5px;
+                            height: 28px;
 
                             span#play_progress {
-                                height: 27.5px;
+                                height: 28px;
+
                             }
                             span#load_progress {
-                                height: 27.5px;
+                                height: 28px;
                             }
                         }
 
                         div#time {
-                            width: 20%;
+                            width: 17%;
                             letter-spacing: 0.1em;
+                            span{
+                                
+                                line-height: 27px;
+                                font-size: 0.6em;
+                            }
                             span#duration {
-                                font-size: 0.7em;
+         
                             }
                             span#current_time {
-                                font-size: 0.7em;
-
+                                border-bottom:1px solid #fff;
+                      
                             }
+                        }
+
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                line-height:60px;
+                                font-size:0.9em;
+                           
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                height: 53px;
+                            }
+                        }
+                       
+                        label{
+                            width:20%;
+                            margin-right:0.5em;
+                            font-size:0.9em;
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            height: 53px;
                         }
                     }
 
                     //video
-                    .video-play {
-                        display: block;
-                        iframe {
-                            margin: auto;
-                        }
+                    iframe {
+                        margin: 0 auto;
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
-
                         .jp-type-single {
                             width: 100%;
                             .jp-gui {
-
                                 font-size: 0.8em;
                                 .jp-controls{
                                     width:20%;
-
                                     button.jp-play,
                                     button.jp-stop{
-
                                         width: 50%;
-                                        line-height: 53px;
+
                                     }
                                 }
 
                                 .jp-progress{
                                     width: 35%;
-
-                                    height: 55px;
                                     .jp-seek-bar {
-
                                         line-height: 55px;
-                                        height: 55px;
                                         .jp-play-bar {
                                             line-height: 55px;
-                                            height: 55px;
                                         }
                                     }
                                 }
                                 .jp-volume-controls {
-
-                                    height: 55px;
                                     width: 26%;
+
                                     .jp-mute {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
+
+
                                     }
                                     .jp-volume-max {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
                                     }
                                 }
 
                                 .jp-time-holder{
                                     width:19%;
-                                    display:inline-block;
+
 
                                     .jp-current-time {
                                         width: 30%;
-                                        line-height: 55px;
+
                                     }
                                     .jp-duration {
                                         width: 30%;
-                                        line-height: 55px;
                                     }
 
                                     .jp-toggles {
@@ -9854,14 +10052,11 @@ Domain Path: /language
                                         width: 34%;
                                         .jp-repeat {
                                             line-height: 55px;
-
                                         }
                                     }
                                 }
                             }
                             .jp-details{
-                                height:50px;
-                                line-height:50px;
                                 margin-top: 0.2em;
                             }
                         }
@@ -9877,9 +10072,7 @@ Domain Path: /language
                         letter-spacing: 0.05em;
 
                         li {
-                            line-height: 39px;
-                            height: 40px;
-                            font-size: 0.7em;
+                            font-size: 0.65em;
 
                             span.post-meta-key {
                                 width: 27%;
@@ -9889,7 +10082,7 @@ Domain Path: /language
 
                         p{
                             width:68%;
-                            font-size: 0.7em;
+                            font-size: 0.75em;
                         }
                     }
                 }
@@ -10040,11 +10233,10 @@ Domain Path: /language
                     width: 100%;
                     .new_released_box {
                         width: 49%;
-                        min-height: 300px;
+
                         h1 {
                             font-size: 0.75em;
-                            line-height: 20px;
-                            width: auto;
+
                         }
 
                         a {
@@ -10057,38 +10249,23 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
+                        figure.thumbaud,
+                        figure.thumbvid {
                             width: 70%;
                             &:hover {
-                                cursor: pointer;
                                 width: 75%;
                             }
                             img {
-
                                 @include box-sizing($type: border-box);
-
                             }
 
                             figcaption {
-
-                                span.rantsection {
-                                    height: 30px;
-                                    width: 45%;
-                                    img.star {
-                                        width: 20%;
-                                    }
-                                }
-
-                                span.more_button {
+                                margin:0;
+                                span.Morebutton {
                                     height: 40px;
-
-
                                     a {
-                                        font-size: 0.75em;
-                                        letter-spacing: 0.05em;
+                                        font-size: 0.8em;
                                         &:hover {
-                                            color: $color4;
-                                            background-color: $color1;
                                             letter-spacing: 0.055em;
                                         }
                                     }
@@ -10232,7 +10409,7 @@ Domain Path: /language
 
     button#toggle-nav{
         position: fixed;
-        top: 4em;
+        
         left: 81.5%;
         &:hover{
             background-color:$color7;
@@ -10242,12 +10419,9 @@ Domain Path: /language
     }
 
     button#side-bar-btn{
-        display: block;
-        position: fixed;
-        top: 4em;
-        left: 1%;
-        height: 50px;
-        width: 30%;
+        width:20%;
+        left:81%;
+
         &:hover{
             background-color:$color7;
             color:$color4;
@@ -10275,20 +10449,29 @@ Domain Path: /language
             height: 120px;
             #clashvibes_title {
                 width: 50%;
+
+                h1{
+
+                    font-size:1.9em;
+
+                }
+                h2.site-description{
+                    line-height: 20px;
+                    font-size: 0.65em;
+                }
             }
 
             span#socialmediatop {
-                width: 49%;
+                width: 75%;
 
                 a {
                     display: inline-block;
-                    width: 23%;
 
                     span {
                         display: block;
                         height: 100%;
                         i {
-                            font-size: 0.75em;
+                            font-size: 0.8em;
                         }
                     }
                 }
@@ -10478,8 +10661,8 @@ Domain Path: /language
         /*--- End of Left Column---*/
         /*--- Right Column---*/
         #clashvibes_right_column {
-            margin: 0 0 1% 0;
-            width: 96%;
+
+            width: 98%;
 
             h1 {
                 font-size: 1em;
@@ -10511,7 +10694,6 @@ Domain Path: /language
 
                     h1 {
                         font-size: 0.8em;
-                        text-indent: 0.5em;
 
                         a {
 
@@ -10519,7 +10701,7 @@ Domain Path: /language
 
                         }
                         span {
-                            text-indent: 0.5em;
+                            text-indent: 0em;
 
                         }
                     }
@@ -10534,11 +10716,25 @@ Domain Path: /language
                         }
                     }
 
+                    div.entry-meta {
+                        display: block;
+                        span.posted-on,
+                        span.byline {
+                            font-size:0.6em;
+                            text-indent:0.2em;
+
+                            a{
+                                width:80%;
+
+                            }
+                        }
+                    }
+
                     section.byline {
                         height: 123px;
 
                         span {
-                            font-size:0.7em;
+                            font-size:0.65em;
                             text-indent: 0.5em;
 
 
@@ -10621,7 +10817,7 @@ Domain Path: /language
 
                 //image
                 figure.thumb {
-                    width: 40%;
+                    width: 50%;
 
                     img {
                         margin: 0;
@@ -10630,132 +10826,148 @@ Domain Path: /language
                 }
 
                 //entry
-                div.newsExcerpt {
-                    display: block;
-                    width: 95%;
-                    a.download_button,
-                    a.read_more{
-                        width: 60%;
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
+                    width: 96%;
+
+                    a.download_button{
+                        width: 40%;
                     }
 
                     //audio
-                    .audio-play {
-                        width: 85%;
-
+                    #audio-play {
+                        width: 90%;
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
-                        width: 97%;
-
+                    div#audio_controls,
+                    div#videocontrols {
+                        padding:0.15em;
                         button#play_toggle {
                             width: 20%;
-                            font-size:1em;
-                            &:hover {
-                                cursor: pointer;
-
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                font-size:2em;
+                            i.fa-play{
+                                font-size:1.5em;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                         }
 
                         div#progress {
-                            width: 60%;
-                            height: 27.5px;
+                            width: 56%;
+                            height: 28px;
 
                             span#play_progress {
-                                height: 27.5px;
+                                height: 28px;
+
                             }
                             span#load_progress {
-                                height: 27.5px;
+                                height: 28px;
                             }
                         }
 
                         div#time {
                             width: 20%;
                             letter-spacing: 0.1em;
+                            span{
+                                
+                                line-height: 27px;
+                                font-size: 0.7em;
+                            }
                             span#duration {
-                                font-size: 0.65em;
+         
                             }
                             span#current_time {
-                                font-size: 0.65em;
-
+                                border-bottom:1px solid #fff;
+                      
                             }
+                        }
+
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                line-height:60px;
+                                font-size:0.8em;
+                           
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                height: 53px;
+                            }
+                        }
+                       
+                        label{
+                            width:20%;
+                            margin-right:0.5em;
+                            font-size:0.8em;
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            height: 53px;
                         }
                     }
 
                     //video
-                    .video-play {
-                        display: block;
-                        iframe {
-                            margin: auto;
-                        }
+                    iframe {
+                        margin: 0 auto;
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
-
                         .jp-type-single {
                             width: 100%;
                             .jp-gui {
-
                                 font-size: 0.8em;
                                 .jp-controls{
                                     width:20%;
-
                                     button.jp-play,
                                     button.jp-stop{
-
                                         width: 50%;
-                                        line-height: 53px;
+
                                     }
                                 }
 
                                 .jp-progress{
                                     width: 35%;
-
-                                    height: 55px;
                                     .jp-seek-bar {
-
                                         line-height: 55px;
-                                        height: 55px;
                                         .jp-play-bar {
                                             line-height: 55px;
-                                            height: 55px;
                                         }
                                     }
                                 }
                                 .jp-volume-controls {
-
-                                    height: 55px;
                                     width: 26%;
+
                                     .jp-mute {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
+
+
                                     }
                                     .jp-volume-max {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
                                     }
                                 }
 
                                 .jp-time-holder{
                                     width:19%;
-                                    display:inline-block;
+
 
                                     .jp-current-time {
                                         width: 30%;
-                                        line-height: 55px;
+
                                     }
                                     .jp-duration {
                                         width: 30%;
-                                        line-height: 55px;
                                     }
 
                                     .jp-toggles {
@@ -10764,14 +10976,11 @@ Domain Path: /language
                                         width: 34%;
                                         .jp-repeat {
                                             line-height: 55px;
-
                                         }
                                     }
                                 }
                             }
                             .jp-details{
-                                height:50px;
-                                line-height:50px;
                                 margin-top: 0.2em;
                             }
                         }
@@ -10787,18 +10996,17 @@ Domain Path: /language
                         letter-spacing: 0.05em;
 
                         li {
-                            line-height: 39px;
-                            height: 40px;
                             font-size: 0.65em;
 
                             span.post-meta-key {
                                 width: 30%;
+                                font-size: 0.65em;
                             }
                         }
 
                         p{
                             width:65%;
-                            font-size: 0.65em;
+                            font-size: 0.75em;
                         }
                     }
                 }
@@ -10949,9 +11157,9 @@ Domain Path: /language
                     width: 100%;
                     .new_released_box {
                         width: 99%;
-                        min-height: 300px;
+                        min-height: 330px;
                         h1 {
-                            font-size: 0.85em;
+                            font-size: 0.9em;
                             line-height: 20px;
                             width: auto;
                         }
@@ -10966,38 +11174,23 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
+                        figure.thumbaud,
+                        figure.thumbvid {
                             width: 50%;
                             &:hover {
-                                cursor: pointer;
                                 width: 55%;
                             }
                             img {
-
                                 @include box-sizing($type: border-box);
-
                             }
 
                             figcaption {
-
-                                span.rantsection {
-                                    height: 30px;
-                                    width: 45%;
-                                    img.star {
-                                        width: 20%;
-                                    }
-                                }
-
-                                span.more_button {
+                                margin:0;
+                                span.Morebutton {
                                     height: 40px;
-
-
                                     a {
-                                        font-size: 0.75em;
-                                        letter-spacing: 0.05em;
+                                        font-size: 0.85em;
                                         &:hover {
-                                            color: $color4;
-                                            background-color: $color1;
                                             letter-spacing: 0.055em;
                                         }
                                     }
@@ -11140,7 +11333,7 @@ Domain Path: /language
 
     button#toggle-nav{
         position: fixed;
-        top: 4em;
+        
         left: 81.5%;
         &:hover{
             background-color:$color7;
@@ -11150,12 +11343,7 @@ Domain Path: /language
     }
 
     button#side-bar-btn{
-        display: block;
-        position: fixed;
-        top: 4em;
-        left: 1%;
-        height: 50px;
-        width: 30%;
+        left: 80%;
         &:hover{
             background-color:$color7;
             color:$color4;
@@ -11183,14 +11371,23 @@ Domain Path: /language
             height: 120px;
             #clashvibes_title {
                 width: 50%;
+
+                h1{
+
+                    font-size:1.9em;
+
+                }
+                h2.site-description{
+                    line-height: 20px;
+                    font-size: 0.6em;
+                }
             }
 
             span#socialmediatop {
-                width: 49%;
+                width: 75%;
 
                 a {
                     display: inline-block;
-                    width: 23%;
 
                     span {
                         display: block;
@@ -11419,7 +11616,6 @@ Domain Path: /language
 
                     h1 {
                         font-size: 0.8em;
-                        text-indent: 0.5em;
 
                         a {
 
@@ -11427,7 +11623,7 @@ Domain Path: /language
 
                         }
                         span {
-                            text-indent: 0.5em;
+                            text-indent: 0em;
 
                         }
                     }
@@ -11441,18 +11637,28 @@ Domain Path: /language
 
                         }
                     }
+                    div.entry-meta {
+                        display: block;
+                        span.posted-on,
+                        span.byline {
+                            font-size:0.55em;
+                            text-indent:0.15em;
+
+                            a{
+                                width:82%;
+
+                            }
+                        }
+                    }
 
                     section.byline {
                         height: 123px;
 
                         span {
-                            font-size:0.7em;
-                            text-indent: 0.5em;
-
+                            text-indent: 0.25em;
 
                         }
                     }
-
                 }
 
                 header.archive-header {
@@ -11529,7 +11735,7 @@ Domain Path: /language
 
                 //image
                 figure.thumb {
-                    width: 40%;
+                    width: 55%;
 
                     img {
                         margin: 0;
@@ -11538,132 +11744,150 @@ Domain Path: /language
                 }
 
                 //entry
-                div.newsExcerpt {
-                    display: block;
-                    width: 95%;
-                    a.download_button,
-                    a.read_more{
-                        width: 60%;
+                //custom post entry
+                div.audioExcerpt,
+                div.videoExcerpt{
+                    width: 96%;
+
+                    a.download_button{
+                        width: 40%;
                     }
 
                     //audio
-                    .audio-play {
-                        width: 85%;
-
+                    #audio-play {
+                        width: 96%;
                     }
 
                     //controls -audio/video
-                    div#audio_controls {
-                        height: 55px;
+                    div#audio_controls,
+                    div#videocontrols {
                         width: 97%;
-
                         button#play_toggle {
                             width: 20%;
-                            font-size:1em;
-                            &:hover {
-                                cursor: pointer;
-
+                            line-height: 55px;
+                            
+                            &:hover{
+                                background-color: $colors;
                             }
                             i.fa-pause,
-                            i.fa-play-circle{
-                                font-size:2em;
+                            i.fa-play{
+                                font-size:1.5em;
+                                &:hover {
+                                    cursor: pointer;
+                                }
                             }
                         }
 
                         div#progress {
-                            width: 60%;
-                            height: 27.5px;
+                            width: 56%;
+                            height: 28px;
 
                             span#play_progress {
-                                height: 27.5px;
+                                height: 28px;
+
                             }
                             span#load_progress {
-                                height: 27.5px;
+                                height: 28px;
                             }
                         }
 
                         div#time {
                             width: 20%;
                             letter-spacing: 0.1em;
+                            span{
+                                
+                                line-height: 27px;
+                                font-size: 0.55em;
+                            }
                             span#duration {
-                                font-size: 0.65em;
+         
                             }
                             span#current_time {
-                                font-size: 0.65em;
-
+                                border-bottom:1px solid #fff;
+                      
                             }
+                        }
+
+                        div#video_seek{
+                            margin-top:0.5em;
+                            label{
+                                width:20%;
+                                line-height:60px;
+                                font-size:0.8em;
+                           
+                            }
+                            input[type="range"]{
+                                width:75%;
+                                height: 53px;
+                               
+                            }
+                        }
+                       
+                        label{
+                            width:20%;
+                            margin-right:0.5em;
+                            font-size:0.8em;
+                        }
+                        input[type="range"]{
+                            width:75%;
+                            height: 53px;
                         }
                     }
 
                     //video
-                    .video-play {
-                        display: block;
-                        iframe {
-                            margin: auto;
-                        }
+                    iframe {
+                        margin: 0 auto;
                     }
 
+                    //jp-video player
                     div#jp_container_1 {
                         display: block;
                         width: 100%;
-
                         .jp-type-single {
                             width: 100%;
                             .jp-gui {
-
                                 font-size: 0.8em;
                                 .jp-controls{
                                     width:20%;
-
                                     button.jp-play,
                                     button.jp-stop{
-
                                         width: 50%;
-                                        line-height: 53px;
+
                                     }
                                 }
 
                                 .jp-progress{
                                     width: 35%;
-
-                                    height: 55px;
                                     .jp-seek-bar {
-
                                         line-height: 55px;
-                                        height: 55px;
                                         .jp-play-bar {
                                             line-height: 55px;
-                                            height: 55px;
                                         }
                                     }
                                 }
                                 .jp-volume-controls {
-
-                                    height: 55px;
                                     width: 26%;
+
                                     .jp-mute {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
+
+
                                     }
                                     .jp-volume-max {
                                         width: 49%;
-                                        line-height: 35px;
-                                        margin-right: 0.1em;
                                     }
                                 }
 
                                 .jp-time-holder{
                                     width:19%;
-                                    display:inline-block;
+
 
                                     .jp-current-time {
                                         width: 30%;
-                                        line-height: 55px;
+
                                     }
                                     .jp-duration {
                                         width: 30%;
-                                        line-height: 55px;
                                     }
 
                                     .jp-toggles {
@@ -11672,14 +11896,11 @@ Domain Path: /language
                                         width: 34%;
                                         .jp-repeat {
                                             line-height: 55px;
-
                                         }
                                     }
                                 }
                             }
                             .jp-details{
-                                height:50px;
-                                line-height:50px;
                                 margin-top: 0.2em;
                             }
                         }
@@ -11706,7 +11927,7 @@ Domain Path: /language
 
                         p{
                             width:65%;
-                            font-size: 0.6em;
+                            font-size: 0.75em;
                         }
                     }
                 }
@@ -11874,38 +12095,23 @@ Domain Path: /language
                             }
                         }
 
-                        figure.thumb {
-                            width: 50%;
+                        figure.thumbaud,
+                        figure.thumbvid {
+                            width: 65%;
                             &:hover {
-                                cursor: pointer;
-                                width: 55%;
+                                width: 70%;
                             }
                             img {
-
                                 @include box-sizing($type: border-box);
-
                             }
 
                             figcaption {
-
-                                span.rantsection {
-                                    height: 30px;
-                                    width: 45%;
-                                    img.star {
-                                        width: 20%;
-                                    }
-                                }
-
-                                span.more_button {
+                                margin:0;
+                                span.Morebutton {
                                     height: 40px;
-
-
                                     a {
-                                        font-size: 0.75em;
-                                        letter-spacing: 0.05em;
+                                        font-size: 0.8em;
                                         &:hover {
-                                            color: $color4;
-                                            background-color: $color1;
                                             letter-spacing: 0.055em;
                                         }
                                     }

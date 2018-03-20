@@ -81,20 +81,35 @@ jQuery(document).ready(function($) {
     audio.volume = event.target.value;
     });
 
+    var seek = document.getElementById('seek'),
+    playback = document.getElementById('playback');
+
     //update
-function updateseekmax(event){
-  if( event.target.duration ){
-  seek.max = event.target.duration;
-  }
+
+
+  function updateseekmax(event){
+    if( event.target.duration ){
+      $(seek).max = event.target.duration;
+    }
   }
   function updateplaybackmax(event){
-  if( event.target.duration ){
-  playback.max = event.target.duration;
-  }
+    if( event.target.duration ){
+      $(playback).max = event.target.duration;
+    }
   }
   
-  audio.addEventListener('durationchange', updateseekmax);
-  audio.addEventListener('durationchange', updateplaybackmax);
+  $(audio).bind('durationchange', updateseekmax);
+
+
+  $(audio).bind('durationchange', updateplaybackmax);
+
+  //seeker
+function seekhandler(event){
+  $(audio).currentTime = event.target.value;
+  $(playback).value = event.target.value
+  }
+
+  $(seek).bind('change', seekhandler);
 
 });//end of jquery
 

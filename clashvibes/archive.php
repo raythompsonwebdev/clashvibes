@@ -1,5 +1,19 @@
-
-<?php get_header(); ?>
+<?php
+/**
+ * *PHP version 5
+ *
+ * Archive page | core/archive.php.
+ *
+ * @category   Archive_Page
+ * @package    Clashvibes
+ * @subpackage Archive_Page
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
+ * @link       http:www.raythompsonwebdev.co.uk custom template
+ */
+ get_header(); ?>
 
 <?php get_sidebar(); ?>
 <div id="clashvibes_content">
@@ -29,9 +43,9 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-
+	<figure class="thumb">
 	<?php clashvibes_post_thumbnail(); ?>
-
+	</figure>
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(

@@ -40,35 +40,42 @@
                     <?php /* Start the Loop */ ?>
                     <?php while (have_posts()) : the_post(); ?>
 
-                        <figure class="thumb"><?php the_post_thumbnail(); ?></figure>
+                        <figure class="thumb">
+                        <?php clashvibes_post_thumbnail(); ?>
+                        </figure>
 
-                        <section class="newsExcerpt"><?php the_excerpt(); ?></section>
+                        	<div class="entry-content">
+		<?php
+			the_content( sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			) );
 
-                        <br/>
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
 
-                        <footer class="byline">
-                            Posted in category :<?php the_category(', ') ?>
-                            <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
-                            <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
-                            <br/>
-                            <p>
-                                <?php
-                                $lastmodified = get_the_modified_time('U');
-                                $posted = get_the_time('U');
-                                if ($lastmodified > $posted) {
-                                    echo "Edited " . human_time_diff(get_the_time('U'), get_the_modified_time('U')) . " later";
-                                }
-                                ?>
-                            </p>
-
-                        </footer>
+	<footer class="entry-footer">
+		<?php clashvibes_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
                     </article>
 
     <?php endwhile; ?>
             <?php else: ?>
 
-                <h1>No posts to show</h1>
-                <p>Sorry, we got nada. Nothing. Bupkis. Zippo. Diddly-squat. Sorry to disappoint.</p>
+<?php get_template_part('template-parts/content', 'none'); ?>
+
 <?php endif;?>
 
 

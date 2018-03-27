@@ -1,7 +1,20 @@
-<?php get_header(); 
-                  
-
-?>
+<?php
+/**
+ * *PHP version 5
+ *
+ * Archive Clash Videos | core/archive-clash_videos.php.
+ *
+ * @category   Archive_Clash_Videos
+ * @package    Clashvibes
+ * @subpackage Archive_Clash_Videos
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
+ * @link       http:www.raythompsonwebdev.co.uk 
+ */
+ 
+ get_header();?>
 
 <div id="clashvibes_content_front">
 
@@ -63,7 +76,8 @@ else:
 
     <figcaption>
 
-        <p>Sorry! No Video clashes to display.</p>
+        <p><?php _e('Sorry! No Video clashes to display.','clashvibes')?></p>
+        
 
 
     </figcaption>

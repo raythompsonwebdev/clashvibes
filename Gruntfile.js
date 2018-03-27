@@ -24,8 +24,14 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
             },
             my_target: {
+                
                 files: {
-                    'dist/<%= pkg.name %>.min.js': ['js/**/*.js']
+                    'clashvibes/js/dist/audio.min.js': ['clashvibes/js/audio.js'],
+                    'clashvibes/js/dist/customizer.min.js': ['clashvibes/js/customizer.js'],
+                    'clashvibes/js/dist/main.min.js': ['clashvibes/js/main.js'],
+                    'clashvibes/js/dist/navigation.min.js': ['clashvibes/js/navigation.js'],
+                    'clashvibes/js/dist/skip-link-focus-fix.min.js': ['clashvibes/js/skip-link-focus-fix.js']
+                    
                 }
             }
         },

@@ -1,4 +1,20 @@
-<?php get_header(); ?>
+<?php
+/**
+ * *PHP version 5
+ *
+ * Archive Clash Audio | core/archive-clash_audio.php.
+ *
+ * @category   Archive_Clash_Audio
+ * @package    Clashvibes
+ * @subpackage Archive_Clash_Audio
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
+ * @link       http:www.raythompsonwebdev.co.uk 
+ */
+ 
+ get_header();?>
 
 <div id="clashvibes_content_front">
 
@@ -59,8 +75,7 @@
 
                     <figcaption>
 
-                        <p>Sorry! No Audio clashes to display.</p>
-
+                        <p><?php _e('Sorry! No Audio clashes to display.' , 'clashvibes')?></p>
 
                     </figcaption>
 

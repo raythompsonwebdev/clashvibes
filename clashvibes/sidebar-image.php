@@ -11,10 +11,7 @@
     <?php if ( !function_exists( 'dynamic_sidebar' ) || 
     !dynamic_sidebar('Primary Sidebar') ) : ?>               
         
-    <article class="widget">
-        <h3 class="widget-title">Links</h3>
-
-        </article>
+    
     <?php endif; ?>
 
 </article>

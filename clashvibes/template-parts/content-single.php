@@ -28,10 +28,11 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
-            </header><!-- .entry-header -->
-
+			</header><!-- .entry-header -->
+			
+			<figure class="thumb">
             <?php clashvibes_post_thumbnail(); ?>
-
+			</figure>
             <div class="entry-content">
             <?php
 			the_content( sprintf(
@@ -54,7 +55,8 @@
 		?>
             </div><!-- .entry-content -->
 
-            <?php if (get_edit_post_link()) : ?>
+			<?php if (get_edit_post_link()) : ?>
+			
                 <footer class="entry-footer">
                     <?php
                     edit_post_link(
@@ -72,9 +74,14 @@
                     ?>
                 </footer><!-- .entry-footer -->
                 <?php endif; ?>
-        </article>
+		
+		
+		</article>
 
-            <?php endwhile;
+			<?php endwhile;
+			
+			the_posts_navigation();
+
         else: ?>
         <?php get_template_part('template-parts/content', 'none'); ?>
 <?php endif; ?>

@@ -1,4 +1,18 @@
 <?php
+/**
+ * *PHP version 5
+ * 
+ * Functions | core/functions.php.
+ *
+ * @category   Functions
+ * @package    Clashvibes
+ * @subpackage Functions
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
+ * @link       http:www.raythompsonwebdev.co.uk custom template
+ */
 add_filter( 'wp_title', 'filter_wp_title' );
 
 add_filter( 'widget_text', 'shortcode_unautop' );
@@ -65,19 +79,27 @@ add_editor_style( array( 'styles/custom-editor-style.css','fonts/fontawesome/css
 
 add_theme_support( 'post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio' ) );
 
+	add_theme_support('post-thumbnails');
+
+	set_post_thumbnail_size(100, 100, true);
+
+	/**
+	 * Create new image sizes
+	 */
+	add_image_size('featured-image', 783, 9999);
+
 
 add_theme_support( 'title-tag' );
 	
 $args = array(
 		'width'         => 325,
 		'height'        => 65
-	//	'default-image' => get_template_directory_uri() . '/images/logo-1.png',
 	);
 	add_theme_support( 'custom-header', $args );
 
 	$defaults = array(
-		'default-color'          => '',
-	//	'default-image'          => get_template_directory_uri() . '/images/bg.jpg',
+		'default-color'          => 'e9ad29',
+	//'default-image'          => get_template_directory_uri() . '/images/bg.jpg',
 		'wp-head-callback'       => '_custom_background_cb',
 		'admin-head-callback'    => '',
 		'admin-preview-callback' => ''
@@ -100,9 +122,7 @@ $args = array(
         'admin-preview-callback' => '',
 
 		);
-
-	
-    add_theme_support( 'nav-menus',$defaults );
+	  add_theme_support( 'nav-menus',$defaults );
 	
     $defaults = array(
         'before'           => '<p>' . __( 'Pages:', 'clashvibes' ),
@@ -119,9 +139,21 @@ $args = array(
     wp_link_pages( $defaults );
     
     function register_my_menu() {
-      register_nav_menu('header-menu',__( 'Header Menu' ));
+      register_nav_menu('header-menu',__( 'Header Menu', 'clashvibes' ));
     }
-    add_action( 'init', 'register_my_menu' );
+		add_action( 'init', 'register_my_menu' );
+		
+		if ( function_exists( 'register_nav_menus' ) ) {
+			register_nav_menus(
+					array(
+							'main' => 'Main Nav',
+							'Secondary' => 'Secondary',
+							'mobile' => 'mobile',
+							'Audio-Nav' => 'audio-nav',
+							'Video-Nav' => 'video-nav'
+					));
+					add_action( 'init', 'register_my_menu' );
+	}
 
 
 }
@@ -141,19 +173,6 @@ function clashvibes_content_width() {
 }
 add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
 
-
-
-
-if ( function_exists( 'register_nav_menus' ) ) {
-    register_nav_menus(
-        array(
-            'main' => 'Main Nav',
-            'Secondary' => 'Secondary',
-            'mobile' => 'mobile',
-            'Audio-Nav' => 'audio-nav',
-            'Video-Nav' => 'video-nav'
-        ));
-}
 
 //Audio area
 function audio_widgets_init() {
@@ -217,7 +236,7 @@ function my_audio_own() {
 
 	if( "clash_audio" == get_post_type()){
 			
-		 wp_register_script( 'audio', get_template_directory_uri() . '/js/audio.js', array('jquery'),'1.0.0', 'true' );
+		 wp_register_script( 'audio', get_template_directory_uri() . '/js/dist/audio.min.js', array('jquery'),'1.0.0', 'true' );
 			
 			//wp_register_script( 'jplayer', get_template_directory_uri() . '/js/jPlayer-2.9.2/dist/jplayer/jquery.jplayer.min.js', array('jquery'),'1.0.0', 'true' );
 			//wp_register_script( 'jplayer-audio', get_template_directory_uri() . '/js/jplayer-audio.js', array('jquery'),'1.0.0', 'true' );
@@ -242,11 +261,11 @@ function my_audio_own() {
 
 function clashvibes_scripts() {
     
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array('jquery'),'1.0.0', 'true' );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/dist/main.min.js', array('jquery'),'1.0.0', 'true' );
     
-    wp_enqueue_script( 'clashvibes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    wp_enqueue_script( 'clashvibes-navigation', get_template_directory_uri() . '/js/dist/navigation.min.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'clashvibes-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'clashvibes-skip-link-focus-fix', get_template_directory_uri() . '/js/dist/skip-link-focus-fix.min.js', array(), '20151215', true );
     
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

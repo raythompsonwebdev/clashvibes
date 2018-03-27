@@ -79,8 +79,8 @@ else:
     
 
     <figcaption>
-
-        <p>Sorry! No new clashes to display.</p>
+  
+        <p><?php _e('Sorry! No new clashes to display.', 'clashvibes')?></p>
 
 
     </figcaption>

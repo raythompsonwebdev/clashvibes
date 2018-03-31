@@ -30,9 +30,11 @@
 		endif; ?>
 			</header><!-- .entry-header -->
 			
-			<figure class="thumb">
-            <?php clashvibes_post_thumbnail(); ?>
-			</figure>
+		
+		
+		<?php clashvibes_post_thumbnail(); ?>
+
+	
             <div class="entry-content">
             <?php
 			the_content( sprintf(

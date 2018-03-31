@@ -126,9 +126,9 @@ if ( ! function_exists( 'clashvibes_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 		?>
 
-		<div class="thumb">
+			<figure class="thumb">
 			<?php the_post_thumbnail('featured-image'); ?>
-		</div><!-- .post-thumbnail -->
+		</figure><!-- .post-thumbnail -->
 
 		<?php else : ?>
 
@@ -241,6 +241,4 @@ function raythompsonwebdev_com_validate_gravatar($id_or_email)
         return false;
     }
 }
-
-?>
 

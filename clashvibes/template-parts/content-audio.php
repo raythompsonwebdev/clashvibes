@@ -72,10 +72,10 @@ $meta = get_post_meta($post->ID, 'clash-url', true);
 //$meta = get_post_meta(get_the_ID(), 'clash-url', true);
 ?>
 
-<source src="<?php get_template_directory_uri() ;?>/wordpress/wp-content/themes/clashvibes/audio/<?php print_r($meta); ?>.mp3" type='audio/mp3' type='audio/mpeg' />
+<source src="<?php get_template_directory() ;?>/wp-content/uploads/sites/2/2018/audio/<?php print_r($meta); ?>.mp3" type='audio/mp3' type='audio/mpeg' />
 
-<source src="<?php get_template_directory_uri() ;?>/wordpress/wp-content/themes/clashvibes/audio/<?php print_r($meta); ?>.ogg" type='audio/ogg' />
-<source src="<?php get_template_directory_uri() ;?>/wordpress/wp-content/themes/clashvibes/audio/<?php print_r($meta); ?>.m4a" type='audio/mp4' />
+<source src="<?php get_template_directory() ;?>/wp-content/uploads/sites/2/2018/audio/<?php print_r($meta); ?>.ogg" type='audio/ogg' />
+<source src="<?php get_template_directory() ;?>/wp-content/uploads/sites/2/2018/audio/<?php print_r($meta); ?>.m4a" type='audio/mp4' />
 
 
 <p>Your browser does not support HTML5 audio.</p>

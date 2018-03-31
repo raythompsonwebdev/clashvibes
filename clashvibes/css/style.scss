@@ -1220,7 +1220,17 @@ Domain Path: /language
                 }
 
                 /*--- blog image---*/
-                         
+                
+                .post-thumbnail{
+                    width:20%;
+                    margin:1em auto;
+                    display:block;
+                    img{
+                        margin: 0;
+                        display: block;
+
+                    }
+                }
 
                 /*--- custom post images---*/
                 figure.thumb,
@@ -1232,7 +1242,7 @@ Domain Path: /language
                     @include originTran( 50% 50%);
                     @include box-sizing($type: border-box);
                     @include Transition( all 0.2s linear 0s);
-                    a.post-thumbnail{
+                    a{
                         width:100%;
                         margin:1em auto;
                         display:block;
@@ -1353,6 +1363,17 @@ Domain Path: /language
                     display:block;
                     margin:0 auto;
                     height:auto;
+
+                    .post-thumbnail{
+                        width:20%;
+                        margin:1em auto;
+                        display:block;
+                        img{
+                            margin: 0;
+                            display: block;
+    
+                        }
+                    }
 
                     //text
                     p {
@@ -2560,19 +2581,18 @@ Domain Path: /language
                 }
 
                 /*--- blog image---*/
-                         
+                .post-thumbnail{
+                    width: 25%;
+                    img{
+                        margin: 0;
+
+                    }
+                }         
 
                 /*--- custom post images---*/
                 figure.thumb {
                     width: 25%;
-
-                    a.post-thumbnail{
-                        display:block;
-                        img{
-                            margin: 0;
-  
-                        }
-                    }
+                    
                 }
 
                 //custom post header
@@ -2641,10 +2661,13 @@ Domain Path: /language
                 div.entry-content{
                     width: 98%;
 
+                    /*--- blog image---*/
+                
                     //text
                     p {
                         font-size: 0.9em;
                         line-height:1.9em;
+                        
                         a{
 
                             display: inline-block;
@@ -3503,19 +3526,19 @@ Domain Path: /language
                 }
 
                 /*--- blog image---*/
-                         
+                a.post-thumbnail{
+                    width: 30%;
+                    img{
+                        margin: 0;
+
+                    }
+                }        
 
                 /*--- custom post images---*/
                 figure.thumb {
                     width: 30%;
 
-                    a.post-thumbnail{
-                        display:block;
-                        img{
-                            margin: 0;
-  
-                        }
-                    }
+                    
                 }
 
                 //custom post header
@@ -4446,18 +4469,18 @@ Domain Path: /language
 
                 /*--- blog image---*/
                          
+                a.post-thumbnail{
+                    width: 30%;
+                    img{
+                        margin: 0;
 
+                    }
+                }
                 /*--- custom post images---*/
                 figure.thumb {
                     width: 30%;
 
-                    a.post-thumbnail{
-                        display:block;
-                        img{
-                            margin: 0;
-  
-                        }
-                    }
+                    
                 }
 
                 //custom post header
@@ -5382,19 +5405,19 @@ Domain Path: /language
                 }
 
                 /*--- blog image---*/
-                         
+                a.post-thumbnail{
+                    width: 35%;
+                    img{
+                        margin: 0;
+
+                    }
+                }           
 
                 /*--- custom post images---*/
                 figure.thumb {
                     width: 35%;
 
-                    a.post-thumbnail{
-                        display:block;
-                        img{
-                            margin: 0;
-  
-                        }
-                    }
+                    
                 }
 
                 //custom post header
@@ -6315,18 +6338,18 @@ Domain Path: /language
 
                 /*--- blog image---*/
                          
+                a.post-thumbnail{
+                    width: 35%;
+                    img{
+                        margin: 0;
 
+                    }
+                }
                 /*--- custom post images---*/
                 figure.thumb {
                     width: 35%;
 
-                    a.post-thumbnail{
-                        display:block;
-                        img{
-                            margin: 0;
-  
-                        }
-                    }
+                    
                 }
 
                 //custom post header
@@ -8207,14 +8230,18 @@ Domain Path: /language
                     padding: 0;
                 }
 
+                a.post-thumbnail{
+                    width: 35%;
+                    img{
+                        margin: 0;
+
+                    }
+                }
+
                 //image
                 figure.thumb {
                     width: 35%;
 
-                    img {
-                        margin: 0;
-
-                    }
                 }
 
                 //entry
@@ -9121,14 +9148,17 @@ Domain Path: /language
                     padding: 0;
                 }
 
-                //image
-                figure.thumb {
+                a.post-thumbnail{
                     width: 35%;
-
-                    img {
+                    img{
                         margin: 0;
 
                     }
+                }
+
+                //image
+                figure.thumb {
+                    width: 35%;
                 }
 
                 //entry
@@ -10048,14 +10078,17 @@ Domain Path: /language
                     padding: 0;
                 }
 
-                //image
-                figure.thumb {
+                a.post-thumbnail{
                     width: 45%;
-
-                    img {
+                    img{
                         margin: 0;
 
                     }
+                }
+
+                //image
+                figure.thumb {
+                    width: 45%;
                 }
 
                 //entry
@@ -10974,14 +11007,17 @@ Domain Path: /language
                     padding: 0;
                 }
 
-                //image
-                figure.thumb {
+                a.post-thumbnail{
                     width: 50%;
-
-                    img {
+                    img{
                         margin: 0;
 
                     }
+                }
+
+                //image
+                figure.thumb {
+                    width: 50%;
                 }
 
                 //entry
@@ -11892,14 +11928,19 @@ Domain Path: /language
                     padding: 0;
                 }
 
-                //image
-                figure.thumb {
-                    width: 55%;
+                width: 50%;
 
-                    img {
+                a.post-thumbnail{
+                    width: 55%;
+                    img{
                         margin: 0;
 
                     }
+                }
+
+                //image
+                figure.thumb {
+                    width: 55%;
                 }
 
                 //entry

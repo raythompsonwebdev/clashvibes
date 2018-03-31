@@ -19,5 +19,5 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 </section><!-- end of right panel -->
 
 </div>
-    <?php wp_reset_query(); ?>
+
 <?php get_footer(); ?>

@@ -7,6 +7,7 @@
 
         <section id="clashvibes_banner">
             
+            <img src="<?php echo get_template_directory_uri() . '/images/sliderimage.jpg'?>" alt="">
             
         </section>
 

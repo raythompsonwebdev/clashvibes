@@ -15,65 +15,13 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-<<<<<<< HEAD
-if (post_password_required()) {
-    return;
-=======
 if ( post_password_required() ) {
 	return;
->>>>>>> f8ccbb8c921384d962621bc9b756e4c57c234357
 }
 ?>
 
 <div id="comments" class="comments-area">
 
-<<<<<<< HEAD
-    <?php
-    // You can start editing here -- including this comment!
-    if (have_comments()) : ?>
-        <h2 class="comments-title">
-            <?php
-            $comment_count = get_comments_number();
-            if ('1' === $comment_count) {
-                printf(
-                    /* translators: 1: title. */
-                    esc_html__('One thought on &ldquo;%1$s&rdquo;', 'clashvibes'),
-                    '<span>' . get_the_title() . '</span>'
-                );
-            } else {
-                printf( // WPCS: XSS OK.
-                    /* translators: 1: comment count number, 2: title. */
-                    esc_html(_nx('%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'clashvibes')),
-                    number_format_i18n($comment_count),
-                    '<span>' . get_the_title() . '</span>'
-                );
-            }
-            ?>
-        </h2><!-- .comments-title -->
-
-        <?php the_comments_navigation(); ?>
-
-        <ol class="comment-list">
-            <?php
-                wp_list_comments(array(
-                    'style'      => 'ol',
-                    'short_ping' => true,
-                ));
-            ?>
-        </ol><!-- .comment-list -->
-
-        <?php the_comments_navigation();
-
-        // If comments are closed and there are comments, let's leave a little note, shall we?
-        if (! comments_open()) : ?>
-            <p class="no-comments"><?php esc_html_e('Comments are closed.', 'clashvibes'); ?></p>
-        <?php
-        endif;
-    endif; // Check for have_comments().
-
-    comment_form();
-    ?>
-=======
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
@@ -120,6 +68,5 @@ if ( post_password_required() ) {
 
 	comment_form();
 	?>
->>>>>>> f8ccbb8c921384d962621bc9b756e4c57c234357
 
 </div><!-- #comments -->

@@ -1,0 +1,39 @@
+{
+  "name": "clashvibes",
+  "version": "1.0.0",
+  "description": "Sound Clash Theme",
+  "main": "index.php",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raythompsonwebdev/clashvibes.git"
+  },
+  "keywords": [
+    "Sound",
+    "Clash",
+    "dubplates"
+  ],
+  "author": "Raymond Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raythompsonwebdev/clashvibes/issues"
+  },
+  "homepage": "https://github.com/raythompsonwebdev/clashvibes#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

@@ -158,7 +158,11 @@ Domain Path: /language
                 text-align: center;
             }
             #clashvibes_title {
+<<<<<<< HEAD
                 width: 76%;
+=======
+                width: 75%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 display: inline-block;
                 h1{
                     color:$color2;
@@ -278,7 +282,11 @@ Domain Path: /language
         #clashvibes_content {
             padding: 0;
             margin: auto;
+<<<<<<< HEAD
             min-height: 980px;
+=======
+            min-height: 450px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         }
 
         /********** front page **********/
@@ -587,7 +595,11 @@ Domain Path: /language
 
                         figure.thumbaud,
                         figure.thumbvid {
+<<<<<<< HEAD
                             width: 50%;
+=======
+                            width: 60%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             height: auto;
                             margin: 4% auto;
                             @include originTran( 50% 50%);
@@ -878,19 +890,33 @@ Domain Path: /language
                 form.search-form{
                     
                     label{
+<<<<<<< HEAD
                         width:100%;
                         display:block;
                         font-size:0.9em;
                         span.screen-reader-text{
                             display:block;
                             width:25%;
+=======
+                        width: 90%;
+                        display: block;
+                        font-size: 0.9em;
+                        margin: auto;
+                        span.screen-reader-text{
+                            display:block;
+                            width:100%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             line-height: 35px;
                             margin: 0;
                             float: left;
                             
                         }
                         input[type="search"]{
+<<<<<<< HEAD
                             width:70%;
+=======
+                            width:97%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             display:inline-block;
                             margin:0;
 
@@ -1046,12 +1072,23 @@ Domain Path: /language
                         font-size: 1.2em;
 
                     }
+<<<<<<< HEAD
                     ul {
+=======
+                    ul,
+                    ul.comments{
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         padding: 0;
                         margin: 0.5em 0;
                         height: auto;
                         @include clearfix();
+<<<<<<< HEAD
                         li {
+=======
+                        
+                        li,
+                        li-recent-comments{
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             list-style: none;
                             display: block;
                             line-height: 40px;
@@ -1133,7 +1170,12 @@ Domain Path: /language
                     width: 100%;
                     text-indent: 0.5em;
                     color:$color4;
+<<<<<<< HEAD
                     color:$color;
+=======
+                    height:auto;
+                   
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 }
 
                 h2 {
@@ -1150,11 +1192,17 @@ Domain Path: /language
                     display: block;
                     h1 {
                         font-size: 1.5em;
+<<<<<<< HEAD
                         height: 30px;
                         line-height: 30px;
                         clear: both;
                         margin: 0;
                         padding: 2% 0;
+=======
+                        line-height: 45px;
+                        clear: both;
+                        margin: 0;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         width: 100%;
                         text-indent: 0.5em;
                         background-color:$color4;
@@ -1220,19 +1268,41 @@ Domain Path: /language
                 }
 
                 /*--- blog image---*/
+<<<<<<< HEAD
                          
+=======
+                
+                .post-thumbnail{
+                    width:20%;
+                    margin:1em auto;
+                    display:block;
+                    img{
+                        margin: 0;
+                        display: block;
+
+                    }
+                }
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                 /*--- custom post images---*/
                 figure.thumb,
                 figure.attachment {
+<<<<<<< HEAD
                     width: 20%;
+=======
+                    width: 25%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                     margin: 5em auto;
                     display: block;
                     border: 1px solid $color11;
                     @include originTran( 50% 50%);
                     @include box-sizing($type: border-box);
                     @include Transition( all 0.2s linear 0s);
+<<<<<<< HEAD
                     a.post-thumbnail{
+=======
+                    a{
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         width:100%;
                         margin:1em auto;
                         display:block;
@@ -1354,6 +1424,20 @@ Domain Path: /language
                     margin:0 auto;
                     height:auto;
 
+<<<<<<< HEAD
+=======
+                    .post-thumbnail{
+                        width:20%;
+                        margin:1em auto;
+                        display:block;
+                        img{
+                            margin: 0;
+                            display: block;
+    
+                        }
+                    }
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                     //text
                     p {
                         color: $color4;
@@ -1410,6 +1494,10 @@ Domain Path: /language
                     display: block;
                     width: 70%;
                     margin:auto;
+<<<<<<< HEAD
+=======
+                    
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                     a.download_button{
                         display: block;
                         width: 30%;
@@ -1426,6 +1514,10 @@ Domain Path: /language
                         width: 85%;
                         margin: 0 auto;
                         display: block;
+<<<<<<< HEAD
+=======
+                        
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                     }
 
@@ -1438,6 +1530,10 @@ Domain Path: /language
                         margin: 0 auto;
                         border: $color11 solid 1px;
                         padding:0.5em;
+<<<<<<< HEAD
+=======
+                        background-color:rgb(245, 238, 238);
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                         button#play_toggle {
                             width: 20%;
@@ -1455,8 +1551,14 @@ Domain Path: /language
                             border: $color11 solid 1px;
                             background-color: $color7;
                             &:hover{
+<<<<<<< HEAD
                                 background-color: $color;
                                 line-height: 53px;
+=======
+                                background-color: $color4;
+                                line-height: 53px;
+                                color: $color;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             }
                             i.fa-pause,
                             i.fa-play{
@@ -1469,6 +1571,10 @@ Domain Path: /language
                                     cursor: pointer;
                                     font-weight:bold;
                                     color: $color;
+<<<<<<< HEAD
+=======
+                                    
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 }
                             }
                         }
@@ -1733,7 +1839,10 @@ Domain Path: /language
                         height: 100%;
                         letter-spacing: 0.05em;
                         width: 100%;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         li {
                             list-style: none;
                             line-height: 39px;
@@ -1749,7 +1858,10 @@ Domain Path: /language
                                 height: 40px;
                                 line-height: 40px;
                                 text-indent: 1%;
+<<<<<<< HEAD
                                 font-size: 0.9em;
+=======
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 background-color: $colors;
                                 color: $color;
                             }
@@ -1761,7 +1873,11 @@ Domain Path: /language
                             display:inline-block;
                             margin: 0;
                             padding:0;
+<<<<<<< HEAD
                             font-size: 0.9em;
+=======
+                            
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -2089,7 +2205,11 @@ Domain Path: /language
             height: 70px;
 
             #clashvibes_title {
+<<<<<<< HEAD
                 width: 76%;
+=======
+                width: 69%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                 h1{
 
@@ -2143,7 +2263,11 @@ Domain Path: /language
 
         /*--- Content ---*/
         #clashvibes_content {
+<<<<<<< HEAD
             min-height: 980px;
+=======
+            min-height: 440px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         }
 
         /********** front page **********/
@@ -2342,6 +2466,7 @@ Domain Path: /language
             }
         }
 
+<<<<<<< HEAD
         /********** login form **********/
         #clashvibes_login {
             width: 96%;
@@ -2379,6 +2504,34 @@ Domain Path: /language
         /*--- Left Column---*/
         #clashvibes_left_column {
             width: 21%;
+=======
+        /*--- Left Column---*/
+        #clashvibes_left_column {
+            width: 21%;
+            section#clashvibes_login{
+                padding:0.5em 0;
+                form.search-form{
+                    
+                    label{
+
+                        font-size:0.9em;
+                        span.screen-reader-text{
+                            line-height: 35px;
+                            
+                        }
+                        input[type="search"]{
+                            width:97%;
+                         }
+                    }
+                    input[type="submit"]{
+                        margin:0.5em auto;
+                        &:hover{
+                            cursor:pointer;
+                        }
+                    }
+                }
+            }
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 font-size: 1.25em;
@@ -2560,6 +2713,7 @@ Domain Path: /language
                 }
 
                 /*--- blog image---*/
+<<<<<<< HEAD
                          
 
                 /*--- custom post images---*/
@@ -2573,6 +2727,21 @@ Domain Path: /language
   
                         }
                     }
+=======
+                .post-thumbnail{
+                    width: 25%;
+                    img{
+                        margin: 0;
+
+                    }
+                }         
+
+                /*--- custom post images---*/
+                figure.thumb,
+                figure.attachment {
+                    width: 25%;
+                    
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 }
 
                 //custom post header
@@ -2641,10 +2810,19 @@ Domain Path: /language
                 div.entry-content{
                     width: 98%;
 
+<<<<<<< HEAD
+=======
+                    /*--- blog image---*/
+                
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                     //text
                     p {
                         font-size: 0.9em;
                         line-height:1.9em;
+<<<<<<< HEAD
+=======
+                        
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         a{
 
                             display: inline-block;
@@ -2847,6 +3025,7 @@ Domain Path: /language
                     ul.post-meta {
                         height: 100%;
                         letter-spacing: 0.05em;
+<<<<<<< HEAD
 
                         li {
 
@@ -2854,12 +3033,25 @@ Domain Path: /language
                             span.post-meta-key {
                                 width: 20%;
                                 font-size: 0.9em;
+=======
+                       
+
+                        li {
+                            font-size: 0.8em;
+                            span.post-meta-key {
+                                width: 20%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             }
                         }
 
                         p{
                             width:79%;
+<<<<<<< HEAD
                             font-size: 0.85em;
+=======
+                            
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -3111,7 +3303,11 @@ Domain Path: /language
             height: 70px;
 
             #clashvibes_title {
+<<<<<<< HEAD
                 width: 74%;
+=======
+                width: 68%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                 h1{
 
@@ -3166,7 +3362,11 @@ Domain Path: /language
 
         /*--- Content ---*/
         #clashvibes_content {
+<<<<<<< HEAD
             min-height: 980px;
+=======
+            min-height: 440px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         }
 
         /********** front page **********/
@@ -3205,7 +3405,11 @@ Domain Path: /language
 
                         figure.thumbaud,
                         figure.thumbvid {
+<<<<<<< HEAD
                             width: 60%;
+=======
+                            width: 70%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             &:hover {
                                 width: 65%;
                             }
@@ -3288,6 +3492,7 @@ Domain Path: /language
             }
         }
 
+<<<<<<< HEAD
         /********** login form **********/
         #clashvibes_login {
             width: 96%;
@@ -3325,6 +3530,36 @@ Domain Path: /language
         /*--- Left Column---*/
         #clashvibes_left_column {
             width: 21%;
+=======
+        
+        /*--- Left Column---*/
+        #clashvibes_left_column {
+            width: 21%;
+
+            section#clashvibes_login{
+                padding:0.5em 0;
+                form.search-form{
+                    
+                    label{
+
+                        font-size:0.9em;
+                        span.screen-reader-text{
+                            line-height: 35px;
+                            
+                        }
+                        input[type="search"]{
+                            width:97%;
+                         }
+                    }
+                    input[type="submit"]{
+                        margin:0.5em auto;
+                        &:hover{
+                            cursor:pointer;
+                        }
+                    }
+                }
+            }
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 font-size: 1.2em;
@@ -3503,6 +3738,7 @@ Domain Path: /language
                 }
 
                 /*--- blog image---*/
+<<<<<<< HEAD
                          
 
                 /*--- custom post images---*/
@@ -3516,6 +3752,22 @@ Domain Path: /language
   
                         }
                     }
+=======
+                a.post-thumbnail{
+                    width: 30%;
+                    img{
+                        margin: 0;
+
+                    }
+                }        
+
+                /*--- custom post images---*/
+                figure.thumb,
+                figure.attachment {
+                    width: 30%;
+
+                    
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 }
 
                 //custom post header
@@ -3645,7 +3897,11 @@ Domain Path: /language
                             }
                             i.fa-pause,
                             i.fa-play{
+<<<<<<< HEAD
                                 font-size:1.9em;
+=======
+                                font-size:1.8em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 &:hover {
                                     cursor: pointer;
                                 }
@@ -3787,16 +4043,27 @@ Domain Path: /language
                         letter-spacing: 0.05em;
 
                         li {
+<<<<<<< HEAD
                             font-size: 0.85em;
                             span.post-meta-key {
                                 width: 20%;
                                 font-size: 0.85em;
+=======
+                            font-size: 0.7em;
+                            span.post-meta-key {
+                                width: 20%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             }
                         }
 
                         p{
                             width:79%;
+<<<<<<< HEAD
                             font-size: 0.85em;
+=======
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -4101,7 +4368,11 @@ Domain Path: /language
 
         /*--- Content ---*/
         #clashvibes_content {
+<<<<<<< HEAD
             min-height: 980px;
+=======
+            min-height: 410px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         }
 
         /********** front page **********/
@@ -4141,7 +4412,11 @@ Domain Path: /language
 
                         figure.thumbaud,
                         figure.thumbvid {
+<<<<<<< HEAD
                             width: 65%;
+=======
+                            width: 75%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             &:hover {
                                 width: 70%;
                             }
@@ -4225,6 +4500,7 @@ Domain Path: /language
             }
         }
 
+<<<<<<< HEAD
         /********** login form **********/
         #clashvibes_login {
             width: 96%;
@@ -4265,6 +4541,38 @@ Domain Path: /language
         /*--- Left Column---*/
         #clashvibes_left_column {
             width: 21%;
+=======
+        
+
+        /*--- Left Column---*/
+        #clashvibes_left_column {
+            width: 21%;
+
+            section#clashvibes_login{
+                padding:0.5em 0;
+                form.search-form{
+                    
+                    label{
+
+                        font-size:0.8em;
+                        span.screen-reader-text{
+                            line-height: 35px;
+                            
+                        }
+                        input[type="submit"]{
+                            width:97%;
+                         }
+                    }
+                    input[type="submit"]{
+
+                        margin:0.5em auto;
+                        &:hover{
+                            cursor:pointer;
+                        }
+                    }
+                }
+            }
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 font-size: 1.1em;
@@ -4446,6 +4754,7 @@ Domain Path: /language
 
                 /*--- blog image---*/
                          
+<<<<<<< HEAD
 
                 /*--- custom post images---*/
                 figure.thumb {
@@ -4458,6 +4767,21 @@ Domain Path: /language
   
                         }
                     }
+=======
+                a.post-thumbnail{
+                    width: 30%;
+                    img{
+                        margin: 0;
+
+                    }
+                }
+                /*--- custom post images---*/
+                figure.thumb,
+                figure.attachment {
+                    width: 30%;
+
+                    
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 }
 
                 //custom post header
@@ -4587,7 +4911,11 @@ Domain Path: /language
                             }
                             i.fa-pause,
                             i.fa-play{
+<<<<<<< HEAD
                                 font-size:1.9em;
+=======
+                                font-size:1.7em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 &:hover {
                                     cursor: pointer;
                                 }
@@ -4729,16 +5057,28 @@ Domain Path: /language
                         letter-spacing: 0.05em;
 
                         li {
+<<<<<<< HEAD
                             font-size: 0.8em;
                             span.post-meta-key {
                                 width: 20%;
                                 font-size: 0.8em;
+=======
+                            font-size: 0.7em;
+                            span.post-meta-key {
+                                width: 22%;
+                                font-size:90%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             }
                         }
 
                         p{
+<<<<<<< HEAD
                             width:79%;
                             font-size: 0.8em;
+=======
+                            width:76%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -5042,7 +5382,11 @@ Domain Path: /language
 
         /*--- Content ---*/
         #clashvibes_content {
+<<<<<<< HEAD
             min-height: 980px;
+=======
+            min-height: 415px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         }
 
         /********** front page **********/
@@ -5082,7 +5426,11 @@ Domain Path: /language
 
                         figure.thumbaud,
                         figure.thumbvid {
+<<<<<<< HEAD
                             width: 65%;
+=======
+                            width: 75%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             &:hover {
                                 width: 70%;
                             }
@@ -5166,6 +5514,7 @@ Domain Path: /language
             }
         }
 
+<<<<<<< HEAD
         /********** login form **********/
         #clashvibes_login {
             width: 96%;
@@ -5200,11 +5549,39 @@ Domain Path: /language
             }
             /* ----- Form ----- */
         }
+=======
+        
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
         /*--- Left Column---*/
         #clashvibes_left_column {
             width: 21%;
+<<<<<<< HEAD
 
+=======
+            section#clashvibes_login{
+                padding:0.5em 0;
+                form.search-form{
+                    label{
+                        font-size:0.8em;
+                        span.screen-reader-text{
+                            line-height: 35px;
+                            
+                        }
+                            input[type="search"]{
+                            width:97%;
+                         }
+                    }
+                    input[type="submit"]{
+                        margin:0.5em auto;
+                        &:hover{
+                            cursor:pointer;
+                        }
+                    }
+                }
+            }
+            
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
             h1 {
                 font-size: 1em;
             }
@@ -5382,6 +5759,7 @@ Domain Path: /language
                 }
 
                 /*--- blog image---*/
+<<<<<<< HEAD
                          
 
                 /*--- custom post images---*/
@@ -5395,6 +5773,22 @@ Domain Path: /language
   
                         }
                     }
+=======
+                a.post-thumbnail{
+                    width: 35%;
+                    img{
+                        margin: 0;
+
+                    }
+                }           
+
+                /*--- custom post images---*/
+                figure.thumb,
+                figure.attachment {
+                    width: 35%;
+
+                    
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 }
 
                 //custom post header
@@ -5524,7 +5918,11 @@ Domain Path: /language
                             }
                             i.fa-pause,
                             i.fa-play{
+<<<<<<< HEAD
                                 font-size:1.9em;
+=======
+                                font-size:1.6em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 &:hover {
                                     cursor: pointer;
                                 }
@@ -5664,18 +6062,30 @@ Domain Path: /language
                     ul.post-meta {
                         height: 100%;
                         letter-spacing: 0.05em;
+<<<<<<< HEAD
 
                         li {
                             font-size: 0.7em;
                             span.post-meta-key {
                                 width: 20%;
                                 font-size: 0.75em;
+=======
+                        li {
+                            font-size: 0.6em;
+                            span.post-meta-key {
+                                width: 23%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             }
                         }
 
                         p{
+<<<<<<< HEAD
                             width:79%;
                             font-size: 0.8em;
+=======
+                            width:76%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -6021,7 +6431,11 @@ Domain Path: /language
 
                         figure.thumbaud,
                         figure.thumbvid {
+<<<<<<< HEAD
                             width: 70%;
+=======
+                            width: 80%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             &:hover {
                                 width: 75%;
                             }
@@ -6103,6 +6517,7 @@ Domain Path: /language
             }
         }
 
+<<<<<<< HEAD
         /********** login form **********/
         #clashvibes_login {
             width: 96%;
@@ -6136,6 +6551,38 @@ Domain Path: /language
         /*--- Left Column---*/
         #clashvibes_left_column {
             width: 21%;
+=======
+        
+
+        /*--- Left Column---*/
+        #clashvibes_left_column {
+            width: 21%;
+
+            section#clashvibes_login{
+                padding:0.5em 0;
+                form.search-form{
+                    
+                    label{
+
+                        font-size:0.7em;
+                        span.screen-reader-text{
+                            line-height: 35px;
+                            
+                        }
+                        input[type="search"]{
+                            width:97%;
+                         }
+                    }
+                    input[type="submit"]{
+
+                        margin:0.5em auto;
+                        &:hover{
+                            cursor:pointer;
+                        }
+                    }
+                }
+            }
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 font-size: 0.9em;
@@ -6315,6 +6762,7 @@ Domain Path: /language
 
                 /*--- blog image---*/
                          
+<<<<<<< HEAD
 
                 /*--- custom post images---*/
                 figure.thumb {
@@ -6328,6 +6776,22 @@ Domain Path: /language
                         }
                     }
                 }
+=======
+                a.post-thumbnail{
+                    width: 35%;
+                    img{
+                        margin: 0;
+
+                    }
+                }
+                /*--- custom post images---*/
+                figure.thumb,
+                figure.attachment {
+                    width: 40%;
+
+                    
+                }
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                 //custom post header
                 header.archive-header {
@@ -6456,7 +6920,11 @@ Domain Path: /language
                             }
                             i.fa-pause,
                             i.fa-play{
+<<<<<<< HEAD
                                 font-size:1.9em;
+=======
+                                font-size:1.5em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 &:hover {
                                     cursor: pointer;
                                 }
@@ -6598,16 +7066,27 @@ Domain Path: /language
                         letter-spacing: 0.05em;
 
                         li {
+<<<<<<< HEAD
                             font-size: 0.65em;
                             span.post-meta-key {
                                 width: 20%;
                                 font-size: 0.7em;
+=======
+                            font-size: 0.6em;
+                            span.post-meta-key {
+                                width: 24%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             }
                         }
 
                         p{
+<<<<<<< HEAD
                             width:79%;
                             font-size: 0.8em;
+=======
+                            width:74%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -6844,7 +7323,11 @@ Domain Path: /language
     button#toggle-nav{
         display: block;
         position: fixed;
+<<<<<<< HEAD
         top: 4em;
+=======
+        top: 4.8em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         left: 88.5%;
         z-index: 100;
         height: 50px;
@@ -6853,9 +7336,17 @@ Domain Path: /language
         color:$color;
         border:none;
         outline:none;
+<<<<<<< HEAD
         &:hover{
             background-color:$color7;
             color:$color4;
+=======
+        text-align:center;
+        &:hover{
+            background-color:$color7;
+            color:$color4;
+            text-align:center;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         }
 
     }
@@ -6864,19 +7355,35 @@ Domain Path: /language
     button#side-bar-btn{
         display: block;
         position: fixed;
+<<<<<<< HEAD
         top: 3.9em;
         left: 1%;
         line-height: 50px;
         height: 50px;
         width: 12%;
+=======
+        top: 4.8em;
+        left: 72%;
+        line-height: 50px;
+        height: 50px;
+        width: 15%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         z-index:100;
         background-color:$color4;
         color:$color;
         border:none;
         outline:none;
+<<<<<<< HEAD
         &:hover{
             background-color:$color7;
             color:$color4;
+=======
+        text-align:center;
+        &:hover{
+            background-color:$color7;
+            color:$color4;
+            text-align:center;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         }
 
     }
@@ -6918,7 +7425,11 @@ Domain Path: /language
 
                 a {
                     display: inline-block;
+<<<<<<< HEAD
                     width: 23.5%;
+=======
+                    width: 23%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                     span {
                         display: block;
@@ -6934,14 +7445,22 @@ Domain Path: /language
         /********** navigation **********/
         nav {
             position:fixed;
+<<<<<<< HEAD
+=======
+            top: 4.5em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
             z-index:3;
             height: auto;
             width: 250px;
             left:-250px;
+<<<<<<< HEAD
 
 
             ul {
 
+=======
+            ul {
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 list-style: none;
                 li {
                     margin-right: 0;
@@ -6951,7 +7470,10 @@ Domain Path: /language
                         font-size: 0.9em;
                         line-height: 50px;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         &:hover {
                             letter-spacing: 0.02em;
                             line-height: 50px;
@@ -6983,6 +7505,7 @@ Domain Path: /language
             }
 
         }
+<<<<<<< HEAD
 
         /********** login form **********/
         #clashvibes_login {
@@ -7019,6 +7542,13 @@ Domain Path: /language
         #clashvibes_content {
             padding: 0;
 
+=======
+        
+        /*--- Content ---*/
+        #clashvibes_content {
+            padding: 0;
+            min-height: 415px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         }
 
         /*--- Left Column---*/
@@ -7027,8 +7557,13 @@ Domain Path: /language
             position: fixed;
             left: -250px;
             height: auto;
+<<<<<<< HEAD
             z-index: 100;
             top:7.5em;
+=======
+            z-index: 3;
+            top:4.5em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 position: relative;
@@ -7289,8 +7824,14 @@ Domain Path: /language
                 }
 
                 //image
+<<<<<<< HEAD
                 figure.thumb {
                     width: 35%;
+=======
+                figure.thumb,
+                figure.attachment {
+                    width: 40%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                     img {
                         margin: 0;
@@ -7327,7 +7868,11 @@ Domain Path: /language
                             }
                             i.fa-pause,
                             i.fa-play{
+<<<<<<< HEAD
                                 font-size:1.9em;
+=======
+                                font-size:1.4em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 &:hover {
                                     cursor: pointer;
                                 }
@@ -7467,6 +8012,7 @@ Domain Path: /language
 
                     ul.post-meta {
                         letter-spacing: 0.05em;
+<<<<<<< HEAD
 
                         li {
                             line-height: 39px;
@@ -7476,13 +8022,24 @@ Domain Path: /language
                             span.post-meta-key {
                                 width: 24%;
                                 font-size: 0.85em;
+=======
+                        li {
+                            font-size: 0.7em;
+                            span.post-meta-key {
+                                width: 24%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             }
 
                         }
 
                         p{
+<<<<<<< HEAD
                             width:73%;
                             font-size: 0.8em;
+=======
+                            width:75%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -7655,7 +8212,11 @@ Domain Path: /language
 
                         figure.thumbaud,
                         figure.thumbvid {
+<<<<<<< HEAD
                             width: 65%;
+=======
+                            width: 75%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             &:hover {
                                 width: 70%;
                             }
@@ -7817,17 +8378,29 @@ Domain Path: /language
 @media only screen and (max-width: 536px) {
     
     button#toggle-nav{
+<<<<<<< HEAD
 
         
         left: 87.5%;
+=======
+        top: 4.8em;
+        left: 85.5%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         &:hover{
         }
     }
 
     button#side-bar-btn{
+<<<<<<< HEAD
         top: 5em;
         left: 1%;
         font-size:0.8em;
+=======
+        top: 6em;
+        left: 69%;
+        font-size:0.8em;
+        width: 15%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
         &:hover{
             background-color:$color7;
@@ -7867,11 +8440,19 @@ Domain Path: /language
             }
 
             span#socialmediatop {
+<<<<<<< HEAD
                 width: 40%;
 
                 a {
                     display: inline-block;
                     width: 23.5%;
+=======
+                width: 39%;
+
+                a {
+                    display: inline-block;
+                    width: 23%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                     span {
                         display: block;
@@ -7888,8 +8469,11 @@ Domain Path: /language
         nav {
             width: 250px;
             left:-250px;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
             ul {
 
                 list-style: none;
@@ -7928,6 +8512,7 @@ Domain Path: /language
             }
         }
 
+<<<<<<< HEAD
         /********** login form **********/
         #clashvibes_login {
             width: 96%;
@@ -7958,6 +8543,9 @@ Domain Path: /language
             }
             /* ----- Form ----- */
         }
+=======
+       
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
         /*--- Content ---*/
         #clashvibes_content {
@@ -7969,7 +8557,11 @@ Domain Path: /language
         #clashvibes_left_column {
             width: 250px;
             left: -250px;
+<<<<<<< HEAD
             top:7.5em;
+=======
+            top:4.5em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 position: relative;
@@ -8064,7 +8656,11 @@ Domain Path: /language
                 }
             }
         }
+<<<<<<< HEAD
         /*--- End of Left Column---*/
+=======
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         /*--- Right Column---*/
         #clashvibes_right_column {
             width: 98%;
@@ -8207,16 +8803,32 @@ Domain Path: /language
                     padding: 0;
                 }
 
+<<<<<<< HEAD
                 //image
                 figure.thumb {
                     width: 35%;
 
                     img {
+=======
+                a.post-thumbnail{
+                    width: 35%;
+                    img{
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         margin: 0;
 
                     }
                 }
 
+<<<<<<< HEAD
+=======
+                //image
+                figure.thumb,
+                figure.attachment {
+                    width: 40%;
+
+                }
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 //entry
                 //custom post entry
                 div.audioExcerpt,
@@ -8246,7 +8858,11 @@ Domain Path: /language
                             }
                             i.fa-pause,
                             i.fa-play{
+<<<<<<< HEAD
                                 font-size:1.9em;
+=======
+                                font-size:1.3em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 &:hover {
                                     cursor: pointer;
                                 }
@@ -8388,17 +9004,26 @@ Domain Path: /language
                         letter-spacing: 0.05em;
 
                         li {
+<<<<<<< HEAD
 
                             font-size: 0.65em;
 
+=======
+                            font-size: 0.6em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             span.post-meta-key {
                                 width: 24%;
                             }
                         }
 
                         p{
+<<<<<<< HEAD
                             width:73%;
                             font-size: 0.75em;
+=======
+                            width:75%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -8568,7 +9193,11 @@ Domain Path: /language
 
                         figure.thumbaud,
                         figure.thumbvid {
+<<<<<<< HEAD
                             width: 65%;
+=======
+                            width: 75%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             &:hover {
                                 width: 70%;
                             }
@@ -8726,7 +9355,11 @@ Domain Path: /language
 @media only screen and (max-width: 480px) {
 
     button#toggle-nav{
+<<<<<<< HEAD
         left: 86.5%;
+=======
+        left: 83%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         top:0.25em;
         &:hover{
             background-color:$color7;
@@ -8735,8 +9368,13 @@ Domain Path: /language
     }
 
     button#side-bar-btn{
+<<<<<<< HEAD
         top: 4.5em;
         left:87.5%;
+=======
+        top: 0.25em;
+        left: 67.5%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         &:hover{
             background-color:$color7;
 
@@ -8760,7 +9398,11 @@ Domain Path: /language
 
         /********** header **********/
         header {
+<<<<<<< HEAD
             height: 120px;
+=======
+            height: 80px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
             #clashvibes_title {
                 width: 50%;
 
@@ -8777,7 +9419,11 @@ Domain Path: /language
 
             span#socialmediatop {
                 width: 75%;
+<<<<<<< HEAD
 
+=======
+                display:none;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 a {
                     display: inline-block;
                     width: 23.5%;
@@ -8801,6 +9447,10 @@ Domain Path: /language
         nav {
             width: 250px;
             left:-250px;
+<<<<<<< HEAD
+=======
+            top:4.5em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
 
             ul {
@@ -8841,6 +9491,7 @@ Domain Path: /language
             }
         }
 
+<<<<<<< HEAD
         /********** login form **********/
         #clashvibes_login {
             width: 96%;
@@ -8872,6 +9523,9 @@ Domain Path: /language
             /* ----- Form ----- */
         }
 
+=======
+        
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         /*--- Content ---*/
         #clashvibes_content {
             padding: 0;
@@ -8880,9 +9534,14 @@ Domain Path: /language
 
         /*--- Left Column---*/
         #clashvibes_left_column {
+<<<<<<< HEAD
             width: 250px;
             left: -250px;
             top:7.5em;
+=======
+
+            top:4.5em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 position: relative;
@@ -8981,7 +9640,11 @@ Domain Path: /language
         /*--- Right Column---*/
         #clashvibes_right_column {
             margin: 0 0 1% 0;
+<<<<<<< HEAD
             width: 96%;
+=======
+            width: 98%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 font-size: 1em;
@@ -9014,14 +9677,30 @@ Domain Path: /language
                     h1 {
                         font-size: 0.9em;
                         text-indent: 0.5em;
+<<<<<<< HEAD
+=======
+                        text-align: center;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                         a {
 
                             letter-spacing: 0.03em;
+<<<<<<< HEAD
+=======
+                            display: block;
+                            width: 100%;
+                            float: none;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                         }
                         span {
                             text-indent: 0.5em;
+<<<<<<< HEAD
+=======
+                            display: block;
+                            width: 100%;
+                            float: none;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                         }
                     }
@@ -9121,16 +9800,31 @@ Domain Path: /language
                     padding: 0;
                 }
 
+<<<<<<< HEAD
                 //image
                 figure.thumb {
                     width: 35%;
 
                     img {
+=======
+                a.post-thumbnail{
+                    width: 35%;
+                    img{
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         margin: 0;
 
                     }
                 }
 
+<<<<<<< HEAD
+=======
+                //image
+                figure.thumb,
+                figure.attachment {
+                    width: 45%;
+                }
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 //entry
                 //custom post entry
                 div.audioExcerpt,
@@ -9160,7 +9854,11 @@ Domain Path: /language
                             }
                             i.fa-pause,
                             i.fa-play{
+<<<<<<< HEAD
                                 font-size:1.9em;
+=======
+                                font-size:1.2em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 &:hover {
                                     cursor: pointer;
                                 }
@@ -9296,6 +9994,7 @@ Domain Path: /language
                 //custom-post-footer
                 footer.speaker-meta {
 
+<<<<<<< HEAD
                     min-height: 160px;
 
                     ul.post-meta {
@@ -9316,6 +10015,24 @@ Domain Path: /language
                             width:68%;
                             font-size: 0.75em;
 
+=======
+                    min-height: 335px;
+
+                    ul.post-meta {
+                        letter-spacing: 0.05em;
+                        height:auto;
+                        li {
+                            font-size: 0.8em;
+                            height:auto;
+                            span.post-meta-key {
+                                width: 100%;
+                                display:block;
+                            }
+                        }
+                        p{
+                            width:100%;
+                            display:block;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -9485,7 +10202,11 @@ Domain Path: /language
 
                         figure.thumbaud,
                         figure.thumbvid {
+<<<<<<< HEAD
                             width: 65%;
+=======
+                            width: 75%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             &:hover {
                                 width: 70%;
                             }
@@ -9641,8 +10362,13 @@ Domain Path: /language
 @media only screen and (max-width: 414px) {
 
     button#toggle-nav{
+<<<<<<< HEAD
         left: 83.5%;
         top:0.25em;
+=======
+        left: 80%;
+        top: 0.8em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         &:hover{
             background-color:$color7;
 
@@ -9650,7 +10376,12 @@ Domain Path: /language
     }
 
     button#side-bar-btn{
+<<<<<<< HEAD
         left: 80%;
+=======
+        left: 77%;
+        top: 5.05em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         width:20%;
         &:hover{
             background-color:$color7;
@@ -9675,7 +10406,11 @@ Domain Path: /language
 
         /********** header **********/
         header {
+<<<<<<< HEAD
             height: 120px;
+=======
+            height: 110px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
             #clashvibes_title {
                 width: 48%;
 
@@ -9751,6 +10486,7 @@ Domain Path: /language
             }
         }
 
+<<<<<<< HEAD
         /********** login form **********/
         #clashvibes_login {
             width: 96%;
@@ -9782,6 +10518,9 @@ Domain Path: /language
             /* ----- Form ----- */
         }
 
+=======
+        
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         /*--- Content ---*/
         #clashvibes_content {
             padding: 0;
@@ -9790,9 +10529,14 @@ Domain Path: /language
 
         /*--- Left Column---*/
         #clashvibes_left_column {
+<<<<<<< HEAD
             width: 250px;
             left: -250px;
             top:7.5em;
+=======
+
+            top:4.5em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 position: relative;
@@ -9891,7 +10635,11 @@ Domain Path: /language
         /*--- Right Column---*/
         #clashvibes_right_column {
             margin: 0 0 1% 0;
+<<<<<<< HEAD
             width: 96%;
+=======
+            width: 98%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 font-size: 1em;
@@ -9922,19 +10670,27 @@ Domain Path: /language
                     height: auto;
 
                     h1 {
+<<<<<<< HEAD
                         font-size: 0.8em;
                         text-indent: 0em;
                         height: auto;
                         padding: 0.5em;
                         width: 96%;
 
+=======
+                        height: auto;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         a {
 
                             letter-spacing: 0.03em;
 
                         }
                         span {
+<<<<<<< HEAD
                             text-indent: 0em;
+=======
+                            text-indent: 0.25em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                         }
                     }
@@ -10048,16 +10804,31 @@ Domain Path: /language
                     padding: 0;
                 }
 
+<<<<<<< HEAD
                 //image
                 figure.thumb {
                     width: 45%;
 
                     img {
+=======
+                a.post-thumbnail{
+                    width: 45%;
+                    img{
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         margin: 0;
 
                     }
                 }
 
+<<<<<<< HEAD
+=======
+                //image
+                figure.thumb,
+                figure.attachment {
+                    width: 50%;
+                }
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 //entry
                 //custom post entry
                 div.audioExcerpt,
@@ -10087,7 +10858,11 @@ Domain Path: /language
                             }
                             i.fa-pause,
                             i.fa-play{
+<<<<<<< HEAD
                                 font-size:1.7em;
+=======
+                                font-size:1.1em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 &:hover {
                                     cursor: pointer;
                                 }
@@ -10225,23 +11000,40 @@ Domain Path: /language
                 //custom-post-footer
                 footer.speaker-meta {
 
+<<<<<<< HEAD
                     min-height: 160px;
+=======
+                    min-height: 335px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                     ul.post-meta {
                         letter-spacing: 0.05em;
 
                         li {
+<<<<<<< HEAD
                             font-size: 0.65em;
 
                             span.post-meta-key {
                                 width: 27%;
                                 font-size: 0.65em;
+=======
+
+
+                            span.post-meta-key {
+                                width: 100%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             }
                         }
 
                         p{
+<<<<<<< HEAD
                             width:68%;
                             font-size: 0.75em;
+=======
+                            width:100%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -10410,7 +11202,11 @@ Domain Path: /language
 
                         figure.thumbaud,
                         figure.thumbvid {
+<<<<<<< HEAD
                             width: 70%;
+=======
+                            width: 80%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             &:hover {
                                 width: 75%;
                             }
@@ -10568,8 +11364,12 @@ Domain Path: /language
 
     button#toggle-nav{
         position: fixed;
+<<<<<<< HEAD
         
         left: 81.5%;
+=======
+        left: 79%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         &:hover{
             background-color:$color7;
             color:$color4;
@@ -10579,7 +11379,12 @@ Domain Path: /language
 
     button#side-bar-btn{
         width:20%;
+<<<<<<< HEAD
         left:81%;
+=======
+        left: 77%;
+        top: 5.05em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
         &:hover{
             background-color:$color7;
@@ -10605,13 +11410,21 @@ Domain Path: /language
 
         /********** header **********/
         header {
+<<<<<<< HEAD
             height: 120px;
+=======
+            height: 110px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
             #clashvibes_title {
                 width: 50%;
 
                 h1{
 
+<<<<<<< HEAD
                     font-size:1.9em;
+=======
+                    font-size:1.8em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                 }
                 h2.site-description{
@@ -10681,6 +11494,7 @@ Domain Path: /language
             }
         }
 
+<<<<<<< HEAD
         /********** login form **********/
         #clashvibes_login {
             width: 96%;
@@ -10715,14 +11529,26 @@ Domain Path: /language
         /*--- Content ---*/
         #clashvibes_content {
             padding: 0;
+=======
+        
+        /*--- Content ---*/
+        #clashvibes_content {
+            padding: 0;
+            min-height: 625px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
         }
 
         /*--- Left Column---*/
         #clashvibes_left_column {
+<<<<<<< HEAD
             width: 250px;
             left: -250px;
             top:7.5em;
+=======
+
+            top:4.5em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 position: relative;
@@ -10860,7 +11686,11 @@ Domain Path: /language
 
                         }
                         span {
+<<<<<<< HEAD
                             text-indent: 0em;
+=======
+                            text-indent: 0.25em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                         }
                     }
@@ -10974,16 +11804,31 @@ Domain Path: /language
                     padding: 0;
                 }
 
+<<<<<<< HEAD
                 //image
                 figure.thumb {
                     width: 50%;
 
                     img {
+=======
+                a.post-thumbnail{
+                    width: 50%;
+                    img{
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         margin: 0;
 
                     }
                 }
 
+<<<<<<< HEAD
+=======
+                //image
+                figure.thumb,
+                figure.attachment {
+                    width: 50%;
+                }
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 //entry
                 //custom post entry
                 div.audioExcerpt,
@@ -11011,7 +11856,11 @@ Domain Path: /language
                             }
                             i.fa-pause,
                             i.fa-play{
+<<<<<<< HEAD
                                 font-size:1.5em;
+=======
+                                font-size:1em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 &:hover {
                                     cursor: pointer;
                                 }
@@ -11149,6 +11998,7 @@ Domain Path: /language
                 //custom-post-footer
                 footer.speaker-meta {
 
+<<<<<<< HEAD
                     min-height: 160px;
 
                     ul.post-meta {
@@ -11160,12 +12010,30 @@ Domain Path: /language
                             span.post-meta-key {
                                 width: 30%;
                                 font-size: 0.65em;
+=======
+                    min-height: 335px;
+
+                    ul.post-meta {
+                        letter-spacing: 0.05em;
+                        
+                        li {
+                            font-size: 0.7em;
+
+                            span.post-meta-key {
+                                width: 100%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             }
                         }
 
                         p{
+<<<<<<< HEAD
                             width:65%;
                             font-size: 0.75em;
+=======
+                            width:100%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -11335,7 +12203,11 @@ Domain Path: /language
 
                         figure.thumbaud,
                         figure.thumbvid {
+<<<<<<< HEAD
                             width: 50%;
+=======
+                            width: 60%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             &:hover {
                                 width: 55%;
                             }
@@ -11493,7 +12365,11 @@ Domain Path: /language
     button#toggle-nav{
         position: fixed;
         
+<<<<<<< HEAD
         left: 81.5%;
+=======
+        left: 77%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         &:hover{
             background-color:$color7;
             color:$color4;
@@ -11502,7 +12378,11 @@ Domain Path: /language
     }
 
     button#side-bar-btn{
+<<<<<<< HEAD
         left: 80%;
+=======
+        left: 77%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         &:hover{
             background-color:$color7;
             color:$color4;
@@ -11527,13 +12407,21 @@ Domain Path: /language
 
         /********** header **********/
         header {
+<<<<<<< HEAD
             height: 120px;
+=======
+            height: 110px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
             #clashvibes_title {
                 width: 50%;
 
                 h1{
 
+<<<<<<< HEAD
                     font-size:1.9em;
+=======
+                    font-size:1.7em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                 }
                 h2.site-description{
@@ -11603,6 +12491,7 @@ Domain Path: /language
             }
         }
 
+<<<<<<< HEAD
         /********** login form **********/
         #clashvibes_login {
             width: 96%;
@@ -11637,6 +12526,13 @@ Domain Path: /language
         /*--- Content ---*/
         #clashvibes_content {
             padding: 0;
+=======
+        
+        /*--- Content ---*/
+        #clashvibes_content {
+            padding: 0;
+            min-height: 625px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
         }
 
@@ -11644,7 +12540,11 @@ Domain Path: /language
         #clashvibes_left_column {
             width: 250px;
             left: -250px;
+<<<<<<< HEAD
             top:7.5em;
+=======
+            top:4.5em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 position: relative;
@@ -11743,7 +12643,10 @@ Domain Path: /language
         /*--- Right Column---*/
         #clashvibes_right_column {
             margin: 0 0 1% 0;
+<<<<<<< HEAD
             width: 96%;
+=======
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
             h1 {
                 font-size: 1em;
@@ -11782,7 +12685,11 @@ Domain Path: /language
 
                         }
                         span {
+<<<<<<< HEAD
                             text-indent: 0em;
+=======
+                            text-indent: 0.2em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                         }
                     }
@@ -11891,17 +12798,34 @@ Domain Path: /language
                     width: 90%;
                     padding: 0;
                 }
+<<<<<<< HEAD
 
                 //image
                 figure.thumb {
                     width: 55%;
 
                     img {
+=======
+      
+
+                a.post-thumbnail{
+                    width: 55%;
+                    img{
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         margin: 0;
 
                     }
                 }
 
+<<<<<<< HEAD
+=======
+                //image
+                figure.thumb,
+                figure.attachment {
+                    width: 50%;
+                }
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 //entry
                 //custom post entry
                 div.audioExcerpt,
@@ -11930,7 +12854,11 @@ Domain Path: /language
                             }
                             i.fa-pause,
                             i.fa-play{
+<<<<<<< HEAD
                                 font-size:1.5em;
+=======
+                                font-size:0.9em;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                                 &:hover {
                                     cursor: pointer;
                                 }
@@ -12069,24 +12997,39 @@ Domain Path: /language
                 //custom-post-footer
                 footer.speaker-meta {
 
+<<<<<<< HEAD
                     min-height: 160px;
+=======
+                    min-height: 335px;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
                     ul.post-meta {
                         letter-spacing: 0.05em;
 
                         li {
+<<<<<<< HEAD
                             line-height: 39px;
                             height: 40px;
                             font-size: 0.6em;
 
                             span.post-meta-key {
                                 width: 27%;
+=======
+                            font-size:0.65em;
+                            span.post-meta-key {
+                                width: 100%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             }
                         }
 
                         p{
+<<<<<<< HEAD
                             width:65%;
                             font-size: 0.75em;
+=======
+                            width:100%;
+
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                         }
                     }
                 }
@@ -12256,7 +13199,11 @@ Domain Path: /language
 
                         figure.thumbaud,
                         figure.thumbvid {
+<<<<<<< HEAD
                             width: 65%;
+=======
+                            width: 75%;
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                             &:hover {
                                 width: 70%;
                             }

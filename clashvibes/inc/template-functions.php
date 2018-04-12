@@ -29,4 +29,8 @@ function clashvibes_pingback_header() {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
+<<<<<<< HEAD
 add_action( 'wp_head', 'clashvibes_pingback_header' );
+=======
+add_action( 'wp_head', 'clashvibes_pingback_header' );
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc

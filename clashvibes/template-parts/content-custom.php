@@ -1,70 +1,3 @@
-<<<<<<< HEAD
-
-
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-
-        <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-
-            	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-?>
-	
-		<div class="entry-meta">
-			<?php
-				clashvibes_posted_on();
-				clashvibes_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-
-
-	</header><!-- .entry-header -->
-
-            <figure class="thumb">
-				<?php clashvibes_post_thumbnail(); ?>
-				</figure>
-
-            <div class="entry-content">
-           
-
-                <?php the_excerpt(sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			)); 
-                
-                wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
-				'after'  => '</div>',
-			) );?>
-
-            </div>
-            <br/>
-
-			<br/>
-			<br/>
-        <?php endwhile;
-    else: ?>
-        <?php get_template_part('template-parts/content', 'none'); ?>
-<?php endif; ?>
-
-    <!--end of Comment box-->
-</article>
-
-
-=======
 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -128,4 +61,3 @@
 </article>
 
 
->>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc

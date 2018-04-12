@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-
-<?php get_header(); ?>
-	  
-
-<div id="clashvibes_content">
-    <?php get_sidebar('video'); ?>
- 	
-<section id="clashvibes_right_column">
-      
-                              
-<?php get_template_part('template-parts/content' , 'video'); ?>
-
-</section><!-- end of clashvibes_right_panel_fullwidth -->
-</div>
-<?php get_footer(); ?>
-
-
-
-
-=======
 <?php
 /**
  * *PHP version 5
@@ -52,4 +31,3 @@ get_header(); ?>
 
 
 
->>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc

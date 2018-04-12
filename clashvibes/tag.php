@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-
-<?php get_header(); ?>
-
-<?php get_sidebar(); ?>
-
-<div id="clashvibes_content">
-  	
-<section id="clashvibes_right_column">
-
-<?php get_template_part('template-parts/content', get_post_format()); ?>
-
-</section><!-- end of right panel -->
-
-<?php get_footer(); ?>
-
-
- 
-</div> 
-=======
 <?php
 /**
  * *PHP version 5
@@ -50,4 +30,3 @@ get_header(); ?>
 
  
 </div> 
->>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc

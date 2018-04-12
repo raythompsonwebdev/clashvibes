@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<?php get_header(); ?>
-=======
 <?php
 /**
  * *PHP version 5
@@ -17,7 +14,6 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 get_header(); ?>
->>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 
 <div id="clashvibes_content">
 <?php get_sidebar('audio'); ?>

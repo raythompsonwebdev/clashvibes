@@ -1,15 +1,75 @@
-.sass-cache/
-Files/
-nbproject/
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 node_modules/
-vendor/
-clashvibes/audio/
-clashvibes/fonts/
+dist/
+.sass-cache/
+audio/
+.phpintel/
 clashvibes/images/
+
+.gitignore
+.gitattributes
+nbproject/
+Files/
+clashvibes/fontawesome/
+clashvibes/fonts/
+
+clashvibes/js/easySlider1.5.js
+clashvibes/js/jplayer-audio.txt
+clashvibes/js/jplayer-audio.js
+clashvibes/js/nivo-slider.pack.js
 clashvibes/js/Spare/
-clashvibes/js/jPlayer-2.9.2/
-clashvibes/css/.sass-cache/
+clashvibes/js/jPLayer-2.9.2/
+
 clashvibes/css/style.css.map
 clashvibes/css/style.scss.map
-audio/
+clashvibes/css/style.css
+clashvibes/css/.sass-cache/
+vendor/
+vendor/bin/
 

@@ -28,7 +28,7 @@ get_header(); ?>
             </header><!-- .page-header -->
 
             <div class="newsExcerpt">
-                <p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'clashvibes'); ?></p>
+                <p><?php _e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'clashvibes'); ?></p>
 
                 <?php
                 get_search_form();
@@ -37,7 +37,7 @@ get_header(); ?>
                 ?>
 
                 <div class="widget widget_categories">
-                    <h2 class="widget-title"><?php esc_html_e('Most Used Categories', 'clashvibes'); ?></h2>
+                    <h2 class="widget-title"><?php _e('Most Used Categories', 'clashvibes'); ?></h2>
                     <ul>
                         <?php
                         wp_list_categories(array(

@@ -69,12 +69,12 @@ $meta = get_post_meta($post->ID, 'clash-url', true);
 <source src="<?php get_template_directory_uri() ;?>/wp-content/uploads/sites/2/2018/04/<?php print_r($meta); ?>.m4a" type='audio/mp4' />
 
 
-<p>Your browser does not support HTML5 audio.</p>
+<p><?php _e('Your browser does not support HTML5 audio.', 'clashvibes'); ?></p>
 </audio>
 <br/>
 <div id="audio_controls">
 
-<button id="play_toggle" class="player-button">PLAY</i></button>
+<button id="play_toggle" class="player-button"><?php _e('PLAY', 'clashvibes'); ?></i></button>
 
 <div id="progress">
 <span id="load_progress"></span>
@@ -86,10 +86,10 @@ $meta = get_post_meta($post->ID, 'clash-url', true);
 <span id="duration">00:00</span>
 </div>
 <div class="clearfix"></div>
-<label id="volume_bar" for="volume">Volume</label>
+<label id="volume_bar" for="volume"><?php _e('Volume', 'clashvibes'); ?></label>
 <input type="range" id="volume" title="volume"min="0" max="1" step="0.1" value="1">
 <div id="video_seek">
-<label for="seek">Seek</label>
+<label for="seek"><?php _e('Seek', 'clashvibes'); ?></label>
 <input type="range" id="seek" title="seek" min="0" value="0" max="0">
 </div>
 

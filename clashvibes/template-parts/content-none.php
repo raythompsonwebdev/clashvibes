@@ -43,7 +43,7 @@
 
             <?php elseif (is_404()) : ?>
 
-                <p><?php esc_html_e('You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'raythompsonwebdev-com'); ?></p>
+                <p><?php esc_html_e('You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'clashvibes'); ?></p>
                 <?php get_search_form(); ?>
 
             <?php else : ?>

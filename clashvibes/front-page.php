@@ -74,11 +74,11 @@ get_header(); ?>
                             
                                                 
                     <?php if ('clash_audio' == get_post_type()) : ?>
-                           <span class="Morebutton"><a href=" <?php the_permalink() ?> " title="Listen to <?php the_title_attribute() ?>">Listen</a></span>
+                           <span class="Morebutton"><a href=" <?php echo esc_url( get_permalink() ) ?> " title="Listen to <?php the_title_attribute() ?>"><?php _e('Listen', 'clashvibes');?></a></span>
                            
                            <?php else : ?>
                            
-                           <span class="Morebutton"><a href=" <?php the_permalink() ?> " title="View <?php the_title_attribute() ?> Video">View</a></span>
+                           <span class="Morebutton"><a href=" <?php echo esc_url( get_permalink() ) ?> " title="View <?php the_title_attribute() ?> Video"><?php _e('View', 'clashvibes');?></a></span>
                            <?php endif; ?>
                            
                         </figcaption>
@@ -140,7 +140,7 @@ wp_reset_query();
                     <li class="topdownload_box">
                         <span class="image_thumb"><a href="" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail(); ?></a></span>
                         <span class="title_singer"><?php the_title() ?></span>
-                        <span><a href="<?php the_permalink() ?>" title="Listen to <?php the_title_attribute() ?>">Listen</a></span>
+                        <span><a href="<?php echo esc_url( get_permalink() ) ?>" title="Listen to <?php the_title_attribute() ?>"><?php _e('Listen', 'clashvibes');?></a></span>
                     </li>
 
                     <?php endwhile;
@@ -180,7 +180,7 @@ wp_reset_query();
                     <li class="topdownload_box">
                        <span class="image_thumb"><a href="" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail(); ?></a></span>
                         <span class="title_singer"><?php the_title() ?></span>
-                        <span><a href="<?php the_permalink() ?>" title="View <?php the_title_attribute() ?> Video">View</a></span>
+                        <span><a href="<?php echo esc_url( get_permalink() ) ?>" title="View <?php the_title_attribute() ?> Video"><?php _e('View', 'clashvibes');?></a></span>
                     </li>
 
                     <?php endwhile; else:  ?>

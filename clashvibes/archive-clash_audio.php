@@ -56,7 +56,7 @@
 
                         <figcaption>
 
-                            <span class="Morebutton"><a href="<?php the_permalink() ?>">Listen</a></span>
+                            <span class="Morebutton"><a href="<?php echo esc_url( get_permalink() ) ?>"><?php _e('Listen', 'clashvibes');?></a></span>
 
 
                         </figcaption>

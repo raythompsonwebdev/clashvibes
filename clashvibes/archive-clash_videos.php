@@ -57,7 +57,7 @@
 
                         <figcaption>
 
-                            <span class="Morebutton"><a href="<?php the_permalink() ?>" >View</a></span>
+                            <span class="Morebutton"><a href="<?php echo esc_url( get_permalink() ) ?>" ><?php _e('View', 'clashvibes');?></a></span>
 
 
                         </figcaption>

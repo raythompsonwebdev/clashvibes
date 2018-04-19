@@ -1,18 +1,17 @@
 /*
 Theme Name: Clashvibes
-Theme URI: 
+Theme URI: http://www.clashvibes.com
 Description: Reggae sound clashes.
 Version: 1.0
-Author: Raymond Thompson
-Author URI: http://www.raythompsonwebdev.co.uk
+Author: Mr Bullitan
+Author URI:
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: two-columns, left-sidebar, flexible-header, custom-background, custom-header, editor-style, custom-logo, featured-images, custom-menu, entertainment 
+Tags: custom-header, custom-background,editor-style
+clashvibes WordPress Theme, Copyright 2014 Raymond Thompson
+clashvibes is distributed under the terms of the GNU GPL
 Text Domain: clashvibes
 Domain Path: /language
-
-Clashvibes WordPress Theme, Copyright 2017 Raymond Thompson
-Clashvibes is distributed under the terms of the GNU GPL
 */
 
 @import 'style-min.css';

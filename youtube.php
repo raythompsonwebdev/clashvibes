@@ -29,9 +29,15 @@ $client = new Google_Client();
 $client->setClientId($OAUTH2_CLIENT_ID);
 $client->setClientSecret($OAUTH2_CLIENT_SECRET);
 $client->setScopes('https://www.googleapis.com/auth/youtube');
+<<<<<<< HEAD
 $redirect = filter_var(
     'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'],
     FILTER_SANITIZE_URL
+=======
+$redirect = filter_var(
+    'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'],
+    FILTER_SANITIZE_URL
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
 );
 $client->setRedirectUri($redirect);
 
@@ -59,10 +65,17 @@ if ($client->getAccessToken()) {
     try {
         // Call the channels.list method to retrieve information about the
         // currently authenticated user's channel.
+<<<<<<< HEAD
         $channelsResponse = $youtube->channels->listChannels(
             'contentDetails', array(
             'mine' => 'true',
             )
+=======
+        $channelsResponse = $youtube->channels->listChannels(
+            'contentDetails', array(
+            'mine' => 'true',
+            )
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         );
 
         $htmlBody = '';
@@ -72,23 +85,38 @@ if ($client->getAccessToken()) {
             // to retrieve that list.
             $uploadsListId = $channel['contentDetails']['relatedPlaylists']['uploads'];
 
+<<<<<<< HEAD
             $playlistItemsResponse = $youtube->playlistItems->listPlaylistItems(
                 'snippet', array(
                 'playlistId' => $uploadsListId,
                 'maxResults' => 50
                 )
+=======
+            $playlistItemsResponse = $youtube->playlistItems->listPlaylistItems(
+                'snippet', array(
+                'playlistId' => $uploadsListId,
+                'maxResults' => 50
+                )
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
             );
 
             $htmlBody .= "<h3>Videos in list $uploadsListId</h3><ul>";
             foreach ($playlistItemsResponse['items'] as $playlistItem) {
+<<<<<<< HEAD
                 $htmlBody .= sprintf(
                     '<li>%s (%s)</li>', $playlistItem['snippet']['title'],
                     $playlistItem['snippet']['resourceId']['videoId']
+=======
+                $htmlBody .= sprintf(
+                    '<li>%s (%s)</li>', $playlistItem['snippet']['title'],
+                    $playlistItem['snippet']['resourceId']['videoId']
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
                 );
             }
             $htmlBody .= '</ul>';
         }
     } catch (Google_Service_Exception $e) {
+<<<<<<< HEAD
         $htmlBody = sprintf(
             '<p>A service error occurred: <code>%s</code></p>',
             htmlspecialchars($e->getMessage())
@@ -97,6 +125,16 @@ if ($client->getAccessToken()) {
         $htmlBody = sprintf(
             '<p>An client error occurred: <code>%s</code></p>',
             htmlspecialchars($e->getMessage())
+=======
+        $htmlBody = sprintf(
+            '<p>A service error occurred: <code>%s</code></p>',
+            htmlspecialchars($e->getMessage())
+        );
+    } catch (Google_Exception $e) {
+        $htmlBody = sprintf(
+            '<p>An client error occurred: <code>%s</code></p>',
+            htmlspecialchars($e->getMessage())
+>>>>>>> 9fbc4300d8ebb1da52ad1d1e8f23532c220590fc
         );
     }
 

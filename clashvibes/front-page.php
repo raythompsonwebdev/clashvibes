@@ -26,8 +26,9 @@ get_header(); ?>
             
         </section>
 
-        <h1>Latest Sound Clashes </h1>
-        
+        <h1><?php esc_html_e('Latest Sound Clashes ', 'clashvibes'); ?></h1>
+
+               
 <!--Start of news release section-->
         <section id="new_released_section">
 
@@ -117,7 +118,7 @@ wp_reset_query();
             <!--Top 10 Audio Section-->
             <ul id="topdownload_section">
 
-                <h1>Top Audio Clashes</h1>
+                <h1><?php esc_html_e('Top Audio Clashes ', 'clashvibes'); ?></h1>
                 <?php
                     $original_query = $wp_query;
                     $wp_query = null;
@@ -145,7 +146,7 @@ wp_reset_query();
                     <?php endwhile;
                 else:
                     ?>
-                    <p>Oops! There are no posts to display.</p>
+                    <p><?php esc_html_e('Oops! There are no posts to display.', 'clashvibes'); ?></p>
                     <?php endif;
 wp_reset_query();
 ?>
@@ -157,7 +158,7 @@ wp_reset_query();
             <!--Top 10 Video Section-->
             <ul id="topdownload_section">
 
-                <h1>Top Video Clashes</h1>
+                <h1><?php esc_html_e('Top Video Clashes', 'clashvibes'); ?></h1>
                 <?php
                     $original_query = $wp_query;
                     $wp_query = null;
@@ -184,7 +185,7 @@ wp_reset_query();
 
                     <?php endwhile; else:  ?>
                     
-                    <p>Oops! There are no posts to display.</p>
+                    <p><?php esc_html_e('Oops! There are no posts to display.', 'clashvibes'); ?></p>
                     
                     <?php endif;
                 wp_reset_query();

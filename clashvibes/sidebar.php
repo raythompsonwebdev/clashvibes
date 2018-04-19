@@ -30,7 +30,7 @@
     !dynamic_sidebar('Primary Sidebar') ) : ?>               
         
     <article class="widget">
-        <h3 class="widget-title">Links</h3>
+        <h3 class="widget-title"><?php esc_html__('Links', 'clashvibes'); ?></h3>
 
         </article>
     <?php endif; ?>

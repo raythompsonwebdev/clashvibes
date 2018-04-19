@@ -21,11 +21,12 @@
     <div>
             <label>
                     <span class="screen-reader-text">
-        <?php echo _x('Search', 'label', 'raythompsonwebdev-com'); ?>
+        <?php echo _x('Search', 'label', 'clashvibes'); ?>
                         </span>
-
             
-            <input type="search" class="search-field"  value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x('Search', 'label', 'raythompsonwebdev-com'); ?>" /></label>
+            <input type="search" class="search-field"  value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x('Search', 'label', 'clashvibes'); ?>" />
+            </label>
+            
             <input type="submit" class="search-submit" value="Find" />
     </div>
 </form>

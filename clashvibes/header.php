@@ -34,6 +34,8 @@ get_header(); ?>
 <meta name="msvalidate.01" content="4CB214A27E0A9871DDFEF492EF5A6AD2" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
+<title><?php wp_title('|', true, 'right'); ?></title>
+
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
@@ -45,7 +47,8 @@ get_header(); ?>
 </head>
 <body <?php body_class(); ?> >
             
- <button id="toggle-nav">Menu</button>
+
+ <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Menu', 'clashvibes'); ?></button>
 
     
 <div id="container">
@@ -70,7 +73,7 @@ get_header(); ?>
     </div>
     	<section id="clashvibes_title">
             
-            <h1>Clashvibes</h1>
+            <h1><?php esc_html_e('Clashvibes', 'clashvibes'); ?></h1>
             <?php $description = get_bloginfo('description', 'display');
 
             if ($description || is_customize_preview()) :
@@ -113,11 +116,11 @@ get_header(); ?>
 </nav>
 <?php if(!is_front_page()) : ?>
 
-    <button id="side-bar-btn">SideBar</button>
+    <button id="side-bar-btn" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('SideBar', 'clashvibes'); ?></button>
 
     <?php else : ?>
 
-    <button id="side-bar-btn" style="display:none">SideBar</button>
+    <button id="side-bar-btn" tyle="display:none" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('SideBar', 'clashvibes'); ?></button>
 
     
      <?php endif; ?>

@@ -18,7 +18,7 @@
 
 <aside id="clashvibes_left_column">
 
- <h1>Search</h1>
+ <h1><?php esc_html__('Images', 'clashvibes'); ?></h1>
 
 <section id="clashvibes_login">
     <?php get_search_form(); ?>

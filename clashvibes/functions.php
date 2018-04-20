@@ -51,7 +51,7 @@ add_filter('wp_title', 'clashvibes_filter_wp_title', 10, 2);
 
 
 //theme set up
-if (! function_exists('my_theme_setup')) :
+if (!function_exists('my_theme_setup')) :
 /**
      * Sets up theme defaults and registers support for various WordPress features.
      *

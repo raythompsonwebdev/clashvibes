@@ -22,7 +22,7 @@ get_header(); ?>
 
         <section id="clashvibes_banner">
             
-        <?php masterslider(1); ?>
+      
             
         </section>
 
@@ -74,11 +74,11 @@ get_header(); ?>
                             
                                                 
                     <?php if ('clash_audio' == get_post_type()) : ?>
-                           <span class="Morebutton"><a href=" <?php echo esc_url( get_permalink() ) ?> " title="Listen to <?php the_title_attribute() ?>"><?php _e('Listen', 'clashvibes');?></a></span>
+                           <span class="Morebutton"><a href=" <?php echo esc_url( get_permalink(),'clashvibes' ) ?> " title="Listen to <?php esc_attr(the_title_attribute(),'clashvibes'); ?>"><?php _e('Listen', 'clashvibes');?></a></span>
                            
                            <?php else : ?>
                            
-                           <span class="Morebutton"><a href=" <?php echo esc_url( get_permalink() ) ?> " title="View <?php the_title_attribute() ?> Video"><?php _e('View', 'clashvibes');?></a></span>
+                           <span class="Morebutton"><a href=" <?php echo esc_url( get_permalink(),'clashvibes' ) ?> " title="View <?php esc_attr(the_title_attribute(),'clashvibes'); ?> Video"><?php _e('View', 'clashvibes');?></a></span>
                            <?php endif; ?>
                            
                         </figcaption>
@@ -97,7 +97,7 @@ else:
 
     <figcaption>
   
-        <p><?php _e('Sorry! No new clashes to display.', 'clashvibes')?></p>
+        <p><?php esc_html_e('Sorry! No new clashes to display.', 'clashvibes')?></p>
 
 
     </figcaption>
@@ -140,7 +140,7 @@ wp_reset_query();
                     <li class="topdownload_box">
                         <span class="image_thumb"><a href="" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail(); ?></a></span>
                         <span class="title_singer"><?php the_title() ?></span>
-                        <span><a href="<?php echo esc_url( get_permalink() ) ?>" title="Listen to <?php the_title_attribute() ?>"><?php _e('Listen', 'clashvibes');?></a></span>
+                        <span><a href="<?php echo esc_url( get_permalink(), 'clashvibes' ) ?>" title="Listen to <?php esc_attr(the_title_attribute(),'clashvibes'); ?>"><?php esc_html_e('Listen', 'clashvibes');?></a></span>
                     </li>
 
                     <?php endwhile;
@@ -180,7 +180,7 @@ wp_reset_query();
                     <li class="topdownload_box">
                        <span class="image_thumb"><a href="" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail(); ?></a></span>
                         <span class="title_singer"><?php the_title() ?></span>
-                        <span><a href="<?php echo esc_url( get_permalink() ) ?>" title="View <?php the_title_attribute() ?> Video"><?php _e('View', 'clashvibes');?></a></span>
+                        <span><a href="<?php echo esc_url( get_permalink() ) ?>" title="View <?php esc_attr(the_title_attribute(),'clashvibes'); ?> Video"><?php _e('View', 'clashvibes');?></a></span>
                     </li>
 
                     <?php endwhile; else:  ?>

@@ -26,7 +26,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 
 
-<h1 class="archive-title">Audio Category: <?php echo apply_filters( 'the_title', $term->name ); ?> </h1>
+<h1 class="archive-title">Audio Category: <?php echo apply_filters( 'the_title', esc_html($term->name) ); ?> </h1>
 
    <?php get_template_part('template-parts/content', 'custom'); ?>
 

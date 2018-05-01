@@ -26,7 +26,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 <section id="clashvibes_right_column">
 
 
-<h1 class="archive-title">Audio Category: <?php single_cat_title(); ?></h1>
+<h1 class="archive-title">Audio Category:<?php echo apply_filters( 'the_title', esc_html($term->name) ); ?></h1>
 
    <?php get_template_part('template-parts/content', 'custom'); ?>
 

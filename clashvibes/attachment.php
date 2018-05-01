@@ -23,7 +23,7 @@
 <?php get_sidebar('image'); ?>
 
 <section id="clashvibes_right_column">
-<h1>Images</h1>
+<h1><?php the_title();?></h1>
 
 <?php
 if (have_posts()) : while (have_posts()) : the_post();
@@ -105,7 +105,7 @@ if (has_excerpt()) {
 <?php endif; ?>
 
 <section class="contact-wide">
-    <h1>Send Comment</h1>
+    <h1><?php _e('Send Comment ', 'clashvibes'); ?></h1>
     <div id="clashvibes_comments_form">
     <?php
     // If comments are open or we have at least one comment, load up the comment template

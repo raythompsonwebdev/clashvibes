@@ -28,7 +28,7 @@
 				/* translators: %s: CMS name, i.e. WordPress. */
 				printf( esc_html__( 'Proudly powered by %s', 'clashvibes' ), 'WordPress' );
 			?></a></li>
-<li><?php date('Y');?>. All Rights Reserved</li>
+<li><?php get_option(date('Y'));?>. All Rights Reserved</li>
 <li><?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'clashvibes' ), 'clashvibes', '<a href="http://www.raythompsonwebdev.co.uk">raythompsonwebdev</a>' );

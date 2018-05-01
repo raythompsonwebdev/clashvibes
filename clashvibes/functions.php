@@ -51,7 +51,7 @@ add_filter('wp_title', 'clashvibes_filter_wp_title', 10, 2);
 
 
 //theme set up
-if (!function_exists('my_theme_setup')) :
+if (!function_exists('clashvibes_theme_setup')) :
 /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -164,6 +164,7 @@ if (!function_exists('my_theme_setup')) :
     
                 
         if (function_exists('register_nav_menus')) {
+
             register_nav_menus(
                 array(
                             'main' => 'Main Nav',
@@ -173,7 +174,7 @@ if (!function_exists('my_theme_setup')) :
                             'Video-Nav' => 'video-nav'
                     )
             );
-                    add_action('init', 'register_my_menu');
+                    add_action('init', 'register_nav_menus');
         }
     }
 
@@ -186,13 +187,16 @@ function clashvibes_load_theme_textdomain()
 
     load_theme_textdomain('clashvibes', get_template_directory() . '/languages');
 }
-    add_action('after_setup_theme', 'clashvibes_load_theme_textdomain');
+add_action('after_setup_theme', 'clashvibes_load_theme_textdomain');
 
 // remove version from head
 remove_action('wp_head', 'wp_generator');
 
 // remove version from rss
-add_filter('the_generator', '__return_empty_string');
+////add_filter('the_generator', '__return_empty_string');
+
+
+/*
 
 // remove version from scripts and styles
 function clashvibes_remove_version_scripts_styles($src)
@@ -204,7 +208,7 @@ function clashvibes_remove_version_scripts_styles($src)
 }
 add_filter('style_loader_src', 'clashvibes_remove_version_scripts_styles', 9999);
 add_filter('script_loader_src', 'clashvibes_remove_version_scripts_styles', 9999);
-
+*/
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -222,6 +226,7 @@ add_action('after_setup_theme', 'clashvibes_content_width', 0);
 
 /****Sidebars!******/
 if (function_exists('register_sidebar')) {
+
     register_sidebar(array (
     'name' => __('Primary Sidebar', 'clashvibes'),
     'id' => 'primary-widget-area',
@@ -234,7 +239,7 @@ if (function_exists('register_sidebar')) {
 }
 
 //Audio area
-function audio_widgets_init()
+function clashvibes_audio_widgets_init()
 {
     register_sidebar(array(
         'name' => __('Audio-Nav', 'clashvibes'),
@@ -246,10 +251,10 @@ function audio_widgets_init()
         'after_title' => '</h2>',
     ));
 }
-add_action('widgets_init', 'audio_widgets_init');
+add_action('widgets_init', 'clashvibes_audio_widgets_init');
 
 //Video area
-function video_widgets_init()
+function clashvibes_video_widgets_init()
 {
     register_sidebar(array(
     'name' => __('Video-Nav', 'clashvibes'),
@@ -261,10 +266,10 @@ function video_widgets_init()
     'after_title' => '</h2>',
     ));
 }
-add_action('widgets_init', 'video_widgets_init');
+add_action('widgets_init', 'clashvibes_video_widgets_init');
 
 //contact form area
-function contact_widgets_init()
+function clashvibes_contact_widgets_init()
 {
     register_sidebar(array(
     'name' => __('contact', 'clashvibes'),
@@ -276,23 +281,21 @@ function contact_widgets_init()
     'after_title' => '</h2>',
     ));
 }
-add_action('widgets_init', 'contact_widgets_init');
+add_action('widgets_init', 'clashvibes_contact_widgets_init');
 
 /* To register my css styles I use the function below:*/
 
 function clashvibes_enqueue_extra_styles()
 {
     
-    wp_enqueue_style('style', get_stylesheet_uri());
+    wp_enqueue_style('clashvibes-style', get_stylesheet_uri());
         
-    wp_register_style('third-custom-style', get_stylesheet_directory_uri() . '/reset.css', array(), '1', 'true');
+    wp_enqueue_style('third-custom-style', get_stylesheet_directory_uri() . '/reset.css', array(), '1', 'true');
 
     wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false);
             
-    wp_register_style('awesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all');
+    wp_enqueue_style('fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all');
         
-    wp_enqueue_style('third-custom-style');
-    wp_enqueue_style('awesome');
 }
 add_action('wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles');
 

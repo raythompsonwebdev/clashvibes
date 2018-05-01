@@ -45,7 +45,7 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'clashvibes/css/style.css': 'clashvibes/css/style.scss'
+                    'clashvibes/style.css': 'clashvibes/css/style.scss'
                             /*where file goes-----/where file from*/
                 }
             },
@@ -56,7 +56,7 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'clashvibes/style-min.css': 'clashvibes/css/style.scss'
+                    'clashvibes/css/style-min.css': 'clashvibes/css/style.scss'
                             /*where file goes-----/where file from*/
                 }
             }

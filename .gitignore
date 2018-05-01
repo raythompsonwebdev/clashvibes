@@ -51,6 +51,7 @@ dist/
 audio/
 .phpintel/
 clashvibes/images/
+.phpintel/
 
 .gitignore
 .gitattributes

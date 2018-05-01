@@ -22,7 +22,7 @@
     <section id="clashvibes_right_column_front">
 
                 <?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					esc_html(the_archive_title( '<h1 class="page-title">', '</h1>' ));
 					
 				?>
         </h1>
@@ -56,7 +56,7 @@
 
                         <figcaption>
 
-                            <span class="Morebutton"><a href="<?php echo esc_url( get_permalink() ) ?>"><?php _e('Listen', 'clashvibes');?></a></span>
+                            <span class="Morebutton"><a href="<?php echo esc_url(get_permalink() ) ?>"><?php esc_html_e('Listen', 'clashvibes');?></a></span>
 
 
                         </figcaption>
@@ -75,7 +75,7 @@
 
                     <figcaption>
 
-                        <p><?php _e('Sorry! No Audio clashes to display.' , 'clashvibes')?></p>
+                        <p><?php esc_html_e('Sorry! No Audio clashes to display.' , 'clashvibes')?></p>
 
                     </figcaption>
 

@@ -32,16 +32,16 @@ Audio and Video website for fans of Jamaican Sound System culture in the 90's an
 
 ## Does this theme support any plugins? 
 
-Clashvibes-plugin for custom posts.
-Masterslider plugin
+* Clashvibes-plugin for custom posts.
+* Masterslider plugin
 
 
-## Changelog ==
+## Changelog 
 
-= 1.0.0- Apr 19 2018 =
+* 1.0.0- Apr 19 2018 
 * Initial release
 
-## Credits ==
+## Credits 
 
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 

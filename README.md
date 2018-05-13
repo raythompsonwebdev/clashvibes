@@ -11,7 +11,7 @@ Tested up to: 4.9.5
 
 Stable tag: 1.0.0
 
-License: GNU General Public License v2 or later
+## License: GNU General Public License v2 or later
 
 ### Please be aware that this theme has not been completed yet. download and use at your own risk.
 

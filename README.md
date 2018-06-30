@@ -1,4 +1,4 @@
-![https://www.clashvibes.raythompsonwebdev.co.uk](/clashvibes/screenshot.jpg)
+![https://www.clashvibes.raythompsonwebdev.co.uk](/screenshot.jpg)
 
 ## Clashvibes 
 

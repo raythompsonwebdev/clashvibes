@@ -4,7 +4,7 @@
   "description": "Sound Clash Theme",
   "main": "index.php",
   "scripts": {
-    "build": "webpack"
+    
   },
   "repository": {
     "type": "git",

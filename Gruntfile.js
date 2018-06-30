@@ -12,7 +12,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: ['js/**/*.js'],
-                dest: 'dist/<%= pkg.name %>.js'
+                dest: 'js/concat/<%= pkg.name %>.js'
             }
         },
 
@@ -26,11 +26,11 @@ module.exports = function (grunt) {
             my_target: {
                 
                 files: {
-                    'clashvibes/js/dist/audio.min.js': ['clashvibes/js/audio.js'],
-                    'clashvibes/js/dist/customizer.min.js': ['clashvibes/js/customizer.js'],
-                    'clashvibes/js/dist/main.min.js': ['clashvibes/js/main.js'],
-                    'clashvibes/js/dist/navigation.min.js': ['clashvibes/js/navigation.js'],
-                    'clashvibes/js/dist/skip-link-focus-fix.min.js': ['clashvibes/js/skip-link-focus-fix.js']
+                    'js/minified/audio.min.js': ['js/audio.js'],
+                    'js/minified/customizer.min.js': ['js/customizer.js'],
+                    'js/minified/main.min.js': ['js/main.js'],
+                    'js/minified/navigation.min.js': ['js/navigation.js'],
+                    'js/minified/skip-link-focus-fix.min.js': ['js/skip-link-focus-fix.js']
                     
                 }
             }
@@ -45,7 +45,10 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'clashvibes/style.css': 'clashvibes/css/style.scss'
+                    'style.css': 'css/style.scss',
+                    'ie.css': 'css/ie.scss',
+                    'reset.css': 'css/reset.scss',
+
                             /*where file goes-----/where file from*/
                 }
             },
@@ -56,7 +59,10 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'clashvibes/css/style-min.css': 'clashvibes/css/style.scss'
+                    'css/minified/style-min.css': 'css/style.scss',
+                    'css/minified/reset-min.css': 'css/reset.scss',
+                    'css/minified/ie-min.css': 'css/ie.scss'
+
                             /*where file goes-----/where file from*/
                 }
             }
@@ -66,7 +72,7 @@ module.exports = function (grunt) {
          * JS Hint
          */
         jshint: {
-            files: ['Gruntfile.js', 'clashvibes/js/**/*.js', 'clashvibes/test/**/*.js'],
+            files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
             options: {
                 // options here to override JSHint defaults
 

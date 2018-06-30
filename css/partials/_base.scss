@@ -1,0 +1,176 @@
+@import "variables";
+
+/**GENERAL CLASSES (alpha order)**/
+
+.left-col {
+    width: 66%;
+    float: left;
+}
+
+.right-col {
+    float: right;
+    width: 32%;
+    margin-left: 2%;
+}
+
+.left {
+    float: left;
+    display: block;
+    height: 40px;
+    margin: 0 5%;
+    color: $color4;
+    line-height: 40px;
+    a {
+        margin: 0;
+        height: 100%;
+        line-height: 40px;
+    }
+}
+
+.right {
+    float: left;
+    display: inline-block;
+    height: 40px;
+    color: $color4;
+    a {
+        margin: 0;
+        height: 100%;
+        line-height: 40px;
+    }
+}
+
+.sticky{
+    margin:0;
+}
+
+.gallery-caption{
+    font-size:1em;
+}
+
+.bypostauthor{
+    font-size:1em;
+    
+}
+
+/*WordPress Image Classes*/
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left;
+	}
+
+
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #d4d4d4;
+	padding-top: 4px;
+	margin: 10px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 0.85em;
+	line-height: 1.214em;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+
+
+
+/* self-clear floats */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.clearfix:before,
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    *zoom: 1;
+}
+
+
+img#wpstats {
+    display: none;
+    width: 1px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-main;
+    font-size: 1em;
+    color: $color4;
+    background-color:$color2a;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: $color;
+    clear: both;
+    width: 100%;
+    font-family: $font-main;
+
+}
+
+a {
+    color: $color;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    font-family: $font-main;
+}

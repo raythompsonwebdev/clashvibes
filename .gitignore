@@ -50,27 +50,24 @@ dist/
 .sass-cache/
 audio/
 .phpintel/
-clashvibes/images/
+images/
 .phpintel/
 
 .gitignore
 .gitattributes
 nbproject/
-Files/
-clashvibes/fontawesome/
-clashvibes/fonts/
+fonts/
 
-clashvibes/js/easySlider1.5.js
-clashvibes/js/jplayer-audio.txt
-clashvibes/js/jplayer-audio.js
-clashvibes/js/nivo-slider.pack.js
-clashvibes/js/Spare/
-clashvibes/js/jPLayer-2.9.2/
+js/easySlider1.5.js
+js/jplayer-audio.txt
+js/jplayer-audio.js
+js/nivo-slider.pack.js
+js/dist/
 
-clashvibes/css/style.css.map
-clashvibes/css/style.scss.map
-clashvibes/css/style.css
-clashvibes/css/.sass-cache/
+css/style.css.map
+css/style.scss.map
+css/style.css
+css/.sass-cache/
 vendor/
 vendor/bin/
 

@@ -57,6 +57,7 @@ images/
 .gitattributes
 nbproject/
 fonts/
+phpcs.xml.dist
 
 js/easySlider1.5.js
 js/jplayer-audio.txt
@@ -71,3 +72,6 @@ css/.sass-cache/
 vendor/
 vendor/bin/
 
+ie.css.map
+style.css.map
+.vscode/

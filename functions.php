@@ -15,7 +15,7 @@
  */
 
 
-// theme set up.
+// Theme set up.
 if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -28,9 +28,10 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 
 		add_theme_support( 'automatic-feed-links' );
 
-		// add editor styles.
+		// Add editor styles.
 		add_editor_style( array( 'styles/custom-editor-style.css' ) );
 
+		// Add post formats.
 		add_theme_support(
 			'post-formats',
 			array(
@@ -53,9 +54,7 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		*/
 		add_theme_support( 'title-tag' );
 
-		/**
-		 * Create new image sizes
-		 */
+		// Create new image sizes.
 		add_image_size( 'featured-image', 783, 9999 );
 
 		add_theme_support( 'post-thumbnails' );
@@ -64,10 +63,7 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		*/
+		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
 		add_theme_support(
 			'html5', array(
 				'search-form',
@@ -82,6 +78,8 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			'width'  => 325,
 			'height' => 65,
 		);
+
+		// Add theme support for custom header.
 		add_theme_support( 'custom-header', $args );
 
 		$defaults = array(
@@ -91,6 +89,8 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			'admin-head-callback'    => '',
 			'admin-preview-callback' => '',
 		);
+
+		// Add theme support for custom background.
 		add_theme_support( 'custom-background', $defaults );
 
 		$args = array(
@@ -109,7 +109,9 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			'admin-preview-callback' => '',
 
 		);
-		  add_theme_support( 'nav-menus', $args );
+
+		// Add theme support for nav-menus.
+		add_theme_support( 'nav-menus', $args );
 
 		$links = array(
 			'before'           => '<p>' . __( 'Pages:', 'clashvibes' ),
@@ -130,7 +132,7 @@ endif; // my_theme_setup end.
 add_action( 'after_setup_theme', 'clashvibes_theme_setup' );
 
 /**
- * register menus
+ * Register menus.
  */
 function clashvibes_menu_function() {
 
@@ -147,7 +149,7 @@ function clashvibes_menu_function() {
 add_action( 'after_setup_theme', 'clashvibes_menu_function' );
 
 /**
- * Text domain
+ * Text domain.
  */
 function clashvibes_load_theme_textdomain() {
 
@@ -155,7 +157,7 @@ function clashvibes_load_theme_textdomain() {
 }
 add_action( 'after_setup_theme', 'clashvibes_load_theme_textdomain' );
 
-// remove version from head.
+// Remove version from head.
 remove_action( 'wp_head', 'wp_generator' );
 
 
@@ -173,9 +175,8 @@ add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
 
 
 /**
- *
  * Sidebars!
- * */
+ */
 if ( function_exists( 'register_sidebar' ) ) {
 	register_sidebar(
 		array(
@@ -191,8 +192,7 @@ if ( function_exists( 'register_sidebar' ) ) {
 }
 
 /**
- *
- *  Audio area.
+ * Audio area.
  */
 function clashvibes_audio_widgets_init() {
 	register_sidebar(
@@ -230,7 +230,7 @@ add_action( 'widgets_init', 'clashvibes_video_widgets_init' );
 
 /**
  *
- *  contact form area.
+ *  Contact form area.
  */
 function clashvibes_contact_widgets_init() {
 	register_sidebar(
@@ -250,7 +250,6 @@ add_action( 'widgets_init', 'clashvibes_contact_widgets_init' );
 /**
  *  To register my css styles I use the function below.
  */
-
 function clashvibes_enqueue_extra_styles() {
 
 	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
@@ -265,16 +264,22 @@ function clashvibes_enqueue_extra_styles() {
 add_action( 'wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles' );
 
 
+// Add action audio scripts
 add_action( 'wp_enqueue_scripts', 'clashvibes_audio_own' );
+/**
+ *  To register my audio scripts.
+ */
 function clashvibes_audio_own() {
 
 	if ( 'clash_audio' === get_post_type() ) {
 		wp_register_script( 'audio', get_template_directory_uri() . '/js/dist/audio.min.js', array( 'jquery' ), '1.0.0', 'true' );
 
 		/**
-		 * wp_register_script( 'jplayer', get_template_directory_uri() . '/js/jPlayer-2.9.2/dist/jplayer/jquery.jplayer.min.js', array('jquery'),'1.0.0', 'true' );
 		 *
-		 * wp_register_script( 'jplayer-audio', get_template_directory_uri() . '/js/jplayer-audio.js', array('jquery'),'1.0.0', 'true' );
+		 * Spare Code.
+		 *  wp_register_script( 'jplayer', get_template_directory_uri() . '/js/jPlayer-2.9.2/dist/jplayer/jquery.jplayer.min.js', array('jquery'),'1.0.0', 'true' );
+		 *
+		 *  wp_register_script( 'jplayer-audio', get_template_directory_uri() . '/js/jplayer-audio.js', array('jquery'),'1.0.0', 'true' );
 		 */
 
 	}
@@ -282,7 +287,7 @@ function clashvibes_audio_own() {
 
 /**
  *
- * Spare Function
+ * Spare Function.
  *
  * add_action( 'wp_enqueue_scripts', 'clashvibes__video_own' );
  *
@@ -296,7 +301,7 @@ function clashvibes_audio_own() {
 
 
 /**
- * Clashvibes scripts
+ * Clashvibes scripts.
  */
 function clashvibes_scripts() {
 
@@ -313,7 +318,10 @@ function clashvibes_scripts() {
 add_action( 'wp_enqueue_scripts', 'clashvibes_scripts' );
 
 /**
- * cc_mime_types
+ *
+ *  SVG cc_mime_types.
+ *
+ *  @param array $mimes SVG files.
  */
 function clashvibes_cc_mime_types( $mimes ) {
 	$mimes['svg'] = 'image/svg+xml';
@@ -325,7 +333,10 @@ add_filter( 'upload_mimes', 'clashvibes_cc_mime_types' );
 
 /**
  *
- * Except more function
+ * Except more function.
+ *
+ * @global array $post post array.
+ * @param array $output post array output.
  */
 function clashvibes_excerpt_read_more_link( $output ) {
 	global $post;
@@ -334,10 +345,7 @@ function clashvibes_excerpt_read_more_link( $output ) {
 }
 add_filter( 'the_excerpt', 'clashvibes_excerpt_read_more_link' );
 
-/**
- *
- *
- */
+// Attachment page script.
 if ( ! function_exists( 'clashvibes_com_attachment_nav' ) ) :
 	/**
 	 * Display navigation to next/previous image in attachment pages.
@@ -359,27 +367,20 @@ if ( ! function_exists( 'clashvibes_com_attachment_nav' ) ) :
 
 		</div>
 	</nav>
-
-
 		<?php
 	}
 endif;
 
 
-/**
- *
- *
- */
+// Attachment page script.
 if ( ! function_exists( 'clashvibes_attached_image' ) ) :
 	/**
-	 * Print the attached image with a link to the next attached image.
-	 * Appropriated from Twenty Fourteen 1.0
+	 * Print the attached image with a link to the next attached image. Appropriated from Twenty Fourteen 1.0.
 	 */
 	function clashvibes_attached_image() {
 		$post = get_post();
-		/**
-	 * Filter the default attachment size.
-	 */
+
+		// Filter the default attachment size.
 		$attachment_size     = apply_filters( 'clashvibes_attachment_size', array( 810, 810 ) );
 		$next_attachment_url = wp_get_attachment_url();
 		/*

@@ -80,30 +80,15 @@
 
 		// $meta = get_post_meta(get_the_ID(), 'clash-url', true);
 		?>
+<?php $urlmp = site_url( '/wp-content/uploads/sites/2/2018/04/', 'https' ); ?>
 
-<source src="
-		<?php
-		$urlmp = site_url( '/wp-content/uploads/sites/2/2018/04/', 'https' );
-		echo esc_url( $urlmp );
-		?>
-		<?php echo esc_html( $meta ); ?>.mp3" 
-	type='audio/mp3'  />
+<source src="<?php echo esc_url( $urlmp ); ?><?php echo esc_html( $meta ); ?>.mp3" type='audio/mp3'  />
 
-<source src="
-		<?php
-		$urlogg = site_url( '/wp-content/uploads/sites/2/2018/04/', 'https' );
-		echo esc_url( $urlogg );
-		?>
-		<?php echo esc_html( $meta ); ?>.ogg" 
-	type='audio/ogg' />
+<source src="<?php $urlogg = site_url( '/wp-content/uploads/sites/2/2018/04/', 'https' );
+		echo esc_url( $urlogg ); ?><?php echo esc_html( $meta ); ?>.ogg" type='audio/ogg' />
 
-<source src="
-		<?php
-		$urlma = site_url( '/wp-content/uploads/sites/2/2018/04/', 'https' );
-		echo esc_url( $urlma );
-		?>
-		<?php echo esc_html( $meta ); ?>.m4a" 
-	type='audio/mp4' />
+<source src="<?php	$urlma = site_url( '/wp-content/uploads/sites/2/2018/04/', 'https' );
+		echo esc_url( $urlma );	?><?php echo esc_html( $meta ); ?>.m4a" type='audio/mp4' />
 
 
 <p><?php esc_html_e( 'Your browser does not support HTML5 audio.', 'clashvibes' ); ?></p>

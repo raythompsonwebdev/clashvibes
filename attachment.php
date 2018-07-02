@@ -79,7 +79,22 @@ if ( have_posts() ) :
 "><?php clashvibes_attached_image(); ?>
 			<?php if ( has_excerpt() ) : ?>
 		<figcaption class="wp-caption-text">
-				<?php echo get_the_excerpt(); ?>
+				<?php
+				echo esc_html(
+					get_the_excerpt(
+						sprintf(
+							wp_kses(
+								/* translators: %s: Name of current post. Only visible to screen readers */
+								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ), array(
+									'span' => array(
+										'class' => array(),
+									),
+								)
+							), get_the_title()
+						)
+					)
+				);
+				?>
 		</figcaption><!-- .entry-caption -->
 <?php endif; ?>
 </figure>

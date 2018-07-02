@@ -11,9 +11,8 @@
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
- * @link       http:www.raythompsonwebdev.co.uk custom template
+ * @link       http:www.raythompsonwebdev.co.uk custom template.
  */
-
 
 // Theme set up.
 if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
@@ -264,32 +263,11 @@ function clashvibes_enqueue_extra_styles() {
 add_action( 'wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles' );
 
 
-// Add action audio scripts
-add_action( 'wp_enqueue_scripts', 'clashvibes_audio_own' );
-/**
- *  To register my audio scripts.
- */
-function clashvibes_audio_own() {
-
-	if ( 'clash_audio' === get_post_type() ) {
-		wp_register_script( 'audio', get_template_directory_uri() . '/js/dist/audio.min.js', array( 'jquery' ), '1.0.0', 'true' );
-
-		/**
-		 *
-		 * Spare Code.
-		 *  wp_register_script( 'jplayer', get_template_directory_uri() . '/js/jPlayer-2.9.2/dist/jplayer/jquery.jplayer.min.js', array('jquery'),'1.0.0', 'true' );
-		 *
-		 *  wp_register_script( 'jplayer-audio', get_template_directory_uri() . '/js/jplayer-audio.js', array('jquery'),'1.0.0', 'true' );
-		 */
-
-	}
-}
-
 /**
  *
  * Spare Function.
  *
- * add_action( 'wp_enqueue_scripts', 'clashvibes__video_own' );
+ * Add_action( 'wp_enqueue_scripts', 'clashvibes__video_own' );
  *
  * function clashvibes__video_own() {
  *  if( "clash_videos" == get_post_type()){
@@ -311,11 +289,17 @@ function clashvibes_scripts() {
 
 	wp_enqueue_script( 'clashvibes-skip-link-focus-fix', get_template_directory_uri() . '/js/minified/skip-link-focus-fix.min.js', array(), '20151215', true );
 
+	if ( 'clash_audio' === get_post_type() ) {
+		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/audio.js', array( 'jquery' ), '1.0.0', true );
+	}
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'clashvibes_scripts' );
+
+
 
 /**
  *
@@ -383,13 +367,14 @@ if ( ! function_exists( 'clashvibes_attached_image' ) ) :
 		// Filter the default attachment size.
 		$attachment_size     = apply_filters( 'clashvibes_attachment_size', array( 810, 810 ) );
 		$next_attachment_url = wp_get_attachment_url();
+
 		/*
 		* Grab the IDs of all the image attachments in a gallery so we can get the URL
 		* of the next adjacent image in a gallery, or the first image (if we're
 		* looking at the last image in a gallery), or, in a gallery of one, just the
 		* link to that image file.
 		 */
-		$attachment_ids = get_posts(
+		$attachment_ids = new WP_Query(
 			array(
 				'post_parent'      => $post->post_parent,
 				'fields'           => 'ids',
@@ -413,8 +398,7 @@ if ( ! function_exists( 'clashvibes_attached_image' ) ) :
 			// get the URL of the next image attachment...
 			if ( $next_id ) {
 				$next_attachment_url = get_attachment_link( $next_id );
-			} // or get the URL of the first image attachment.
-			else {
+			} else { // or get the URL of the first image attachment.
 				$next_attachment_url = get_attachment_link( array_shift( $attachment_ids ) );
 			}
 		}

@@ -23,7 +23,9 @@
 
 
 
-<h1 class="archive-title">Audio Category: <?php echo apply_filters( 'the_title', esc_html( $term->name ) ); ?></h1>
+<?php $archivetitle = apply_filters( 'the_title', $term->name ); ?>
+
+<h1 class="archive-title">Audio Category: <?php esc_html( $archivetitle ); ?> </h1>
 
 	<?php get_template_part( 'template-parts/content', 'custom' ); ?>
 

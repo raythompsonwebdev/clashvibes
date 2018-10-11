@@ -154,8 +154,8 @@ endif;
  *
  * @return bool
  */
-function raythompsonwebdev_com_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'raythompsonwebdev_com_categories' ) ) ) {
+function clashvibes_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'clashvibes_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories(
 			array(
@@ -177,18 +177,20 @@ function raythompsonwebdev_com_categorized_blog() {
 		return false;
 	}
 }
+
 /**
  * Flush out the transients used in raythompsonwebdev_com_categorized_blog.
  */
-function raythompsonwebdev_com_category_transient_flusher() {
+function clashvibes_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'raythompsonwebdev_com_categories' );
+	delete_transient( 'clashvibes_categories' );
 }
-add_action( 'edit_category', 'raythompsonwebdev_com_category_transient_flusher' );
-add_action( 'save_post', 'raythompsonwebdev_com_category_transient_flusher' );
+add_action( 'edit_category', 'clashvibes_category_transient_flusher' );
+add_action( 'save_post', 'clashvibes_category_transient_flusher' );
+
 /**
  * Utility function to check if a gravatar exists for a given email or id.
  *
@@ -196,7 +198,7 @@ add_action( 'save_post', 'raythompsonwebdev_com_category_transient_flusher' );
  * @return bool if the gravatar exists or not.
  * Original found at https://gist.github.com/justinph/5197810
  */
-function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
+function clashvibes_validate_gravatar( $id_or_email ) {
 	// id or email code borrowed from wp-includes/pluggable.php.
 	$email = '';
 	if ( is_numeric( $id_or_email ) ) {

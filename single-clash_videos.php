@@ -26,5 +26,6 @@ get_header(); ?>
 <?php get_template_part( 'template-parts/content', 'video' ); ?>
 
 </section><!-- end of clashvibes_right_panel_fullwidth -->
+<div class="clearfix"></div>
 </div>
 <?php get_footer(); ?>

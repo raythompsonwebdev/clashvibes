@@ -22,7 +22,7 @@ get_header(); ?>
 
 		<section id="clashvibes_banner">
 			
-	   
+		<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/sites/3/2018/04/sliderimage.jpg" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
 			
 		</section>
 

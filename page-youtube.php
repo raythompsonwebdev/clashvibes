@@ -8,15 +8,17 @@
 
 <div id="clashvibes_content_front">
 	
-<section id="clashvibes_right_column_front">
+	<section id="clashvibes_right_column_front">
 
-<h1><?php the_title(); ?> Page</h1>
-   
-	<div class="results">
- 
-	</div>
-
+		<h1><?php the_title(); ?> Page</h1>
 	
-</section><!-- end of right panel -->
+		<div class="results">
+	
+		</div>
+
+		
+	</section><!-- end of right panel -->
+
+</div>
 
 <?php get_footer(); ?>

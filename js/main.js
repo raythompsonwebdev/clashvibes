@@ -1,76 +1,80 @@
 
 
 jQuery(document).ready(function($) {
-  
-$('figure.thumbaud').on('hover', function(){
-    
-    var element = this;
-        
-    $(element).find('span.Morebutton').slideToggle(250).css({'display': 'block', 'top': '0px', 'opacity': '1'});
 
-});
+	var position, direction, previous;
 
-$('figure.thumbvid').on('hover', function(){
-    
-  var element = this;
-      
-  $(element).find('span.Morebutton').slideToggle(250).css({'display': 'block', 'top': '0px', 'opacity': '1'});
+	$(window).scroll(function(){
+		
+		if( $(this).scrollTop() >= position ){
+			direction = 'down';
+			if(direction !== previous){
+		$('button#toggle-nav').addClass('hide');
+		$('button#toggle-side').addClass('hide-side');
+				previous = direction;
+			}
+		} else {
+			direction = 'up';
+			if(direction !== previous){
+		$('button#toggle-nav').removeClass('hide');
+		$('button#toggle-side').removeClass('hide-side');
+				previous = direction;
+			}
+	}
+	
+		position = $(this).scrollTop();
+	});
 
-});
+	$('button#toggle-nav').on('click', function(event){
 
-$('button#toggle-nav').on('click', function(event){
+		event.preventDefault();
 
-    event.preventDefault();
+		// create menu variables
+		var slideoutMenu = $('nav');
+		var slideoutMenuWidth = $('nav').width();
 
-  	// create menu variables
-    var slideoutMenu = $('nav');
-    var slideoutMenuWidth = $('nav').width();
+		// toggle open class
+		slideoutMenu.toggleClass("open");
 
-    // toggle open class
-    slideoutMenu.toggleClass("open");
+		// slide menu
+		if (slideoutMenu.hasClass("open")) {
+		slideoutMenu.animate({
+			left: "0px"
+		});	
+		} else {
+		slideoutMenu.animate({
+			left: -slideoutMenuWidth + 1
+		}, 450);	
+		}
 
-  // slide menu
-  if (slideoutMenu.hasClass("open")) {
-    slideoutMenu.animate({
-      left: "0px"
-    });	
-  } else {
-    slideoutMenu.animate({
-      left: -slideoutMenuWidth + 1
-    }, 450);	
-  }
+	});
 
-});
+	$('button#toggle-side').on('click', function(event){
+		
+		event.preventDefault();
 
-$('button#side-bar-btn').on('click', function(event){
-    
-  event.preventDefault();
+		// create menu variables
+		var slideoutMenu = $('#clashvibes_left_column');
+		var slideoutMenuWidth = $('#clashvibes_left_column').width();
 
-  // create menu variables
-  var slideoutMenu = $('#clashvibes_left_column');
-  var slideoutMenuWidth = $('#clashvibes_left_column').width();
+		// toggle open class
+		slideoutMenu.toggleClass("open");
 
-  // toggle open class
-  slideoutMenu.toggleClass("open");
+		// slide menu
+		if (slideoutMenu.hasClass("open")) {
+		slideoutMenu.animate({
+			left: "0px"
+			
+		});	
+		} else {
+		slideoutMenu.animate({
+			left: -slideoutMenuWidth
+		}, 250);	
+		}
+				
+		
 
-  // slide menu
-  if (slideoutMenu.hasClass("open")) {
-    slideoutMenu.animate({
-      left: "0px"
-      
-    });	
-  } else {
-    slideoutMenu.animate({
-      left: -slideoutMenuWidth
-    }, 250);	
-  }
-            
-   
-
-});
-
-
-
+	});
 
 });//end of jquery
 

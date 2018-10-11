@@ -106,7 +106,7 @@ jQuery(document).ready(function($) {
   //seeker
 function seekhandler(event){
   $(audio).currentTime = event.target.value;
-  $(playback).value = event.target.value
+  $(playback).value = event.target.value;
   }
 
   $(seek).bind('change', seekhandler);

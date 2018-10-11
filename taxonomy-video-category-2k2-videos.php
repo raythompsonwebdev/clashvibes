@@ -27,7 +27,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 <?php $archivetitle = apply_filters( 'the_title', $term->name ); ?>
 
-<h1 class="archive-title">Video Category: <?php esc_html( $archivetitle ); ?> </h1>
+<h1 class="archive-title">Video Category: <?php echo esc_html($archivetitle); ?> </h1>
 
 
 <?php get_template_part( 'template-parts/content', 'custom' ); ?>

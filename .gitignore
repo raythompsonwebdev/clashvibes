@@ -71,7 +71,9 @@ css/style.css
 css/.sass-cache/
 vendor/
 vendor/bin/
-
+docs/
 ie.css.map
 style.css.map
 .vscode/
+js/api.js
+webpack.config.js

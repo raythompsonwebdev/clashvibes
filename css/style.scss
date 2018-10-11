@@ -29,12 +29,12 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 1920px) {
 
     /********** navigation toggle **********/
-    button#toggle-nav{
+    button.menu-toggle{
         display:none;
     }
 
     /********** side-bar toggle **********/
-    button#side-bar-btn{
+    button.sidebar-toggle{
         display:none;
     }
     /********** page container **********/
@@ -48,7 +48,7 @@ License: GNU General Public License v2 or later
         background-color:$color;
         @include box-sizing($type: border-box);
         h1 {
-            margin: 0.5em 0;
+            display:block;
             width: 100%;
             a {
                 color: $color5;
@@ -85,7 +85,7 @@ License: GNU General Public License v2 or later
             
             .site-logo {
                 position: relative;
-                top: 0.5em;
+                top: 0;
                 left: 0;
                 width: 3.4em;
                 height: 3.5em;
@@ -105,7 +105,7 @@ License: GNU General Public License v2 or later
                     line-height: 50px;
                     width: 98%;
                     @include originTran( 50% 50%);
-                    @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+                    @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
                     height: auto;
                     /* Text meant only for screen readers. */
                     div.screen-reader-text {
@@ -168,10 +168,11 @@ License: GNU General Public License v2 or later
                     color:$color2;
                     margin:0;
                     padding:0;
-                    line-height:40px;
+                    line-height:30px;
                     font-size:2.5em;
                     text-indent: 0.1em;
                     text-shadow:1px 1px 1px $color4;
+                    display: block;
                 }
                 h2.site-description{
                     text-indent: 0.5em;
@@ -180,11 +181,12 @@ License: GNU General Public License v2 or later
                     display: block;
                     width: 100%;
                     line-height: 20px;
-                    font-size: 0.75em;
+                    font-size: 0.7em;
                     font-weight: normal;
                     padding: 0;
                     clear: left;
                     text-shadow:0.5px 0.5px 0.5px $color4;
+                    margin: 0;
 
                 }
             }
@@ -253,13 +255,12 @@ License: GNU General Public License v2 or later
                         padding: 0;
                         font-size: 0.9em;
                         line-height: 40px;
-
                         text-align: center;
                         text-decoration: none;
                         font-family: $font-main;
                         color: $color;
                         display: block;
-                        letter-spacing: 0.05em;
+                        letter-spacing: 0em;
                         font-weight: normal;
                         @include Transition(all 0.2s linear 0s);
                         &:hover {
@@ -267,7 +268,6 @@ License: GNU General Public License v2 or later
                             background-color: $color1;
                             color: $color4;
                             font-weight: bold;
-                            letter-spacing: 0.055em;
                         }
                     }
                     .lastmenu {
@@ -301,20 +301,19 @@ License: GNU General Public License v2 or later
                 h1 {
                     display: block;
                     text-indent: 0.5em;
-                    font-size: 1.3em;
-                    height: 45px;
-                    line-height: 45px;
+                    font-size: 1.5em;
                     clear: both;
-                    margin: 0 0 1em 0;
+                    margin: 0 ;
                     padding: 0;
                     font-family: $font-main;
                     background-color:$color4;
                     letter-spacing: 0.05em;
+                    line-height: 45px;
                 }
 
                 /********** login form **********/
                 #contactform {
-                    margin:3% auto;
+                    margin:1% ;
                     width: 50%;
                     display: block;
                     height: auto;
@@ -429,7 +428,6 @@ License: GNU General Public License v2 or later
                         margin: 0.5%;
                         background-color: $color;
 
-
                         h1 {
                             margin: 0;
                             display:block;
@@ -443,86 +441,62 @@ License: GNU General Public License v2 or later
                             letter-spacing: 0.03em;
                             font-weight: bold;
                         }
-
-                        a {
-                            font-size: 0.9em;
-                            width: 100%;
+                        
+                        #event-submit-btn,
+                        input[type="submit"]{
+                            width: 90%;
                             text-align: center;
                             color: $color;
                             background-color: $color2;
                             display: block;
-                            margin: 0;
-                            height: 100%;
+                            margin: 0 auto;
+                            height: 40px;
+                            line-height: 40px;
                             letter-spacing: 0.05em;
-
+                            border:none;
+                            @include Transition( all 0.2s linear 0s);
                             &:hover {
                                 font-weight: bold;
-                                background-color: $color3;
-                                width: 100%;
+                                background-color: $color2a;
+                                
+                                color: $colors;
                             }
                         }
-
+                        
                         figure.events {
                             width: 90%;
-                            height: auto;
+                            min-height: 100px;
                             margin: 4% auto;
                             @include originTran( 50% 50%);
                             @include box-sizing($type: border-box);
                             @include Transition( all 0.2s linear 0s);
-
                             &:hover {
                                 cursor: pointer;
                                 border: none;
                                 width: 92%;
 
                             }
+                            
                             img {
-
                                 @include box-sizing($type: border-box);
-
-
                             }
-                            li{
-                                list-style:none;
-                                iframe{
-                                    width:100%;
+                            
+                            figcaption.event-text{
+                                min-height:100px;
+                                display:block;
+                                background-color:#c90;
+                                p{
+                                    font-size:0.9em;
+                                    line-height:1.6em;
+                                    display:block;
+                                    color:#000;
                                 }
+                                
                             }
-
-                            .u_tube {
-                                margin:0;
-                                                               
-                                span.u_tube_button {
-                                    padding: 0;
-                                    //display: none;
-                                    height: 40px;
-                                    position:relative;
-                                    z-index:2;
-
-                                    a {
-
-                                        font-size: 0.9em;
-                                        color: $color4;
-                                        background-color: $color2a;
-                                        margin: 0;
-                                        padding: 0;
-                                        line-height: 40px;
-                                        height: 100%;
-                                        display: block;
-                                        letter-spacing: 0.05em;
-                                        @include originTran( 50% 50%);
-                                        @include box-sizing($type: border-box);
-                                        @include Transition( all 0.2s linear 0s);
-                                        &:hover {
-                                            color: $color2a;
-                                            background-color: $color1;
-                                            letter-spacing: 0.055em;
-                                            font-weight: bold;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                            
+                        } 
+                       
+                                            
                     }
                 }
                            
@@ -537,22 +511,19 @@ License: GNU General Public License v2 or later
                     -webkit-flex-flow: row wrap;
                     -ms-flex-flow: row wrap;
                     flex-flow: row wrap;
-                    -webkit-justify-content: flex-start;
-                    -ms-flex-pack: start;
-                    justify-content: flex-start;
-                    -webkit-align-items: flex-start;
-                    -ms-flex-align: start;
-                    align-items: flex-start;
+                    -webkit-align-items: stretch;
+                    -ms-flex-align: stretch;
+                    align-items: stretch;
                    
                     .new_released_box{
                         -webkit-flex: 0 0 auto;
                         -ms-flex: 0 0 auto;
                         flex: 0 0 auto;
                         float: left;
-                        width: 19%; //19%;
-                        min-height: 330px;
+                        width: 19.425%; //19%;
+                        min-height: 300px;
                         padding: 0;
-                        margin: 0.5%;
+                        margin: 0.2em;
                         background-color: $color;
 
 
@@ -568,6 +539,7 @@ License: GNU General Public License v2 or later
                             width: auto;
                             letter-spacing: 0.03em;
                             font-weight: bold;
+                            text-indent: 0;
                         }
 
                         a {
@@ -590,58 +562,63 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 60%;
+                            width: 100%;
                             height: auto;
-                            margin: 4% auto;
+                            margin: 0;
                             @include originTran( 50% 50%);
                             @include box-sizing($type: border-box);
-                            @include Transition( all 0.2s linear 0s);
+                            @include Transition( all 0.5s linear 0s);
 
-                            &:hover {
-                                cursor: pointer;
-                                border: none;
-                                width: 55%;
-
-                            }
                             img {
-
-                                @include box-sizing($type: border-box);
-
-
+                                height:auto;
+                                width:60%;
+                                margin: 1em auto;
+                                display: block;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
-                                    padding: 0;
-                                    display: none;
-                                    height: 40px;
+                                margin:0 auto;
+                                height:auto;
+                                position:relative;
+                                width:100%;
+                                z-index:100;
+                                display:none;
+                                bottom:0;
+                                a.Morebutton {
+                                    font-size: 0.9em;
+                                    color: $color4;
                                     position:relative;
-                                    z-index:2;
-                                    display:none;
-                                    a {
-
-                                        font-size: 0.9em;
-                                        color: $color4;
-                                        background-color: $color2a;
-                                        margin: 0;
-                                        padding: 0;
-                                        line-height: 40px;
-                                        height: 100%;
-                                        display: block;
-                                        letter-spacing: 0.05em;
-                                        @include originTran( 50% 50%);
-                                        @include box-sizing($type: border-box);
-                                        @include Transition( all 0.2s linear 0s);
-                                        &:hover {
-                                            color: $color2a;
-                                            background-color: $color1;
-                                            letter-spacing: 0.055em;
-                                            font-weight: bold;
-                                        }
+                                    background-color: $color2a;
+                                    margin: 0 auto;
+                                    padding: 0;
+                                    line-height: 40px;
+                                    height: 100%;
+                                    display: block;
+                                    letter-spacing: 0.05em;
+                                    width:65%;
+                                    @include Transition( all 0.2s ease-in-out 0s);
+                                    &:hover {
+                                        color: $color2a;
+                                        background-color: $color1;
+                                        letter-spacing: 0.055em;
+                                        font-weight: bold;
                                     }
                                 }
                             }
+                        }
+
+                        figure.thumbaud:hover img,
+                        figure.thumbvid:hover img{
+                            @include TransScale(scale(1.05));
+                            cursor: pointer;
+                            border: none;
+                        }
+    
+                        figure.thumbaud:hover figcaption,
+                        figure.thumbvid:hover figcaption{
+                            bottom: 10px;
+                            margin:0 auto;
+                            display:block;
                         }
                     }
                 }
@@ -686,12 +663,12 @@ License: GNU General Public License v2 or later
                     display: inline-block;
 
                     h1 {
-                        font-size: 1.3em;
-                        height: 30px;
-                        line-height: 30px;
-                        padding: 2% 0;
+                        font-size: 1.5em;
+                        height: 45px;
+                        line-height: 45px;
+                        
                         clear: both;
-                        margin: 0 0 0.5em 0;
+                        margin-bottom: 0.25em;
                         color: $color;
                     }
 
@@ -702,9 +679,9 @@ License: GNU General Public License v2 or later
                         -webkit-flex-flow: row ;
                         -ms-flex-flow: row ;
                         flex-flow: row ;
-                        -webkit-justify-content: flex-start;
-                        -ms-flex-pack: flex-start;
-                        justify-content: flex-start;
+                        -webkit-justify-content: space-between;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
                         -webkit-align-items: flex-start;
                         -ms-flex-align: start;
                         align-items: flex-start;
@@ -1105,16 +1082,21 @@ License: GNU General Public License v2 or later
             display: block;
             width: 74%; 
             h1 {
-                font-size: 1.5em;
-                height: 40px;
-                line-height: 40px;
-                margin-bottom: 1em;
+                height: 45px;
+                line-height: 45px;
                 width: 100%;
-                text-indent: 1%;
                 background-color:$color4;
+                color:$color;
+                margin-top: 0;
+                font-size:1.6em;
+                text-indent: 0.5em;
                 a {
                     width: 71%;
                     display: inline-block;
+                    &:hover {
+
+                        text-decoration: none;
+                    }
 
                 }
                 span {
@@ -1124,6 +1106,19 @@ License: GNU General Public License v2 or later
                 }
             }
 
+            h2,
+            h3,
+            h4,
+            h5,
+            h6{
+
+                height: 40px;
+                line-height: 40px;
+                background-color:$color4;
+                color:$color2;
+                text-indent: 0.25em;
+            }
+           
             article.clash_videos,
             article.clash_audio,
             article.post,
@@ -1133,36 +1128,46 @@ License: GNU General Public License v2 or later
                 background-color: $color;
                 margin-bottom: 1%;
 
-                h1 {
-                    font-size: 1.3em;
-                    height: 45px;
-                    line-height: 45px;
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    
+                    height: 40px;
+                    line-height: 40px;
                     width: 100%;
-                    text-indent: 0.5em;
-                    color:$color4;
+                    color:$color2;
                     height:auto;
+                    margin-bottom: 0;
+                    background-color:#000;
                    
                 }
 
-                h2 {
-                    font-size: 1.2em;
-                    height: 45px;
-                    line-height: 45px;
-                    width: 100%;
-                    text-indent: 0.5em;
-                    color:$color4;
+                iframe{
+                    display:block;
+                    margin:1em auto;
+                }
+
+                blockquote{
+
+                    p{
+
+                    }
+
                 }
 
                 header.entry-header {
                     height: auto;
                     display: block;
                     h1 {
-                        font-size: 1.5em;
+                        font-size: 1.3em;
                         line-height: 45px;
+                        height:45px;
                         clear: both;
                         margin: 0;
                         width: 100%;
-                        text-indent: 0.5em;
                         background-color:$color4;
                         color:$color;
                         a {
@@ -1176,21 +1181,18 @@ License: GNU General Public License v2 or later
                             display: inline-block;
                             width: auto;
                             float: left;
-                            text-indent: 0.5em;
+                            text-indent: 0.25em;
                             margin-right:1%;
 
 
                         }
                     }
                     h2 {
-                        font-size: 1.25em;
-                        height: 45px;
-                        line-height: 45px;
                         margin: 0;
                         width: 100%;
-                        text-indent: 1%;
+                        text-indent: 0.5em;
                         background-color:$color4;
-
+                        font-size:1.2em;
                         a{
                             color:$color;
 
@@ -1213,7 +1215,7 @@ License: GNU General Public License v2 or later
                             color: $color;
                             letter-spacing: 0.05em;
                             display: block;
-                            text-indent: 1em;
+                            text-indent: 0.5em;
                             a{
                                 width:50%;
                                 display: inline-block;
@@ -1241,8 +1243,8 @@ License: GNU General Public License v2 or later
                 /*--- custom post images---*/
                 figure.thumb,
                 figure.attachment {
-                    width: 25%;
-                    margin: 5em auto;
+                    width: 20%;
+                    margin: 2em auto;
                     display: block;
                     border: 1px solid $color11;
                     @include originTran( 50% 50%);
@@ -1399,10 +1401,11 @@ License: GNU General Public License v2 or later
 
                     ul{
                         list-style:none;
-                        margin:0 auto;
+                        margin:1em auto;
                         padding:0;
                         color:$color4;
                         width:90%;
+                        
                         figure {
                             width: 90%;
                             margin: 0 auto;
@@ -1414,7 +1417,13 @@ License: GNU General Public License v2 or later
                             line-height:40px;
                             width:100%;
                             background-color:$color2;
-                            text-indent:0.5em;
+                            
+                            padding:1%;
+                            a{
+                                width:auto;
+                                display:inline-block;
+                                margin:0 0.5em;
+                            }
 
                         }
                     }
@@ -1435,7 +1444,7 @@ License: GNU General Public License v2 or later
                 div.audioExcerpt,
                 div.videoExcerpt{
                     display: block;
-                    width: 70%;
+                    width: 80%;
                     margin:auto;
                     
                     a.download_button{
@@ -1488,6 +1497,7 @@ License: GNU General Public License v2 or later
                                 background-color: $color4;
                                 line-height: 53px;
                                 color: $color;
+                                border: $color11 solid 1px;
                             }
                             i.fa-pause,
                             i.fa-play{
@@ -1559,7 +1569,7 @@ License: GNU General Public License v2 or later
                                 width:20%;
                                 display:block;
                                 float:left;
-                                line-height:58px;
+                                line-height:30px;
                                 color:$color4;
                                 border:1px solid $color11;
                                 margin-right:0.5em;
@@ -1571,7 +1581,7 @@ License: GNU General Public License v2 or later
                                 width:75%;
                                 clear:both;
                                 display:inline-block;
-                                height: 53px;
+                                height: 32px;
                             }
 
                         }
@@ -1581,7 +1591,7 @@ License: GNU General Public License v2 or later
                             width:20%;
                             display:block;
                             float:left;
-                            line-height:58px;
+                            line-height:30px;
                             color:$color4;
                             border:1px solid $color11;
                             margin-right:0.5em;
@@ -1593,7 +1603,7 @@ License: GNU General Public License v2 or later
                             width:75%;
                             clear:both;
                             display:inline-block;
-                            height: 53px;
+                            height: 32px;
                             
                         }
                         
@@ -1604,157 +1614,17 @@ License: GNU General Public License v2 or later
                     iframe {
                         width: 100%;
                         margin: 0 auto;
-                        display: block;
-                     
+                    
                     }
-
-                    //jp-video player
-                    div#jp_container_1 {
-                        display: block;
-                        width: 100%;
-
-                        .jp-type-single {
-                            width: 100%;
-                            .jp-gui {
-                                width: 100%;
-                                font-size: 0.9em;
-                                height: auto;
-                                display: block;
-                                .jp-controls{
-                                    width:20%;
-                                    float:left;
-                                    display:inline-block;
-                                    button.jp-play,
-                                    button.jp-stop{
-                                        display: inline-block;
-                                        width: 50%;
-                                        text-align: center;
-                                        float: left;
-                                        color: $color4;
-                                        line-height: 53px;
-                                        background-color: $colors;
-                                        border:none;
-                                        outline:none;
-                                    }
-                                }
-
-                                .jp-progress{
-                                    width: 35%;
-                                    float:left;
-                                    display: inline-block;
-                                    height: 55px;
-                                    .jp-seek-bar {
-                                        background-color: $color2;
-                                        display: inline-block;
-                                        line-height: 55px;
-                                        height: 55px;
-                                        .jp-play-bar {
-                                            background-color: $color8;
-                                            line-height: 55px;
-                                            height: 55px;
-                                        }
-
-                                    }
-
-
-                                }
-                                .jp-volume-controls {
-                                    float:left;
-                                    display: inline-block;
-                                    height: 55px;
-                                    width: 26%;
-
-                                    .jp-mute {
-                                        height: 100%;
-                                        display: inline-block;
-                                        width: 49%;
-                                        text-align: center;
-                                        float: left;
-                                        color: $color4;
-                                        line-height: 35px;
-                                        background-color: $colors;
-                                        border: none;
-                                        margin-right: 0.1em;
-
-                                    }
-                                    .jp-volume-max {
-                                        height: 100%;
-                                        display: inline-block;
-                                        width: 49%;
-                                        text-align: center;
-
-                                        color: $color4;
-                                        line-height: 35px;
-                                        background-color: $colors;
-                                        border: none;
-                                        margin-right: 0.1em;
-
-                                    }
-                                }
-
-                                .jp-time-holder{
-                                    width:19%;
-                                    display:inline-block;
-
-                                    .jp-current-time {
-                                        width: 30%;
-                                        background-color: $color2a;
-                                        color: $color;
-                                        display: inline-block;
-                                        line-height: 55px;
-                                        height: auto;
-                                        text-align: center;
-
-                                    }
-                                    .jp-duration {
-                                        width: 30%;
-                                        background-color: $color3;
-                                        color: $color;
-                                        display: inline-block;
-                                        text-align: center;
-                                        line-height: 55px;
-                                        height: auto;
-
-                                    }
-
-                                    .jp-toggles {
-                                        display:inline-block;
-
-                                        width: 34%;
-                                        .jp-repeat {
-                                            display: inline-block;
-                                            text-align: center;
-                                            color: $color4;
-                                            line-height: 55px;
-                                            background-color: $colors;
-                                            border: none;
-                                            height:auto;
-
-                                        }
-
-                                    }
-                                }
-
-                            }
-                            .jp-details{
-                                clear:both;
-                                height:50px;
-                                line-height:50px;
-                                margin-top: 0.2em;
-                                display:block;
-                                background-color: $colors;
-                            }
-                        }
-                    }
-
+ 
                 }
                 
                 //custom-post-footer
                 footer.speaker-meta {
                     clear: both;
-                    background-color: $color4;
+                    background-color: $color;
                     display: block;
-                    height: 160px;
+                    height: auto;
                     margin: 0;
                     padding: 0;
 
@@ -1765,14 +1635,15 @@ License: GNU General Public License v2 or later
                         height: 100%;
                         letter-spacing: 0.05em;
                         width: 100%;
+                        
                         li {
                             list-style: none;
                             line-height: 39px;
                             height: 40px;
-                            font-size: 0.9em;
                             background-color: $color2a;
                             color: $color4;
                             text-indent: 0;
+                            margin-bottom:0.25em;
 
                             span.post-meta-key {
                                 width: 20%;
@@ -1783,16 +1654,18 @@ License: GNU General Public License v2 or later
                                 background-color: $colors;
                                 color: $color;
                             }
+                            p{
+                                width:79%;
+                                display:inline-block;
+                                margin: 0;
+                                padding:0;
+                                font-size: 0.9em;
+                                text-indent: 0.2em;
+                                
+                            }
 
                         }
-
-                        p{
-                            width:79%;
-                            display:inline-block;
-                            margin: 0;
-                            padding:0;
-                            
-                        }
+                     
                     }
                 }
             }
@@ -2100,7 +1973,7 @@ License: GNU General Public License v2 or later
 
     /********** page container **********/
     #container {
-        width: 91%;
+        width: 92%;
 
         h1 {
             margin: 0.5em 0;
@@ -2159,9 +2032,9 @@ License: GNU General Public License v2 or later
                     height: 40px;
                     a {
                         font-size: 0.85em;
-                        letter-spacing: 0.05em;
+                        
                         &:hover {
-                            letter-spacing: 0.055em;
+                            font-weight:bold;
                         }
                     }
                     .lastmenu {
@@ -2258,10 +2131,10 @@ License: GNU General Public License v2 or later
                 div.results,
                 #new_released_section {
                     padding: 0;
-                    
+                    min-height: 280px;
                     .new_released_box{
-                        width: 19%; //19%;
-                        min-height: 330px;
+                        width: 19.425%; //19%;
+                        
 
                         h1 {
                             font-size: 0.9em;
@@ -2278,28 +2151,24 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 55%;
-                            &:hover {
-                                width: 60%;
-                            }
+
+                            height: auto;
+
                             img {
-                                @include box-sizing($type: border-box);
+
+                                width:60%;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
+                                margin:0 auto;
 
-                                    height: 40px;
-
-                                    a {
-
-                                        font-size: 0.9em;
+                                a.Morebutton {
+                                    font-size: 0.9em;
       
-                                        &:hover {
-                                            letter-spacing: 0.055em;
+                                    &:hover {
 
-                                        }
+                                        letter-spacing: 0.055em;
+
                                     }
                                 }
                             }
@@ -2508,12 +2377,11 @@ License: GNU General Public License v2 or later
 
         /*--- Right Column---*/
         #clashvibes_right_column {
-            margin: 0 0 1% 0;
-
+            
             width: 74%; //global post
             h1 {
-                font-size: 1.4em;
-                margin-bottom: 1em;
+                font-size:1.4em;
+                
 
                 a {
                     width: 71%;
@@ -2527,32 +2395,47 @@ License: GNU General Public License v2 or later
                 }
             }
 
+            h2,
+            h3,
+            h4,
+            h5,
+            h6{
+
+                height: 40px;
+                line-height: 40px;
+                text-indent: 0.25em;
+            }
+
             article.clash_videos,
             article.clash_audio,
             article.post,
             article.page{
                 display: block;
 
-                h1 {
-                    font-size: 1.2em;
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    
+                    margin-bottom: 0;
+
+                   
                 }
 
-                h2 {
-                    font-size: 1.1em;
-
-                }
 
                 header.entry-header {
                     display: block;
                     h1 {
-                        font-size: 1.4em;
+                        font-size: 1.2em;
 
                         a {
                             width: 100%;
 
                         }
                         span {
-                            text-indent: 0.5em;
+                            text-indent: 0.25em;
                         }
                     }
                     h2 {
@@ -2568,7 +2451,7 @@ License: GNU General Public License v2 or later
                         display: block;
                         span.posted-on,
                         span.byline {
-                            font-size:0.85em;
+                            font-size:0.8em;
 
                             a{
                                 width:60%;
@@ -2590,7 +2473,7 @@ License: GNU General Public License v2 or later
                 /*--- custom post images---*/
                 figure.thumb,
                 figure.attachment {
-                    width: 25%;
+                    width: 20%;
                     
                 }
 
@@ -2717,7 +2600,8 @@ License: GNU General Public License v2 or later
                         padding:0.5em;
                         button#play_toggle {
                             width: 20%;
-                            line-height: 55px;
+                            
+                            font-size:1em;
                             
                             &:hover{
                                 background-color: $colors;
@@ -2765,12 +2649,12 @@ License: GNU General Public License v2 or later
                             margin-top:0.5em;
                             label{
                                 width:20%;
-                                line-height:60px;
+
                            
                             }
                             input[type="range"]{
                                 width:75%;
-                                height: 53px;
+
                             }
                         }
                        
@@ -2780,7 +2664,7 @@ License: GNU General Public License v2 or later
                         }
                         input[type="range"]{
                             width:75%;
-                            height: 53px;
+
                         }
                     }
 
@@ -2789,96 +2673,25 @@ License: GNU General Public License v2 or later
                         margin: 0 auto;
                     }
 
-                    //jp-video player
-                    div#jp_container_1 {
-                        display: block;
-                        width: 100%;
-                        .jp-type-single {
-                            width: 100%;
-                            .jp-gui {
-                                font-size: 0.9em;
-                                .jp-controls{
-                                    width:20%;
-                                    button.jp-play,
-                                    button.jp-stop{
-                                        width: 50%;
-                                        line-height: 53px;
-                                    }
-                                }
-
-                                .jp-progress{
-                                    width: 35%;
-                                    height: 55px;
-                                    .jp-seek-bar {
-                                        line-height: 55px;
-                                        .jp-play-bar {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                                .jp-volume-controls {
-                                    height: 55px;
-                                    width: 26%;
-
-                                    .jp-mute {
-                                        width: 49%;
-                                        margin-right: 0.1em;
-
-                                    }
-                                    .jp-volume-max {
-                                        height: 100%;
-                                        width: 49%;
-                                    }
-                                }
-
-                                .jp-time-holder{
-                                    width:19%;
-                                    display:inline-block;
-
-                                    .jp-current-time {
-                                        width: 30%;
-                                        line-height: 55px;
-                                    }
-                                    .jp-duration {
-                                        width: 30%;
-                                        line-height: 55px;
-
-                                    }
-
-                                    .jp-toggles {
-                                        display:inline-block;
-
-                                        width: 34%;
-                                        .jp-repeat {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                            }
-                            .jp-details{
-                                margin-top: 0.2em;
-                            }
-                        }
-                    }
                 }
                 
                 //custom-post-footer
                 footer.speaker-meta {
-                    height: 160px;
 
                     ul.post-meta {
                         height: 100%;
-                        letter-spacing: 0.05em;
                        
-
                         li {
-                            font-size: 0.8em;
+                            font-size: 0.9em;
                             span.post-meta-key {
                                 width: 20%;
 
                             }
+                            p{
+                                width:79%;
+    
+                            }
                         }
-
                         p{
                             width:79%;
                             
@@ -3114,7 +2927,7 @@ License: GNU General Public License v2 or later
 
     /********** page container **********/
     #container {
-        width: 91%;
+        width: 94%;
 
         h1 {
             margin: 0.5em 0;
@@ -3169,14 +2982,14 @@ License: GNU General Public License v2 or later
             ul {
                 list-style: none;
                 li {
-                    width: 14%;
+                    width: 13%;
                     margin-right: 0.25em;
 
                     a {
                         font-size: 0.8em;
 
                         &:hover {
-                            letter-spacing: 0.055em;
+                            
                         }
                     }
                     .lastmenu {
@@ -3208,8 +3021,8 @@ License: GNU General Public License v2 or later
                     margin: 0 0 0.5em 0; 
 
                     .new_released_box {
-                        width: 19%; //19%;
-                        min-height: 300px;
+                        width: 19.325%; 
+                        min-height: 260px;
 
                         h1 {
                             font-size: 0.8em;
@@ -3227,23 +3040,24 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 70%;
-                            &:hover {
-                                width: 65%;
-                            }
+
+                            height: auto;
+
                             img {
-                                @include box-sizing($type: border-box);
+
+                                width:55%;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
-                                    height: 40px;
-                                    a {
-                                        font-size: 0.85em;
-                                        &:hover {
-                                            letter-spacing: 0.055em;
-                                        }
+                                margin:0 auto;
+
+                                a.Morebutton {
+                                    font-size: 0.85em;
+      
+                                    &:hover {
+
+                                        letter-spacing: 0.05em;
+
                                     }
                                 }
                             }
@@ -3278,7 +3092,7 @@ License: GNU General Public License v2 or later
                         height: 45px;
                         letter-spacing: 0.05em;
                         span.image_thumb {
-                            width: 8%;
+                            width: 10%;
                             a{
 
                                 height: 100%;
@@ -3290,7 +3104,7 @@ License: GNU General Public License v2 or later
                             }
                         }
                         span.title_singer {
-                            width: 77%;
+                            width: 75%;
                             line-height: 45px;
                             font-size: 0.75em;
                         }
@@ -3450,7 +3264,7 @@ License: GNU General Public License v2 or later
 
             width: 74%; //global post
             h1 {
-                font-size: 1.3em;
+                font-size: 1.2em;
 
                 a {
                     width: 71%;
@@ -3464,34 +3278,36 @@ License: GNU General Public License v2 or later
                 }
             }
 
+            h2,
+            h3,
+            h4,
+            h5,
+            h6{
+
+                text-indent: 0.25em;
+            }
+
             article.clash_videos,
             article.clash_audio,
             article.post,
             article.page{
                 display: block;
 
-                h1 {
-                    font-size: 1.2em;
-                }
-
-                h2 {
-                    font-size: 1.1em;
-
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    
+                    
+                    color:$color2;
+                    
+                   
                 }
 
                 header.entry-header {
                     display: block;
-                    h1 {
-                        font-size: 1.2em;
-
-                        a {
-                            width: 100%;
-
-                        }
-                        span {
-                            text-indent: 0.5em;
-                        }
-                    }
                     h2 {
                         font-size: 1.1em;
 
@@ -3505,7 +3321,7 @@ License: GNU General Public License v2 or later
                         display: block;
                         span.posted-on,
                         span.byline {
-                            font-size:0.8em;
+                            font-size:0.75em;
 
                             a{
                                 width:70%;
@@ -3517,7 +3333,7 @@ License: GNU General Public License v2 or later
 
                 /*--- blog image---*/
                 a.post-thumbnail{
-                    width: 30%;
+                    width: 25%;
                     img{
                         margin: 0;
 
@@ -3527,7 +3343,7 @@ License: GNU General Public License v2 or later
                 /*--- custom post images---*/
                 figure.thumb,
                 figure.attachment {
-                    width: 30%;
+                    width: 25%;
 
                     
                 }
@@ -3652,8 +3468,7 @@ License: GNU General Public License v2 or later
                         padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            line-height: 55px;
-                            
+                            font-size:0.9em;
                             &:hover{
                                 background-color: $colors;
                             }
@@ -3700,12 +3515,10 @@ License: GNU General Public License v2 or later
                             margin-top:0.5em;
                             label{
                                 width:20%;
-                                line-height:60px;
                            
                             }
                             input[type="range"]{
                                 width:75%;
-                                height: 53px;
                             }
                         }
                        
@@ -3715,7 +3528,6 @@ License: GNU General Public License v2 or later
                         }
                         input[type="range"]{
                             width:75%;
-                            height: 53px;
                         }
                     }
 
@@ -3724,72 +3536,6 @@ License: GNU General Public License v2 or later
                         margin: 0 auto;
                     }
 
-                    //jp-video player
-                    div#jp_container_1 {
-                        display: block;
-                        width: 100%;
-                        .jp-type-single {
-                            width: 100%;
-                            .jp-gui {
-                                font-size: 0.8em;
-                                .jp-controls{
-                                    width:20%;
-                                    button.jp-play,
-                                    button.jp-stop{
-                                        width: 50%;
-
-                                    }
-                                }
-
-                                .jp-progress{
-                                    width: 35%;
-                                    .jp-seek-bar {
-                                        line-height: 55px;
-                                        .jp-play-bar {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                                .jp-volume-controls {
-                                    width: 26%;
-
-                                    .jp-mute {
-                                        width: 49%;
-
-
-                                    }
-                                    .jp-volume-max {
-                                        width: 49%;
-                                    }
-                                }
-
-                                .jp-time-holder{
-                                    width:19%;
-
-
-                                    .jp-current-time {
-                                        width: 30%;
-
-                                    }
-                                    .jp-duration {
-                                        width: 30%;
-                                    }
-
-                                    .jp-toggles {
-                                        display:inline-block;
-
-                                        width: 34%;
-                                        .jp-repeat {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                            }
-                            .jp-details{
-                                margin-top: 0.2em;
-                            }
-                        }
-                    }
                 }
                 
                 //custom-post-footer
@@ -3801,15 +3547,19 @@ License: GNU General Public License v2 or later
                         letter-spacing: 0.05em;
 
                         li {
-                            font-size: 0.7em;
+                            font-size: 0.8em;
                             span.post-meta-key {
-                                width: 20%;
+                                width: 21%;
 
+                            }
+                            p{
+                                width:77%;
+    
                             }
                         }
 
                         p{
-                            width:79%;
+                            width:77%;
 
                         }
                     }
@@ -4041,7 +3791,7 @@ License: GNU General Public License v2 or later
 
     /********** page container **********/
     #container {
-        width: 95%;
+        width: 96%;;
 
         h1 {
             margin: 0.5em 0;
@@ -4096,14 +3846,14 @@ License: GNU General Public License v2 or later
             ul {
                 list-style: none;
                 li {
-                    width: 16%;
-                    margin-right: 0.25em;
+                    width: 13.6%;
+                    margin-right: 0.15em;
 
                     a {
-                        font-size: 0.75em;
+                        font-size: 0.7em;
 
                         &:hover {
-                            letter-spacing: 0.055em;
+                           
                         }
                     }
                     .lastmenu {
@@ -4135,8 +3885,9 @@ License: GNU General Public License v2 or later
                     margin: 0 0 0.5em 0; 
 
                     .new_released_box {
-                        width: 19%; //19%;
-                        min-height: 250px;
+                        width: 19.215%;
+                        min-height: 240px;
+                        
 
                         h1 {
                             font-size: 0.75em;
@@ -4155,23 +3906,24 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 75%;
-                            &:hover {
-                                width: 70%;
-                            }
+
+                            height: auto;
+
                             img {
-                                @include box-sizing($type: border-box);
+
+                                width:65%;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
-                                    height: 40px;
-                                    a {
-                                        font-size: 0.8em;
-                                        &:hover {
-                                            letter-spacing: 0.055em;
-                                        }
+                                margin:0 auto;
+
+                                a.Morebutton {
+                                    font-size: 0.85em;
+      
+                                    &:hover {
+
+                                        letter-spacing: 0.05em;
+
                                     }
                                 }
                             }
@@ -4207,7 +3959,7 @@ License: GNU General Public License v2 or later
                         height: 45px;
                         letter-spacing: 0.05em;
                         span.image_thumb {
-                            width: 9%;
+                            width: 10%;
                             a{
 
                                 height: 100%;
@@ -4219,7 +3971,7 @@ License: GNU General Public License v2 or later
                             }
                         }
                         span.title_singer {
-                            width: 76%;
+                            width: 75%;
                             line-height: 45px;
                             font-size: 0.7em;
                         }
@@ -4382,7 +4134,7 @@ License: GNU General Public License v2 or later
 
             width: 76%; //global post
             h1 {
-                font-size: 1.3em;
+                font-size: 1.2em;
 
                 a {
                     width: 71%;
@@ -4414,14 +4166,14 @@ License: GNU General Public License v2 or later
                 header.entry-header {
                     display: block;
                     h1 {
-                        font-size: 1.1em;
+                        font-size: 1em;
 
                         a {
                             width: 100%;
 
                         }
                         span {
-                            text-indent: 0.5em;
+                            text-indent: 0.25em;
                         }
                     }
                     h2 {
@@ -4451,7 +4203,7 @@ License: GNU General Public License v2 or later
                 /*--- blog image---*/
                          
                 a.post-thumbnail{
-                    width: 30%;
+                    width: 25%;
                     img{
                         margin: 0;
 
@@ -4460,7 +4212,7 @@ License: GNU General Public License v2 or later
                 /*--- custom post images---*/
                 figure.thumb,
                 figure.attachment {
-                    width: 30%;
+                    width: 25%;
 
                     
                 }
@@ -4585,7 +4337,7 @@ License: GNU General Public License v2 or later
                         padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            line-height: 55px;
+                            
                             
                             &:hover{
                                 background-color: $colors;
@@ -4633,12 +4385,10 @@ License: GNU General Public License v2 or later
                             margin-top:0.5em;
                             label{
                                 width:20%;
-                                line-height:60px;
                            
                             }
                             input[type="range"]{
                                 width:75%;
-                                height: 53px;
                             }
                         }
                        
@@ -4648,7 +4398,6 @@ License: GNU General Public License v2 or later
                         }
                         input[type="range"]{
                             width:75%;
-                            height: 53px;
                         }
                     }
 
@@ -4657,88 +4406,22 @@ License: GNU General Public License v2 or later
                         margin: 0 auto;
                     }
 
-                    //jp-video player
-                    div#jp_container_1 {
-                        display: block;
-                        width: 100%;
-                        .jp-type-single {
-                            width: 100%;
-                            .jp-gui {
-                                font-size: 0.8em;
-                                .jp-controls{
-                                    width:20%;
-                                    button.jp-play,
-                                    button.jp-stop{
-                                        width: 50%;
-
-                                    }
-                                }
-
-                                .jp-progress{
-                                    width: 35%;
-                                    .jp-seek-bar {
-                                        line-height: 55px;
-                                        .jp-play-bar {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                                .jp-volume-controls {
-                                    width: 26%;
-
-                                    .jp-mute {
-                                        width: 49%;
-
-
-                                    }
-                                    .jp-volume-max {
-                                        width: 49%;
-                                    }
-                                }
-
-                                .jp-time-holder{
-                                    width:19%;
-
-
-                                    .jp-current-time {
-                                        width: 30%;
-
-                                    }
-                                    .jp-duration {
-                                        width: 30%;
-                                    }
-
-                                    .jp-toggles {
-                                        display:inline-block;
-
-                                        width: 34%;
-                                        .jp-repeat {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                            }
-                            .jp-details{
-                                margin-top: 0.2em;
-                            }
-                        }
-                    }
                 }
                 
                 //custom-post-footer
                 footer.speaker-meta {
-                    height: 160px;
 
                     ul.post-meta {
                         height: 100%;
-                        letter-spacing: 0.05em;
 
                         li {
-                            font-size: 0.7em;
+                            font-size: 0.75em;
                             span.post-meta-key {
-                                width: 22%;
-                                font-size:90%;
-
+                                width: 23%;
+                            }
+                            p{
+                                width:76%;
+    
                             }
                         }
 
@@ -4974,7 +4657,7 @@ License: GNU General Public License v2 or later
 
     /********** page container **********/
     #container {
-        width: 97%;
+        width: 98%;
 
         h1 {
             margin: 0.5em 0;
@@ -5029,13 +4712,13 @@ License: GNU General Public License v2 or later
             ul {
                 list-style: none;
                 li {
-                    width: 16.4%;
+                    width: 13.8%;
                     margin-right: 0.1em;
                     a {
-                        font-size: 0.7em;
+                        font-size: 0.65em;
 
                         &:hover {
-                            letter-spacing: 0.055em;
+                            
                         }
                     }
                     .lastmenu {
@@ -5067,12 +4750,10 @@ License: GNU General Public License v2 or later
                     margin: 0 0 0.5em 0; 
 
                     .new_released_box {
-                        width: 24%; //19%;
-                        min-height: 250px;
-
+                        width: 23.925%;
+                        min-height: 240px;
                         h1 {
                             font-size: 0.75em;
-                            line-height: 20px;
 
                         }
 
@@ -5087,23 +4768,24 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 75%;
-                            &:hover {
-                                width: 70%;
-                            }
+
+                            height: auto;
+
                             img {
-                                @include box-sizing($type: border-box);
+
+                                width:65%;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
-                                    height: 40px;
-                                    a {
-                                        font-size: 0.8em;
-                                        &:hover {
-                                            letter-spacing: 0.055em;
-                                        }
+                                margin:0 auto;
+
+                                a.Morebutton {
+                                    font-size: 0.8em;
+      
+                                    &:hover {
+
+                                        letter-spacing: 0.05em;
+
                                     }
                                 }
                             }
@@ -5175,7 +4857,7 @@ License: GNU General Public License v2 or later
 
         /*--- Left Column---*/
         #clashvibes_left_column {
-            width: 21%;
+            width: 23%;
             section#clashvibes_login{
                 padding:0.5em 0;
                 form.search-form{
@@ -5306,8 +4988,8 @@ License: GNU General Public License v2 or later
         /*--- Right Column---*/
         #clashvibes_right_column {
             margin: 0 0 1% 0;
-
-            width: 74%; //global post
+            // min-height: 900px;.
+            width: 74%; //global post.
             h1 {
                 font-size: 1.2em;
 
@@ -5341,14 +5023,14 @@ License: GNU General Public License v2 or later
                 header.entry-header {
                     display: block;
                     h1 {
-                        font-size: 1em;
+                        font-size: 0.9em;
 
                         a {
                             width: 100%;
 
                         }
                         span {
-                            text-indent: 0.5em;
+                            text-indent: 0.25em;
                         }
                     }
                     h2 {
@@ -5376,7 +5058,7 @@ License: GNU General Public License v2 or later
 
                 /*--- blog image---*/
                 a.post-thumbnail{
-                    width: 35%;
+                    width: 25%;
                     img{
                         margin: 0;
 
@@ -5386,7 +5068,7 @@ License: GNU General Public License v2 or later
                 /*--- custom post images---*/
                 figure.thumb,
                 figure.attachment {
-                    width: 35%;
+                    width: 25%;
 
                     
                 }
@@ -5511,7 +5193,7 @@ License: GNU General Public License v2 or later
                         padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            line-height: 55px;
+                            
                             
                             &:hover{
                                 background-color: $colors;
@@ -5559,12 +5241,10 @@ License: GNU General Public License v2 or later
                             margin-top:0.5em;
                             label{
                                 width:20%;
-                                line-height:60px;
                            
                             }
                             input[type="range"]{
                                 width:75%;
-                                height: 53px;
                             }
                         }
                        
@@ -5574,7 +5254,6 @@ License: GNU General Public License v2 or later
                         }
                         input[type="range"]{
                             width:75%;
-                            height: 53px;
                         }
                     }
 
@@ -5583,91 +5262,31 @@ License: GNU General Public License v2 or later
                         margin: 0 auto;
                     }
 
-                    //jp-video player
-                    div#jp_container_1 {
-                        display: block;
-                        width: 100%;
-                        .jp-type-single {
-                            width: 100%;
-                            .jp-gui {
-                                font-size: 0.8em;
-                                .jp-controls{
-                                    width:20%;
-                                    button.jp-play,
-                                    button.jp-stop{
-                                        width: 50%;
-
-                                    }
-                                }
-
-                                .jp-progress{
-                                    width: 35%;
-                                    .jp-seek-bar {
-                                        line-height: 55px;
-                                        .jp-play-bar {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                                .jp-volume-controls {
-                                    width: 26%;
-
-                                    .jp-mute {
-                                        width: 49%;
-
-
-                                    }
-                                    .jp-volume-max {
-                                        width: 49%;
-                                    }
-                                }
-
-                                .jp-time-holder{
-                                    width:19%;
-
-
-                                    .jp-current-time {
-                                        width: 30%;
-
-                                    }
-                                    .jp-duration {
-                                        width: 30%;
-                                    }
-
-                                    .jp-toggles {
-                                        display:inline-block;
-
-                                        width: 34%;
-                                        .jp-repeat {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                            }
-                            .jp-details{
-                                margin-top: 0.2em;
-                            }
-                        }
-                    }
                 }
                 
                 //custom-post-footer
                 footer.speaker-meta {
-                    height: 160px;
+                    height: auto;
 
                     ul.post-meta {
                         height: 100%;
-                        letter-spacing: 0.05em;
                         li {
-                            font-size: 0.6em;
+                            font-size: 0.75em;
+                            height:auto;
                             span.post-meta-key {
-                                width: 23%;
+                                width: 100%;
+                                display:block;
+                            }
+                            p{
+                                width:100%;
+    
                             }
                         }
-
                         p{
-                            width:76%;
-
+                            width:97%;
+                            display:block;
+                            line-height: 20px;
+                            padding: 1em 0.5em;
                         }
                     }
                 }
@@ -5900,7 +5519,8 @@ License: GNU General Public License v2 or later
 
     /********** page container **********/
     #container {
-        width: 99%;
+        width: 98%;
+        padding: 0.25em;
 
         h1 {
             margin: 0.5em 0;
@@ -5955,14 +5575,13 @@ License: GNU General Public License v2 or later
             ul {
                 list-style: none;
                 li {
-                    width: 16%;
-                    margin-right: 0.15em;
+                        width: 14%;
+                        margin-right: 0.1em;
 
                     a {
-                        font-size: 0.65em;
+                        font-size: 0.6em;
 
                         &:hover {
-                            letter-spacing: 0.055em;
                         }
                     }
                     .lastmenu {
@@ -5974,7 +5593,7 @@ License: GNU General Public License v2 or later
 
         /*--- Content ---*/
         #clashvibes_content {
-            min-height: 980px;
+            min-height: 850px;
         }
 
         /********** front page **********/
@@ -5994,8 +5613,8 @@ License: GNU General Public License v2 or later
                     margin: 0 0 0.5em 0; 
 
                     .new_released_box {
-                        width: 24%;
-                        min-height: 260px;
+                        width: 23.825%;
+                        
 
                         h1 {
                             font-size: 0.75em;
@@ -6013,23 +5632,24 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 80%;
-                            &:hover {
-                                width: 75%;
-                            }
+
+                            height: auto;
+
                             img {
-                                @include box-sizing($type: border-box);
+
+                                width:65%;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
-                                    height: 40px;
-                                    a {
-                                        font-size: 0.8em;
-                                        &:hover {
-                                            letter-spacing: 0.055em;
-                                        }
+                                margin:0 auto;
+
+                                a.Morebutton {
+                                    font-size: 0.8em;
+      
+                                    &:hover {
+
+                                        letter-spacing: 0.05em;
+
                                     }
                                 }
                             }
@@ -6099,7 +5719,7 @@ License: GNU General Public License v2 or later
 
         /*--- Left Column---*/
         #clashvibes_left_column {
-            width: 21%;
+            width: 23%;
 
             section#clashvibes_login{
                 padding:0.5em 0;
@@ -6269,14 +5889,14 @@ License: GNU General Public License v2 or later
                 header.entry-header {
                     display: block;
                     h1 {
-                        font-size: 0.9em;
+                         font-size: 0.85em;
 
                         a {
                             width: 100%;
 
                         }
                         span {
-                            text-indent: 0.5em;
+                            text-indent: 0.25em;
                         }
                     }
                     h2 {
@@ -6292,7 +5912,7 @@ License: GNU General Public License v2 or later
                         display: block;
                         span.posted-on,
                         span.byline {
-                            font-size:0.65em;
+                            font-size:0.7em;
 
                             a{
                                 width:80%;
@@ -6305,7 +5925,7 @@ License: GNU General Public License v2 or later
                 /*--- blog image---*/
                          
                 a.post-thumbnail{
-                    width: 35%;
+                    width: 30%;
                     img{
                         margin: 0;
 
@@ -6314,7 +5934,7 @@ License: GNU General Public License v2 or later
                 /*--- custom post images---*/
                 figure.thumb,
                 figure.attachment {
-                    width: 40%;
+                    width: 30%;
 
                     
                 }
@@ -6439,7 +6059,7 @@ License: GNU General Public License v2 or later
                         padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            line-height: 55px;
+                            
                             
                             &:hover{
                                 background-color: $colors;
@@ -6455,7 +6075,6 @@ License: GNU General Public License v2 or later
 
                         div#progress {
                             width: 58%;
-                            height: 28px;
 
                             span#play_progress {
                                 height: 28px;
@@ -6487,12 +6106,10 @@ License: GNU General Public License v2 or later
                             margin-top:0.5em;
                             label{
                                 width:20%;
-                                line-height:60px;
                            
                             }
                             input[type="range"]{
                                 width:75%;
-                                height: 53px;
                             }
                         }
                        
@@ -6502,7 +6119,6 @@ License: GNU General Public License v2 or later
                         }
                         input[type="range"]{
                             width:75%;
-                            height: 53px;
                         }
                     }
 
@@ -6511,91 +6127,30 @@ License: GNU General Public License v2 or later
                         margin: 0 auto;
                     }
 
-                    //jp-video player
-                    div#jp_container_1 {
-                        display: block;
-                        width: 100%;
-                        .jp-type-single {
-                            width: 100%;
-                            .jp-gui {
-                                font-size: 0.8em;
-                                .jp-controls{
-                                    width:20%;
-                                    button.jp-play,
-                                    button.jp-stop{
-                                        width: 50%;
-
-                                    }
-                                }
-
-                                .jp-progress{
-                                    width: 35%;
-                                    .jp-seek-bar {
-                                        line-height: 55px;
-                                        .jp-play-bar {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                                .jp-volume-controls {
-                                    width: 26%;
-
-                                    .jp-mute {
-                                        width: 49%;
-
-
-                                    }
-                                    .jp-volume-max {
-                                        width: 49%;
-                                    }
-                                }
-
-                                .jp-time-holder{
-                                    width:19%;
-
-
-                                    .jp-current-time {
-                                        width: 30%;
-
-                                    }
-                                    .jp-duration {
-                                        width: 30%;
-                                    }
-
-                                    .jp-toggles {
-                                        display:inline-block;
-
-                                        width: 34%;
-                                        .jp-repeat {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                            }
-                            .jp-details{
-                                margin-top: 0.2em;
-                            }
-                        }
-                    }
                 }
                 
                 //custom-post-footer
                 footer.speaker-meta {
-                    height: 160px;
+                    
 
                     ul.post-meta {
                         height: 100%;
-                        letter-spacing: 0.05em;
 
                         li {
-                            font-size: 0.6em;
+                            font-size: 0.8em;
+
                             span.post-meta-key {
-                                width: 24%;
+
+                                display:block;
+                            }
+                            p{
+                                width:100%;
+    
                             }
                         }
-
                         p{
-                            width:74%;
+                            width:97%;
+                            line-height: 20px;
 
                         }
                     }
@@ -6830,19 +6385,22 @@ License: GNU General Public License v2 or later
 
 @media only screen and (max-width: 640px) {
 
-    button#toggle-nav{
+    button.menu-toggle{
         display: block;
         position: fixed;
-        top: 4.8em;
-        left: 88.5%;
+        top: 0.25em;
+        left: 86.5%;
         z-index: 100;
-        height: 50px;
+        line-height: 45px;
+        height: 45px;
         width: 60px;
         background-color:$color4;
         color:$color;
         border:none;
         outline:none;
         text-align:center;
+        @include Transition(all 0.2s linear 0s);
+        
         &:hover{
             background-color:$color7;
             color:$color4;
@@ -6852,13 +6410,13 @@ License: GNU General Public License v2 or later
     }
 
 
-    button#side-bar-btn{
+    button.sidebar-toggle{
         display: block;
         position: fixed;
-        top: 4.8em;
-        left: 72%;
-        line-height: 50px;
-        height: 50px;
+        top: 0.25em;
+        left: 69%;
+        line-height: 45px;
+        height: 45px;
         width: 15%;
         z-index:100;
         background-color:$color4;
@@ -6866,6 +6424,7 @@ License: GNU General Public License v2 or later
         border:none;
         outline:none;
         text-align:center;
+        @include Transition(all 0.2s linear 0s);
         &:hover{
             background-color:$color7;
             color:$color4;
@@ -6874,13 +6433,23 @@ License: GNU General Public License v2 or later
 
     }
 
+    .sidebar-toggle.hide-side {
+        left: 150vw;
+    }
+
+    .menu-toggle.hide {
+        left: 100vw;
+    }
+
+   
+
     #container {
-        width: 99%;
+        width: 98%;
         h1 {
 
             width: 100%;
             a {
-                font-size: 0.8em;
+                font-size: 0.85em;
                 display: block;
 
                 &:hover {
@@ -6888,10 +6457,14 @@ License: GNU General Public License v2 or later
                 }
             }
         }
+        .sidebar-toggle.hide-side {
+            left: 50vw;
+        }
+
 
         /********** header **********/
         header {
-            height: 120px;
+            height: 80px;
             #clashvibes_title {
                 width: 54%;
 
@@ -6902,7 +6475,7 @@ License: GNU General Public License v2 or later
                 }
                 h2.site-description{
                     line-height: 20px;
-                    font-size: 0.7em;
+                    font-size: 0.65em;
                 }
             }
 
@@ -6943,7 +6516,7 @@ License: GNU General Public License v2 or later
                         line-height: 50px;
 
                         &:hover {
-                            letter-spacing: 0.02em;
+                            
                             line-height: 50px;
                         }
                     }
@@ -7095,7 +6668,7 @@ License: GNU General Public License v2 or later
             width: 98%;
 
             h1 {
-                font-size: 1.2em;
+                font-size: 1.3em;
                 padding: 0.5em 0;
                 a {
                     width: 71%;
@@ -7125,8 +6698,8 @@ License: GNU General Public License v2 or later
                     height: auto;
 
                     h1 {
-                        font-size: 1em;
-                        text-indent: 0.5em;
+                        font-size: 0.9em;
+
 
                         a {
 
@@ -7134,13 +6707,13 @@ License: GNU General Public License v2 or later
 
                         }
                         span {
-                            text-indent: 0.5em;
+                            text-indent: 0.25em;
 
                         }
                     }
                     h2 {
-                        font-size: 0.95em;
-                        text-indent: 1%;
+   
+                        text-indent: 0.5em;
 
 
                         a{
@@ -7151,12 +6724,14 @@ License: GNU General Public License v2 or later
 
                     div.entry-meta {
                         display: block;
+                        text-align: left;
                         span.posted-on,
                         span.byline {
-                            font-size:0.65em;
+                            font-size:0.7em;
 
                             a{
                                 width:80%;
+                                text-align: left;
 
                             }
                         }
@@ -7250,7 +6825,7 @@ License: GNU General Public License v2 or later
                 //image
                 figure.thumb,
                 figure.attachment {
-                    width: 40%;
+                    width: 30%;
 
                     img {
                         margin: 0;
@@ -7280,7 +6855,7 @@ License: GNU General Public License v2 or later
                         padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            line-height: 55px;
+                           
                             
                             &:hover{
                                 background-color: $colors;
@@ -7328,12 +6903,10 @@ License: GNU General Public License v2 or later
                             margin-top:0.5em;
                             label{
                                 width:20%;
-                                line-height:60px;
                            
                             }
                             input[type="range"]{
                                 width:75%;
-                                height: 53px;
                             }
                         }
                        
@@ -7343,7 +6916,6 @@ License: GNU General Public License v2 or later
                         }
                         input[type="range"]{
                             width:75%;
-                            height: 53px;
                         }
                     }
 
@@ -7352,92 +6924,28 @@ License: GNU General Public License v2 or later
                         margin: 0 auto;
                     }
 
-                    //jp-video player
-                    div#jp_container_1 {
-                        display: block;
-                        width: 100%;
-                        .jp-type-single {
-                            width: 100%;
-                            .jp-gui {
-                                font-size: 0.8em;
-                                .jp-controls{
-                                    width:20%;
-                                    button.jp-play,
-                                    button.jp-stop{
-                                        width: 50%;
-
-                                    }
-                                }
-
-                                .jp-progress{
-                                    width: 35%;
-                                    .jp-seek-bar {
-                                        line-height: 55px;
-                                        .jp-play-bar {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                                .jp-volume-controls {
-                                    width: 26%;
-
-                                    .jp-mute {
-                                        width: 49%;
-
-
-                                    }
-                                    .jp-volume-max {
-                                        width: 49%;
-                                    }
-                                }
-
-                                .jp-time-holder{
-                                    width:19%;
-
-
-                                    .jp-current-time {
-                                        width: 30%;
-
-                                    }
-                                    .jp-duration {
-                                        width: 30%;
-                                    }
-
-                                    .jp-toggles {
-                                        display:inline-block;
-
-                                        width: 34%;
-                                        .jp-repeat {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                            }
-                            .jp-details{
-                                margin-top: 0.2em;
-                            }
-                        }
-                    }
                 }
 
                 //custom-post-footer
                 footer.speaker-meta {
-
-                    min-height: 160px;
+                  
 
                     ul.post-meta {
                         letter-spacing: 0.05em;
                         li {
-                            font-size: 0.7em;
+                            font-size: 0.8em;
+
                             span.post-meta-key {
-                                width: 24%;
+
+                                display:block;
                             }
-
+                            p{
+                                width:100%;
+    
+                            }
                         }
-
                         p{
-                            width:75%;
-
+                            width:97%;
                         }
                     }
                 }
@@ -7591,17 +7099,15 @@ License: GNU General Public License v2 or later
                     width: 100%;
                     .new_released_box {
                         width: 32%;
-                        min-height: 275px;
+                        
                         h1 {
                             font-size: 0.8em;
-                            line-height: 20px;
                             width: auto;
                         }
 
                         a {
                             font-size: 0.8em;
                             text-align: center;
-                            letter-spacing: 0.05em;
 
                             &:hover {
                                 font-weight: bold;
@@ -7610,23 +7116,24 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 75%;
-                            &:hover {
-                                width: 70%;
-                            }
+
+                            height: auto;
+
                             img {
-                                @include box-sizing($type: border-box);
+
+                                width:60%;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
-                                    height: 40px;
-                                    a {
-                                        font-size: 0.8em;
-                                        &:hover {
-                                            letter-spacing: 0.055em;
-                                        }
+                                margin:0 auto;
+
+                                a.Morebutton {
+                                    font-size: 0.8em;
+      
+                                    &:hover {
+
+                                        letter-spacing: 0.05em;
+
                                     }
                                 }
                             }
@@ -7771,15 +7278,15 @@ License: GNU General Public License v2 or later
 
 @media only screen and (max-width: 536px) {
     
-    button#toggle-nav{
-        top: 4.8em;
+    button.menu-toggle{
+
         left: 85.5%;
         &:hover{
         }
     }
 
-    button#side-bar-btn{
-        top: 6em;
+    button.sidebar-toggle{
+
         left: 69%;
         font-size:0.8em;
         width: 15%;
@@ -7790,7 +7297,7 @@ License: GNU General Public License v2 or later
     }
 
     #container {
-        width: 99%;
+        width: 98%;
         h1 {
 
             width: 100%;
@@ -7806,7 +7313,7 @@ License: GNU General Public License v2 or later
 
         /********** header **********/
         header {
-            height: 120px;
+            height: 80px;
             #clashvibes_title {
                 width: 48%;
 
@@ -7994,7 +7501,7 @@ License: GNU General Public License v2 or later
             width: 98%;
 
             h1 {
-                font-size: 1em;
+                font-size: 1.2em;
                 padding: 0.5em 0;
                 a {
                     width: 71%;
@@ -8022,8 +7529,9 @@ License: GNU General Public License v2 or later
                     height: auto;
 
                     h1 {
-                        font-size: 0.9em;
-                        text-indent: 0.5em;
+
+  
+                        font-size: 0.85em;
 
                         a {
 
@@ -8031,13 +7539,12 @@ License: GNU General Public License v2 or later
 
                         }
                         span {
-                            text-indent: 0.5em;
+                            text-indent: 0.25em;
 
                         }
                     }
                     h2 {
-                        font-size: 0.95em;
-                        text-indent: 1%;
+                        font-size: 1em;
 
 
                         a{
@@ -8050,7 +7557,7 @@ License: GNU General Public License v2 or later
                         height: 123px;
 
                         span {
-                            font-size:0.75em;
+                            font-size:0.7em;
                             text-indent: 0.5em;
 
 
@@ -8066,7 +7573,6 @@ License: GNU General Public License v2 or later
                         height: 123px;
                         span {
                             font-size: 0.75em;
-                            letter-spacing: 0.05em;
                             a {
 
                                 width: auto;
@@ -8075,7 +7581,6 @@ License: GNU General Public License v2 or later
                     }
                     h2 {
                         font-size: 0.9em;
-                        letter-spacing: 0.05em;
 
                         a {
                             font-size: 1em;
@@ -8132,7 +7637,7 @@ License: GNU General Public License v2 or later
                 }
 
                 a.post-thumbnail{
-                    width: 35%;
+                    width: 30%;
                     img{
                         margin: 0;
 
@@ -8142,7 +7647,7 @@ License: GNU General Public License v2 or later
                 //image
                 figure.thumb,
                 figure.attachment {
-                    width: 40%;
+                    width: 30%;
 
                 }
 
@@ -8168,7 +7673,7 @@ License: GNU General Public License v2 or later
                         padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            line-height: 55px;
+                           
                             
                             &:hover{
                                 background-color: $colors;
@@ -8184,7 +7689,6 @@ License: GNU General Public License v2 or later
 
                         div#progress {
                             width: 58%;
-                            height: 28px;
 
                             span#play_progress {
                                 height: 28px;
@@ -8199,7 +7703,6 @@ License: GNU General Public License v2 or later
                             width: 20%;
                             letter-spacing: 0.1em;
                             span{
-                                
                                 line-height: 27px;
                                 font-size: 0.7em;
                             }
@@ -8216,22 +7719,18 @@ License: GNU General Public License v2 or later
                             margin-top:0.5em;
                             label{
                                 width:20%;
-                                line-height:60px;
                            
                             }
                             input[type="range"]{
                                 width:75%;
-                                height: 53px;
                             }
                         }
                        
                         label{
                             width:20%;
-                            margin-right:0.5em;
                         }
                         input[type="range"]{
                             width:75%;
-                            height: 53px;
                         }
                     }
 
@@ -8240,91 +7739,32 @@ License: GNU General Public License v2 or later
                         margin: 0 auto;
                     }
 
-                    //jp-video player
-                    div#jp_container_1 {
-                        display: block;
-                        width: 100%;
-                        .jp-type-single {
-                            width: 100%;
-                            .jp-gui {
-                                font-size: 0.8em;
-                                .jp-controls{
-                                    width:20%;
-                                    button.jp-play,
-                                    button.jp-stop{
-                                        width: 50%;
-
-                                    }
-                                }
-
-                                .jp-progress{
-                                    width: 35%;
-                                    .jp-seek-bar {
-                                        line-height: 55px;
-                                        .jp-play-bar {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                                .jp-volume-controls {
-                                    width: 26%;
-
-                                    .jp-mute {
-                                        width: 49%;
-
-
-                                    }
-                                    .jp-volume-max {
-                                        width: 49%;
-                                    }
-                                }
-
-                                .jp-time-holder{
-                                    width:19%;
-
-
-                                    .jp-current-time {
-                                        width: 30%;
-
-                                    }
-                                    .jp-duration {
-                                        width: 30%;
-                                    }
-
-                                    .jp-toggles {
-                                        display:inline-block;
-
-                                        width: 34%;
-                                        .jp-repeat {
-                                            line-height: 55px;
-                                        }
-                                    }
-                                }
-                            }
-                            .jp-details{
-                                margin-top: 0.2em;
-                            }
-                        }
-                    }
                 }
 
                 //custom-post-footer
                 footer.speaker-meta {
 
-                    min-height: 160px;
+                    
 
                     ul.post-meta {
                         letter-spacing: 0.05em;
 
                         li {
-                            font-size: 0.6em;
+                            font-size: 0.75em;
+
                             span.post-meta-key {
-                                width: 24%;
+
+                                display:block;
+                            }
+                            p{
+                                width:100%;
+    
                             }
                         }
-
                         p{
-                            width:75%;
+                            width:97%;
+
+                            line-height: 20px;
 
                         }
                     }
@@ -8475,18 +7915,16 @@ License: GNU General Public License v2 or later
                 #new_released_section {
                     width: 100%;
                     .new_released_box {
-                        width: 49%;
-                        min-height: 310px;
+                        width: 48%;
+                        min-height: 270px;
                         h1 {
                             font-size: 0.8em;
-                            line-height: 20px;
                             width: auto;
                         }
 
                         a {
                             font-size: 0.8em;
                             text-align: center;
-                            letter-spacing: 0.05em;
 
                             &:hover {
                                 font-weight: bold;
@@ -8495,23 +7933,24 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 75%;
-                            &:hover {
-                                width: 70%;
-                            }
+
+                            height: auto;
+
                             img {
-                                @include box-sizing($type: border-box);
+
+                                width:55%;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
-                                    height: 40px;
-                                    a {
-                                        font-size: 0.8em;
-                                        &:hover {
-                                            letter-spacing: 0.055em;
-                                        }
+                                margin:0 auto;
+
+                                a.Morebutton {
+                                    font-size: 0.8em;
+      
+                                    &:hover {
+
+                                        letter-spacing: 0.05em;
+
                                     }
                                 }
                             }
@@ -8652,9 +8091,9 @@ License: GNU General Public License v2 or later
 //mobile
 @media only screen and (max-width: 480px) {
 
-    button#toggle-nav{
-        left: 83%;
-        top:0.25em;
+    button.menu-toggle{
+        left: 84.5%;
+
         &:hover{
             background-color:$color7;
 
@@ -8662,8 +8101,8 @@ License: GNU General Public License v2 or later
     }
 
     button#side-bar-btn{
-        top: 0.25em;
-        left: 67.5%;
+
+        left: 68.5%;
         &:hover{
             background-color:$color7;
 
@@ -8671,7 +8110,7 @@ License: GNU General Public License v2 or later
     }
 
     #container {
-        width: 99%;
+        width: 100%;
         h1 {
 
             width: 100%;
@@ -8728,7 +8167,7 @@ License: GNU General Public License v2 or later
         nav {
             width: 250px;
             left:-250px;
-            top:4.5em;
+            top: 4em;
 
 
             ul {
@@ -8881,7 +8320,7 @@ License: GNU General Public License v2 or later
             width: 98%;
 
             h1 {
-                font-size: 1em;
+                font-size: 1.1em;
                 padding: 0.5em 0;
                 a {
                     width: 71%;
@@ -8909,9 +8348,11 @@ License: GNU General Public License v2 or later
                     height: auto;
 
                     h1 {
-                        font-size: 0.9em;
-                        text-indent: 0.5em;
+                        font-size: 0.8em;
+                        text-indent: 0;
                         text-align: center;
+                        height: auto;
+                        line-height:25px;
 
                         a {
 
@@ -8922,7 +8363,7 @@ License: GNU General Public License v2 or later
 
                         }
                         span {
-                            text-indent: 0.5em;
+                            text-indent: 0;
                             display: block;
                             width: 100%;
                             float: none;
@@ -8930,8 +8371,8 @@ License: GNU General Public License v2 or later
                         }
                     }
                     h2 {
-                        font-size: 0.85em;
-                        text-indent: 1%;
+                        font-size: 1em;
+
 
 
                         a{
@@ -9061,7 +8502,7 @@ License: GNU General Public License v2 or later
                         padding:0.25em;
                         button#play_toggle {
                             width: 20%;
-                            line-height: 55px;
+                            
                             
                             &:hover{
                                 background-color: $colors;
@@ -9210,7 +8651,7 @@ License: GNU General Public License v2 or later
                         letter-spacing: 0.05em;
                         height:auto;
                         li {
-                            font-size: 0.8em;
+                            font-size: 0.75em;
                             height:auto;
                             span.post-meta-key {
                                 width: 100%;
@@ -9218,8 +8659,10 @@ License: GNU General Public License v2 or later
                             }
                         }
                         p{
-                            width:100%;
+                            width:97%;
                             display:block;
+                            line-height: 20px;
+                            padding: 1em 0.5em;
                         }
                     }
                 }
@@ -9369,12 +8812,12 @@ License: GNU General Public License v2 or later
                 #new_released_section {
                     width: 100%;
                     .new_released_box {
-                        width: 49%;
-                        min-height: 275px;
+                        width: 48%;
+                        
                         h1 {
                             font-size: 0.8em;
                             line-height: 20px;
-                            width: auto;
+                            text-indent: 0;
                         }
 
                         a {
@@ -9389,23 +8832,24 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 75%;
-                            &:hover {
-                                width: 70%;
-                            }
+
+                            height: auto;
+
                             img {
-                                @include box-sizing($type: border-box);
+
+                                width:65%;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
-                                    height: 40px;
-                                    a {
-                                        font-size: 0.8em;
-                                        &:hover {
-                                            letter-spacing: 0.055em;
-                                        }
+                                margin:0 auto;
+
+                                a.Morebutton {
+                                    font-size: 0.75em;
+      
+                                    &:hover {
+
+                                        letter-spacing: 0.05em;
+
                                     }
                                 }
                             }
@@ -9544,19 +8988,19 @@ License: GNU General Public License v2 or later
 
 @media only screen and (max-width: 414px) {
 
-    button#toggle-nav{
-        left: 80%;
-        top: 0.8em;
+    button.menu-toggle{
+        left: 81%;
+        font-size:0.75em;
         &:hover{
             background-color:$color7;
 
         }
     }
 
-    button#side-bar-btn{
-        left: 77%;
-        top: 5.05em;
-        width:20%;
+    button.sidebar-toggle{
+        font-size:0.75em;
+        width: 15%;
+        left: 65%;
         &:hover{
             background-color:$color7;
 
@@ -9564,7 +9008,7 @@ License: GNU General Public License v2 or later
     }
 
     #container {
-        width: 99%;
+        
         h1 {
 
             width: 100%;
@@ -9580,13 +9024,13 @@ License: GNU General Public License v2 or later
 
         /********** header **********/
         header {
-            height: 110px;
+            height: 80px;
             #clashvibes_title {
                 width: 48%;
 
                 h1{
 
-                    font-size:1.9em;
+                    font-size:1.8em;
 
                 }
                 h2.site-description{
@@ -9666,7 +9110,7 @@ License: GNU General Public License v2 or later
         /*--- Left Column---*/
         #clashvibes_left_column {
 
-            top:4.5em;
+            top:5.4em;
 
             h1 {
                 position: relative;
@@ -9768,7 +9212,7 @@ License: GNU General Public License v2 or later
             width: 98%;
 
             h1 {
-                font-size: 1em;
+                font-size: 1.1em;
                 padding: 0.5em 0;
                 a {
                     width: 71%;
@@ -9803,13 +9247,13 @@ License: GNU General Public License v2 or later
 
                         }
                         span {
-                            text-indent: 0.25em;
+                            text-indent: 0;
 
                         }
                     }
                     h2 {
-                        font-size: 0.8em;
-                        text-indent: 1%;
+                        font-size: 0.9em;
+
 
 
                         a{
@@ -9822,8 +9266,7 @@ License: GNU General Public License v2 or later
                         display: block;
                         span.posted-on,
                         span.byline {
-                            font-size:0.65em;
-                            text-indent:0.15em;
+                            font-size: 0.65em;
 
                             a{
                                 width:80%;
@@ -9953,7 +9396,7 @@ License: GNU General Public License v2 or later
                         padding:0.15em;
                         button#play_toggle {
                             width: 20%;
-                            line-height: 55px;
+                            
                             
                             &:hover{
                                 background-color: $colors;
@@ -10114,6 +9557,7 @@ License: GNU General Public License v2 or later
 
                         p{
                             width:100%;
+                            
 
                         }
                     }
@@ -10264,7 +9708,7 @@ License: GNU General Public License v2 or later
                 #new_released_section {
                     width: 100%;
                     .new_released_box {
-                        width: 49%;
+                        width: 48%;
 
                         h1 {
                             font-size: 0.75em;
@@ -10283,23 +9727,24 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 80%;
-                            &:hover {
-                                width: 75%;
-                            }
+
+                            height: auto;
+
                             img {
-                                @include box-sizing($type: border-box);
+
+                                width:60%;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
-                                    height: 40px;
-                                    a {
-                                        font-size: 0.8em;
-                                        &:hover {
-                                            letter-spacing: 0.055em;
-                                        }
+                                margin:0 auto;
+
+                                a.Morebutton {
+                                    font-size: 0.75em;
+      
+                                    &:hover {
+
+                                        letter-spacing: 0.05em;
+
                                     }
                                 }
                             }
@@ -10439,9 +9884,10 @@ License: GNU General Public License v2 or later
 
 @media only screen and (max-width: 360px) {
 
-    button#toggle-nav{
-        position: fixed;
-        left: 79%;
+    
+    button.menu-toggle{
+        
+        width: 45px;
         &:hover{
             background-color:$color7;
             color:$color4;
@@ -10449,10 +9895,8 @@ License: GNU General Public License v2 or later
 
     }
 
-    button#side-bar-btn{
-        width:20%;
-        left: 77%;
-        top: 5.05em;
+    button.sidebar-toggle{
+        width:15%;
 
         &:hover{
             background-color:$color7;
@@ -10460,9 +9904,14 @@ License: GNU General Public License v2 or later
         }
 
     }
+
+    .hide {
+        left: 200vw;
+    }
+    
 
     #container {
-        width: 99%;
+        
         h1 {
 
             width: 100%;
@@ -10489,7 +9938,7 @@ License: GNU General Public License v2 or later
                 }
                 h2.site-description{
                     line-height: 20px;
-                    font-size: 0.65em;
+                    font-size: 0.6em;
                 }
             }
 
@@ -10514,6 +9963,7 @@ License: GNU General Public License v2 or later
         nav {
             width: 250px;
             left:-250px;
+            top: 8.4em;
 
 
             ul {
@@ -10565,7 +10015,7 @@ License: GNU General Public License v2 or later
         /*--- Left Column---*/
         #clashvibes_left_column {
 
-            top:4.5em;
+            top: 8.4em;
 
             h1 {
                 position: relative;
@@ -10703,7 +10153,7 @@ License: GNU General Public License v2 or later
 
                         }
                         span {
-                            text-indent: 0.25em;
+                            
 
                         }
                     }
@@ -10723,7 +10173,6 @@ License: GNU General Public License v2 or later
                         span.posted-on,
                         span.byline {
                             font-size:0.6em;
-                            text-indent:0.2em;
 
                             a{
                                 width:80%;
@@ -11160,14 +10609,22 @@ License: GNU General Public License v2 or later
                 }
 
                 #new_released_section {
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-flex-flow: column;
+                    -ms-flex-flow: column;
+                    flex-flow: column;
+                    -webkit-align-items: center;
+                    -ms-flex-align: center;
+                    align-items: center;
                     width: 100%;
                     .new_released_box {
-                        width: 99%;
-                        min-height: 330px;
+                        width: 68%;
+                        
                         h1 {
                             font-size: 0.9em;
-                            line-height: 20px;
-                            width: auto;
+
                         }
 
                         a {
@@ -11182,23 +10639,24 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 60%;
-                            &:hover {
-                                width: 55%;
-                            }
+
+                            height: auto;
+
                             img {
-                                @include box-sizing($type: border-box);
+
+                                width:60%;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
-                                    height: 40px;
-                                    a {
-                                        font-size: 0.85em;
-                                        &:hover {
-                                            letter-spacing: 0.055em;
-                                        }
+                                margin:0 auto;
+
+                                a.Morebutton {
+                                    font-size: 0.75em;
+      
+                                    &:hover {
+
+                                        letter-spacing: 0.05em;
+
                                     }
                                 }
                             }
@@ -11337,10 +10795,8 @@ License: GNU General Public License v2 or later
 
 @media only screen and (max-width: 320px) {
 
-    button#toggle-nav{
-        position: fixed;
-        
-        left: 77%;
+    button.menu-toggle{
+        left: 84%;
         &:hover{
             background-color:$color7;
             color:$color4;
@@ -11348,8 +10804,9 @@ License: GNU General Public License v2 or later
 
     }
 
-    button#side-bar-btn{
-        left: 77%;
+    button.sidebar-toggle{
+        left: 67%;
+        width: 16%;
         &:hover{
             background-color:$color7;
             color:$color4;
@@ -11358,7 +10815,7 @@ License: GNU General Public License v2 or later
     }
 
     #container {
-        width: 99%;
+        
         h1 {
 
             width: 100%;
@@ -11380,7 +10837,7 @@ License: GNU General Public License v2 or later
 
                 h1{
 
-                    font-size:1.7em;
+                    font-size:1.8em;
 
                 }
                 h2.site-description{
@@ -11591,7 +11048,7 @@ License: GNU General Public License v2 or later
                     height: auto;
 
                     h1 {
-                        font-size: 0.8em;
+                        font-size: 0.75em;
 
                         a {
 
@@ -11599,7 +11056,7 @@ License: GNU General Public License v2 or later
 
                         }
                         span {
-                            text-indent: 0.2em;
+                            
 
                         }
                     }
@@ -11618,7 +11075,6 @@ License: GNU General Public License v2 or later
                         span.posted-on,
                         span.byline {
                             font-size:0.55em;
-                            text-indent:0.15em;
 
                             a{
                                 width:82%;
@@ -11745,7 +11201,7 @@ License: GNU General Public License v2 or later
                         width: 97%;
                         button#play_toggle {
                             width: 20%;
-                            line-height: 55px;
+                            
                             
                             &:hover{
                                 background-color: $colors;
@@ -11897,7 +11353,7 @@ License: GNU General Public License v2 or later
                         letter-spacing: 0.05em;
 
                         li {
-                            font-size:0.65em;
+                            font-size:0.7em;
                             span.post-meta-key {
                                 width: 100%;
                             }
@@ -12055,18 +11511,14 @@ License: GNU General Public License v2 or later
                 #new_released_section {
                     width: 100%;
                     .new_released_box {
-                        width: 99%;
-                        min-height: 320px;
+                        width: 70%;
                         h1 {
                             font-size: 0.85em;
-                            line-height: 20px;
-                            width: auto;
                         }
 
                         a {
                             font-size: 0.7em;
-                            text-align: center;
-                            letter-spacing: 0.05em;
+
 
                             &:hover {
                                 font-weight: bold;
@@ -12075,23 +11527,24 @@ License: GNU General Public License v2 or later
 
                         figure.thumbaud,
                         figure.thumbvid {
-                            width: 75%;
-                            &:hover {
-                                width: 70%;
-                            }
+
+                            height: auto;
+
                             img {
-                                @include box-sizing($type: border-box);
+
+                                width:70%;
                             }
 
                             figcaption {
-                                margin:0;
-                                span.Morebutton {
-                                    height: 40px;
-                                    a {
-                                        font-size: 0.8em;
-                                        &:hover {
-                                            letter-spacing: 0.055em;
-                                        }
+                                margin:0 auto;
+
+                                a.Morebutton {
+                                    font-size: 0.75em;
+      
+                                    &:hover {
+
+                                        letter-spacing: 0.05em;
+
                                     }
                                 }
                             }

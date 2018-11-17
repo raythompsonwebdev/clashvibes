@@ -37,10 +37,9 @@
 		 
 </header>
 		
-<?php 	clashvibes_post_thumbnail();  ?>
+<?php clashvibes_post_thumbnail();  ?>
 
-<?php    the_content();  ?>
-
+<?php echo do_shortcode('[customplayer]');?>
 
 <div class="clearfix"></div>
 

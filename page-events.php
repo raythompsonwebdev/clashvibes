@@ -38,12 +38,10 @@ get_header(); ?>
          
                <input type="submit" value="Find Event" name="event" id="event-submit-btn" />
             </article>
-
-            		
+ 	
 		
 	</div>
 
-	
 
 	</section><!-- end of right panel -->
 

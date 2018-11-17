@@ -14,26 +14,27 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template.
  */
 
-add_filter( 'wp_title', 'filter_wp_title', 10, 2 );
+add_filter( 'wp_title', 'clashvibes_filter_wp_title', 10, 2 );
 /**
  * Filters the page title appropriately depending on the current page
  *
  * This function is attached to the 'wp_title' fiilter hook.
  *
- * @uses	get_bloginfo()
- * @uses	is_home()
- * @uses	is_front_page()
+ * @uses    get_bloginfo()
+ * @uses    is_home()
+ * @uses    is_front_page()
  */
-function filter_wp_title( $title ) {
+function clashvibes_filter_wp_title( $title ) {
 	global $page, $paged;
 
-	if ( is_feed() )
+	if ( is_feed() ) {
 		return $title;
+	}
 
 	$site_description = get_bloginfo( 'description' );
 
-	$filtered_title = $title . get_bloginfo( 'name' );
-	$filtered_title .= ( ! empty( $site_description ) && ( is_home() || is_front_page() ) ) ? ' | ' . $site_description: '';
+	$filtered_title  = $title . get_bloginfo( 'name' );
+	$filtered_title .= ( ! empty( $site_description ) && ( is_home() || is_front_page() ) ) ? ' | ' . $site_description : '';
 	$filtered_title .= ( 2 <= $paged || 2 <= $page ) ? ' | ' . sprintf( __( 'Page %s', 'clashvibes' ), max( $paged, $page ) ) : '';
 
 	return $filtered_title;
@@ -197,15 +198,16 @@ function clashvibes_content_width() {
 }
 add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
 
- /**
- *  Remove Query Strings – Optional Step
- */
-function _remove_script_version( $src ){
+/**
+* Remove Query Strings – Optional Step.
+*
+* */
+function clashvibes_remove_script_version( $src ) {
 	$parts = explode( '?ver', $src );
 	return $parts[0];
-	}
-	add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
-	add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
+}
+add_filter( 'script_loader_src', 'clashvibes_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', 'clashvibes_remove_script_version', 15, 1 );
 
 
 /**
@@ -215,9 +217,9 @@ function disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 	remove_action( 'wp_print_styles', 'print_emoji_styles' );
-	remove_action( 'admin_print_styles', 'print_emoji_styles' );	
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
 	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 }
@@ -225,8 +227,8 @@ add_action( 'init', 'disable_emojis' );
 
 /**
  * Filter function used to remove the tinymce emoji plugin.
- * 
- * @param    array  $plugins  
+ *
+ * @param    array $plugins
  * @return   array             Difference betwen the two arrays
  */
 function disable_emojis_tinymce( $plugins ) {
@@ -237,19 +239,22 @@ function disable_emojis_tinymce( $plugins ) {
 	}
 }
 
-// Remove WP embed script
+/**
+ * Remove WP embed script
+ * 
+ * */ 
 function speed_stop_loading_wp_embed() {
-	if (!is_admin()) {
-	wp_deregister_script('wp-embed');
+	if ( ! is_admin() ) {
+		wp_deregister_script( 'wp-embed' );
 	}
-	}
-	add_action('init', 'speed_stop_loading_wp_embed');
-	
-	// Remove comment-reply.min.js from footer
-	function comments_clean_header_hook(){
-	 wp_deregister_script( 'comment-reply' );
-	 }
-	add_action('init','comments_clean_header_hook');
+}
+add_action( 'init', 'speed_stop_loading_wp_embed' );
+
+// Remove comment-reply.min.js from footer
+function comments_clean_header_hook() {
+	wp_deregister_script( 'comment-reply' );
+}
+add_action( 'init', 'comments_clean_header_hook' );
 
 /**
  * Sidebars!
@@ -330,7 +335,6 @@ add_action( 'widgets_init', 'clashvibes_contact_widgets_init' );
  */
 function clashvibes_enqueue_extra_styles() {
 
-	
 	wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'third-custom-style', get_stylesheet_directory_uri() . '/reset.css', array(), '1', 'true' );
@@ -338,6 +342,10 @@ function clashvibes_enqueue_extra_styles() {
 	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
 
 	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all' );
+
+	// Load the Internet Explorer specific stylesheet.
+	wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . '/ie.css', array(), '1.0' );
+	wp_style_add_data( 'raythompwebdesign-com-ie', 'conditional', 'lte IE 8' );
 
 }
 add_action( 'wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles' );
@@ -369,7 +377,7 @@ function clashvibes_scripts() {
 
 	wp_enqueue_script( 'clashvibes-skip-link-focus-fix', get_template_directory_uri() . '/js/minified/skip-link-focus-fix.min.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'soundcloud', get_template_directory_uri() . '/js/api.js', array(), '20151215', true );
+	//wp_enqueue_script( 'soundcloud', get_template_directory_uri() . '/js/api.js', array(), '20151215', true );
 
 	if ( 'clash_audio' === get_post_type() ) {
 		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/minified/audio.min.js', array( 'jquery' ), '1.0.0', true );
@@ -418,9 +426,6 @@ function clashvibes_cubiq_setup() {
 	add_filter( 'the_generator', '__return_false' );
 	// remove version from rss.
 	add_filter( 'the_generator', '__return_empty_string' );
-	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-	remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 }
 add_action( 'after_setup_theme', 'clashvibes_cubiq_setup' );
@@ -539,7 +544,7 @@ if ( ! function_exists( 'clashvibes_attached_image' ) ) :
 				'post_mime_type'   => 'image',
 				'order'            => 'ASC',
 				'orderby'          => 'menu_order ID',
-				'suppress_filters' => false
+				'suppress_filters' => false,
 			)
 		);
 		// If there is more than 1 attachment in a gallery...

@@ -21,8 +21,8 @@ get_header(); ?>
 	<section id="clashvibes_right_column_front">
 
 		<section id="clashvibes_banner">
-			
-	   
+		<!--2/2018/07-->
+		<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/sites/2/2018/07/sliderimage.jpg" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
 			
 		</section>
 
@@ -78,11 +78,11 @@ get_header(); ?>
 							
 												
 						<?php if ( 'clash_audio' === get_post_type() ) : ?>
-						   <span class="Morebutton"><a href=" <?php echo esc_url( get_permalink(), 'clashvibes' ); ?> " title="Listen to <?php esc_attr( the_title_attribute(), 'clashvibes' ); ?>"><?php esc_html_e( 'Listen', 'clashvibes' ); ?></a></span>
+						   <a class="Morebutton" href=" <?php echo esc_url( get_permalink(), 'clashvibes' ); ?> " title="Listen to <?php esc_attr( the_title_attribute(), 'clashvibes' ); ?>"><?php esc_html_e( 'Listen', 'clashvibes' ); ?></a>
 						   
 							<?php else : ?>
 						   
-						   <span class="Morebutton"><a href=" <?php echo esc_url( get_permalink(), 'clashvibes' ); ?> " title="View <?php esc_attr( the_title_attribute(), 'clashvibes' ); ?> Video"><?php esc_html_e( 'View', 'clashvibes' ); ?></a></span>
+						   <a class="Morebutton" href=" <?php echo esc_url( get_permalink(), 'clashvibes' ); ?> " title="View <?php esc_attr( the_title_attribute(), 'clashvibes' ); ?> Video"><?php esc_html_e( 'View', 'clashvibes' ); ?></a>
 							<?php endif; ?>
 						   
 						</figcaption>

@@ -27,4 +27,6 @@ get_header(); ?>
 	
 </section><!-- end of right panel -->
 
+</div>
+
 <?php get_footer(); ?>

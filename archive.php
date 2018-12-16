@@ -27,8 +27,8 @@
 
 <section id="clashvibes_right_column">
 				
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
 			the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -40,13 +40,12 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 		<div class="entry-meta">
-			<?php
-				clashvibes_posted_on();
-			?>
+
+			<?php	clashvibes_posted_on(); ?>
+
 		</div><!-- .entry-meta -->
-			<?php
-		endif;
-		?>
+
+			<?php	endif; ?>
 	</header><!-- .entry-header -->
 	
 		<?php clashvibes_post_thumbnail(); ?>
@@ -78,16 +77,24 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
+
 		<?php clashvibes_entry_footer(); ?>
+
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+
+</article>
+
+<!-- #post-<?php the_ID(); ?> -->
 
 <?php endwhile; ?>
+
 <?php else : ?>
 
 	<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
 	<?php endif; ?>
 
 </section><!-- end of right panel -->
+
 </div>
 <?php get_footer(); ?>

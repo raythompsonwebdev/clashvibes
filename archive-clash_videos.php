@@ -58,10 +58,9 @@
 
 					<figure class="thumbvid">
 						<?php the_post_thumbnail(); ?>
+					<figcaption>
 
-						<figcaption>
-
-							<span class="Morebutton"><a href="<?php echo esc_url( get_permalink() ); ?>" ><?php esc_html_e( 'View', 'clashvibes' ); ?></a></span>
+							<a class="Morebutton" href="<?php echo esc_url( get_permalink() ); ?>" ><?php esc_html_e( 'View', 'clashvibes' ); ?></a>
 
 
 						</figcaption>
@@ -70,44 +69,38 @@
 
 				</article>
 
-									<?php
-				endwhile;
-else :
-	?>
-				<article class="new_released_box">
+<?php	endwhile; else :	?>
 
-<figure class="thumb">
-	
+						<article class="new_released_box">
 
-	<figcaption>
-
-		<p><?php esc_html_e( 'Sorry! No Video clashes to display.', 'clashvibes' ); ?></p>
-		
+							<figure class="thumb">
 
 
-	</figcaption>
+								<figcaption>
 
-</figure>
-
-</article>
-				<?php
-				endif;
-wp_reset_postdata();
-?>
-
-				<div class="clearfix"></div>
-		</section>
-		<!--End of news release section-->
-
-		<div class="clearfix"></div>
-
-	<!-- end of right panel -->
+									<p><?php esc_html_e( 'Sorry! No Video clashes to display.', 'clashvibes' ); ?></p>
 
 
+								</figcaption>
 
-	</section>
+							</figure>
+
+						</article>
+<?php	endif; ?>
+
+<?php wp_reset_postdata(); ?>
+
+<div class="clearfix"></div>
+
+</section>
+<!--End of news release section-->
+
+<div class="clearfix"></div>
+
+<!-- end of right panel -->
+
+</section>
 </div>
 
 
-
-	<?php get_footer(); ?>
+<?php get_footer(); ?>

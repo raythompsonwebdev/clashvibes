@@ -25,13 +25,26 @@ get_header(); ?>
 		
 	<div class="results">
 
-		<article class="events_box"></article>
-		
+            <article class="events_box">
+                <h1><?php echo the_title(); ?></h1>
+                
+                <figure class="events">
+                    <img src="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php esc_attr_e( 'sliderimage', 'raythompsonwebdev-com' ); ?>">
+                    <figcaption class="event-text">
+                        <p>lorem  </p>
+                    </figcaption> 
+                    
+                </figure>
+         
+               <input type="submit" value="Find Event" name="event" id="event-submit-btn" />
+            </article>
+ 	
 		
 	</div>
 
-	
 
 	</section><!-- end of right panel -->
+
+</div>
 	
-	<?php get_footer(); ?>
+<?php get_footer(); ?>

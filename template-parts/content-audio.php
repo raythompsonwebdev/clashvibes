@@ -33,92 +33,16 @@
 		clashvibes_posted_by();
 		?>
 </div><!-- .entry-meta -->
-		<?php
-	endif;
-	?>
+<?php endif; ?>
 		 
-
 </header>
+		
+<?php clashvibes_post_thumbnail();  ?>
+
+<?php echo do_shortcode('[customplayer]');?>
 
 
-		<?php clashvibes_post_thumbnail(); ?>
-  
-
-<div class="audioExcerpt">
-
-<!--content-->
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading <span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-
-<!--audio player and audio controls-->
-<audio id="result_player" >
-		<?php
-		global $post;
-
-		$meta = get_post_meta( $post->ID, 'clash-url', true );
-
-		// $meta = get_post_meta(get_the_ID(), 'clash-url', true);
-		?>
-<?php $urlmp = site_url( '/wp-content/uploads/sites/2/2018/04/', 'https' ); ?>
-
-<source src="<?php echo esc_url( $urlmp ); ?><?php echo esc_html( $meta ); ?>.mp3" type='audio/mp3'  />
-
-<source src="<?php $urlogg = site_url( '/wp-content/uploads/sites/2/2018/04/', 'https' );
-		echo esc_url( $urlogg ); ?><?php echo esc_html( $meta ); ?>.ogg" type='audio/ogg' />
-
-<source src="<?php	$urlma = site_url( '/wp-content/uploads/sites/2/2018/04/', 'https' );
-		echo esc_url( $urlma );	?><?php echo esc_html( $meta ); ?>.m4a" type='audio/mp4' />
-
-
-<p><?php esc_html_e( 'Your browser does not support HTML5 audio.', 'clashvibes' ); ?></p>
-</audio>
-<br/>
-<div id="audio_controls">
-
-<button id="play_toggle" class="player-button"><?php esc_html_e( 'PLAY', 'clashvibes' ); ?></i></button>
-
-<div id="progress">
-<span id="load_progress"></span>
-<span id="play_progress"></span>
-</div>
-
-<div id="time">
-<span id="current_time">00:00</span>  
-<span id="duration">00:00</span>
-</div>
 <div class="clearfix"></div>
-<label id="volume_bar" for="volume"><?php esc_html_e( 'Volume', 'clashvibes' ); ?></label>
-<input type="range" id="volume" title="volume"min="0" max="1" step="0.1" value="1">
-<div id="video_seek">
-<label for="seek"><?php esc_html_e( 'Seek', 'clashvibes' ); ?></label>
-<input type="range" id="seek" title="seek" min="0" value="0" max="0">
-</div>
-
-
-</div>
-<div class="clearfix"></div>
-
 
 
 </div>
@@ -126,13 +50,45 @@
 <br/>
 
 <footer class="speaker-meta">
-		<?php the_meta(); ?>
-</footer>
 
+	<ul class="post-meta">
+		<li>
+		
+			<span class="post-meta-key">
+			<?php $SoundName = get_post_meta( get_the_ID(),'sound_system_name', true); ?>
+			<?php esc_html_e( 'Sound System Name', 'clashvibes' ); ?>
+			</span>
+			<p><?php echo esc_html($SoundName); ?> </p>
+		</li>
+		<li>
+			<span class="post-meta-key">
+			<?php $SoundYear = get_post_meta( get_the_ID(),'sound_clash_year', true); ?>
+			<?php esc_html_e( 'Sound Clash Year', 'clashvibes' ); ?>
+			</span>
+			<p><?php echo esc_html($SoundYear); ?>  </p>
+		</li>
+		<li>
+			<span class="post-meta-key">
+			<?php $SoundLocation = get_post_meta( get_the_ID(),'sound_clash_location', true); ?>
+			<?php esc_html_e( 'Sound Clash Location', 'clashvibes' ); ?>
+			</span>
+			<p><?php echo esc_html($SoundLocation); ?>  </p>
+		</li>
+		<li>
+			<span class="post-meta-key">
+			<?php $SoundUrl = get_post_meta( get_the_ID(),'sound_system_url', true); ?>
+			<?php esc_html_e( 'URL', 'clashvibes' ); ?>
+			</span>
+			<p><?php echo esc_html($SoundUrl); ?>  </p>
+		</li>
+	</ul>
+
+</footer>
 
 </article>
 		<?php
 endwhile;
+
 else :
 	?>
 	<?php get_template_part( 'template-parts/content', 'none' ); ?>

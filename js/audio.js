@@ -10,14 +10,7 @@ jQuery(document).ready(function($) {
   var audio = document.getElementById("result_player");
  
   // Play/Pause ============================//
-  $("#play_button").bind("click", function(){
-    $(this).audio.play();
-  });
-
-  $("#pause_button").bind("click", function(){
-    $(this).audio.pause();
-  });
-
+ 
   $("#play_toggle").on("click", function(){
     if (audio.paused) {
       audio.play();
@@ -26,6 +19,18 @@ jQuery(document).ready(function($) {
       audio.pause();
       $(this).html('<i class="fa fa-play" aria-hidden="true" title="Play"></i>');
     }
+  });
+
+  $("#rewind").bind("click", function(){
+    $(this).html('<i class="fa fa-backward" aria-hidden="true" title="Backward"></i>');
+    audio.currentTime -= 10.0;
+
+  });
+
+  $("#forward").bind("click", function(){
+    $(this).html('<i class="fa fa-forward" aria-hidden="true" title="Forward"></i>');
+    audio.currentTime += 10.0;
+    
   });
 
   // Play Progress ============================//
@@ -84,14 +89,14 @@ jQuery(document).ready(function($) {
     var seek = document.getElementById('seek'),
     playback = document.getElementById('playback');
 
-    //update
-
-
+  //update
   function updateseekmax(event){
     if( event.target.duration ){
       $(seek).max = event.target.duration;
     }
   }
+
+  
   function updateplaybackmax(event){
     if( event.target.duration ){
       $(playback).max = event.target.duration;
@@ -99,17 +104,16 @@ jQuery(document).ready(function($) {
   }
   
   $(audio).bind('durationchange', updateseekmax);
-
-
   $(audio).bind('durationchange', updateplaybackmax);
 
-  //seeker
+//seeker
 function seekhandler(event){
   $(audio).currentTime = event.target.value;
-  $(playback).value = event.target.value
+  $(playback).value = event.target.value;
   }
 
   $(seek).bind('change', seekhandler);
+
 
 });//end of jquery
 

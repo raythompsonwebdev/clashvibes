@@ -24,16 +24,17 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 	
 		<?php get_sidebar( 'audio' ); ?>
 
-<section id="clashvibes_right_column">
+	<section id="clashvibes_right_column">
 
-<?php $archivetitle = apply_filters( 'the_title', $term->name ); ?>
+		<?php $archivetitle = apply_filters( 'the_title', $term->name ); ?>
 
-<h1 class="archive-title">Audio Category: <?php esc_html( $archivetitle ); ?> </h1>
+		<h1 class="archive-title">Audio Category: <?php echo esc_html($archivetitle); ?> </h1>
 
-	<?php get_template_part( 'template-parts/content', 'custom' ); ?>
+		<?php get_template_part( 'template-parts/content', 'custom' ); ?>
 
 
-</section><!-- end of right panel -->
+	</section><!-- end of right panel -->
 
 </div>
+
 <?php get_footer(); ?>

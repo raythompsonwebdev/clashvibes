@@ -20,9 +20,11 @@
 
 
 <div id="clashvibes_content">
+
 <?php get_sidebar( 'image' ); ?>
 
 <section id="clashvibes_right_column">
+
 <h1><?php the_title(); ?></h1>
 
 <?php
@@ -70,14 +72,11 @@ if ( have_posts() ) :
 			$att_image = wp_get_attachment_image_src( $post->id, 'full' );
 			?>
 
-<figure class="attachment
-			<?php
-			if ( has_excerpt() ) {
-				echo ' alignnone wp-caption ';
-			}
-			?>
-"><?php clashvibes_attached_image(); ?>
-			<?php if ( has_excerpt() ) : ?>
+<figure class="attachment<?php	if ( has_excerpt() ) {echo ' alignnone wp-caption '; }?>">
+		
+		<?php clashvibes_attached_image(); ?>
+		<?php if ( has_excerpt() ) : ?>
+
 		<figcaption class="wp-caption-text">
 				<?php
 				echo esc_html(
@@ -85,7 +84,7 @@ if ( have_posts() ) :
 						sprintf(
 							wp_kses(
 								/* translators: %s: Name of current post. Only visible to screen readers */
-								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ), array(
+								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ), array(
 									'span' => array(
 										'class' => array(),
 									),
@@ -96,20 +95,23 @@ if ( have_posts() ) :
 				);
 				?>
 		</figcaption><!-- .entry-caption -->
+
+
 <?php endif; ?>
 </figure>
 
 	<div class="entry-attachment">
-			<?php
-				the_content();
-			?>
+
+			<?php	the_content();	?>
 
 	</div>
 		
 
 	<br/>
 	<footer class="entry-footer">
+
 			<?php clashvibes_attachment_nav(); ?>
+
 	</footer>
 
 
@@ -138,11 +140,9 @@ if ( have_posts() ) :
 	</div>
 </section>
 
-</section><!-- end of right panel -->
+</section>
 
 </div>
-
-
 
 
 <?php get_footer(); ?>

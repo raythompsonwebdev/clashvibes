@@ -16,28 +16,23 @@
 get_header(); ?>
 
 <!DOCTYPE html >
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) | !(IE 8)  ]><!-->
+
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
 <?php if ( is_search() ) { ?>
 	   <meta name="robots" content="noindex, nofollow" /> 
 <?php } ?>
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="msvalidate.01" content="4CB214A27E0A9871DDFEF492EF5A6AD2" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+<meta charset="<?php bloginfo( 'charset' ); ?>" >
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<link rel="profile" href="http://gmpg.org/xfn/11" >
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" >
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<!--<link href="https://opensource.keycdn.com/fontawesome/4.6.1/font-awesome.min.css">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">-->
 
 
 <?php wp_head(); ?>
@@ -46,7 +41,16 @@ get_header(); ?>
 			
 
  <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
+ <?php if ( ! is_front_page() ) : ?>
 
+<button id="toggle-side" class="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
+
+<?php else : ?>
+
+<button id="side-bar-btn" class="sidebar-toggle" style="display:none" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
+
+
+	<?php endif; ?>
 	
 <div id="container">
 
@@ -55,7 +59,10 @@ get_header(); ?>
 		<?php $site_title = get_bloginfo( 'name' ); ?>
 		<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<div class="screen-reader-text">
-				<?php printf( esc_html_e( 'Go to the home page of %1$s', 'clashvibes' ), $site_title ); ?>
+				
+				<?php 
+/* translators: %1$s:, CMSname: WordPress. */
+printf( esc_html_e( 'Go to the home page of %1$s', 'clashvibes' ), esc_html($site_title ) ); ?>
 			</div>
 			<?php
 			if ( has_custom_logo() ) {
@@ -63,7 +70,7 @@ get_header(); ?>
 			} else {
 				?>
 				<div class="site-firstletter" aria-hidden="true">
-					<?php echo substr( $site_title, 0, 1 ); ?>
+					<?php echo esc_html( substr( $site_title, 0, 1 ) ); ?>
 				</div>
 			<?php } ?>
 		</a>
@@ -77,7 +84,7 @@ get_header(); ?>
 			if ( esc_html( $description ) || is_customize_preview() ) :
 				?>
 
-				<h2 class="site-description"><?php echo $description; ?></h2>
+				<h2 class="site-description"><?php echo esc_html($description); ?></h2>
 	
 		<?php endif; ?>
 		</section>
@@ -97,13 +104,5 @@ get_header(); ?>
 			?>
 		</ul>
 </nav>
-<?php if ( ! is_front_page() ) : ?>
 
-	<button id="side-bar-btn" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
 
-	<?php else : ?>
-
-	<button id="side-bar-btn" tyle="display:none" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
-
-	
-		<?php endif; ?>

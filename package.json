@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Sound Clash Theme",
   "main": "index.php",
-  "scripts": {
-    
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raythompsonwebdev/clashvibes.git"
@@ -25,15 +23,16 @@
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
     "style-loader": "^0.19.0",
-    "webpack": "^3.8.1"
+    "webpack": "^4.20.2"
   },
   "dependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-concat": "^1.0.1",
+    "grunt": "^1.0.3",
     "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.1.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "grunt-contrib-watch": "^1.1.0",
+    "soundcloud": "^3.3.0"
   }
 }

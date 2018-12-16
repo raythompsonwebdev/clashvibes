@@ -60,7 +60,7 @@
 
 						<figcaption>
 
-							<span class="Morebutton"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php esc_html_e( 'Listen', 'clashvibes' ); ?></a></span>
+							<a class="Morebutton" href="<?php echo esc_url( get_permalink() ); ?>" alt=""><?php esc_html_e( 'Listen', 'clashvibes' ); ?></a>
 
 
 						</figcaption>

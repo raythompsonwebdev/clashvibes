@@ -26,5 +26,5 @@ get_header(); ?>
 	<?php the_content(); ?>
 	
 </section><!-- end of right panel -->
-
+</div>
 <?php get_footer(); ?>

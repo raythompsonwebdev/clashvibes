@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  * 
  * Tag page | core/tag.php.
  *
@@ -19,12 +19,12 @@ get_header(); ?>
 
 <div id="clashvibes_content">
   	
-<section id="clashvibes_right_column">
+    <section id="clashvibes_right_column">
 
-<?php get_template_part('template-parts/content', get_post_format()); ?>
+        <?php get_template_part('template-parts/content', get_post_format()); ?>
 
-</section><!-- end of right panel -->
-
+    </section><!-- end of right panel -->
+</div>
 <?php get_footer(); ?>
 
 

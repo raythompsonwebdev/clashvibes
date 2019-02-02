@@ -25,7 +25,7 @@
 		the_title( '<h2 class="entry-title"><span> Sound Clash Audio:</span> <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 	endif;
 
-	if ( 'clash_audio' === get_post_type() ) :
+	if ( 'clash-audio' === get_post_type() ) :
 		?>
 <div class="entry-meta">
 		<?php

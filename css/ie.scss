@@ -1,15 +1,12 @@
 
-
-
 @import "partials/base";
 @import "partials/variables";
-@import "partials/normalize";
 @import "partials/mixins";
 
 
 @media only screen and (max-width: 1920px) {
 
-    /********** navigation toggle **********/
+    
     button.menu-toggle{
         display:none;
     }
@@ -52,14 +49,13 @@
             background-color:$color;
             
             .site-logo {
-                position: relative;
+                display:block;
+                float:left;
                 top: 0;
                 left: 0;
                 width: 3.4em;
                 height: 3.5em;
-                -webkit-flex: 0 0 auto;
-                -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
+                
                 display: inline-block;
                 a {
                     position: absolute;
@@ -98,7 +94,7 @@
                             top: 5px;
                             width: auto;
                             z-index: 100000;
-                            /* Above WP toolbar. */
+                           
                         }
                         
                     }
@@ -152,6 +148,7 @@
                     padding: 0;
                     clear: left;
                     text-shadow:0.5px 0.5px 0.5px $color4;
+                    behavior :url(PIE.htc);
                     margin: 0;
 
                 }
@@ -162,9 +159,7 @@
                 width: 20%;
                 display: block;
                 height: 40px;
-                -webkit-flex: 0 0 auto;
-                -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
+                
                 a {
                     height: 100%;
                     display: inline-block;
@@ -196,27 +191,14 @@
                 margin: 0;
                 padding: 0;
                 list-style: none;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-flex-flow: row wrap;
-                -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
-                -webkit-align-items: flex-start;
-                -ms-flex-align: start;
-                align-items: flex-start;
-                -webkit-justify-content: flex-start;
-                -ms-flex-pack: start;
-                justify-content:flex-start;
+                
                 li {
                     display: inline-block;
                     float: left;
                     width: 13%;
                     height: 40px;
                     margin-right: 0.5em;
-                    -webkit-flex: 0 0 auto;
-                    -ms-flex: 0 0 auto;
-                    flex: 0 0 auto;
+                    
                     a {
                         width: 100%;
                         background-color: $color4;
@@ -261,7 +243,7 @@
             margin: auto;
             #clashvibes_right_column_front {
                 //float: none;
-                //background-color: $color2;
+                
                 min-height: 800px;
                 margin: 0 0 0.5em 0;
                 padding: 0px;
@@ -372,24 +354,10 @@
                     padding: 0;
                     width: 100%;
                     margin: 0 0 0.5em 0; 
-                    display: -webkit-flex;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-flex-flow: row wrap;
-                    -ms-flex-flow: row wrap;
-                    flex-flow: row wrap;
-                    -webkit-justify-content: flex-start;
-                    -ms-flex-pack: start;
-                    justify-content: flex-start;
-                    -webkit-align-items: flex-start;
-                    -ms-flex-align: start;
-                    align-items: flex-start;
-                    
+                                        
                     
                     article.events_box{
-                        -webkit-flex: 0 0 auto;
-                        -ms-flex: 0 0 auto;
-                        flex: 0 0 auto;
+                        
                         float: left;
                         width: 19%; //19%;
                         min-height: 330px;
@@ -474,22 +442,12 @@
                     padding: 0;
                     width: 100%;
                     margin: 0 0 0.5em 0; 
-                    display: -webkit-flex;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-flex-flow: row wrap;
-                    -ms-flex-flow: row wrap;
-                    flex-flow: row wrap;
-                    -webkit-align-items: stretch;
-                    -ms-flex-align: stretch;
-                    align-items: stretch;
+                    
                    
                     .new_released_box{
-                        -webkit-flex: 0 0 auto;
-                        -ms-flex: 0 0 auto;
-                        flex: 0 0 auto;
+                        
                         float: left;
-                        width: 19.425%; //19%;
+                        width: 19.425%; 
                         min-height: 300px;
                         padding: 0;
                         margin: 0.2em;
@@ -623,17 +581,15 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 height:auto;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
+                
                 ul#topdownload_section {
                     margin: 0;
-                    width: 48.79%;
+                    width: 48%;
                     padding: 0.5em;
                     background-color: $color;
                     color: $color4;
-                    
-                    display: inline-block;
+                    float:left;
+                    display: block;
 
                     h1 {
                         font-size: 1.5em;
@@ -646,18 +602,7 @@
                     }
 
                     li.topdownload_box {
-                        display: -webkit-flex;
-                        display: -ms-flexbox;
-                        display: flex;
-                        -webkit-flex-flow: row ;
-                        -ms-flex-flow: row ;
-                        flex-flow: row ;
-                        -webkit-justify-content: space-between;
-                        -ms-flex-pack: justify;
-                        justify-content: space-between;
-                        -webkit-align-items: flex-start;
-                        -ms-flex-align: start;
-                        align-items: flex-start;
+                        
                         width: 100%;
                         margin: 0 0 0.25em 0;
                         color: $color4;
@@ -670,9 +615,7 @@
                         background-color: $color2;
                         span.image_thumb {
                             float: left;
-                            -webkit-flex: 0 0 auto;
-                            -ms-flex: 0 0 auto;
-                            flex: 0 0 auto;
+                            
                             background-color: $color;
                             width: 6%;
                             color: $color4;
@@ -691,9 +634,7 @@
                             }
                         }
                         span.title_singer {
-                            -webkit-flex: 0 0 auto;
-                            -ms-flex: 0 0 auto;
-                            flex: 0 0 auto;
+                           
                             text-indent: 0.5em;
                             width: 79%;
                             color: $color4;
@@ -706,9 +647,7 @@
                             background-color: $color2;
                         }
                         span {
-                            -webkit-flex: 0 0 auto;
-                            -ms-flex: 0 0 auto;
-                            flex: 0 0 auto;
+                            
                             background-color: $color;
                             font-weight: normal;
                             height: 45px;
@@ -729,6 +668,7 @@
                                 font-weight: normal;
                                 @include originTran( 50% 50%);
                                 @include Transition(all 0.2s linear 0s);
+                                behavior :url(PIE.htc);
                                 &:hover {
                                     background-color: $color1;
                                     color: $color4;
@@ -1505,12 +1445,7 @@
                         border: $color11 solid 1px;
                         padding:0.5em;
                         background-color:rgb(12, 14, 12);
-                        display: -webkit-flex;
-                        display: -ms-flexbox;
-                        display: flex;
-                        -webkit-flex-flow: row wrap;
-                        -ms-flex-flow: row wrap;
-                        flex-flow: row wrap;
+                        
 
 
                         #btns_box{
@@ -1518,9 +1453,7 @@
                             float: left;
                             height:60px;
                             width: 35%;
-                            -webkit-flex: 0 0 auto;
-                            -ms-flex: 0 0 auto;
-                            flex: 0 0 auto;
+                            
 
                             button.player-button {
                                 width: 33.3%;
@@ -1566,9 +1499,7 @@
 
                         div#progress {
                             width: 64%;
-                            -webkit-flex: 0 0 auto;
-                            -ms-flex: 0 0 auto;
-                            flex: 0 0 auto;
+                            
                             display: inline-block;
                             margin:0 0.2em;
                             background-color: $color;
@@ -1591,9 +1522,7 @@
 
                         div#time {
                             width: 48%;
-                            -webkit-flex: 0 0 auto;
-                            -ms-flex: 0 0 auto;
-                            flex: 0 0 auto;
+                            
                             display: inline-block;
                             clear:both;
                             color: $color4;
@@ -1631,9 +1560,7 @@
                             margin-top:0.5em;
                             display: block;
                             width:100%;
-                            -webkit-flex: 0 0 auto;
-                            -ms-flex: 0 0 auto;
-                            flex: 0 0 auto;
+                            
                             label{
                                 width:20%;
                                 display:block;
@@ -1659,9 +1586,7 @@
                             margin:0.5em 0 0 0.5em;
                             display: inline-block;
                             width: 50%;
-                            -webkit-flex: 0 0 auto;
-                            -ms-flex: 0 0 auto;
-                            flex: 0 0 auto;
+                            
                             label{
                                 width:20%;
                                 display:block;
@@ -1711,7 +1636,7 @@
                         height: 100%;
                         letter-spacing: 0.05em;
                         width: 100%;
-                        
+                        clear:both;
                         li {
                             list-style: none;
                             line-height: 39px;
@@ -1723,6 +1648,7 @@
 
                             span.post-meta-key {
                                 width: 20%;
+                                float:left;
                                 display: inline-block;
                                 height: 40px;
                                 line-height: 40px;
@@ -1741,7 +1667,6 @@
                             }
 
                         }
-                     
                     }
                 }
             }
@@ -2047,7 +1972,7 @@
 
 @media only screen and (max-width: 1440px) {
 
-    /********** page container **********/
+    
     #container {
         width: 92%;
 
@@ -2209,7 +2134,7 @@
                     padding: 0;
                     
                     .new_released_box{
-                        width: 19.425%; //19%;
+                        width: 19.425%; 
                         min-height: 280px;
 
                         h1 {
@@ -2270,7 +2195,7 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 ul#topdownload_section {
-                    width: 48.79%;
+                    
                     padding: 0.5em;
 
                     h1 {
@@ -3021,9 +2946,10 @@
 
 }
 
+
 @media only screen and (max-width: 1280px) {
 
-    /********** page container **********/
+   
     #container {
         width: 94%;
 
@@ -3180,7 +3106,7 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 ul#topdownload_section {
-                    width: 48.79%;
+                    
 
                     h1 {
                         font-size: 1.1em;
@@ -3912,7 +3838,7 @@
 
 @media only screen and (max-width: 1024px) {
 
-    /********** page container **********/
+    
     #container {
         width: 96%;;
 
@@ -4071,7 +3997,7 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 ul#topdownload_section {
-                    width: 48.79%;
+                    
                     padding: 0.25em;
 
                     h1 {
@@ -4801,7 +4727,7 @@
 
 @media only screen and (max-width: 800px) {
 
-    /********** page container **********/
+    
     #container {
         width: 98%;
 
@@ -4956,7 +4882,7 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 ul#topdownload_section {
-                    width: 48.79%;
+                    width: 47%;
 
                     h1 {
                         font-size: 1em;
@@ -6410,7 +6336,7 @@
             width: 100%;
             margin: auto;
             #clashvibes_right_column_front {
-                //float: none;
+                
                 min-height: 720px;
                 width: 100%;
                 h1 {
@@ -6469,14 +6395,12 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 height:auto;
-                -webkit-flex-flow: row wrap;
-                -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
+                
 
                 ul#topdownload_section {
 
                     width: 95.79%;
-                    padding: 0.5em;
+                    padding: 0.2em;
                     display: block;
                     margin: 0.25em;
 
@@ -6495,7 +6419,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    @include box-sizing($type: border-box);
+                                    
                                     vertical-align: unset;
 
                                 }
@@ -6603,24 +6527,13 @@
 @media only screen and (max-width: 640px) {
 
     button.menu-toggle{
-        display: block;
-        position: fixed;
+        
         top: 0.25em;
         left: 86.5%;
-        z-index: 100;
-        line-height: 45px;
-        height: 45px;
-        width: 60px;
-        background-color:$color4;
-        color:$color;
-        border:none;
-        outline:none;
-        text-align:center;
-        @include Transition(all 0.2s linear 0s);
+        
         
         &:hover{
-            background-color:$color7;
-            color:$color4;
+           
             text-align:center;
         }
 
@@ -6628,23 +6541,14 @@
 
 
     button.sidebar-toggle{
-        display: block;
-        position: fixed;
+      
         top: 0.25em;
         left: 69%;
-        line-height: 45px;
-        height: 45px;
+        
         width: 15%;
-        z-index:100;
-        background-color:$color4;
-        color:$color;
-        border:none;
-        outline:none;
-        text-align:center;
-        @include Transition(all 0.2s linear 0s);
+       
         &:hover{
-            background-color:$color7;
-            color:$color4;
+            
             text-align:center;
         }
 
@@ -7384,9 +7288,7 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 height:auto;
-                -webkit-flex-flow: row wrap;
-                -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
+                
 
                 ul#topdownload_section {
 
@@ -7410,7 +7312,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    @include box-sizing($type: border-box);
+                                    
                                     vertical-align: unset;
 
                                 }
@@ -7520,8 +7422,7 @@
     button.menu-toggle{
 
         left: 85.5%;
-        &:hover{
-        }
+        
     }
 
     button.sidebar-toggle{
@@ -8227,15 +8128,9 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 height:auto;
-                -webkit-flex-flow: row wrap;
-                -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
+                
 
                 ul#topdownload_section {
-
-                    width: 95.79%;
-                    padding: 0.5em;
-                    display: block;
                     margin: 0.15em;
 
                     h1 {
@@ -8252,7 +8147,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    @include box-sizing($type: border-box);
+                                    
                                     vertical-align: unset;
                                 }
                             }
@@ -9147,15 +9042,11 @@
             #topdownload_section_ctner{
                 padding:0;
                 height:auto;
-                -webkit-flex-flow: row wrap;
-                -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
+                
 
                 ul#topdownload_section {
 
-                    width: 95.79%;
-                    padding: 0.25em;
-                    display: block;
+                    
                     margin: 0.25em;
 
                     h1 {
@@ -9172,7 +9063,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    @include box-sizing($type: border-box);
+                                    
                                     vertical-align: unset;
                                 }
                             }
@@ -10060,15 +9951,11 @@
             #topdownload_section_ctner{
                 padding:0;
                 height:auto;
-                -webkit-flex-flow: row wrap;
-                -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
+                
 
                 ul#topdownload_section {
 
-                    width: 95.79%;
-                    padding: 0.25em;
-                    display: block;
+                   
                     margin: 0.25em;
 
                     h1 {
@@ -10085,7 +9972,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    @include box-sizing($type: border-box);
+                                    
                                     vertical-align: unset;
                                 }
                             }
@@ -10992,16 +10879,14 @@
             #topdownload_section_ctner{
                 padding:0;
                 height:auto;
-                -webkit-flex-flow: row wrap;
-                -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
+                
 
                 ul#topdownload_section {
 
-                    width: 95.79%;
+                  
                     padding: 0.2em;
-                    display: block;
-                    margin: 0.25em;
+                   
+                    
 
                     h1 {
                         font-size: 0.9em;
@@ -11017,7 +10902,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    @include box-sizing($type: border-box);
+                                    
                                     vertical-align: unset;
                                 }
                             }
@@ -11898,16 +11783,11 @@
             #topdownload_section_ctner{
                 padding:0;
                 height:auto;
-                -webkit-flex-flow: row wrap;
-                -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
+                
 
                 ul#topdownload_section {
-
-                    width: 95.79%;
-                    padding: 0.2em;
-                    display: block;
-                    margin: 0.25em;
+                   
+                    margin: 0.2em;
 
                     h1 {
                         font-size: 0.9em;
@@ -11923,7 +11803,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    @include box-sizing($type: border-box);
+                                    
                                     vertical-align: unset;
                                 }
                             }

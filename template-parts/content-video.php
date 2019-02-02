@@ -27,7 +27,7 @@ if ( have_posts() ) :
 		the_title( '<h2 class="entry-title"><span> Sound Clash Video:</span><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 	endif;
 
-	if ( 'clash_videos' === get_post_type() ) :
+	if ( 'clash-videos' === get_post_type() ) :
 		?>
 	<div class="entry-meta">
 			<?php

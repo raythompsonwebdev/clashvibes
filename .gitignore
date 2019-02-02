@@ -59,15 +59,9 @@ nbproject/
 fonts/
 phpcs.xml.dist
 
-js/easySlider1.5.js
-js/jplayer-audio.txt
-js/jplayer-audio.js
-js/nivo-slider.pack.js
-js/dist/
-
-css/style.css.map
-css/style.scss.map
-css/style.css
+js/old-browser-scripts/
+js/sparefiles/
+js/api.js
 css/.sass-cache/
 vendor/
 vendor/bin/
@@ -75,5 +69,5 @@ docs/
 ie.css.map
 style.css.map
 .vscode/
-js/api.js
+
 webpack.config.js

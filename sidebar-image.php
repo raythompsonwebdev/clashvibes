@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * *
  * Sidebar Image | core/sidebar-audio.php.
@@ -18,25 +18,25 @@
 
 <aside id="clashvibes_left_column">
 
- <h1><?php esc_html_e( 'Images', 'clashvibes' ); ?></h1>
+	<h1>
+		<?php esc_html_e( 'Images', 'clashvibes' ); ?>
+	</h1>
 
-<section id="clashvibes_login">
-	<?php get_search_form(); ?>
-</section>
+	<section id="clashvibes_login">
+		<?php get_search_form(); ?>
+	</section>
 
-<article class="blog_box">
-	
-	<?php
-	if ( ! function_exists( 'dynamic_sidebar' ) ||
-	! dynamic_sidebar( 'Primary Sidebar' ) ) :
+	<article class="blog_box">
+
+		<?php
+			if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Primary Sidebar' ) ) :
 		?>
-				   
-		
-	
-	<?php endif; ?>
 
-</article>
-	  
-											
+
+
+		<?php endif; ?>
+
+	</article>
+
+
 </aside>
-

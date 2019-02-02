@@ -32,22 +32,24 @@
 
 
 			<?php
-			$original_query = $wp_query;
 
-			$wp_query = null;
 
-			$args     = array(
+				$original_query = $the_query;
 
-				'post_type'  => 'clash_videos',
+				$the_query = null;
+
+			$args      = array(
+
+				'post_type'  => 'clash-videos',
 				'post_count' => '5',
 			);
-			$wp_query = new WP_Query( $args );
+			$the_query = new WP_Query( $args );
 			?>
 
 				<?php
-				if ( $wp_query->have_posts() ) :
-					while ( $wp_query->have_posts() ) :
-						$wp_query->the_post();
+				if ( $the_query->have_posts() ) :
+					while ( $the_query->have_posts() ) :
+						$the_query->the_post();
 						?>
 
 				<article class="new_released_box">
@@ -69,7 +71,7 @@
 
 				</article>
 
-<?php	endwhile; else :	?>
+<?php	endwhile; else : ?>
 
 						<article class="new_released_box">
 

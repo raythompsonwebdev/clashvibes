@@ -55,9 +55,7 @@
                 left: 0;
                 width: 3.4em;
                 height: 3.5em;
-                
-                display: inline-block;
-                a {
+                 a {
                     position: absolute;
                     z-index: 1;
                     top: 0;
@@ -135,6 +133,7 @@
                     text-indent: 0.1em;
                     text-shadow:1px 1px 1px $color4;
                     display: block;
+                    behavior :url(PIE.htc);
                 }
                 h2.site-description{
                     text-indent: 0.5em;
@@ -1991,6 +1990,43 @@
         /********** header *****/
         header {
             height: 70px;
+            .site-logo {
+                display:block;
+                
+                a {
+                    
+                    width: 98%;
+                    ;
+                    /* Text meant only for screen readers. */
+                    div.screen-reader-text {
+                        
+                        overflow: hidden;
+                        &:focus {
+                            
+                            top: 5px;
+                            
+                           
+                        }
+                        
+                    }
+                    div.site-firstletter {
+                        
+                        height:100%;
+                    }
+                    
+                }
+                
+            }
+            .site-logo a:focus,
+            .site-logo a:hover {
+                outline: 2px solid white;
+            }
+            
+            .site-logo a:focus .site-firstletter,
+            .site-logo a:hover .site-firstletter {
+                
+                text-align: center;
+            }
 
             #clashvibes_title {
                 width: 69%;
@@ -2968,6 +3004,43 @@
         /********** header *****/
         header {
             height: 70px;
+            .site-logo {
+                display:block;
+                
+                a {
+                    
+                    width: 98%;
+                    ;
+                    /* Text meant only for screen readers. */
+                    div.screen-reader-text {
+                        
+                        overflow: hidden;
+                        &:focus {
+                            
+                            top: 5px;
+                            
+                           
+                        }
+                        
+                    }
+                    div.site-firstletter {
+                        
+                        height:100%;
+                    }
+                    
+                }
+                
+            }
+            .site-logo a:focus,
+            .site-logo a:hover {
+                outline: 2px solid white;
+            }
+            
+            .site-logo a:focus .site-firstletter,
+            .site-logo a:hover .site-firstletter {
+                
+                text-align: center;
+            }
 
             #clashvibes_title {
                 width: 68%;
@@ -3858,6 +3931,44 @@
         header {
             height: 65px;
 
+            .site-logo {
+                display:block;
+                
+                a {
+                    
+                    width: 98%;
+                    ;
+                    /* Text meant only for screen readers. */
+                    div.screen-reader-text {
+                        
+                        overflow: hidden;
+                        &:focus {
+                            
+                            top: 5px;
+                            
+                           
+                        }
+                        
+                    }
+                    div.site-firstletter {
+                        
+                        height:100%;
+                    }
+                    
+                }
+                
+            }
+            .site-logo a:focus,
+            .site-logo a:hover {
+                outline: 2px solid white;
+            }
+            
+            .site-logo a:focus .site-firstletter,
+            .site-logo a:hover .site-firstletter {
+                
+                text-align: center;
+            }
+
             #clashvibes_title {
                 width: 67%;
 
@@ -4746,6 +4857,34 @@
         /********** header *****/
         header {
             height: 65px;
+
+            .site-logo {
+                display:block;
+                
+                a {
+                    
+                    width: 98%;
+                    ;
+                    /* Text meant only for screen readers. */
+                    div.screen-reader-text {
+                        
+                        overflow: hidden;
+                        &:focus {
+                            
+                            top: 5px;
+                            
+                           
+                        }
+                        
+                    }
+                    div.site-firstletter {
+                        
+                        height:100%;
+                    }
+                    
+                }
+                
+            }
 
             #clashvibes_title {
                 width: 61%;
@@ -5688,9 +5827,36 @@
         }
 
 
-        /********** header **********/
+       
         header {
             height: 80px;
+            .site-logo {
+                display:block;
+                
+                a {
+                    
+                    width: 98%;
+                    ;
+                    /* Text meant only for screen readers. */
+                    div.screen-reader-text {
+                        
+                        overflow: hidden;
+                        &:focus {
+                            
+                            top: 5px;
+                            
+                           
+                        }
+                        
+                    }
+                    div.site-firstletter {
+                        
+                        height:100%;
+                    }
+                    
+                }
+                
+            }
             #clashvibes_title {
                 width: 54%;
 

@@ -22,7 +22,7 @@ get_header(); ?>
 
 		<section id="clashvibes_banner">
 			<!--2/2018/07-->
-			<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/sites/2/2018/07/sliderimage.jpg" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
+			<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sliderimage.jpg" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
 
 		</section>
 
@@ -36,7 +36,7 @@ get_header(); ?>
 
 
 			<?php
-			$original_query = $the_query;
+			
 
 			$the_query = null;
 

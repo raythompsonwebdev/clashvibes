@@ -1081,7 +1081,7 @@ a {
     padding: 0.5em 0;
   }
   #container #clashvibes_left_column section#clashvibes_login form.search-form label {
-    width: 90%;
+    width: 100%;
     display: block;
     font-size: 0.9em;
     margin: auto;
@@ -1093,10 +1093,11 @@ a {
     margin: 0;
     float: left;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="text"] {
-    width: 97%;
-    display: inline-block;
+  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="search"] {
+    width: 100%;
+    display: block;
     margin: 0;
+    height: 35px;
   }
   #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"] {
     width: 90%;
@@ -1413,9 +1414,8 @@ a {
     margin: 0;
     float: left;
   }
-  #container form.search-form label input[type="text"] {
-    width: 97%;
-    display: inline-block;
+  #container form.search-form label input[type="search"] {
+    display: block;
     margin: 0;
   }
   #container form.search-form input[type="submit"] {
@@ -2649,7 +2649,7 @@ a {
     display: inline-block;
     height: 40px;
     line-height: 40px;
-    text-indent: 1%;
+    text-indent: 0.5em;
     background-color: #253901;
     color: #ffffff;
   }
@@ -3176,8 +3176,8 @@ a {
   #container #clashvibes_left_column section#clashvibes_login form.search-form label span.screen-reader-text {
     line-height: 35px;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="text"] {
-    width: 97%;
+  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="search"] {
+    width: 100%;
   }
   #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"] {
     margin: 0.5em auto;
@@ -4395,8 +4395,8 @@ a {
   #container #clashvibes_left_column section#clashvibes_login form.search-form label span.screen-reader-text {
     line-height: 35px;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="text"] {
-    width: 97%;
+  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="search"] {
+    width: 100%;
   }
   #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"] {
     margin: 0.5em auto;
@@ -5598,7 +5598,7 @@ a {
   #container #clashvibes_left_column section#clashvibes_login form.search-form label span.screen-reader-text {
     line-height: 35px;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="submit"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="search"] {
     width: 97%;
   }
   #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"] {
@@ -6792,7 +6792,7 @@ a {
   #container #clashvibes_left_column section#clashvibes_login form.search-form label span.screen-reader-text {
     line-height: 35px;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="text"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="search"] {
     width: 97%;
   }
   #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"] {

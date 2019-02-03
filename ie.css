@@ -257,7 +257,6 @@ a {
     left: 0;
     width: 3.4em;
     height: 3.5em;
-    display: inline-block;
   }
   #container header .site-logo a {
     position: absolute;
@@ -331,6 +330,7 @@ a {
     text-indent: 0.1em;
     text-shadow: 1px 1px 1px #000000;
     display: block;
+    behavior: url(PIE.htc);
   }
   #container header #clashvibes_title h2.site-description {
     text-indent: 0.5em;
@@ -2803,6 +2803,30 @@ a {
   #container header {
     height: 70px;
   }
+  #container header .site-logo {
+    display: block;
+  }
+  #container header .site-logo a {
+    width: 98%;
+    /* Text meant only for screen readers. */
+  }
+  #container header .site-logo a div.screen-reader-text {
+    overflow: hidden;
+  }
+  #container header .site-logo a div.screen-reader-text:focus {
+    top: 5px;
+  }
+  #container header .site-logo a div.site-firstletter {
+    height: 100%;
+  }
+  #container header .site-logo a:focus,
+  #container header .site-logo a:hover {
+    outline: 2px solid white;
+  }
+  #container header .site-logo a:focus .site-firstletter,
+  #container header .site-logo a:hover .site-firstletter {
+    text-align: center;
+  }
   #container header #clashvibes_title {
     width: 69%;
   }
@@ -4090,6 +4114,30 @@ a {
   #container header {
     height: 70px;
   }
+  #container header .site-logo {
+    display: block;
+  }
+  #container header .site-logo a {
+    width: 98%;
+    /* Text meant only for screen readers. */
+  }
+  #container header .site-logo a div.screen-reader-text {
+    overflow: hidden;
+  }
+  #container header .site-logo a div.screen-reader-text:focus {
+    top: 5px;
+  }
+  #container header .site-logo a div.site-firstletter {
+    height: 100%;
+  }
+  #container header .site-logo a:focus,
+  #container header .site-logo a:hover {
+    outline: 2px solid white;
+  }
+  #container header .site-logo a:focus .site-firstletter,
+  #container header .site-logo a:hover .site-firstletter {
+    text-align: center;
+  }
   #container header #clashvibes_title {
     width: 68%;
   }
@@ -5281,6 +5329,30 @@ a {
   #container header {
     height: 65px;
   }
+  #container header .site-logo {
+    display: block;
+  }
+  #container header .site-logo a {
+    width: 98%;
+    /* Text meant only for screen readers. */
+  }
+  #container header .site-logo a div.screen-reader-text {
+    overflow: hidden;
+  }
+  #container header .site-logo a div.screen-reader-text:focus {
+    top: 5px;
+  }
+  #container header .site-logo a div.site-firstletter {
+    height: 100%;
+  }
+  #container header .site-logo a:focus,
+  #container header .site-logo a:hover {
+    outline: 2px solid white;
+  }
+  #container header .site-logo a:focus .site-firstletter,
+  #container header .site-logo a:hover .site-firstletter {
+    text-align: center;
+  }
   #container header #clashvibes_title {
     width: 67%;
   }
@@ -6469,6 +6541,22 @@ a {
   }
   #container header {
     height: 65px;
+  }
+  #container header .site-logo {
+    display: block;
+  }
+  #container header .site-logo a {
+    width: 98%;
+    /* Text meant only for screen readers. */
+  }
+  #container header .site-logo a div.screen-reader-text {
+    overflow: hidden;
+  }
+  #container header .site-logo a div.screen-reader-text:focus {
+    top: 5px;
+  }
+  #container header .site-logo a div.site-firstletter {
+    height: 100%;
   }
   #container header #clashvibes_title {
     width: 61%;
@@ -7725,7 +7813,6 @@ a {
 
   #container {
     width: 98%;
-    /********** header **********/
     /********** navigation **********/
     /********** front page **********/
     /*--- Content ---*/
@@ -7750,6 +7837,22 @@ a {
   }
   #container header {
     height: 80px;
+  }
+  #container header .site-logo {
+    display: block;
+  }
+  #container header .site-logo a {
+    width: 98%;
+    /* Text meant only for screen readers. */
+  }
+  #container header .site-logo a div.screen-reader-text {
+    overflow: hidden;
+  }
+  #container header .site-logo a div.screen-reader-text:focus {
+    top: 5px;
+  }
+  #container header .site-logo a div.site-firstletter {
+    height: 100%;
   }
   #container header #clashvibes_title {
     width: 54%;

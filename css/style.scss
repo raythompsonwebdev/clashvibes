@@ -909,7 +909,7 @@ License: GNU General Public License v2 or later
 				form.search-form {
 
 					label {
-						width: 90%;
+						width: 100%;
 						display: block;
 						font-size: 0.9em;
 						margin: auto;
@@ -923,10 +923,11 @@ License: GNU General Public License v2 or later
 
 						}
 
-						input[type="text"] {
-							width: 97%;
-							display: inline-block;
+						input[type="search"] {
+							width: 100%;
+							display: block;
 							margin: 0;
+							height:35px;
 
 						}
 					}
@@ -1180,9 +1181,9 @@ License: GNU General Public License v2 or later
 
 				}
 
-				input[type="text"] {
-					width: 97%;
-					display: inline-block;
+				input[type="search"] {
+					
+					display: block;
 					margin: 0;
 
 				}
@@ -1871,7 +1872,7 @@ License: GNU General Public License v2 or later
 								display: inline-block;
 								height: 40px;
 								line-height: 40px;
-								text-indent: 1%;
+								text-indent: 0.5em;
 								background-color: $colors;
 								color: $color;
 							}
@@ -1883,11 +1884,8 @@ License: GNU General Public License v2 or later
 								padding: 0;
 								font-size: 0.9em;
 								text-indent: 0.2em;
-
 							}
-
 						}
-
 					}
 				}
 			}
@@ -2526,8 +2524,8 @@ License: GNU General Public License v2 or later
 
 						}
 
-						input[type="text"] {
-							width: 97%;
+						input[type="search"] {
+							width: 100%;
 						}
 					}
 
@@ -3508,8 +3506,8 @@ License: GNU General Public License v2 or later
 
 						}
 
-						input[type="text"] {
-							width: 97%;
+						input[type="search"] {
+							width: 100%;
 						}
 					}
 
@@ -4474,7 +4472,7 @@ License: GNU General Public License v2 or later
 
 						}
 
-						input[type="submit"] {
+						input[type="search"] {
 							width: 97%;
 						}
 					}
@@ -5434,7 +5432,7 @@ License: GNU General Public License v2 or later
 
 						}
 
-						input[type="text"] {
+						input[type="search"] {
 							width: 97%;
 						}
 					}

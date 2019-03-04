@@ -1529,6 +1529,8 @@ a {
   #container #clashvibes_right_column article.page iframe {
     display: block;
     margin: 1em auto;
+    width: 75%;
+    height: 315px;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header,
   #container #clashvibes_right_column article.clash-audio header.entry-header,
@@ -5223,6 +5225,8 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt iframe,
   #container #clashvibes_right_column article.page div.videoExcerpt iframe {
     margin: 0 auto;
+    width: 75%;
+    height: 245px;
   }
   #container #clashvibes_right_column article.clash-videos footer.speaker-meta,
   #container #clashvibes_right_column article.clash-audio footer.speaker-meta,
@@ -6215,7 +6219,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#progress,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#progress,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#progress {
-    width: 64%;
+    width: 62%;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#progress span#play_progress,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#progress span#play_progress,
@@ -6287,7 +6291,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#time span,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#time span,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#time span {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#time span#duration,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#time span#duration,
@@ -6305,7 +6309,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#time span#duration,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#time span#duration,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#time span#duration {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#time span#current_time,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#time span#current_time,
@@ -7031,7 +7035,7 @@ a {
   #container #clashvibes_right_column article.post figure.attachment,
   #container #clashvibes_right_column article.page figure.thumb,
   #container #clashvibes_right_column article.page figure.attachment {
-    width: 25%;
+    width: 30%;
   }
   #container #clashvibes_right_column article.clash-videos header.archive-header,
   #container #clashvibes_right_column article.clash-audio header.archive-header,
@@ -7425,7 +7429,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#progress,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#progress,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#progress {
-    width: 54%;
+    width: 53%;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#progress span#play_progress,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#progress span#play_progress,
@@ -7931,7 +7935,7 @@ a {
     left: 50vw;
   }
   #container header {
-    height: 80px;
+    height: 65px;
   }
   #container header #clashvibes_title {
     width: 54%;
@@ -8452,7 +8456,8 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols #btns_box,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls #btns_box,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols #btns_box {
-    width: 45%;
+    width: 100%;
+    margin-bottom: 0.5em;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box button.player-button,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box button.player-button,
@@ -8638,7 +8643,8 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#progress,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#progress,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#progress {
-    width: 54%;
+    width: 100%;
+    margin: 0;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#progress span#play_progress,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#progress span#play_progress,
@@ -9195,7 +9201,7 @@ a {
     left: 50vw;
   }
   #container header {
-    height: 80px;
+    height: 65px;
   }
   #container header #clashvibes_title {
     width: 54%;
@@ -9496,7 +9502,7 @@ a {
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta span.byline,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.posted-on,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.byline {
-    font-size: 0.7em;
+    font-size: 0.65em;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header div.entry-meta span.posted-on a,
   #container #clashvibes_right_column article.clash-videos header.entry-header div.entry-meta span.byline a,
@@ -9697,7 +9703,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols {
-    width: 97%;
+    width: 98%;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box,
@@ -9715,7 +9721,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols #btns_box,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls #btns_box,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols #btns_box {
-    width: 45%;
+    width: 100%;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box button.player-button,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box button.player-button,
@@ -9901,7 +9907,8 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#progress,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#progress,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#progress {
-    width: 54%;
+    width: 100%;
+    margin: 0;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#progress span#play_progress,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#progress span#play_progress,
@@ -10110,6 +10117,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt iframe,
   #container #clashvibes_right_column article.page div.videoExcerpt iframe {
     margin: 0 auto;
+    width: 80%;
   }
   #container #clashvibes_right_column article.clash-videos footer.speaker-meta ul.post-meta,
   #container #clashvibes_right_column article.clash-audio footer.speaker-meta ul.post-meta,
@@ -10442,7 +10450,7 @@ a {
     text-decoration: none;
   }
   #container header {
-    height: 80px;
+    height: 65px;
   }
   #container header #clashvibes_title {
     width: 48%;
@@ -10686,7 +10694,7 @@ a {
   #container #clashvibes_right_column article.clash-audio header.entry-header h1,
   #container #clashvibes_right_column article.post header.entry-header h1,
   #container #clashvibes_right_column article.page header.entry-header h1 {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h1 a,
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 a,
@@ -10883,24 +10891,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt #audio-play {
     width: 90%;
   }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols {
-    width: 97%;
-  }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#audio_controls #btns_box,
@@ -10917,7 +10907,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols #btns_box,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls #btns_box,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols #btns_box {
-    width: 45%;
+    width: 100%;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box button.player-button,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box button.player-button,
@@ -11086,24 +11076,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols #btns_box button.player-button i.fa-forward:hover,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols #btns_box button.player-button i.fa-backward:hover {
     color: #ffffff;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#progress {
-    width: 54%;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#progress span#play_progress,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#progress span#play_progress,
@@ -11329,6 +11301,7 @@ a {
   #container #clashvibes_right_column article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
   #container #clashvibes_right_column article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
   #container #clashvibes_right_column article.page footer.speaker-meta ul.post-meta li span.post-meta-key {
+    text-indent: 0.25em;
     display: block;
   }
   #container #clashvibes_right_column article.clash-videos footer.speaker-meta ul.post-meta li p,
@@ -11646,7 +11619,7 @@ a {
     text-decoration: none;
   }
   #container header {
-    height: 80px;
+    height: 60px;
   }
   #container header #clashvibes_title {
     width: 50%;
@@ -12120,25 +12093,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols {
-    width: 97%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box,
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#audio_controls #btns_box,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#videocontrols #btns_box,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#audio_controls #btns_box,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#videocontrols #btns_box,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#audio_controls #btns_box,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#videocontrols #btns_box,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#audio_controls #btns_box,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#videocontrols #btns_box,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#audio_controls #btns_box,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#videocontrols #btns_box,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#audio_controls #btns_box,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols #btns_box,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls #btns_box,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols #btns_box {
-    width: 55%;
+    width: 98%;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box button.player-button,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box button.player-button,
@@ -12307,24 +12262,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols #btns_box button.player-button i.fa-forward:hover,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols #btns_box button.player-button i.fa-backward:hover {
     color: #ffffff;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#progress,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#progress,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#progress {
-    width: 44%;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#progress span#play_progress,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#progress span#play_progress,
@@ -12532,7 +12469,7 @@ a {
   #container #clashvibes_right_column article.post div.videoExcerpt iframe,
   #container #clashvibes_right_column article.page div.audioExcerpt iframe,
   #container #clashvibes_right_column article.page div.videoExcerpt iframe {
-    margin: 0 auto;
+    height: 215px;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1,
@@ -13054,7 +12991,7 @@ a {
     text-decoration: none;
   }
   #container header {
-    height: 80px;
+    height: 60px;
   }
   #container header #clashvibes_title {
     width: 48%;
@@ -13519,24 +13456,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt #audio-play {
     width: 90%;
   }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols {
-    width: 97%;
-  }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#audio_controls #btns_box,
@@ -13554,7 +13473,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls #btns_box,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols #btns_box {
     width: 100%;
-    margin-bottom: 0.5em;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box button.player-button,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box button.player-button,
@@ -14460,7 +14378,7 @@ a {
     text-decoration: none;
   }
   #container header {
-    height: 110px;
+    height: 60px;
   }
   #container header #clashvibes_title {
     width: 50%;
@@ -14923,24 +14841,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt #audio-play {
     width: 90%;
   }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols {
-    width: 97%;
-  }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#audio_controls #btns_box,
@@ -14958,7 +14858,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls #btns_box,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols #btns_box {
     width: 100%;
-    margin-bottom: 0.5em;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box button.player-button,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box button.player-button,
@@ -15874,7 +15773,7 @@ a {
     text-decoration: none;
   }
   #container header {
-    height: 110px;
+    height: 60px;
   }
   #container header #clashvibes_title {
     width: 50%;
@@ -16337,24 +16236,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt #audio-play {
     width: 96%;
   }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols {
-    width: 97%;
-  }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#audio_controls #btns_box,
@@ -16372,7 +16253,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls #btns_box,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols #btns_box {
     width: 100%;
-    margin-bottom: 0.5em;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls #btns_box button.player-button,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols #btns_box button.player-button,
@@ -16630,7 +16510,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#time span,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#time span,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#time span {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#time span#duration,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#time span#duration,
@@ -16648,7 +16528,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#time span#duration,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#time span#duration,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#time span#duration {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#time span#current_time,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#time span#current_time,
@@ -16666,7 +16546,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#time span#current_time,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#time span#current_time,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#time span#current_time {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#video_seek label,
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#video_seek label,
@@ -16738,7 +16618,7 @@ a {
   #container #clashvibes_right_column article.page div.audioExcerpt div#videocontrols div#video_volume label,
   #container #clashvibes_right_column article.page div.videoExcerpt div#audio_controls div#video_volume label,
   #container #clashvibes_right_column article.page div.videoExcerpt div#videocontrols div#video_volume label {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#audio_controls div#video_volume input[type="range"],
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#videocontrols div#video_volume input[type="range"],

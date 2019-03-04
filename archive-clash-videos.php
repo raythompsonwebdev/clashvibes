@@ -27,16 +27,11 @@
 
 		?>
 
-
 		<section id="new_released_section">
 
-
 			<?php
-
-
-				$original_query = $the_query;
-
-				$the_query = null;
+		
+			$the_query = null;
 
 			$args      = array(
 

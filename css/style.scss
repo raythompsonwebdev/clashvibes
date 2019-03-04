@@ -1287,6 +1287,8 @@ License: GNU General Public License v2 or later
 				iframe {
 					display: block;
 					margin: 1em auto;
+					width:75%;
+					height:315px;
 				}
 
 				blockquote {
@@ -3962,6 +3964,8 @@ License: GNU General Public License v2 or later
 					/*video*/
 					iframe {
 						margin: 0 auto;
+						width:75%;
+						height:245px;
 					}
 
 				}
@@ -4860,7 +4864,7 @@ License: GNU General Public License v2 or later
 						}
 
 						div#progress {
-							width: 64%;
+							width: 62%;
 
 							span#play_progress {
 								display: block;
@@ -4880,13 +4884,13 @@ License: GNU General Public License v2 or later
 
 							span {
 
-								font-size: 0.75em;
+								font-size: 0.7em;
 
 							}
 
 							span#duration {
 
-								font-size: 0.9em;
+								font-size: 0.85em;
 							}
 
 							span#current_time {
@@ -5654,7 +5658,7 @@ License: GNU General Public License v2 or later
 				/*--- custom post images---*/
 				figure.thumb,
 				figure.attachment {
-					width: 25%;
+					width: 30%;
 
 
 				}
@@ -5817,7 +5821,7 @@ License: GNU General Public License v2 or later
 						}
 
 						div#progress {
-							width: 54%;
+							width: 53%;
 
 							span#play_progress {
 								display: block;
@@ -6245,7 +6249,7 @@ License: GNU General Public License v2 or later
 
 		/********** header **********/
 		header {
-			height: 80px;
+			height: 65px;
 
 			#clashvibes_title {
 				width: 54%;
@@ -6677,8 +6681,8 @@ License: GNU General Public License v2 or later
 						width: 97%;
 
 						#btns_box {
-							width: 45%;
-
+							width: 100%;
+							margin-bottom: 0.5em;
 							button.player-button {
 								width: 33.3%;
 
@@ -6704,8 +6708,8 @@ License: GNU General Public License v2 or later
 						}
 
 						div#progress {
-							width: 54%;
-
+							width: 100%;
+							margin:0;
 							span#play_progress {
 								display: block;
 
@@ -7224,7 +7228,7 @@ License: GNU General Public License v2 or later
 
 		/********** header **********/
 		header {
-			height: 80px;
+			height: 65px;
 
 			#clashvibes_title {
 				width: 54%;
@@ -7519,7 +7523,7 @@ License: GNU General Public License v2 or later
 
 						span.posted-on,
 						span.byline {
-							font-size: 0.7em;
+							font-size: 0.65em;
 
 							a {
 								width: 80%;
@@ -7653,11 +7657,11 @@ License: GNU General Public License v2 or later
 					div#audio_controls,
 					div#videocontrols {
 
-						width: 97%;
+						width: 98%;
 
 						#btns_box {
-							width: 45%;
-
+							width: 100%;
+							
 							button.player-button {
 								width: 33.3%;
 
@@ -7683,7 +7687,8 @@ License: GNU General Public License v2 or later
 						}
 
 						div#progress {
-							width: 54%;
+							width: 100%;
+							margin:0;
 
 							span#play_progress {
 								display: block;
@@ -7753,6 +7758,8 @@ License: GNU General Public License v2 or later
 					/*video*/
 					iframe {
 						margin: 0 auto;
+						width:80%;
+						
 					}
 
 				}
@@ -8180,7 +8187,7 @@ License: GNU General Public License v2 or later
 
 		/********** header **********/
 		header {
-			height: 80px;
+			height: 65px;
 
 			#clashvibes_title {
 				width: 48%;
@@ -8426,7 +8433,7 @@ License: GNU General Public License v2 or later
 					h1 {
 
 
-						font-size: 1em;
+						font-size: 0.9em;
 
 						a {
 
@@ -8576,10 +8583,9 @@ License: GNU General Public License v2 or later
 					div#audio_controls,
 					div#videocontrols {
 
-						width: 97%;
-
+						
 						#btns_box {
-							width: 45%;
+							width: 100%;
 
 							button.player-button {
 								width: 33.3%;
@@ -8606,8 +8612,7 @@ License: GNU General Public License v2 or later
 						}
 
 						div#progress {
-							width: 54%;
-
+							
 							span#play_progress {
 								display: block;
 
@@ -8676,6 +8681,7 @@ License: GNU General Public License v2 or later
 					/*video*/
 					iframe {
 						margin: 0 auto;
+						
 					}
 
 				}
@@ -8692,7 +8698,7 @@ License: GNU General Public License v2 or later
 							font-size: 0.75em;
 
 							span.post-meta-key {
-
+								text-indent: 0.25em;
 								display: block;
 							}
 
@@ -9102,7 +9108,7 @@ License: GNU General Public License v2 or later
 
 		/********** header **********/
 		header {
-			height: 80px;
+			height: 60px;
 
 			#clashvibes_title {
 				width: 50%;
@@ -9517,11 +9523,10 @@ License: GNU General Public License v2 or later
 					div#audio_controls,
 					div#videocontrols {
 
-						width: 97%;
+						width: 98%;
 
 						#btns_box {
-							width: 55%;
-
+							
 							button.player-button {
 								width: 33.3%;
 
@@ -9547,8 +9552,7 @@ License: GNU General Public License v2 or later
 						}
 
 						div#progress {
-							width: 44%;
-
+							
 							span#play_progress {
 								display: block;
 
@@ -9616,7 +9620,8 @@ License: GNU General Public License v2 or later
 
 					/*video*/
 					iframe {
-						margin: 0 auto;
+												
+						height:215px;
 					}
 
 					//jp-video player
@@ -10117,7 +10122,7 @@ License: GNU General Public License v2 or later
 
 		/********** header **********/
 		header {
-			height: 80px;
+			height: 60px;
 
 			#clashvibes_title {
 				width: 48%;
@@ -10527,12 +10532,10 @@ License: GNU General Public License v2 or later
 					div#audio_controls,
 					div#videocontrols {
 
-						width: 97%;
-
+						
 						#btns_box {
 							width: 100%;
-							margin-bottom: 0.5em;
-
+							
 							button.player-button {
 								width: 33.3%;
 
@@ -11131,7 +11134,7 @@ License: GNU General Public License v2 or later
 
 		/********** header **********/
 		header {
-			height: 110px;
+			height: 60px;
 
 			#clashvibes_title {
 				width: 50%;
@@ -11539,13 +11542,10 @@ License: GNU General Public License v2 or later
 					/*controls -audio/video*/
 					div#audio_controls,
 					div#videocontrols {
-
-						width: 97%;
-
+						
 						#btns_box {
 							width: 100%;
-							margin-bottom: 0.5em;
-
+							
 							button.player-button {
 								width: 33.3%;
 
@@ -12145,7 +12145,7 @@ License: GNU General Public License v2 or later
 
 		/********** header **********/
 		header {
-			height: 110px;
+			height: 60px;
 
 			#clashvibes_title {
 				width: 50%;
@@ -12551,12 +12551,10 @@ License: GNU General Public License v2 or later
 					div#audio_controls,
 					div#videocontrols {
 
-						width: 97%;
-
+						
 						#btns_box {
 							width: 100%;
-							margin-bottom: 0.5em;
-
+							
 							button.player-button {
 								width: 33.3%;
 
@@ -12601,18 +12599,18 @@ License: GNU General Public License v2 or later
 							width: 100%;
 
 							span {
-								font-size: 0.8em;
+								font-size: 0.7em;
 
 							}
 
 							span#duration {
 
-								font-size: 1em;
+								font-size: 0.9em;
 							}
 
 							span#current_time {
 
-								font-size: 1em;
+								font-size: 0.9em;
 							}
 						}
 
@@ -12636,7 +12634,7 @@ License: GNU General Public License v2 or later
 
 							label {
 
-								font-size: 0.9em;
+								font-size: 0.8em;
 
 							}
 

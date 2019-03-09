@@ -46,10 +46,8 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'style.css': 'css/style.scss',
-                    'ie.css': 'css/ie.scss',
-                    'reset.css': 'css/reset.scss',
-
-                            /*where file goes-----/where file from*/
+                    'ie.css': 'css/ie.scss'
+                    /*where file goes-----/where file from*/
                 }
             },
 
@@ -60,7 +58,6 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'css/minified/style-min.css': 'css/style.scss',
-                    'css/minified/reset-min.css': 'css/reset.scss',
                     'css/minified/ie-min.css': 'css/ie.scss'
 
                             /*where file goes-----/where file from*/
@@ -68,22 +65,6 @@ module.exports = function (grunt) {
             }
         },
 
-        /**
-         * JS Hint
-         */
-        jshint: {
-            files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
-            options: {
-                // options here to override JSHint defaults
-
-                globals: {
-                    jQuery: true,
-                    console: true,
-                    module: true,
-                    document: true
-                }
-            }
-        },
         /**
          * Watch task
          */
@@ -101,10 +82,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-
-    grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('default', ['watch', 'jshint', 'concat', 'uglify', 'sass']);
+        
+    grunt.registerTask('default', ['watch', 'concat', 'uglify', 'sass']);
 
 
 }

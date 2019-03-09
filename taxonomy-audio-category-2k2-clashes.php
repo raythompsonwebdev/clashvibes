@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * Taxonomy Audio 2K2 | core/taxonomy-audio-category-2k2-clashes.php.
  *

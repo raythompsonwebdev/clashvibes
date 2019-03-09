@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * Taxonomy Audio 1980s | core/taxonomy-audio-category-1980s-clashes.php.
  *
@@ -21,20 +21,22 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 
 <div id="clashvibes_content">
-	
-		<?php get_sidebar( 'audio' ); ?>
 
-<section id="clashvibes_right_column">
+	<?php get_sidebar( 'audio' ); ?>
 
-
-<?php $archivetitle = apply_filters( 'the_title', $term->name ); ?>
-
-<h1 class="archive-title">Audio Category: <?php echo esc_html($archivetitle); ?> </h1>
-
-	<?php get_template_part( 'template-parts/content', 'custom' ); ?>
+	<section id="clashvibes_right_column">
 
 
-</section><!-- end of right panel -->
+		<?php $archivetitle = apply_filters( 'the_title', $term->name ); ?>
+
+		<h1 class="archive-title">Audio Category:
+			<?php echo esc_html($archivetitle); ?>
+		</h1>
+
+		<?php get_template_part( 'template-parts/content', 'custom' ); ?>
+
+
+	</section><!-- end of right panel -->
 
 </div>
 

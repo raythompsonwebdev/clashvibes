@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * Category page | core/category.php.
  *
@@ -27,10 +27,10 @@ get_header(); ?>
 		<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
 
-		</article><!-- end of news -->
+		</article>
 
 
-	</section><!-- end of right panel -->
+	</section>
 
 </div>
 <?php get_footer(); ?>

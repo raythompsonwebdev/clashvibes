@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * Template Name: blog
  *
@@ -25,18 +25,18 @@ get_header(); ?>
 <section id="clashvibes_right_column">
 
 <!--Post loop start -->
-	<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+			<?php
+				while ( have_posts() ) :
+				the_post();
 			?>
 
 			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-<?php endwhile; ?>
+		<?php endwhile; ?>
 
-<?php else : ?>
+	<?php else : ?>
 
 	<?php get_template_part( 'template-parts/content', 'none' ); ?>
 

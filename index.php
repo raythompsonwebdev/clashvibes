@@ -16,15 +16,15 @@
 get_header(); ?>
 
 <div id="clashvibes_content">
-<?php get_sidebar(); ?>
+    <?php get_sidebar(); ?>
 
-<section id="clashvibes_right_column">
-
-
-<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+    <section id="clashvibes_right_column">
 
 
-</section><!-- end of right panel -->
+        <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+
+
+    </section><!-- end of right panel -->
 
 </div>
 <?php get_footer(); ?>

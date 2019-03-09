@@ -40,7 +40,9 @@ function clashvibes_filter_wp_title( $title ) {
 	return $filtered_title;
 }
 
-// Theme set up.
+/**
+ * Theme set up.
+ */
 if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -90,7 +92,8 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
 		add_theme_support(
-			'html5', array(
+			'html5',
+			array(
 				'search-form',
 				'comment-form',
 				'comment-list',
@@ -153,7 +156,7 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		wp_link_pages( $links );
 	}
 
-endif; // my_theme_setup end.
+endif;
 add_action( 'after_setup_theme', 'clashvibes_theme_setup' );
 
 /**
@@ -199,9 +202,8 @@ function clashvibes_content_width() {
 add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
 
 /**
-* Remove Query Strings – Optional Step.
-*
-* */
+ * Remove Query Strings – Optional Step.
+ * */
 function clashvibes_remove_script_version( $src ) {
 	$parts = explode( '?ver', $src );
 	return $parts[0];
@@ -241,8 +243,7 @@ function disable_emojis_tinymce( $plugins ) {
 
 /**
  * Remove WP embed script
- * 
- * */ 
+ * */
 function speed_stop_loading_wp_embed() {
 	if ( ! is_admin() ) {
 		wp_deregister_script( 'wp-embed' );
@@ -250,7 +251,9 @@ function speed_stop_loading_wp_embed() {
 }
 add_action( 'init', 'speed_stop_loading_wp_embed' );
 
-// Remove comment-reply.min.js from footer
+/**
+ * Remove comment-reply.min.js from footer
+ */
 function comments_clean_header_hook() {
 	wp_deregister_script( 'comment-reply' );
 }
@@ -293,8 +296,7 @@ function clashvibes_audio_widgets_init() {
 add_action( 'widgets_init', 'clashvibes_audio_widgets_init' );
 
 /**
- *
- *  Video area.
+ * Video area.
  */
 function clashvibes_video_widgets_init() {
 	register_sidebar(
@@ -335,21 +337,29 @@ add_action( 'widgets_init', 'clashvibes_contact_widgets_init' );
  */
 function clashvibes_enqueue_extra_styles() {
 
-	wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri());
 
-	wp_enqueue_style( 'third-custom-style', get_stylesheet_directory_uri() . '/reset.css', array(), '1', 'true' );
+	wp_enqueue_style( 'third-custom-style', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '1', false );
 
 	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
 
 	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all' );
 
-	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . '/ie.css', array(), '1.0' );
-	wp_style_add_data( 'raythompwebdesign-com-ie', 'conditional', 'lte IE 8' );
-
 }
 add_action( 'wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles' );
 
+/**
+ * Enqueue IE8 style sheets.
+ */
+function ie_style_sheets() {
+	// Load the Internet Explorer specific stylesheet.
+	wp_register_style( 'ie8', get_stylesheet_directory_uri() . '/ie.css' );
+	$GLOBALS['wp_styles']->add_data( 'ie8', 'conditional', 'lte IE 8' );
+
+	wp_enqueue_style( 'ie8' );
+
+}
+add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
 
 /**
  *
@@ -377,8 +387,7 @@ function clashvibes_scripts() {
 
 	wp_enqueue_script( 'clashvibes-skip-link-focus-fix', get_template_directory_uri() . '/js/minified/skip-link-focus-fix.min.js', array(), '20151215', true );
 
-	//wp_enqueue_script( 'soundcloud', get_template_directory_uri() . '/js/api.js', array(), '20151215', true );
-
+	// wp_enqueue_script( 'soundcloud', get_template_directory_uri() . '/js/api.js', array(), '20151215', true );
 	if ( 'clash_audio' === get_post_type() ) {
 		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/minified/audio.min.js', array( 'jquery' ), '1.0.0', true );
 	}
@@ -389,6 +398,31 @@ function clashvibes_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'clashvibes_scripts' );
 
+
+/**
+ * Load the html5.
+ *  */
+
+$conditional_scripts = array(
+	'html5shiv'   => get_template_directory_uri() . '/js/old-browser-scripts/html5shiv.min.js',
+	'respond'     => get_template_directory_uri() . '/js/old-browser-scripts/Respond-master/dest/respond.src.js',
+	'selectivizr' => get_template_directory_uri() . '/js/old-browser-scripts/selectivizr-min.js',
+);
+foreach ( $conditional_scripts as $handle => $src ) {
+	wp_enqueue_script( $handle, $src, array(), '', false );
+}
+add_filter(
+	'script_loader_tag',
+	function( $tag, $handle ) use ( $conditional_scripts ) {
+
+		if ( array_key_exists( $handle, $conditional_scripts ) ) {
+			$tag = '<!--[if (lt IE 9) & (!IEMobile)]>' . $tag . '<![endif]-->' . "\n";
+		}
+		return $tag;
+	},
+	10,
+	2
+);
 
 /**
  *

@@ -18,15 +18,16 @@
 get_header(); ?>
 
 <div id="clashvibes_content_front">
-	
+
 	<section id="clashvibes_right_column_front">
 
-		<h1><?php the_title(); ?> Page</h1>
-		
+		<h1>
+			<?php the_title(); ?> Page</h1>
+
 		<div id="contactform">
-			
+
 		</div>
-		
+
 	</section><!-- end of right panel -->
 
 </div>

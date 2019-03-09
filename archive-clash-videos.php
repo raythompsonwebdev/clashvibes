@@ -27,11 +27,10 @@
 
 		?>
 
-
 		<section id="new_released_section">
 
-
 			<?php
+<<<<<<< HEAD:archive-clash-videos.php
 
 
 				$original_query = $the_query;
@@ -40,6 +39,13 @@
 
 			$args      = array(
 
+=======
+		
+			$the_query = null;
+
+			$args      = array(
+
+>>>>>>> bc1944fe441a0e0cadfc83377897907ee587aa6c:archive-clash-videos.php
 				'post_type'  => 'clash-videos',
 				'post_count' => '5',
 			);

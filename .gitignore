@@ -59,6 +59,7 @@ nbproject/
 fonts/
 phpcs.xml.dist
 
+<<<<<<< HEAD
 js/sparefiles/
 js/concat/
 js/dist/
@@ -66,6 +67,11 @@ js/dist/
 css/style.css.map
 css/style.scss.map
 css/style.css
+=======
+js/old-browser-scripts/
+js/sparefiles/
+js/api.js
+>>>>>>> bc1944fe441a0e0cadfc83377897907ee587aa6c
 css/.sass-cache/
 vendor/
 vendor/bin/
@@ -73,5 +79,5 @@ docs/
 ie.css.map
 style.css.map
 .vscode/
-js/api.js
+
 webpack.config.js

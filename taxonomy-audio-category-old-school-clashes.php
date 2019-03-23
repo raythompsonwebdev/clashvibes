@@ -1,7 +1,7 @@
 <?php
 /**
  * *PHP version 5
- *
+ * 
  * Taxonomy Audio Old | core/taxonomy-audio-category-old-school-clashes.php.
  *
  * @category   Taxonomy_Audio_Old
@@ -13,24 +13,23 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
-
  get_header(); ?>
 <div id="clashvibes_content">
-	
-		<?php get_sidebar( 'audio' ); ?>
 
-<section id="clashvibes_right_column">
+        <?php get_sidebar('audio'); ?>
 
-
-
-<?php $archivetitle = apply_filters( 'the_title', $term->name ); ?>
-
-<h1 class="archive-title">Audio Category: <?php echo esc_html($archivetitle); ?> </h1>
-
-	<?php get_template_part( 'template-parts/content', 'custom' ); ?>
+        <section id="clashvibes_right_column">
 
 
-</section><!-- end of right panel -->
+
+                <h1 class="archive-title">Audio Category:
+                        <?php echo apply_filters( 'the_title', esc_html($term->name) ); ?>
+                </h1>
+
+                <?php get_template_part('template-parts/content', 'custom'); ?>
+
+
+        </section><!-- end of right panel -->
 
 </div>
 <?php get_footer(); ?>

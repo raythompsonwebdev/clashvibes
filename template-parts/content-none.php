@@ -11,15 +11,7 @@
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<section class="
-	<?php
-	if ( is_404() ) {
-		echo 'error-404';
-	} else {
-		echo 'no-results';
-	}
-	?>
-	 not-found">
+	
 		<header class="entry-header">
 			<h1 class="page-title">
 				<?php
@@ -37,6 +29,7 @@
    
 
 		<div class="entry-content">
+
 			<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
 				<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'clashvibes' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
@@ -44,11 +37,13 @@
 			<?php elseif ( is_search() ) : ?>
 
 				<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'clashvibes' ); ?></p>
+				
 				<?php get_search_form(); ?>
 
 			<?php elseif ( is_404() ) : ?>
 
 				<p><?php esc_html_e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'clashvibes' ); ?></p>
+
 				<?php get_search_form(); ?>
 
 			<?php else : ?>
@@ -62,6 +57,6 @@
 
 		</div><!-- .page-content -->
 
-	</section><!-- .no-results -->
+	
 
 </article>

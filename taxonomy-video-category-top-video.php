@@ -2,11 +2,11 @@
 /**
  * *PHP version 5
  * 
- * Taxonomy Video Old | core/taxonomy-video-category-old-school-videos.php.
+ * Taxonomy Video | core/taxonomy-video-category.php.
  *
- * @category   Taxonomy_Video_Old
+ * @category   Taxonomy_Video
  * @package    Clashvibes
- * @subpackage Taxonomy_Video_Old
+ * @subpackage Taxonomy_Video
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
@@ -24,9 +24,10 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
         <section id="clashvibes_right_column">
 
 
+                <?php $archivetitle = apply_filters( 'the_title', $term->name ); ?>
 
                 <h1 class="archive-title">Video Category:
-                        <?php echo apply_filters( 'the_title', esc_html($term->name) ); ?>
+                        <?php echo esc_html($archivetitle); ?>
                 </h1>
 
                 <?php get_template_part('template-parts/content', 'custom'); ?>

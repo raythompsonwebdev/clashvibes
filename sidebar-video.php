@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * *
  * Sidebar Video | core/sidebar-video.php.

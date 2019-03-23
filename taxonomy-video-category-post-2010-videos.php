@@ -2,11 +2,11 @@
 /**
  * *PHP version 5
  *
- * Taxonomy Video 1990s | core/taxonomy-video-category-1990s-videos.php.
+ * Taxonomy Video Old | core/taxonomy-video-category-old-school-videos.php.
  *
- * @category   Taxonomy_Video_1990s
+ * @category   Taxonomy_Video_Old
  * @package    Clashvibes
- * @subpackage Taxonomy_Video_1990s
+ * @subpackage Taxonomy_Video_Old
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
@@ -14,10 +14,9 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 
-get_header();
+ get_header();
 
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-
 ?>
 <div id="clashvibes_content">
 

@@ -41,11 +41,11 @@
 			?>
 		<div class="entry-meta">
 
-			<?php	clashvibes_posted_on();	?>
+			<?php	clashvibes_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
 
-			<?php	endif;	?>
+			<?php	endif; ?>
 	</header><!-- .entry-header -->
 	
 		<?php clashvibes_post_thumbnail(); ?>

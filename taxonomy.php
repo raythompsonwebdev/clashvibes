@@ -17,35 +17,36 @@
  get_header(); ?>
 
 <div id="clashvibes_content">
-	
-		<?php get_sidebar(); ?>
+
+	<?php get_sidebar(); ?>
 
 
 	<section id="clashvibes_right_column">
 
 
-			<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-				<article class="post group"<?php post_class(); ?> id="post-<?php the_ID(); ?>">
+		<article class="post group" <?php post_class(); ?> id="post-
+			<?php the_ID(); ?>">
 
-					<header class="entry-header">
-						<h1 class="page-title">
-							<?php
+			<header class="entry-header">
+				<h1 class="page-title">
+					<?php
 							$current_term = get_queried_object();
 							$taxonomy     = get_taxonomy( $current_term->taxonomy );
 							echo esc_html( $taxonomy->label ) . ':' . esc_html( $current_term->name );
 							?>
-						</h1>
-						<?php
+				</h1>
+				<?php
 						// Show an optional term description.
 						$term_description = term_description();
 						if ( ! empty( $term_description ) ) :
 							printf( '<div class="taxonomy-description">%s</div>', esc_html( $term_description ) );
 						endif;
 						?>
-					</header><!-- .page-header -->
+			</header><!-- .page-header -->
 
-					<?php
+			<?php
 					if ( is_author() && get_the_author_meta( 'description' ) ) {
 						echo '<div class="author-index shorter">';
 						get_template_part( 'inc/author', 'box' );
@@ -53,18 +54,18 @@
 					}
 					?>
 
-					<?php /* Start the Loop */ ?>
-					<?php
+			<?php /* Start the Loop */ ?>
+			<?php
 					while ( have_posts() ) :
 						the_post();
 						?>
 
-						<figure class="thumb">
-						<?php clashvibes_post_thumbnail(); ?>
-						</figure>
+			<figure class="thumb">
+				<?php clashvibes_post_thumbnail(); ?>
+			</figure>
 
-							<div class="entry-content">
-						<?php
+			<div class="entry-content">
+				<?php
 						the_content(
 							sprintf(
 								wp_kses(
@@ -87,24 +88,24 @@
 							)
 						);
 						?>
-	</div><!-- .entry-content -->
+			</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-						<?php clashvibes_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-					</article>
+			<footer class="entry-footer">
+				<?php clashvibes_entry_footer(); ?>
+			</footer><!-- .entry-footer -->
+		</article>
 
-	<?php endwhile; ?>
-			<?php else : ?>
+		<?php endwhile; ?>
+		<?php else : ?>
 
-	<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-<?php endif; ?>
+		<?php endif; ?>
 
 
-			<div class="clearfix"></div>
+		<div class="clearfix"></div>
 
 
 	</section><!-- end of right panel -->
 
-<?php get_footer(); ?>
+	<?php get_footer(); ?>

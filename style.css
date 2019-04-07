@@ -2666,6 +2666,7 @@ a {
     font-size: 0.9em;
     text-indent: 0.2em;
   }
+<<<<<<< HEAD
   #container #clashvibes_right_column article.clash-videos .navigation,
   #container #clashvibes_right_column article.clash-audio .navigation,
   #container #clashvibes_right_column article.post .navigation,
@@ -2701,6 +2702,8 @@ a {
     background-color: #000;
     font-weight: bold;
   }
+=======
+>>>>>>> 389a31f68eec7ec838a799c261894ab2bbdaaf10
   #container #news_section {
     float: left;
     width: 100%;

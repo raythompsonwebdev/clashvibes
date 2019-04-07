@@ -1,0 +1,14 @@
+{
+    "name": "ray_t/clashvibes",
+    "description": "clashvibes",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "raythompsonwebdev",
+            "email": "ray_thomp@hushmail.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "~2.0"
+    }
+}

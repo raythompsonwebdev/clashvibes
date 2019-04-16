@@ -1,0 +1,13 @@
+/**
+ *
+ * Spare Function.
+ *
+ * Add_action( 'wp_enqueue_scripts', 'clashvibes__video_own' );
+ *
+ * function clashvibes__video_own() {
+ *  if( "clash_videos" == get_post_type()){
+ * wp_register_script( 'video', get_template_directory_uri() . '/js/video.js', array('jquery'),'1.0.0', 'true' );
+ * wp_enqueue_script( 'video' );
+ * }
+ * }
+ */

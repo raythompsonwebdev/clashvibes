@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * Taxonomy Audio 1990s | core/taxonomy-audio-category-1990s-clashes.php.
  *

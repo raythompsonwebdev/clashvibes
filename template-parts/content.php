@@ -11,10 +11,7 @@
 
 <!--Post loop start -->
 	<?php if ( have_posts() ) : ?>
-		<?php
-		while ( have_posts() ) :
-			the_post();
-			?>
+		<?php while ( have_posts() ) :	the_post();	?>
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -43,7 +40,7 @@
 
 	<div class="entry-content">
 			<?php
-			the_content(
+			the_excerpt(
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
@@ -67,10 +64,14 @@
 			?>
 	</div><!-- .entry-content -->
 
+	<?php if ( get_edit_post_link() ) : ?>
 	<footer class="entry-footer">
 			<?php clashvibes_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	<?php endif; ?>
+	
+</article>
+<!-- #post-<?php the_ID(); ?> -->
 
 <?php endwhile; ?>
 <?php else : ?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * Taxonomy Video 2k2 | core/taxonomy-video-category-2k2-videos.php.
  *

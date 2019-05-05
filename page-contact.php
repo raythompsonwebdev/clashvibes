@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * PHP version 7
  *
  * Template Name: Contact
  *
@@ -19,16 +19,12 @@ get_header(); ?>
 
 <div id="clashvibes_content_front">
 
-	<section id="clashvibes_right_column_front">
-
-		<h1>
-			<?php the_title(); ?> Page</h1>
+		<h1><?php the_title(); ?> Page</h1>
 
 		<div id="contactform">
-
+		<?php the_content();?>
 		</div>
 
-	</section><!-- end of right panel -->
 
 </div>
 

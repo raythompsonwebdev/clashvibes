@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * Template Name: Sitemap
  *
@@ -21,10 +21,7 @@ get_header(); ?>
 
 	<section id="clashvibes_right_column_front">
 
-		<h1>
-			<?php the_title(); ?> Page</h1>
-
-		<?php the_content(); ?>
+		
 
 	</section><!-- end of right panel -->
 

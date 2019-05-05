@@ -26,6 +26,8 @@ License: GNU General Public License v2 or later
 
 @media only screen and (max-width: 1920px) {
 
+	
+
 	/********** navigation toggle **********/
 	button.menu-toggle {
 		display: none;
@@ -310,8 +312,141 @@ License: GNU General Public License v2 or later
 			width: 100%;
 			margin: auto;
 
-			#clashvibes_right_column_front {
+			h1 {
+				display: block;
+				text-indent: 0.5em;
+				font-size: 1.5em;
+				clear: both;
+				margin: 0;
+				padding: 0;
+				font-family: $font-main;
+				background-color: $color4;
+				letter-spacing: 0.05em;
+				line-height: 45px;
+			}
 
+			article#clashvibes-text{
+				padding:1em;
+				h1{
+					color:#fff;
+				}
+
+				h2{
+					color:#000;
+					font-size:1.2em;
+					
+				}
+
+				li{
+					a{
+						color:#000;
+						&:hover{
+							font-weight:bold;
+						}
+					}
+				} 
+
+			}
+
+			/********** login form **********/
+			#contactform {
+				margin: 1% auto;
+				width: 50%;
+				display: block;
+				height: auto;
+				padding: 2%;
+
+				div.wpcf7 {
+					font-size: 1em;
+					margin: 0;
+					padding: 0;
+
+					span.ajax-loader {
+						height: 60px;
+						width: 60px;
+						display: block;
+						margin: 3% auto;
+						background-repeat: no-repeat;
+					}
+
+					form {
+
+						padding: 0.5em;
+
+						p {
+
+							padding: 1% 0;
+
+							label {
+								height: 30px;
+								line-height: 30px;
+								font-size: 1em;
+
+								.wpcf7-form-control-wrap {
+									height: auto;
+									display: block;
+								}
+
+								textarea {
+									@include Transition(all 0.30s ease-in-out);
+									outline: none;
+									padding: 3px 0 3px 3px;
+									margin: 5px 1px 3px 0;
+									border: 1px solid #ddd;
+									width: 100%;
+
+
+								}
+
+								input[type=text],
+								input[type=email],
+								select {
+									@include Transition(all 0.30s ease-in-out);
+									outline: none;
+									padding: 3px 0 3px 3px;
+									margin: 5px 1px 3px 0;
+									border: 1px solid #ddd;
+									width: 100%;
+									height: 35px;
+								}
+
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+									padding: 3px 0 3px 3px;
+									margin: 5px 1px 3px 0;
+									border: 1px solid rgba(204, 211, 222, 1);
+								}
+
+							}
+
+							input[type="submit"] {
+								height: 35px;
+								list-style: none;
+								width: 25%;
+								background-color: $color3;
+								@include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
+								padding: 0;
+								border: none;
+								color: $color1;
+
+								display: block;
+								font-size: 1.1em;
+
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+									font-weight: bold;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			#clashvibes_right_column_front {
 				min-height: 800px;
 				margin: 0 0 0.5em 0;
 				padding: 0px;
@@ -320,115 +455,11 @@ License: GNU General Public License v2 or later
 
 				h1 {
 					display: block;
-					text-indent: 0.5em;
 					font-size: 1.5em;
-					clear: both;
-					margin: 0;
-					padding: 0;
-					font-family: $font-main;
-					background-color: $color4;
-					letter-spacing: 0.05em;
-					line-height: 45px;
+					
 				}
 
-				/********** login form **********/
-				#contactform {
-					margin: 1%;
-					width: 50%;
-					display: block;
-					height: auto;
-					padding: 2%;
-
-					div.wpcf7 {
-						font-size: 1em;
-						margin: 0;
-						padding: 0;
-
-						span.ajax-loader {
-							height: 60px;
-							width: 60px;
-							display: block;
-							margin: 3% auto;
-							background-repeat: no-repeat;
-						}
-
-						form {
-
-							padding: 0.5em;
-
-							p {
-
-								padding: 1% 0;
-
-								label {
-									height: 30px;
-									line-height: 30px;
-									font-size: 1em;
-
-									.wpcf7-form-control-wrap {
-										height: auto;
-										display: block;
-									}
-
-									textarea {
-										@include Transition(all 0.30s ease-in-out);
-										outline: none;
-										padding: 3px 0 3px 3px;
-										margin: 5px 1px 3px 0;
-										border: 1px solid #ddd;
-										width: 100%;
-
-
-									}
-
-									input[type=text],
-									input[type=email],
-									select {
-										@include Transition(all 0.30s ease-in-out);
-										outline: none;
-										padding: 3px 0 3px 3px;
-										margin: 5px 1px 3px 0;
-										border: 1px solid #ddd;
-										width: 100%;
-										height: 35px;
-									}
-
-									input[type=text]:focus,
-									input[type=email]:focus,
-									select:focus,
-									textarea:focus {
-										box-shadow: 0 0 5px rgba(204, 211, 222, 1);
-										padding: 3px 0 3px 3px;
-										margin: 5px 1px 3px 0;
-										border: 1px solid rgba(204, 211, 222, 1);
-									}
-
-								}
-
-								input[type="submit"] {
-									height: 35px;
-									list-style: none;
-									width: 25%;
-									background-color: $color3;
-									@include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
-									padding: 0;
-									border: none;
-									color: $color1;
-
-									display: block;
-									font-size: 1.1em;
-
-									&:hover {
-										background-color: $color1;
-										color: $color4;
-										font-weight: bold;
-									}
-								}
-							}
-						}
-					}
-				}
-
+				
 				div.results {
 					padding: 0;
 					width: 100%;
@@ -1211,7 +1242,6 @@ License: GNU General Public License v2 or later
 		#clashvibes_right_column {
 			background-color: $color2;
 			float: right;
-			margin: 0 0 1% 0;
 			padding: 2%;
 			display: block;
 			width: 74%;
@@ -1374,11 +1404,14 @@ License: GNU General Public License v2 or later
 
 				/*--- blog image---*/
 
-				.post-thumbnail {
-					width: 20%;
+				a.post-thumbnail,
+				div.post-thumbnail {
+					width: 40%;
 					margin: 1em auto;
 					display: block;
-
+					@include originTran(50% 50%);
+					@include box-sizing($type: border-box);
+					@include Transition(all 0.2s linear 0s);
 					img {
 						margin: 0;
 						display: block;
@@ -1389,7 +1422,7 @@ License: GNU General Public License v2 or later
 				/*--- custom post images---*/
 				figure.thumb,
 				figure.attachment {
-					width: 20%;
+					width: 80%;
 					margin: 2em auto;
 					display: block;
 					border: 1px solid $color11;
@@ -1399,9 +1432,6 @@ License: GNU General Public License v2 or later
 
 					a {
 						width: 100%;
-						margin: 1em auto;
-						display: block;
-
 						img {
 							margin: 0;
 							display: block;
@@ -1530,18 +1560,6 @@ License: GNU General Public License v2 or later
 					margin: 0 auto;
 					height: auto;
 
-					.post-thumbnail {
-						width: 20%;
-						margin: 1em auto;
-						display: block;
-
-						img {
-							margin: 0;
-							display: block;
-
-						}
-					}
-
 					//text
 					p {
 						color: $color4;
@@ -1595,11 +1613,18 @@ License: GNU General Public License v2 or later
 						width: 30%;
 						height: auto;
 						line-height: 30px;
-						margin: 0 auto;
+						margin: 1em auto;
 						border: 2px solid $color2;
 						color: $color4;
 						text-align: center;
 					}
+					a.tag-cloud-link{
+						color:#000;
+						width:auto;
+						display:inline-block;
+						
+					}
+
 				}
 
 				/*custom post entry*/
@@ -1890,29 +1915,33 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.navigation{
-					margin:0;
-					padding:0;
-					height: 50px;
-					span{
+				
+			}
+			.navigation{
+				margin:0;
+				padding:0;
+				height: auto;
+				h2{
+					margin-bottom:0.2em;
+				}
+				span{
+					display:inline-block;
+					width:100%;
+					height:100%;
+					margin-bottom:0.2em;
+					a{
+						font-size:0.9em;
+						width:100%;
 						display:inline-block;
-						width:50%;
-						height:100%;
-						a{
-							font-size:0.9em;
-							width:96%;
-							display:inline-block;
-							color:#000;
-							line-height:50px;
-							text-align:center;
-							&:hover{
-								color:#fff;
-								background-color:#000;
-								font-weight:bold;
-							}
-							
+						color:#000;
+						line-height:50px;
+						text-align:center;
+						@include Transition(all 0.2s linear 0s);
+						&:hover{
+							color:#fff;
+							background-color:#000;
+							font-weight:bold;
 						}
-						
 					}
 				}
 			}
@@ -2331,6 +2360,30 @@ License: GNU General Public License v2 or later
 		#clashvibes_content_front {
 
 			width: 100%;
+
+			article#clashvibes-text{
+				padding:1em;
+				h1{
+					color:#fff;
+					font-size:1.4em;
+				}
+
+				h2{
+					color:#000;
+					font-size:1.1em;
+					
+				}
+
+				li{
+					a{
+						color:#000;
+						&:hover{
+							font-weight:bold;
+						}
+					}
+				} 
+
+			}
 
 			#clashvibes_right_column_front {
 
@@ -2778,9 +2831,9 @@ License: GNU General Public License v2 or later
 				}
 
 				/*--- blog image---*/
-				.post-thumbnail {
-					width: 25%;
-
+				a.post-thumbnail,
+				div.post-thumbnail {
+					
 					img {
 						margin: 0;
 
@@ -2790,7 +2843,7 @@ License: GNU General Public License v2 or later
 				/*--- custom post images---*/
 				figure.thumb,
 				figure.attachment {
-					width: 20%;
+					width: 80%;
 
 				}
 
@@ -2870,7 +2923,6 @@ License: GNU General Public License v2 or later
 
 					/*--- blog image---*/
 
-
 					p {
 						font-size: 0.9em;
 						line-height: 1.9em;
@@ -2900,9 +2952,30 @@ License: GNU General Public License v2 or later
 						}
 					}
 
+					ul.post-list{
+						li {
+							height:auto;
+							a{
+								display:block;
+								line-height: 40px;
+								background-color:$color1;
+								color:$color2;
+								text-align:center;
+								&:hover{
+									background-color:$color2;
+									color:$color1;
+								}
+							}
+						}
+					}
+
 					a.read_more {
 						width: 30%;
 
+					}
+
+					.tag-cloud-link{
+						color:#000;
 					}
 				}
 
@@ -3396,7 +3469,76 @@ License: GNU General Public License v2 or later
 
 					font-size: 1.2em;
 				}
+				div.results {
 
+					margin: 0 0 0.5em 0;
+
+					article.you_tube_box {
+
+						width: 19%;
+						min-height: 330px;
+
+						h1 {
+							margin: 0;
+							font-size: 0.9em;
+						}
+
+						a {
+							font-size: 0.9em;
+							letter-spacing: 0.05em;
+
+							&:hover {
+								font-weight: bold;
+
+							}
+						}
+
+						figure.you_tube_thumb {
+							width: 90%;
+
+							&:hover {
+								width: 92%;
+
+							}
+
+							img {
+
+								@include box-sizing($type: border-box);
+
+
+							}
+
+							li {
+								list-style: none;
+
+								iframe {
+									width: 100%;
+								}
+							}
+
+							.u_tube {
+								margin: 0;
+
+								span.u_tube_button {
+									height: 40px;
+
+									a {
+
+										font-size: 0.9em;
+
+										&:hover {
+
+											letter-spacing: 0.055em;
+
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				div.results,
 				#new_released_section {
 					margin: 0 0 0.5em 0;
 
@@ -3668,8 +3810,8 @@ License: GNU General Public License v2 or later
 		/*--- Right Column---*/
 		#clashvibes_right_column {
 			margin: 0 0 1% 0;
-
-			width: 74%; //global post
+			padding:1.5%;
+			width: 75%; //global post
 
 			h1 {
 				font-size: 1.2em;
@@ -3743,9 +3885,9 @@ License: GNU General Public License v2 or later
 				}
 
 				/*--- blog image---*/
-				a.post-thumbnail {
-					width: 25%;
-
+				a.post-thumbnail,
+				div.post-thumbnail {
+					
 					img {
 						margin: 0;
 
@@ -3755,7 +3897,7 @@ License: GNU General Public License v2 or later
 				/*--- custom post images---*/
 				figure.thumb,
 				figure.attachment {
-					width: 25%;
+					width: 85%;
 
 
 				}
@@ -3997,7 +4139,7 @@ License: GNU General Public License v2 or later
 
 				/*custom-post-footer*/
 				footer.speaker-meta {
-					height: 160px;
+					height: auto;
 
 					ul.post-meta {
 						height: 100%;
@@ -4354,8 +4496,7 @@ License: GNU General Public License v2 or later
 
 			#clashvibes_right_column_front {
 
-				min-height: 800px;
-
+				
 				h1 {
 
 					font-size: 1.05em;
@@ -4636,9 +4777,7 @@ License: GNU General Public License v2 or later
 
 		/*--- Right Column---*/
 		#clashvibes_right_column {
-			margin: 0 0 1% 0;
 			padding: 1%;
-
 			width: 76%; //global post
 
 			h1 {
@@ -4714,9 +4853,9 @@ License: GNU General Public License v2 or later
 
 				/*--- blog image---*/
 
-				a.post-thumbnail {
-					width: 25%;
-
+				a.post-thumbnail,
+				div.post-thumbnail {
+					
 					img {
 						margin: 0;
 
@@ -4726,7 +4865,7 @@ License: GNU General Public License v2 or later
 				/*--- custom post images---*/
 				figure.thumb,
 				figure.attachment {
-					width: 25%;
+					width: 85%;
 
 
 				}
@@ -5318,8 +5457,6 @@ License: GNU General Public License v2 or later
 
 			#clashvibes_right_column_front {
 
-				min-height: 800px;
-
 				h1 {
 
 					font-size: 1em;
@@ -5595,8 +5732,6 @@ License: GNU General Public License v2 or later
 
 		/*--- Right Column---*/
 		#clashvibes_right_column {
-			margin: 0 0 1% 0;
-			// min-height: 900px;.
 			width: 74%; //global post.
 
 			h1 {
@@ -5671,9 +5806,9 @@ License: GNU General Public License v2 or later
 				}
 
 				/*--- blog image---*/
-				a.post-thumbnail {
-					width: 25%;
-
+				a.post-thumbnail,
+				div.post-thumbnail {
+					
 					img {
 						margin: 0;
 
@@ -5683,7 +5818,7 @@ License: GNU General Public License v2 or later
 				/*--- custom post images---*/
 				figure.thumb,
 				figure.attachment {
-					width: 30%;
+					width: 90%;
 
 
 				}
@@ -6500,7 +6635,7 @@ License: GNU General Public License v2 or later
 		/*--- End of Left Column---*/
 		/*--- Right Column---*/
 		#clashvibes_right_column {
-			margin: 0 0 1% 0;
+
 			width: 98%;
 
 			h1 {
@@ -6985,7 +7120,6 @@ License: GNU General Public License v2 or later
 			margin: auto;
 
 			#clashvibes_right_column_front {
-				//float: none;
 				min-height: 720px;
 				width: 100%;
 
@@ -7479,7 +7613,7 @@ License: GNU General Public License v2 or later
 		/*--- End of Left Column---*/
 		/*--- Right Column---*/
 		#clashvibes_right_column {
-			margin: 0 0 1% 0;
+
 			width: 98%;
 
 			h1 {
@@ -7967,8 +8101,6 @@ License: GNU General Public License v2 or later
 			margin: auto;
 
 			#clashvibes_right_column_front {
-				//float: none;
-				min-height: 720px;
 				width: 100%;
 
 				h1 {
@@ -8574,8 +8706,9 @@ License: GNU General Public License v2 or later
 					padding: 0;
 				}
 
-				a.post-thumbnail {
-					width: 30%;
+				a.post-thumbnail,
+				div.post-thumbnail {
+					
 
 					img {
 						margin: 0;
@@ -8586,7 +8719,7 @@ License: GNU General Public License v2 or later
 				//image
 				figure.thumb,
 				figure.attachment {
-					width: 30%;
+					width: 90%;
 
 				}
 
@@ -8890,8 +9023,8 @@ License: GNU General Public License v2 or later
 			margin: auto;
 
 			#clashvibes_right_column_front {
-				//float: none;
-				min-height: 720px;
+				
+				
 				width: 100%;
 
 				h1 {
@@ -9350,7 +9483,7 @@ License: GNU General Public License v2 or later
 		/*--- End of Left Column---*/
 		/*--- Right Column---*/
 		#clashvibes_right_column {
-			margin: 0 0 1% 0;
+			
 			width: 98%;
 
 			h1 {
@@ -9514,9 +9647,9 @@ License: GNU General Public License v2 or later
 					padding: 0;
 				}
 
-				a.post-thumbnail {
-					width: 35%;
-
+				a.post-thumbnail,
+				div.post-thumbnail {
+					
 					img {
 						margin: 0;
 
@@ -9526,7 +9659,7 @@ License: GNU General Public License v2 or later
 				//image
 				figure.thumb,
 				figure.attachment {
-					width: 45%;
+					width: 90%;
 				}
 
 
@@ -9904,8 +10037,7 @@ License: GNU General Public License v2 or later
 			margin: auto;
 
 			#clashvibes_right_column_front {
-				//float: none;
-				min-height: 720px;
+				
 				width: 100%;
 
 				h1 {
@@ -10356,7 +10488,7 @@ License: GNU General Public License v2 or later
 		/*--- End of Left Column---*/
 		/*--- Right Column---*/
 		#clashvibes_right_column {
-			margin: 0 0 1% 0;
+			
 			width: 98%;
 
 			h1 {
@@ -10524,9 +10656,9 @@ License: GNU General Public License v2 or later
 					padding: 0;
 				}
 
-				a.post-thumbnail {
-					width: 45%;
-
+				a.post-thumbnail,
+				div.post-thumbnail {
+					
 					img {
 						margin: 0;
 
@@ -10536,7 +10668,7 @@ License: GNU General Public License v2 or later
 				//image
 				figure.thumb,
 				figure.attachment {
-					width: 50%;
+					width: 90%;
 				}
 
 
@@ -10910,8 +11042,7 @@ License: GNU General Public License v2 or later
 			margin: auto;
 
 			#clashvibes_right_column_front {
-				//float: none;
-				min-height: 720px;
+				
 				width: 100%;
 
 				h1 {
@@ -11535,9 +11666,9 @@ License: GNU General Public License v2 or later
 					padding: 0;
 				}
 
-				a.post-thumbnail {
-					width: 50%;
-
+				a.post-thumbnail,
+				div.post-thumbnail {
+					
 					img {
 						margin: 0;
 
@@ -11547,7 +11678,7 @@ License: GNU General Public License v2 or later
 				//image
 				figure.thumb,
 				figure.attachment {
-					width: 50%;
+					width: 90%;
 				}
 
 
@@ -11919,8 +12050,7 @@ License: GNU General Public License v2 or later
 			margin: auto;
 
 			#clashvibes_right_column_front {
-				//float: none;
-				min-height: 720px;
+				
 				width: 100%;
 
 				h1 {
@@ -12381,8 +12511,7 @@ License: GNU General Public License v2 or later
 		/*--- End of Left Column---*/
 		/*--- Right Column---*/
 		#clashvibes_right_column {
-			margin: 0 0 1% 0;
-
+			
 			h1 {
 				font-size: 1em;
 				padding: 0.5em 0;
@@ -12543,9 +12672,9 @@ License: GNU General Public License v2 or later
 				}
 
 
-				a.post-thumbnail {
-					width: 55%;
-
+				a.post-thumbnail,
+				div.post-thumbnail {
+					
 					img {
 						margin: 0;
 
@@ -12555,7 +12684,7 @@ License: GNU General Public License v2 or later
 
 				figure.thumb,
 				figure.attachment {
-					width: 50%;
+					width: 90%;
 				}
 
 
@@ -12927,8 +13056,7 @@ License: GNU General Public License v2 or later
 			margin: auto;
 
 			#clashvibes_right_column_front {
-				//float: none;
-				min-height: 720px;
+								
 				width: 100%;
 
 				h1 {

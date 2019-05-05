@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * Taxonomy Video New | core/taxonomy-video-category-1990s-videos.php.
  *

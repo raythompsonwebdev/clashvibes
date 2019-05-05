@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * Single Clash Video page | core/single-clash-video.php.
  *
@@ -18,14 +18,17 @@ get_header(); ?>
 	  
 
 <div id="clashvibes_content">
+
 	<?php get_sidebar( 'video' ); ?>
 	
 <section id="clashvibes_right_column">
-	   
 							   
-<?php get_template_part( 'template-parts/content', 'video' ); ?>
+	<?php get_template_part( 'template-parts/content', 'video' ); ?>
 
 </section><!-- end of clashvibes_right_panel_fullwidth -->
+
 <div class="clearfix"></div>
+
 </div>
+
 <?php get_footer(); ?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * Template Name: About
  *
@@ -19,12 +19,38 @@ get_header(); ?>
 
 <div id="clashvibes_content_front">
 
-	<section id="clashvibes_right_column_front">
+	<section id="clashvibes-text">
 
-		<h1>
-			<?php the_title(); ?> Page</h1>
+	<h1><?php the_title(); ?> Page</h1>
 
-		<?php the_content(); ?>
+	<p>Mannering Music. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
+
+<p>Donec malesuada tristique felis. Etiam ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor sollicitudin tortor.&nbsp;</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo hendrerit mi. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
+
+
+<figure class="aligncenter"></figure>
+
+
+<p>Mannering Music. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
+
+
+
+<p>Donec malesuada tristique felis. Etiam ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor sollicitudin tortor.&nbsp;</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo hendrerit mi. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
+
+<figure class="aligncenter"></figure>
+
+<p>Mannering Music. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
+
+<p>Donec malesuada tristique felis. Etiam ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor sollicitudin tortor.&nbsp;</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo hendrerit mi. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
+
+<p></p>
+
 
 	</section><!-- end of right panel -->
 

@@ -39,21 +39,20 @@
 
 	<div class="entry-content">
 	
-
 		<?php
-		the_excerpt(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				), get_the_title()
-			)
-		);
+			the_content(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					), get_the_title()
+				)
+			);
 
 			wp_link_pages(
 				array(
@@ -65,7 +64,12 @@
 
 	</div>
 	
-	<br/><br/><br/>
+	<?php if ( get_edit_post_link() ) : ?>
+
+		<footer class="entry-footer">
+		<?php clashvibes_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
+		<?php endif; ?>
 		
 	<?php endwhile;  else :	?>
 

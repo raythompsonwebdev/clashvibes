@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
  * Single Clash Audio page | core/single-clash_audio.php.
  *
@@ -16,10 +16,13 @@
 get_header(); ?>
 
 <div id="clashvibes_content">
+
 	<?php get_sidebar( 'audio' ); ?>
+
 	<section id="clashvibes_right_column">
 
-		<?php get_template_part( 'template-parts/content', 'audio' ); ?>
+	<?php get_template_part( 'template-parts/content', 'audio' ); ?>
+
 
 	</section><!-- end of clashvibes_right_panel_fullwidth -->
 

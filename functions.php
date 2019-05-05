@@ -16,10 +16,11 @@
 
 add_filter( 'wp_title', 'clashvibes_filter_wp_title', 10, 2 );
 /**
- * Filters the page title appropriately depending on the current page
+ * Filters the page title appropriately depending on the current page.
  *
  * This function is attached to the 'wp_title' fiilter hook.
  *
+ * @param array $title variable.
  * @uses    get_bloginfo()
  * @uses    is_home()
  * @uses    is_front_page()
@@ -35,6 +36,7 @@ function clashvibes_filter_wp_title( $title ) {
 
 	$filtered_title  = $title . get_bloginfo( 'name' );
 	$filtered_title .= ( ! empty( $site_description ) && ( is_home() || is_front_page() ) ) ? ' | ' . $site_description : '';
+	/* translators: %s: search term */
 	$filtered_title .= ( 2 <= $paged || 2 <= $page ) ? ' | ' . sprintf( __( 'Page %s', 'clashvibes' ), max( $paged, $page ) ) : '';
 
 	return $filtered_title;
@@ -207,7 +209,7 @@ add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
  */
 function ie_style_sheets() {
 	// Load the Internet Explorer specific stylesheet.
-	wp_register_style( 'ie8', get_stylesheet_directory_uri() . '/ie.css' );
+	wp_register_style( 'ie8', get_stylesheet_directory_uri() . '/ie.css', array(), '1.0', false );
 	$GLOBALS['wp_styles']->add_data( 'ie8', 'conditional', 'lte IE 8' );
 
 	wp_enqueue_style( 'ie8' );
@@ -223,8 +225,6 @@ function clashvibes_scripts() {
 
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/minified/main.min.js', array( 'jquery' ), '1.0.0', 'true' );
 
-
-	// wp_enqueue_script( 'soundcloud', get_template_directory_uri() . '/js/api.js', array(), '20151215', true );
 	if ( 'clash-audio' === get_post_type() ) {
 		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/minified/audio.min.js', array( 'jquery' ), '1.0.0', true );
 	}
@@ -241,13 +241,9 @@ add_action( 'wp_enqueue_scripts', 'clashvibes_scripts' );
  */
 function clashvibes_enqueue_extra_styles() {
 
-	wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri());
-
-	wp_enqueue_style( 'third-custom-style', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '1', false );
-
-	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
-
-	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', false, '1.1', 'all' );
+	wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri(), '1.0', true );
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', '1.0', false );
+	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', false, '1.0', 'all' );
 
 }
 add_action( 'wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles' );
@@ -358,9 +354,12 @@ add_filter( 'upload_mimes', 'clashvibes_cc_mime_types' );
 function clashvibes_excerpt_read_more_link( $output ) {
 	global $post;
 
-	return $output . '<a href="' . get_permalink( $post->ID ) . '" class="read_more"> Continue...</a>';
+	$output = '<a href="' . esc_url(get_permalink( $post->ID )) . '" class="read_more"> Continue...</a>';
+
+	return $output;
 }
 add_filter( 'the_excerpt', 'clashvibes_excerpt_read_more_link' );
+
 
 /**
  *  Remove stuff.

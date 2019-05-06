@@ -36,44 +36,56 @@
 		?>
 	</header><!-- .entry-header -->
 
-			<?php clashvibes_post_thumbnail(); ?>
+	<!--featured Image-->
+	
+	<?php if ( has_post_thumbnail() ) : ?>
+
+		<?php clashvibes_post_thumbnail(); ?>
+
+	<?php else : ?>
+
+		<figure class="featuredImage">
+		<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+			<img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/clashvibes/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+		</a>
+		</figure>
+
+	<?php endif; ?>
+
+	
+	<!--featured Image end-->
 
 	<div class="entry-content">
-			<?php
-			the_excerpt(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
-
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
-					'after'  => '</div>',
-				)
-			);
-			?>
+		<?php
+		the_excerpt(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			)
+		);
+		
+		?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-	<footer class="entry-footer">
-			<?php clashvibes_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		<footer class="entry-footer">
+				<?php clashvibes_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 	
 </article>
 <!-- #post-<?php the_ID(); ?> -->
 
 <?php endwhile; ?>
+
 <?php else : ?>
 
 	<?php get_template_part( 'template-parts/content', 'none' ); ?>

@@ -128,24 +128,21 @@ if ( ! function_exists( 'clashvibes_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
+		<figure class="featuredImage">
+		<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+			<?php the_post_thumbnail( 'featured-image' ); ?>
+		</a>
+		</figure><!-- .post-thumbnail -->
+		
+		
+		<?php else : ?>
+		
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 			<?php
-				the_post_thumbnail(
-					'post-thumbnail', array(
-						'alt' => the_title_attribute(
-							array(
-								'echo' => false,
-							)
-						),
-					)
-				);
+				the_post_thumbnail('post-image');
 			?>
 		</a>
-		<?php else : ?>
-
-		<figure class="thumb">
-			<?php the_post_thumbnail( 'featured-image' ); ?>
-		</figure><!-- .post-thumbnail -->
+		
 		
 
 		<?php

@@ -17,27 +17,16 @@
  */
 get_header(); ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<div id="clashvibes_content">
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-				clashvibes_posted_on();
-				clashvibes_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+	<?php get_sidebar(); ?>
 
-	<?php clashvibes_post_thumbnail(); ?>
+	<section id="clashvibes_right_column">
+	
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+		<?php get_template_part( 'template-parts/content', 'custom' ); ?>
 
-	<footer class="entry-footer">
-		<?php clashvibes_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	</section>
+</div>
+
+<?php get_footer(); ?>

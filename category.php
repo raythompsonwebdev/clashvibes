@@ -21,13 +21,103 @@ get_header(); ?>
 
 	<section id="clashvibes_right_column">
 
-		<h1 class="archive-title">Categories: <?php single_cat_title(); ?></h1>
+	<?php
+/**
+ * Check if there are any posts to display.
+ */
+if ( have_posts() ) : ?>
 
-		<!--Post loop start -->
-		<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+	<h1 class="archive-title">Category: <?php single_cat_title( '', true ); ?></h1>
 
+	<?php
+	/**
+	 * Display optional category description.
+	 */
+	if ( category_description() ) :	?>
+
+		
+
+		<?php endif; ?>
+
+		<?php while ( have_posts() ) : the_post(); ?>
+
+		<article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+			
+
+			<header class="entry-header">
+				<?php
+					if ( is_singular() ) :
+					the_title( '<h1 class="entry-title">', '</h1>' );
+					else :
+						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+					endif;
+
+					if ( 'post' === get_post_type() ) :
+						?>
+					<div class="entry-meta">
+						<?php
+							clashvibes_posted_on();
+							clashvibes_posted_by();
+						?>
+					</div><!-- .entry-meta -->
+						<?php
+					endif;
+				?>
+			</header><!-- .entry-header -->
+
+			<!--featured Image-->
+			<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+
+				<?php if ( has_post_thumbnail() ) : ?>
+
+					<?php clashvibes_post_thumbnail(); ?>
+
+				<?php else : ?>
+
+					<figure class="featuredImage">
+						
+						<img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+						
+					</figure>
+
+				<?php endif; ?>
+
+			</a>
+			<!--featured Image end-->
+
+			<div class="entry">
+
+				<?php	the_excerpt();	?>
+
+			</div>
+
+			<div class="continue-reading">
+				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+					<?php
+					printf(
+						/* Translators: %s = Name of the current post. */
+							wp_kses( __( 'Continue reading %s', 'clashvibes' ), array( 'span' => array( 'class' => array() ) ) ), the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					);
+					?>
+				</a>
+			</div>
+
+			<?php if ( get_edit_post_link() ) : ?>
+				<footer class="entry-footer">
+					<?php clashvibes_entry_footer(); ?>
+				</footer><!-- .entry-footer -->
+			<?php endif; ?>
 
 		</article>
+
+		<?php endwhile;	else :	?>
+
+	<?php get_template_part( 'template-part/content', 'none' ); ?>
+
+<?php endif; ?>
+
+<!--end of Comment box-->
+<div class="clearfix"></div>
 
 
 	</section>

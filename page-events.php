@@ -18,7 +18,7 @@
 get_header(); ?>
 
 <div id="clashvibes_content_front">
-
+	<section id="clashvibes_right_column_front">
 
 		<h1>
 			<?php the_title(); ?> Page</h1>
@@ -26,10 +26,7 @@ get_header(); ?>
 		<div class="results">
 
 			<article class="events_box">
-				<h1>
-					<?php echo the_title(); ?>
-				</h1>
-
+				
 				<figure class="events">
 					<img src="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php esc_attr_e( 'sliderimage', 'raythompsonwebdev-com' ); ?>">
 					<figcaption class="event-text">

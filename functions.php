@@ -42,6 +42,9 @@ function clashvibes_filter_wp_title( $title ) {
 	return $filtered_title;
 }
 
+// Remove version from head.
+remove_action( 'wp_head', 'wp_generator' );
+
 /**
  * Theme set up.
  */
@@ -54,6 +57,24 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function clashvibes_theme_setup() {
+
+		/**
+		 * Text domain.
+		 */	
+		load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
+		
+		/**
+		 * Register menus.
+		 */
+		register_nav_menus(
+			array(
+				'main'      => esc_html__( 'Main Nav', 'clashvibes' ),
+				'Secondary' => esc_html__( 'Secondary', 'clashvibes' ),
+				'mobile'    => esc_html__( 'mobile', 'clashvibes' ),
+				'Audio-Nav' => esc_html__( 'audio-nav', 'clashvibes' ),
+				'Video-Nav' => esc_html__( 'video-nav', 'clashvibes' ),
+			)
+		);
 
 		add_theme_support( 'automatic-feed-links' );
 
@@ -83,11 +104,13 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		*/
 		add_theme_support( 'title-tag' );
 
-		// Create new image sizes.
-		add_image_size( 'featured-image', 783, 9999 );
-
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 150, 150, true );
+
+		// Create new image sizes.
+		add_image_size( 'featured-image', 783, 250 );
+		add_image_size( 'post-image', 284, 9999 );
+		
+		set_post_thumbnail_size( 250, 250, true );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -103,14 +126,7 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 				'caption',
 			)
 		);
-
-		$args = array(
-			'width'  => 325,
-			'height' => 65,
-		);
-
-		// Add theme support for custom header.
-		add_theme_support( 'custom-header', $args );
+		
 
 		$defaults = array(
 			'default-color'          => 'e9ad29',
@@ -119,7 +135,6 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			'admin-head-callback'    => '',
 			'admin-preview-callback' => '',
 		);
-
 		// Add theme support for custom background.
 		add_theme_support( 'custom-background', $defaults );
 
@@ -139,7 +154,6 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			'admin-preview-callback' => '',
 
 		);
-
 		// Add theme support for nav-menus.
 		add_theme_support( 'nav-menus', $args );
 
@@ -156,39 +170,18 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			'echo'             => 1,
 		);
 		wp_link_pages( $links );
+
+
+		add_filter( 'the_generator', '__return_false' );
+		// remove version from rss.
+		add_filter( 'the_generator', '__return_empty_string' );
+
+
+
 	}
 
 endif;
 add_action( 'after_setup_theme', 'clashvibes_theme_setup' );
-
-/**
- * Register menus.
- */
-function clashvibes_menu_function() {
-
-	register_nav_menus(
-		array(
-			'main'      => esc_html__( 'Main Nav', 'clashvibes' ),
-			'Secondary' => esc_html__( 'Secondary', 'clashvibes' ),
-			'mobile'    => esc_html__( 'mobile', 'clashvibes' ),
-			'Audio-Nav' => esc_html__( 'audio-nav', 'clashvibes' ),
-			'Video-Nav' => esc_html__( 'video-nav', 'clashvibes' ),
-		)
-	);
-}
-add_action( 'after_setup_theme', 'clashvibes_menu_function' );
-
-/**
- * Text domain.
- */
-function clashvibes_load_theme_textdomain() {
-
-	load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
-}
-add_action( 'after_setup_theme', 'clashvibes_load_theme_textdomain' );
-
-// Remove version from head.
-remove_action( 'wp_head', 'wp_generator' );
 
 
 /**
@@ -202,6 +195,15 @@ function clashvibes_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
+
+
+/**
+ * Remove comment-reply.min.js from footer
+ */
+function comments_clean_header_hook() {
+	wp_deregister_script( 'comment-reply' );
+}
+add_action( 'init', 'comments_clean_header_hook' );
 
 
 /**
@@ -248,13 +250,6 @@ function clashvibes_enqueue_extra_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles' );
 
-/**
- * Remove comment-reply.min.js from footer
- */
-function comments_clean_header_hook() {
-	wp_deregister_script( 'comment-reply' );
-}
-add_action( 'init', 'comments_clean_header_hook' );
 
 /**
  * Sidebars!
@@ -340,7 +335,6 @@ function clashvibes_cc_mime_types( $mimes ) {
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;
 }
-
 add_filter( 'upload_mimes', 'clashvibes_cc_mime_types' );
 
 
@@ -360,18 +354,6 @@ function clashvibes_excerpt_read_more_link( $output ) {
 }
 add_filter( 'the_excerpt', 'clashvibes_excerpt_read_more_link' );
 
-
-/**
- *  Remove stuff.
- */
-function clashvibes_cubiq_setup() {
-
-	add_filter( 'the_generator', '__return_false' );
-	// remove version from rss.
-	add_filter( 'the_generator', '__return_empty_string' );
-
-}
-add_action( 'after_setup_theme', 'clashvibes_cubiq_setup' );
 
 /**
  *  Remove WordPress.
@@ -400,7 +382,7 @@ add_filter( 'wp_headers', 'clashvibes_remove_change_myheaders' );
 function clashvibes_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
 		$attr['sizes']   = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 60vw, (max-width: 1920px) 62vw, 840px';
-		! $attr['sizes'] = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1920px) 88vw, 1440px';
+		! $attr['sizes'] = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1920px) 88vw, 1024px';
 	}
 	return $attr;
 }

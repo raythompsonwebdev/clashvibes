@@ -953,7 +953,7 @@ License: GNU General Public License v2 or later
 
 						}
 
-						input[type="search"] {
+						input.search-field {
 							width: 100%;
 							display: block;
 							margin: 0;
@@ -962,7 +962,7 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					input[type="submit"] {
+					input.search-submit {
 						width: 90%;
 						display: block;
 						background-color: $color4;
@@ -1211,15 +1211,17 @@ License: GNU General Public License v2 or later
 
 				}
 
-				input[type="search"] {
+				input.search-field {
 					
+					width: 100%;
 					display: block;
 					margin: 0;
+					height:35px;
 
 				}
 			}
 
-			input[type="submit"] {
+			input.search-submit {
 				width: 90%;
 				display: block;
 				background-color: $color4;
@@ -1228,6 +1230,7 @@ License: GNU General Public License v2 or later
 				outline: none;
 				margin: 0.5em auto;
 				line-height: 35px;
+				font-size: 1em;
 
 				&:hover {
 					background-color: $color4;
@@ -1406,23 +1409,26 @@ License: GNU General Public License v2 or later
 
 				a.post-thumbnail,
 				div.post-thumbnail {
-					width: 40%;
+					width: 50%;
 					margin: 1em auto;
+					height: auto;
 					display: block;
 					@include originTran(50% 50%);
 					@include box-sizing($type: border-box);
 					@include Transition(all 0.2s linear 0s);
 					img {
-						margin: 0;
+						margin: 0 auto;
 						display: block;
+						width:auto;
 
 					}
 				}
 
 				/*--- custom post images---*/
-				figure.thumb,
+				figure.featuredImage,
 				figure.attachment {
 					width: 80%;
+					height:auto;
 					margin: 2em auto;
 					display: block;
 					border: 1px solid $color11;
@@ -1433,8 +1439,9 @@ License: GNU General Public License v2 or later
 					a {
 						width: 100%;
 						img {
-							margin: 0;
+							margin: 0 auto;
 							display: block;
+							width:auto;
 
 						}
 					}
@@ -2604,12 +2611,12 @@ License: GNU General Public License v2 or later
 
 						}
 
-						input[type="search"] {
+						input.search-field {
 							width: 100%;
 						}
 					}
 
-					input[type="submit"] {
+					input.search-submit{
 						margin: 0.5em auto;
 
 						&:hover {
@@ -2835,15 +2842,18 @@ License: GNU General Public License v2 or later
 				div.post-thumbnail {
 					
 					img {
-						margin: 0;
+						margin: 0 auto;
 
 					}
 				}
 
 				/*--- custom post images---*/
-				figure.thumb,
+				figure.featuredImage,
 				figure.attachment {
-					width: 80%;
+					img {
+						margin: 0 auto;
+
+					}
 
 				}
 
@@ -3675,12 +3685,12 @@ License: GNU General Public License v2 or later
 
 						}
 
-						input[type="search"] {
+						input.search-field {
 							width: 100%;
 						}
 					}
 
-					input[type="submit"] {
+					input.search-submit {
 						margin: 0.5em auto;
 
 						&:hover {
@@ -3889,15 +3899,18 @@ License: GNU General Public License v2 or later
 				div.post-thumbnail {
 					
 					img {
-						margin: 0;
+						margin: 0 auto;
 
 					}
 				}
 
 				/*--- custom post images---*/
-				figure.thumb,
+				figure.featuredImage,
 				figure.attachment {
-					width: 85%;
+					img {
+						margin: 0 auto;
+
+					}
 
 
 				}
@@ -4642,12 +4655,12 @@ License: GNU General Public License v2 or later
 
 						}
 
-						input[type="search"] {
+						input.search-field {
 							width: 97%;
 						}
 					}
 
-					input[type="submit"] {
+					input.search-submit {
 
 						margin: 0.5em auto;
 
@@ -4857,15 +4870,18 @@ License: GNU General Public License v2 or later
 				div.post-thumbnail {
 					
 					img {
-						margin: 0;
+						margin: 0 auto;
 
 					}
 				}
 
 				/*--- custom post images---*/
-				figure.thumb,
+				figure.featuredImage,
 				figure.attachment {
-					width: 85%;
+					img {
+						margin: 0 auto;
+
+					}
 
 
 				}
@@ -5598,12 +5614,12 @@ License: GNU General Public License v2 or later
 
 						}
 
-						input[type="search"] {
+						input.search-field {
 							width: 97%;
 						}
 					}
 
-					input[type="submit"] {
+					input.search-submit {
 						margin: 0.5em auto;
 
 						&:hover {
@@ -5810,15 +5826,18 @@ License: GNU General Public License v2 or later
 				div.post-thumbnail {
 					
 					img {
-						margin: 0;
+						margin: 0 auto;
 
 					}
 				}
 
 				/*--- custom post images---*/
-				figure.thumb,
+				figure.featuredImage,
 				figure.attachment {
-					width: 90%;
+					img {
+						margin: 0 auto;
+
+					}
 
 
 				}
@@ -7787,7 +7806,7 @@ License: GNU General Public License v2 or later
 				}
 
 
-				figure.thumb,
+				figure.featuredImage,
 				figure.attachment {
 					width: 30%;
 
@@ -8711,15 +8730,18 @@ License: GNU General Public License v2 or later
 					
 
 					img {
-						margin: 0;
+						margin: 0 auto;
 
 					}
 				}
 
 				//image
-				figure.thumb,
+				figure.featuredImage,
 				figure.attachment {
-					width: 90%;
+					img {
+						margin: 0 auto;
+
+					}
 
 				}
 
@@ -9651,15 +9673,18 @@ License: GNU General Public License v2 or later
 				div.post-thumbnail {
 					
 					img {
-						margin: 0;
+						margin: 0 auto;
 
 					}
 				}
 
 				//image
-				figure.thumb,
+				figure.featuredImage,
 				figure.attachment {
-					width: 90%;
+					img {
+						margin: 0 auto;
+
+					}
 				}
 
 
@@ -10660,15 +10685,18 @@ License: GNU General Public License v2 or later
 				div.post-thumbnail {
 					
 					img {
-						margin: 0;
+						margin: 0 auto;
 
 					}
 				}
 
 				//image
-				figure.thumb,
+				figure.featuredImage,
 				figure.attachment {
-					width: 90%;
+					img {
+						margin: 0 auto;
+
+					}
 				}
 
 
@@ -11670,15 +11698,18 @@ License: GNU General Public License v2 or later
 				div.post-thumbnail {
 					
 					img {
-						margin: 0;
+						margin: 0 auto;
 
 					}
 				}
 
 				//image
-				figure.thumb,
+				figure.featuredImage,
 				figure.attachment {
-					width: 90%;
+					img {
+						margin: 0 auto;
+
+					}
 				}
 
 
@@ -12676,15 +12707,18 @@ License: GNU General Public License v2 or later
 				div.post-thumbnail {
 					
 					img {
-						margin: 0;
+						margin: 0 auto;
 
 					}
 				}
 
 
-				figure.thumb,
+				figure.featuredImage,
 				figure.attachment {
-					width: 90%;
+					img {
+						margin: 0 auto;
+
+					}
 				}
 
 

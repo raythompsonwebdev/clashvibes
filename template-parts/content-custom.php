@@ -10,66 +10,50 @@
 ?>
 
 <?php if ( have_posts() ) :
-	while ( have_posts() ) :
-		the_post(); ?>
+	while ( have_posts() ) : the_post(); ?>
 
-
-<article class="post group" <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-		the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-		?>
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
+		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-		<?php
-		clashvibes_posted_on();
-		clashvibes_posted_by();
-		?>
+			<?php
+				clashvibes_posted_on();
+				clashvibes_posted_by();
+			?>
 		</div><!-- .entry-meta -->
-
-
-	</header><!-- .entry-header -->
-	
-	<?php clashvibes_post_thumbnail(); ?>
-
-	<div class="entry-content">
-	
-		<?php
-			the_content(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					), get_the_title()
-				)
-			);
-
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
-					'after'  => '</div>',
-				)
-			);
-		?>
-
-	</div>
-	
-	<?php if ( get_edit_post_link() ) : ?>
-
-		<footer class="entry-footer">
-		<?php clashvibes_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
 		<?php endif; ?>
+	</header><!-- .entry-header -->
+
+	<!--featured Image-->
+	<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+
+		<?php if ( has_post_thumbnail() ) : ?>
+
+			<?php clashvibes_post_thumbnail(); ?>
+
+		<?php else : ?>
+
+			<figure class="featuredImage">
+				
+				<img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/clashvibes/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+				
+			</figure>
+
+		<?php endif; ?>
+
+	</a>
+	
+	<div class="entry-summary">
+		<?php the_excerpt(); ?>
+	</div><!-- .entry-summary -->
+
+	<footer class="entry-footer">
+		<?php clashvibes_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
+	
+</article><!-- #post-<?php the_ID(); ?> -->
 		
 	<?php endwhile;  else :	?>
 

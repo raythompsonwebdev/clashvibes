@@ -1113,13 +1113,13 @@ a {
     margin: 0;
     float: left;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="search"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form label input.search-field {
     width: 100%;
     display: block;
     margin: 0;
     height: 35px;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form input.search-submit {
     width: 90%;
     display: block;
     background-color: #000000;
@@ -1129,7 +1129,7 @@ a {
     margin: 0.5em auto;
     line-height: 35px;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"]:hover {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form input.search-submit:hover {
     background-color: #000000;
     color: #e9ad29;
     cursor: pointer;
@@ -1434,11 +1434,13 @@ a {
     margin: 0;
     float: left;
   }
-  #container form.search-form label input[type="search"] {
+  #container form.search-form label input.search-field {
+    width: 100%;
     display: block;
     margin: 0;
+    height: 35px;
   }
-  #container form.search-form input[type="submit"] {
+  #container form.search-form input.search-submit {
     width: 90%;
     display: block;
     background-color: #000000;
@@ -1447,8 +1449,9 @@ a {
     outline: none;
     margin: 0.5em auto;
     line-height: 35px;
+    font-size: 1em;
   }
-  #container form.search-form input[type="submit"]:hover {
+  #container form.search-form input.search-submit:hover {
     background-color: #000000;
     color: #e9ad29;
     cursor: pointer;
@@ -1667,8 +1670,9 @@ a {
   #container #clashvibes_right_column article.post div.post-thumbnail,
   #container #clashvibes_right_column article.page a.post-thumbnail,
   #container #clashvibes_right_column article.page div.post-thumbnail {
-    width: 40%;
+    width: 50%;
     margin: 1em auto;
+    height: auto;
     display: block;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
@@ -1691,18 +1695,20 @@ a {
   #container #clashvibes_right_column article.post div.post-thumbnail img,
   #container #clashvibes_right_column article.page a.post-thumbnail img,
   #container #clashvibes_right_column article.page div.post-thumbnail img {
-    margin: 0;
+    margin: 0 auto;
     display: block;
+    width: auto;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb,
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage,
   #container #clashvibes_right_column article.clash-videos figure.attachment,
-  #container #clashvibes_right_column article.clash-audio figure.thumb,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage,
   #container #clashvibes_right_column article.clash-audio figure.attachment,
-  #container #clashvibes_right_column article.post figure.thumb,
+  #container #clashvibes_right_column article.post figure.featuredImage,
   #container #clashvibes_right_column article.post figure.attachment,
-  #container #clashvibes_right_column article.page figure.thumb,
+  #container #clashvibes_right_column article.page figure.featuredImage,
   #container #clashvibes_right_column article.page figure.attachment {
     width: 80%;
+    height: auto;
     margin: 2em auto;
     display: block;
     border: 1px solid #d6d5d4;
@@ -1719,26 +1725,27 @@ a {
     -ms-transition: all 0.2s linear 0s;
     transition: all 0.2s linear 0s;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb a,
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage a,
   #container #clashvibes_right_column article.clash-videos figure.attachment a,
-  #container #clashvibes_right_column article.clash-audio figure.thumb a,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage a,
   #container #clashvibes_right_column article.clash-audio figure.attachment a,
-  #container #clashvibes_right_column article.post figure.thumb a,
+  #container #clashvibes_right_column article.post figure.featuredImage a,
   #container #clashvibes_right_column article.post figure.attachment a,
-  #container #clashvibes_right_column article.page figure.thumb a,
+  #container #clashvibes_right_column article.page figure.featuredImage a,
   #container #clashvibes_right_column article.page figure.attachment a {
     width: 100%;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb a img,
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage a img,
   #container #clashvibes_right_column article.clash-videos figure.attachment a img,
-  #container #clashvibes_right_column article.clash-audio figure.thumb a img,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage a img,
   #container #clashvibes_right_column article.clash-audio figure.attachment a img,
-  #container #clashvibes_right_column article.post figure.thumb a img,
+  #container #clashvibes_right_column article.post figure.featuredImage a img,
   #container #clashvibes_right_column article.post figure.attachment a img,
-  #container #clashvibes_right_column article.page figure.thumb a img,
+  #container #clashvibes_right_column article.page figure.featuredImage a img,
   #container #clashvibes_right_column article.page figure.attachment a img {
-    margin: 0;
+    margin: 0 auto;
     display: block;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos header.archive-header,
   #container #clashvibes_right_column article.clash-audio header.archive-header,
@@ -3253,13 +3260,13 @@ a {
   #container #clashvibes_left_column section#clashvibes_login form.search-form label span.screen-reader-text {
     line-height: 35px;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="search"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form label input.search-field {
     width: 100%;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form input.search-submit {
     margin: 0.5em auto;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"]:hover {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form input.search-submit:hover {
     cursor: pointer;
   }
   #container #clashvibes_left_column h1 {
@@ -3503,17 +3510,17 @@ a {
   #container #clashvibes_right_column article.post div.post-thumbnail img,
   #container #clashvibes_right_column article.page a.post-thumbnail img,
   #container #clashvibes_right_column article.page div.post-thumbnail img {
-    margin: 0;
+    margin: 0 auto;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb,
-  #container #clashvibes_right_column article.clash-videos figure.attachment,
-  #container #clashvibes_right_column article.clash-audio figure.thumb,
-  #container #clashvibes_right_column article.clash-audio figure.attachment,
-  #container #clashvibes_right_column article.post figure.thumb,
-  #container #clashvibes_right_column article.post figure.attachment,
-  #container #clashvibes_right_column article.page figure.thumb,
-  #container #clashvibes_right_column article.page figure.attachment {
-    width: 80%;
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-videos figure.attachment img,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-audio figure.attachment img,
+  #container #clashvibes_right_column article.post figure.featuredImage img,
+  #container #clashvibes_right_column article.post figure.attachment img,
+  #container #clashvibes_right_column article.page figure.featuredImage img,
+  #container #clashvibes_right_column article.page figure.attachment img {
+    margin: 0 auto;
   }
   #container #clashvibes_right_column article.clash-videos header.archive-header,
   #container #clashvibes_right_column article.clash-audio header.archive-header,
@@ -4561,13 +4568,13 @@ a {
   #container #clashvibes_left_column section#clashvibes_login form.search-form label span.screen-reader-text {
     line-height: 35px;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="search"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form label input.search-field {
     width: 100%;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form input.search-submit {
     margin: 0.5em auto;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"]:hover {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form input.search-submit:hover {
     cursor: pointer;
   }
   #container #clashvibes_left_column h1 {
@@ -4792,17 +4799,17 @@ a {
   #container #clashvibes_right_column article.post div.post-thumbnail img,
   #container #clashvibes_right_column article.page a.post-thumbnail img,
   #container #clashvibes_right_column article.page div.post-thumbnail img {
-    margin: 0;
+    margin: 0 auto;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb,
-  #container #clashvibes_right_column article.clash-videos figure.attachment,
-  #container #clashvibes_right_column article.clash-audio figure.thumb,
-  #container #clashvibes_right_column article.clash-audio figure.attachment,
-  #container #clashvibes_right_column article.post figure.thumb,
-  #container #clashvibes_right_column article.post figure.attachment,
-  #container #clashvibes_right_column article.page figure.thumb,
-  #container #clashvibes_right_column article.page figure.attachment {
-    width: 85%;
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-videos figure.attachment img,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-audio figure.attachment img,
+  #container #clashvibes_right_column article.post figure.featuredImage img,
+  #container #clashvibes_right_column article.post figure.attachment img,
+  #container #clashvibes_right_column article.page figure.featuredImage img,
+  #container #clashvibes_right_column article.page figure.attachment img {
+    margin: 0 auto;
   }
   #container #clashvibes_right_column article.clash-videos header.archive-header,
   #container #clashvibes_right_column article.clash-audio header.archive-header,
@@ -5762,13 +5769,13 @@ a {
   #container #clashvibes_left_column section#clashvibes_login form.search-form label span.screen-reader-text {
     line-height: 35px;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="search"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form label input.search-field {
     width: 97%;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form input.search-submit {
     margin: 0.5em auto;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"]:hover {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form input.search-submit:hover {
     cursor: pointer;
   }
   #container #clashvibes_left_column h1 {
@@ -5989,17 +5996,17 @@ a {
   #container #clashvibes_right_column article.post div.post-thumbnail img,
   #container #clashvibes_right_column article.page a.post-thumbnail img,
   #container #clashvibes_right_column article.page div.post-thumbnail img {
-    margin: 0;
+    margin: 0 auto;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb,
-  #container #clashvibes_right_column article.clash-videos figure.attachment,
-  #container #clashvibes_right_column article.clash-audio figure.thumb,
-  #container #clashvibes_right_column article.clash-audio figure.attachment,
-  #container #clashvibes_right_column article.post figure.thumb,
-  #container #clashvibes_right_column article.post figure.attachment,
-  #container #clashvibes_right_column article.page figure.thumb,
-  #container #clashvibes_right_column article.page figure.attachment {
-    width: 85%;
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-videos figure.attachment img,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-audio figure.attachment img,
+  #container #clashvibes_right_column article.post figure.featuredImage img,
+  #container #clashvibes_right_column article.post figure.attachment img,
+  #container #clashvibes_right_column article.page figure.featuredImage img,
+  #container #clashvibes_right_column article.page figure.attachment img {
+    margin: 0 auto;
   }
   #container #clashvibes_right_column article.clash-videos header.archive-header,
   #container #clashvibes_right_column article.clash-audio header.archive-header,
@@ -6950,13 +6957,13 @@ a {
   #container #clashvibes_left_column section#clashvibes_login form.search-form label span.screen-reader-text {
     line-height: 35px;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form label input[type="search"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form label input.search-field {
     width: 97%;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"] {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form input.search-submit {
     margin: 0.5em auto;
   }
-  #container #clashvibes_left_column section#clashvibes_login form.search-form input[type="submit"]:hover {
+  #container #clashvibes_left_column section#clashvibes_login form.search-form input.search-submit:hover {
     cursor: pointer;
   }
   #container #clashvibes_left_column h1 {
@@ -7176,17 +7183,17 @@ a {
   #container #clashvibes_right_column article.post div.post-thumbnail img,
   #container #clashvibes_right_column article.page a.post-thumbnail img,
   #container #clashvibes_right_column article.page div.post-thumbnail img {
-    margin: 0;
+    margin: 0 auto;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb,
-  #container #clashvibes_right_column article.clash-videos figure.attachment,
-  #container #clashvibes_right_column article.clash-audio figure.thumb,
-  #container #clashvibes_right_column article.clash-audio figure.attachment,
-  #container #clashvibes_right_column article.post figure.thumb,
-  #container #clashvibes_right_column article.post figure.attachment,
-  #container #clashvibes_right_column article.page figure.thumb,
-  #container #clashvibes_right_column article.page figure.attachment {
-    width: 90%;
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-videos figure.attachment img,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-audio figure.attachment img,
+  #container #clashvibes_right_column article.post figure.featuredImage img,
+  #container #clashvibes_right_column article.post figure.attachment img,
+  #container #clashvibes_right_column article.page figure.featuredImage img,
+  #container #clashvibes_right_column article.page figure.attachment img {
+    margin: 0 auto;
   }
   #container #clashvibes_right_column article.clash-videos header.archive-header,
   #container #clashvibes_right_column article.clash-audio header.archive-header,
@@ -9783,23 +9790,23 @@ a {
     width: 90%;
     padding: 0;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb,
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage,
   #container #clashvibes_right_column article.clash-videos figure.attachment,
-  #container #clashvibes_right_column article.clash-audio figure.thumb,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage,
   #container #clashvibes_right_column article.clash-audio figure.attachment,
-  #container #clashvibes_right_column article.post figure.thumb,
+  #container #clashvibes_right_column article.post figure.featuredImage,
   #container #clashvibes_right_column article.post figure.attachment,
-  #container #clashvibes_right_column article.page figure.thumb,
+  #container #clashvibes_right_column article.page figure.featuredImage,
   #container #clashvibes_right_column article.page figure.attachment {
     width: 30%;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb img,
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage img,
   #container #clashvibes_right_column article.clash-videos figure.attachment img,
-  #container #clashvibes_right_column article.clash-audio figure.thumb img,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage img,
   #container #clashvibes_right_column article.clash-audio figure.attachment img,
-  #container #clashvibes_right_column article.post figure.thumb img,
+  #container #clashvibes_right_column article.post figure.featuredImage img,
   #container #clashvibes_right_column article.post figure.attachment img,
-  #container #clashvibes_right_column article.page figure.thumb img,
+  #container #clashvibes_right_column article.page figure.featuredImage img,
   #container #clashvibes_right_column article.page figure.attachment img {
     margin: 0;
   }
@@ -10992,17 +10999,17 @@ a {
   #container #clashvibes_right_column article.post div.post-thumbnail img,
   #container #clashvibes_right_column article.page a.post-thumbnail img,
   #container #clashvibes_right_column article.page div.post-thumbnail img {
-    margin: 0;
+    margin: 0 auto;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb,
-  #container #clashvibes_right_column article.clash-videos figure.attachment,
-  #container #clashvibes_right_column article.clash-audio figure.thumb,
-  #container #clashvibes_right_column article.clash-audio figure.attachment,
-  #container #clashvibes_right_column article.post figure.thumb,
-  #container #clashvibes_right_column article.post figure.attachment,
-  #container #clashvibes_right_column article.page figure.thumb,
-  #container #clashvibes_right_column article.page figure.attachment {
-    width: 90%;
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-videos figure.attachment img,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-audio figure.attachment img,
+  #container #clashvibes_right_column article.post figure.featuredImage img,
+  #container #clashvibes_right_column article.post figure.attachment img,
+  #container #clashvibes_right_column article.page figure.featuredImage img,
+  #container #clashvibes_right_column article.page figure.attachment img {
+    margin: 0 auto;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt,
@@ -12174,17 +12181,17 @@ a {
   #container #clashvibes_right_column article.post div.post-thumbnail img,
   #container #clashvibes_right_column article.page a.post-thumbnail img,
   #container #clashvibes_right_column article.page div.post-thumbnail img {
-    margin: 0;
+    margin: 0 auto;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb,
-  #container #clashvibes_right_column article.clash-videos figure.attachment,
-  #container #clashvibes_right_column article.clash-audio figure.thumb,
-  #container #clashvibes_right_column article.clash-audio figure.attachment,
-  #container #clashvibes_right_column article.post figure.thumb,
-  #container #clashvibes_right_column article.post figure.attachment,
-  #container #clashvibes_right_column article.page figure.thumb,
-  #container #clashvibes_right_column article.page figure.attachment {
-    width: 90%;
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-videos figure.attachment img,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-audio figure.attachment img,
+  #container #clashvibes_right_column article.post figure.featuredImage img,
+  #container #clashvibes_right_column article.post figure.attachment img,
+  #container #clashvibes_right_column article.page figure.featuredImage img,
+  #container #clashvibes_right_column article.page figure.attachment img {
+    margin: 0 auto;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt,
@@ -13549,17 +13556,17 @@ a {
   #container #clashvibes_right_column article.post div.post-thumbnail img,
   #container #clashvibes_right_column article.page a.post-thumbnail img,
   #container #clashvibes_right_column article.page div.post-thumbnail img {
-    margin: 0;
+    margin: 0 auto;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb,
-  #container #clashvibes_right_column article.clash-videos figure.attachment,
-  #container #clashvibes_right_column article.clash-audio figure.thumb,
-  #container #clashvibes_right_column article.clash-audio figure.attachment,
-  #container #clashvibes_right_column article.post figure.thumb,
-  #container #clashvibes_right_column article.post figure.attachment,
-  #container #clashvibes_right_column article.page figure.thumb,
-  #container #clashvibes_right_column article.page figure.attachment {
-    width: 90%;
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-videos figure.attachment img,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-audio figure.attachment img,
+  #container #clashvibes_right_column article.post figure.featuredImage img,
+  #container #clashvibes_right_column article.post figure.attachment img,
+  #container #clashvibes_right_column article.page figure.featuredImage img,
+  #container #clashvibes_right_column article.page figure.attachment img {
+    margin: 0 auto;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt,
@@ -14931,17 +14938,17 @@ a {
   #container #clashvibes_right_column article.post div.post-thumbnail img,
   #container #clashvibes_right_column article.page a.post-thumbnail img,
   #container #clashvibes_right_column article.page div.post-thumbnail img {
-    margin: 0;
+    margin: 0 auto;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb,
-  #container #clashvibes_right_column article.clash-videos figure.attachment,
-  #container #clashvibes_right_column article.clash-audio figure.thumb,
-  #container #clashvibes_right_column article.clash-audio figure.attachment,
-  #container #clashvibes_right_column article.post figure.thumb,
-  #container #clashvibes_right_column article.post figure.attachment,
-  #container #clashvibes_right_column article.page figure.thumb,
-  #container #clashvibes_right_column article.page figure.attachment {
-    width: 90%;
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-videos figure.attachment img,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-audio figure.attachment img,
+  #container #clashvibes_right_column article.post figure.featuredImage img,
+  #container #clashvibes_right_column article.post figure.attachment img,
+  #container #clashvibes_right_column article.page figure.featuredImage img,
+  #container #clashvibes_right_column article.page figure.attachment img {
+    margin: 0 auto;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt,
@@ -16322,17 +16329,17 @@ a {
   #container #clashvibes_right_column article.post div.post-thumbnail img,
   #container #clashvibes_right_column article.page a.post-thumbnail img,
   #container #clashvibes_right_column article.page div.post-thumbnail img {
-    margin: 0;
+    margin: 0 auto;
   }
-  #container #clashvibes_right_column article.clash-videos figure.thumb,
-  #container #clashvibes_right_column article.clash-videos figure.attachment,
-  #container #clashvibes_right_column article.clash-audio figure.thumb,
-  #container #clashvibes_right_column article.clash-audio figure.attachment,
-  #container #clashvibes_right_column article.post figure.thumb,
-  #container #clashvibes_right_column article.post figure.attachment,
-  #container #clashvibes_right_column article.page figure.thumb,
-  #container #clashvibes_right_column article.page figure.attachment {
-    width: 90%;
+  #container #clashvibes_right_column article.clash-videos figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-videos figure.attachment img,
+  #container #clashvibes_right_column article.clash-audio figure.featuredImage img,
+  #container #clashvibes_right_column article.clash-audio figure.attachment img,
+  #container #clashvibes_right_column article.post figure.featuredImage img,
+  #container #clashvibes_right_column article.post figure.attachment img,
+  #container #clashvibes_right_column article.page figure.featuredImage img,
+  #container #clashvibes_right_column article.page figure.attachment img {
+    margin: 0 auto;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt,

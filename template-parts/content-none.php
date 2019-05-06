@@ -10,7 +10,6 @@
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
 	
 		<header class="entry-header">
 			<h1 class="page-title">
@@ -58,5 +57,4 @@
 		</div><!-- .page-content -->
 
 	
-
 </article>

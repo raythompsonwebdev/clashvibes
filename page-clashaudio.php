@@ -24,7 +24,7 @@
 	<section id="clashvibes_right_column_front">
 
 		<?php
-					esc_html( the_archive_title( '<h1 class="page-title">', '</h1>' ) );
+					esc_html( the_title( '<h1 class="page-title">', '</h1>' ) );
 
 		?>
 		</h1>
@@ -33,7 +33,7 @@
 
 
 			<?php
-			$original_query = $the_query;
+			
 
 			$the_query = null;
 

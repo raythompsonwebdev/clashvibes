@@ -21,9 +21,9 @@ function clashvibes_custom_header_setup() {
 		'custom-header', apply_filters(
 			'clashvibes_custom_header_args', array(
 				'default-image'      => '',
-				'default-text-color' => '000000',
-				'width'              => 1000,
-				'height'             => 250,
+				'default-text-color' => 'FFFFFF',
+				'width'              => 1600,
+				'height'             => 80,
 				'flex-height'        => true,
 				'wp-head-callback'   => 'clashvibes_header_style',
 			)

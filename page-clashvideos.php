@@ -25,20 +25,20 @@
 
 
 		<?php
-			the_archive_title( '<h1 class="page-title">', '</h1>' );
+			the_title( '<h1 class="page-title">', '</h1>' );
 
 		?>
 
 		<section id="new_released_section">
 
 			<?php
-			$original_query = $the_query;
+			
 			$the_query = null;
 
 			$args      = array(
 
 				'post_type'  => 'clash-videos',
-				'post_count' => '5',
+				'post_count' => '20',
 			);
 			$the_query = new WP_Query( $args );
 			?>

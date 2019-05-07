@@ -1,13 +1,16 @@
 
-.sass-cache
-node_modules
-dist
-images
+.phpintel/
+.sass-cache/
+node_modules/
+nbproject/
+dist/
+images/
+docs/
 js/old-browser-scripts/
 js/sparefiles/
-docs/
 fonts/
+files-doc/
+phpcs.xml.dist
 
-package-lock.json
 composer.json
 composer.lock

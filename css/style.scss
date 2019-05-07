@@ -1431,7 +1431,7 @@ License: GNU General Public License v2 or later
 					height:auto;
 					margin: 2em auto;
 					display: block;
-					border: 1px solid $color11;
+					
 					@include originTran(50% 50%);
 					@include box-sizing($type: border-box);
 					@include Transition(all 0.2s linear 0s);
@@ -1565,7 +1565,7 @@ License: GNU General Public License v2 or later
 					width: 98%;
 					display: block;
 					margin: 0 auto;
-					height: auto;
+					min-height: 50px;
 
 					//text
 					p {

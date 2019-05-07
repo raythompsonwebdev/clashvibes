@@ -1711,7 +1711,6 @@ a {
     height: auto;
     margin: 2em auto;
     display: block;
-    border: 1px solid #d6d5d4;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
@@ -1894,7 +1893,7 @@ a {
     width: 98%;
     display: block;
     margin: 0 auto;
-    height: auto;
+    min-height: 50px;
   }
   #container #clashvibes_right_column article.clash-videos div.entry-content p,
   #container #clashvibes_right_column article.clash-videos div.entry-attachment p,

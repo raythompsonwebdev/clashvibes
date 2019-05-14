@@ -19,40 +19,69 @@ get_header(); ?>
 
 <div id="clashvibes_content_front">
 
-	<section id="clashvibes-text">
+	<article id="clashvibes-text">
 
 	<h1><?php the_title(); ?> Page</h1>
 
-	<p>Mannering Music. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
+		
+	<p>
+	<?php
+	_e(
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+	</p>
 
-<p>Donec malesuada tristique felis. Etiam ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor sollicitudin tortor.&nbsp;</p>
+	<h2><?php _e('Heading 1', 'clashvibes'); ?></h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo hendrerit mi. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
+	<figure class="text-img">
+		<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sampleimage(110x110).gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
+	</figure>
 
+	<p>
+	<?php
+	_e(
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+	</p>
+	<?php
+	_e(
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+	</p>
 
-<figure class="aligncenter"></figure>
+	<h2><?php _e('Heading 1', 'clashvibes'); ?></h2>
 
+	<figure class="text-img">
+		<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sampleimage(110x110).gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
+	</figure>
 
-<p>Mannering Music. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
+	<p>
+	<?php
+	_e(
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+	</p>
+	<?php
+	_e(
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+	</p>
 
+	<h2><?php _e('Heading 1', 'clashvibes'); ?></h2>
 
+	<figure class="text-img">
+		<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sampleimage(110x110).gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
+	</figure>
 
-<p>Donec malesuada tristique felis. Etiam ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor sollicitudin tortor.&nbsp;</p>
+	<p>
+	<?php
+	_e(
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+	</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo hendrerit mi. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
+	<p>
+	<?php
+	_e(
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+	</p>
 
-<figure class="aligncenter"></figure>
-
-<p>Mannering Music. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
-
-<p>Donec malesuada tristique felis. Etiam ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor sollicitudin tortor.&nbsp;</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo hendrerit mi. Praesent libero lorem, sollicitudin bibendum, ultricies in, pharetra id, risus.</p>
-
-<p></p>
-
-
-	</section><!-- end of right panel -->
+	</article>
+	
 
 </div>
 <?php get_footer(); ?>

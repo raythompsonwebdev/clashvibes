@@ -33,14 +33,14 @@
 
 			<?php
 			
-			$the_query = null;
+				$the_query = null;
 
-			$args      = array(
+				$args      = array(
 
-				'post_type'  => 'clash-videos',
-				'post_count' => '20',
-			);
-			$the_query = new WP_Query( $args );
+					'post_type'  => 'clash-videos',
+					'post_count' => '20',
+				);
+				$the_query = new WP_Query( $args );
 			?>
 
 			<?php
@@ -95,11 +95,14 @@
 		</section>
 		<!--End of news release section-->
 
+		
+
 		<div class="clearfix"></div>
 
 		<!-- end of right panel -->
 
 	</section>
+
 </div>
 
 

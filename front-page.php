@@ -30,7 +30,6 @@ get_header(); ?>
 			<?php esc_html_e( 'Latest Sound Clashes ', 'clashvibes' ); ?>
 		</h1>
 
-
 		<!--Start of news release section-->
 		<section id="new_released_section">
 
@@ -38,33 +37,33 @@ get_header(); ?>
 			<?php
 			
 
-			$the_query = null;
+				$the_query = null;
 
-			$args      = array(
-				'tax_query'  => array(
-					'relation' => 'OR',
-					array(
-						'taxonomy' => 'audio-category',
-						'field'    => 'slug',
-						'terms'    => 'new-releases',
+				$args      = array(
+					'tax_query'  => array(
+						'relation' => 'OR',
+						array(
+							'taxonomy' => 'audio-category',
+							'field'    => 'slug',
+							'terms'    => 'new-releases',
+						),
+						array(
+							'taxonomy' => 'video-category',
+							'field'    => 'slug',
+							'terms'    => 'new-releases',
+						),
 					),
-					array(
-						'taxonomy' => 'video-category',
-						'field'    => 'slug',
-						'terms'    => 'new-releases',
-					),
-				),
-				'post_type'  => array( 'clash-audio', 'clash-videos' ),
-				'post_count' => '5',
-			);
-			$the_query = new WP_Query( $args );
+					'post_type'  => array( 'clash-audio', 'clash-videos' ),
+					'post_count' => '5',
+				);
+				$the_query = new WP_Query( $args );
 			?>
 
 			<?php
-			if ( $the_query->have_posts() ) :
+				if ( $the_query->have_posts() ) :
 				while ( $the_query->have_posts() ) :
-					$the_query->the_post();
-					?>
+				$the_query->the_post();
+			?>
 
 			<article class="new_released_box">
 
@@ -94,10 +93,10 @@ get_header(); ?>
 				<div class="clearfix"></div>
 			</article>
 
-					<?php
-				endwhile;
-else :
-	?>
+				<?php
+					endwhile;
+					else :
+				?>
 			<article class="new_released_box">
 
 				<figure class="thumbaud">
@@ -115,10 +114,10 @@ else :
 				</figure>
 
 			</article>
-			<?php
-				endif;
-wp_reset_postdata();
-?>
+				<?php
+					endif;
+					wp_reset_postdata();
+				?>
 
 
 		</section>
@@ -224,8 +223,8 @@ wp_reset_postdata();
 
 				<?php
 					endif;
-				wp_reset_postdata();
-?>
+					wp_reset_postdata();
+				?>
 
 
 
@@ -233,8 +232,10 @@ wp_reset_postdata();
 
 		</div>
 		<div class="clearfix"></div>
+
 	</section>
 	<!-- end of right panel -->
 
 </div>
+
 <?php get_footer(); ?>

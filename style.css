@@ -404,18 +404,18 @@ a {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
   }
-  #container header span#socialmediatop a {
+  #container header span#socialmediatop a.social-icon {
     height: 100%;
     display: inline-block;
     color: #000000;
     width: 23.5%;
     text-align: center;
   }
-  #container header span#socialmediatop a span {
+  #container header span#socialmediatop a.social-icon span {
     display: block;
     height: 100%;
   }
-  #container header span#socialmediatop a span i {
+  #container header span#socialmediatop a.social-icon span i {
     font-size: 1.4em;
     display: block;
     height: 100%;
@@ -1304,11 +1304,11 @@ a {
     color: #000000;
     background-color: #e9ad29;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
     display: block;
   }
-  #container #clashvibes_left_column .blog_box .widget h2 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     background-color: #658905;
     text-align: center;
     height: 40px;
@@ -1317,55 +1317,96 @@ a {
     padding: 0;
     font-size: 1.2em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul,
-  #container #clashvibes_left_column .blog_box .widget ul.comments,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     padding: 0;
     margin: 0.5em 0;
     height: auto;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:before, #container #clashvibes_left_column .blog_box .widget ul:after,
-  #container #clashvibes_left_column .blog_box .widget ul.comments:before,
-  #container #clashvibes_left_column .blog_box .widget ul.comments:after,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments:before,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:before, #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     content: '';
     display: table;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:after,
-  #container #clashvibes_left_column .blog_box .widget ul.comments:after,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     clear: both;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li,
-  #container #clashvibes_left_column .blog_box .widget ul li.recentcomments,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li.recentcomments,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li.recentcomments {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     list-style: none;
     display: block;
     line-height: 40px;
     text-align: center;
     width: 100%;
     margin-bottom: 0.2em;
+    background-color: #000000;
+    color: #ffffff;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li span.comment-author-link,
-  #container #clashvibes_left_column .blog_box .widget ul li.recentcomments span.comment-author-link,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li span.comment-author-link,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li.recentcomments span.comment-author-link,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li span.comment-author-link,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li.recentcomments span.comment-author-link {
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
     margin: 0;
     padding: 0;
     height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a,
-  #container #clashvibes_left_column .blog_box .widget ul li.recentcomments a,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li a,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li.recentcomments a,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li a,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li.recentcomments a {
+  #container #clashvibes_left_column .blog_box div.widget ul li a,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffffff;
+    -webkit-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -o-transition: all 0.2s linear 0s;
+    -ms-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+    font-size: 0.9em;
+    font-size: 100%;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a:active,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:active,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:active,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:active,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:active,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:active {
+    background-color: #e9ad29;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url {
+    font-size: 100%;
     padding: 0;
     margin: 0;
     height: 100%;
@@ -1374,48 +1415,21 @@ a {
     text-decoration: none;
     background-color: #000000;
     color: #ffffff;
-    letter-spacing: 0.05em;
-    -webkit-transform-origin: 50% 50%;
-    -moz-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -webkit-transition: all 0.2s linear 0s;
-    -moz-transition: all 0.2s linear 0s;
-    -o-transition: all 0.2s linear 0s;
-    -ms-transition: all 0.2s linear 0s;
-    transition: all 0.2s linear 0s;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover,
-  #container #clashvibes_left_column .blog_box .widget ul li.recentcomments a:hover,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li a:hover,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li.recentcomments a:hover,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li a:hover,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li.recentcomments a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:active,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:active,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:active,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:active,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:active,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:active {
     background-color: #e9ad29;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a.url,
-  #container #clashvibes_left_column .blog_box .widget ul li.recentcomments a.url,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li a.url,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li.recentcomments a.url,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li a.url,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li.recentcomments a.url {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    background-color: #ffffff;
-    color: #000000;
-    letter-spacing: 0.05em;
-  }
-  #container #clashvibes_left_column .blog_box .widget ul li a.url:hover,
-  #container #clashvibes_left_column .blog_box .widget ul li.recentcomments a.url:hover,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li a.url:hover,
-  #container #clashvibes_left_column .blog_box .widget ul.comments li.recentcomments a.url:hover,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li a.url:hover,
-  #container #clashvibes_left_column .blog_box .widget ul.recentcomments li.recentcomments a.url:hover {
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
     font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
@@ -1512,6 +1526,7 @@ a {
     /*regular post entry*/
     /*custom post entry*/
     /*custom-post-footer*/
+    /*Social media share buttons*/
   }
   #container #clashvibes_right_column article.clash-videos h1,
   #container #clashvibes_right_column article.clash-videos h2,
@@ -1552,7 +1567,7 @@ a {
     display: block;
     margin: 1em auto;
     width: 75%;
-    height: 315px;
+    height: 360px;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header,
   #container #clashvibes_right_column article.clash-audio header.entry-header,
@@ -1907,6 +1922,8 @@ a {
     font-size: 0.9em;
     line-height: 1.9em;
     display: block;
+    margin: 0;
+    padding: 0;
   }
   #container #clashvibes_right_column article.clash-videos div.entry-content p a,
   #container #clashvibes_right_column article.clash-videos div.entry-attachment p a,
@@ -2698,6 +2715,105 @@ a {
     font-size: 0.9em;
     text-indent: 0.2em;
   }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy,
+  #container #clashvibes_right_column article.post div.sharedaddy,
+  #container #clashvibes_right_column article.page div.sharedaddy {
+    width: 100%;
+    margin: 3% auto;
+    display: block;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy h3.sd-title,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy h3.sd-title,
+  #container #clashvibes_right_column article.post div.sharedaddy h3.sd-title,
+  #container #clashvibes_right_column article.page div.sharedaddy h3.sd-title {
+    display: block;
+    font-size: 0.95em;
+    margin: 0;
+    outline: none;
+    line-height: 40px;
+    width: 100%;
+    height: auto;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy h3.sd-title::before,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy h3.sd-title::before,
+  #container #clashvibes_right_column article.post div.sharedaddy h3.sd-title::before,
+  #container #clashvibes_right_column article.page div.sharedaddy h3.sd-title::before {
+    border: none;
+    width: 10%;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content {
+    margin: 0;
+    width: 100%;
+    display: inline-block;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul {
+    font-size: 1em;
+    text-indent: 0;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin: 0;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li {
+    width: 10%;
+    display: inline-block;
+    padding: 0;
+    margin: 0 1em 0 0;
+    height: 100%;
+    color: #000000;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a {
+    background-color: #347026;
+    display: block;
+    margin: 0;
+    height: 100%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s;
+    -ms-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a:hover,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a:hover,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a:hover,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a:hover {
+    color: #347026;
+    background-color: #d1181e;
+    width: 100%;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a:before,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a:before,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a:before,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a:before {
+    display: block;
+    width: 100%;
+    color: #000000;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a span,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a span,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a span,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a span {
+    display: block;
+    color: #000000;
+    width: 100%;
+  }
   #container #clashvibes_right_column .navigation {
     margin: 0;
     padding: 0;
@@ -2705,18 +2821,19 @@ a {
   }
   #container #clashvibes_right_column .navigation h2 {
     margin-bottom: 0.2em;
+    color: #ffffff;
   }
   #container #clashvibes_right_column .navigation span {
     display: inline-block;
     width: 100%;
     height: 100%;
-    margin-bottom: 0.2em;
   }
   #container #clashvibes_right_column .navigation span a {
     font-size: 0.9em;
     width: 100%;
     display: inline-block;
-    color: #000;
+    color: #ffffff;
+    background-color: #000000;
     line-height: 50px;
     text-align: center;
     -webkit-transition: all 0.2s linear 0s;
@@ -2726,9 +2843,22 @@ a {
     transition: all 0.2s linear 0s;
   }
   #container #clashvibes_right_column .navigation span a:hover {
-    color: #fff;
-    background-color: #000;
+    color: #ffffff;
+    background-color: #000000;
     font-weight: bold;
+  }
+  #container #clashvibes_right_column .navigation span a:after {
+    font-family: 'FontAwesome';
+    content: "\f028";
+    font-size: 1.6em;
+    line-height: 50px;
+    float: right;
+    width: 3%;
+    display: inline-block;
+  }
+  #container #clashvibes_right_column .navigation span a:active {
+    background-color: #658905;
+    color: #000000;
   }
   #container #news_section {
     float: left;
@@ -2972,8 +3102,9 @@ a {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: inline-block;
+    float: right;
     width: 8%;
+    display: block;
   }
   #container #clashvibes_footer ul#social-media-box li {
     width: 100%;
@@ -2991,14 +3122,29 @@ a {
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
     color: #ffffff;
-    font-size: 1.7em;
+    font-size: 1.6em;
     line-height: 50px;
     display: block;
     text-align: center;
   }
   #container #clashvibes_footer ul#social-media-box li a span i:hover {
     color: #cccc66;
-    font-size: 1.8em;
+    font-weight: bold;
+  }
+  #container .copy {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: inline-block;
+  }
+  #container .copy a {
+    color: #000;
+    display: inline-block;
+    width: auto;
+  }
+  #container .copy a:hover {
+    font-weight: bold;
   }
 }
 @media only screen and (max-width: 1440px) {
@@ -3359,26 +3505,59 @@ a {
   #container #clashvibes_left_column .blog_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a:hover {
     color: #000000;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
     display: block;
   }
-  #container #clashvibes_left_column .blog_box .widget h3 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     font-size: 1.15em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     margin: 0.5em 0;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     line-height: 40px;
     margin-bottom: 0.2em;
+    font-size: 0.9em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a {
-    font-size: 0.85em;
-    margin: 0 0 1% 0;
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
+    height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a {
+    font-size: 0.9em;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
+    font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
     color: #ebe7e3;
@@ -3412,6 +3591,7 @@ a {
     /*--- blog image---*/
     /*--- custom post images---*/
     /*custom-post-footer*/
+    /*Social media share buttons*/
   }
   #container #clashvibes_right_column article.clash-videos h1,
   #container #clashvibes_right_column article.clash-videos h2,
@@ -3641,7 +3821,7 @@ a {
   #container #clashvibes_right_column article.clash-audio div.entry-content ul,
   #container #clashvibes_right_column article.post div.entry-content ul,
   #container #clashvibes_right_column article.page div.entry-content ul {
-    width: 90%;
+    font-size: 0.9em;
   }
   #container #clashvibes_right_column article.clash-videos div.entry-content ul figure,
   #container #clashvibes_right_column article.clash-audio div.entry-content ul figure,
@@ -4170,6 +4350,80 @@ a {
   #container #clashvibes_right_column article.page footer.speaker-meta ul.post-meta p {
     width: 79%;
   }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy,
+  #container #clashvibes_right_column article.post div.sharedaddy,
+  #container #clashvibes_right_column article.page div.sharedaddy {
+    margin: 3% auto;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy h3.sd-title,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy h3.sd-title,
+  #container #clashvibes_right_column article.post div.sharedaddy h3.sd-title,
+  #container #clashvibes_right_column article.page div.sharedaddy h3.sd-title {
+    font-size: 0.95em;
+    line-height: 40px;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy h3.sd-title::before,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy h3.sd-title::before,
+  #container #clashvibes_right_column article.post div.sharedaddy h3.sd-title::before,
+  #container #clashvibes_right_column article.page div.sharedaddy h3.sd-title::before {
+    width: 10%;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul {
+    font-size: 1em;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li {
+    width: 10%;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a {
+    background-color: #347026;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a:hover,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a:hover,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a:hover,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a:hover {
+    color: #347026;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a:before,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a:before,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a:before,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a:before {
+    display: block;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a span,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a span,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a span,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a span {
+    display: block;
+  }
+  #container #clashvibes_right_column .navigation {
+    margin: 0;
+  }
+  #container #clashvibes_right_column .navigation h2 {
+    color: #ffffff;
+  }
+  #container #clashvibes_right_column .navigation span {
+    display: inline-block;
+  }
+  #container #clashvibes_right_column .navigation span a {
+    font-size: 0.9em;
+  }
+  #container #clashvibes_right_column .navigation span a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_right_column .navigation span a:after {
+    font-size: 1.5em;
+    width: 4%;
+  }
   #container #news_section {
     float: left;
   }
@@ -4330,11 +4584,8 @@ a {
     display: block;
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
-    font-size: 1.6em;
+    font-size: 1.5em;
     line-height: 50px;
-  }
-  #container #clashvibes_footer ul#social-media-box li a span i:hover {
-    font-size: 1.7em;
   }
 }
 @media only screen and (max-width: 1280px) {
@@ -4361,7 +4612,7 @@ a {
     height: 70px;
   }
   #container header #clashvibes_title {
-    width: 68%;
+    width: 70%;
   }
   #container header #clashvibes_title h1 {
     font-size: 2.3em;
@@ -4371,7 +4622,7 @@ a {
     font-size: 0.7em;
   }
   #container header span#socialmediatop {
-    width: 20%;
+    width: 25%;
   }
   #container header span#socialmediatop a {
     width: 23.5%;
@@ -4665,25 +4916,50 @@ a {
   #container #clashvibes_left_column .blog_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a:hover {
     color: #000000;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget h3 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     font-size: 1.1em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     margin: 0.5em 0;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     line-height: 40px;
     margin-bottom: 0.2em;
+    font-size: 0.85em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a {
-    font-size: 0.8em;
-    margin: 0 0 1% 0;
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
+    height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
+    font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
     color: #ebe7e3;
@@ -4719,6 +4995,7 @@ a {
     /*custom post header*/
     /*blog footer*/
     /*custom-post-footer*/
+    /*Social media share buttons*/
   }
   #container #clashvibes_right_column article.clash-videos h1,
   #container #clashvibes_right_column article.clash-videos h2,
@@ -5395,7 +5672,7 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt iframe {
     margin: 0 auto;
     width: 75%;
-    height: 245px;
+    height: 360px;
   }
   #container #clashvibes_right_column article.clash-videos footer.speaker-meta,
   #container #clashvibes_right_column article.clash-audio footer.speaker-meta,
@@ -5433,6 +5710,77 @@ a {
   #container #clashvibes_right_column article.post footer.speaker-meta ul.post-meta p,
   #container #clashvibes_right_column article.page footer.speaker-meta ul.post-meta p {
     width: 77%;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy,
+  #container #clashvibes_right_column article.post div.sharedaddy,
+  #container #clashvibes_right_column article.page div.sharedaddy {
+    margin: 3% auto;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy h3.sd-title,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy h3.sd-title,
+  #container #clashvibes_right_column article.post div.sharedaddy h3.sd-title,
+  #container #clashvibes_right_column article.page div.sharedaddy h3.sd-title {
+    font-size: 0.9em;
+    line-height: 40px;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy h3.sd-title::before,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy h3.sd-title::before,
+  #container #clashvibes_right_column article.post div.sharedaddy h3.sd-title::before,
+  #container #clashvibes_right_column article.page div.sharedaddy h3.sd-title::before {
+    width: 10%;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul {
+    font-size: 0.9em;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li {
+    width: 10%;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a {
+    background-color: #347026;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a:hover,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a:hover,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a:hover,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a:hover {
+    color: #347026;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a:before,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a:before,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a:before,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a:before {
+    display: block;
+  }
+  #container #clashvibes_right_column article.clash-videos div.sharedaddy div.sd-content ul li a span,
+  #container #clashvibes_right_column article.clash-audio div.sharedaddy div.sd-content ul li a span,
+  #container #clashvibes_right_column article.post div.sharedaddy div.sd-content ul li a span,
+  #container #clashvibes_right_column article.page div.sharedaddy div.sd-content ul li a span {
+    display: block;
+  }
+  #container #clashvibes_right_column .navigation {
+    margin: 0;
+  }
+  #container #clashvibes_right_column .navigation h2 {
+    color: #ffffff;
+  }
+  #container #clashvibes_right_column .navigation span {
+    display: inline-block;
+  }
+  #container #clashvibes_right_column .navigation span a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_right_column .navigation span a:after {
+    font-size: 1.4em;
+    width: 5%;
   }
   #container #news_section {
     float: left;
@@ -5592,11 +5940,8 @@ a {
     display: block;
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
-    font-size: 1.5em;
+    font-size: 1.4em;
     line-height: 50px;
-  }
-  #container #clashvibes_footer ul#social-media-box li a span i:hover {
-    font-size: 1.6em;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -5623,7 +5968,7 @@ a {
     height: 65px;
   }
   #container header #clashvibes_title {
-    width: 67%;
+    width: 70%;
   }
   #container header #clashvibes_title h1 {
     font-size: 2.2em;
@@ -5866,25 +6211,49 @@ a {
   #container #clashvibes_left_column .blog_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a:hover {
     color: #000000;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget h3 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     font-size: 1.1em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     margin: 0.5em 0;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     line-height: 40px;
     margin-bottom: 0.2em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a {
-    font-size: 0.8em;
-    margin: 0 0 1% 0;
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
+    height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
+    font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
     color: #ebe7e3;
@@ -6783,11 +7152,8 @@ a {
     display: block;
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 50px;
-  }
-  #container #clashvibes_footer ul#social-media-box li a span i:hover {
-    font-size: 1.6em;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -6814,7 +7180,7 @@ a {
     height: 65px;
   }
   #container header #clashvibes_title {
-    width: 61%;
+    width: 60%;
   }
   #container header #clashvibes_title h1 {
     font-size: 2.1em;
@@ -7054,25 +7420,49 @@ a {
   #container #clashvibes_left_column .blog_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a:hover {
     color: #000000;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget h3 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     font-size: 1em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     margin: 0.5em 0;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     line-height: 40px;
     margin-bottom: 0.2em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a {
-    font-size: 0.75em;
-    margin: 0 0 1% 0;
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
+    height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
+    font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
     color: #ebe7e3;
@@ -7997,11 +8387,8 @@ a {
     display: block;
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
-    font-size: 1.4em;
+    font-size: 1.2em;
     line-height: 50px;
-  }
-  #container #clashvibes_footer ul#social-media-box li a span i:hover {
-    font-size: 1.5em;
   }
 }
 /*tablet*/
@@ -8105,18 +8492,7 @@ a {
     font-size: 0.65em;
   }
   #container header span#socialmediatop {
-    width: 35%;
-  }
-  #container header span#socialmediatop a {
-    display: inline-block;
-    width: 23%;
-  }
-  #container header span#socialmediatop a span {
-    display: block;
-    height: 100%;
-  }
-  #container header span#socialmediatop a span i {
-    font-size: 0.9em;
+    display: none;
   }
   #container nav {
     position: fixed;
@@ -8282,32 +8658,62 @@ a {
   #container #clashvibes_left_column .blog_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a:hover {
     color: #000000;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
     display: block;
   }
-  #container #clashvibes_left_column .blog_box .widget h3 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     font-size: 1.1em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     margin: 0.5em 0;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:before, #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:before, #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     content: '';
     display: table;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     clear: both;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     margin-bottom: 0.2em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a {
-    position: relative;
-    margin: 0 0 1% 0;
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
+    height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
+    font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
     color: #ebe7e3;
@@ -9284,6 +9690,7 @@ a {
   }
   #container #clashvibes_footer ul#social-media-box {
     width: 8%;
+    display: block;
   }
   #container #clashvibes_footer ul#social-media-box li {
     width: 100%;
@@ -9297,12 +9704,8 @@ a {
     display: block;
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
-    font-size: 1.6em;
+    font-size: 1.5em;
     line-height: 50px;
-  }
-  #container #clashvibes_footer ul#social-media-box li a span i:hover {
-    color: #cccc66;
-    font-size: 1.65em;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -9368,20 +9771,6 @@ a {
   #container header #clashvibes_title h2.site-description {
     line-height: 20px;
     font-size: 0.65em;
-  }
-  #container header span#socialmediatop {
-    width: 35%;
-  }
-  #container header span#socialmediatop a {
-    display: inline-block;
-    width: 23%;
-  }
-  #container header span#socialmediatop a span {
-    display: block;
-    height: 100%;
-  }
-  #container header span#socialmediatop a span i {
-    font-size: 0.9em;
   }
   #container nav {
     position: fixed;
@@ -9547,32 +9936,62 @@ a {
   #container #clashvibes_left_column .blog_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a:hover {
     color: #000000;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
     display: block;
   }
-  #container #clashvibes_left_column .blog_box .widget h3 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     font-size: 1.1em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     margin: 0.5em 0;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:before, #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:before, #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     content: '';
     display: table;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     clear: both;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     margin-bottom: 0.2em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a {
-    position: relative;
-    margin: 0 0 1% 0;
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
+    height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
+    font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
     color: #ebe7e3;
@@ -10560,12 +10979,8 @@ a {
     display: block;
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
-    font-size: 1.6em;
+    font-size: 1.4em;
     line-height: 50px;
-  }
-  #container #clashvibes_footer ul#social-media-box li a span i:hover {
-    color: #cccc66;
-    font-size: 1.65em;
   }
 }
 @media only screen and (max-width: 536px) {
@@ -10615,20 +11030,6 @@ a {
   #container header #clashvibes_title h2.site-description {
     line-height: 20px;
     font-size: 0.65em;
-  }
-  #container header span#socialmediatop {
-    width: 39%;
-  }
-  #container header span#socialmediatop a {
-    display: inline-block;
-    width: 23%;
-  }
-  #container header span#socialmediatop a span {
-    display: block;
-    height: 100%;
-  }
-  #container header span#socialmediatop a span i {
-    font-size: 0.85em;
   }
   #container nav {
     width: 250px;
@@ -10781,32 +11182,62 @@ a {
   #container #clashvibes_left_column .blog_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a:hover {
     color: #000000;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
     display: block;
   }
-  #container #clashvibes_left_column .blog_box .widget h3 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     font-size: 1.1em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     margin: 0.5em 0;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:before, #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:before, #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     content: '';
     display: table;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     clear: both;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     margin-bottom: 0.2em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a {
-    position: relative;
-    margin: 0 0 1% 0;
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
+    height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
+    font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
     color: #ebe7e3;
@@ -11723,12 +12154,8 @@ a {
     display: block;
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
-    font-size: 1.55em;
+    font-size: 1.4em;
     line-height: 50px;
-  }
-  #container #clashvibes_footer ul#social-media-box li a span i:hover {
-    color: #cccc66;
-    font-size: 1.6em;
   }
 }
 /*mobile*/
@@ -11781,25 +12208,6 @@ a {
   #container header #clashvibes_title h2.site-description {
     line-height: 20px;
     font-size: 0.6em;
-  }
-  #container header span#socialmediatop {
-    width: 75%;
-    display: none;
-  }
-  #container header span#socialmediatop a {
-    display: inline-block;
-    width: 23.5%;
-  }
-  #container header span#socialmediatop a:hover {
-    background-color: #658905;
-    color: #000000;
-  }
-  #container header span#socialmediatop a span {
-    display: block;
-    height: 100%;
-  }
-  #container header span#socialmediatop a span i {
-    font-size: 0.8em;
   }
   #container nav {
     width: 250px;
@@ -11951,32 +12359,62 @@ a {
   #container #clashvibes_left_column .blog_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a:hover {
     color: #000000;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
     display: block;
   }
-  #container #clashvibes_left_column .blog_box .widget h3 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     font-size: 1.1em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     margin: 0.5em 0;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:before, #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:before, #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     content: '';
     display: table;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     clear: both;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     margin-bottom: 0.2em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a {
-    position: relative;
-    margin: 0 0 1% 0;
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
+    height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
+    font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
     color: #ebe7e3;
@@ -12617,7 +13055,7 @@ a {
   #container #clashvibes_right_column article.post div.videoExcerpt iframe,
   #container #clashvibes_right_column article.page div.audioExcerpt iframe,
   #container #clashvibes_right_column article.page div.videoExcerpt iframe {
-    height: 215px;
+    height: 360px;
   }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1,
@@ -13090,12 +13528,8 @@ a {
     display: block;
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
-    font-size: 1.55em;
+    font-size: 1.3em;
     line-height: 50px;
-  }
-  #container #clashvibes_footer ul#social-media-box li a span i:hover {
-    color: #cccc66;
-    font-size: 1.6em;
   }
 }
 @media only screen and (max-width: 414px) {
@@ -13148,18 +13582,6 @@ a {
   }
   #container header #clashvibes_title h2.site-description {
     font-size: 0.6em;
-  }
-  #container header span#socialmediatop {
-    width: 75%;
-  }
-  #container header span#socialmediatop a {
-    width: 23.5%;
-  }
-  #container header span#socialmediatop a span {
-    height: 100%;
-  }
-  #container header span#socialmediatop a span i {
-    font-size: 0.8em;
   }
   #container nav {
     width: 250px;
@@ -13310,32 +13732,62 @@ a {
   #container #clashvibes_left_column .blog_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a:hover {
     color: #000000;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
     display: block;
   }
-  #container #clashvibes_left_column .blog_box .widget h3 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     font-size: 1.1em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     margin: 0.5em 0;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:before, #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:before, #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     content: '';
     display: table;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     clear: both;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     margin-bottom: 0.2em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a {
-    position: relative;
-    margin: 0 0 1% 0;
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
+    height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
+    font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
     color: #ebe7e3;
@@ -14471,11 +14923,8 @@ a {
     display: block;
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
-    font-size: 1.5em;
+    font-size: 1.2em;
     line-height: 50px;
-  }
-  #container #clashvibes_footer ul#social-media-box li a span i:hover {
-    font-size: 1.6em;
   }
 }
 @media only screen and (max-width: 360px) {
@@ -14532,19 +14981,6 @@ a {
   #container header #clashvibes_title h2.site-description {
     line-height: 20px;
     font-size: 0.6em;
-  }
-  #container header span#socialmediatop {
-    width: 75%;
-  }
-  #container header span#socialmediatop a {
-    display: inline-block;
-  }
-  #container header span#socialmediatop a span {
-    display: block;
-    height: 100%;
-  }
-  #container header span#socialmediatop a span i {
-    font-size: 0.8em;
   }
   #container nav {
     width: 250px;
@@ -14697,32 +15133,62 @@ a {
   #container #clashvibes_left_column .blog_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a:hover {
     color: #000000;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
     display: block;
   }
-  #container #clashvibes_left_column .blog_box .widget h3 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     font-size: 1.1em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     margin: 0.5em 0;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:before, #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:before, #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     content: '';
     display: table;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     clear: both;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     margin-bottom: 0.2em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a {
-    position: relative;
-    margin: 0 0 1% 0;
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
+    height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
+    font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
     color: #ebe7e3;
@@ -15868,11 +16334,8 @@ a {
     display: block;
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
-    font-size: 1.4em;
+    font-size: 1.1em;
     line-height: 50px;
-  }
-  #container #clashvibes_footer ul#social-media-box li a span i:hover {
-    font-size: 1.5em;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -15924,19 +16387,6 @@ a {
   #container header #clashvibes_title h2.site-description {
     line-height: 20px;
     font-size: 0.6em;
-  }
-  #container header span#socialmediatop {
-    width: 75%;
-  }
-  #container header span#socialmediatop a {
-    display: inline-block;
-  }
-  #container header span#socialmediatop a span {
-    display: block;
-    height: 100%;
-  }
-  #container header span#socialmediatop a span i {
-    font-size: 0.75em;
   }
   #container nav {
     width: 250px;
@@ -16090,32 +16540,62 @@ a {
   #container #clashvibes_left_column .blog_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a:hover {
     color: #000000;
   }
-  #container #clashvibes_left_column .blog_box .widget {
+  #container #clashvibes_left_column .blog_box div.widget {
     width: 100%;
     display: block;
   }
-  #container #clashvibes_left_column .blog_box .widget h3 {
+  #container #clashvibes_left_column .blog_box div.widget h2.widget-title {
     font-size: 1.1em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul {
+  #container #clashvibes_left_column .blog_box div.widget ul,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments {
     margin: 0.5em 0;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:before, #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:before, #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:before,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     content: '';
     display: table;
   }
-  #container #clashvibes_left_column .blog_box .widget ul:after {
+  #container #clashvibes_left_column .blog_box div.widget ul:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments:after,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments:after {
     clear: both;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li {
+  #container #clashvibes_left_column .blog_box div.widget ul li,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments {
     margin-bottom: 0.2em;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a {
-    position: relative;
-    margin: 0 0 1% 0;
+  #container #clashvibes_left_column .blog_box div.widget ul li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li span.comment-author-link,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments span.comment-author-link {
+    height: 100%;
   }
-  #container #clashvibes_left_column .blog_box .widget ul li a:hover {
-    color: #000000;
+  #container #clashvibes_left_column .blog_box div.widget ul li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_left_column .blog_box div.widget ul li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.comments li.recentcomments a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li a.url:hover,
+  #container #clashvibes_left_column .blog_box div.widget ul.recentcomments li.recentcomments a.url:hover {
+    font-weight: bold;
   }
   #container #clashvibes_left_column .blog_box span {
     color: #ebe7e3;
@@ -17248,10 +17728,7 @@ a {
     display: block;
   }
   #container #clashvibes_footer ul#social-media-box li a span i {
-    font-size: 1.2em;
-  }
-  #container #clashvibes_footer ul#social-media-box li a span i:hover {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 }
 

@@ -211,7 +211,7 @@ License: GNU General Public License v2 or later
 				-ms-flex: 0 0 auto;
 				flex: 0 0 auto;
 
-				a {
+				a.social-icon{
 					height: 100%;
 					display: inline-block;
 					color: $color4;
@@ -1106,11 +1106,11 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 					display: block;
 
-					h2 {
+					h2.widget-title {
 						background-color: $color7;
 						text-align: center;
 						height: 40px;
@@ -1137,15 +1137,38 @@ License: GNU General Public License v2 or later
 							text-align: center;
 							width: 100%;
 							margin-bottom: 0.2em;
-
+							background-color: $color4;
+							color: $color;
 							span.comment-author-link {
 								margin: 0;
 								padding: 0;
 								height: 100%;
-
 							}
 
 							a {
+								padding: 0;
+								margin: 0;
+								height: 100%;
+								text-align: center;
+								display: inline-block;
+								text-decoration: none;
+								background-color: $color4;
+								color: $color;
+								@include Transition(all 0.2s linear 0s);
+								font-size:0.9em;
+								font-size:100%;
+
+								&:hover {
+									font-weight:bold;
+									
+								}
+								&:active{
+									background-color: $color2;
+								}
+							}
+
+							a.url {
+								font-size:100%;
 								padding: 0;
 								margin: 0;
 								height: 100%;
@@ -1154,27 +1177,9 @@ License: GNU General Public License v2 or later
 								text-decoration: none;
 								background-color: $color4;
 								color: $color;
-								letter-spacing: 0.05em;
-								@include originTran(50% 50%);
-								@include Transition(all 0.2s linear 0s);
-
-								&:hover {
-									color: $color4;
+								&:active{
 									background-color: $color2;
 								}
-							}
-
-							a.url {
-
-								padding: 0;
-								margin: 0;
-								height: 100%;
-								text-align: center;
-								display: block;
-								text-decoration: none;
-								background-color: $color;
-								color: $color4;
-								letter-spacing: 0.05em;
 
 								&:hover {
 									font-weight: bold;
@@ -1320,7 +1325,7 @@ License: GNU General Public License v2 or later
 					display: block;
 					margin: 1em auto;
 					width:75%;
-					height:315px;
+					height:360px;
 				}
 
 				blockquote {
@@ -1573,6 +1578,8 @@ License: GNU General Public License v2 or later
 						font-size: 0.9em;
 						line-height: 1.9em;
 						display: block;
+						margin:0;
+						padding:0;
 
 						a {
 							color: $color4;
@@ -1922,6 +1929,81 @@ License: GNU General Public License v2 or later
 					}
 				}
 
+				/*Social media share buttons*/
+				div.sharedaddy {
+					width: 100%;
+					margin: 3% auto;
+					display: block;
+					
+	
+					h3.sd-title {
+						display: block;
+						font-size: 0.95em;
+						margin: 0;
+						outline: none;
+						line-height: 40px;
+						width: 100%;
+						height: auto;
+					}
+	
+					h3.sd-title::before {
+						border: none;
+						width: 10%;
+	
+					}
+	
+					div.sd-content {
+						margin: 0;
+						width: 100%;
+						display: inline-block;
+	
+						ul {
+							font-size: 1em;
+							text-indent: 0;
+							width: 100%;
+							height: auto;
+							display: inline-block;
+							margin: 0;
+	
+							li {
+								width: 10%;
+								display: inline-block;
+								padding: 0;
+								margin: 0 1em 0 0;
+								height: 100%;
+								color: $color4;
+	
+								a {
+									background-color: $color1;
+									display: block;
+									margin: 0;
+									height: 100%;
+									@include originTran(50% 50%);
+									@include Transition(all 0.2s ease-in 0s);
+	
+									&:hover {
+										color: $color1;
+										background-color: $color3;
+										width: 100%;
+									}
+	
+									&:before {
+										display: block;
+										width: 100%;
+										color: $color4;
+									}
+	
+									span {
+										display: block;
+										color: $color4;
+										width: 100%;
+									}
+								}
+							}
+						}
+					}
+				}
+
 				
 			}
 			.navigation{
@@ -1930,27 +2012,44 @@ License: GNU General Public License v2 or later
 				height: auto;
 				h2{
 					margin-bottom:0.2em;
+					color:$color;
+					
 				}
 				span{
 					display:inline-block;
 					width:100%;
 					height:100%;
-					margin-bottom:0.2em;
+					
 					a{
 						font-size:0.9em;
 						width:100%;
 						display:inline-block;
-						color:#000;
+						color:$color;
+						background-color:$color4;
 						line-height:50px;
 						text-align:center;
 						@include Transition(all 0.2s linear 0s);
 						&:hover{
-							color:#fff;
-							background-color:#000;
+							color:$color;
+							background-color:$color4;
 							font-weight:bold;
+						}
+						&:after {
+                            font-family: 'FontAwesome';
+                            content: "\f028";
+                            font-size: 1.6em;
+                            line-height: 50px;
+                            float: right;
+                            width: 3%;
+                            display: inline-block;
+						}
+						&:active{
+							background-color:$color7;
+							color:$color4;
 						}
 					}
 				}
+
 			}
 		}
 
@@ -2239,8 +2338,9 @@ License: GNU General Public License v2 or later
 				list-style: none;
 				margin: 0;
 				padding: 0;
-				display: inline-block;
+				float:right;
 				width: 8%;
+				display:block;
 
 				li {
 					width: 100%;
@@ -2258,19 +2358,36 @@ License: GNU General Public License v2 or later
 
 							i {
 								color: $color;
-								font-size: 1.7em;
+								font-size: 1.6em;
 								line-height: 50px;
 								display: block;
 								text-align: center;
 
 								&:hover {
 									color: $color10;
-									font-size: 1.8em;
+									font-weight:bold;
 								}
 							}
 						}
 					}
 				}
+			}
+		}
+
+		.copy{
+			font-size:10px;
+			margin:0;
+			padding:0;
+			width:auto;
+			display: inline-block;
+			a{
+				color:#000;
+				display:inline-block;
+				width:auto;
+				&:hover{
+					font-weight:bold;
+				}
+				
 			}
 		}
 	}
@@ -2703,33 +2820,48 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 					display: block;
 
-					h3 {
+					h2.widget-title {
 
 						font-size: 1.15em;
 
 					}
 
-					ul {
+					ul,
+					ul.comments,
+					ul.recentcomments {
 
 						margin: 0.5em 0;
 
-						li {
+						li,
+						li.recentcomments {
 
 							line-height: 40px;
 							margin-bottom: 0.2em;
+							font-size:0.9em;
+							span.comment-author-link {
+								
+								height: 100%;
+
+							}
 
 							a {
-								font-size: 0.85em;
-								margin: 0 0 1% 0;
+								
+								font-size:0.9em;
 
 								&:hover {
-									color: $color4;
-
+									font-weight:bold;
 								}
+							}
+
+							a.url {
+								&:hover {
+									font-weight: bold;
+								}
+
 							}
 
 						}
@@ -2948,16 +3080,15 @@ License: GNU General Public License v2 or later
 					}
 
 					ul {
-
-						width: 90%;
-
+						font-size:0.9em;
+						
 						figure {
 							width: 90%;
 
 						}
 
 						li {
-
+							
 							line-height: 40px;
 						}
 					}
@@ -3141,6 +3272,87 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+
+				/*Social media share buttons*/
+				div.sharedaddy {
+					
+					margin: 3% auto;
+						
+					h3.sd-title {
+						
+						font-size: 0.95em;
+						
+						line-height: 40px;
+						
+					}
+	
+					h3.sd-title::before {
+						
+						width: 10%;
+	
+					}
+	
+					div.sd-content {
+						
+	
+						ul {
+							font-size: 1em;
+							
+	
+							li {
+								width: 10%;
+								
+	
+								a {
+									background-color: $color1;
+									
+	
+									&:hover {
+										color: $color1;
+										
+									}
+	
+									&:before {
+										display: block;
+										
+									}
+	
+									span {
+										display: block;
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.navigation{
+				margin:0;
+				
+				h2{
+					
+					color:$color;
+				}
+				span{
+					display:inline-block;
+					
+					a{
+						font-size:0.9em;
+						
+						&:hover{
+							
+							font-weight:bold;
+						}
+						&:after {
+                            
+                            font-size: 1.5em;
+                            width: 4%;
+                            
+                        }
+					}
+				}
+
 			}
 		}
 
@@ -3365,13 +3577,9 @@ License: GNU General Public License v2 or later
 
 							i {
 
-								font-size: 1.6em;
+								font-size: 1.5em;
 								line-height: 50px;
-
-								&:hover {
-
-									font-size: 1.7em;
-								}
+								
 							}
 						}
 					}
@@ -3405,7 +3613,7 @@ License: GNU General Public License v2 or later
 			height: 70px;
 
 			#clashvibes_title {
-				width: 68%;
+				width: 70%;
 
 				h1 {
 
@@ -3420,7 +3628,7 @@ License: GNU General Public License v2 or later
 			}
 
 			span#socialmediatop {
-				width: 20%;
+				width: 25%;
 
 				a {
 					width: 23.5%;
@@ -3776,32 +3984,45 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 
-					h3 {
+					h2.widget-title {
 
 						font-size: 1.1em;
 
 					}
 
-					ul {
+					ul,
+					ul.comments,
+					ul.recentcomments {
 
 						margin: 0.5em 0;
 
-						li {
+						li,
+						li.recentcomments {
 
 							line-height: 40px;
 							margin-bottom: 0.2em;
+							font-size:0.85em;
+							span.comment-author-link {
+								
+								height: 100%;
+
+							}
 
 							a {
-								font-size: 0.8em;
-								margin: 0 0 1% 0;
-
+																
 								&:hover {
-									color: $color4;
-
+									font-weight:bold;
 								}
+							}
+
+							a.url {
+								&:hover {
+									font-weight: bold;
+								}
+
 							}
 
 						}
@@ -4145,7 +4366,7 @@ License: GNU General Public License v2 or later
 					iframe {
 						margin: 0 auto;
 						width:75%;
-						height:245px;
+						height: 360px;
 					}
 
 				}
@@ -4178,6 +4399,87 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+
+				/*Social media share buttons*/
+				div.sharedaddy {
+					
+					margin: 3% auto;
+						
+					h3.sd-title {
+						
+						font-size: 0.9em;
+						
+						line-height: 40px;
+						
+					}
+	
+					h3.sd-title::before {
+						
+						width: 10%;
+	
+					}
+	
+					div.sd-content {
+						
+	
+						ul {
+							font-size: 0.9em;
+							
+	
+							li {
+								width: 10%;
+								
+	
+								a {
+									background-color: $color1;
+									
+	
+									&:hover {
+										color: $color1;
+										
+									}
+	
+									&:before {
+										display: block;
+										
+									}
+	
+									span {
+										display: block;
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.navigation{
+				margin:0;
+				
+				h2{
+					color:$color;
+					
+				}
+				span{
+					display:inline-block;
+					
+					a{
+												
+						&:hover{
+							
+							font-weight:bold;
+						}
+						&:after {
+                            
+                            font-size: 1.4em;
+                            width: 5%;
+                            
+                        }
+					}
+				}
+
 			}
 		}
 
@@ -4400,13 +4702,9 @@ License: GNU General Public License v2 or later
 
 							i {
 
-								font-size: 1.5em;
+								font-size: 1.4em;
 								line-height: 50px;
-
-								&:hover {
-
-									font-size: 1.6em;
-								}
+								
 							}
 						}
 					}
@@ -4441,7 +4739,7 @@ License: GNU General Public License v2 or later
 			height: 65px;
 
 			#clashvibes_title {
-				width: 67%;
+				width: 70%;
 
 				h1 {
 
@@ -4747,32 +5045,45 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 
-					h3 {
+					h2.widget-title {
 
 						font-size: 1.1em;
 
 					}
 
-					ul {
+					ul,
+					ul.comments,
+					ul.recentcomments {
 
 						margin: 0.5em 0;
 
-						li {
+						li,
+						li.recentcomments {
 
 							line-height: 40px;
 							margin-bottom: 0.2em;
 
+							span.comment-author-link {
+								
+								height: 100%;
+
+							}
+
 							a {
-								font-size: 0.8em;
-								margin: 0 0 1% 0;
-
+																
 								&:hover {
-									color: $color4;
-
+									font-weight:bold;
 								}
+							}
+
+							a.url {
+								&:hover {
+									font-weight: bold;
+								}
+
 							}
 
 						}
@@ -5365,13 +5676,9 @@ License: GNU General Public License v2 or later
 
 							i {
 
-								font-size: 1.5em;
+								font-size: 1.3em;
 								line-height: 50px;
-
-								&:hover {
-
-									font-size: 1.6em;
-								}
+								
 							}
 						}
 					}
@@ -5405,7 +5712,7 @@ License: GNU General Public License v2 or later
 			height: 65px;
 
 			#clashvibes_title {
-				width: 61%;
+				width: 60%;
 
 				h1 {
 
@@ -5705,32 +6012,46 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 
-					h3 {
+					h2.widget-title {
 
 						font-size: 1em;
 
 					}
 
-					ul {
+					ul,
+					ul.comments,
+					ul.recentcomments {
 
 						margin: 0.5em 0;
 
-						li {
+						li,
+						li.recentcomments {
 
 							line-height: 40px;
 							margin-bottom: 0.2em;
 
+							span.comment-author-link {
+								
+								height: 100%;
+
+							}
+
 							a {
-								font-size: 0.75em;
-								margin: 0 0 1% 0;
-
+								
+								
 								&:hover {
-									color: $color4;
-
+									font-weight:bold;
 								}
+							}
+
+							a.url {
+								&:hover {
+									font-weight: bold;
+								}
+
 							}
 
 						}
@@ -6327,13 +6648,9 @@ License: GNU General Public License v2 or later
 
 							i {
 
-								font-size: 1.4em;
+								font-size: 1.2em;
 								line-height: 50px;
-
-								&:hover {
-
-									font-size: 1.5em;
-								}
+								
 							}
 						}
 					}
@@ -6446,21 +6763,7 @@ License: GNU General Public License v2 or later
 			}
 
 			span#socialmediatop {
-				width: 35%;
-
-				a {
-					display: inline-block;
-					width: 23%;
-
-					span {
-						display: block;
-						height: 100%;
-
-						i {
-							font-size: 0.9em;
-						}
-					}
-				}
+				display:none;
 			}
 		}
 
@@ -6614,29 +6917,44 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 					display: block;
 
-					h3 {
+					h2.widget-title {
 						font-size: 1.1em;
 
 					}
 
-					ul {
+					ul,
+					ul.comments,
+					ul.recentcomments {
 						margin: 0.5em 0;
 						@include clearfix();
 
-						li {
+						li,
+						li.recentcomments {
 							margin-bottom: 0.2em;
 
-							a {
-								position: relative;
-								margin: 0 0 1% 0;
+							span.comment-author-link {
+								
+								height: 100%;
 
+							}
+
+							a {
+								
+								
 								&:hover {
-									color: $color4;
+									font-weight:bold;
 								}
+							}
+
+							a.url {
+								&:hover {
+									font-weight: bold;
+								}
+
 							}
 
 						}
@@ -7311,7 +7629,7 @@ License: GNU General Public License v2 or later
 
 			ul#social-media-box {
 				width: 8%;
-
+				display:block;
 				li {
 					width: 100%;
 					height: 50px;
@@ -7325,13 +7643,9 @@ License: GNU General Public License v2 or later
 							display: block;
 
 							i {
-								font-size: 1.6em;
+								font-size: 1.5em;
 								line-height: 50px;
-
-								&:hover {
-									color: $color10;
-									font-size: 1.65em;
-								}
+								
 							}
 						}
 					}
@@ -7423,23 +7737,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			span#socialmediatop {
-				width: 35%;
-
-				a {
-					display: inline-block;
-					width: 23%;
-
-					span {
-						display: block;
-						height: 100%;
-
-						i {
-							font-size: 0.9em;
-						}
-					}
-				}
-			}
+			
 		}
 
 		/********** navigation **********/
@@ -7592,29 +7890,44 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 					display: block;
 
-					h3 {
+					h2.widget-title {
 						font-size: 1.1em;
 
 					}
 
-					ul {
+					ul,
+					ul.comments,
+					ul.recentcomments {
 						margin: 0.5em 0;
 						@include clearfix();
 
-						li {
+						li,
+						li.recentcomments {
 							margin-bottom: 0.2em;
 
-							a {
-								position: relative;
-								margin: 0 0 1% 0;
+							span.comment-author-link {
+								
+								height: 100%;
 
+							}
+
+							a {
+								
+								
 								&:hover {
-									color: $color4;
+									font-weight:bold;
 								}
+							}
+
+							a.url {
+								&:hover {
+									font-weight: bold;
+								}
+
 							}
 
 						}
@@ -8305,13 +8618,10 @@ License: GNU General Public License v2 or later
 							display: block;
 
 							i {
-								font-size: 1.6em;
+								font-size: 1.4em;
 								line-height: 50px;
 
-								&:hover {
-									color: $color10;
-									font-size: 1.65em;
-								}
+								
 							}
 						}
 					}
@@ -8380,23 +8690,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			span#socialmediatop {
-				width: 39%;
-
-				a {
-					display: inline-block;
-					width: 23%;
-
-					span {
-						display: block;
-						height: 100%;
-
-						i {
-							font-size: 0.85em;
-						}
-					}
-				}
-			}
+			
 		}
 
 		/********** navigation **********/
@@ -8537,29 +8831,44 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 					display: block;
 
-					h3 {
+					h2.widget-title {
 						font-size: 1.1em;
 
 					}
 
-					ul {
+					ul,
+					ul.comments,
+					ul.recentcomments {
 						margin: 0.5em 0;
 						@include clearfix();
 
-						li {
+						li,
+						li.recentcomments {
 							margin-bottom: 0.2em;
 
-							a {
-								position: relative;
-								margin: 0 0 1% 0;
+							span.comment-author-link {
+								
+								height: 100%;
 
+							}
+
+							a {
+								
+								
 								&:hover {
-									color: $color4;
+									font-weight:bold;
 								}
+							}
+
+							a.url {
+								&:hover {
+									font-weight: bold;
+								}
+
 							}
 						}
 					}
@@ -9227,13 +9536,10 @@ License: GNU General Public License v2 or later
 							display: block;
 
 							i {
-								font-size: 1.55em;
+								font-size: 1.4em;
 								line-height: 50px;
 
-								&:hover {
-									color: $color10;
-									font-size: 1.6em;
-								}
+								
 							}
 						}
 					}
@@ -9305,29 +9611,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			span#socialmediatop {
-				width: 75%;
-				display: none;
-
-				a {
-					display: inline-block;
-					width: 23.5%;
-
-					&:hover {
-						background-color: $color7;
-						color: $color4;
-					}
-
-					span {
-						display: block;
-						height: 100%;
-
-						i {
-							font-size: 0.8em;
-						}
-					}
-				}
-			}
+			
 		}
 
 		/********** navigation **********/
@@ -9468,29 +9752,44 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 					display: block;
 
-					h3 {
+					h2.widget-title {
 						font-size: 1.1em;
 
 					}
 
-					ul {
+					ul,
+					ul.comments,
+					ul.recentcomments {
 						margin: 0.5em 0;
 						@include clearfix();
 
-						li {
+						li,
+						li.recentcomments {
 							margin-bottom: 0.2em;
 
-							a {
-								position: relative;
-								margin: 0 0 1% 0;
+							span.comment-author-link {
+								
+								height: 100%;
 
+							}
+
+							a {
+								
+								
 								&:hover {
-									color: $color4;
+									font-weight:bold;
 								}
+							}
+
+							a.url {
+								&:hover {
+									font-weight: bold;
+								}
+
 							}
 						}
 					}
@@ -9804,7 +10103,7 @@ License: GNU General Public License v2 or later
 					/*video*/
 					iframe {
 												
-						height:215px;
+						height:360px;
 					}
 
 					//jp-video player
@@ -10244,13 +10543,10 @@ License: GNU General Public License v2 or later
 							display: block;
 
 							i {
-								font-size: 1.55em;
+								font-size: 1.3em;
 								line-height: 50px;
 
-								&:hover {
-									color: $color10;
-									font-size: 1.6em;
-								}
+								
 							}
 						}
 					}
@@ -10320,23 +10616,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			span#socialmediatop {
-				width: 75%;
-
-				a {
-
-					width: 23.5%;
-
-					span {
-
-						height: 100%;
-
-						i {
-							font-size: 0.8em;
-						}
-					}
-				}
-			}
+			
 		}
 
 		/********** navigation **********/
@@ -10476,29 +10756,44 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 					display: block;
 
-					h3 {
+					h2.widget-title {
 						font-size: 1.1em;
 
 					}
 
-					ul {
+					ul,
+					ul.comments,
+					ul.recentcomments {
 						margin: 0.5em 0;
 						@include clearfix();
 
-						li {
+						li,
+						li.recentcomments {
 							margin-bottom: 0.2em;
 
-							a {
-								position: relative;
-								margin: 0 0 1% 0;
+							span.comment-author-link {
+								
+								height: 100%;
 
+							}
+
+							a {
+								
+								
 								&:hover {
-									color: $color4;
+									font-weight:bold;
 								}
+							}
+
+							a.url {
+								&:hover {
+									font-weight: bold;
+								}
+
 							}
 						}
 					}
@@ -11253,12 +11548,9 @@ License: GNU General Public License v2 or later
 							display: block;
 
 							i {
-								font-size: 1.5em;
+								font-size: 1.2em;
 								line-height: 50px;
 
-								&:hover {
-									font-size: 1.6em;
-								}
 							}
 						}
 					}
@@ -11335,22 +11627,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			span#socialmediatop {
-				width: 75%;
-
-				a {
-					display: inline-block;
-
-					span {
-						display: block;
-						height: 100%;
-
-						i {
-							font-size: 0.8em;
-						}
-					}
-				}
-			}
+			
 		}
 
 		/********** navigation **********/
@@ -11492,29 +11769,44 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 					display: block;
 
-					h3 {
+					h2.widget-title {
 						font-size: 1.1em;
 
 					}
 
-					ul {
+					ul,
+					ul.comments,
+					ul.recentcomments {
 						margin: 0.5em 0;
 						@include clearfix();
 
-						li {
+						li,
+						li.recentcomments {
 							margin-bottom: 0.2em;
 
-							a {
-								position: relative;
-								margin: 0 0 1% 0;
+							span.comment-author-link {
+								
+								height: 100%;
 
+							}
+
+							a {
+								
+								
 								&:hover {
-									color: $color4;
+									font-weight:bold;
 								}
+							}
+
+							a.url {
+								&:hover {
+									font-weight: bold;
+								}
+
 							}
 						}
 					}
@@ -12272,12 +12564,10 @@ License: GNU General Public License v2 or later
 							display: block;
 
 							i {
-								font-size: 1.4em;
+								font-size: 1.1em;
 								line-height: 50px;
 
-								&:hover {
-									font-size: 1.5em;
-								}
+								
 							}
 						}
 					}
@@ -12348,22 +12638,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			span#socialmediatop {
-				width: 75%;
-
-				a {
-					display: inline-block;
-
-					span {
-						display: block;
-						height: 100%;
-
-						i {
-							font-size: 0.75em;
-						}
-					}
-				}
-			}
+			
 		}
 
 		/********** navigation **********/
@@ -12505,29 +12780,43 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				.widget {
+				div.widget {
 					width: 100%;
 					display: block;
 
-					h3 {
+					h2.widget-title {
 						font-size: 1.1em;
 
 					}
 
-					ul {
+					ul,
+					ul.comments,
+					ul.recentcomments {
 						margin: 0.5em 0;
 						@include clearfix();
 
-						li {
+						li,
+						li.recentcomments {
 							margin-bottom: 0.2em;
 
-							a {
-								position: relative;
-								margin: 0 0 1% 0;
+							span.comment-author-link {
+								
+								height: 100%;
 
+							}
+
+							a {
+																
 								&:hover {
-									color: $color4;
+									font-weight:bold;
 								}
+							}
+
+							a.url {
+								&:hover {
+									font-weight: bold;
+								}
+
 							}
 						}
 					}
@@ -13271,11 +13560,8 @@ License: GNU General Public License v2 or later
 							display: block;
 
 							i {
-								font-size: 1.2em;
+								font-size: 1.1em;
 
-								&:hover {
-									font-size: 1.3em;
-								}
 							}
 						}
 					}

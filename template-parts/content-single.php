@@ -81,7 +81,8 @@ if ( have_posts() ) :
 			
 			?>
 		</div><!-- .entry-content -->
-
+<br/>
+<br/>
 		<?php if ( get_edit_post_link() ) : ?>
 			<footer class="entry-footer">
 				<?php clashvibes_entry_footer(); ?>

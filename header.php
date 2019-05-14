@@ -111,7 +111,50 @@
 
 				<?php endif; ?>
 			</section>
+			<span id="socialmediatop">
 
+				
+					<a class="social-icon linkedin-icon" 
+						href="" 
+						target="new" 
+						title="Follow me on LinkedIn">
+						<span>
+							<i class="fa fa-instagram"></i>
+						</span>
+					</a>
+				
+
+				
+					<a class="social-icon twitter-icon" 
+					href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>" 
+					target="new" 
+					title="Follow me on Twitter">
+					<span>
+						<i class="fa fa-twitter"></i>
+					</span>
+					</a>
+				
+
+				
+					<a class="social-icon facebook-icon" href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
+					target="new" 
+					title="Follow me on Facebook">
+					<span>
+						<i class="fa fa-facebook"></i>
+					</span>
+					</a>
+
+					<a class="social-icon facebook-icon" href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
+					target="new" 
+					title="Follow me on Facebook">
+					<span>
+						<i class="fa fa-facebook"></i>
+					</span>
+					</a>
+				
+
+
+				</span>		
 		</header>
 
 

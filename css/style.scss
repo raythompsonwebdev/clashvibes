@@ -78,9 +78,6 @@ License: GNU General Public License v2 or later
 			-webkit-flex-flow: row wrap;
 			-ms-flex-flow: row wrap;
 			flex-flow: row wrap;
-			-webkit-align-items: flex-start;
-			-ms-flex-align: start;
-			align-items: flex-start;
 			-webkit-justify-content: flex-start;
 			-ms-flex-pack: start;
 			justify-content: flex-start;
@@ -173,6 +170,9 @@ License: GNU General Public License v2 or later
 			#clashvibes_title {
 				width: 75%;
 				display: inline-block;
+				-webkit-flex: 0 1 auto;
+				-ms-flex: 0 1 auto;
+				flex: 0 1 auto;
 
 				h1 {
 					color: $color2;
@@ -207,9 +207,9 @@ License: GNU General Public License v2 or later
 				width: 20%;
 				display: block;
 				height: 40px;
-				-webkit-flex: 0 0 auto;
-				-ms-flex: 0 0 auto;
-				flex: 0 0 auto;
+				-webkit-flex: 0 1 auto;
+				-ms-flex: 0 1 auto;
+				flex: 0 1 auto;
 
 				a.social-icon{
 					height: 100%;
@@ -250,22 +250,18 @@ License: GNU General Public License v2 or later
 				-webkit-flex-flow: row wrap;
 				-ms-flex-flow: row wrap;
 				flex-flow: row wrap;
-				-webkit-align-items: flex-start;
-				-ms-flex-align: start;
-				align-items: flex-start;
 				-webkit-justify-content: flex-start;
 				-ms-flex-pack: start;
 				justify-content: flex-start;
 
 				li {
 					display: inline-block;
-					float: left;
 					width: 13%;
 					height: 40px;
 					margin-right: 0.5em;
-					-webkit-flex: 0 0 auto;
-					-ms-flex: 0 0 auto;
-					flex: 0 0 auto;
+					-webkit-flex: 0 1 auto;
+					-ms-flex: 0 1 auto;
+					flex: 0 1 auto;
 
 					a {
 						width: 100%;
@@ -489,19 +485,16 @@ License: GNU General Public License v2 or later
 					-webkit-flex-flow: row wrap;
 					-ms-flex-flow: row wrap;
 					flex-flow: row wrap;
-					-webkit-justify-content: flex-start;
-					-ms-flex-pack: start;
-					justify-content: flex-start;
 					-webkit-align-items: flex-start;
 					-ms-flex-align: start;
 					align-items: flex-start;
 
 
 					article.events_box {
-						-webkit-flex: 0 0 auto;
-						-ms-flex: 0 0 auto;
-						flex: 0 0 auto;
-						float: left;
+						-webkit-flex: 0 1 auto;
+						-ms-flex: 0 1 auto;
+						flex: 0 1 auto;
+						
 						width: 19%;
 						min-height: 330px;
 						padding: 0;
@@ -583,7 +576,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				div.results,
+				
 				#new_released_section {
 					padding: 0;
 					width: 100%;
@@ -594,15 +587,14 @@ License: GNU General Public License v2 or later
 					-webkit-flex-flow: row wrap;
 					-ms-flex-flow: row wrap;
 					flex-flow: row wrap;
-					-webkit-align-items: stretch;
-					-ms-flex-align: stretch;
-					align-items: stretch;
+					-webkit-justify-content: flex-start;
+					-ms-justify-content: flex-start;
+					justify-content: flex-start;
 
 					.new_released_box {
-						-webkit-flex: 0 0 auto;
-						-ms-flex: 0 0 auto;
-						flex: 0 0 auto;
-						float: left;
+						-webkit-flex: 0 1 auto;
+						-ms-flex: 0 1 auto;
+						flex: 0 1 auto;
 						width: 19.425%;
 						min-height: 320px;
 						padding: 0;
@@ -742,6 +734,13 @@ License: GNU General Public License v2 or later
 				display: -webkit-flex;
 				display: -ms-flexbox;
 				display: flex;
+				-webkit-flex-flow: row wrap;
+				-ms-flex-flow: row wrap;
+				flex-flow: row wrap;
+				-webkit-align-items: flex-start;
+				-ms-flex-align: start;
+				align-items: flex-start;
+				
 
 				ul#topdownload_section {
 					margin: 0;
@@ -751,12 +750,14 @@ License: GNU General Public License v2 or later
 					color: $color4;
 					float:left;
 					display: block;
+					-webkit-flex: 0 1 auto;
+					-ms-flex: 0 1 auto;
+					flex: 0 1 auto;
 
 					h1 {
 						font-size: 1.5em;
 						height: 45px;
 						line-height: 45px;
-
 						clear: both;
 						margin-bottom: 0.25em;
 						color: $color;
@@ -769,9 +770,6 @@ License: GNU General Public License v2 or later
 						-webkit-flex-flow: row;
 						-ms-flex-flow: row;
 						flex-flow: row;
-						-webkit-justify-content: space-between;
-						-ms-flex-pack: justify;
-						justify-content: space-between;
 						-webkit-align-items: flex-start;
 						-ms-flex-align: start;
 						align-items: flex-start;
@@ -788,9 +786,9 @@ License: GNU General Public License v2 or later
 
 						span.image_thumb {
 							float: left;
-							-webkit-flex: 0 0 auto;
-							-ms-flex: 0 0 auto;
-							flex: 0 0 auto;
+							-webkit-flex: 0 1 auto;
+							-ms-flex: 0 1 auto;
+							flex: 0 1 auto;
 							background-color: $color;
 							width: 6%;
 							color: $color4;
@@ -810,9 +808,9 @@ License: GNU General Public License v2 or later
 						}
 
 						span.title_singer {
-							-webkit-flex: 0 0 auto;
-							-ms-flex: 0 0 auto;
-							flex: 0 0 auto;
+							-webkit-flex: 0 1 auto;
+							-ms-flex: 0 1 auto;
+							flex: 0 1 auto;
 							text-indent: 0.5em;
 							width: 79%;
 							color: $color4;
@@ -826,9 +824,9 @@ License: GNU General Public License v2 or later
 						}
 
 						span {
-							-webkit-flex: 0 0 auto;
-							-ms-flex: 0 0 auto;
-							flex: 0 0 auto;
+							-webkit-flex: 0 1 auto;
+							-ms-flex: 0 1 auto;
+							flex: 0 1 auto;
 							background-color: $color;
 							font-weight: normal;
 							height: 45px;
@@ -2561,75 +2559,62 @@ License: GNU General Public License v2 or later
 				}
 
 				div.results {
-
-					margin: 0 0 0.5em 0;
-
-					article.you_tube_box {
-
+		
+					article.events_box {
+						
 						width: 19%;
 						min-height: 330px;
+						
 
 						h1 {
-							margin: 0;
+							
 							font-size: 0.9em;
+							
 						}
 
-						a {
-							font-size: 0.9em;
-							letter-spacing: 0.05em;
+						#event-submit-btn,
+						input[type="submit"] {
+							width: 90%;
+							
 
 							&:hover {
 								font-weight: bold;
-
+						
 							}
 						}
 
-						figure.you_tube_thumb {
+						figure.events {
 							width: 90%;
-
+							
 							&:hover {
+								
 								width: 92%;
 
 							}
 
 							img {
-
 								@include box-sizing($type: border-box);
-
-
 							}
 
-							li {
-								list-style: none;
+							figcaption.event-text {
+								min-height: 100px;
+								
 
-								iframe {
-									width: 100%;
+								p {
+									font-size: 0.9em;
+									
+									
 								}
+
 							}
 
-							.u_tube {
-								margin: 0;
-
-								span.u_tube_button {
-									height: 40px;
-
-									a {
-
-										font-size: 0.9em;
-
-										&:hover {
-
-											letter-spacing: 0.055em;
-
-										}
-									}
-								}
-							}
 						}
+
+
 					}
 				}
 
-				div.results,
+				
 				#new_released_section {
 					padding: 0;
 
@@ -2703,12 +2688,12 @@ License: GNU General Public License v2 or later
 
 					h1 {
 						font-size: 1.2em;
-						margin: 0 0 0.5em 0;
+						margin-bottom: 0.25em;
 					}
 
 					li.topdownload_box {
-						margin: 0 0 0.25em 0;
-						height: 45px;
+						
+						
 						letter-spacing: 0.05em;
 
 						span.image_thumb {
@@ -2729,7 +2714,7 @@ License: GNU General Public License v2 or later
 						span.title_singer {
 							text-indent: 0.5em;
 							width: 78%;
-							line-height: 45px;
+							
 							font-size: 0.8em;
 						}
 
@@ -3780,72 +3765,61 @@ License: GNU General Public License v2 or later
 
 					margin: 0 0 0.5em 0;
 
-					article.you_tube_box {
-
+					article.events_box {
+						
 						width: 19%;
 						min-height: 330px;
+						
 
 						h1 {
-							margin: 0;
+							
 							font-size: 0.9em;
+							
 						}
 
-						a {
-							font-size: 0.9em;
-							letter-spacing: 0.05em;
+						#event-submit-btn,
+						input[type="submit"] {
+							width: 90%;
+							
 
 							&:hover {
 								font-weight: bold;
-
+						
 							}
 						}
 
-						figure.you_tube_thumb {
+						figure.events {
 							width: 90%;
-
+							
 							&:hover {
+								
 								width: 92%;
 
 							}
 
 							img {
-
 								@include box-sizing($type: border-box);
-
-
 							}
 
-							li {
-								list-style: none;
+							figcaption.event-text {
+								min-height: 100px;
+								
 
-								iframe {
-									width: 100%;
+								p {
+									font-size: 0.9em;
+									
+									
 								}
+
 							}
 
-							.u_tube {
-								margin: 0;
-
-								span.u_tube_button {
-									height: 40px;
-
-									a {
-
-										font-size: 0.9em;
-
-										&:hover {
-
-											letter-spacing: 0.055em;
-
-										}
-									}
-								}
-							}
 						}
+
+
 					}
 				}
 
-				div.results,
+				
 				#new_released_section {
 					margin: 0 0 0.5em 0;
 
@@ -3921,7 +3895,7 @@ License: GNU General Public License v2 or later
 					}
 
 					li.topdownload_box {
-						height: 45px;
+						
 						letter-spacing: 0.05em;
 
 						span.image_thumb {
@@ -3941,7 +3915,7 @@ License: GNU General Public License v2 or later
 
 						span.title_singer {
 							width: 75%;
-							line-height: 45px;
+							
 							font-size: 0.75em;
 						}
 
@@ -4947,7 +4921,7 @@ License: GNU General Public License v2 or later
 					margin: 0 0 0.5em 0;
 
 					.new_released_box {
-						width: 19.115%;
+						width: 24.115%;
 						min-height: 240px;
 
 
@@ -5013,7 +4987,7 @@ License: GNU General Public License v2 or later
 				padding: 0.5em;
 
 				ul#topdownload_section {
-					
+					width: 48.8%;
 					padding: 0.25em;
 
 					h1 {
@@ -5021,7 +4995,7 @@ License: GNU General Public License v2 or later
 					}
 
 					li.topdownload_box {
-						height: 45px;
+						
 						letter-spacing: 0.05em;
 
 						span.image_thumb {
@@ -5040,9 +5014,8 @@ License: GNU General Public License v2 or later
 						}
 
 						span.title_singer {
-							width: 75%;
-							line-height: 45px;
-							font-size: 0.7em;
+														
+							font-size: 0.75em;
 						}
 
 						span {
@@ -5957,10 +5930,10 @@ License: GNU General Public License v2 or later
 				}
 
 				#new_released_section {
-					margin: 0 0 0.5em 0;
+					margin-bottom: 0.5em;
 
 					.new_released_box {
-						width: 23.925%;
+						width: 32.1%;
 						min-height: 240px;
 
 						h1 {
@@ -6022,20 +5995,25 @@ License: GNU General Public License v2 or later
 			/*front page top download section*/
 			#topdownload_section_ctner {
 				padding: 0.5em;
-
+				-webkit-flex-flow: column;
+				-ms-flex-flow: column;
+				flex-flow: column;
+				-webkit-align-items: center;
+				-ms-flex-align: center;
+				align-items: center;
 				ul#topdownload_section {
-					
+					width: 98%;
 
 					h1 {
 						font-size: 1em;
 					}
 
 					li.topdownload_box {
-						height: 45px;
+						
 						letter-spacing: 0.05em;
 
 						span.image_thumb {
-							width: 10%;
+							width: 8%;
 
 							a {
 
@@ -6050,9 +6028,7 @@ License: GNU General Public License v2 or later
 						}
 
 						span.title_singer {
-							width: 75%;
-							line-height: 45px;
-							font-size: 0.6em;
+							width: 77%;
 							text-indent: 0.25em;
 						}
 
@@ -6061,7 +6037,7 @@ License: GNU General Public License v2 or later
 							width: 15%;
 
 							a {
-								font-size: 0.65em;
+								
 								letter-spacing: 0.05em;
 
 								&:hover {
@@ -6880,6 +6856,7 @@ License: GNU General Public License v2 or later
 			background-color: $color7;
 			color: $color4;
 			text-align: center;
+			cursor:pointer;
 		}
 
 	}
@@ -6962,6 +6939,7 @@ License: GNU General Public License v2 or later
 						&:hover {
 
 							line-height: 50px;
+							cursor:pointer;
 						}
 					}
 
@@ -7841,16 +7819,13 @@ License: GNU General Public License v2 or later
 			#topdownload_section_ctner {
 				padding: 0.5em;
 				height: auto;
-				-webkit-flex-flow: row wrap;
-				-ms-flex-flow: row wrap;
-				flex-flow: row wrap;
-
+				
 				ul#topdownload_section {
 
-					width: 95.79%;
+					width: 98%;
 					padding: 0.5em;
 					display: block;
-					margin: 0.25em;
+					
 
 					h1 {
 						font-size: 1em;
@@ -7859,18 +7834,17 @@ License: GNU General Public License v2 or later
 					}
 
 					li.topdownload_box {
-						width: 100%;
-
+						
 						letter-spacing: 0.05em;
 
 						span.image_thumb {
-							width: 10%;
+							
 
 							a {
 								background-color: $color2;
 
 								img {
-									@include box-sizing($type: border-box);
+									
 									vertical-align: unset;
 
 								}
@@ -7878,9 +7852,9 @@ License: GNU General Public License v2 or later
 						}
 
 						span.title_singer {
-							width: 75%;
+							
 							font-size: 0.7em;
-							text-indent: 0.2em;
+							
 						}
 
 						span {
@@ -8953,16 +8927,9 @@ License: GNU General Public License v2 or later
 			#topdownload_section_ctner {
 				padding: 0.5em;
 				height: auto;
-				-webkit-flex-flow: row wrap;
-				-ms-flex-flow: row wrap;
-				flex-flow: row wrap;
-
+				
 				ul#topdownload_section {
-
-					width: 95.79%;
-					padding: 0.5em;
-					display: block;
-					margin: 0.25em;
+									
 
 					h1 {
 						font-size: 1em;
@@ -8971,18 +8938,16 @@ License: GNU General Public License v2 or later
 					}
 
 					li.topdownload_box {
-						width: 100%;
-
+						
 						letter-spacing: 0.05em;
 
 						span.image_thumb {
-							width: 10%;
-
+							
 							a {
 								background-color: $color2;
 
 								img {
-									@include box-sizing($type: border-box);
+									
 									vertical-align: unset;
 
 								}
@@ -8990,16 +8955,16 @@ License: GNU General Public License v2 or later
 						}
 
 						span.title_singer {
-							width: 75%;
-							font-size: 0.7em;
-							text-indent: 0.2em;
+							
+							font-size: 0.75em;
+							
 						}
 
 						span {
 							a {
 
-								font-size: 0.8em;
-								letter-spacing: 0.05em;
+								font-size: 0.75em;
+								
 
 								&:hover {
 
@@ -10012,15 +9977,10 @@ License: GNU General Public License v2 or later
 			#topdownload_section_ctner {
 				padding: 0.5em;
 				height: auto;
-				-webkit-flex-flow: row wrap;
-				-ms-flex-flow: row wrap;
-				flex-flow: row wrap;
-
+				
 				ul#topdownload_section {
 
-					width: 95.79%;
-					padding: 0.5em;
-					display: block;
+										
 					margin: 0.15em;
 
 					h1 {
@@ -10029,25 +9989,23 @@ License: GNU General Public License v2 or later
 					}
 
 					li.topdownload_box {
-						width: 100%;
-
+						
 						letter-spacing: 0.05em;
 
 						span.image_thumb {
-							width: 10%;
-
+							
 							a {
 								background-color: $color2;
 
 								img {
-									@include box-sizing($type: border-box);
+									
 									vertical-align: unset;
 								}
 							}
 						}
 
 						span.title_singer {
-							width: 75%;
+							
 							font-size: 0.7em;
 						}
 
@@ -11155,16 +11113,12 @@ License: GNU General Public License v2 or later
 			#topdownload_section_ctner {
 				padding: 0;
 				height: auto;
-				-webkit-flex-flow: row wrap;
-				-ms-flex-flow: row wrap;
-				flex-flow: row wrap;
+				
 
 				ul#topdownload_section {
 
 					width: 95.79%;
-					padding: 0.25em;
-					display: block;
-					margin: 0.25em;
+					
 
 					h1 {
 						font-size: 1em;
@@ -11172,18 +11126,17 @@ License: GNU General Public License v2 or later
 					}
 
 					li.topdownload_box {
-						width: 100%;
-
+						
 						letter-spacing: 0.05em;
 
 						span.image_thumb {
-							width: 10%;
+							
 
 							a {
 								background-color: $color2;
 
 								img {
-									@include box-sizing($type: border-box);
+									
 									vertical-align: unset;
 								}
 							}
@@ -11294,7 +11247,7 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 414px) {
 
 	button.menu-toggle {
-		left: 81%;
+		left: 84%;
 		font-size: 0.75em;
 
 		&:hover {
@@ -12236,16 +12189,11 @@ License: GNU General Public License v2 or later
 			#topdownload_section_ctner {
 				padding: 0;
 				height: auto;
-				-webkit-flex-flow: row wrap;
-				-ms-flex-flow: row wrap;
-				flex-flow: row wrap;
-
+				
 				ul#topdownload_section {
 
 					width: 95.79%;
-					padding: 0.25em;
-					display: block;
-					margin: 0.25em;
+					
 
 					h1 {
 						font-size: 1em;
@@ -12253,18 +12201,17 @@ License: GNU General Public License v2 or later
 					}
 
 					li.topdownload_box {
-						width: 100%;
-
+						
 						letter-spacing: 0.05em;
 
 						span.image_thumb {
-							width: 11%;
+							width: 6%;
 
 							a {
 								background-color: $color2;
 
 								img {
-									@include box-sizing($type: border-box);
+									
 									vertical-align: unset;
 								}
 							}
@@ -12444,7 +12391,7 @@ License: GNU General Public License v2 or later
 		nav {
 			width: 250px;
 			left: -250px;
-			top: 8.4em;
+			top: 4.4em;
 
 
 			ul {
@@ -13292,16 +13239,12 @@ License: GNU General Public License v2 or later
 			#topdownload_section_ctner {
 				padding: 0;
 				height: auto;
-				-webkit-flex-flow: row wrap;
-				-ms-flex-flow: row wrap;
-				flex-flow: row wrap;
+				
 
 				ul#topdownload_section {
 
 					width: 95.79%;
-					padding: 0.2em;
-					display: block;
-					margin: 0.25em;
+					
 
 					h1 {
 						font-size: 0.9em;
@@ -13309,18 +13252,16 @@ License: GNU General Public License v2 or later
 					}
 
 					li.topdownload_box {
-						width: 100%;
-
+						
 						letter-spacing: 0.05em;
 
 						span.image_thumb {
-							width: 13%;
-
+							width:13%;
 							a {
 								background-color: $color2;
 
 								img {
-									@include box-sizing($type: border-box);
+									
 									vertical-align: unset;
 								}
 							}
@@ -13760,7 +13701,7 @@ License: GNU General Public License v2 or later
 
 						}
 
-						span {}
+						
 					}
 
 					h2 {
@@ -14365,16 +14306,11 @@ License: GNU General Public License v2 or later
 			#topdownload_section_ctner {
 				padding: 0;
 				height: auto;
-				-webkit-flex-flow: row wrap;
-				-ms-flex-flow: row wrap;
-				flex-flow: row wrap;
-
+				
 				ul#topdownload_section {
 
 					width: 95.79%;
-					padding: 0.2em;
-					display: block;
-					margin: 0.25em;
+					
 
 					h1 {
 						font-size: 0.9em;

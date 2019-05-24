@@ -2299,7 +2299,7 @@ License: GNU General Public License v2 or later
 		/* ----- Footer ----- */
 		#clashvibes_footer {
 			clear: both;
-			padding: 10px 0;
+			padding: 1em 0;
 			width: 100%;
 			text-align: center;
 			color: $color;
@@ -2307,7 +2307,7 @@ License: GNU General Public License v2 or later
 			text-align: center;
 			font-size: 1em;
 			min-height: 200px;
-
+			margin-bottom: 2%;
 			ul#menu-secondary {
 				list-style: none;
 				margin: 0;
@@ -2319,8 +2319,8 @@ License: GNU General Public License v2 or later
 				li.menu-item {
 					height: 40px;
 					line-height: 40px;
-					width: 100%;
-					text-indent: 5%;
+					width: auto;
+					text-indent: 0.5em;
 					font-size: 0.9em;
 
 					a {
@@ -2347,7 +2347,7 @@ License: GNU General Public License v2 or later
 				padding: 0;
 				height: 100%;
 				font-weight: normal;
-				float: left;
+				
 
 				li {
 					text-indent: 0;
@@ -2376,7 +2376,7 @@ License: GNU General Public License v2 or later
 					a {
 						width: 100%;
 						color: $color;
-						display: inline-block;
+						display: block;
 						height: 100%;
 						line-height: 50px;
 
@@ -3009,7 +3009,7 @@ License: GNU General Public License v2 or later
 				/*--- blog image---*/
 				a.post-thumbnail,
 				div.post-thumbnail {
-					
+					width: 60%;
 					img {
 						margin: 0 auto;
 
@@ -3554,24 +3554,15 @@ License: GNU General Public License v2 or later
 
 		/* ----- Footer ----- */
 		#clashvibes_footer {
-			font-size: 0.95em;
-			height: 200px;
-			margin-bottom: 2%;
-
+			
 			ul#menu-secondary {
 
 				width: 12%;
 
 				li.menu-item {
-					height: 40px;
-					line-height: 40px;
-					text-indent: 5%;
 					font-size: 0.85em;
-
 					a {
-
-						line-height: 40px;
-
+						
 						&:hover {
 
 							font-weight: bold;
@@ -3581,10 +3572,9 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#footer-content {
-				width: 79%;
-
+	
 				li {
-					text-indent: 0;
+					
 					font-size: 0.85em;
 
 					a {
@@ -3596,7 +3586,6 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#social-media-box {
-
 
 				width: 8%;
 
@@ -4744,18 +4733,13 @@ License: GNU General Public License v2 or later
 
 		/* ----- Footer ----- */
 		#clashvibes_footer {
-			font-size: 0.9em;
-			height: 200px;
-			margin-bottom: 2%;
-
+	
 			ul#menu-secondary {
 
 				width: 12%;
 
 				li.menu-item {
-					height: 40px;
-					line-height: 40px;
-					text-indent: 5%;
+
 					font-size: 0.8em;
 
 					a {
@@ -4771,10 +4755,10 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#footer-content {
-				width: 79%;
+				
 
 				li {
-					text-indent: 0;
+					
 					font-size: 0.8em;
 
 					a {
@@ -5354,7 +5338,7 @@ License: GNU General Public License v2 or later
 
 				a.post-thumbnail,
 				div.post-thumbnail {
-					
+					width: 65%;
 					img {
 						margin: 0 auto;
 
@@ -5820,23 +5804,18 @@ License: GNU General Public License v2 or later
 
 		/* ----- Footer ----- */
 		#clashvibes_footer {
-			font-size: 0.9em;
-			height: 200px;
-			margin-bottom: 2%;
+
 
 			ul#menu-secondary {
 
 				width: 12%;
 
 				li.menu-item {
-					height: 40px;
-					line-height: 40px;
-					text-indent: 5%;
+
 					font-size: 0.8em;
 
 					a {
 
-						line-height: 40px;
 
 						&:hover {
 
@@ -5847,10 +5826,10 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#footer-content {
-				width: 79%;
+				
 
 				li {
-					text-indent: 0;
+					
 					font-size: 0.8em;
 
 					a {
@@ -6384,7 +6363,7 @@ License: GNU General Public License v2 or later
 				/*--- blog image---*/
 				a.post-thumbnail,
 				div.post-thumbnail {
-					
+					width: 70%;
 					img {
 						margin: 0 auto;
 
@@ -6856,23 +6835,19 @@ License: GNU General Public License v2 or later
 
 		/* ----- Footer ----- */
 		#clashvibes_footer {
-			font-size: 0.9em;
-			height: 200px;
-			margin-bottom: 2%;
+
 
 			ul#menu-secondary {
 
 				width: 12%;
 
 				li.menu-item {
-					height: 40px;
-					line-height: 40px;
+
 					font-size: 0.8em;
 
 					a {
 
-						line-height: 40px;
-
+	
 						&:hover {
 
 							font-weight: bold;
@@ -6882,8 +6857,7 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#footer-content {
-				width: 79%;
-
+				
 				li {
 					text-indent: 0;
 					font-size: 0.8em;
@@ -7359,6 +7333,8 @@ License: GNU General Public License v2 or later
 			h1 {
 				font-size: 1.3em;
 				padding: 0.5em 0;
+				text-align: center;
+				text-indent:0;
 
 				a {
 					width: 71%;
@@ -7711,7 +7687,7 @@ License: GNU General Public License v2 or later
 							&:after {
 								
 								font-size: 1.2em;
-								
+								width: 7%;
 								
 							}
 						}
@@ -8055,9 +8031,6 @@ License: GNU General Public License v2 or later
 
 		/* ----- Footer ----- */
 		#clashvibes_footer {
-			padding: 10px 0;
-			height: 200px;
-			margin-bottom: 2%;
 
 			ul#menu-secondary {
 				float: left;
@@ -8079,11 +8052,10 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#footer-content {
-				width: 79%;
-				height: 100%;
+				
 
 				li {
-					text-indent: 0;
+
 
 					a {
 						text-align: center;
@@ -8094,14 +8066,12 @@ License: GNU General Public License v2 or later
 
 			ul#social-media-box {
 				width: 8%;
-				display:block;
+
 				li {
-					width: 100%;
+
 					height: 50px;
 
 					a {
-						width: 100%;
-						height: 100%;
 
 
 						span {
@@ -8605,7 +8575,7 @@ License: GNU General Public License v2 or later
 						
 						span.posted-on,
 						span.byline {
-							font-size: 0.65em;
+							
 
 							a {
 								
@@ -8712,7 +8682,7 @@ License: GNU General Public License v2 or later
 
 				figure.featuredImage,
 				figure.attachment {
-					width: 30%;
+					width: 90%;
 
 					img {
 						margin: 0;
@@ -9186,16 +9156,12 @@ License: GNU General Public License v2 or later
 
 		/* ----- Footer ----- */
 		#clashvibes_footer {
-			padding: 10px 0;
-			height: 200px;
-			margin-bottom: 2%;
 
 			ul#menu-secondary {
-				float: left;
-				width: 12%;
+				width: 10%;
 
 				li.menu-item {
-					width: 100%;
+
 					font-size: 0.8em;
 
 					a {
@@ -9210,8 +9176,7 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#footer-content {
-				width: 79%;
-				height: 100%;
+						
 
 				li {
 					text-indent: 0;
@@ -9224,7 +9189,7 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#social-media-box {
-				width: 8%;
+				width: 10%;
 
 				li {
 					width: 100%;
@@ -10300,16 +10265,13 @@ License: GNU General Public License v2 or later
 
 		/* ----- Footer ----- */
 		#clashvibes_footer {
-			padding: 10px 0;
-			height: 200px;
-			margin-bottom: 2%;
 
 			ul#menu-secondary {
-				float: left;
-				width: 12%;
+				
+				width: 20%;
 
 				li.menu-item {
-					width: 100%;
+
 					font-size: 0.8em;
 
 					a {
@@ -10324,9 +10286,8 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#footer-content {
-				width: 79%;
-				height: 100%;
-
+				width:70%;
+				
 				li {
 					text-indent: 0;
 
@@ -10338,7 +10299,7 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#social-media-box {
-				width: 8%;
+				width:10%;
 
 				li {
 					width: 100%;
@@ -10816,7 +10777,7 @@ License: GNU General Public License v2 or later
 
 					h2 {
 						font-size: 1em;
-
+						height: auto;
 
 
 						a {
@@ -10921,7 +10882,7 @@ License: GNU General Public License v2 or later
 
 				a.post-thumbnail,
 				div.post-thumbnail {
-					
+					width: 75%;
 					img {
 						margin: 0 auto;
 
@@ -11474,20 +11435,15 @@ License: GNU General Public License v2 or later
 
 		/* ----- Footer ----- */
 		#clashvibes_footer {
-			padding: 10px 0;
-			height: 200px;
-			margin-bottom: 2%;
+
 
 			ul#menu-secondary {
-				float: left;
-				width: 12%;
+
 
 				li.menu-item {
-					width: 100%;
-					text-indent: 5%;
+
 
 					a {
-						font-size: 1em;
 
 						&:hover {
 
@@ -11498,7 +11454,7 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#footer-content {
-				width: 75%;
+				
 				height: 100%;
 
 				li {
@@ -11513,24 +11469,21 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#social-media-box {
-				width: 8%;
-
+				
 				li {
-					width: 100%;
+					
 					height: 50px;
 
 					a {
 						width: 100%;
-						height: 100%;
-
+						
 
 						span {
 							display: block;
 
 							i {
 								font-size: 1.3em;
-								line-height: 50px;
-
+								
 								
 							}
 						}
@@ -11903,7 +11856,6 @@ License: GNU General Public License v2 or later
 						span.posted-on,
 						span.byline {
 							font-size: 0.65em;
-
 							a {
 								width: auto;
 
@@ -12583,20 +12535,17 @@ License: GNU General Public License v2 or later
 
 		/* ----- Footer ----- */
 		#clashvibes_footer {
-			padding: 10px 0;
-			height: 200px;
-			margin-bottom: 2%;
+
 
 			ul#menu-secondary {
-				float: left;
-				width: 12%;
+
 
 				li.menu-item {
-					width: 100%;
-					font-size: 0.85em;
+
+					font-size: 0.8em;
 
 					a {
-						font-size: 1em;
+
 
 						&:hover {
 
@@ -12607,11 +12556,11 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#footer-content {
-				width: 75%;
+				
 				height: 100%;
 
 				li {
-					text-indent: 0;
+					
 					font-size: 0.8em;
 
 					a {
@@ -12622,24 +12571,22 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#social-media-box {
-				width: 8%;
+				
 
 				li {
-					width: 100%;
+					
 					height: 50px;
 
 					a {
 						width: 100%;
-						height: 100%;
-
+						
 
 						span {
 							display: block;
 
 							i {
-								font-size: 1.2em;
-								line-height: 50px;
-
+								font-size: 1.3em;
+								
 							}
 						}
 					}
@@ -12976,8 +12923,7 @@ License: GNU General Public License v2 or later
 
 						span.posted-on,
 						span.byline {
-							font-size: 0.6em;
-
+							
 							a {
 								width: auto;
 
@@ -13637,20 +13583,18 @@ License: GNU General Public License v2 or later
 
 		/* ----- Footer ----- */
 		#clashvibes_footer {
-			padding: 10px 0;
-			height: 200px;
-			margin-bottom: 2%;
+
 
 			ul#menu-secondary {
-				float: left;
-				width: 14%;
+
+				width: 20%;
 
 				li.menu-item {
-					width: 100%;
+
 					font-size: 0.8em;
 
 					a {
-						font-size: 1em;
+
 
 						&:hover {
 
@@ -13661,11 +13605,10 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#footer-content {
-				width: 75%;
-				height: 100%;
+				width: 65%;
 
 				li {
-					text-indent: 0;
+
 					font-size: 0.75em;
 
 					a {
@@ -13675,25 +13618,21 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#social-media-box {
-				width: 10%;
+				width: 15%;
 
 				li {
-					width: 100%;
+
 					height: 50px;
 
 					a {
 						width: 100%;
-						height: 100%;
-
 
 						span {
 							display: block;
 
 							i {
 								font-size: 1.1em;
-								line-height: 50px;
-
-								
+							
 							}
 						}
 					}
@@ -14059,8 +13998,7 @@ License: GNU General Public License v2 or later
 
 						span.posted-on,
 						span.byline {
-							font-size: 0.55em;
-
+							
 							a {
 								width: auto;
 
@@ -14708,20 +14646,17 @@ License: GNU General Public License v2 or later
 
 		/* ----- Footer ----- */
 		#clashvibes_footer {
-			padding: 10px 0;
-			height: 200px;
-			margin-bottom: 2%;
+
 
 			ul#menu-secondary {
-				float: left;
-				width: 14%;
+
 
 				li.menu-item {
-					width: 100%;
-					font-size: 0.8em;
+
+					font-size: 0.75em;
 
 					a {
-						font-size: 1em;
+
 
 						&:hover {
 
@@ -14732,11 +14667,9 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#footer-content {
-				width: 75%;
-				height: 100%;
 
 				li {
-					text-indent: 0;
+
 					font-size: 0.7em;
 
 					a {
@@ -14747,14 +14680,13 @@ License: GNU General Public License v2 or later
 			}
 
 			ul#social-media-box {
-				width: 10%;
 
 				li {
-					width: 100%;
+
 					height: 50px;
 
 					a {
-						width: 100%;
+
 						height: 100%;
 
 

@@ -37,7 +37,7 @@
 </head>
 
 <body <?php body_class(); ?> >
-
+<span id="tog-menu">
 	<?php if ( is_front_page()) : ?>
 
 		<button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
@@ -57,6 +57,7 @@
 		<?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
 
 		<?php elseif(is_post_type_archive()) : ?>
+
 		<button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 		<?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
 
@@ -69,7 +70,7 @@
 		<?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
 
 	<?php endif; ?>
-
+	</span>
 	<div id="container">
 
 		<header>

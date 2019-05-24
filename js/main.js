@@ -9,15 +9,15 @@ jQuery(document).ready(function($) {
 		if( $(this).scrollTop() >= position ){
 			direction = 'down';
 			if(direction !== previous){
-		$('button#toggle-nav').addClass('hide');
-		$('button#toggle-side').addClass('hide-side');
+		$('#tog-menu button#toggle-nav').addClass('hide');
+		$('#tog-menu button#toggle-side').addClass('hide-side');
 				previous = direction;
 			}
 		} else {
 			direction = 'up';
 			if(direction !== previous){
-		$('button#toggle-nav').removeClass('hide');
-		$('button#toggle-side').removeClass('hide-side');
+		$('#tog-menu button#toggle-nav').removeClass('hide');
+		$('#tog-menu button#toggle-side').removeClass('hide-side');
 				previous = direction;
 			}
 	}
@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 		position = $(this).scrollTop();
 	});
 
-	$('button#toggle-nav').on('click', function(event){
+	$('#tog-menu button#toggle-nav').on('click', function(event){
 
 		event.preventDefault();
 
@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
 
 	});
 
-	$('button#toggle-side').on('click', function(event){
+	$('#tog-menu button#toggle-side').on('click', function(event){
 		
 		event.preventDefault();
 

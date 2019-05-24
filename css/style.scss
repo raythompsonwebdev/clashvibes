@@ -27,15 +27,34 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 1920px) {
 
 	
-
-	/********** navigation toggle **********/
-	button.menu-toggle {
+	#tog-menu{
+		
+		position: fixed;
+		top: 0.25em;
+		z-index: 100;
+		height:60px;
 		display: none;
-	}
+		/********** navigation toggle **********/
+		button.menu-toggle,
+		button.sidebar-toggle {
+			line-height: 60px;
+			width: 50%;
+			background-color: $color4;
+			color: $color;
+			border: none;
+			outline: none;
+			text-align: center;
+			@include Transition(all 0.2s linear 0s);
 
-	/********** side-bar toggle **********/
-	button.sidebar-toggle {
-		display: none;
+			&:hover {
+				background-color: $color7;
+				color: $color4;
+				text-align: center;
+				cursor:pointer;
+			}
+
+		}
+		
 	}
 
 	/********** page container **********/
@@ -87,27 +106,26 @@ License: GNU General Public License v2 or later
 				position: relative;
 				top: 0;
 				left: 0;
-				width: 3.4em;
-				height: 3.5em;
-				-webkit-flex: 0 0 auto;
-				-ms-flex: 0 0 auto;
-				flex: 0 0 auto;
-				display: inline-block;
+				width: 5%;
+				
+				-webkit-flex: 0 1 auto;
+				-ms-flex: 0 1 auto;
+				flex: 0 1 auto;
+				
 
 				a {
 					position: absolute;
 					z-index: 1;
 					top: 0;
 					left: 0;
-					display: block;
 					background: $color1;
 					color: $color4;
 					text-decoration: none;
-					line-height: 50px;
-					width: 98%;
+					line-height: 40px;
+					width: 100%;
 					@include originTran(50% 50%);
 					@include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
-					height: auto;
+					height: 80%;
 
 					/* Text meant only for screen readers. */
 					div.screen-reader-text {
@@ -169,7 +187,12 @@ License: GNU General Public License v2 or later
 
 			#clashvibes_title {
 				width: 75%;
-				display: inline-block;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-flex-flow: column;
+				-ms-flex-flow: column;
+				flex-flow: column;
 				-webkit-flex: 0 1 auto;
 				-ms-flex: 0 1 auto;
 				flex: 0 1 auto;
@@ -182,14 +205,15 @@ License: GNU General Public License v2 or later
 					font-size: 2.5em;
 					text-indent: 0.1em;
 					text-shadow: 1px 1px 1px $color4;
-					display: block;
+					width: 100%;
+					height:30px;
+					
 				}
 
 				h2.site-description {
 					text-indent: 0.5em;
-					float: none;
+					height:20px;
 					color: $color5a;
-					display: block;
 					width: 100%;
 					line-height: 20px;
 					font-size: 0.7em;
@@ -203,9 +227,11 @@ License: GNU General Public License v2 or later
 			}
 
 			span#socialmediatop {
-				float: right;
+				
 				width: 20%;
-				display: block;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
 				height: 40px;
 				-webkit-flex: 0 1 auto;
 				-ms-flex: 0 1 auto;
@@ -213,7 +239,9 @@ License: GNU General Public License v2 or later
 
 				a.social-icon{
 					height: 100%;
-					display: inline-block;
+					-webkit-flex: 1 0 auto;
+					-ms-flex: 1 0 auto;
+					flex: 1 0 auto;
 					color: $color4;
 					width: 23.5%;
 					text-align: center;
@@ -1321,23 +1349,7 @@ License: GNU General Public License v2 or later
 				background-color: $color;
 				margin-bottom: 1%;
 
-				h1,
-				h2,
-				h3,
-				h4,
-				h5,
-				h6 {
-
-					height: 40px;
-					line-height: 40px;
-					width: 100%;
-					color: $color2;
-					height: auto;
-					margin-bottom: 0;
-					background-color: #000;
-
-				}
-
+				
 				iframe {
 					display: block;
 					margin: 1em auto;
@@ -1366,8 +1378,8 @@ License: GNU General Public License v2 or later
 						color: $color;
 
 						a {
-							width: 100%;
-							display: block;
+							width: auto;
+							display: inline-block;
 							letter-spacing: 0.03em;
 							color: $color;
 
@@ -1376,10 +1388,7 @@ License: GNU General Public License v2 or later
 						span {
 							display: inline-block;
 							width: auto;
-							float: left;
 							text-indent: 0.25em;
-							margin-right: 1%;
-
 
 						}
 					}
@@ -1417,7 +1426,7 @@ License: GNU General Public License v2 or later
 							text-indent: 0.5em;
 
 							a {
-								width: 50%;
+								width: auto;
 								display: inline-block;
 							}
 
@@ -2029,7 +2038,8 @@ License: GNU General Public License v2 or later
 				height: auto;
 				h2{
 					margin-bottom:0.2em;
-					color:$color;
+					color:$color4;
+					background-color:$color7;
 					
 				}
 				span{
@@ -2047,8 +2057,8 @@ License: GNU General Public License v2 or later
 						text-align:center;
 						@include Transition(all 0.2s linear 0s);
 						&:hover{
-							color:$color;
-							background-color:$color4;
+							color:$color4;
+							background-color:$color7;
 							font-weight:bold;
 						}
 						&:after {
@@ -2058,11 +2068,11 @@ License: GNU General Public License v2 or later
                             line-height: 50px;
                             float: right;
                             width: 3%;
-                            display: inline-block;
+                            display: block;
 						}
 						&:active{
 							background-color:$color7;
-							color:$color4;
+							color:$color;
 						}
 					}
 				}
@@ -2963,7 +2973,7 @@ License: GNU General Public License v2 or later
 						font-size: 1.2em;
 
 						a {
-							width: 100%;
+							width: auto;
 
 						}
 
@@ -2989,7 +2999,7 @@ License: GNU General Public License v2 or later
 							font-size: 0.8em;
 
 							a {
-								width: 60%;
+								width: auto;
 
 							}
 						}
@@ -3639,8 +3649,38 @@ License: GNU General Public License v2 or later
 		header {
 			height: 70px;
 
+			.site-logo {
+				
+				width: 7%;
+								
+
+				a {
+					
+					/* Text meant only for screen readers. */
+					div.screen-reader-text {
+						
+						&:focus {
+							
+							font-size: 14px;
+							font-size: 0.875rem;
+							
+							/* Above WP toolbar. */
+						}
+
+					}
+
+					div.site-firstletter {
+						
+						font-size: 3em;
+						
+					}
+
+				}
+
+			}
+
 			#clashvibes_title {
-				width: 70%;
+				width: 68%;
 
 				h1 {
 
@@ -3658,8 +3698,7 @@ License: GNU General Public License v2 or later
 				width: 25%;
 
 				a {
-					width: 23.5%;
-
+					
 					span {
 						display: block;
 
@@ -4171,7 +4210,7 @@ License: GNU General Public License v2 or later
 							font-size: 0.75em;
 
 							a {
-								width: 70%;
+								width: auto;
 
 							}
 						}
@@ -4801,8 +4840,41 @@ License: GNU General Public License v2 or later
 		header {
 			height: 65px;
 
+			.site-logo {
+				
+				width: 7%;
+											
+
+				a {
+					
+					height: 75%;
+
+					/* Text meant only for screen readers. */
+					div.screen-reader-text {
+						
+
+						&:focus {
+							
+							font-size: 14px;
+							font-size: 0.875rem;
+							
+							/* Above WP toolbar. */
+						}
+
+					}
+
+					div.site-firstletter {
+						
+						font-size: 2em;
+						
+					}
+
+				}
+
+			}
+
 			#clashvibes_title {
-				width: 70%;
+				width: 60%;
 
 				h1 {
 
@@ -4811,13 +4883,13 @@ License: GNU General Public License v2 or later
 				}
 
 				h2.site-description {
-					line-height: 20px;
+					
 					font-size: 0.7em;
 				}
 			}
 
 			span#socialmediatop {
-				width: 25%;
+				width: 32%;
 
 				a {
 					width: 23.5%;
@@ -4842,13 +4914,13 @@ License: GNU General Public License v2 or later
 				list-style: none;
 
 				li {
-					width: 13.6%;
+					width: 14%;
 					margin-right: 0.15em;
 
 					a {
-						font-size: 0.7em;
+						font-size: 0.8em;
 
-						&:hover {}
+						
 					}
 
 					.lastmenu {
@@ -5245,7 +5317,7 @@ License: GNU General Public License v2 or later
 						font-size: 1em;
 
 						a {
-							width: 100%;
+							width: auto;
 
 						}
 
@@ -5271,7 +5343,7 @@ License: GNU General Public License v2 or later
 							font-size: 0.75em;
 
 							a {
-								width: 80%;
+								width: auto;
 
 							}
 						}
@@ -5557,6 +5629,33 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+
+				.navigation{
+					margin:0;
+					
+					h2{
+						color:$color;
+						
+					}
+					span{
+						display:inline-block;
+						
+						a{
+													
+							&:hover{
+								
+								font-weight:bold;
+							}
+							&:after {
+								
+								font-size: 1.3em;
+								width: 6%;
+								
+							}
+						}
+					}
+	
+				}
 			}
 		}
 
@@ -5815,23 +5914,16 @@ License: GNU General Public License v2 or later
 			height: 65px;
 
 			#clashvibes_title {
-				width: 60%;
-
-				h1 {
-
-					font-size: 2.1em;
-
-				}
+								
 
 				h2.site-description {
-					line-height: 20px;
+					
 					font-size: 0.7em;
 				}
 			}
 
 			span#socialmediatop {
-				width: 30%;
-
+				
 				a {
 					width: 23.5%;
 
@@ -5855,11 +5947,11 @@ License: GNU General Public License v2 or later
 				list-style: none;
 
 				li {
-					width: 13.8%;
+					
 					margin-right: 0.1em;
 
 					a {
-						font-size: 0.7em;
+						font-size: 0.75em;
 
 						
 					}
@@ -6256,7 +6348,7 @@ License: GNU General Public License v2 or later
 						font-size: 0.9em;
 
 						a {
-							width: 100%;
+							width: auto;
 
 						}
 
@@ -6282,7 +6374,7 @@ License: GNU General Public License v2 or later
 							font-size: 0.7em;
 
 							a {
-								width: 80%;
+								width: auto;
 
 							}
 						}
@@ -6573,6 +6665,33 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+
+				.navigation{
+					margin:0;
+					
+					h2{
+						color:$color;
+						
+					}
+					span{
+						display:inline-block;
+						
+						a{
+							font-size:0.9em;						
+							&:hover{
+								
+								font-weight:bold;
+							}
+							&:after {
+								
+								
+								width: 7%;
+								
+							}
+						}
+					}
+	
+				}
 			}
 		}
 
@@ -6812,63 +6931,41 @@ License: GNU General Public License v2 or later
 /*tablet*/
 @media only screen and (max-width: 667px) {
 
-	button.menu-toggle {
-		display: block;
-		position: fixed;
-		top: 0.25em;
-		left: 86.5%;
-		z-index: 100;
-		line-height: 45px;
-		height: 45px;
-		width: 60px;
-		background-color: $color4;
-		color: $color;
-		border: none;
-		outline: none;
-		text-align: center;
-		@include Transition(all 0.2s linear 0s);
-
-		&:hover {
-			background-color: $color7;
-			color: $color4;
+	#tog-menu{
+		display: inline-flex;
+		justify-content: flex-end;
+		width: 25%;
+		left: calc(73% - 1vw);
+		button.menu-toggle,
+		button.sidebar-toggle {
+			line-height: 60px;
+			width: 100%;
+			background-color: $color4;
+			color: $color;
+			border: none;
+			outline: none;
 			text-align: center;
+			@include Transition(all 0.2s linear 0s);
+
+			&:hover {
+				background-color: $color7;
+				color: $color4;
+				text-align: center;
+				cursor:pointer;
+			}
+
 		}
 
-	}
-
-	button.sidebar-toggle {
-		display: block;
-		position: fixed;
-		top: 0.25em;
-		left: 69%;
-		line-height: 45px;
-		height: 45px;
-		width: 15%;
-		z-index: 100;
-		background-color: $color4;
-		color: $color;
-		border: none;
-		outline: none;
-		text-align: center;
-		@include Transition(all 0.2s linear 0s);
-
-		&:hover {
-			background-color: $color7;
-			color: $color4;
-			text-align: center;
-			cursor:pointer;
+		
+		.sidebar-toggle.hide-side {
+			left: 150vw;
 		}
 
+		.menu-toggle.hide {
+			left: 100vw;
+		}
 	}
-
-	.sidebar-toggle.hide-side {
-		left: 150vw;
-	}
-
-	.menu-toggle.hide {
-		left: 100vw;
-	}
-
+	
 	#container {
 		width: 98%;
 
@@ -6885,7 +6982,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 		}
-
+		
 		.sidebar-toggle.hide-side {
 			left: 50vw;
 		}
@@ -6895,17 +6992,49 @@ License: GNU General Public License v2 or later
 		header {
 			height: 65px;
 
+			.site-logo {
+				
+				width: 9%;
+											
+
+				a {
+					
+					
+					/* Text meant only for screen readers. */
+					div.screen-reader-text {
+						
+
+						&:focus {
+							
+							font-size: 14px;
+							font-size: 0.875rem;
+							
+							/* Above WP toolbar. */
+						}
+
+					}
+
+					div.site-firstletter {
+						
+						font-size: 3em;
+						
+					}
+
+				}
+
+			}
+
 			#clashvibes_title {
-				width: 54%;
+				width: 90%;
 
 				h1 {
 
-					font-size: 2em;
+					font-size: 2.2em;
 
 				}
 
 				h2.site-description {
-					line-height: 20px;
+					
 					font-size: 0.65em;
 				}
 			}
@@ -6926,6 +7055,13 @@ License: GNU General Public License v2 or later
 
 			ul {
 				list-style: none;
+				
+				-webkit-flex-flow: column;
+				-ms-flex-flow: column;
+				flex-flow: column;
+				-webkit-justify-content: flex-start;
+				-ms-flex-pack: start;
+				justify-content: flex-start;
 
 				li {
 					margin-right: 0;
@@ -7255,8 +7391,8 @@ License: GNU General Public License v2 or later
 
 					h1 {
 						font-size: 1em;
-						text-indent: 0.25em;
-
+						text-indent: 0em;
+						text-align: center;
 
 						a {
 
@@ -7265,14 +7401,15 @@ License: GNU General Public License v2 or later
 						}
 
 						span {
-							text-indent: 0.25em;
+							text-indent: 0em;
 
 						}
 					}
 
 					h2 {
 
-						text-indent: 0.5em;
+						text-indent: 0;
+    					text-align: center;
 
 
 						a {
@@ -7282,16 +7419,17 @@ License: GNU General Public License v2 or later
 					}
 
 					div.entry-meta {
-						display: block;
-						text-align: left;
+						
+						text-align: center;
 
 						span.posted-on,
 						span.byline {
 							font-size: 0.7em;
 
 							a {
-								width: 80%;
-								text-align: left;
+								
+								text-align: center;
+
 
 							}
 						}
@@ -7549,6 +7687,36 @@ License: GNU General Public License v2 or later
 							width: 97%;
 						}
 					}
+				}
+
+				.navigation{
+					margin:0;
+					
+					h2{
+						color:$color;
+						text-align: center;
+						font-size: 1.2em;
+
+						
+					}
+					span{
+						display:inline-block;
+						
+						a{
+													
+							&:hover{
+								
+								font-weight:bold;
+							}
+							&:after {
+								
+								font-size: 1.2em;
+								
+								
+							}
+						}
+					}
+	
 				}
 			}
 
@@ -7956,33 +8124,32 @@ License: GNU General Public License v2 or later
 }
 
 @media only screen and (max-width: 640px) {
+	
 
-	button.menu-toggle {
+	#tog-menu{
+		width: 26%;
+		left: calc(72% - 1vw);		
+		button.menu-toggle,
+		button.sidebar-toggle {
+			line-height: 60px;
+			
 
-		top: 0.25em;
-		left: 86.5%;
+			&:hover {
+				
+				text-align: center;
+				
+			}
 
-
-		&:hover {
-
-			text-align: center;
 		}
 
-	}
-
-
-	button.sidebar-toggle {
-
-		top: 0.25em;
-		left: 69%;
-
-		width: 15%;
-
-		&:hover {
-
-			text-align: center;
+		
+		.sidebar-toggle.hide-side {
+			left: 150vw;
 		}
 
+		.menu-toggle.hide {
+			left: 100vw;
+		}
 	}
 
 	.sidebar-toggle.hide-side {
@@ -8018,9 +8185,40 @@ License: GNU General Public License v2 or later
 		/********** header **********/
 		header {
 			height: 65px;
+			.site-logo {
+				
+				width: 10%;
+											
+
+				a {
+					
+					
+					/* Text meant only for screen readers. */
+					div.screen-reader-text {
+						
+
+						&:focus {
+							
+							font-size: 14px;
+							font-size: 0.875rem;
+							
+							/* Above WP toolbar. */
+						}
+
+					}
+
+					div.site-firstletter {
+						
+						font-size: 3em;
+						
+					}
+
+				}
+
+			}
 
 			#clashvibes_title {
-				width: 54%;
+				width: 85%;
 
 				h1 {
 
@@ -8029,7 +8227,7 @@ License: GNU General Public License v2 or later
 				}
 
 				h2.site-description {
-					line-height: 20px;
+					
 					font-size: 0.65em;
 				}
 			}
@@ -8387,15 +8585,14 @@ License: GNU General Public License v2 or later
 						}
 
 						span {
-							text-indent: 0.25em;
+							text-indent: 0;
 
 						}
 					}
 
 					h2 {
 
-						text-indent: 0.5em;
-
+						
 
 						a {
 							color: $color;
@@ -8405,15 +8602,14 @@ License: GNU General Public License v2 or later
 
 					div.entry-meta {
 						display: block;
-						text-align: left;
-
+						
 						span.posted-on,
 						span.byline {
 							font-size: 0.65em;
 
 							a {
-								width: 80%;
-								text-align: left;
+								
+								width: auto;
 
 							}
 						}
@@ -9061,21 +9257,29 @@ License: GNU General Public License v2 or later
 
 @media only screen and (max-width: 536px) {
 
-	button.menu-toggle {
+	#tog-menu{
+		width: 28%;
+		left: calc(70% - 1vw);		
+		button.menu-toggle,
+		button.sidebar-toggle {
+			line-height: 60px;
+			font-size: 0.8em;
 
-		left: 85.5%;
+			&:hover {
+				
+				text-align: center;
+				
+			}
 
+		}
 
-	}
+		
+		.sidebar-toggle.hide-side {
+			left: 150vw;
+		}
 
-	button.sidebar-toggle {
-
-		left: 69%;
-		font-size: 0.8em;
-		width: 15%;
-
-		&:hover {
-			background-color: $color7;
+		.menu-toggle.hide {
+			left: 100vw;
 		}
 	}
 
@@ -9100,8 +9304,40 @@ License: GNU General Public License v2 or later
 		header {
 			height: 65px;
 
+			.site-logo {
+				
+				width: 11%;
+											
+
+				a {
+					
+					
+					/* Text meant only for screen readers. */
+					div.screen-reader-text {
+						
+
+						&:focus {
+							
+							font-size: 14px;
+							
+							
+							/* Above WP toolbar. */
+						}
+
+					}
+
+					div.site-firstletter {
+						
+						font-size: 3em;
+						
+					}
+
+				}
+
+			}
+
 			#clashvibes_title {
-				width: 48%;
+				
 
 				h1 {
 
@@ -9110,7 +9346,7 @@ License: GNU General Public License v2 or later
 				}
 
 				h2.site-description {
-					line-height: 20px;
+					
 					font-size: 0.65em;
 				}
 			}
@@ -9449,7 +9685,7 @@ License: GNU General Public License v2 or later
 						}
 
 						span {
-							text-indent: 0.25em;
+							text-indent: 0em;
 
 						}
 					}
@@ -9727,6 +9963,33 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+				.navigation{
+					margin:0;
+					
+					h2{
+						color:$color;
+						
+					}
+					span{
+						display:inline-block;
+						
+						a{
+							font-size:0.8em;						
+							&:hover{
+								
+								font-weight:bold;
+							}
+							&:after {
+								
+								font-size: 1.2em;
+								width:8%;
+								
+							}
+						}
+					}
+	
+				}
+				
 			}
 		}
 
@@ -10110,22 +10373,29 @@ License: GNU General Public License v2 or later
 /*mobile*/
 @media only screen and (max-width: 480px) {
 
-	button.menu-toggle {
-		left: 84.5%;
+	#tog-menu{
+		width: 30%;
+		left: calc(69% - 1vw);		
+		button.menu-toggle,
+		button.sidebar-toggle {
+			line-height: 60px;
+			font-size: 0.75em;
 
-		&:hover {
-			background-color: $color7;
+			&:hover {
+				
+				text-align: center;
+				
+			}
 
 		}
-	}
 
-	button#side-bar-btn {
+		
+		.sidebar-toggle.hide-side {
+			left: 150vw;
+		}
 
-		left: 68.5%;
-
-		&:hover {
-			background-color: $color7;
-
+		.menu-toggle.hide {
+			left: 100vw;
 		}
 	}
 
@@ -10150,8 +10420,40 @@ License: GNU General Public License v2 or later
 		header {
 			height: 60px;
 
+			.site-logo {
+				
+				width: 12%;
+											
+
+				a {
+					
+					height: 80%;
+					/* Text meant only for screen readers. */
+					div.screen-reader-text {
+						
+
+						&:focus {
+							
+							font-size: 14px;
+							
+							
+							/* Above WP toolbar. */
+						}
+
+					}
+
+					div.site-firstletter {
+						
+						font-size: 3em;
+						
+					}
+
+				}
+
+			}
+
 			#clashvibes_title {
-				width: 50%;
+				
 
 				h1 {
 
@@ -10160,7 +10462,7 @@ License: GNU General Public License v2 or later
 				}
 
 				h2.site-description {
-					line-height: 20px;
+					
 					font-size: 0.6em;
 				}
 			}
@@ -10483,6 +10785,7 @@ License: GNU General Public License v2 or later
 
 				h2 {
 					font-size: 1em;
+					text-align: center;
 
 				}
 
@@ -10499,17 +10802,14 @@ License: GNU General Public License v2 or later
 						a {
 
 							letter-spacing: 0.03em;
-							display: block;
-							width: 100%;
-							float: none;
+							
+							
 
 						}
 
 						span {
 							text-indent: 0;
-							display: block;
-							width: 100%;
-							float: none;
+														
 
 						}
 					}
@@ -11246,24 +11546,29 @@ License: GNU General Public License v2 or later
 
 @media only screen and (max-width: 414px) {
 
-	button.menu-toggle {
-		left: 84%;
-		font-size: 0.75em;
+	#tog-menu{
+		width: 32%;
+		left: calc(67% - 1vw);		
+		button.menu-toggle,
+		button.sidebar-toggle {
+			line-height: 60px;
+			font-size: 0.7em;
 
-		&:hover {
-			background-color: $color7;
+			&:hover {
+				
+				text-align: center;
+				
+			}
 
 		}
-	}
 
-	button.sidebar-toggle {
-		font-size: 0.75em;
-		width: 15%;
-		left: 65%;
+		
+		.sidebar-toggle.hide-side {
+			left: 150vw;
+		}
 
-		&:hover {
-			background-color: $color7;
-
+		.menu-toggle.hide {
+			left: 100vw;
 		}
 	}
 
@@ -11288,7 +11593,7 @@ License: GNU General Public License v2 or later
 			height: 60px;
 
 			#clashvibes_title {
-				width: 48%;
+				
 
 				h1 {
 
@@ -11600,7 +11905,7 @@ License: GNU General Public License v2 or later
 							font-size: 0.65em;
 
 							a {
-								width: 80%;
+								width: auto;
 
 							}
 						}
@@ -11939,6 +12244,33 @@ License: GNU General Public License v2 or later
 
 						}
 					}
+				}
+
+				.navigation{
+					margin:0;
+					
+					h2{
+						color:$color;
+						
+					}
+					span{
+						display:inline-block;
+						
+						a{
+													
+							&:hover{
+								
+								font-weight:bold;
+							}
+							&:after {
+								width:10%;
+								font-size: 1.1em;
+								
+								
+							}
+						}
+					}
+	
 				}
 			}
 		}
@@ -12323,25 +12655,30 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 360px) {
 
 
-	button.menu-toggle {
+	#tog-menu{
+		width: 35%;
+		left: calc(64% - 1vw);		
+		button.menu-toggle,
+		button.sidebar-toggle {
+			line-height: 60px;
+			
 
-		width: 45px;
+			&:hover {
+				
+				text-align: center;
+				
+			}
 
-		&:hover {
-			background-color: $color7;
-			color: $color4;
 		}
 
-	}
-
-	button.sidebar-toggle {
-		width: 15%;
-
-		&:hover {
-			background-color: $color7;
-			color: $color4;
+		
+		.sidebar-toggle.hide-side {
+			left: 150vw;
 		}
 
+		.menu-toggle.hide {
+			left: 100vw;
+		}
 	}
 
 	.hide {
@@ -12370,16 +12707,16 @@ License: GNU General Public License v2 or later
 			height: 60px;
 
 			#clashvibes_title {
-				width: 50%;
+				
 
 				h1 {
 
-					font-size: 1.8em;
+					font-size: 1.7em;
 
 				}
 
 				h2.site-description {
-					line-height: 20px;
+					
 					font-size: 0.6em;
 				}
 			}
@@ -12621,13 +12958,12 @@ License: GNU General Public License v2 or later
 
 						}
 
-						span {}
+						
 					}
 
 					h2 {
 						font-size: 0.8em;
-						text-indent: 1%;
-
+						
 
 						a {
 							color: $color;
@@ -12643,7 +12979,7 @@ License: GNU General Public License v2 or later
 							font-size: 0.6em;
 
 							a {
-								width: 80%;
+								width: auto;
 
 							}
 						}
@@ -13372,25 +13708,29 @@ License: GNU General Public License v2 or later
 
 @media only screen and (max-width: 320px) {
 
-	button.menu-toggle {
-		left: 84%;
-
-		&:hover {
+	#tog-menu{
+				
+		button.menu-toggle,
+		button.sidebar-toggle {
+			line-height: 60px;
 			
-			color: $color4;
+
+			&:hover {
+				
+				text-align: center;
+				
+			}
+
 		}
 
-	}
-
-	button.sidebar-toggle {
-		left: 67%;
-		width: 16%;
-
-		&:hover {
-			
-			color: $color4;
+		
+		.sidebar-toggle.hide-side {
+			left: 150vw;
 		}
 
+		.menu-toggle.hide {
+			left: 100vw;
+		}
 	}
 
 	#container {
@@ -13418,12 +13758,12 @@ License: GNU General Public License v2 or later
 
 				h1 {
 
-					font-size: 1.8em;
+					font-size: 1.7em;
 
 				}
 
 				h2.site-description {
-					line-height: 20px;
+					
 					font-size: 0.6em;
 				}
 			}
@@ -13706,8 +14046,7 @@ License: GNU General Public License v2 or later
 
 					h2 {
 						font-size: 0.8em;
-						text-indent: 1%;
-
+						
 
 						a {
 							color: $color;
@@ -13723,7 +14062,7 @@ License: GNU General Public License v2 or later
 							font-size: 0.55em;
 
 							a {
-								width: 82%;
+								width: auto;
 
 							}
 						}
@@ -13733,7 +14072,7 @@ License: GNU General Public License v2 or later
 						height: 123px;
 
 						span {
-							text-indent: 0.25em;
+							text-indent: 0;
 
 						}
 					}

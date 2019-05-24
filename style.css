@@ -224,14 +224,35 @@ a {
 }
 
 @media only screen and (max-width: 1920px) {
-  /********** navigation toggle **********/
-  button.menu-toggle {
+  #tog-menu {
+    position: fixed;
+    top: 0.25em;
+    z-index: 100;
+    height: 60px;
     display: none;
+    /********** navigation toggle **********/
   }
-
-  /********** side-bar toggle **********/
-  button.sidebar-toggle {
-    display: none;
+  #tog-menu button.menu-toggle,
+  #tog-menu button.sidebar-toggle {
+    line-height: 60px;
+    width: 50%;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    text-align: center;
+    -webkit-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -o-transition: all 0.2s linear 0s;
+    -ms-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  #tog-menu button.menu-toggle:hover,
+  #tog-menu button.sidebar-toggle:hover {
+    background-color: #658905;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
   }
 
   /********** page container **********/
@@ -287,24 +308,21 @@ a {
     position: relative;
     top: 0;
     left: 0;
-    width: 3.4em;
-    height: 3.5em;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    display: inline-block;
+    width: 5%;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
   }
   #container header .site-logo a {
     position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
-    display: block;
     background: #347026;
     color: #000000;
     text-decoration: none;
-    line-height: 50px;
-    width: 98%;
+    line-height: 40px;
+    width: 100%;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
@@ -314,7 +332,7 @@ a {
     -o-transition: all 0.2s linear 0s, color 0.2s linear 0s;
     -ms-transition: all 0.2s linear 0s, color 0.2s linear 0s;
     transition: all 0.2s linear 0s, color 0.2s linear 0s;
-    height: auto;
+    height: 80%;
     /* Text meant only for screen readers. */
   }
   #container header .site-logo a div.screen-reader-text {
@@ -366,7 +384,12 @@ a {
   }
   #container header #clashvibes_title {
     width: 75%;
-    display: inline-block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
@@ -379,13 +402,13 @@ a {
     font-size: 2.5em;
     text-indent: 0.1em;
     text-shadow: 1px 1px 1px #000000;
-    display: block;
+    width: 100%;
+    height: 30px;
   }
   #container header #clashvibes_title h2.site-description {
     text-indent: 0.5em;
-    float: none;
+    height: 20px;
     color: #9c281b;
-    display: block;
     width: 100%;
     line-height: 20px;
     font-size: 0.7em;
@@ -396,9 +419,10 @@ a {
     margin: 0;
   }
   #container header span#socialmediatop {
-    float: right;
     width: 20%;
-    display: block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     height: 40px;
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
@@ -406,7 +430,9 @@ a {
   }
   #container header span#socialmediatop a.social-icon {
     height: 100%;
-    display: inline-block;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
     color: #000000;
     width: 23.5%;
     text-align: center;
@@ -1516,38 +1542,6 @@ a {
     /*custom-post-footer*/
     /*Social media share buttons*/
   }
-  #container #clashvibes_right_column article.clash-videos h1,
-  #container #clashvibes_right_column article.clash-videos h2,
-  #container #clashvibes_right_column article.clash-videos h3,
-  #container #clashvibes_right_column article.clash-videos h4,
-  #container #clashvibes_right_column article.clash-videos h5,
-  #container #clashvibes_right_column article.clash-videos h6,
-  #container #clashvibes_right_column article.clash-audio h1,
-  #container #clashvibes_right_column article.clash-audio h2,
-  #container #clashvibes_right_column article.clash-audio h3,
-  #container #clashvibes_right_column article.clash-audio h4,
-  #container #clashvibes_right_column article.clash-audio h5,
-  #container #clashvibes_right_column article.clash-audio h6,
-  #container #clashvibes_right_column article.post h1,
-  #container #clashvibes_right_column article.post h2,
-  #container #clashvibes_right_column article.post h3,
-  #container #clashvibes_right_column article.post h4,
-  #container #clashvibes_right_column article.post h5,
-  #container #clashvibes_right_column article.post h6,
-  #container #clashvibes_right_column article.page h1,
-  #container #clashvibes_right_column article.page h2,
-  #container #clashvibes_right_column article.page h3,
-  #container #clashvibes_right_column article.page h4,
-  #container #clashvibes_right_column article.page h5,
-  #container #clashvibes_right_column article.page h6 {
-    height: 40px;
-    line-height: 40px;
-    width: 100%;
-    color: #e9ad29;
-    height: auto;
-    margin-bottom: 0;
-    background-color: #000;
-  }
   #container #clashvibes_right_column article.clash-videos iframe,
   #container #clashvibes_right_column article.clash-audio iframe,
   #container #clashvibes_right_column article.post iframe,
@@ -1581,8 +1575,8 @@ a {
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 a,
   #container #clashvibes_right_column article.post header.entry-header h1 a,
   #container #clashvibes_right_column article.page header.entry-header h1 a {
-    width: 100%;
-    display: block;
+    width: auto;
+    display: inline-block;
     letter-spacing: 0.03em;
     color: #ffffff;
   }
@@ -1592,9 +1586,7 @@ a {
   #container #clashvibes_right_column article.page header.entry-header h1 span {
     display: inline-block;
     width: auto;
-    float: left;
     text-indent: 0.25em;
-    margin-right: 1%;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h2,
   #container #clashvibes_right_column article.clash-audio header.entry-header h2,
@@ -1662,7 +1654,7 @@ a {
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.full-size-link a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.posted-on a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.byline a {
-    width: 50%;
+    width: auto;
     display: inline-block;
   }
   #container #clashvibes_right_column article.clash-videos a.post-thumbnail,
@@ -2809,7 +2801,8 @@ a {
   }
   #container #clashvibes_right_column .navigation h2 {
     margin-bottom: 0.2em;
-    color: #ffffff;
+    color: #000000;
+    background-color: #658905;
   }
   #container #clashvibes_right_column .navigation span {
     display: inline-block;
@@ -2831,8 +2824,8 @@ a {
     transition: all 0.2s linear 0s;
   }
   #container #clashvibes_right_column .navigation span a:hover {
-    color: #ffffff;
-    background-color: #000000;
+    color: #000000;
+    background-color: #658905;
     font-weight: bold;
   }
   #container #clashvibes_right_column .navigation span a:after {
@@ -2842,11 +2835,11 @@ a {
     line-height: 50px;
     float: right;
     width: 3%;
-    display: inline-block;
+    display: block;
   }
   #container #clashvibes_right_column .navigation span a:active {
     background-color: #658905;
-    color: #000000;
+    color: #ffffff;
   }
   #container #news_section {
     float: left;
@@ -3595,7 +3588,7 @@ a {
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 a,
   #container #clashvibes_right_column article.post header.entry-header h1 a,
   #container #clashvibes_right_column article.page header.entry-header h1 a {
-    width: 100%;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h1 span,
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 span,
@@ -3639,7 +3632,7 @@ a {
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta span.byline a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.posted-on a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.byline a {
-    width: 60%;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos a.post-thumbnail img,
   #container #clashvibes_right_column article.clash-videos div.post-thumbnail img,
@@ -4571,8 +4564,22 @@ a {
   #container header {
     height: 70px;
   }
+  #container header .site-logo {
+    width: 7%;
+  }
+  #container header .site-logo a {
+    /* Text meant only for screen readers. */
+  }
+  #container header .site-logo a div.screen-reader-text:focus {
+    font-size: 14px;
+    font-size: 0.875rem;
+    /* Above WP toolbar. */
+  }
+  #container header .site-logo a div.site-firstletter {
+    font-size: 3em;
+  }
   #container header #clashvibes_title {
-    width: 70%;
+    width: 68%;
   }
   #container header #clashvibes_title h1 {
     font-size: 2.3em;
@@ -4583,9 +4590,6 @@ a {
   }
   #container header span#socialmediatop {
     width: 25%;
-  }
-  #container header span#socialmediatop a {
-    width: 23.5%;
   }
   #container header span#socialmediatop a span {
     display: block;
@@ -5018,7 +5022,7 @@ a {
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta span.byline a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.posted-on a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.byline a {
-    width: 70%;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos a.post-thumbnail img,
   #container #clashvibes_right_column article.clash-videos div.post-thumbnail img,
@@ -5919,18 +5923,32 @@ a {
   #container header {
     height: 65px;
   }
+  #container header .site-logo {
+    width: 7%;
+  }
+  #container header .site-logo a {
+    height: 75%;
+    /* Text meant only for screen readers. */
+  }
+  #container header .site-logo a div.screen-reader-text:focus {
+    font-size: 14px;
+    font-size: 0.875rem;
+    /* Above WP toolbar. */
+  }
+  #container header .site-logo a div.site-firstletter {
+    font-size: 2em;
+  }
   #container header #clashvibes_title {
-    width: 70%;
+    width: 60%;
   }
   #container header #clashvibes_title h1 {
     font-size: 2.2em;
   }
   #container header #clashvibes_title h2.site-description {
-    line-height: 20px;
     font-size: 0.7em;
   }
   #container header span#socialmediatop {
-    width: 25%;
+    width: 32%;
   }
   #container header span#socialmediatop a {
     width: 23.5%;
@@ -5948,11 +5966,11 @@ a {
     list-style: none;
   }
   #container nav ul li {
-    width: 13.6%;
+    width: 14%;
     margin-right: 0.15em;
   }
   #container nav ul li a {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   #container nav ul li .lastmenu {
     border-right: none;
@@ -6279,7 +6297,7 @@ a {
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 a,
   #container #clashvibes_right_column article.post header.entry-header h1 a,
   #container #clashvibes_right_column article.page header.entry-header h1 a {
-    width: 100%;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h1 span,
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 span,
@@ -6323,7 +6341,7 @@ a {
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta span.byline a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.posted-on a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.byline a {
-    width: 80%;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos a.post-thumbnail img,
   #container #clashvibes_right_column article.clash-videos div.post-thumbnail img,
@@ -6961,6 +6979,37 @@ a {
   #container #clashvibes_right_column article.page footer.speaker-meta ul.post-meta p {
     width: 76%;
   }
+  #container #clashvibes_right_column article.clash-videos .navigation,
+  #container #clashvibes_right_column article.clash-audio .navigation,
+  #container #clashvibes_right_column article.post .navigation,
+  #container #clashvibes_right_column article.page .navigation {
+    margin: 0;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation h2,
+  #container #clashvibes_right_column article.clash-audio .navigation h2,
+  #container #clashvibes_right_column article.post .navigation h2,
+  #container #clashvibes_right_column article.page .navigation h2 {
+    color: #ffffff;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span,
+  #container #clashvibes_right_column article.clash-audio .navigation span,
+  #container #clashvibes_right_column article.post .navigation span,
+  #container #clashvibes_right_column article.page .navigation span {
+    display: inline-block;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a:hover,
+  #container #clashvibes_right_column article.clash-audio .navigation span a:hover,
+  #container #clashvibes_right_column article.post .navigation span a:hover,
+  #container #clashvibes_right_column article.page .navigation span a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a:after,
+  #container #clashvibes_right_column article.clash-audio .navigation span a:after,
+  #container #clashvibes_right_column article.post .navigation span a:after,
+  #container #clashvibes_right_column article.page .navigation span a:after {
+    font-size: 1.3em;
+    width: 6%;
+  }
   #container #news_section {
     float: left;
   }
@@ -7148,18 +7197,8 @@ a {
   #container header {
     height: 65px;
   }
-  #container header #clashvibes_title {
-    width: 60%;
-  }
-  #container header #clashvibes_title h1 {
-    font-size: 2.1em;
-  }
   #container header #clashvibes_title h2.site-description {
-    line-height: 20px;
     font-size: 0.7em;
-  }
-  #container header span#socialmediatop {
-    width: 30%;
   }
   #container header span#socialmediatop a {
     width: 23.5%;
@@ -7177,11 +7216,10 @@ a {
     list-style: none;
   }
   #container nav ul li {
-    width: 13.8%;
     margin-right: 0.1em;
   }
   #container nav ul li a {
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   #container nav ul li .lastmenu {
     border-right: none;
@@ -7511,7 +7549,7 @@ a {
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 a,
   #container #clashvibes_right_column article.post header.entry-header h1 a,
   #container #clashvibes_right_column article.page header.entry-header h1 a {
-    width: 100%;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h1 span,
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 span,
@@ -7555,7 +7593,7 @@ a {
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta span.byline a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.posted-on a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.byline a {
-    width: 80%;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos a.post-thumbnail img,
   #container #clashvibes_right_column article.clash-videos div.post-thumbnail img,
@@ -8221,6 +8259,42 @@ a {
     line-height: 20px;
     padding: 1em 0.5em;
   }
+  #container #clashvibes_right_column article.clash-videos .navigation,
+  #container #clashvibes_right_column article.clash-audio .navigation,
+  #container #clashvibes_right_column article.post .navigation,
+  #container #clashvibes_right_column article.page .navigation {
+    margin: 0;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation h2,
+  #container #clashvibes_right_column article.clash-audio .navigation h2,
+  #container #clashvibes_right_column article.post .navigation h2,
+  #container #clashvibes_right_column article.page .navigation h2 {
+    color: #ffffff;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span,
+  #container #clashvibes_right_column article.clash-audio .navigation span,
+  #container #clashvibes_right_column article.post .navigation span,
+  #container #clashvibes_right_column article.page .navigation span {
+    display: inline-block;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a,
+  #container #clashvibes_right_column article.clash-audio .navigation span a,
+  #container #clashvibes_right_column article.post .navigation span a,
+  #container #clashvibes_right_column article.page .navigation span a {
+    font-size: 0.9em;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a:hover,
+  #container #clashvibes_right_column article.clash-audio .navigation span a:hover,
+  #container #clashvibes_right_column article.post .navigation span a:hover,
+  #container #clashvibes_right_column article.page .navigation span a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a:after,
+  #container #clashvibes_right_column article.clash-audio .navigation span a:after,
+  #container #clashvibes_right_column article.post .navigation span a:after,
+  #container #clashvibes_right_column article.page .navigation span a:after {
+    width: 7%;
+  }
   #container #news_section {
     float: left;
   }
@@ -8386,15 +8460,16 @@ a {
 }
 /*tablet*/
 @media only screen and (max-width: 667px) {
-  button.menu-toggle {
-    display: block;
-    position: fixed;
-    top: 0.25em;
-    left: 86.5%;
-    z-index: 100;
-    line-height: 45px;
-    height: 45px;
-    width: 60px;
+  #tog-menu {
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 25%;
+    left: calc(73% - 1vw);
+  }
+  #tog-menu button.menu-toggle,
+  #tog-menu button.sidebar-toggle {
+    line-height: 60px;
+    width: 100%;
     background-color: #000000;
     color: #ffffff;
     border: none;
@@ -8406,44 +8481,17 @@ a {
     -ms-transition: all 0.2s linear 0s;
     transition: all 0.2s linear 0s;
   }
-  button.menu-toggle:hover {
-    background-color: #658905;
-    color: #000000;
-    text-align: center;
-  }
-
-  button.sidebar-toggle {
-    display: block;
-    position: fixed;
-    top: 0.25em;
-    left: 69%;
-    line-height: 45px;
-    height: 45px;
-    width: 15%;
-    z-index: 100;
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    outline: none;
-    text-align: center;
-    -webkit-transition: all 0.2s linear 0s;
-    -moz-transition: all 0.2s linear 0s;
-    -o-transition: all 0.2s linear 0s;
-    -ms-transition: all 0.2s linear 0s;
-    transition: all 0.2s linear 0s;
-  }
-  button.sidebar-toggle:hover {
+  #tog-menu button.menu-toggle:hover,
+  #tog-menu button.sidebar-toggle:hover {
     background-color: #658905;
     color: #000000;
     text-align: center;
     cursor: pointer;
   }
-
-  .sidebar-toggle.hide-side {
+  #tog-menu .sidebar-toggle.hide-side {
     left: 150vw;
   }
-
-  .menu-toggle.hide {
+  #tog-menu .menu-toggle.hide {
     left: 100vw;
   }
 
@@ -8475,14 +8523,27 @@ a {
   #container header {
     height: 65px;
   }
+  #container header .site-logo {
+    width: 9%;
+  }
+  #container header .site-logo a {
+    /* Text meant only for screen readers. */
+  }
+  #container header .site-logo a div.screen-reader-text:focus {
+    font-size: 14px;
+    font-size: 0.875rem;
+    /* Above WP toolbar. */
+  }
+  #container header .site-logo a div.site-firstletter {
+    font-size: 3em;
+  }
   #container header #clashvibes_title {
-    width: 54%;
+    width: 90%;
   }
   #container header #clashvibes_title h1 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
   #container header #clashvibes_title h2.site-description {
-    line-height: 20px;
     font-size: 0.65em;
   }
   #container header span#socialmediatop {
@@ -8498,6 +8559,12 @@ a {
   }
   #container nav ul {
     list-style: none;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
   #container nav ul li {
     margin-right: 0;
@@ -8808,7 +8875,8 @@ a {
   #container #clashvibes_right_column article.post header.entry-header h1,
   #container #clashvibes_right_column article.page header.entry-header h1 {
     font-size: 1em;
-    text-indent: 0.25em;
+    text-indent: 0em;
+    text-align: center;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h1 a,
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 a,
@@ -8820,13 +8888,14 @@ a {
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 span,
   #container #clashvibes_right_column article.post header.entry-header h1 span,
   #container #clashvibes_right_column article.page header.entry-header h1 span {
-    text-indent: 0.25em;
+    text-indent: 0em;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h2,
   #container #clashvibes_right_column article.clash-audio header.entry-header h2,
   #container #clashvibes_right_column article.post header.entry-header h2,
   #container #clashvibes_right_column article.page header.entry-header h2 {
-    text-indent: 0.5em;
+    text-indent: 0;
+    text-align: center;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h2 a,
   #container #clashvibes_right_column article.clash-audio header.entry-header h2 a,
@@ -8838,8 +8907,7 @@ a {
   #container #clashvibes_right_column article.clash-audio header.entry-header div.entry-meta,
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta {
-    display: block;
-    text-align: left;
+    text-align: center;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header div.entry-meta span.posted-on,
   #container #clashvibes_right_column article.clash-videos header.entry-header div.entry-meta span.byline,
@@ -8859,8 +8927,7 @@ a {
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta span.byline a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.posted-on a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.byline a {
-    width: 80%;
-    text-align: left;
+    text-align: center;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header section.byline,
   #container #clashvibes_right_column article.clash-audio header.entry-header section.byline,
@@ -9496,6 +9563,38 @@ a {
   #container #clashvibes_right_column article.page footer.speaker-meta ul.post-meta p {
     width: 97%;
   }
+  #container #clashvibes_right_column article.clash-videos .navigation,
+  #container #clashvibes_right_column article.clash-audio .navigation,
+  #container #clashvibes_right_column article.post .navigation,
+  #container #clashvibes_right_column article.page .navigation {
+    margin: 0;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation h2,
+  #container #clashvibes_right_column article.clash-audio .navigation h2,
+  #container #clashvibes_right_column article.post .navigation h2,
+  #container #clashvibes_right_column article.page .navigation h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span,
+  #container #clashvibes_right_column article.clash-audio .navigation span,
+  #container #clashvibes_right_column article.post .navigation span,
+  #container #clashvibes_right_column article.page .navigation span {
+    display: inline-block;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a:hover,
+  #container #clashvibes_right_column article.clash-audio .navigation span a:hover,
+  #container #clashvibes_right_column article.post .navigation span a:hover,
+  #container #clashvibes_right_column article.page .navigation span a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a:after,
+  #container #clashvibes_right_column article.clash-audio .navigation span a:after,
+  #container #clashvibes_right_column article.post .navigation span a:after,
+  #container #clashvibes_right_column article.page .navigation span a:after {
+    font-size: 1.2em;
+  }
   #container #news_section {
     float: left;
     width: 100%;
@@ -9776,21 +9875,23 @@ a {
   }
 }
 @media only screen and (max-width: 640px) {
-  button.menu-toggle {
-    top: 0.25em;
-    left: 86.5%;
+  #tog-menu {
+    width: 26%;
+    left: calc(72% - 1vw);
   }
-  button.menu-toggle:hover {
+  #tog-menu button.menu-toggle,
+  #tog-menu button.sidebar-toggle {
+    line-height: 60px;
+  }
+  #tog-menu button.menu-toggle:hover,
+  #tog-menu button.sidebar-toggle:hover {
     text-align: center;
   }
-
-  button.sidebar-toggle {
-    top: 0.25em;
-    left: 69%;
-    width: 15%;
+  #tog-menu .sidebar-toggle.hide-side {
+    left: 150vw;
   }
-  button.sidebar-toggle:hover {
-    text-align: center;
+  #tog-menu .menu-toggle.hide {
+    left: 100vw;
   }
 
   .sidebar-toggle.hide-side {
@@ -9829,14 +9930,27 @@ a {
   #container header {
     height: 65px;
   }
+  #container header .site-logo {
+    width: 10%;
+  }
+  #container header .site-logo a {
+    /* Text meant only for screen readers. */
+  }
+  #container header .site-logo a div.screen-reader-text:focus {
+    font-size: 14px;
+    font-size: 0.875rem;
+    /* Above WP toolbar. */
+  }
+  #container header .site-logo a div.site-firstletter {
+    font-size: 3em;
+  }
   #container header #clashvibes_title {
-    width: 54%;
+    width: 85%;
   }
   #container header #clashvibes_title h1 {
     font-size: 2em;
   }
   #container header #clashvibes_title h2.site-description {
-    line-height: 20px;
     font-size: 0.65em;
   }
   #container nav {
@@ -10178,13 +10292,7 @@ a {
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 span,
   #container #clashvibes_right_column article.post header.entry-header h1 span,
   #container #clashvibes_right_column article.page header.entry-header h1 span {
-    text-indent: 0.25em;
-  }
-  #container #clashvibes_right_column article.clash-videos header.entry-header h2,
-  #container #clashvibes_right_column article.clash-audio header.entry-header h2,
-  #container #clashvibes_right_column article.post header.entry-header h2,
-  #container #clashvibes_right_column article.page header.entry-header h2 {
-    text-indent: 0.5em;
+    text-indent: 0;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h2 a,
   #container #clashvibes_right_column article.clash-audio header.entry-header h2 a,
@@ -10197,7 +10305,6 @@ a {
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta {
     display: block;
-    text-align: left;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header div.entry-meta span.posted-on,
   #container #clashvibes_right_column article.clash-videos header.entry-header div.entry-meta span.byline,
@@ -10217,8 +10324,7 @@ a {
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta span.byline a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.posted-on a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.byline a {
-    width: 80%;
-    text-align: left;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header section.byline,
   #container #clashvibes_right_column article.clash-audio header.entry-header section.byline,
@@ -11113,17 +11219,24 @@ a {
   }
 }
 @media only screen and (max-width: 536px) {
-  button.menu-toggle {
-    left: 85.5%;
+  #tog-menu {
+    width: 28%;
+    left: calc(70% - 1vw);
   }
-
-  button.sidebar-toggle {
-    left: 69%;
+  #tog-menu button.menu-toggle,
+  #tog-menu button.sidebar-toggle {
+    line-height: 60px;
     font-size: 0.8em;
-    width: 15%;
   }
-  button.sidebar-toggle:hover {
-    background-color: #658905;
+  #tog-menu button.menu-toggle:hover,
+  #tog-menu button.sidebar-toggle:hover {
+    text-align: center;
+  }
+  #tog-menu .sidebar-toggle.hide-side {
+    left: 150vw;
+  }
+  #tog-menu .menu-toggle.hide {
+    left: 100vw;
   }
 
   #container {
@@ -11150,14 +11263,23 @@ a {
   #container header {
     height: 65px;
   }
-  #container header #clashvibes_title {
-    width: 48%;
+  #container header .site-logo {
+    width: 11%;
+  }
+  #container header .site-logo a {
+    /* Text meant only for screen readers. */
+  }
+  #container header .site-logo a div.screen-reader-text:focus {
+    font-size: 14px;
+    /* Above WP toolbar. */
+  }
+  #container header .site-logo a div.site-firstletter {
+    font-size: 3em;
   }
   #container header #clashvibes_title h1 {
     font-size: 2em;
   }
   #container header #clashvibes_title h2.site-description {
-    line-height: 20px;
     font-size: 0.65em;
   }
   #container nav {
@@ -11483,7 +11605,7 @@ a {
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 span,
   #container #clashvibes_right_column article.post header.entry-header h1 span,
   #container #clashvibes_right_column article.page header.entry-header h1 span {
-    text-indent: 0.25em;
+    text-indent: 0em;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h2,
   #container #clashvibes_right_column article.clash-audio header.entry-header h2,
@@ -12092,6 +12214,43 @@ a {
     width: 97%;
     line-height: 20px;
   }
+  #container #clashvibes_right_column article.clash-videos .navigation,
+  #container #clashvibes_right_column article.clash-audio .navigation,
+  #container #clashvibes_right_column article.post .navigation,
+  #container #clashvibes_right_column article.page .navigation {
+    margin: 0;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation h2,
+  #container #clashvibes_right_column article.clash-audio .navigation h2,
+  #container #clashvibes_right_column article.post .navigation h2,
+  #container #clashvibes_right_column article.page .navigation h2 {
+    color: #ffffff;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span,
+  #container #clashvibes_right_column article.clash-audio .navigation span,
+  #container #clashvibes_right_column article.post .navigation span,
+  #container #clashvibes_right_column article.page .navigation span {
+    display: inline-block;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a,
+  #container #clashvibes_right_column article.clash-audio .navigation span a,
+  #container #clashvibes_right_column article.post .navigation span a,
+  #container #clashvibes_right_column article.page .navigation span a {
+    font-size: 0.8em;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a:hover,
+  #container #clashvibes_right_column article.clash-audio .navigation span a:hover,
+  #container #clashvibes_right_column article.post .navigation span a:hover,
+  #container #clashvibes_right_column article.page .navigation span a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a:after,
+  #container #clashvibes_right_column article.clash-audio .navigation span a:after,
+  #container #clashvibes_right_column article.post .navigation span a:after,
+  #container #clashvibes_right_column article.page .navigation span a:after {
+    font-size: 1.2em;
+    width: 8%;
+  }
   #container #news_section {
     float: left;
     width: 100%;
@@ -12356,18 +12515,24 @@ a {
 }
 /*mobile*/
 @media only screen and (max-width: 480px) {
-  button.menu-toggle {
-    left: 84.5%;
+  #tog-menu {
+    width: 30%;
+    left: calc(69% - 1vw);
   }
-  button.menu-toggle:hover {
-    background-color: #658905;
+  #tog-menu button.menu-toggle,
+  #tog-menu button.sidebar-toggle {
+    line-height: 60px;
+    font-size: 0.75em;
   }
-
-  button#side-bar-btn {
-    left: 68.5%;
+  #tog-menu button.menu-toggle:hover,
+  #tog-menu button.sidebar-toggle:hover {
+    text-align: center;
   }
-  button#side-bar-btn:hover {
-    background-color: #658905;
+  #tog-menu .sidebar-toggle.hide-side {
+    left: 150vw;
+  }
+  #tog-menu .menu-toggle.hide {
+    left: 100vw;
   }
 
   #container {
@@ -12395,14 +12560,24 @@ a {
   #container header {
     height: 60px;
   }
-  #container header #clashvibes_title {
-    width: 50%;
+  #container header .site-logo {
+    width: 12%;
+  }
+  #container header .site-logo a {
+    height: 80%;
+    /* Text meant only for screen readers. */
+  }
+  #container header .site-logo a div.screen-reader-text:focus {
+    font-size: 14px;
+    /* Above WP toolbar. */
+  }
+  #container header .site-logo a div.site-firstletter {
+    font-size: 3em;
   }
   #container header #clashvibes_title h1 {
     font-size: 2em;
   }
   #container header #clashvibes_title h2.site-description {
-    line-height: 20px;
     font-size: 0.6em;
   }
   #container nav {
@@ -12704,6 +12879,7 @@ a {
   #container #clashvibes_right_column article.post h2,
   #container #clashvibes_right_column article.page h2 {
     font-size: 1em;
+    text-align: center;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header,
   #container #clashvibes_right_column article.clash-audio header.entry-header,
@@ -12726,18 +12902,12 @@ a {
   #container #clashvibes_right_column article.post header.entry-header h1 a,
   #container #clashvibes_right_column article.page header.entry-header h1 a {
     letter-spacing: 0.03em;
-    display: block;
-    width: 100%;
-    float: none;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h1 span,
   #container #clashvibes_right_column article.clash-audio header.entry-header h1 span,
   #container #clashvibes_right_column article.post header.entry-header h1 span,
   #container #clashvibes_right_column article.page header.entry-header h1 span {
     text-indent: 0;
-    display: block;
-    width: 100%;
-    float: none;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h2,
   #container #clashvibes_right_column article.clash-audio header.entry-header h2,
@@ -13797,21 +13967,24 @@ a {
   }
 }
 @media only screen and (max-width: 414px) {
-  button.menu-toggle {
-    left: 84%;
-    font-size: 0.75em;
+  #tog-menu {
+    width: 32%;
+    left: calc(67% - 1vw);
   }
-  button.menu-toggle:hover {
-    background-color: #658905;
+  #tog-menu button.menu-toggle,
+  #tog-menu button.sidebar-toggle {
+    line-height: 60px;
+    font-size: 0.7em;
   }
-
-  button.sidebar-toggle {
-    font-size: 0.75em;
-    width: 15%;
-    left: 65%;
+  #tog-menu button.menu-toggle:hover,
+  #tog-menu button.sidebar-toggle:hover {
+    text-align: center;
   }
-  button.sidebar-toggle:hover {
-    background-color: #658905;
+  #tog-menu .sidebar-toggle.hide-side {
+    left: 150vw;
+  }
+  #tog-menu .menu-toggle.hide {
+    left: 100vw;
   }
 
   #container {
@@ -13837,9 +14010,6 @@ a {
   }
   #container header {
     height: 60px;
-  }
-  #container header #clashvibes_title {
-    width: 48%;
   }
   #container header #clashvibes_title h1 {
     font-size: 1.8em;
@@ -14161,7 +14331,7 @@ a {
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta span.byline a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.posted-on a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.byline a {
-    width: 80%;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header section.byline,
   #container #clashvibes_right_column article.clash-audio header.entry-header section.byline,
@@ -14950,6 +15120,37 @@ a {
   #container #clashvibes_right_column article.page footer.speaker-meta ul.post-meta p {
     width: 100%;
   }
+  #container #clashvibes_right_column article.clash-videos .navigation,
+  #container #clashvibes_right_column article.clash-audio .navigation,
+  #container #clashvibes_right_column article.post .navigation,
+  #container #clashvibes_right_column article.page .navigation {
+    margin: 0;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation h2,
+  #container #clashvibes_right_column article.clash-audio .navigation h2,
+  #container #clashvibes_right_column article.post .navigation h2,
+  #container #clashvibes_right_column article.page .navigation h2 {
+    color: #ffffff;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span,
+  #container #clashvibes_right_column article.clash-audio .navigation span,
+  #container #clashvibes_right_column article.post .navigation span,
+  #container #clashvibes_right_column article.page .navigation span {
+    display: inline-block;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a:hover,
+  #container #clashvibes_right_column article.clash-audio .navigation span a:hover,
+  #container #clashvibes_right_column article.post .navigation span a:hover,
+  #container #clashvibes_right_column article.page .navigation span a:hover {
+    font-weight: bold;
+  }
+  #container #clashvibes_right_column article.clash-videos .navigation span a:after,
+  #container #clashvibes_right_column article.clash-audio .navigation span a:after,
+  #container #clashvibes_right_column article.post .navigation span a:after,
+  #container #clashvibes_right_column article.page .navigation span a:after {
+    width: 10%;
+    font-size: 1.1em;
+  }
   #container #news_section {
     float: left;
     width: 100%;
@@ -15218,20 +15419,23 @@ a {
   }
 }
 @media only screen and (max-width: 360px) {
-  button.menu-toggle {
-    width: 45px;
+  #tog-menu {
+    width: 35%;
+    left: calc(64% - 1vw);
   }
-  button.menu-toggle:hover {
-    background-color: #658905;
-    color: #000000;
+  #tog-menu button.menu-toggle,
+  #tog-menu button.sidebar-toggle {
+    line-height: 60px;
   }
-
-  button.sidebar-toggle {
-    width: 15%;
+  #tog-menu button.menu-toggle:hover,
+  #tog-menu button.sidebar-toggle:hover {
+    text-align: center;
   }
-  button.sidebar-toggle:hover {
-    background-color: #658905;
-    color: #000000;
+  #tog-menu .sidebar-toggle.hide-side {
+    left: 150vw;
+  }
+  #tog-menu .menu-toggle.hide {
+    left: 100vw;
   }
 
   .hide {
@@ -15262,14 +15466,10 @@ a {
   #container header {
     height: 60px;
   }
-  #container header #clashvibes_title {
-    width: 50%;
-  }
   #container header #clashvibes_title h1 {
-    font-size: 1.8em;
+    font-size: 1.7em;
   }
   #container header #clashvibes_title h2.site-description {
-    line-height: 20px;
     font-size: 0.6em;
   }
   #container nav {
@@ -15533,7 +15733,6 @@ a {
   #container #clashvibes_right_column article.post header.entry-header h2,
   #container #clashvibes_right_column article.page header.entry-header h2 {
     font-size: 0.8em;
-    text-indent: 1%;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h2 a,
   #container #clashvibes_right_column article.clash-audio header.entry-header h2 a,
@@ -15565,7 +15764,7 @@ a {
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta span.byline a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.posted-on a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.byline a {
-    width: 80%;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header section.byline,
   #container #clashvibes_right_column article.clash-audio header.entry-header section.byline,
@@ -16637,19 +16836,19 @@ a {
   }
 }
 @media only screen and (max-width: 320px) {
-  button.menu-toggle {
-    left: 84%;
+  #tog-menu button.menu-toggle,
+  #tog-menu button.sidebar-toggle {
+    line-height: 60px;
   }
-  button.menu-toggle:hover {
-    color: #000000;
+  #tog-menu button.menu-toggle:hover,
+  #tog-menu button.sidebar-toggle:hover {
+    text-align: center;
   }
-
-  button.sidebar-toggle {
-    left: 67%;
-    width: 16%;
+  #tog-menu .sidebar-toggle.hide-side {
+    left: 150vw;
   }
-  button.sidebar-toggle:hover {
-    color: #000000;
+  #tog-menu .menu-toggle.hide {
+    left: 100vw;
   }
 
   #container {
@@ -16680,10 +16879,9 @@ a {
     width: 50%;
   }
   #container header #clashvibes_title h1 {
-    font-size: 1.8em;
+    font-size: 1.7em;
   }
   #container header #clashvibes_title h2.site-description {
-    line-height: 20px;
     font-size: 0.6em;
   }
   #container nav {
@@ -16965,7 +17163,6 @@ a {
   #container #clashvibes_right_column article.post header.entry-header h2,
   #container #clashvibes_right_column article.page header.entry-header h2 {
     font-size: 0.8em;
-    text-indent: 1%;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header h2 a,
   #container #clashvibes_right_column article.clash-audio header.entry-header h2 a,
@@ -16997,7 +17194,7 @@ a {
   #container #clashvibes_right_column article.post header.entry-header div.entry-meta span.byline a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.posted-on a,
   #container #clashvibes_right_column article.page header.entry-header div.entry-meta span.byline a {
-    width: 82%;
+    width: auto;
   }
   #container #clashvibes_right_column article.clash-videos header.entry-header section.byline,
   #container #clashvibes_right_column article.clash-audio header.entry-header section.byline,
@@ -17009,7 +17206,7 @@ a {
   #container #clashvibes_right_column article.clash-audio header.entry-header section.byline span,
   #container #clashvibes_right_column article.post header.entry-header section.byline span,
   #container #clashvibes_right_column article.page header.entry-header section.byline span {
-    text-indent: 0.25em;
+    text-indent: 0;
   }
   #container #clashvibes_right_column article.clash-videos header.archive-header,
   #container #clashvibes_right_column article.clash-audio header.archive-header,

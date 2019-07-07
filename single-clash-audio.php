@@ -2,7 +2,7 @@
 /**
  * *PHP version 7
  *
- * Single Clash Audio page | core/single-clash_audio.php.
+ * Single Clash Audio page | core/single-clash-audio.php.
  *
  * @category   Single_Clash_Audio_Page
  * @package    Clashvibes

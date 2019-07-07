@@ -22,7 +22,7 @@ if ( have_posts() ) :
 		<?php
 
 	if ( is_singular() ) :
-		the_title( '<h1 class="entry-title"><span> Sound Clash Video:</span> <a href="' . esc_url( get_permalink() ) . '"></a>', '</h1>' );
+		the_title( '<h1 class="entry-title"><span> Sound Clash Video:</span> <a href="'. esc_url( get_permalink() ) . '"></a>', '</h1>' );
 	else :
 		the_title( '<h2 class="entry-title"><span> Sound Clash Video:</span><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 	endif;
@@ -41,50 +41,57 @@ if ( have_posts() ) :
 
 	</header>
 
-	<?php  the_content();  ?>
+		<div class="videoExcerpt">
 
-	<br />
+			<!--audio player and audio controls-->
+			
+			<?php the_content();?>
 
-	<footer class="speaker-meta">
-		<ul class="post-meta">
 
-			<li>
+		</div>
 
-				<span class="post-meta-key">
+		<br/>
+
+		<footer class="speaker-meta">
+
+			<ul class="post-meta">
+				<li>
+				
+					<span class="post-meta-key">
 					<?php $SoundName = get_post_meta( get_the_ID(),'sound_system_name', true); ?>
 					<?php esc_html_e( 'Sound System Name', 'clashvibes' ); ?>
-				</span>
-				<p><?php echo esc_html($SoundName); ?> </p>
-			</li>
-
-			<li>
-				<span class="post-meta-key">
+					</span>
+					<p><?php echo esc_html($SoundName); ?> </p>
+				</li>
+				<li>
+					<span class="post-meta-key">
 					<?php $SoundYear = get_post_meta( get_the_ID(),'sound_clash_year', true); ?>
 					<?php esc_html_e( 'Sound Clash Year', 'clashvibes' ); ?>
-				</span>
-				<p><?php echo esc_html($SoundYear); ?> </p>
-			</li>
-			<li>
-				<span class="post-meta-key">
+					</span>
+					<p><?php echo esc_html($SoundYear); ?>  </p>
+				</li>
+				<li>
+					<span class="post-meta-key">
 					<?php $SoundLocation = get_post_meta( get_the_ID(),'sound_clash_location', true); ?>
 					<?php esc_html_e( 'Sound Clash Location', 'clashvibes' ); ?>
-				</span>
-				<p><?php echo esc_html($SoundLocation); ?> </p>
-			</li>
-			<li>
-				<span class="post-meta-key">
+					</span>
+					<p><?php echo esc_html($SoundLocation); ?>  </p>
+				</li>
+				<li>
+					<span class="post-meta-key">
 					<?php $SoundUrl = get_post_meta( get_the_ID(),'sound_system_url', true); ?>
 					<?php esc_html_e( 'URL', 'clashvibes' ); ?>
-				</span>
-				<p><?php echo esc_html($SoundUrl); ?> </p>
-			</li>
-		</ul>
-	</footer>
-	<div class="navigation">
-		<h2><?php esc_html_e( 'Navigation', 'clashvibes' ); ?></h2>
-		<?php previous_post_link('<span>%link</span>'); ?>
-		<?php next_post_link('<span>%link</span>'); ?>
-	</div>
+					</span>
+					<p><?php echo esc_html($SoundUrl); ?>  </p>
+				</li>
+			</ul>
+
+		</footer>
+		<div class="navigation">
+			<h2><?php esc_html_e( 'Navigation', 'clashvibes' ); ?></h2>
+				<?php previous_post_link('<span>%link</span>'); ?>
+				<?php next_post_link('<span>%link</span>'); ?>
+		</div>
 
 
 </article>

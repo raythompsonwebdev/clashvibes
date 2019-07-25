@@ -20,6 +20,7 @@ get_header(); ?>
 
     <section id="clashvibes_right_column">
 
+    <h1><?php _e('Blog Page');?></h1>
 
         <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 

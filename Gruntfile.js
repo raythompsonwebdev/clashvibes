@@ -27,6 +27,7 @@ module.exports = function (grunt) {
                 
                 files: {
                     'js/minified/audio.min.js': ['js/audio.js'],
+                    'js/minified/video.min.js': ['js/video.js'],
                     'js/minified/customizer.min.js': ['js/customizer.js'],
                     'js/minified/main.min.js': ['js/main.js'],
                     'js/minified/navigation.min.js': ['js/navigation.js'],

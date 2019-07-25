@@ -68,7 +68,7 @@ function clashvibes_customizer_css() {
 
 	?>
 
-<style type="text/css">
+	<style type="text/css">
 			.site-branding {
 					background: <?php echo get_theme_mod( 'clashvibes_header_color' ); ?>;
 					background-color: <?php echo $header_color; ?>

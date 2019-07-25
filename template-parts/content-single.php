@@ -47,7 +47,7 @@ if ( have_posts() ) :
 
 				<figure class="featuredImage">
 					<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
-					<img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/clashvibes/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+					<img src="<?php echo esc_url('https://raythompsonwebdevlocal.com/wordpress/wp-content/themes/clashvibes/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
 					</a>
 				</figure>
 
@@ -81,7 +81,8 @@ if ( have_posts() ) :
 			
 			?>
 		</div><!-- .entry-content -->
-
+<br/>
+<br/>
 		<?php if ( get_edit_post_link() ) : ?>
 			<footer class="entry-footer">
 				<?php clashvibes_entry_footer(); ?>

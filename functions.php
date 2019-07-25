@@ -231,6 +231,10 @@ function clashvibes_scripts() {
 		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/minified/audio.min.js', array( 'jquery' ), '1.0.0', true );
 	}
 
+	if ( 'clash-videos' === get_post_type() ) {
+		wp_enqueue_script( 'clashvibes-video', get_template_directory_uri() . '/js/minified/video.min.js', array( 'jquery' ), '1.0.0', true );
+	}
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

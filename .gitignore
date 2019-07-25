@@ -11,6 +11,6 @@ js/sparefiles/
 fonts/
 files-doc/
 phpcs.xml.dist
-
+videos/
 composer.json
 composer.lock

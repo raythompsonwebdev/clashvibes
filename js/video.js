@@ -2,80 +2,28 @@
 
 		//Stop if HTML5 video isn't supported
 		if (!document.createElement('video').canPlayType) {
-			$("#video_controls").hide();
+			$("#videocontrols").hide();
 			return;
 		}
 
-		var video = document.getElementById("result_player");
+		var video = document.querySelector('video');
 
-		// Play/Pause ============================//
-		$("#play_button").bind("click", function () {
-			$(this).video.play();
-			$(this).video.preload = 'metadata';
-		});
+		var play = document.getElementById('play_toggle');
+		
+		play.addEventListener('click', function (e) {
 
-		$("#pause_button").bind("click", function () {
-			$(this).video.pause();
-		});
+			e.preventDefault;
 
-		$("#play_toggle").on("click", function () {
 			if (video.paused) {
 				video.play();
-				$(this).html('Pause');
+				video.preload = 'metadata';
+				$(this).html('<i class="fa fa-pause" aria-hidden="true" title="Pause"></i>');
 			} else {
 				video.pause();
-				$(this).html('Play');
+				$(this).html('<i class="fa fa-play" aria-hidden="true" title="Play"></i>');
 			}
 		});
-
-		// Play Progress ============================//
-		$(video).bind("timeupdate", function () {
-			var timePercent = (this.currentTime / this.duration) * 100;
-			$("#play_progress").css({
-				width: timePercent + "%"
-			});
-		});
-
-		// Load Progress ============================//
-		$(video).bind("progress", function () {
-			updateLoadProgress();
-		});
-		$(video).bind("loadeddata", function () {
-			updateLoadProgress();
-		});
-		$(video).bind("canplaythrough", function () {
-			updateLoadProgress();
-		});
-		$(video).bind("playing", function () {
-			updateLoadProgress();
-		});
-
-		function updateLoadProgress() {
-			if (video.buffered.length > 0) {
-				var percent = (video.buffered.end(0) / video.duration) * 100;
-				$("#load_progress").css({
-					width: percent + "%"
-				})
-			}
-		}
-
-		// Time Display =============================//
-		$(video).bind("timeupdate", function () {
-			$("#current_time").html(formatTime(this.currentTime));
-		});
-		$(video).bind("durationchange", function () {
-			$("#duration").html(formatTime(this.duration));
-		});
-
-		function formatTime(seconds) {
-			var seconds = Math.round(seconds);
-			var minutes = Math.floor(seconds / 60);
-			// Remaining seconds
-			seconds = Math.floor(seconds % 60);
-			// Add leading Zeros
-			minutes = (minutes >= 10) ? minutes : "0" + minutes;
-			seconds = (seconds >= 10) ? seconds : "0" + seconds;
-			return minutes + ":" + seconds;
-		}
+	
+		
 
 	}); //end of jquery

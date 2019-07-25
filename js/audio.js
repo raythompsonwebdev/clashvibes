@@ -6,11 +6,13 @@
 			return;
 		}
 
-		var audio = document.getElementById("result_player");
+		var audio = document.querySelector("audio");
 
 		// Play/Pause ============================//
 
 		$("#play_toggle").on("click", function () {
+
+						
 			if (audio.paused) {
 				audio.play();
 				audio.preload = 'metadata';

@@ -1536,7 +1536,6 @@ a {
     /*--- custom post images---*/
     /*custom post header*/
     /*blog footer*/
-    /*Global*/
     /*regular post entry*/
     /*custom post entry*/
     /*custom-post-footer*/
@@ -1863,18 +1862,6 @@ a {
     color: #ffffff;
     font-size: 0.9em;
     line-height: 35px;
-    display: block;
-  }
-  #container #clashvibes_right_column article.clash-videos .audio-play,
-  #container #clashvibes_right_column article.clash-videos .video-play,
-  #container #clashvibes_right_column article.clash-audio .audio-play,
-  #container #clashvibes_right_column article.clash-audio .video-play,
-  #container #clashvibes_right_column article.post .audio-play,
-  #container #clashvibes_right_column article.post .video-play,
-  #container #clashvibes_right_column article.page .audio-play,
-  #container #clashvibes_right_column article.page .video-play {
-    width: 85%;
-    margin: 0 auto;
     display: block;
   }
   #container #clashvibes_right_column article.clash-videos div.entry-content,
@@ -2627,6 +2614,18 @@ a {
     display: inline-block;
     height: 32px;
   }
+  #container #clashvibes_right_column article.clash-videos div.audioExcerpt #video_player,
+  #container #clashvibes_right_column article.clash-videos div.videoExcerpt #video_player,
+  #container #clashvibes_right_column article.clash-audio div.audioExcerpt #video_player,
+  #container #clashvibes_right_column article.clash-audio div.videoExcerpt #video_player,
+  #container #clashvibes_right_column article.post div.audioExcerpt #video_player,
+  #container #clashvibes_right_column article.post div.videoExcerpt #video_player,
+  #container #clashvibes_right_column article.page div.audioExcerpt #video_player,
+  #container #clashvibes_right_column article.page div.videoExcerpt #video_player {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
   #container #clashvibes_right_column article.clash-videos div.audioExcerpt iframe,
   #container #clashvibes_right_column article.clash-videos div.videoExcerpt iframe,
   #container #clashvibes_right_column article.clash-audio div.audioExcerpt iframe,
@@ -2981,11 +2980,10 @@ a {
     margin: 0 auto;
     display: block;
   }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
+  #container #news_section .news_box .entry .video_player {
+    width: 100%;
     margin: 0 auto;
     display: block;
-    height: 300px;
   }
   #container #news_section .news_box .entry a.read_more {
     display: block;
@@ -3744,16 +3742,6 @@ a {
   #container #clashvibes_right_column article.page footer.entry-footer p {
     font-size: 0.85em;
   }
-  #container #clashvibes_right_column article.clash-videos .audio-play,
-  #container #clashvibes_right_column article.clash-videos .video-play,
-  #container #clashvibes_right_column article.clash-audio .audio-play,
-  #container #clashvibes_right_column article.clash-audio .video-play,
-  #container #clashvibes_right_column article.post .audio-play,
-  #container #clashvibes_right_column article.post .video-play,
-  #container #clashvibes_right_column article.page .audio-play,
-  #container #clashvibes_right_column article.page .video-play {
-    width: 85%;
-  }
   #container #clashvibes_right_column article.clash-videos div.entry-content,
   #container #clashvibes_right_column article.clash-audio div.entry-content,
   #container #clashvibes_right_column article.post div.entry-content,
@@ -4474,11 +4462,6 @@ a {
   }
   #container #news_section .news_box .entry .audio-play {
     width: 85%;
-    margin: 0 auto;
-  }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
-    height: 300px;
   }
   #container #news_section .news_box .entry a.read_more {
     width: 30%;
@@ -5118,16 +5101,6 @@ a {
   #container #clashvibes_right_column article.post footer.entry-footer p,
   #container #clashvibes_right_column article.page footer.entry-footer p {
     font-size: 0.85em;
-  }
-  #container #clashvibes_right_column article.clash-videos .audio-play,
-  #container #clashvibes_right_column article.clash-videos .video-play,
-  #container #clashvibes_right_column article.clash-audio .audio-play,
-  #container #clashvibes_right_column article.clash-audio .video-play,
-  #container #clashvibes_right_column article.post .audio-play,
-  #container #clashvibes_right_column article.post .video-play,
-  #container #clashvibes_right_column article.page .audio-play,
-  #container #clashvibes_right_column article.page .video-play {
-    width: 85%;
   }
   #container #clashvibes_right_column article.clash-videos div.entry-content,
   #container #clashvibes_right_column article.clash-audio div.entry-content,
@@ -5818,11 +5791,6 @@ a {
   }
   #container #news_section .news_box .entry .audio-play {
     width: 85%;
-    margin: 0 auto;
-  }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
-    height: 300px;
   }
   #container #news_section .news_box .entry a.read_more {
     width: 30%;
@@ -6435,16 +6403,6 @@ a {
   #container #clashvibes_right_column article.post footer.entry-footer p,
   #container #clashvibes_right_column article.page footer.entry-footer p {
     font-size: 0.85em;
-  }
-  #container #clashvibes_right_column article.clash-videos .audio-play,
-  #container #clashvibes_right_column article.clash-videos .video-play,
-  #container #clashvibes_right_column article.clash-audio .audio-play,
-  #container #clashvibes_right_column article.clash-audio .video-play,
-  #container #clashvibes_right_column article.post .audio-play,
-  #container #clashvibes_right_column article.post .video-play,
-  #container #clashvibes_right_column article.page .audio-play,
-  #container #clashvibes_right_column article.page .video-play {
-    width: 85%;
   }
   #container #clashvibes_right_column article.clash-videos div.entry-content,
   #container #clashvibes_right_column article.clash-audio div.entry-content,
@@ -7088,14 +7046,6 @@ a {
   #container #news_section .news_box .thumb img {
     margin: 0;
   }
-  #container #news_section .news_box .entry .audio-play {
-    width: 85%;
-    margin: 0 auto;
-  }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
-    height: 300px;
-  }
   #container #news_section .news_box .entry a.read_more {
     width: 30%;
     line-height: 30px;
@@ -7682,16 +7632,6 @@ a {
   #container #clashvibes_right_column article.post footer.entry-footer p,
   #container #clashvibes_right_column article.page footer.entry-footer p {
     font-size: 0.85em;
-  }
-  #container #clashvibes_right_column article.clash-videos .audio-play,
-  #container #clashvibes_right_column article.clash-videos .video-play,
-  #container #clashvibes_right_column article.clash-audio .audio-play,
-  #container #clashvibes_right_column article.clash-audio .video-play,
-  #container #clashvibes_right_column article.post .audio-play,
-  #container #clashvibes_right_column article.post .video-play,
-  #container #clashvibes_right_column article.page .audio-play,
-  #container #clashvibes_right_column article.page .video-play {
-    width: 85%;
   }
   #container #clashvibes_right_column article.clash-videos div.entry-content,
   #container #clashvibes_right_column article.clash-audio div.entry-content,
@@ -8367,14 +8307,6 @@ a {
   }
   #container #news_section .news_box .thumb img {
     margin: 0;
-  }
-  #container #news_section .news_box .entry .audio-play {
-    width: 85%;
-    margin: 0 auto;
-  }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
-    height: 300px;
   }
   #container #news_section .news_box .entry a.read_more {
     width: 30%;
@@ -9659,13 +9591,6 @@ a {
   }
   #container #news_section .news_box .thumb img {
     margin: 0;
-  }
-  #container #news_section .news_box .entry .audio-play {
-    width: 85%;
-  }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
-    height: 300px;
   }
   #container #news_section .news_box .entry a.read_more {
     font-size: 0.9em;
@@ -10996,13 +10921,6 @@ a {
   #container #news_section .news_box .thumb img {
     margin: 0;
   }
-  #container #news_section .news_box .entry .audio-play {
-    width: 85%;
-  }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
-    height: 300px;
-  }
   #container #news_section .news_box .entry a.read_more {
     font-size: 0.9em;
   }
@@ -12276,13 +12194,6 @@ a {
   #container #news_section .news_box .thumb img {
     margin: 0;
   }
-  #container #news_section .news_box .entry .audio-play {
-    width: 85%;
-  }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
-    height: 300px;
-  }
   #container #news_section .news_box .entry a.read_more {
     font-size: 0.9em;
   }
@@ -13428,186 +13339,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt iframe {
     height: 360px;
   }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 {
-    display: block;
-    width: 100%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single {
-    width: 100%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui {
-    font-size: 0.8em;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls {
-    width: 20%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop {
-    width: 50%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress {
-    width: 35%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls {
-    width: 26%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute {
-    width: 49%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max {
-    width: 49%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder {
-    width: 19%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time {
-    width: 30%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration {
-    width: 30%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles {
-    display: inline-block;
-    width: 34%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details {
-    margin-top: 0.2em;
-  }
   #container #clashvibes_right_column article.clash-videos footer.speaker-meta,
   #container #clashvibes_right_column article.clash-audio footer.speaker-meta,
   #container #clashvibes_right_column article.post footer.speaker-meta,
@@ -13729,13 +13460,6 @@ a {
   }
   #container #news_section .news_box .thumb img {
     margin: 0;
-  }
-  #container #news_section .news_box .entry .audio-play {
-    width: 85%;
-  }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
-    height: 300px;
   }
   #container #news_section .news_box .entry a.read_more {
     font-size: 0.9em;
@@ -14835,186 +14559,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt iframe {
     margin: 1em auto;
   }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 {
-    display: block;
-    width: 100%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single {
-    width: 100%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui {
-    font-size: 0.8em;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls {
-    width: 20%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop {
-    width: 50%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress {
-    width: 35%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls {
-    width: 26%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute {
-    width: 49%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max {
-    width: 49%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder {
-    width: 19%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time {
-    width: 30%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration {
-    width: 30%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles {
-    display: inline-block;
-    width: 34%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details {
-    margin-top: 0.2em;
-  }
   #container #clashvibes_right_column article.clash-videos footer.speaker-meta,
   #container #clashvibes_right_column article.clash-audio footer.speaker-meta,
   #container #clashvibes_right_column article.post footer.speaker-meta,
@@ -15155,13 +14699,6 @@ a {
   }
   #container #news_section .news_box .thumb img {
     margin: 0;
-  }
-  #container #news_section .news_box .entry .audio-play {
-    width: 85%;
-  }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
-    height: 300px;
   }
   #container #news_section .news_box .entry a.read_more {
     font-size: 0.9em;
@@ -16237,186 +15774,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt iframe {
     margin: 1em auto;
   }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 {
-    display: block;
-    width: 100%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single {
-    width: 100%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui {
-    font-size: 0.8em;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls {
-    width: 20%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop {
-    width: 50%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress {
-    width: 35%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls {
-    width: 26%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute {
-    width: 49%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max {
-    width: 49%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder {
-    width: 19%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time {
-    width: 30%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration {
-    width: 30%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles {
-    display: inline-block;
-    width: 34%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details {
-    margin-top: 0.2em;
-  }
   #container #clashvibes_right_column article.clash-videos footer.speaker-meta,
   #container #clashvibes_right_column article.clash-audio footer.speaker-meta,
   #container #clashvibes_right_column article.post footer.speaker-meta,
@@ -16532,13 +15889,6 @@ a {
   }
   #container #news_section .news_box .thumb img {
     margin: 0;
-  }
-  #container #news_section .news_box .entry .audio-play {
-    width: 85%;
-  }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
-    height: 300px;
   }
   #container #news_section .news_box .entry a.read_more {
     font-size: 0.9em;
@@ -17641,186 +16991,6 @@ a {
   #container #clashvibes_right_column article.page div.videoExcerpt iframe {
     margin: 1em auto;
   }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 {
-    display: block;
-    width: 100%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single {
-    width: 100%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui {
-    font-size: 0.8em;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls {
-    width: 20%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-play,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-controls button.jp-stop {
-    width: 50%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress {
-    width: 35%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-progress .jp-seek-bar .jp-play-bar {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls {
-    width: 26%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-mute {
-    width: 49%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-volume-controls .jp-volume-max {
-    width: 49%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder {
-    width: 19%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-current-time {
-    width: 30%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-duration {
-    width: 30%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles {
-    display: inline-block;
-    width: 34%;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-gui .jp-time-holder .jp-toggles .jp-repeat {
-    line-height: 55px;
-  }
-  #container #clashvibes_right_column article.clash-videos div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-videos div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-audio div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.clash-audio div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.post div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.post div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.page div.audioExcerpt div#jp_container_1 .jp-type-single .jp-details,
-  #container #clashvibes_right_column article.page div.videoExcerpt div#jp_container_1 .jp-type-single .jp-details {
-    margin-top: 0.2em;
-  }
   #container #clashvibes_right_column article.clash-videos footer.speaker-meta,
   #container #clashvibes_right_column article.clash-audio footer.speaker-meta,
   #container #clashvibes_right_column article.post footer.speaker-meta,
@@ -17936,13 +17106,6 @@ a {
   }
   #container #news_section .news_box .thumb img {
     margin: 0;
-  }
-  #container #news_section .news_box .entry .audio-play {
-    width: 85%;
-  }
-  #container #news_section .news_box .entry .video-play {
-    width: 45%;
-    height: 300px;
   }
   #container #news_section .news_box .entry a.read_more {
     font-size: 0.9em;

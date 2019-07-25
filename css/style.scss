@@ -1581,14 +1581,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				/*Global*/
-				.audio-play,
-				.video-play {
-					width: 85%;
-					margin: 0 auto;
-					display: block;
-
-				}
+				
 
 				/*regular post entry*/
 				div.entry-content,
@@ -1896,6 +1889,13 @@ License: GNU General Public License v2 or later
 							}
 						}
 
+					}
+
+					#video_player {
+						width: 100%;
+						margin: 0 auto;
+						display: block;
+	
 					}
 
 					/*video*/
@@ -2238,6 +2238,7 @@ License: GNU General Public License v2 or later
 				}
 
 				.entry {
+
 					.audio-play {
 						width: 85%;
 						margin: 0 auto;
@@ -2245,11 +2246,11 @@ License: GNU General Public License v2 or later
 
 					}
 
-					.video-play {
-						width: 45%;
+					.video_player {
+						width: 100%;
 						margin: 0 auto;
 						display: block;
-						height: 300px;
+						
 					}
 
 					a.read_more {
@@ -3089,13 +3090,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-
-				.audio-play,
-				.video-play {
-					width: 85%;
-
-				}
-
+				
 
 				div.entry-content {
 					width: 98%;
@@ -3510,14 +3505,11 @@ License: GNU General Public License v2 or later
 				.entry {
 					.audio-play {
 						width: 85%;
-						margin: 0 auto;
+						
 
 					}
 
-					.video-play {
-						width: 45%;
-						height: 300px;
-					}
+					
 
 					a.read_more {
 						width: 30%;
@@ -4290,13 +4282,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				//Global
-				.audio-play,
-				.video-play {
-					width: 85%;
-
-				}
-
+				
 				//regular post entry
 				div.entry-content {
 					width: 98%;
@@ -4689,14 +4675,11 @@ License: GNU General Public License v2 or later
 				.entry {
 					.audio-play {
 						width: 85%;
-						margin: 0 auto;
+						
 
 					}
 
-					.video-play {
-						width: 45%;
-						height: 300px;
-					}
+					
 
 					a.read_more {
 						width: 30%;
@@ -5419,12 +5402,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				//Global
-				.audio-play,
-				.video-play {
-					width: 85%;
-
-				}
+				
 
 				//regular post entry
 				div.entry-content {
@@ -5758,16 +5736,8 @@ License: GNU General Public License v2 or later
 				}
 
 				.entry {
-					.audio-play {
-						width: 85%;
-						margin: 0 auto;
-
-					}
-
-					.video-play {
-						width: 45%;
-						height: 300px;
-					}
+					
+					
 
 					a.read_more {
 						width: 30%;
@@ -6444,12 +6414,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				//Global
-				.audio-play,
-				.video-play {
-					width: 85%;
-
-				}
+				
 
 				//regular post entry
 				div.entry-content {
@@ -6789,16 +6754,7 @@ License: GNU General Public License v2 or later
 				}
 
 				.entry {
-					.audio-play {
-						width: 85%;
-						margin: 0 auto;
-
-					}
-
-					.video-play {
-						width: 45%;
-						height: 300px;
-					}
+										
 
 					a.read_more {
 						width: 30%;
@@ -7809,15 +7765,7 @@ License: GNU General Public License v2 or later
 				}
 
 				.entry {
-					.audio-play {
-						width: 85%;
-
-					}
-
-					.video-play {
-						width: 45%;
-						height: 300px;
-					}
+					
 
 					a.read_more {
 						font-size: 0.9em;
@@ -8957,15 +8905,7 @@ License: GNU General Public License v2 or later
 				}
 
 				.entry {
-					.audio-play {
-						width: 85%;
-
-					}
-
-					.video-play {
-						width: 45%;
-						height: 300px;
-					}
+					
 
 					a.read_more {
 						font-size: 0.9em;
@@ -10067,15 +10007,7 @@ License: GNU General Public License v2 or later
 				}
 
 				.entry {
-					.audio-play {
-						width: 85%;
-
-					}
-
-					.video-play {
-						width: 45%;
-						height: 300px;
-					}
+					
 
 					a.read_more {
 						font-size: 0.9em;
@@ -11018,83 +10950,7 @@ License: GNU General Public License v2 or later
 						height:360px;
 					}
 
-					//jp-video player
-					div#jp_container_1 {
-						display: block;
-						width: 100%;
-
-						.jp-type-single {
-							width: 100%;
-
-							.jp-gui {
-								font-size: 0.8em;
-
-								.jp-controls {
-									width: 20%;
-
-									button.jp-play,
-									button.jp-stop {
-										width: 50%;
-
-									}
-								}
-
-								.jp-progress {
-									width: 35%;
-
-									.jp-seek-bar {
-										line-height: 55px;
-
-										.jp-play-bar {
-											line-height: 55px;
-										}
-									}
-								}
-
-								.jp-volume-controls {
-									width: 26%;
-
-									.jp-mute {
-										width: 49%;
-
-
-									}
-
-									.jp-volume-max {
-										width: 49%;
-									}
-								}
-
-								.jp-time-holder {
-									width: 19%;
-
-
-									.jp-current-time {
-										width: 30%;
-
-									}
-
-									.jp-duration {
-										width: 30%;
-									}
-
-									.jp-toggles {
-										display: inline-block;
-
-										width: 34%;
-
-										.jp-repeat {
-											line-height: 55px;
-										}
-									}
-								}
-							}
-
-							.jp-details {
-								margin-top: 0.2em;
-							}
-						}
-					}
+					
 				}
 
 				/*custom-post-footer*/
@@ -11236,15 +11092,7 @@ License: GNU General Public License v2 or later
 				}
 
 				.entry {
-					.audio-play {
-						width: 85%;
-
-					}
-
-					.video-play {
-						width: 45%;
-						height: 300px;
-					}
+					
 
 					a.read_more {
 						font-size: 0.9em;
@@ -12094,83 +11942,7 @@ License: GNU General Public License v2 or later
 						margin: 1em auto;
 					}
 
-					//jp-video player
-					div#jp_container_1 {
-						display: block;
-						width: 100%;
-
-						.jp-type-single {
-							width: 100%;
-
-							.jp-gui {
-								font-size: 0.8em;
-
-								.jp-controls {
-									width: 20%;
-
-									button.jp-play,
-									button.jp-stop {
-										width: 50%;
-
-									}
-								}
-
-								.jp-progress {
-									width: 35%;
-
-									.jp-seek-bar {
-										line-height: 55px;
-
-										.jp-play-bar {
-											line-height: 55px;
-										}
-									}
-								}
-
-								.jp-volume-controls {
-									width: 26%;
-
-									.jp-mute {
-										width: 49%;
-
-
-									}
-
-									.jp-volume-max {
-										width: 49%;
-									}
-								}
-
-								.jp-time-holder {
-									width: 19%;
-
-
-									.jp-current-time {
-										width: 30%;
-
-									}
-
-									.jp-duration {
-										width: 30%;
-									}
-
-									.jp-toggles {
-										display: inline-block;
-
-										width: 34%;
-
-										.jp-repeat {
-											line-height: 55px;
-										}
-									}
-								}
-							}
-
-							.jp-details {
-								margin-top: 0.2em;
-							}
-						}
-					}
+					
 				}
 
 				/*custom-post-footer*/
@@ -12336,15 +12108,7 @@ License: GNU General Public License v2 or later
 				}
 
 				.entry {
-					.audio-play {
-						width: 85%;
-
-					}
-
-					.video-play {
-						width: 45%;
-						height: 300px;
-					}
+					
 
 					a.read_more {
 						font-size: 0.9em;
@@ -13161,83 +12925,6 @@ License: GNU General Public License v2 or later
 						margin: 1em auto;
 					}
 
-					//jp-video player
-					div#jp_container_1 {
-						display: block;
-						width: 100%;
-
-						.jp-type-single {
-							width: 100%;
-
-							.jp-gui {
-								font-size: 0.8em;
-
-								.jp-controls {
-									width: 20%;
-
-									button.jp-play,
-									button.jp-stop {
-										width: 50%;
-
-									}
-								}
-
-								.jp-progress {
-									width: 35%;
-
-									.jp-seek-bar {
-										line-height: 55px;
-
-										.jp-play-bar {
-											line-height: 55px;
-										}
-									}
-								}
-
-								.jp-volume-controls {
-									width: 26%;
-
-									.jp-mute {
-										width: 49%;
-
-
-									}
-
-									.jp-volume-max {
-										width: 49%;
-									}
-								}
-
-								.jp-time-holder {
-									width: 19%;
-
-
-									.jp-current-time {
-										width: 30%;
-
-									}
-
-									.jp-duration {
-										width: 30%;
-									}
-
-									.jp-toggles {
-										display: inline-block;
-
-										width: 34%;
-
-										.jp-repeat {
-											line-height: 55px;
-										}
-									}
-								}
-							}
-
-							.jp-details {
-								margin-top: 0.2em;
-							}
-						}
-					}
 				}
 
 				/*custom-post-footer*/
@@ -13375,15 +13062,7 @@ License: GNU General Public License v2 or later
 				}
 
 				.entry {
-					.audio-play {
-						width: 85%;
-
-					}
-
-					.video-play {
-						width: 45%;
-						height: 300px;
-					}
+					
 
 					a.read_more {
 						font-size: 0.9em;
@@ -14234,84 +13913,7 @@ License: GNU General Public License v2 or later
 					iframe {
 						margin: 1em auto;
 					}
-
-					//jp-video player
-					div#jp_container_1 {
-						display: block;
-						width: 100%;
-
-						.jp-type-single {
-							width: 100%;
-
-							.jp-gui {
-								font-size: 0.8em;
-
-								.jp-controls {
-									width: 20%;
-
-									button.jp-play,
-									button.jp-stop {
-										width: 50%;
-
-									}
-								}
-
-								.jp-progress {
-									width: 35%;
-
-									.jp-seek-bar {
-										line-height: 55px;
-
-										.jp-play-bar {
-											line-height: 55px;
-										}
-									}
-								}
-
-								.jp-volume-controls {
-									width: 26%;
-
-									.jp-mute {
-										width: 49%;
-
-
-									}
-
-									.jp-volume-max {
-										width: 49%;
-									}
-								}
-
-								.jp-time-holder {
-									width: 19%;
-
-
-									.jp-current-time {
-										width: 30%;
-
-									}
-
-									.jp-duration {
-										width: 30%;
-									}
-
-									.jp-toggles {
-										display: inline-block;
-
-										width: 34%;
-
-										.jp-repeat {
-											line-height: 55px;
-										}
-									}
-								}
-							}
-
-							.jp-details {
-								margin-top: 0.2em;
-							}
-						}
-					}
+					
 				}
 
 				/*custom-post-footer*/
@@ -14448,15 +14050,7 @@ License: GNU General Public License v2 or later
 				}
 
 				.entry {
-					.audio-play {
-						width: 85%;
-
-					}
-
-					.video-play {
-						width: 45%;
-						height: 300px;
-					}
+					
 
 					a.read_more {
 						font-size: 0.9em;

@@ -5969,6 +5969,42 @@ License: GNU General Public License v2 or later
 
 			#clashvibes_right_column_front {
 
+				h2{
+					
+					font-size:1.2em;
+					
+					
+				}
+
+				ul{
+					li{
+						a{
+							
+							&:hover{
+								font-weight:bold;
+							}
+						}
+					} 
+				}
+
+				figure.text-img{
+
+					
+					width:15%;
+					
+					margin:0 0 0.5em 0.5em;
+
+					img{
+						width:100%;
+						
+					}
+
+				}
+
+			}
+
+			#clashvibes_right_column_front {
+
 				h1 {
 
 					font-size: 1em;
@@ -7030,6 +7066,98 @@ License: GNU General Public License v2 or later
 					
 					margin-bottom:0.5em;
 				}
+
+				h2{
+					
+					font-size:1.2em;
+					
+					
+				}
+
+				ul{
+					li{
+						a{
+							
+							&:hover{
+								font-weight:bold;
+							}
+						}
+					} 
+				}
+
+				figure.text-img{
+
+					
+					width:18%;
+					
+					margin:0 0 0.5em 0.5em;
+
+					img{
+						width:100%;
+						
+					}
+
+				}
+
+			}
+
+			#clashvibes_right_column_front {
+
+				h1 {
+
+					font-size: 1em;
+				}
+
+				#new_released_section {
+					
+					.new_released_box {
+						width: 23.925%;
+						min-height: 240px;
+
+						h1 {
+							font-size: 0.75em;
+
+						}
+
+						a {
+							font-size: 0.8em;
+
+
+							&:hover {
+								font-weight: bold;
+							}
+						}
+
+						figure.thumbaud,
+						figure.thumbvid {
+
+							height: auto;
+
+							img {
+
+								width: 60%;
+							}
+
+							figcaption {
+								margin: 0 auto;
+
+								a.Morebutton {
+									font-size: 0.8em;
+
+									&:hover {
+
+										letter-spacing: 0.05em;
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			#clashvibes_banner {
+				width: 99%;
 
 				h2{
 					
@@ -11163,6 +11291,45 @@ License: GNU General Public License v2 or later
 
 			}
 
+			article#clashvibes-text{
+				padding:1em;
+				h1{
+					
+					margin-bottom:0.5em;
+				}
+
+				h2{
+					
+					font-size:1.15em;
+					
+					
+				}
+
+				ul{
+					li{
+						a{
+							
+							&:hover{
+								font-weight:bold;
+							}
+						}
+					} 
+				}
+
+				figure.text-img{
+
+					
+					width: 28%;
+
+					img{
+						width:100%;
+						
+					}
+
+				}
+
+			}
+
 			#clashvibes_right_column_front {
 				
 				width: 100%;
@@ -13093,6 +13260,45 @@ License: GNU General Public License v2 or later
 			padding: 0;
 			width: 100%;
 			margin: auto;
+
+			article#clashvibes-text{
+				padding:1em;
+				h1{
+					
+					margin-bottom:0.5em;
+				}
+
+				h2{
+					
+					font-size:1.15em;
+					
+					
+				}
+
+				ul{
+					li{
+						a{
+							
+							&:hover{
+								font-weight:bold;
+							}
+						}
+					} 
+				}
+
+				figure.text-img{
+
+					
+					width: 33%;
+
+					img{
+						width:100%;
+						
+					}
+
+				}
+
+			}
 
 			article#clashvibes-text{
 				padding:1em;

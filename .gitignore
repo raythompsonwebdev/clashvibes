@@ -5,7 +5,6 @@ node_modules/
 nbproject/
 dist/
 images/
-docs/
 js/old-browser-scripts/
 js/sparefiles/
 fonts/
@@ -14,3 +13,4 @@ phpcs.xml.dist
 videos/
 composer.json
 composer.lock
+docs/

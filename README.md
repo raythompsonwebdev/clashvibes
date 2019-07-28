@@ -17,7 +17,7 @@ Stable tag: 1.0.0
 
 ## Description 
 
-Audio and Video website for fans of Jamaican Sound System culture in the 90's and 2000,s. You can listen to audio clips and watch you tube videos from my you tube channel categorised by decade(i.e. 1990's, 1980's ect).
+Audio and Video website for fans of Jamaican Sound System culture in the 90's and 2000,s. Listen to audio clips and watch Videos of sound clashes categorised by decade they took place(i.e. 1990's, 1980's ect).
 
 
 ## Installation 
@@ -32,7 +32,7 @@ Audio and Video website for fans of Jamaican Sound System culture in the 90's an
 
 ## Does this theme support any plugins? 
 
-* Clashvibes-plugin for custom posts.
+* Clashvibes-plugin for custom audio and videos posts.
 * Masterslider plugin
 
 

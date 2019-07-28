@@ -94,10 +94,13 @@
 				</div>
 
 				<div id="video_volume">
-				<label id="volume_bar" for="volume"><?php esc_html_e( 'Volume', 'clashvibes' ); ?></label>
-				<input type="range" id="volume" title="volume" min="0" max="1" step="0.1" value="1">
+					<label id="volume_bar" for="volume"><?php esc_html_e( 'Volume', 'clashvibes' ); ?></label>
+					<input type="range" id="volume" title="volume" min="0" max="1" step="0.1" value="1">
 				</div>
-
+				<div id="video_seek">
+					<label for="seek">Seek</label>
+					<input type="range" id="seek" title="seek" min="0" value="0" max="0">
+				</div>
 
 			</div>
 

@@ -64,6 +64,11 @@ if ( have_posts() ) :
 
 				<!--/wp-content/uploads/sites/7/2019/03/-->
 
+				<?php  $urlmp4 = get_site_url(); ?>
+						
+				<source src="<?php echo esc_url( $urlmp4);?>/wp-content/themes/clashvibes/videos/<?php echo esc_html( $meta );?>.mp4" preload="metadata" type='video/mp4'  />
+
+
 				<?php  $urlmp3 = get_site_url(); ?>
 						
 				<source src="<?php echo esc_url( $urlmp3);?>/wp-content/themes/clashvibes/videos/<?php echo esc_html( $meta );?>.m4v" preload="metadata" type='video/m4v'  />
@@ -87,6 +92,7 @@ if ( have_posts() ) :
 				</div>
 
 				<div id="progress">
+				<!--<progress value="0" id="playback"></progress>-->
 				<span id="load_progress"></span>
 				<span id="play_progress"></span>
 				</div>
@@ -102,7 +108,7 @@ if ( have_posts() ) :
 				</div>
 
 				<div id="video_seek">
-					<label for="seek">Seek</label>
+					<label for="seek"><?php esc_html_e( 'Seek', 'clashvibes' ); ?></label>
 					<input type="range" id="seek" title="seek" min="0" value="0" max="0">
 				</div>
 

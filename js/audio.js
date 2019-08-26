@@ -1,4 +1,5 @@
-	jQuery(document).ready(function ($) {
+
+  jQuery(document).ready(function ($) {
 
 		//Stop if HTML5 video isn't supported
 		if (!document.createElement('audio').canPlayType) {
@@ -6,11 +7,13 @@
 			return;
 		}
 
-		var audio = document.getElementById("result_player");
+		var audio = document.querySelector("audio");
 
 		// Play/Pause ============================//
 
 		$("#play_toggle").on("click", function () {
+
+
 			if (audio.paused) {
 				audio.play();
 				audio.preload = 'metadata';
@@ -70,7 +73,9 @@
 		});
 		$(audio).bind("durationchange", function () {
 			$("#duration").html(formatTime(this.duration));
-		});
+    });
+
+
 
 		function formatTime(seconds) {
 			var seconds = Math.round(seconds);

@@ -60,9 +60,9 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 
 		/**
 		 * Text domain.
-		 */	
+		 */
 		load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
-		
+
 		/**
 		 * Register menus.
 		 */
@@ -109,7 +109,7 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		// Create new image sizes.
 		add_image_size( 'featured-image', 783, 250 );
 		add_image_size( 'post-image', 284, 9999 );
-		
+
 		set_post_thumbnail_size( 250, 250, true );
 
 		// Add theme support for selective refresh for widgets.
@@ -126,7 +126,7 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 				'caption',
 			)
 		);
-		
+
 
 		$defaults = array(
 			'default-color'          => 'e9ad29',
@@ -225,10 +225,14 @@ add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
  */
 function clashvibes_scripts() {
 
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/minified/main.min.js', array( 'jquery' ), '1.0.0', 'true' );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main-es6.js', array( 'jquery' ), '1.0.0', 'true' );
 
 	if ( 'clash-audio' === get_post_type() ) {
-		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/minified/audio.min.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/audio-es6.js', array( 'jquery' ), '1.0.0', true );
+	}
+
+	if ( 'clash-videos' === get_post_type() ) {
+		wp_enqueue_script( 'clashvibes-video', get_template_directory_uri() . '/js/video-es6.js', array( 'jquery' ), '1.0.0', true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

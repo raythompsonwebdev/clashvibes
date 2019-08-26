@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package clashvibes
- * 
+ *
  */
 ?>
 
@@ -34,9 +34,9 @@
 				?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
-				
+
 		</header>
-				
+
 		<?php clashvibes_post_thumbnail();  ?>
 
 		<div class="audioExcerpt">
@@ -44,7 +44,7 @@
 		<?php the_content(); ?>
 
 			<!--audio player and audio controls-->
-			
+
 			<?php
 
 				global $post;
@@ -52,27 +52,30 @@
 				$meta = get_post_meta( $post->ID, 'sound_system_url', true );
 
 				$urlmp3 = get_site_url();
-			
-			?> 
+
+			?>
 
 			<audio id="result_player" >
 
-				<!--/wp-content/uploads/sites/7/2019/03/-->
-						
-				<source src="<?php echo esc_url( $urlmp3);?>/wp-content/uploads/sites/2/2018/07/<?php echo esc_html( $meta );?>.mp3" preload="metadata" type='audio/mpeg'  />
+        <!-- live /wp-content/uploads/sites/7/2019/03/-->
+        <!--laptop - /wp-content/uploads/sites/3/2018/11/-->
+
+
+
+				<source src="<?php echo esc_url( $urlmp3);?>/wp-content/uploads/sites/3/2018/11/<?php echo esc_html( $meta );?>.mp3" preload="metadata" type='audio/mpeg'  />
 
 				<?php $urlogg = get_site_url();?>
 
-				<source src="<?php echo esc_url( $urlogg );?>/wp-content/uploads/sites/2/2018/07/<?php echo esc_html( $meta );?>.ogg" preload="metadata" type='audio/ogg' />
+				<source src="<?php echo esc_url( $urlogg );?>/wp-content/uploads/sites/3/2018/11/<?php echo esc_html( $meta );?>.ogg" preload="metadata" type='audio/ogg' />
 
 				<?php $urlma = get_site_url();?>
 
-				<source src="<?php echo esc_url( $urlma );?>/wp-content/uploads/sites/2/2018/07/<?php echo esc_html( $meta );?>.m4a" preload="metadata" type='audio/mp4' />
+				<source src="<?php echo esc_url( $urlma );?>/wp-content/uploads/sites/3/2018/11/<?php echo esc_html( $meta );?>.m4a" preload="metadata" type='audio/mp4' />
 
 				<p><?php esc_html_e( 'Your browser does not support HTML5 audio.', 'clashvibes' ); ?></p>
 
 			</audio>
-			
+
 			<br/>
 
 			<div id="audio_controls">
@@ -84,20 +87,25 @@
 				</div>
 
 				<div id="progress">
+        <progress value="0" id="playback"></progress>
 				<span id="load_progress"></span>
 				<span id="play_progress"></span>
 				</div>
 
 				<div id="time">
-					<span>Current Time</span><span id="current_time">00:00</span>  
-					<span>Duration</span> <span id="duration">00:00</span>
+
+					<span><?php esc_html_e( 'Current Time', 'clashvibes' ); ?></span><span id="current_time">00:00</span>
+					<span><?php esc_html_e( 'Duration', 'clashvibes' ); ?></span> <span id="duration_time">00:00</span>
 				</div>
 
 				<div id="video_volume">
-				<label id="volume_bar" for="volume"><?php esc_html_e( 'Volume', 'clashvibes' ); ?></label>
-				<input type="range" id="volume" title="volume" min="0" max="1" step="0.1" value="1">
+					<label id="volume_bar" for="volume"><?php esc_html_e( 'Volume', 'clashvibes' ); ?></label>
+					<input type="range" id="volume" title="volume" min="0" max="1" step="0.1" value="1">
 				</div>
-
+				<div id="video_seek">
+					<label for="seek"><?php esc_html_e( 'SEEK', 'clashvibes' ); ?></label>
+					<input type="range" id="seek" title="seek" min="0" value="0" max="0">
+				</div>
 
 			</div>
 
@@ -113,7 +121,7 @@
 
 			<ul class="post-meta">
 				<li>
-				
+
 					<span class="post-meta-key">
 					<?php $SoundName = get_post_meta( get_the_ID(),'sound_system_name', true); ?>
 					<?php esc_html_e( 'Sound System Name', 'clashvibes' ); ?>
@@ -134,13 +142,7 @@
 					</span>
 					<p><?php echo esc_html($SoundLocation); ?>  </p>
 				</li>
-				<li>
-					<span class="post-meta-key">
-					<?php $SoundUrl = get_post_meta( get_the_ID(),'sound_system_url', true); ?>
-					<?php esc_html_e( 'URL', 'clashvibes' ); ?>
-					</span>
-					<p><?php echo esc_html($SoundUrl); ?>  </p>
-				</li>
+
 			</ul>
 
 		</footer>

@@ -32,8 +32,8 @@ get_header(); ?>
 
 	<h2><?php _e('Heading 1', 'clashvibes'); ?></h2>
 
-	<figure class="text-img">
-		<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sampleimage(110x110).gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
+	<figure class="text-img"><!--/wp-content/themes/clashvibes/images/sampleimage(110x110).gif-->
+		<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/sites/2/2018/07/sampleimage110x110.gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
 	</figure>
 
 	<p>
@@ -49,7 +49,7 @@ get_header(); ?>
 	<h2><?php _e('Heading 1', 'clashvibes'); ?></h2>
 
 	<figure class="text-img">
-		<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sampleimage(110x110).gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
+		<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/sites/2/2018/07/sampleimage110x110.gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
 	</figure>
 
 	<p>
@@ -65,7 +65,7 @@ get_header(); ?>
 	<h2><?php _e('Heading 1', 'clashvibes'); ?></h2>
 
 	<figure class="text-img">
-		<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sampleimage(110x110).gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
+		<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/sites/2/2018/07/sampleimage110x110.gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
 	</figure>
 
 	<p>

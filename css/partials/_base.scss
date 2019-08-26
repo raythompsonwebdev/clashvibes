@@ -5,7 +5,7 @@
 .left-col {
     width: 66%;
     float: left;
-    
+
 }
 
 .right-col {
@@ -30,7 +30,7 @@
 
 .right {
     float: left;
-    display: inline-block;
+    display: block;
     height: 40px;
     color: $color4;
     a {
@@ -50,7 +50,7 @@
 
 .bypostauthor{
     font-size:1em;
-    
+
 }
 
 /*WordPress Image Classes*/

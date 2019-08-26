@@ -6,7 +6,7 @@
 
 @media only screen and (max-width: 1920px) {
 
-    
+
     button.menu-toggle{
         display:none;
     }
@@ -47,7 +47,7 @@
             height: 80px;
             margin: 0;
             background-color:$color;
-            
+
             .site-logo {
                 display:block;
                 float:left;
@@ -77,7 +77,7 @@
                         &:focus {
                             background-color: #f1f1f1;
                             border-radius: 3px;
-                            
+
                             clip: auto !important;
                             color: #21759b;
                             display: block;
@@ -92,9 +92,9 @@
                             top: 5px;
                             width: auto;
                             z-index: 100000;
-                           
+
                         }
-                        
+
                     }
                     div.site-firstletter {
                         font-family: $font-main;
@@ -105,15 +105,15 @@
                         padding: 0;
                         height:100%;
                     }
-                    
+
                 }
-                
+
             }
             .site-logo a:focus,
             .site-logo a:hover {
                 outline: 2px solid white;
             }
-            
+
             .site-logo a:focus .site-firstletter,
             .site-logo a:hover .site-firstletter {
                 background: $color4;
@@ -158,7 +158,7 @@
                 width: 20%;
                 display: block;
                 height: 40px;
-                
+
                 a {
                     height: 100%;
                     display: inline-block;
@@ -190,14 +190,14 @@
                 margin: 0;
                 padding: 0;
                 list-style: none;
-                
+
                 li {
                     display: inline-block;
                     float: left;
                     width: 13%;
                     height: 40px;
                     margin-right: 0.5em;
-                    
+
                     a {
                         width: 100%;
                         background-color: $color4;
@@ -242,7 +242,7 @@
             margin: auto;
             #clashvibes_right_column_front {
                 //float: none;
-                
+
                 min-height: 800px;
                 margin: 0 0 0.5em 0;
                 padding: 0px;
@@ -352,11 +352,11 @@
                 div.results{
                     padding: 0;
                     width: 100%;
-                    margin: 0 0 0.5em 0; 
-                                        
-                    
+                    margin: 0 0 0.5em 0;
+
+
                     article.events_box{
-                        
+
                         float: left;
                         width: 19%; //19%;
                         min-height: 330px;
@@ -377,7 +377,7 @@
                             letter-spacing: 0.03em;
                             font-weight: bold;
                         }
-                        
+
                         #event-submit-btn,
                         input[type="submit"]{
                             width: 90%;
@@ -394,11 +394,11 @@
                             &:hover {
                                 font-weight: bold;
                                 background-color: $color2a;
-                                
+
                                 color: $colors;
                             }
                         }
-                        
+
                         figure.events {
                             width: 90%;
                             min-height: 100px;
@@ -412,11 +412,11 @@
                                 width: 92%;
 
                             }
-                            
+
                             img {
                                 @include box-sizing($type: border-box);
                             }
-                            
+
                             figcaption.event-text{
                                 min-height:100px;
                                 display:block;
@@ -427,26 +427,26 @@
                                     display:block;
                                     color:#000;
                                 }
-                                
+
                             }
-                            
-                        } 
-                       
-                                            
+
+                        }
+
+
                     }
                 }
-                           
+
                 div.results,
                 #new_released_section {
                     padding: 0;
                     width: 100%;
-                    margin: 0 0 0.5em 0; 
-                    
-                   
+                    margin: 0 0 0.5em 0;
+
+
                     .new_released_box{
-                        
+
                         float: left;
-                        width: 19.425%; 
+                        width: 19.425%;
                         min-height: 300px;
                         padding: 0;
                         margin: 0.2em;
@@ -508,8 +508,8 @@
                                 width:100%;
                                 z-index:100;
                                 display:none;
-                                
-                                
+
+
                                 a.Morebutton {
                                     font-size: 0.9em;
                                     color: $color;
@@ -523,7 +523,7 @@
                                     letter-spacing: 0.05em;
                                     width:65%;
                                     bottom:-40px;
-                                    
+
                                     &:hover {
                                         color: $color;
                                         background-color: $color7;
@@ -541,7 +541,7 @@
                             cursor: pointer;
                             border: none;
                         }
-    
+
                         figure.thumbaud:hover figcaption ,
                         figure.thumbvid:hover figcaption {
                             margin:0 auto;
@@ -565,7 +565,7 @@
                     margin: 0;
                     padding: 0;
                     list-style: none;
-                    
+
                     li {
                         width: 100%;
                         overflow: hidden;
@@ -580,7 +580,7 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 height:auto;
-                
+
                 ul#topdownload_section {
                     margin: 0;
                     width: 48%;
@@ -594,14 +594,14 @@
                         font-size: 1.5em;
                         height: 45px;
                         line-height: 45px;
-                        
+
                         clear: both;
                         margin-bottom: 0.25em;
                         color: $color;
                     }
 
                     li.topdownload_box {
-                        
+
                         width: 100%;
                         margin: 0 0 0.25em 0;
                         color: $color4;
@@ -614,7 +614,7 @@
                         background-color: $color2;
                         span.image_thumb {
                             float: left;
-                            
+
                             background-color: $color;
                             width: 6%;
                             color: $color4;
@@ -633,7 +633,7 @@
                             }
                         }
                         span.title_singer {
-                           
+
                             text-indent: 0.5em;
                             width: 79%;
                             color: $color4;
@@ -646,7 +646,7 @@
                             background-color: $color2;
                         }
                         span {
-                            
+
                             background-color: $color;
                             font-weight: normal;
                             height: 45px;
@@ -680,9 +680,9 @@
                 }
             }
         }
-             
+
         section.contact-wide{
-            /********** comments form **********/ 
+            /********** comments form **********/
             #clashvibes_comments_form{
 
                 div#comments{
@@ -697,7 +697,7 @@
                         }
                         form#commentform{
                             padding:0.5em;
-                                
+
                             p.logged-in-as{
                                 display:block;
                                 a{
@@ -710,7 +710,7 @@
                                         font-weight:bold;
                                     }
                                 }
-    
+
                             }
                             p.comment-form-comment{
 
@@ -721,18 +721,18 @@
                                     font-weight:bold;
                                     font-size:1.2em;
                                     text-indent:0.5em;
-                                    
 
-    
+
+
                                 }
                                 textarea{
                                     width:100%;
                                 }
-    
+
                             }
-    
+
                             p.form-submit{
-    
+
                                 input[type="submit"] {
                                     display:block;
                                     margin:0 auto;
@@ -767,7 +767,7 @@
             section#clashvibes_login{
                 padding:0.5em 0;
                 form.search-form{
-                    
+
                     label{
                         width: 90%;
                         display: block;
@@ -779,7 +779,7 @@
                             line-height: 35px;
                             margin: 0;
                             float: left;
-                            
+
                         }
                         input[type="search"]{
                             width:97%;
@@ -806,7 +806,7 @@
                     }
                 }
             }
-            
+
             h1 {
                 font-size: 1.3em;
                 text-align: center;
@@ -831,7 +831,7 @@
                 margin: 0px;
                 letter-spacing: 0.05em;
             }
-            
+
             .left_col_box {
                 margin: 0;
                 color: $color4;
@@ -939,7 +939,7 @@
                         margin: 0.5em 0;
                         height: auto;
                         @include clearfix();
-                        
+
                         li,
                         li.recentcomments{
                             list-style: none;
@@ -952,7 +952,7 @@
                                 margin: 0;
                                 padding: 0;
                                 height:100%;
-                                
+
                             }
                             a {
                                 padding: 0;
@@ -1001,7 +1001,7 @@
         }
 
         form.search-form{
-                    
+
             label{
                 width: 90%;
                 display: block;
@@ -1013,7 +1013,7 @@
                     line-height: 35px;
                     margin: 0;
                     float: left;
-                    
+
                 }
                 input[type="search"]{
                     width:97%;
@@ -1047,7 +1047,7 @@
             margin: 0 0 1% 0;
             padding: 2%;
             display: block;
-            width: 74%; 
+            width: 74%;
             h1 {
                 height: 45px;
                 line-height: 45px;
@@ -1085,7 +1085,7 @@
                 color:$color2;
                 text-indent: 0.25em;
             }
-           
+
             article.clash_videos,
             article.clash_audio,
             article.post,
@@ -1101,7 +1101,7 @@
                 h4,
                 h5,
                 h6 {
-                    
+
                     height: 40px;
                     line-height: 40px;
                     width: 100%;
@@ -1109,7 +1109,7 @@
                     height:auto;
                     margin-bottom: 0;
                     background-color:#000;
-                   
+
                 }
 
                 iframe{
@@ -1195,7 +1195,7 @@
                 }
 
                 /*--- blog image---*/
-                
+
                 .post-thumbnail{
                     width:20%;
                     margin:1em auto;
@@ -1224,7 +1224,7 @@
                         img{
                             margin: 0;
                             display: block;
-    
+
                         }
                     }
                 }
@@ -1282,7 +1282,7 @@
                     text-indent: 0.25em;
                     background-color: $colors;
                     span {
-                        
+
                         padding: 0;
                         margin: 0;
                         color: $color;
@@ -1330,7 +1330,7 @@
                     display: block;
 
                 }
-                               
+
                 //regular post entry
                 div.entry-content,
                 div.entry-attachment{
@@ -1346,7 +1346,7 @@
                         img{
                             margin: 0;
                             display: block;
-    
+
                         }
                     }
 
@@ -1372,7 +1372,7 @@
                         padding:0;
                         color:$color4;
                         width:90%;
-                        
+
                         figure {
                             width: 90%;
                             margin: 0 auto;
@@ -1384,7 +1384,7 @@
                             line-height:40px;
                             width:100%;
                             background-color:$color2;
-                            
+
                             padding:1%;
                             a{
                                 width:auto;
@@ -1394,7 +1394,7 @@
 
                         }
                     }
-                    
+
                     a.read_more{
                         display: block;
                         width: 30%;
@@ -1413,7 +1413,7 @@
                     display: block;
                     width: 80%;
                     margin:auto;
-                    
+
                     a.download_button{
                         display: block;
                         width: 30%;
@@ -1430,7 +1430,7 @@
                         width: 85%;
                         margin: 0 auto;
                         display: block;
-                        
+
 
                     }
 
@@ -1444,7 +1444,7 @@
                         border: $color11 solid 1px;
                         padding:0.5em;
                         background-color:rgb(12, 14, 12);
-                        
+
 
 
                         #btns_box{
@@ -1452,7 +1452,7 @@
                             float: left;
                             height:60px;
                             width: 35%;
-                            
+
 
                             button.player-button {
                                 width: 33.3%;
@@ -1498,7 +1498,7 @@
 
                         div#progress {
                             width: 64%;
-                            
+
                             display: inline-block;
                             margin:0 0.2em;
                             background-color: $color;
@@ -1521,7 +1521,7 @@
 
                         div#time {
                             width: 48%;
-                            
+
                             display: inline-block;
                             clear:both;
                             color: $color4;
@@ -1559,7 +1559,7 @@
                             margin-top:0.5em;
                             display: block;
                             width:100%;
-                            
+
                             label{
                                 width:20%;
                                 display:block;
@@ -1570,7 +1570,7 @@
                                 margin-right:0.5em;
                                 text-align:center;
                                 clear:both;
-                                
+
                             }
                             input[type="range"]{
                                 width:75%;
@@ -1585,7 +1585,7 @@
                             margin:0.5em 0 0 0.5em;
                             display: inline-block;
                             width: 50%;
-                            
+
                             label{
                                 width:20%;
                                 display:block;
@@ -1597,28 +1597,28 @@
                                 margin-right:0.5em;
                                 text-align:center;
                                 clear:both;
-                                
+
                             }
                             input[type="range"]{
                                 width:75%;
                                 clear:both;
                                 display:inline-block;
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
                     //video
                     iframe {
                         width: 100%;
                         margin: 0 auto;
-                    
+
                     }
- 
+
                 }
-                
+
                 //custom-post-footer
                 footer.speaker-meta {
                     clear: both;
@@ -1662,7 +1662,7 @@
                                 padding:0;
                                 font-size: 0.9em;
                                 text-indent: 0.2em;
-                                
+
                             }
 
                         }
@@ -1971,7 +1971,7 @@
 
 @media only screen and (max-width: 1440px) {
 
-    
+
     #container {
         width: 92%;
 
@@ -1992,39 +1992,39 @@
             height: 70px;
             .site-logo {
                 display:block;
-                
+
                 a {
-                    
+
                     width: 98%;
                     ;
                     /* Text meant only for screen readers. */
                     div.screen-reader-text {
-                        
+
                         overflow: hidden;
                         &:focus {
-                            
+
                             top: 5px;
-                            
-                           
+
+
                         }
-                        
+
                     }
                     div.site-firstletter {
-                        
+
                         height:100%;
                     }
-                    
+
                 }
-                
+
             }
             .site-logo a:focus,
             .site-logo a:hover {
                 outline: 2px solid white;
             }
-            
+
             .site-logo a:focus .site-firstletter,
             .site-logo a:hover .site-firstletter {
-                
+
                 text-align: center;
             }
 
@@ -2069,7 +2069,7 @@
                     height: 40px;
                     a {
                         font-size: 0.85em;
-                        
+
                         &:hover {
                             font-weight:bold;
                         }
@@ -2101,8 +2101,8 @@
 
                 div.results{
 
-                    margin: 0 0 0.5em 0; 
-                     
+                    margin: 0 0 0.5em 0;
+
                     article.you_tube_box{
 
                         width: 19%; //19%;
@@ -2145,14 +2145,14 @@
 
                             .u_tube {
                                 margin:0;
-                                                               
+
                                 span.u_tube_button {
                                     height: 40px;
 
                                     a {
 
                                         font-size: 0.9em;
-   
+
                                         &:hover {
 
                                             letter-spacing: 0.055em;
@@ -2164,13 +2164,13 @@
                         }
                     }
                 }
-                           
+
                 div.results,
                 #new_released_section {
                     padding: 0;
-                    
+
                     .new_released_box{
-                        width: 19.425%; 
+                        width: 19.425%;
                         min-height: 280px;
 
                         h1 {
@@ -2201,7 +2201,7 @@
 
                                 a.Morebutton {
                                     font-size: 0.9em;
-      
+
                                     &:hover {
 
                                         letter-spacing: 0.055em;
@@ -2231,7 +2231,7 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 ul#topdownload_section {
-                    
+
                     padding: 0.5em;
 
                     h1 {
@@ -2284,13 +2284,13 @@
             section#clashvibes_login{
                 padding:0.5em 0;
                 form.search-form{
-                    
+
                     label{
 
                         font-size:0.9em;
                         span.screen-reader-text{
                             line-height: 35px;
-                            
+
                         }
                         input[type="search"]{
                             width:97%;
@@ -2414,11 +2414,11 @@
 
         /*--- Right Column---*/
         #clashvibes_right_column {
-            
+
             width: 74%; //global post
             h1 {
                 font-size:1.4em;
-                
+
 
                 a {
                     width: 71%;
@@ -2455,10 +2455,10 @@
                 h4,
                 h5,
                 h6 {
-                    
+
                     margin-bottom: 0;
 
-                   
+
                 }
 
 
@@ -2505,13 +2505,13 @@
                         margin: 0;
 
                     }
-                }         
+                }
 
                 /*--- custom post images---*/
                 figure.thumb,
                 figure.attachment {
                     width: 20%;
-                    
+
                 }
 
                 //custom post header
@@ -2524,7 +2524,7 @@
                             font-size: 0.85em;
 
                             a {
- 
+
                                 width: auto;
                             }
                         }
@@ -2575,18 +2575,18 @@
                     width: 85%;
 
                 }
-                               
+
                 //regular post entry
                 div.entry-content{
                     width: 98%;
 
                     /*--- blog image---*/
-                
+
                     //text
                     p {
                         font-size: 0.9em;
                         line-height:1.9em;
-                        
+
                         a{
 
                             display: inline-block;
@@ -2609,7 +2609,7 @@
                             line-height:40px;
                         }
                     }
-                    
+
                     a.read_more{
                         width: 30%;
 
@@ -2633,7 +2633,7 @@
                     //controls -audio/video
                     div#audio_controls,
                     div#videocontrols {
-                        
+
                         width: 97%;
 
                         #btns_box{
@@ -2643,7 +2643,7 @@
                                 width: 33.3%;
 
                                 line-height: 53px;
-           
+
                                 &:hover{
 
                                     line-height: 53px;
@@ -2658,7 +2658,7 @@
                                     &:hover {
 
                                         color: $color;
-                                        
+
                                     }
                                 }
                             }
@@ -2702,7 +2702,7 @@
                             label{
                                 width:20%;
                                 line-height:30px;
-                                
+
                             }
                             input[type="range"]{
                                 width:75%;
@@ -2716,15 +2716,15 @@
                             width: 50%;
                             label{
                                 width:20%;
-                                
+
                             }
                             input[type="range"]{
                                 width:75%;
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
                     //video
@@ -2733,13 +2733,13 @@
                     }
 
                 }
-                
+
                 //custom-post-footer
                 footer.speaker-meta {
 
                     ul.post-meta {
                         height: 100%;
-                       
+
                         li {
                             font-size: 0.9em;
                             span.post-meta-key {
@@ -2748,12 +2748,12 @@
                             }
                             p{
                                 width:79%;
-    
+
                             }
                         }
                         p{
                             width:79%;
-                            
+
                         }
                     }
                 }
@@ -2985,7 +2985,7 @@
 
 @media only screen and (max-width: 1280px) {
 
-   
+
     #container {
         width: 94%;
 
@@ -3006,39 +3006,39 @@
             height: 70px;
             .site-logo {
                 display:block;
-                
+
                 a {
-                    
+
                     width: 98%;
                     ;
                     /* Text meant only for screen readers. */
                     div.screen-reader-text {
-                        
+
                         overflow: hidden;
                         &:focus {
-                            
+
                             top: 5px;
-                            
-                           
+
+
                         }
-                        
+
                     }
                     div.site-firstletter {
-                        
+
                         height:100%;
                     }
-                    
+
                 }
-                
+
             }
             .site-logo a:focus,
             .site-logo a:hover {
                 outline: 2px solid white;
             }
-            
+
             .site-logo a:focus .site-firstletter,
             .site-logo a:hover .site-firstletter {
-                
+
                 text-align: center;
             }
 
@@ -3086,7 +3086,7 @@
                         font-size: 0.8em;
 
                         &:hover {
-                            
+
                         }
                     }
                     .lastmenu {
@@ -3115,10 +3115,10 @@
                 }
 
                 #new_released_section {
-                    margin: 0 0 0.5em 0; 
+                    margin: 0 0 0.5em 0;
 
                     .new_released_box {
-                        width: 19.325%; 
+                        width: 19.325%;
                         min-height: 260px;
 
                         h1 {
@@ -3150,7 +3150,7 @@
 
                                 a.Morebutton {
                                     font-size: 0.85em;
-      
+
                                     &:hover {
 
                                         letter-spacing: 0.05em;
@@ -3179,7 +3179,7 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 ul#topdownload_section {
-                    
+
 
                     h1 {
                         font-size: 1.1em;
@@ -3221,7 +3221,7 @@
             }
         }
 
-        
+
         /*--- Left Column---*/
         #clashvibes_left_column {
             width: 21%;
@@ -3229,13 +3229,13 @@
             section#clashvibes_login{
                 padding:0.5em 0;
                 form.search-form{
-                    
+
                     label{
 
                         font-size:0.9em;
                         span.screen-reader-text{
                             line-height: 35px;
-                            
+
                         }
                         input[type="search"]{
                             width:97%;
@@ -3396,11 +3396,11 @@
                 h4,
                 h5,
                 h6 {
-                    
-                    
+
+
                     color:$color2;
-                    
-                   
+
+
                 }
 
                 header.entry-header {
@@ -3435,14 +3435,14 @@
                         margin: 0;
 
                     }
-                }        
+                }
 
                 /*--- custom post images---*/
                 figure.thumb,
                 figure.attachment {
                     width: 25%;
 
-                    
+
                 }
 
                 //custom post header
@@ -3455,7 +3455,7 @@
                             font-size: 0.85em;
 
                             a {
- 
+
                                 width: auto;
                             }
                         }
@@ -3506,7 +3506,7 @@
                     width: 85%;
 
                 }
-                               
+
                 //regular post entry
                 div.entry-content{
                     width: 98%;
@@ -3537,7 +3537,7 @@
                             line-height:40px;
                         }
                     }
-                    
+
                     a.read_more{
                         width: 40%;
 
@@ -3561,7 +3561,7 @@
                     //controls -audio/video
                     div#audio_controls,
                     div#videocontrols {
-                        
+
                         width: 97%;
 
                         #btns_box{
@@ -3569,7 +3569,7 @@
 
                             button.player-button {
                                 width: 33.3%;
-           
+
                                 &:hover{
 
                                     line-height: 53px;
@@ -3584,7 +3584,7 @@
                                     &:hover {
 
                                         color: $color;
-                                        
+
                                     }
                                 }
                             }
@@ -3628,7 +3628,7 @@
                             label{
                                 width:20%;
 
-                                
+
                             }
                             input[type="range"]{
                                 height: 32px;
@@ -3642,15 +3642,15 @@
                             label{
 
                                 font-size:0.9em;
-                               
+
                             }
                             input[type="range"]{
 
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
                     //video
@@ -3659,7 +3659,7 @@
                     }
 
                 }
-                
+
                 //custom-post-footer
                 footer.speaker-meta {
                     height: 160px;
@@ -3676,7 +3676,7 @@
                             }
                             p{
                                 width:77%;
-    
+
                             }
                         }
 
@@ -3911,7 +3911,7 @@
 
 @media only screen and (max-width: 1024px) {
 
-    
+
     #container {
         width: 96%;;
 
@@ -3933,39 +3933,39 @@
 
             .site-logo {
                 display:block;
-                
+
                 a {
-                    
+
                     width: 98%;
                     ;
                     /* Text meant only for screen readers. */
                     div.screen-reader-text {
-                        
+
                         overflow: hidden;
                         &:focus {
-                            
+
                             top: 5px;
-                            
-                           
+
+
                         }
-                        
+
                     }
                     div.site-firstletter {
-                        
+
                         height:100%;
                     }
-                    
+
                 }
-                
+
             }
             .site-logo a:focus,
             .site-logo a:hover {
                 outline: 2px solid white;
             }
-            
+
             .site-logo a:focus .site-firstletter,
             .site-logo a:hover .site-firstletter {
-                
+
                 text-align: center;
             }
 
@@ -4013,7 +4013,7 @@
                         font-size: 0.7em;
 
                         &:hover {
-                           
+
                         }
                     }
                     .lastmenu {
@@ -4042,12 +4042,12 @@
                 }
 
                 #new_released_section {
-                    margin: 0 0 0.5em 0; 
+                    margin: 0 0 0.5em 0;
 
                     .new_released_box {
                         width: 19.115%;
                         min-height: 240px;
-                        
+
 
                         h1 {
                             font-size: 0.75em;
@@ -4079,7 +4079,7 @@
 
                                 a.Morebutton {
                                     font-size: 0.85em;
-      
+
                                     &:hover {
 
                                         letter-spacing: 0.05em;
@@ -4108,7 +4108,7 @@
             #topdownload_section_ctner{
                 padding:0.5em;
                 ul#topdownload_section {
-                    
+
                     padding: 0.25em;
 
                     h1 {
@@ -4151,7 +4151,7 @@
             }
         }
 
-        
+
 
         /*--- Left Column---*/
         #clashvibes_left_column {
@@ -4160,13 +4160,13 @@
             section#clashvibes_login{
                 padding:0.5em 0;
                 form.search-form{
-                    
+
                     label{
 
                         font-size:0.8em;
                         span.screen-reader-text{
                             line-height: 35px;
-                            
+
                         }
                         input[type="submit"]{
                             width:97%;
@@ -4347,7 +4347,7 @@
 
                    div.entry-meta {
                         display: block;
-                        
+
                         span.posted-on,
                         span.byline {
                             font-size:0.75em;
@@ -4361,7 +4361,7 @@
                 }
 
                 /*--- blog image---*/
-                         
+
                 a.post-thumbnail{
                     width: 25%;
                     img{
@@ -4374,7 +4374,7 @@
                 figure.attachment {
                     width: 25%;
 
-                    
+
                 }
 
                 //custom post header
@@ -4387,7 +4387,7 @@
                             font-size: 0.8em;
 
                             a {
- 
+
                                 width: auto;
                             }
                         }
@@ -4438,7 +4438,7 @@
                     width: 85%;
 
                 }
-                               
+
                 //regular post entry
                 div.entry-content{
                     width: 98%;
@@ -4469,7 +4469,7 @@
                             line-height:40px;
                         }
                     }
-                    
+
                     a.read_more{
                         width: 40%;
 
@@ -4490,7 +4490,7 @@
                         width: 90%;
                     }
 
-                    
+
                     //controls -audio/video
                     div#audio_controls,
                     div#videocontrols {
@@ -4500,7 +4500,7 @@
 
                             button.player-button {
                                 width: 33.3%;
-           
+
                                 &:hover{
 
                                     line-height: 53px;
@@ -4515,7 +4515,7 @@
                                     &:hover {
 
                                         color: $color;
-                                        
+
                                     }
                                 }
                             }
@@ -4540,7 +4540,7 @@
                             width: 48%;
 
                             span{
-   
+
                                 font-size: 0.75em;
 
                             }
@@ -4558,7 +4558,7 @@
 
                             label{
                                 width:20%;
-                                
+
                             }
                             input[type="range"]{
                                 height: 32px;
@@ -4572,15 +4572,15 @@
                             label{
                                 width:20%;
                                 font-size:0.9em;
-                               
+
                             }
                             input[type="range"]{
 
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
 
@@ -4590,7 +4590,7 @@
                     }
 
                 }
-                
+
                 //custom-post-footer
                 footer.speaker-meta {
 
@@ -4604,7 +4604,7 @@
                             }
                             p{
                                 width:76%;
-    
+
                             }
                         }
 
@@ -4838,7 +4838,7 @@
 
 @media only screen and (max-width: 800px) {
 
-    
+
     #container {
         width: 98%;
 
@@ -4860,30 +4860,30 @@
 
             .site-logo {
                 display:block;
-                
+
                 a {
-                    
+
                     width: 98%;
                     ;
                     /* Text meant only for screen readers. */
                     div.screen-reader-text {
-                        
+
                         overflow: hidden;
                         &:focus {
-                            
+
                             top: 5px;
-                            
-                           
+
+
                         }
-                        
+
                     }
                     div.site-firstletter {
-                        
+
                         height:100%;
                     }
-                    
+
                 }
-                
+
             }
 
             #clashvibes_title {
@@ -4929,7 +4929,7 @@
                         font-size: 0.65em;
 
                         &:hover {
-                            
+
                         }
                     }
                     .lastmenu {
@@ -4958,7 +4958,7 @@
                 }
 
                 #new_released_section {
-                    margin: 0 0 0.5em 0; 
+                    margin: 0 0 0.5em 0;
 
                     .new_released_box {
                         width: 23.925%;
@@ -4992,7 +4992,7 @@
 
                                 a.Morebutton {
                                     font-size: 0.8em;
-      
+
                                     &:hover {
 
                                         letter-spacing: 0.05em;
@@ -5064,7 +5064,7 @@
             }
         }
 
-        
+
 
         /*--- Left Column---*/
         #clashvibes_left_column {
@@ -5076,7 +5076,7 @@
                         font-size:0.8em;
                         span.screen-reader-text{
                             line-height: 35px;
-                            
+
                         }
                             input[type="search"]{
                             width:97%;
@@ -5090,7 +5090,7 @@
                     }
                 }
             }
-            
+
             h1 {
                 font-size: 1em;
             }
@@ -5274,14 +5274,14 @@
                         margin: 0;
 
                     }
-                }           
+                }
 
                 /*--- custom post images---*/
                 figure.thumb,
                 figure.attachment {
                     width: 25%;
 
-                    
+
                 }
 
                 //custom post header
@@ -5294,7 +5294,7 @@
                             font-size: 0.8em;
 
                             a {
- 
+
                                 width: auto;
                             }
                         }
@@ -5345,7 +5345,7 @@
                     width: 85%;
 
                 }
-                               
+
                 //regular post entry
                 div.entry-content{
                     width: 98%;
@@ -5376,7 +5376,7 @@
                             line-height:40px;
                         }
                     }
-                    
+
                     a.read_more{
                         width: 40%;
 
@@ -5400,7 +5400,7 @@
                     //controls -audio/video
                     div#audio_controls,
                     div#videocontrols {
-                        
+
                         width: 97%;
 
                         #btns_box{
@@ -5408,7 +5408,7 @@
 
                             button.player-button {
                                 width: 33.3%;
-           
+
                                 &:hover{
 
                                     line-height: 53px;
@@ -5423,7 +5423,7 @@
                                     &:hover {
 
                                         color: $color;
-                                        
+
                                     }
                                 }
                             }
@@ -5466,7 +5466,7 @@
                             label{
                                 width:20%;
 
-                                
+
                             }
                             input[type="range"]{
                                 height: 32px;
@@ -5481,15 +5481,15 @@
                             label{
 
                                 font-size:1em;
-                               
+
                             }
                             input[type="range"]{
 
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
                     //video
@@ -5498,7 +5498,7 @@
                     }
 
                 }
-                
+
                 //custom-post-footer
                 footer.speaker-meta {
                     height: auto;
@@ -5514,7 +5514,7 @@
                             }
                             p{
                                 width:100%;
-    
+
                             }
                         }
                         p{
@@ -5767,7 +5767,7 @@
         outline:none;
         text-align:center;
         @include Transition(all 0.2s linear 0s);
-        
+
         &:hover{
             background-color:$color7;
             color:$color4;
@@ -5827,35 +5827,35 @@
         }
 
 
-       
+
         header {
             height: 80px;
             .site-logo {
                 display:block;
-                
+
                 a {
-                    
+
                     width: 98%;
                     ;
                     /* Text meant only for screen readers. */
                     div.screen-reader-text {
-                        
+
                         overflow: hidden;
                         &:focus {
-                            
+
                             top: 5px;
-                            
-                           
+
+
                         }
-                        
+
                     }
                     div.site-firstletter {
-                        
+
                         height:100%;
                     }
-                    
+
                 }
-                
+
             }
             #clashvibes_title {
                 width: 54%;
@@ -5908,7 +5908,7 @@
                         line-height: 50px;
 
                         &:hover {
-                            
+
                             line-height: 50px;
                         }
                     }
@@ -5938,7 +5938,7 @@
             }
 
         }
-        
+
         /*--- Content ---*/
         #clashvibes_content {
             padding: 0;
@@ -6105,7 +6105,7 @@
                         }
                     }
                     h2 {
-   
+
                         text-indent: 0.5em;
 
 
@@ -6244,7 +6244,7 @@
                     //controls -audio/video
                     div#audio_controls,
                     div#videocontrols {
-                        
+
                         width: 97%;
 
                         #btns_box{
@@ -6252,7 +6252,7 @@
 
                             button.player-button {
                                 width: 33.3%;
-           
+
                                 &:hover{
 
                                     line-height: 53px;
@@ -6267,7 +6267,7 @@
                                     &:hover {
 
                                         color: $color;
-                                        
+
                                     }
                                 }
                             }
@@ -6310,7 +6310,7 @@
                             label{
                                 width:20%;
 
-                                
+
                             }
                             input[type="range"]{
                                 height: 32px;
@@ -6324,15 +6324,15 @@
                             label{
 
                                 font-size:1em;
-                               
+
                             }
                             input[type="range"]{
 
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
                     //video
@@ -6344,7 +6344,7 @@
 
                 //custom-post-footer
                 footer.speaker-meta {
-                  
+
 
                     ul.post-meta {
                         letter-spacing: 0.05em;
@@ -6357,7 +6357,7 @@
                             }
                             p{
                                 width:100%;
-    
+
                             }
                         }
                         p{
@@ -6502,7 +6502,7 @@
             width: 100%;
             margin: auto;
             #clashvibes_right_column_front {
-                
+
                 min-height: 720px;
                 width: 100%;
                 h1 {
@@ -6545,7 +6545,7 @@
 
                                 a.Morebutton {
                                     font-size: 0.8em;
-      
+
                                     &:hover {
 
                                         letter-spacing: 0.05em;
@@ -6557,11 +6557,11 @@
                     }
                 }
             }
-            
+
             #topdownload_section_ctner{
                 padding:0.5em;
                 height:auto;
-                
+
 
                 ul#topdownload_section {
 
@@ -6585,7 +6585,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    
+
                                     vertical-align: unset;
 
                                 }
@@ -6693,13 +6693,13 @@
 @media only screen and (max-width: 640px) {
 
     button.menu-toggle{
-        
+
         top: 0.25em;
         left: 86.5%;
-        
-        
+
+
         &:hover{
-           
+
             text-align:center;
         }
 
@@ -6707,14 +6707,14 @@
 
 
     button.sidebar-toggle{
-      
+
         top: 0.25em;
         left: 69%;
-        
+
         width: 15%;
-       
+
         &:hover{
-            
+
             text-align:center;
         }
 
@@ -6801,7 +6801,7 @@
                         line-height: 50px;
 
                         &:hover {
-                            
+
                             line-height: 50px;
                         }
                     }
@@ -6831,7 +6831,7 @@
             }
 
         }
-        
+
         /*--- Content ---*/
         #clashvibes_content {
             padding: 0;
@@ -6997,7 +6997,7 @@
                         }
                     }
                     h2 {
-   
+
                         text-indent: 0.5em;
 
 
@@ -7133,11 +7133,11 @@
                         width: 90%;
                     }
 
-                   
+
                     //controls -audio/video
                     div#audio_controls,
                     div#videocontrols {
-                        
+
                         width: 97%;
 
                         #btns_box{
@@ -7145,7 +7145,7 @@
 
                             button.player-button {
                                 width: 33.3%;
-           
+
                                 &:hover{
 
                                     line-height: 53px;
@@ -7160,7 +7160,7 @@
                                     &:hover {
 
                                         color: $color;
-                                        
+
                                     }
                                 }
                             }
@@ -7203,7 +7203,7 @@
                             label{
                                 width:20%;
 
-                                
+
                             }
                             input[type="range"]{
                                 height: 32px;
@@ -7217,15 +7217,15 @@
                             label{
 
                                 font-size:1em;
-                               
+
                             }
                             input[type="range"]{
 
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
                     //video
@@ -7237,7 +7237,7 @@
 
                 //custom-post-footer
                 footer.speaker-meta {
-                  
+
 
                     ul.post-meta {
                         letter-spacing: 0.05em;
@@ -7250,7 +7250,7 @@
                             }
                             p{
                                 width:100%;
-    
+
                             }
                         }
                         p{
@@ -7438,7 +7438,7 @@
 
                                 a.Morebutton {
                                     font-size: 0.8em;
-      
+
                                     &:hover {
 
                                         letter-spacing: 0.05em;
@@ -7450,11 +7450,11 @@
                     }
                 }
             }
-            
+
             #topdownload_section_ctner{
                 padding:0.5em;
                 height:auto;
-                
+
 
                 ul#topdownload_section {
 
@@ -7478,7 +7478,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    
+
                                     vertical-align: unset;
 
                                 }
@@ -7584,11 +7584,11 @@
 }
 
 @media only screen and (max-width: 536px) {
-    
+
     button.menu-toggle{
 
         left: 85.5%;
-        
+
     }
 
     button.sidebar-toggle{
@@ -7694,7 +7694,7 @@
             }
         }
 
-       
+
 
         /*--- Content ---*/
         #clashvibes_content {
@@ -7836,7 +7836,7 @@
 
                     h1 {
 
-  
+
                         font-size: 1em;
 
                         a {
@@ -7975,7 +7975,7 @@
                     //controls -audio/video
                     div#audio_controls,
                     div#videocontrols {
-                        
+
                         width: 97%;
 
                         #btns_box{
@@ -7983,7 +7983,7 @@
 
                             button.player-button {
                                 width: 33.3%;
-           
+
                                 &:hover{
 
                                     line-height: 53px;
@@ -7998,7 +7998,7 @@
                                     &:hover {
 
                                         color: $color;
-                                        
+
                                     }
                                 }
                             }
@@ -8041,7 +8041,7 @@
                             label{
                                 width:20%;
 
-                                
+
                             }
                             input[type="range"]{
                                 height: 32px;
@@ -8055,15 +8055,15 @@
                             label{
 
                                 font-size:0.9em;
-                               
+
                             }
                             input[type="range"]{
 
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
                     //video
@@ -8076,7 +8076,7 @@
                 //custom-post-footer
                 footer.speaker-meta {
 
-                    
+
 
                     ul.post-meta {
                         letter-spacing: 0.05em;
@@ -8090,7 +8090,7 @@
                             }
                             p{
                                 width:100%;
-    
+
                             }
                         }
                         p{
@@ -8278,7 +8278,7 @@
 
                                 a.Morebutton {
                                     font-size: 0.8em;
-      
+
                                     &:hover {
 
                                         letter-spacing: 0.05em;
@@ -8290,11 +8290,11 @@
                     }
                 }
             }
-            
+
             #topdownload_section_ctner{
                 padding:0.5em;
                 height:auto;
-                
+
 
                 ul#topdownload_section {
                     margin: 0.15em;
@@ -8313,7 +8313,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    
+
                                     vertical-align: unset;
                                 }
                             }
@@ -8410,7 +8410,7 @@
         }
         /* ----- End of Footer ----- */
     }
-        
+
 }
 
 
@@ -8534,7 +8534,7 @@
             }
         }
 
-        
+
         /*--- Content ---*/
         #clashvibes_content {
             padding: 0;
@@ -8825,7 +8825,7 @@
                     //controls -audio/video
                     div#audio_controls,
                     div#videocontrols {
-                        
+
                         width: 97%;
 
                         #btns_box{
@@ -8833,7 +8833,7 @@
 
                             button.player-button {
                                 width: 33.3%;
-           
+
                                 &:hover{
 
                                     line-height: 53px;
@@ -8848,7 +8848,7 @@
                                     &:hover {
 
                                         color: $color;
-                                        
+
                                     }
                                 }
                             }
@@ -8891,7 +8891,7 @@
                             label{
                                 width:20%;
 
-                                
+
                             }
                             input[type="range"]{
                                 height: 32px;
@@ -8905,15 +8905,15 @@
                             label{
 
                                 font-size:0.9em;
-                               
+
                             }
                             input[type="range"]{
 
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
                     //video
@@ -9160,7 +9160,7 @@
                     width: 100%;
                     .new_released_box {
                         width: 48%;
-                        
+
                         h1 {
                             font-size: 0.8em;
                             line-height: 20px;
@@ -9192,7 +9192,7 @@
 
                                 a.Morebutton {
                                     font-size: 0.75em;
-      
+
                                     &:hover {
 
                                         letter-spacing: 0.05em;
@@ -9204,15 +9204,15 @@
                     }
                 }
             }
-            
+
             #topdownload_section_ctner{
                 padding:0;
                 height:auto;
-                
+
 
                 ul#topdownload_section {
 
-                    
+
                     margin: 0.25em;
 
                     h1 {
@@ -9229,7 +9229,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    
+
                                     vertical-align: unset;
                                 }
                             }
@@ -9351,7 +9351,7 @@
     }
 
     #container {
-        
+
         h1 {
 
             width: 100%;
@@ -9443,7 +9443,7 @@
             }
         }
 
-        
+
         /*--- Content ---*/
         #clashvibes_content {
             padding: 0;
@@ -9735,7 +9735,7 @@
                     //controls -audio/video
                     div#audio_controls,
                     div#videocontrols {
-                        
+
                         width: 97%;
 
                         #btns_box{
@@ -9743,7 +9743,7 @@
                             margin-bottom:0.5em;
                             button.player-button {
                                 width: 33.3%;
-           
+
                                 &:hover{
 
                                     line-height: 53px;
@@ -9758,7 +9758,7 @@
                                     &:hover {
 
                                         color: $color;
-                                        
+
                                     }
                                 }
                             }
@@ -9801,7 +9801,7 @@
                             label{
                                 width:20%;
 
-                                
+
                             }
                             input[type="range"]{
                                 height: 32px;
@@ -9815,15 +9815,15 @@
                             label{
 
                                 font-size:0.9em;
-                               
+
                             }
                             input[type="range"]{
 
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
                     //video
@@ -9918,7 +9918,7 @@
 
                         p{
                             width:100%;
-                            
+
 
                         }
                     }
@@ -10101,7 +10101,7 @@
 
                                 a.Morebutton {
                                     font-size: 0.75em;
-      
+
                                     &:hover {
 
                                         letter-spacing: 0.05em;
@@ -10113,15 +10113,15 @@
                     }
                 }
             }
-            
+
             #topdownload_section_ctner{
                 padding:0;
                 height:auto;
-                
+
 
                 ul#topdownload_section {
 
-                   
+
                     margin: 0.25em;
 
                     h1 {
@@ -10138,7 +10138,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    
+
                                     vertical-align: unset;
                                 }
                             }
@@ -10241,9 +10241,9 @@
 
 @media only screen and (max-width: 360px) {
 
-    
+
     button.menu-toggle{
-        
+
         width: 45px;
         &:hover{
             background-color:$color7;
@@ -10265,10 +10265,10 @@
     .hide {
         left: 200vw;
     }
-    
+
 
     #container {
-        
+
         h1 {
 
             width: 100%;
@@ -10361,7 +10361,7 @@
             }
         }
 
-        
+
         /*--- Content ---*/
         #clashvibes_content {
             padding: 0;
@@ -10510,7 +10510,7 @@
 
                         }
                         span {
-                            
+
 
                         }
                     }
@@ -10655,7 +10655,7 @@
                     //controls -audio/video
                     div#audio_controls,
                     div#videocontrols {
-                        
+
                         width: 97%;
 
                         #btns_box{
@@ -10663,7 +10663,7 @@
                             margin-bottom:0.5em;
                             button.player-button {
                                 width: 33.3%;
-           
+
                                 &:hover{
 
                                     line-height: 53px;
@@ -10678,7 +10678,7 @@
                                     &:hover {
 
                                         color: $color;
-                                        
+
                                     }
                                 }
                             }
@@ -10721,7 +10721,7 @@
                             label{
                                 width:20%;
 
-                                
+
                             }
                             input[type="range"]{
                                 height: 32px;
@@ -10735,15 +10735,15 @@
                             label{
 
                                 font-size:0.8em;
-                               
+
                             }
                             input[type="range"]{
 
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
                     //video
@@ -10826,7 +10826,7 @@
 
                     ul.post-meta {
                         letter-spacing: 0.05em;
-                        
+
                         li {
                             font-size: 0.7em;
 
@@ -10998,7 +10998,7 @@
                     width: 100%;
                     .new_released_box {
                         width: 68%;
-                        
+
                         h1 {
                             font-size: 0.9em;
 
@@ -11029,7 +11029,7 @@
 
                                 a.Morebutton {
                                     font-size: 0.75em;
-      
+
                                     &:hover {
 
                                         letter-spacing: 0.05em;
@@ -11041,18 +11041,18 @@
                     }
                 }
             }
-            
+
             #topdownload_section_ctner{
                 padding:0;
                 height:auto;
-                
+
 
                 ul#topdownload_section {
 
-                  
+
                     padding: 0.2em;
-                   
-                    
+
+
 
                     h1 {
                         font-size: 0.9em;
@@ -11068,7 +11068,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    
+
                                     vertical-align: unset;
                                 }
                             }
@@ -11190,7 +11190,7 @@
     }
 
     #container {
-        
+
         h1 {
 
             width: 100%;
@@ -11282,7 +11282,7 @@
             }
         }
 
-        
+
         /*--- Content ---*/
         #clashvibes_content {
             padding: 0;
@@ -11431,7 +11431,7 @@
 
                         }
                         span {
-                            
+
 
                         }
                     }
@@ -11539,7 +11539,7 @@
                     width: 90%;
                     padding: 0;
                 }
-      
+
 
                 a.post-thumbnail{
                     width: 55%;
@@ -11573,7 +11573,7 @@
                     //controls -audio/video
                     div#audio_controls,
                     div#videocontrols {
-                        
+
                         width: 97%;
 
                         #btns_box{
@@ -11581,7 +11581,7 @@
                             margin-bottom:0.5em;
                             button.player-button {
                                 width: 33.3%;
-           
+
                                 &:hover{
 
                                     line-height: 53px;
@@ -11596,7 +11596,7 @@
                                     &:hover {
 
                                         color: $color;
-                                        
+
                                     }
                                 }
                             }
@@ -11639,7 +11639,7 @@
                             label{
                                 width:20%;
 
-                                
+
                             }
                             input[type="range"]{
                                 height: 32px;
@@ -11653,15 +11653,15 @@
                             label{
 
                                 font-size:0.9em;
-                               
+
                             }
                             input[type="range"]{
 
                                 height: 32px;
-                                
+
                             }
                         }
-                       
+
                     }
 
                     //video
@@ -11933,7 +11933,7 @@
 
                                 a.Morebutton {
                                     font-size: 0.75em;
-      
+
                                     &:hover {
 
                                         letter-spacing: 0.05em;
@@ -11945,14 +11945,14 @@
                     }
                 }
             }
-            
+
             #topdownload_section_ctner{
                 padding:0;
                 height:auto;
-                
+
 
                 ul#topdownload_section {
-                   
+
                     margin: 0.2em;
 
                     h1 {
@@ -11969,7 +11969,7 @@
                             a{
                                 background-color: $color2;
                                 img{
-                                    
+
                                     vertical-align: unset;
                                 }
                             }

@@ -62,7 +62,8 @@ if ( have_posts() ) :
 
 			<video id="video_player" >
 
-				<!--/wp-content/uploads/sites/7/2019/03/-->
+        <!--/wp-content/uploads/sites/7/2019/03/-->
+        <!--LIVE URL - /wp-content/uploads/sites/2/2019/08/-->
 
 				<?php  $urlmp4 = get_site_url(); ?>
 

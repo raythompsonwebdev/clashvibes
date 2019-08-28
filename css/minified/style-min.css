@@ -162,7 +162,7 @@ img {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  font-family: "Titillium Web", arial, verdana, helvetica, sans-serif;
   font-size: 1em;
   color: #000000;
   background-color: #d3a401; }
@@ -176,14 +176,14 @@ h4 {
   color: #ffffff;
   clear: both;
   width: 100%;
-  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif; }
+  font-family: "Titillium Web", arial, verdana, helvetica, sans-serif; }
 
 a {
   color: #ffffff;
   text-decoration: none;
   font-size: 1em;
   display: block;
-  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif; }
+  font-family: "Titillium Web", arial, verdana, helvetica, sans-serif; }
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -269,7 +269,7 @@ a {
     margin-left: auto;
     width: 86%;
     height: auto;
-    font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+    font-family: "Titillium Web", arial, verdana, helvetica, sans-serif;
     padding: 0.5em;
     background-color: #ffffff;
     -webkit-box-sizing: border-box;
@@ -362,7 +362,7 @@ a {
               z-index: 100000;
               /* Above WP toolbar. */ }
           #container header .site-logo a div.site-firstletter {
-            font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+            font-family: "Titillium Web", arial, verdana, helvetica, sans-serif;
             font-size: 4em;
             font-weight: normal;
             text-align: center;
@@ -471,7 +471,7 @@ a {
             line-height: 40px;
             text-align: center;
             text-decoration: none;
-            font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+            font-family: "Titillium Web", arial, verdana, helvetica, sans-serif;
             color: #ffffff;
             display: block;
             letter-spacing: 0em;
@@ -505,7 +505,7 @@ a {
         clear: both;
         margin: 0;
         padding: 0;
-        font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+        font-family: "Titillium Web", arial, verdana, helvetica, sans-serif;
         background-color: #000000;
         letter-spacing: 0.05em;
         line-height: 45px; }
@@ -1108,7 +1108,7 @@ a {
         width: 96%;
         margin: 0 auto; }
         #container #clashvibes_left_column .blog_box p {
-          font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+          font-family: "Titillium Web", arial, verdana, helvetica, sans-serif;
           margin-left: 5px; }
         #container #clashvibes_left_column .blog_box h3 a {
           font-size: 1em;
@@ -5205,7 +5205,6 @@ a {
       #container header .site-logo {
         width: 7%; }
         #container header .site-logo a {
-          height: 75%;
           /* Text meant only for screen readers. */ }
           #container header .site-logo a div.screen-reader-text:focus {
             font-size: 14px;
@@ -5262,7 +5261,7 @@ a {
         margin: 0 0 0.5em 0; }
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
           width: 24.115%;
-          min-height: 240px; }
+          min-height: 275px; }
           #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h1 {
             font-size: 0.75em;
             line-height: 20px; }
@@ -6310,7 +6309,7 @@ a {
         margin-bottom: 0.5em; }
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
           width: 32.1%;
-          min-height: 240px; }
+          min-height: 300px; }
           #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h1 {
             font-size: 0.75em; }
           #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box a {
@@ -7437,8 +7436,7 @@ a {
     #container #clashvibes_content_front #clashvibes_right_column_front h1 {
       font-size: 1em; }
     #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
-      width: 23.925%;
-      min-height: 240px; }
+      width: 23.925%; }
       #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h1 {
         font-size: 0.75em; }
       #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box a {
@@ -7454,12 +7452,9 @@ a {
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption,
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption {
           margin: 0 auto; }
-          #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
-          #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-            font-size: 0.8em; }
-            #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
-            #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
-              letter-spacing: 0.05em; }
+          #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
+          #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
+            letter-spacing: 0.05em; }
     #container #clashvibes_content_front #clashvibes_banner {
       width: 99%; }
       #container #clashvibes_content_front #clashvibes_banner h2 {
@@ -7474,8 +7469,7 @@ a {
     #container #clashvibes_content_front #clashvibes_right_column_front h1 {
       font-size: 1em; }
     #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
-      width: 23.925%;
-      min-height: 240px; }
+      width: 23.925%; }
       #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h1 {
         font-size: 0.75em; }
       #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box a {
@@ -7491,12 +7485,9 @@ a {
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption,
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption {
           margin: 0 auto; }
-          #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
-          #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-            font-size: 0.8em; }
-            #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
-            #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
-              letter-spacing: 0.05em; }
+          #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
+          #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
+            letter-spacing: 0.05em; }
     #container #clashvibes_content_front #clashvibes_banner {
       width: 99%; }
       #container #clashvibes_content_front #clashvibes_banner #slider {
@@ -8461,8 +8452,7 @@ a {
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section {
           width: 100%; }
           #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
-            width: 32%;
-            min-height: 260px; }
+            width: 32%; }
             #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h1 {
               font-size: 0.8em;
               width: auto; }
@@ -8480,12 +8470,9 @@ a {
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption,
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption {
                 margin: 0 auto; }
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-                  font-size: 0.8em; }
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
-                    letter-spacing: 0.05em; }
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
+                  letter-spacing: 0.05em; }
       #container #clashvibes_content_front #clashvibes_banner {
         width: 99%; }
         #container #clashvibes_content_front #clashvibes_banner #slider {
@@ -8583,7 +8570,7 @@ a {
     #container .hide-side {
       left: 50vw; }
     #container header {
-      height: 65px; }
+      height: 70px; }
       #container header .site-logo {
         width: 10%; }
         #container header .site-logo a {
@@ -8597,7 +8584,9 @@ a {
       #container header #clashvibes_title {
         width: 85%; }
         #container header #clashvibes_title h1 {
-          font-size: 2em; }
+          font-size: 2em;
+          line-height: 35px;
+          height: 35px; }
         #container header #clashvibes_title h2.site-description {
           font-size: 0.65em; }
     #container nav {
@@ -8641,8 +8630,7 @@ a {
       #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section {
         width: 100%; }
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
-          width: 32%;
-          min-height: 260px; }
+          width: 32%; }
           #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h1 {
             font-size: 0.8em;
             width: auto; }
@@ -8662,7 +8650,7 @@ a {
               margin: 0 auto; }
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-                font-size: 0.8em; }
+                font-size: 0.9em; }
                 #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
                 #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
                   letter-spacing: 0.05em; }
@@ -9578,8 +9566,7 @@ a {
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section {
           width: 100%; }
           #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
-            width: 32%;
-            min-height: 260px; }
+            width: 32%; }
             #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h1 {
               font-size: 0.8em;
               width: auto; }
@@ -9597,12 +9584,9 @@ a {
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption,
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption {
                 margin: 0 auto; }
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-                  font-size: 0.8em; }
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
-                    letter-spacing: 0.05em; }
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
+                  letter-spacing: 0.05em; }
       #container #clashvibes_content_front #topdownload_section_ctner {
         padding: 0.5em;
         height: auto; }
@@ -9660,8 +9644,7 @@ a {
     left: calc(70% - 1vw); }
     #tog-menu button.menu-toggle,
     #tog-menu button.sidebar-toggle {
-      line-height: 60px;
-      font-size: 0.8em; }
+      line-height: 60px; }
       #tog-menu button.menu-toggle:hover,
       #tog-menu button.sidebar-toggle:hover {
         text-align: center; }
@@ -9687,7 +9670,7 @@ a {
         #container h1 a:hover {
           text-decoration: none; }
     #container header {
-      height: 65px; }
+      height: 70px; }
       #container header .site-logo {
         width: 11%; }
         #container header .site-logo a {
@@ -9735,8 +9718,7 @@ a {
       #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section {
         width: 100%; }
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
-          width: 32%;
-          min-height: 260px; }
+          width: 32%; }
           #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h1 {
             font-size: 0.8em;
             width: auto; }
@@ -9754,12 +9736,9 @@ a {
             #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption,
             #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption {
               margin: 0 auto; }
-              #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
-              #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-                font-size: 0.8em; }
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
-                  letter-spacing: 0.05em; }
+              #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
+              #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
+                letter-spacing: 0.05em; }
     #container #clashvibes_content_front #clashvibes_banner {
       width: 99%; }
       #container #clashvibes_content_front #clashvibes_banner #slider {
@@ -10648,8 +10627,7 @@ a {
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section {
           width: 100%; }
           #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
-            width: 48%;
-            min-height: 270px; }
+            width: 48%; }
             #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h1 {
               font-size: 0.8em;
               width: auto; }
@@ -10667,12 +10645,9 @@ a {
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption,
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption {
                 margin: 0 auto; }
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-                  font-size: 0.8em; }
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
-                    letter-spacing: 0.05em; }
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
+                  letter-spacing: 0.05em; }
       #container #clashvibes_content_front #topdownload_section_ctner {
         padding: 0.5em;
         height: auto; }
@@ -10736,8 +10711,7 @@ a {
     left: calc(69% - 1vw); }
     #tog-menu button.menu-toggle,
     #tog-menu button.sidebar-toggle {
-      line-height: 60px;
-      font-size: 0.75em; }
+      line-height: 60px; }
       #tog-menu button.menu-toggle:hover,
       #tog-menu button.sidebar-toggle:hover {
         text-align: center; }
@@ -10764,7 +10738,7 @@ a {
         #container h1 a:hover {
           text-decoration: none; }
     #container header {
-      height: 60px; }
+      height: 65px; }
       #container header .site-logo {
         width: 12%; }
         #container header .site-logo a {
@@ -10815,7 +10789,7 @@ a {
         width: 100%; }
         #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
           width: 32%;
-          min-height: 260px; }
+          min-height: 270px; }
           #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h1 {
             font-size: 0.8em;
             width: auto; }
@@ -10835,7 +10809,7 @@ a {
               margin: 0 auto; }
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-                font-size: 0.8em; }
+                font-size: 0.9em; }
                 #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
                 #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
                   letter-spacing: 0.05em; }
@@ -11747,12 +11721,9 @@ a {
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption,
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption {
                 margin: 0 auto; }
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-                  font-size: 0.75em; }
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
-                    letter-spacing: 0.05em; }
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
+                  letter-spacing: 0.05em; }
       #container #clashvibes_content_front #topdownload_section_ctner {
         padding: 0;
         height: auto; }
@@ -11805,8 +11776,7 @@ a {
     left: calc(67% - 1vw); }
     #tog-menu button.menu-toggle,
     #tog-menu button.sidebar-toggle {
-      line-height: 60px;
-      font-size: 0.7em; }
+      line-height: 60px; }
       #tog-menu button.menu-toggle:hover,
       #tog-menu button.sidebar-toggle:hover {
         text-align: center; }
@@ -12797,12 +12767,9 @@ a {
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption,
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption {
                 margin: 0 auto; }
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-                  font-size: 0.75em; }
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
-                    letter-spacing: 0.05em; }
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
+                  letter-spacing: 0.05em; }
       #container #clashvibes_content_front #topdownload_section_ctner {
         padding: 0;
         height: auto; }
@@ -13811,7 +13778,8 @@ a {
           align-items: center;
           width: 100%; }
           #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box {
-            width: 68%; }
+            width: 68%;
+            min-height: 300px; }
             #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box h1 {
               font-size: 0.9em; }
             #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box a {
@@ -13829,12 +13797,9 @@ a {
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption,
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption {
                 margin: 0 auto; }
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-                  font-size: 0.75em; }
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
-                    letter-spacing: 0.05em; }
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
+                  letter-spacing: 0.05em; }
       #container #clashvibes_content_front #topdownload_section_ctner {
         padding: 0;
         height: auto; }
@@ -14850,12 +14815,9 @@ a {
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption,
               #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption {
                 margin: 0 auto; }
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton,
-                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton {
-                  font-size: 0.75em; }
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
-                  #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
-                    letter-spacing: 0.05em; }
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbaud figcaption a.Morebutton:hover,
+                #container #clashvibes_content_front #clashvibes_right_column_front #new_released_section .new_released_box figure.thumbvid figcaption a.Morebutton:hover {
+                  letter-spacing: 0.05em; }
       #container #clashvibes_content_front #topdownload_section_ctner {
         padding: 0;
         height: auto; }

@@ -4827,7 +4827,6 @@ License: GNU General Public License v2 or later
 
 				a {
 
-					height: 75%;
 
 					/* Text meant only for screen readers. */
 					div.screen-reader-text {
@@ -4974,7 +4973,7 @@ License: GNU General Public License v2 or later
 
 					.new_released_box {
 						width: 24.115%;
-						min-height: 240px;
+						min-height: 275px;
 
 
 						h1 {
@@ -6024,7 +6023,7 @@ License: GNU General Public License v2 or later
 
 					.new_released_box {
 						width: 32.1%;
-						min-height: 240px;
+						min-height: 300px;
 
 						h1 {
 							font-size: 0.75em;
@@ -7121,7 +7120,7 @@ License: GNU General Public License v2 or later
 
 					.new_released_box {
 						width: 23.925%;
-						min-height: 240px;
+
 
 						h1 {
 							font-size: 0.75em;
@@ -7151,7 +7150,6 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.8em;
 
 									&:hover {
 
@@ -7213,7 +7211,7 @@ License: GNU General Public License v2 or later
 
 					.new_released_box {
 						width: 23.925%;
-						min-height: 240px;
+
 
 						h1 {
 							font-size: 0.75em;
@@ -7243,7 +7241,6 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.8em;
 
 									&:hover {
 
@@ -7990,7 +7987,7 @@ License: GNU General Public License v2 or later
 
 					.new_released_box {
 						width: 32%;
-						min-height: 260px;
+
 
 						h1 {
 							font-size: 0.8em;
@@ -8020,7 +8017,6 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.8em;
 
 									&:hover {
 
@@ -8243,7 +8239,7 @@ License: GNU General Public License v2 or later
 
 		/********** header **********/
 		header {
-			height: 65px;
+			height: 70px;
 			.site-logo {
 
 				width: 10%;
@@ -8281,7 +8277,9 @@ License: GNU General Public License v2 or later
 
 				h1 {
 
-					font-size: 2em;
+          font-size: 2em;
+          line-height:35px;
+          height:35px;
 
 				}
 
@@ -8386,7 +8384,7 @@ License: GNU General Public License v2 or later
 
 					.new_released_box {
 						width: 32%;
-						min-height: 260px;
+
 
 						h1 {
 							font-size: 0.8em;
@@ -8416,7 +8414,7 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.8em;
+									font-size: 0.9em;
 
 									&:hover {
 
@@ -9127,7 +9125,7 @@ License: GNU General Public License v2 or later
 
 					.new_released_box {
 						width: 32%;
-						min-height: 260px;
+
 
 						h1 {
 							font-size: 0.8em;
@@ -9157,7 +9155,7 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.8em;
+
 
 									&:hover {
 
@@ -9309,7 +9307,6 @@ License: GNU General Public License v2 or later
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
-			font-size: 0.8em;
 
 			&:hover {
 
@@ -9348,7 +9345,7 @@ License: GNU General Public License v2 or later
 
 		/********** header **********/
 		header {
-			height: 65px;
+			height: 70px;
 
 			.site-logo {
 
@@ -9486,7 +9483,7 @@ License: GNU General Public License v2 or later
 
 					.new_released_box {
 						width: 32%;
-						min-height: 260px;
+
 
 						h1 {
 							font-size: 0.8em;
@@ -9516,7 +9513,6 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.8em;
 
 									&:hover {
 
@@ -10231,7 +10227,7 @@ License: GNU General Public License v2 or later
 
 					.new_released_box {
 						width: 48%;
-						min-height: 270px;
+
 
 						h1 {
 							font-size: 0.8em;
@@ -10261,7 +10257,6 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.8em;
 
 									&:hover {
 
@@ -10413,7 +10408,6 @@ License: GNU General Public License v2 or later
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
-			font-size: 0.75em;
 
 			&:hover {
 
@@ -10452,7 +10446,7 @@ License: GNU General Public License v2 or later
 
 		/********** header **********/
 		header {
-			height: 60px;
+			height: 65px;
 
 			.site-logo {
 
@@ -10592,7 +10586,7 @@ License: GNU General Public License v2 or later
 
 					.new_released_box {
 						width: 32%;
-						min-height: 260px;
+						min-height: 270px;
 
 						h1 {
 							font-size: 0.8em;
@@ -10622,8 +10616,7 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.8em;
-
+									font-size:0.9em;
 									&:hover {
 
 										letter-spacing: 0.05em;
@@ -11385,7 +11378,6 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.75em;
 
 									&:hover {
 
@@ -11533,7 +11525,6 @@ License: GNU General Public License v2 or later
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
-			font-size: 0.7em;
 
 			&:hover {
 
@@ -12400,7 +12391,6 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.75em;
 
 									&:hover {
 
@@ -13372,7 +13362,7 @@ License: GNU General Public License v2 or later
 
 					.new_released_box {
 						width: 68%;
-
+            min-height: 300px;
 						h1 {
 							font-size: 0.9em;
 
@@ -13402,7 +13392,6 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.75em;
 
 									&:hover {
 
@@ -14379,7 +14368,6 @@ License: GNU General Public License v2 or later
 								margin: 0 auto;
 
 								a.Morebutton {
-									font-size: 0.75em;
 
 									&:hover {
 

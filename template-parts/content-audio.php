@@ -57,7 +57,7 @@
 
 			<audio id="result_player" >
 
-        <!-- live /wp-content/uploads/sites/7/2019/03/-->
+        <!-- LIVE /wp-content/uploads/sites/7/2019/03/-->
         <!--laptop - /wp-content/uploads/sites/3/2018/11/-->
 
 

@@ -1,18 +1,19 @@
 module.exports = function(grunt) {
-
-  const sass = require('node-sass');
+  const sass = require("node-sass");
 
   require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
 
+    /*
     eslint: {
       options: {
         configFile: ".eslintrc.js"
       },
       target: ["js/**.js"]
     },
+    */
 
     /**
      * Concat
@@ -59,7 +60,6 @@ module.exports = function(grunt) {
         sourceMap: true
       },
       dev: {
-
         files: {
           "style.css": "css/style.scss",
           "ie.css": "css/ie.scss"
@@ -68,7 +68,6 @@ module.exports = function(grunt) {
       },
 
       dist: {
-
         files: {
           "css/minified/style-min.css": "css/style.scss",
           "css/minified/ie-min.css": "css/ie.scss"
@@ -89,15 +88,7 @@ module.exports = function(grunt) {
     }
   });
 
-
-
-  grunt.registerTask("default", [
-    "watch",
-    "concat",
-    "uglify",
-    "sass",
-    "eslint"
-  ]);
+  grunt.registerTask("default", ["watch", "concat", "uglify", "sass"]);
 };
 
 /* add bag (!) to wordpress css theme top-title so that it shows on minified file*/

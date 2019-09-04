@@ -1,0 +1,43 @@
+[embed]https://www.youtube.com/watch?v=Z3hRWLPKR_E&amp;t=463s[/embed] - David Rodigan v Killamanjaro 1997 US Part One
+
+[embed]https://www.youtube.com/watch?v=p2aHzfbqulM&amp;t=227s[/embed] - David Rodigan v StoneLove 1999 Part One
+
+[embed]https://www.youtube.com/watch?v=YaV5sDjlXq8[/embed] - Global Clash 1999 Part One
+
+[embed]https://www.youtube.com/watch?v=pGOp7JiwJ50[/embed] - David Rodigan v StoneLove 1999 Part Two
+
+[embed]https://www.youtube.com/watch?v=OGA09mrSyYw&amp;t=4s[/embed] - Global Clash 1999 Part Two
+
+
+
+
+
+<!--audio id="result_player" >-->
+
+    <!--/wp-content/uploads/sites/7/2019/03/-->
+            
+    <!--<source src="<?php echo esc_url( $urlmp3);?>/wp-content/uploads/sites/2/2019/04/<?php echo esc_html( $meta );?>.mp3" preload="metadata" type='audio/mpeg'  />
+
+    <?php $urlogg = get_site_url();?>
+
+    <source src="<?php echo esc_url( $urlogg );?>/wp-content/uploads/sites/2/2019/04/<?php echo esc_html( $meta );?>.ogg" preload="metadata" type='audio/ogg' />
+
+    <?php $urlma = get_site_url();?>
+
+    <source src="<?php echo esc_url( $urlma );?>/wp-content/uploads/sites/2/2019/04/<?php echo esc_html( $meta );?>.m4a" preload="metadata" type='audio/mp4' />
+
+    <p><?php esc_html_e( 'Your browser does not support HTML5 audio.', 'clashvibes' ); ?></p>
+
+</audio>-->
+
+<audio id="result_player" >
+			
+    <source src="<?php echo esc_url('https://clashbucket.s3.eu-west-2.amazonaws.com/Music/', null, 'display')?><?php echo esc_html( $meta );?>.mp3" preload="metadata" type='audio/mpeg'  />
+    
+    <source src="<?php echo esc_url('https://clashbucket.s3.eu-west-2.amazonaws.com/Music/', null, 'display')?><?php echo esc_html( $meta );?>.ogg" preload="metadata" type='audio/ogg' />
+    
+    <source src="<?php echo esc_url('https://clashbucket.s3.eu-west-2.amazonaws.com/Music/', null, 'display')?><?php echo esc_html( $meta );?>.m4a" preload="metadata" type='audio/mp4' />
+
+    <p><?php esc_html_e( 'Your browser does not support HTML5 audio.', 'clashvibes' ); ?></p>
+
+</audio>

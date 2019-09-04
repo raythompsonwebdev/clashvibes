@@ -2,9 +2,7 @@
 /**
  * *PHP version 7
  * 
- * Template Name: clashaudio
- *
- * Archive Clash Audio | core/page-clashaudio.php.
+ * Archive Clash Audio | core/page-clash-audio.php.
  *
  * @category   Clash_Audio
  * @package    Clashvibes

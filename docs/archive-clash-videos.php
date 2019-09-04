@@ -2,13 +2,11 @@
 /**
  * *PHP version 7
  * 
- * Template Name: clashaudio
+ * Archive Clash Audio | core/page-clash-videos.php.
  *
- * Archive Clash Audio | core/page-clashaudio.php.
- *
- * @category   Clash_Audio
+ * @category   Archive_Clash_Videos
  * @package    Clashvibes
- * @subpackage Clash_Audio
+ * @subpackage Archive_Clash_Videos
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
@@ -23,33 +21,31 @@
 
 	<section id="clashvibes_right_column_front">
 
+
 		<?php
-					esc_html( the_title( '<h1 class="page-title">', '</h1>' ) );
+			the_title( '<h1 class="page-title">', '</h1>' );
 
 		?>
-		</h1>
 
 		<section id="new_released_section">
 
-
 			<?php
 			
+				$the_query = null;
 
-			$the_query = null;
+				$args      = array(
 
-			$args      = array(
-
-				'post_type'  => 'clash-audio',
-				'post_count' => '5',
-			);
-			$the_query = new WP_Query( $args );
+					'post_type'  => 'clash-videos',
+					'post_count' => '20',
+				);
+				$the_query = new WP_Query( $args );
 			?>
 
 			<?php
-			if ( $the_query->have_posts() ) :
-				while ( $the_query->have_posts() ) :
-					$the_query->the_post();
-					?>
+				if ( $the_query->have_posts() ) :
+					while ( $the_query->have_posts() ) :
+						$the_query->the_post();
+						?>
 
 			<article class="new_released_box">
 
@@ -57,13 +53,12 @@
 					<?php the_title(); ?>
 				</h1>
 
-				<figure class="thumbaud">
+				<figure class="thumbvid">
 					<?php the_post_thumbnail(); ?>
-
 					<figcaption>
 
-						<a class="Morebutton" href="<?php echo esc_url( get_permalink() ); ?>" alt="">
-						<?php esc_html_e( 'Listen', 'clashvibes' ); ?></a>
+						<a class="Morebutton"
+							href="<?php echo esc_url( get_permalink() ); ?>"><?php esc_html_e( 'View', 'clashvibes' ); ?></a>
 
 
 					</figcaption>
@@ -72,10 +67,8 @@
 
 			</article>
 
-					<?php
-				endwhile;
-			else :
-				?>
+			<?php	endwhile; else : ?>
+
 			<article class="new_released_box">
 
 				<figure class="thumb">
@@ -83,34 +76,32 @@
 
 					<figcaption>
 
-						<p>
-							<?php esc_html_e( 'Sorry! No Audio clashes to display.', 'clashvibes' ); ?>
-						</p>
+						<p><?php esc_html_e( 'Sorry! No Video clashes to display.', 'clashvibes' ); ?></p>
+
 
 					</figcaption>
 
 				</figure>
 
 			</article>
+			<?php	endif; ?>
 
-				<?php
-				endif;
-
-			wp_reset_postdata();
-			?>
+			<?php wp_reset_postdata(); ?>
 
 			<div class="clearfix"></div>
+
 		</section>
+		<!--End of news release section-->
+
+		
 
 		<div class="clearfix"></div>
 
 		<!-- end of right panel -->
 
-
-
 	</section>
-</div>
 
+</div>
 
 
 <?php get_footer(); ?>

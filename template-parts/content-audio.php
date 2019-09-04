@@ -57,20 +57,21 @@
 
 			<audio id="result_player" >
 
-        <!-- LIVE /wp-content/uploads/sites/7/2019/03/-->
-        <!--laptop - /wp-content/uploads/sites/3/2018/11/-->
+        <!-- LIVE /wp-content/uploads/sites/2/2018/07/-->
+        <!--laptop - /wp-content/uploads/sites/3/2018/11/
+		ubuntu - /2/2019/04/-->
 
 
 
-				<source src="<?php echo esc_url( $urlmp3);?>/wp-content/uploads/sites/3/2018/11/<?php echo esc_html( $meta );?>.mp3" preload="metadata" type='audio/mpeg'  />
+				<source src="<?php echo esc_url( $urlmp3);?>/wp-content/uploads/sites/2/2019/04/<?php echo esc_html( $meta );?>.mp3" preload="metadata" type='audio/mpeg'  />
 
 				<?php $urlogg = get_site_url();?>
 
-				<source src="<?php echo esc_url( $urlogg );?>/wp-content/uploads/sites/3/2018/11/<?php echo esc_html( $meta );?>.ogg" preload="metadata" type='audio/ogg' />
+				<source src="<?php echo esc_url( $urlogg );?>/wp-content/uploads/sites/2/2019/04/<?php echo esc_html( $meta );?>.ogg" preload="metadata" type='audio/ogg' />
 
 				<?php $urlma = get_site_url();?>
 
-				<source src="<?php echo esc_url( $urlma );?>/wp-content/uploads/sites/3/2018/11/<?php echo esc_html( $meta );?>.m4a" preload="metadata" type='audio/mp4' />
+				<source src="<?php echo esc_url( $urlma );?>/wp-content/uploads/sites/2/2019/04/<?php echo esc_html( $meta );?>.m4a" preload="metadata" type='audio/mp4' />
 
 				<p><?php esc_html_e( 'Your browser does not support HTML5 audio.', 'clashvibes' ); ?></p>
 

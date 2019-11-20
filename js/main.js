@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
 
     // create menu variables
     var slideoutMenu = $("nav");
-    var slideoutMenuWidth = $("nav").width();
+    var slideoutMenuHeight = $("nav").height();
 
     // toggle open class
     slideoutMenu.toggleClass("open");
@@ -35,15 +35,16 @@ jQuery(document).ready(function($) {
     // slide menu
     if (slideoutMenu.hasClass("open")) {
       slideoutMenu.animate({
-        left: "0px"
+        top: "0px"
       });
     } else {
       slideoutMenu.animate(
         {
-          left: -slideoutMenuWidth + 1
+          top: -slideoutMenuHeight 
         },
         450
       );
+      
     }
   });
 

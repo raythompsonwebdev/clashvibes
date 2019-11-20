@@ -1000,7 +1000,7 @@ License: GNU General Public License v2 or later
 						input.search-field {
 							width: 100%;
 							display: block;
-							margin: 0;
+							margin: 0 auto;
 							height:35px;
 							font-size: 1.1em;
 
@@ -4911,7 +4911,7 @@ License: GNU General Public License v2 or later
 
 		/*--- Content ---*/
 		#clashvibes_content {
-			min-height: 410px;
+			min-height: 1000px;
 		}
 
 		/********** front page **********/
@@ -5926,7 +5926,7 @@ License: GNU General Public License v2 or later
 
 		/*--- Content ---*/
 		#clashvibes_content {
-			min-height: 415px;
+			min-height: 1150px;
 		}
 
 		/********** front page **********/
@@ -7025,11 +7025,11 @@ License: GNU General Public License v2 or later
 		/********** navigation **********/
 		nav {
 			position: fixed;
-			top: 4.5em;
+			top: 0;
 			z-index: 3;
-			height: auto;
-			width: 250px;
-			left: -250px;
+			height: 350px;
+			width: 100%;
+			top: -350px;
 
 			ul {
 				list-style: none;
@@ -7274,7 +7274,7 @@ License: GNU General Public License v2 or later
 		/*--- Content ---*/
 		#clashvibes_content {
 			padding: 0;
-			min-height: 415px;
+			min-height: 1250px;
 		}
 
 		/*--- Left Column---*/
@@ -7740,7 +7740,7 @@ License: GNU General Public License v2 or later
 						letter-spacing: 0.05em;
 
 						li {
-							font-size: 0.8em;
+							font-size: 0.9em;
 
 							span.post-meta-key {
 
@@ -8182,8 +8182,8 @@ License: GNU General Public License v2 or later
 
 
 	#tog-menu{
-		width: 26%;
-		left: calc(72% - 1vw);
+		width: 30%;
+    	left: calc(68% - 1vw);
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
@@ -8295,11 +8295,7 @@ License: GNU General Public License v2 or later
 		/********** navigation **********/
 		nav {
 			position: fixed;
-			top: 4.5em;
-			z-index: 3;
-			height: auto;
-			width: 250px;
-			left: -250px;
+			
 
 			ul {
 				list-style: none;
@@ -8448,7 +8444,7 @@ License: GNU General Public License v2 or later
 		/*--- Content ---*/
 		#clashvibes_content {
 			padding: 0;
-			min-height: 415px;
+			min-height: 1150px;
 		}
 
 		/*--- Left Column---*/
@@ -8911,7 +8907,7 @@ License: GNU General Public License v2 or later
 						letter-spacing: 0.05em;
 
 						li {
-							font-size: 0.8em;
+							font-size: 0.9em;
 
 							span.post-meta-key {
 
@@ -9302,8 +9298,8 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 536px) {
 
 	#tog-menu{
-		width: 28%;
-		left: calc(70% - 1vw);
+		width: 30%;
+    	left: calc(67% - 1vw);
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
@@ -9399,8 +9395,7 @@ License: GNU General Public License v2 or later
 
 		/********** navigation **********/
 		nav {
-			width: 250px;
-			left: -250px;
+			
 
 			ul {
 
@@ -9408,14 +9403,14 @@ License: GNU General Public License v2 or later
 
 				li {
 					margin-right: 0;
-					height: 50px;
+					height: 40px;
 
 					a {
 						font-size: 0.9em;
-
+						line-height: 40px;
 						&:hover {
 
-							line-height: 50px;
+							line-height: 40px;
 						}
 					}
 
@@ -9550,8 +9545,7 @@ License: GNU General Public License v2 or later
 
 		/*--- Left Column---*/
 		#clashvibes_left_column {
-			width: 250px;
-			left: -250px;
+			
 			top: 4.5em;
 
 			h1 {
@@ -9984,7 +9978,7 @@ License: GNU General Public License v2 or later
 						letter-spacing: 0.05em;
 
 						li {
-							font-size: 0.75em;
+							font-size: 0.9em;
 
 							span.post-meta-key {
 								text-indent: 0.25em;
@@ -10403,8 +10397,8 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 480px) {
 
 	#tog-menu{
-		width: 30%;
-		left: calc(69% - 1vw);
+		width: 35%;
+    	left: calc(64% - 1vw);
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
@@ -10500,10 +10494,7 @@ License: GNU General Public License v2 or later
 
 		/********** navigation **********/
 		nav {
-			width: 250px;
-			left: -250px;
-			top: 4em;
-
+			
 
 			ul {
 
@@ -10511,14 +10502,14 @@ License: GNU General Public License v2 or later
 
 				li {
 					margin-right: 0;
-					height: 50px;
+					
 
 					a {
 						font-size: 0.9em;
 
 						&:hover {
 
-							line-height: 50px;
+							line-height: 40px;
 						}
 					}
 
@@ -10647,6 +10638,7 @@ License: GNU General Public License v2 or later
 		/*--- Content ---*/
 		#clashvibes_content {
 			padding: 0;
+			min-height: 1300px;
 
 		}
 
@@ -11097,7 +11089,7 @@ License: GNU General Public License v2 or later
 						height: auto;
 
 						li {
-							font-size: 0.75em;
+							font-size: 0.85em;
 							height: auto;
 
 							span.post-meta-key {
@@ -11520,8 +11512,8 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 414px) {
 
 	#tog-menu{
-		width: 32%;
-		left: calc(67% - 1vw);
+		width: 35%;
+    	left: calc(64% - 1vw);
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
@@ -11583,9 +11575,7 @@ License: GNU General Public License v2 or later
 
 		/********** navigation **********/
 		nav {
-			width: 250px;
-			left: -250px;
-
+			
 
 			ul {
 
@@ -11593,14 +11583,13 @@ License: GNU General Public License v2 or later
 
 				li {
 					margin-right: 0;
-					height: 50px;
-
+					
 					a {
 						font-size: 0.9em;
 
 						&:hover {
 
-							line-height: 50px;
+							line-height: 40px;
 						}
 					}
 
@@ -11875,6 +11864,8 @@ License: GNU General Public License v2 or later
 						span.posted-on,
 						span.byline {
 							font-size: 0.65em;
+							height: auto;
+    						line-height: 25px;
 							a {
 								width: auto;
 
@@ -12537,8 +12528,8 @@ License: GNU General Public License v2 or later
 
 
 	#tog-menu{
-		width: 35%;
-		left: calc(64% - 1vw);
+		width: 40%;
+    	left: calc(59% - 1vw);
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
@@ -12607,10 +12598,7 @@ License: GNU General Public License v2 or later
 
 		/********** navigation **********/
 		nav {
-			width: 250px;
-			left: -250px;
-			top: 4.4em;
-
+			
 
 			ul {
 
@@ -12618,14 +12606,14 @@ License: GNU General Public License v2 or later
 
 				li {
 					margin-right: 0;
-					height: 50px;
+					
 
 					a {
 						font-size: 0.9em;
 
 						&:hover {
 
-							line-height: 50px;
+							line-height: 40px;
 						}
 					}
 
@@ -12658,7 +12646,7 @@ License: GNU General Public License v2 or later
 		/*--- Content ---*/
 		#clashvibes_content {
 			padding: 0;
-			min-height: 625px;
+			
 
 		}
 
@@ -13106,7 +13094,7 @@ License: GNU General Public License v2 or later
 						letter-spacing: 0.05em;
 
 						li {
-							font-size: 0.7em;
+							font-size: 0.8em;
 
 							span.post-meta-key {
 								width: 100%;
@@ -13599,24 +13587,21 @@ License: GNU General Public License v2 or later
 
 		/********** navigation **********/
 		nav {
-			width: 250px;
-			left: -250px;
-
-
+			
 			ul {
 
 				list-style: none;
 
 				li {
 					margin-right: 0;
-					height: 50px;
+					
 
 					a {
 						font-size: 0.9em;
 
 						&:hover {
 
-							line-height: 50px;
+							line-height: 40px;
 						}
 					}
 
@@ -13688,14 +13673,13 @@ License: GNU General Public License v2 or later
 		/*--- Content ---*/
 		#clashvibes_content {
 			padding: 0;
-			min-height: 625px;
+			
 
 		}
 
 		/*--- Left Column---*/
 		#clashvibes_left_column {
-			width: 250px;
-			left: -250px;
+			
 			top: 4.5em;
 
 			h1 {
@@ -14087,7 +14071,7 @@ License: GNU General Public License v2 or later
 						div#video_seek {
 
 							label {
-								width: 20%;
+								width: 19%;
 
 
 							}
@@ -14133,7 +14117,7 @@ License: GNU General Public License v2 or later
 						letter-spacing: 0.05em;
 
 						li {
-							font-size: 0.7em;
+							
 
 							span.post-meta-key {
 								width: 100%;

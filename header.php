@@ -159,15 +159,15 @@
 		</header>
 
 
-		<nav>
-			<ul>
+		<nav id="mainNav">
+			
 				<?php
 				wp_nav_menu(
 					array(
 						'menu'      => 'Main',
-						'container' => 'nav',
+						'container' => 'ul',
 					)
 				);
 				?>
-			</ul>
+			
 		</nav>

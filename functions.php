@@ -225,14 +225,14 @@ add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
  */
 function clashvibes_scripts() {
 
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0.0', 'true' );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main-es6.js', array(), '1.0.0', 'true' );
 
 	if ( 'clash-audio' === get_post_type() ) {
-		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/audio-es6.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/audio-es6.js', array(), '1.0.0', true );
 	}
 
 	if ( 'clash-videos' === get_post_type() ) {
-		wp_enqueue_script( 'clashvibes-video', get_template_directory_uri() . '/js/video-es6.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'clashvibes-video', get_template_directory_uri() . '/js/video-es6.js', array(), '1.0.0', true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

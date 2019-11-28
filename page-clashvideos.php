@@ -70,7 +70,7 @@
 
 	<article class="video_releases_box">
 
-		<figure class="thumb">
+		<figure class="audio-thumb">
 
 
 			<figcaption>

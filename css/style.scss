@@ -686,7 +686,7 @@ License: GNU General Public License v2 or later
     }
 
     /*front page top download section*/
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0.5em;
       height: auto;
       display: -webkit-flex;
@@ -699,7 +699,8 @@ License: GNU General Public License v2 or later
       -ms-flex-align: start;
       align-items: flex-start;
 
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         margin: 0;
         width: 48%;
         padding: 0.5em;
@@ -722,7 +723,7 @@ License: GNU General Public License v2 or later
           background-color:$color4;
         }
 
-        li.topdownload_box {
+        span.popularclashes-box {
           display: -webkit-flex;
           display: -ms-flexbox;
           display: flex;
@@ -743,7 +744,7 @@ License: GNU General Public License v2 or later
 
           background-color: $color2;
 
-          span.image_thumb {
+          span.popularclashes-image {
             float: left;
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
@@ -765,7 +766,7 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
             flex: 0 1 auto;
@@ -779,42 +780,34 @@ License: GNU General Public License v2 or later
             font-weight: normal;
             float: left;
             background-color: $color2;
-          }
-
-          span {
+          }          
+   
+          a.popularclashes-link {
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-            background-color: $color;
-            font-weight: normal;
-            height: 45px;
+            height: auto;
             width: 15%;
+            font-size: 0.95em;
+            line-height: 45px;
             padding: 0;
-            display: inline-block;
+            background-color: $color4;
+            margin: 0;
+            text-align: center;
+            color: $color;
+            letter-spacing: 0.05em;
+            font-weight: normal;
+            @include originTran(50% 50%);
+            @include Transition(all 0.2s linear 0s);
 
-            a {
-              height: 100%;
-              font-size: 0.95em;
-              line-height: 45px;
-              padding: 0;
-              background-color: $color4;
-              display: block;
-              margin: 0;
-              text-align: center;
-              color: $color;
-              letter-spacing: 0.05em;
-              font-weight: normal;
-              @include originTran(50% 50%);
-              @include Transition(all 0.2s linear 0s);
-
-              &:hover {
-                background-color: $color1;
-                color: $color4;
-                font-weight: bold;
-                letter-spacing: 0.055em;
-              }
+            &:hover {
+              background-color: $color1;
+              color: $color4;
+              font-weight: bold;
+              letter-spacing: 0.055em;
             }
           }
+          
         }
       }
     }   
@@ -2303,10 +2296,11 @@ License: GNU General Public License v2 or later
     }
 
     /*front page top download section*/
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0.5em;
 
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         padding: 0.5em;
 
         h1 {
@@ -2314,10 +2308,9 @@ License: GNU General Public License v2 or later
           margin-bottom: 0.25em;
         }
 
-        li.topdownload_box {
-          letter-spacing: 0.05em;
-
-          span.image_thumb {
+        span.popularclashes-box {
+          
+          span.popularclashes-image {
             width: 7%;
 
             a {
@@ -2329,27 +2322,24 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             text-indent: 0.5em;
             width: 78%;
 
             font-size: 0.8em;
           }
+            
 
-          span {
-            height: 45px;
+          a.popularclashes-link {
             width: 15%;
+            font-size: 0.9em;
 
-            a {
-              font-size: 0.9em;
-              line-height: 45px;
-              letter-spacing: 0.05em;
 
-              &:hover {
-                letter-spacing: 0.055em;
-              }
+            &:hover {
+              letter-spacing: 0.055em;
             }
           }
+         
         }
       }
     }   
@@ -3173,18 +3163,19 @@ License: GNU General Public License v2 or later
     }
 
     
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0.5em;
 
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         h1 {
           font-size: 1.1em;
         }
 
-        li.topdownload_box {
-          letter-spacing: 0.05em;
+        span.popularclashes-box {
+          
 
-          span.image_thumb {
+          span.popularclashes-image {
             width: 10%;
 
             a {
@@ -3196,25 +3187,21 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             width: 75%;
 
             font-size: 0.75em;
-          }
+          }          
 
-          span {
-            height: 45px;
+          a.popularclashes-link {
+            font-size: 0.85em;
             width: 15%;
 
-            a {
-              font-size: 0.85em;
-              letter-spacing: 0.05em;
-
-              &:hover {
-                letter-spacing: 0.055em;
-              }
+            &:hover {
+              letter-spacing: 0.055em;
             }
           }
+          
         }
       }
     }   
@@ -3946,10 +3933,11 @@ License: GNU General Public License v2 or later
     }
 
     
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0.5em;
 
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         width: 49%;
         padding: 0.25em;
 
@@ -3957,10 +3945,10 @@ License: GNU General Public License v2 or later
           font-size: 1em;
         }
 
-        li.topdownload_box {
-          letter-spacing: 0.05em;
+        span.popularclashes-box {
+          
 
-          span.image_thumb {
+          span.popularclashes-image {
             width: 10%;
 
             a {
@@ -3972,23 +3960,20 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             font-size: 0.75em;
           }
 
-          span {
-            height: 45px;
+          
+          a.popularclashes-link {
+            font-size: 0.75em;
             width: 15%;
 
-            a {
-              font-size: 0.75em;
-              letter-spacing: 0.05em;
-
-              &:hover {
-                letter-spacing: 0.055em;
-              }
+            &:hover {
+              letter-spacing: 0.055em;
             }
           }
+          
         }
       }
     }  
@@ -4680,7 +4665,7 @@ License: GNU General Public License v2 or later
     }
 
     
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0.5em;
       -webkit-flex-flow: column;
       -ms-flex-flow: column;
@@ -4688,17 +4673,18 @@ License: GNU General Public License v2 or later
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         width: 98%;
 
         h1 {
           font-size: 1em;
         }
 
-        li.topdownload_box {
-          letter-spacing: 0.05em;
+        span.popularclashes-box {
+          
 
-          span.image_thumb {
+          span.popularclashes-image {
             width: 8%;
 
             a {
@@ -4710,23 +4696,19 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             width: 77%;
             text-indent: 0.25em;
-          }
+          }          
 
-          span {
-            height: 45px;
+          a.popularclashes-link {
             width: 15%;
 
-            a {
-              letter-spacing: 0.05em;
-
-              &:hover {
-                letter-spacing: 0.055em;
-              }
+            &:hover {
+              letter-spacing: 0.055em;
             }
           }
+          
         }
       }
     }
@@ -5929,24 +5911,25 @@ License: GNU General Public License v2 or later
       }
     }
 
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0.5em;
       height: auto;
 
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         width: 98%;
         padding: 0.5em;
         display: block;
 
         h1 {
           font-size: 1em;
-          clear: both;
+          
         }
 
-        li.topdownload_box {
-          letter-spacing: 0.05em;
+        span.popularclashes-box {
+          
 
-          span.image_thumb {
+          span.popularclashes-image {
             a {
               background-color: $color2;
 
@@ -5956,20 +5939,20 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             font-size: 0.7em;
           }
 
-          span {
-            a {
-              font-size: 0.8em;
-              letter-spacing: 0.05em;
+          
+          a.popularclashes-link {
+            font-size: 0.8em;
+            letter-spacing: 0.05em;
 
-              &:hover {
-                letter-spacing: 0.05em;
-              }
+            &:hover {
+              letter-spacing: 0.05em;
             }
           }
+          
         }
       }
     }   
@@ -6629,20 +6612,21 @@ License: GNU General Public License v2 or later
     }
    
 
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0.5em;
-      height: auto;
+      
 
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         h1 {
           font-size: 1em;
-          clear: both;
+          
         }
 
-        li.topdownload_box {
-          letter-spacing: 0.05em;
+        span.popularclashes-box {
+          
 
-          span.image_thumb {
+          span.popularclashes-image {
             a {
               background-color: $color2;
 
@@ -6652,19 +6636,18 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             font-size: 0.75em;
           }
+          
+          a.popularclashes-link {
+            font-size: 0.75em;
 
-          span {
-            a {
-              font-size: 0.75em;
-
-              &:hover {
-                letter-spacing: 0.05em;
-              }
+            &:hover {
+              letter-spacing: 0.05em;
             }
           }
+          
         }
       }
     }   
@@ -7317,22 +7300,23 @@ License: GNU General Public License v2 or later
     }
     
 
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0.5em;
-      height: auto;
+      
 
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         margin: 0.15em;
 
         h1 {
           font-size: 1em;
-          clear: both;
+          
         }
 
-        li.topdownload_box {
-          letter-spacing: 0.05em;
+        span.popularclashes-box {
+          
 
-          span.image_thumb {
+          span.popularclashes-image {
             a {
               background-color: $color2;
 
@@ -7342,20 +7326,19 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             font-size: 0.7em;
           }
+          
+          a.popularclashes-link {
+            font-size: 0.8em;
+            
 
-          span {
-            a {
-              font-size: 0.8em;
+            &:hover {
               letter-spacing: 0.05em;
-
-              &:hover {
-                letter-spacing: 0.05em;
-              }
             }
           }
+          
         }
       }
     }    
@@ -8000,22 +7983,23 @@ License: GNU General Public License v2 or later
       }
     }    
 
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0;
-      height: auto;
+      
 
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         width: 95.79%;
 
         h1 {
           font-size: 1em;
-          clear: both;
+          
         }
 
-        li.topdownload_box {
-          letter-spacing: 0.05em;
+        span.popularclashes-box {
+          
 
-          span.image_thumb {
+          span.popularclashes-image {
             a {
               background-color: $color2;
 
@@ -8025,20 +8009,19 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             font-size: 0.6em;
           }
+          
+          a.popularclashes-link {
+            font-size: 0.75em;
+            letter-spacing: 0.05em;
 
-          span {
-            a {
-              font-size: 0.75em;
+            &:hover {
               letter-spacing: 0.05em;
-
-              &:hover {
-                letter-spacing: 0.05em;
-              }
             }
           }
+          
         }
       }
     }
@@ -8669,22 +8652,23 @@ License: GNU General Public License v2 or later
       }
     }   
 
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0;
-      height: auto;
+      
 
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         width: 95.79%;
 
         h1 {
           font-size: 1em;
-          clear: both;
+          
         }
 
-        li.topdownload_box {
-          letter-spacing: 0.05em;
+        span.popularclashes-box {
+          
 
-          span.image_thumb {
+          span.popularclashes-image {
             width: 6%;
 
             a {
@@ -8696,22 +8680,21 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             width: 74%;
             font-size: 0.6em;
             text-indent: 0.2em;
           }
+          
+          a.popularclashes-link {
+            font-size: 0.7em;
+            letter-spacing: 0.05em;
 
-          span {
-            a {
-              font-size: 0.7em;
+            &:hover {
               letter-spacing: 0.05em;
-
-              &:hover {
-                letter-spacing: 0.05em;
-              }
             }
           }
+          
         }
       }
     }    
@@ -9330,22 +9313,23 @@ License: GNU General Public License v2 or later
     }
     
 
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0;
-      height: auto;
+      
 
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         width: 95.79%;
 
         h1 {
           font-size: 0.9em;
-          clear: both;
+          
         }
 
-        li.topdownload_box {
-          letter-spacing: 0.05em;
+        span.popularclashes-box {
+          
 
-          span.image_thumb {
+          span.popularclashes-image {
             width: 13%;
             a {
               background-color: $color2;
@@ -9356,22 +9340,21 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             width: 72%;
             font-size: 0.55em;
             text-indent: 0.2em;
           }
+          
+          a.popularclashes-link {
+            font-size: 0.7em;
+            letter-spacing: 0.05em;
 
-          span {
-            a {
-              font-size: 0.7em;
+            &:hover {
               letter-spacing: 0.05em;
-
-              &:hover {
-                letter-spacing: 0.05em;
-              }
             }
           }
+          
         }
       }
     }
@@ -9966,24 +9949,23 @@ License: GNU General Public License v2 or later
       }
     }    
 
-    #topdownload_section_ctner {
+    div#popularclashes-section {
       padding: 0;
-      height: auto;
+      
 
-      ul#topdownload_section {
+      section#popularclashes-audio,
+      section#popularclashes-video {
         width: 95.79%;
 
         h1 {
           font-size: 0.9em;
-          clear: both;
+          
         }
 
-        li.topdownload_box {
+        span.popularclashes-box {
           width: 100%;
-
-          letter-spacing: 0.05em;
-
-          span.image_thumb {
+          
+          span.popularclashes-image {
             width: 13%;
 
             a {
@@ -9996,22 +9978,21 @@ License: GNU General Public License v2 or later
             }
           }
 
-          span.title_singer {
+          span.popularclashes-title {
             width: 72%;
             font-size: 0.55em;
             text-indent: 0.2em;
           }
+          
+          a.popularclashes-link {
+            font-size: 0.7em;
+            letter-spacing: 0.05em;
 
-          span {
-            a {
-              font-size: 0.7em;
+            &:hover {
               letter-spacing: 0.05em;
-
-              &:hover {
-                letter-spacing: 0.05em;
-              }
             }
           }
+          
         }
       }
     }    

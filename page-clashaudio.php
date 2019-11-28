@@ -74,7 +74,7 @@
 			?>
 		<article class="new_released_box">
 
-			<figure class="thumb">
+			<figure class="audio-thumb">
 
 
 				<figcaption>

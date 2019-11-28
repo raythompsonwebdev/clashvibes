@@ -1018,7 +1018,7 @@ a {
           overflow: hidden;
           padding: 0;
           margin: 0; }
-    #container #topdownload_section_ctner {
+    #container div#popularclashes-section {
       padding: 0.5em;
       height: auto;
       display: -webkit-flex;
@@ -1030,7 +1030,8 @@ a {
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
       align-items: flex-start; }
-      #container #topdownload_section_ctner ul#topdownload_section {
+      #container div#popularclashes-section section#popularclashes-audio,
+      #container div#popularclashes-section section#popularclashes-video {
         margin: 0;
         width: 48%;
         padding: 0.5em;
@@ -1041,7 +1042,8 @@ a {
         -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
         flex: 1 0 auto; }
-        #container #topdownload_section_ctner ul#topdownload_section h1 {
+        #container div#popularclashes-section section#popularclashes-audio h1,
+        #container div#popularclashes-section section#popularclashes-video h1 {
           font-size: 1.5em;
           height: 45px;
           line-height: 45px;
@@ -1050,7 +1052,8 @@ a {
           color: #ffffff;
           width: 100%;
           background-color: #000000; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box {
           display: -webkit-flex;
           display: -ms-flexbox;
           display: flex;
@@ -1069,7 +1072,8 @@ a {
           padding: 0;
           list-style: none;
           background-color: #e9ad29; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb {
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image {
             float: left;
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
@@ -1079,15 +1083,18 @@ a {
             color: #000000;
             height: 100%;
             display: block; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
+            #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+            #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
               background-color: #e9ad29;
               height: 100%; }
-              #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
+              #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+              #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
                 box-sizing: border-box;
                 vertical-align: unset; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
             flex: 0 1 auto;
@@ -1101,42 +1108,37 @@ a {
             font-weight: normal;
             float: left;
             background-color: #e9ad29; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span {
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-            background-color: #ffffff;
-            font-weight: normal;
-            height: 45px;
+            height: auto;
             width: 15%;
+            font-size: 0.95em;
+            line-height: 45px;
             padding: 0;
-            display: inline-block; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
-              height: 100%;
-              font-size: 0.95em;
-              line-height: 45px;
-              padding: 0;
-              background-color: #000000;
-              display: block;
-              margin: 0;
-              text-align: center;
-              color: #ffffff;
-              letter-spacing: 0.05em;
-              font-weight: normal;
-              -webkit-transform-origin: 50% 50%;
-              -moz-transform-origin: 50% 50%;
-              -o-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-              -webkit-transition: all 0.2s linear 0s;
-              -moz-transition: all 0.2s linear 0s;
-              -o-transition: all 0.2s linear 0s;
-              -ms-transition: all 0.2s linear 0s;
-              transition: all 0.2s linear 0s; }
-              #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
-                background-color: #347026;
-                color: #000000;
-                font-weight: bold;
-                letter-spacing: 0.055em; }
+            background-color: #000000;
+            margin: 0;
+            text-align: center;
+            color: #ffffff;
+            letter-spacing: 0.05em;
+            font-weight: normal;
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 50% 50%;
+            -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-transition: all 0.2s linear 0s;
+            -moz-transition: all 0.2s linear 0s;
+            -o-transition: all 0.2s linear 0s;
+            -ms-transition: all 0.2s linear 0s;
+            transition: all 0.2s linear 0s; }
+            #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+            #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
+              background-color: #347026;
+              color: #000000;
+              font-weight: bold;
+              letter-spacing: 0.055em; }
     #container section.contact-wide {
       /********** comments form **********/ }
       #container section.contact-wide #clashvibes_comments_form div#comments div#respond h3#reply-title {
@@ -3164,34 +3166,36 @@ a {
         background: url(images/bg_slider.gif) top center repeat-x; }
         #container #clashvibes_banner #slider li {
           overflow: hidden; }
-    #container #topdownload_section_ctner {
+    #container div#popularclashes-section {
       padding: 0.5em; }
-      #container #topdownload_section_ctner ul#topdownload_section {
+      #container div#popularclashes-section section#popularclashes-audio,
+      #container div#popularclashes-section section#popularclashes-video {
         padding: 0.5em; }
-        #container #topdownload_section_ctner ul#topdownload_section h1 {
+        #container div#popularclashes-section section#popularclashes-audio h1,
+        #container div#popularclashes-section section#popularclashes-video h1 {
           font-size: 1.2em;
           margin-bottom: 0.25em; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
-          letter-spacing: 0.05em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb {
-            width: 7%; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
-              height: 100%; }
-              #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
-                vertical-align: unset; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
-            text-indent: 0.5em;
-            width: 78%;
-            font-size: 0.8em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span {
-            height: 45px;
-            width: 15%; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
-              font-size: 0.9em;
-              line-height: 45px;
-              letter-spacing: 0.05em; }
-              #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
-                letter-spacing: 0.055em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image {
+          width: 7%; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
+            height: 100%; }
+            #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+            #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
+              vertical-align: unset; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
+          text-indent: 0.5em;
+          width: 78%;
+          font-size: 0.8em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
+          width: 15%;
+          font-size: 0.9em; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
+            letter-spacing: 0.055em; }
     #container #clashvibes_left_column {
       width: 21%; }
       #container #clashvibes_left_column section#clashvibes_login {
@@ -4373,29 +4377,31 @@ a {
         background: url(images/bg_slider.gif) top center repeat-x; }
         #container #clashvibes_banner #slider li {
           overflow: hidden; }
-    #container #topdownload_section_ctner {
+    #container div#popularclashes-section {
       padding: 0.5em; }
-      #container #topdownload_section_ctner ul#topdownload_section h1 {
+      #container div#popularclashes-section section#popularclashes-audio h1,
+      #container div#popularclashes-section section#popularclashes-video h1 {
         font-size: 1.1em; }
-      #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
-        letter-spacing: 0.05em; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb {
-          width: 10%; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
-            height: 100%; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
-              vertical-align: unset; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
-          width: 75%;
-          font-size: 0.75em; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span {
-          height: 45px;
-          width: 15%; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
-            font-size: 0.85em;
-            letter-spacing: 0.05em; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
-              letter-spacing: 0.055em; }
+      #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image,
+      #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image {
+        width: 10%; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
+          height: 100%; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
+            vertical-align: unset; }
+      #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+      #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
+        width: 75%;
+        font-size: 0.75em; }
+      #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+      #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
+        font-size: 0.85em;
+        width: 15%; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
+          letter-spacing: 0.055em; }
     #container #clashvibes_left_column {
       width: 21%;
       /*side bar navigation blog and custom posts*/ }
@@ -5474,31 +5480,34 @@ a {
         background: url(images/bg_slider.gif) top center repeat-x; }
         #container #clashvibes_banner #slider li {
           overflow: hidden; }
-    #container #topdownload_section_ctner {
+    #container div#popularclashes-section {
       padding: 0.5em; }
-      #container #topdownload_section_ctner ul#topdownload_section {
+      #container div#popularclashes-section section#popularclashes-audio,
+      #container div#popularclashes-section section#popularclashes-video {
         width: 49%;
         padding: 0.25em; }
-        #container #topdownload_section_ctner ul#topdownload_section h1 {
+        #container div#popularclashes-section section#popularclashes-audio h1,
+        #container div#popularclashes-section section#popularclashes-video h1 {
           font-size: 1em; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
-          letter-spacing: 0.05em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb {
-            width: 10%; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
-              height: 100%; }
-              #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
-                vertical-align: unset; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
-            font-size: 0.75em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span {
-            height: 45px;
-            width: 15%; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
-              font-size: 0.75em;
-              letter-spacing: 0.05em; }
-              #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
-                letter-spacing: 0.055em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image {
+          width: 10%; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
+            height: 100%; }
+            #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+            #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
+              vertical-align: unset; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
+          font-size: 0.75em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
+          font-size: 0.75em;
+          width: 15%; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
+            letter-spacing: 0.055em; }
     #container #clashvibes_left_column {
       width: 21%;
       /*side bar navigation blog and custom posts*/ }
@@ -6547,7 +6556,7 @@ a {
         background: url(images/bg_slider.gif) top center repeat-x; }
         #container #clashvibes_banner #slider li {
           overflow: hidden; }
-    #container #topdownload_section_ctner {
+    #container div#popularclashes-section {
       padding: 0.5em;
       -webkit-flex-flow: column;
       -ms-flex-flow: column;
@@ -6555,28 +6564,31 @@ a {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
-      #container #topdownload_section_ctner ul#topdownload_section {
+      #container div#popularclashes-section section#popularclashes-audio,
+      #container div#popularclashes-section section#popularclashes-video {
         width: 98%; }
-        #container #topdownload_section_ctner ul#topdownload_section h1 {
+        #container div#popularclashes-section section#popularclashes-audio h1,
+        #container div#popularclashes-section section#popularclashes-video h1 {
           font-size: 1em; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
-          letter-spacing: 0.05em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb {
-            width: 8%; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
-              height: 100%; }
-              #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
-                vertical-align: unset; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
-            width: 77%;
-            text-indent: 0.25em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span {
-            height: 45px;
-            width: 15%; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
-              letter-spacing: 0.05em; }
-              #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
-                letter-spacing: 0.055em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image {
+          width: 8%; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
+            height: 100%; }
+            #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+            #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
+              vertical-align: unset; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
+          width: 77%;
+          text-indent: 0.25em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
+          width: 15%; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
+            letter-spacing: 0.055em; }
     #container #clashvibes_left_column {
       width: 23%;
       /*side bar navigation blog and custom posts*/ }
@@ -8539,29 +8551,33 @@ a {
         list-style: none; }
         #container #clashvibes_banner #slider li {
           overflow: hidden; }
-    #container #topdownload_section_ctner {
+    #container div#popularclashes-section {
       padding: 0.5em;
       height: auto; }
-      #container #topdownload_section_ctner ul#topdownload_section {
+      #container div#popularclashes-section section#popularclashes-audio,
+      #container div#popularclashes-section section#popularclashes-video {
         width: 98%;
         padding: 0.5em;
         display: block; }
-        #container #topdownload_section_ctner ul#topdownload_section h1 {
-          font-size: 1em;
-          clear: both; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
+        #container div#popularclashes-section section#popularclashes-audio h1,
+        #container div#popularclashes-section section#popularclashes-video h1 {
+          font-size: 1em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
+          background-color: #e9ad29; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
+            vertical-align: unset; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
+          font-size: 0.7em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
+          font-size: 0.8em;
           letter-spacing: 0.05em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
-            background-color: #e9ad29; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
-              vertical-align: unset; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
-            font-size: 0.7em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
-            font-size: 0.8em;
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
             letter-spacing: 0.05em; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
-              letter-spacing: 0.05em; }
     #container #clashvibes_footer ul#menu-secondary {
       float: left;
       width: 12%; }
@@ -9581,24 +9597,26 @@ a {
             #container #audio_releases_section .audio_releases_box figure.video-thumb figcaption a.Morebutton:hover,
             #container #audio_releases_section .audio_releases_box figure.new-release-thumb figcaption a.Morebutton:hover {
               letter-spacing: 0.05em; }
-    #container #topdownload_section_ctner {
-      padding: 0.5em;
-      height: auto; }
-      #container #topdownload_section_ctner ul#topdownload_section h1 {
-        font-size: 1em;
-        clear: both; }
-      #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
-        letter-spacing: 0.05em; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
-          background-color: #e9ad29; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
-            vertical-align: unset; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
-          font-size: 0.75em; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
-          font-size: 0.75em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
-            letter-spacing: 0.05em; }
+    #container div#popularclashes-section {
+      padding: 0.5em; }
+      #container div#popularclashes-section section#popularclashes-audio h1,
+      #container div#popularclashes-section section#popularclashes-video h1 {
+        font-size: 1em; }
+      #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+      #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
+        background-color: #e9ad29; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
+          vertical-align: unset; }
+      #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+      #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
+        font-size: 0.75em; }
+      #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+      #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
+        font-size: 0.75em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
+          letter-spacing: 0.05em; }
     #container #clashvibes_footer ul#menu-secondary {
       width: 10%; }
       #container #clashvibes_footer ul#menu-secondary li.menu-item {
@@ -10587,27 +10605,29 @@ a {
             #container #audio_releases_section .audio_releases_box figure.video-thumb figcaption a.Morebutton:hover,
             #container #audio_releases_section .audio_releases_box figure.new-release-thumb figcaption a.Morebutton:hover {
               letter-spacing: 0.05em; }
-    #container #topdownload_section_ctner {
-      padding: 0.5em;
-      height: auto; }
-      #container #topdownload_section_ctner ul#topdownload_section {
+    #container div#popularclashes-section {
+      padding: 0.5em; }
+      #container div#popularclashes-section section#popularclashes-audio,
+      #container div#popularclashes-section section#popularclashes-video {
         margin: 0.15em; }
-        #container #topdownload_section_ctner ul#topdownload_section h1 {
-          font-size: 1em;
-          clear: both; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
-          letter-spacing: 0.05em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
-            background-color: #e9ad29; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
-              vertical-align: unset; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
-            font-size: 0.7em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
-            font-size: 0.8em;
+        #container div#popularclashes-section section#popularclashes-audio h1,
+        #container div#popularclashes-section section#popularclashes-video h1 {
+          font-size: 1em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
+          background-color: #e9ad29; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
+            vertical-align: unset; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
+          font-size: 0.7em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
+          font-size: 0.8em; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
             letter-spacing: 0.05em; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
-              letter-spacing: 0.05em; }
     #container #clashvibes_footer ul#menu-secondary {
       width: 20%; }
       #container #clashvibes_footer ul#menu-secondary li.menu-item {
@@ -11590,27 +11610,30 @@ a {
             #container #audio_releases_section .audio_releases_box figure.video-thumb figcaption a.Morebutton:hover,
             #container #audio_releases_section .audio_releases_box figure.new-release-thumb figcaption a.Morebutton:hover {
               letter-spacing: 0.05em; }
-    #container #topdownload_section_ctner {
-      padding: 0;
-      height: auto; }
-      #container #topdownload_section_ctner ul#topdownload_section {
+    #container div#popularclashes-section {
+      padding: 0; }
+      #container div#popularclashes-section section#popularclashes-audio,
+      #container div#popularclashes-section section#popularclashes-video {
         width: 95.79%; }
-        #container #topdownload_section_ctner ul#topdownload_section h1 {
-          font-size: 1em;
-          clear: both; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
+        #container div#popularclashes-section section#popularclashes-audio h1,
+        #container div#popularclashes-section section#popularclashes-video h1 {
+          font-size: 1em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
+          background-color: #e9ad29; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
+            vertical-align: unset; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
+          font-size: 0.6em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
+          font-size: 0.75em;
           letter-spacing: 0.05em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
-            background-color: #e9ad29; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
-              vertical-align: unset; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
-            font-size: 0.6em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
-            font-size: 0.75em;
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
             letter-spacing: 0.05em; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
-              letter-spacing: 0.05em; }
     #container #clashvibes_footer ul#menu-secondary li.menu-item a:hover {
       font-weight: bold; }
     #container #clashvibes_footer ul#footer-content {
@@ -12608,31 +12631,35 @@ a {
             #container #audio_releases_section .audio_releases_box figure.video-thumb figcaption a.Morebutton:hover,
             #container #audio_releases_section .audio_releases_box figure.new-release-thumb figcaption a.Morebutton:hover {
               letter-spacing: 0.05em; }
-    #container #topdownload_section_ctner {
-      padding: 0;
-      height: auto; }
-      #container #topdownload_section_ctner ul#topdownload_section {
+    #container div#popularclashes-section {
+      padding: 0; }
+      #container div#popularclashes-section section#popularclashes-audio,
+      #container div#popularclashes-section section#popularclashes-video {
         width: 95.79%; }
-        #container #topdownload_section_ctner ul#topdownload_section h1 {
-          font-size: 1em;
-          clear: both; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
+        #container div#popularclashes-section section#popularclashes-audio h1,
+        #container div#popularclashes-section section#popularclashes-video h1 {
+          font-size: 1em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image {
+          width: 6%; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
+            background-color: #e9ad29; }
+            #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+            #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
+              vertical-align: unset; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
+          width: 74%;
+          font-size: 0.6em;
+          text-indent: 0.2em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
+          font-size: 0.7em;
           letter-spacing: 0.05em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb {
-            width: 6%; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
-              background-color: #e9ad29; }
-              #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
-                vertical-align: unset; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
-            width: 74%;
-            font-size: 0.6em;
-            text-indent: 0.2em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
-            font-size: 0.7em;
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
             letter-spacing: 0.05em; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
-              letter-spacing: 0.05em; }
     #container #clashvibes_footer ul#menu-secondary li.menu-item {
       font-size: 0.8em; }
       #container #clashvibes_footer ul#menu-secondary li.menu-item a:hover {
@@ -13605,31 +13632,35 @@ a {
             #container #audio_releases_section .audio_releases_box figure.video-thumb figcaption a.Morebutton:hover,
             #container #audio_releases_section .audio_releases_box figure.new-release-thumb figcaption a.Morebutton:hover {
               letter-spacing: 0.05em; }
-    #container #topdownload_section_ctner {
-      padding: 0;
-      height: auto; }
-      #container #topdownload_section_ctner ul#topdownload_section {
+    #container div#popularclashes-section {
+      padding: 0; }
+      #container div#popularclashes-section section#popularclashes-audio,
+      #container div#popularclashes-section section#popularclashes-video {
         width: 95.79%; }
-        #container #topdownload_section_ctner ul#topdownload_section h1 {
-          font-size: 0.9em;
-          clear: both; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
+        #container div#popularclashes-section section#popularclashes-audio h1,
+        #container div#popularclashes-section section#popularclashes-video h1 {
+          font-size: 0.9em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image {
+          width: 13%; }
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
+            background-color: #e9ad29; }
+            #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+            #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
+              vertical-align: unset; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
+          width: 72%;
+          font-size: 0.55em;
+          text-indent: 0.2em; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
+          font-size: 0.7em;
           letter-spacing: 0.05em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb {
-            width: 13%; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
-              background-color: #e9ad29; }
-              #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
-                vertical-align: unset; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
-            width: 72%;
-            font-size: 0.55em;
-            text-indent: 0.2em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
-            font-size: 0.7em;
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
             letter-spacing: 0.05em; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
-              letter-spacing: 0.05em; }
     #container #clashvibes_footer ul#menu-secondary {
       width: 20%; }
       #container #clashvibes_footer ul#menu-secondary li.menu-item {
@@ -14597,34 +14628,40 @@ a {
           #container #audio_releases_section .audio_releases_box figure.video-thumb figcaption a.Morebutton:hover,
           #container #audio_releases_section .audio_releases_box figure.new-release-thumb figcaption a.Morebutton:hover {
             letter-spacing: 0.05em; }
-  #container #topdownload_section_ctner {
-    padding: 0;
-    height: auto; }
-    #container #topdownload_section_ctner ul#topdownload_section {
+  #container div#popularclashes-section {
+    padding: 0; }
+    #container div#popularclashes-section section#popularclashes-audio,
+    #container div#popularclashes-section section#popularclashes-video {
       width: 95.79%; }
-      #container #topdownload_section_ctner ul#topdownload_section h1 {
-        font-size: 0.9em;
-        clear: both; }
-      #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box {
-        width: 100%;
-        letter-spacing: 0.05em; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb {
+      #container div#popularclashes-section section#popularclashes-audio h1,
+      #container div#popularclashes-section section#popularclashes-video h1 {
+        font-size: 0.9em; }
+      #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box,
+      #container div#popularclashes-section section#popularclashes-video span.popularclashes-box {
+        width: 100%; }
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image {
           width: 13%; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a {
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a {
             background-color: #e9ad29; }
-            #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.image_thumb a img {
+            #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-image a img,
+            #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-image a img {
               -webkit-box-sizing: border-box;
               -moz-box-sizing: border-box;
               box-sizing: border-box;
               vertical-align: unset; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span.title_singer {
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box span.popularclashes-title,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box span.popularclashes-title {
           width: 72%;
           font-size: 0.55em;
           text-indent: 0.2em; }
-        #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a {
+        #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link,
+        #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link {
           font-size: 0.7em;
           letter-spacing: 0.05em; }
-          #container #topdownload_section_ctner ul#topdownload_section li.topdownload_box span a:hover {
+          #container div#popularclashes-section section#popularclashes-audio span.popularclashes-box a.popularclashes-link:hover,
+          #container div#popularclashes-section section#popularclashes-video span.popularclashes-box a.popularclashes-link:hover {
             letter-spacing: 0.05em; }
   #container #clashvibes_footer ul#menu-secondary li.menu-item {
     font-size: 0.75em; }

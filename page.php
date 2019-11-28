@@ -16,24 +16,17 @@
 get_header(); ?>
 
 
-<div id="clashvibes_content">
-
-	<section id="clashvibes_right_column">
-
-		<div class="clashvibes_right_panel_fullwidth">
-
 			<?php
-			if ( have_posts() ) :
+				if ( have_posts() ) :
 				while ( have_posts() ) :
-					the_post();
-					?>
+					the_post();					
+			?>
 
 			<h1>
 					<?php the_title(); ?>
 			</h1>
-
-
-					<?php the_content( 'Read More...' ); ?>
+			
+			<?php the_content( 'Read More...' ); ?>
 
 			<?php endwhile; else : ?>
 
@@ -44,18 +37,6 @@ get_header(); ?>
 
 			<?php endif; ?>
 
-		</div>
-
-	</section>
-
-</div>
-
-
-
-
-
-
-</section>
 
 
 <?php get_footer(); ?>

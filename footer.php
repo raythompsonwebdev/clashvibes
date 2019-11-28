@@ -14,7 +14,10 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 ?>  
-	
+
+  </main><!--end of main content-->
+
+	<!--footer-->
 	<footer id="clashvibes_footer">
 				
 		<?php
@@ -68,27 +71,30 @@
 
 		</ul>
 
-	</footer>
-<p class="copy">
-<?php echo esc_attr( '&copy; 2018 - Raymond Thompson - UK :', 'clashvibes' ); ?>
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clashvibes' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/"></a>
-		
-		
-	<?php
-	/* translators: %1$s by %2$s: Theme name, clashvibes: Raymond Thompson. */
-	printf( esc_html__( 'Theme: %1$s by %2$s.', 'clashvibes' ), 'clashvibes', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
-	?>
-<br/>
+  </footer>
+  
+  <!--info-->
+  <p class="copy">
+    <?php echo esc_attr( '&copy; 2018 - Raymond Thompson - UK :', 'clashvibes' ); ?>
+      <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clashvibes' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/"></a>
+        
+        
+      <?php
+      /* translators: %1$s by %2$s: Theme name, clashvibes: Raymond Thompson. */
+      printf( esc_html__( 'Theme: %1$s by %2$s.', 'clashvibes' ), 'clashvibes', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
+      ?>
+    <br/>
 
-	<?php
-	//$mysql_datetime = strftime( '%Y-%m-%d %H:%M:%S', $dt );
-	$today = date("F j, Y, g:i a" ); 
-	echo _e('Page was last updated : ') . $today ;
-	//printf( esc_html__( 'Page was last updated :', 'clashvibes' ), __( $today, 'clashvibes' ), 'clashvibes' );
-	?>
-</p>
+    <?php
+    //$mysql_datetime = strftime( '%Y-%m-%d %H:%M:%S', $dt );
+    $today = date("F j, Y, g:i a" ); 
+    echo _e('Page was last updated : ') . $today ;
+    //printf( esc_html__( 'Page was last updated :', 'clashvibes' ), __( $today, 'clashvibes' ), 'clashvibes' );
+    ?>
+  </p>
+
 </div>
-																											
+<!-- container end-->																											
 
 
 <script type="text/javascript">

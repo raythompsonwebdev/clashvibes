@@ -18,99 +18,89 @@
 
  get_header();?>
 
-<div id="clashvibes_content_front">
 
+	<?php
+				esc_html( the_title( '<h1 class="page-title">', '</h1>' ) );
 
-	<section id="clashvibes_right_column_front">
+	?>
+	</h1>
+
+	<section id="new_releases_section">
+
 
 		<?php
-					esc_html( the_title( '<h1 class="page-title">', '</h1>' ) );
+		
 
+		$the_query = null;
+
+		$args      = array(
+
+			'post_type'  => 'clash-audio',
+			'post_count' => '5',
+		);
+		$the_query = new WP_Query( $args );
 		?>
-		</h1>
 
-		<section id="new_released_section">
-
-
-			<?php
-			
-
-			$the_query = null;
-
-			$args      = array(
-
-				'post_type'  => 'clash-audio',
-				'post_count' => '5',
-			);
-			$the_query = new WP_Query( $args );
-			?>
-
-			<?php
-			if ( $the_query->have_posts() ) :
-				while ( $the_query->have_posts() ) :
-					$the_query->the_post();
-					?>
-
-			<article class="new_released_box">
-
-				<h1>
-					<?php the_title(); ?>
-				</h1>
-
-				<figure class="thumbaud">
-					<?php the_post_thumbnail(); ?>
-
-					<figcaption>
-
-						<a class="Morebutton" href="<?php echo esc_url( get_permalink() ); ?>" alt="">
-						<?php esc_html_e( 'Listen', 'clashvibes' ); ?></a>
-
-
-					</figcaption>
-
-				</figure>
-
-			</article>
-
-					<?php
-				endwhile;
-			else :
+		<?php
+		if ( $the_query->have_posts() ) :
+			while ( $the_query->have_posts() ) :
+				$the_query->the_post();
 				?>
-			<article class="new_released_box">
 
-				<figure class="thumb">
+		<article class="new_releases_box">
+
+			<h1>
+				<?php the_title(); ?>
+			</h1>
+
+			<figure class="audio-thumb">
+				<?php the_post_thumbnail(); ?>
+
+				<figcaption>
+
+					<a class="Morebutton" href="<?php echo esc_url( get_permalink() ); ?>" alt="">
+					<?php esc_html_e( 'Listen', 'clashvibes' ); ?></a>
 
 
-					<figcaption>
+				</figcaption>
 
-						<p>
-							<?php esc_html_e( 'Sorry! No Audio clashes to display.', 'clashvibes' ); ?>
-						</p>
+			</figure>
 
-					</figcaption>
-
-				</figure>
-
-			</article>
+		</article>
 
 				<?php
-				endif;
-
-			wp_reset_postdata();
+			endwhile;
+		else :
 			?>
+		<article class="new_released_box">
 
-			<div class="clearfix"></div>
-		</section>
+			<figure class="thumb">
+
+
+				<figcaption>
+
+					<p>
+						<?php esc_html_e( 'Sorry! No Audio clashes to display.', 'clashvibes' ); ?>
+					</p>
+
+				</figcaption>
+
+			</figure>
+
+		</article>
+
+			<?php
+			endif;
+
+		wp_reset_postdata();
+		?>
 
 		<div class="clearfix"></div>
-
-		<!-- end of right panel -->
-
-
-
 	</section>
-</div>
 
+	<div class="clearfix"></div>
+
+	<!-- end of right panel -->
 
 
 <?php get_footer(); ?>

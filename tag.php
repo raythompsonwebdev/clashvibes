@@ -17,7 +17,7 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 
-<div id="clashvibes_content">
+
   	<h1 class="archive-title">Tag: <?php single_tag_title( '', true ); ?></h1>
     <section id="clashvibes_right_column">
     		
@@ -34,7 +34,7 @@ get_header(); ?>
 		?>
 
     </section><!-- end of right panel -->
-</div>
+
 <?php get_footer(); ?>
 
 

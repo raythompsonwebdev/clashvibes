@@ -16,26 +16,21 @@
 
 get_header(); ?>
 
-<div id="clashvibes_content_front">
-
-	<section id="clashvibes_right_column_front">
-
+    <!--Banner section-->
 		<section id="clashvibes_banner">
 			<!--2/2018/07-->
 			<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sliderimage.jpg" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
 
-		</section>
+		</section>		
 
-		<h1>
-			<?php esc_html_e( 'Latest Sound Clashes ', 'clashvibes' ); ?>
-		</h1>
+		<!--new releases section-->
+		<section id="new_releases_section">
 
-		<!--Start of news release section-->
-		<section id="new_released_section">
+      <h1>
+        <?php esc_html_e( 'Latest Sound Clashes ', 'clashvibes' ); ?>
+      </h1>
 
-
-			<?php
-			
+			<?php			
 
 				$the_query = null;
 
@@ -65,13 +60,13 @@ get_header(); ?>
 				$the_query->the_post();
 			?>
 
-			<article class="new_released_box">
+			<article class="new_releases_box">
 
 				<h1>
 					<?php the_title(); ?>
 				</h1>
 
-				<figure class="thumbaud">
+				<figure class="new-release-thumb">
 
 					<?php the_post_thumbnail(); ?>
 
@@ -89,14 +84,17 @@ get_header(); ?>
 
 					</figcaption>
 
-				</figure>
-				<div class="clearfix"></div>
+        </figure>
+        
+        <div class="clearfix"></div>
+        
 			</article>
 
 				<?php
 					endwhile;
 					else :
-				?>
+        ?>
+        
 			<article class="new_released_box">
 
 				<figure class="thumbaud">
@@ -113,7 +111,8 @@ get_header(); ?>
 
 				</figure>
 
-			</article>
+      </article>
+      
 				<?php
 					endif;
 					wp_reset_postdata();
@@ -121,10 +120,10 @@ get_header(); ?>
 
 
 		</section>
-		<!--End of news release section-->
-
-
+		
+    <!--Top 10 download section-->
 		<div id="topdownload_section_ctner">
+
 			<!--Top 10 Audio Section-->
 			<ul id="topdownload_section">
 
@@ -231,11 +230,10 @@ get_header(); ?>
 			</ul>
 
 		</div>
+
 		<div class="clearfix"></div>
 
-	</section>
-	<!-- end of right panel -->
 
-</div>
+
 
 <?php get_footer(); ?>

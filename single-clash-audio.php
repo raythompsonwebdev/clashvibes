@@ -15,7 +15,7 @@
  */
 get_header(); ?>
 
-<div id="clashvibes_content">
+
 
 	<?php get_sidebar( 'audio' ); ?>
 
@@ -26,6 +26,6 @@ get_header(); ?>
 
 	</section><!-- end of clashvibes_right_panel_fullwidth -->
 
-</div><!-- end of right panel -->
+
 
 <?php get_footer(); ?>

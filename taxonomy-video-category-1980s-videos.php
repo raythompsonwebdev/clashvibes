@@ -18,7 +18,7 @@
 
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
-<div id="clashvibes_content">
+
 
 	<?php get_sidebar( 'video' ); ?>
 
@@ -36,5 +36,5 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 	</section><!-- end of right panel -->
 
-</div>
+
 <?php get_footer(); ?>

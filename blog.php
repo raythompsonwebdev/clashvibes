@@ -19,7 +19,7 @@ get_header(); ?>
 
 
 
-<div id="clashvibes_content">
+
 <?php get_sidebar(); ?>
 
 <section id="clashvibes_right_column">
@@ -44,5 +44,5 @@ get_header(); ?>
 
 </section><!-- end of right panel -->
 
-</div>
+
 <?php get_footer(); ?>

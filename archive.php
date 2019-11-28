@@ -17,8 +17,6 @@
 
 <?php get_sidebar(); ?>
 
-<div id="clashvibes_content">
-
 <section id="clashvibes_right_column">
 <!--Post loop start -->
 <?php if ( have_posts() ) : 
@@ -87,5 +85,5 @@ the_archive_title( '<h1 class="page-title">', '</h1>' );
 
 </section><!-- end of right panel -->
 
-</div>
+
 <?php get_footer(); ?>

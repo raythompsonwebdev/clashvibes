@@ -17,8 +17,6 @@
  */
 get_header(); ?>
 
-<div id="clashvibes_content_front">
-
 <article id="clashvibes-text">
 	<h1><?php the_title(); ?> Page</h1>
 
@@ -35,7 +33,7 @@ get_header(); ?>
 
 		<li><?php _e( 'Heading 6', 'clashvibes' ); ?></li>
 	</ul>
-<br/>
+	<br/>
 	<h2><?php _e('Heading 1', 'clashvibes'); ?></h2>
 
 	<p>
@@ -84,7 +82,7 @@ get_header(); ?>
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
 	</p>
 	
-	</article>
+</article>
 	
-</div>
+
 <?php get_footer(); ?>

@@ -14,7 +14,7 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
  get_header(); ?>
-<div id="clashvibes_content">
+
 
         <?php get_sidebar('audio'); ?>
 
@@ -31,5 +31,5 @@
 
         </section><!-- end of right panel -->
 
-</div>
+
 <?php get_footer(); ?>

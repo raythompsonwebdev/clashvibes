@@ -16,3 +16,5 @@ phpcs.xml.dist
 composer.json
 composer.lock
 videos/
+
+/vendor/

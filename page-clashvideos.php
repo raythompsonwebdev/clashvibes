@@ -18,92 +18,83 @@
 
  get_header();?>
 
-<div id="clashvibes_content_front">
+
+<?php
+	the_title( '<h1 class="page-title">', '</h1>' );
+?>
+
+<section id="video_releases_section">
+
+	<?php
+	
+		$the_query = null;
+
+		$args      = array(
+
+			'post_type'  => 'clash-videos',
+			'post_count' => '20',
+		);
+		$the_query = new WP_Query( $args );
+	?>
+
+	<?php
+		if ( $the_query->have_posts() ) :
+			while ( $the_query->have_posts() ) :
+				$the_query->the_post();
+				?>
+
+	<article class="video_releases_box">
+
+		<h1>
+			<?php the_title(); ?>
+		</h1>
+
+		<figure class="video-thumb">
+			<?php the_post_thumbnail(); ?>
+			<figcaption>
+
+				<a 
+					class="Morebutton"
+					href="<?php echo esc_url( get_permalink() ); ?>">
+					<?php esc_html_e( 'View', 'clashvibes' ); ?>
+				</a>
 
 
-	<section id="clashvibes_right_column_front">
+			</figcaption>
+
+		</figure>
+
+	</article>
+
+	<?php	endwhile; else : ?>
+
+	<article class="video_releases_box">
+
+		<figure class="thumb">
 
 
-		<?php
-			the_title( '<h1 class="page-title">', '</h1>' );
+			<figcaption>
 
-		?>
-
-		<section id="new_released_section">
-
-			<?php
-			
-				$the_query = null;
-
-				$args      = array(
-
-					'post_type'  => 'clash-videos',
-					'post_count' => '20',
-				);
-				$the_query = new WP_Query( $args );
-			?>
-
-			<?php
-				if ( $the_query->have_posts() ) :
-					while ( $the_query->have_posts() ) :
-						$the_query->the_post();
-						?>
-
-			<article class="new_released_box">
-
-				<h1>
-					<?php the_title(); ?>
-				</h1>
-
-				<figure class="thumbvid">
-					<?php the_post_thumbnail(); ?>
-					<figcaption>
-
-						<a class="Morebutton"
-							href="<?php echo esc_url( get_permalink() ); ?>"><?php esc_html_e( 'View', 'clashvibes' ); ?></a>
+				<p><?php esc_html_e( 'Sorry! No Video clashes to display.', 'clashvibes' ); ?></p>
 
 
-					</figcaption>
+			</figcaption>
 
-				</figure>
+		</figure>
 
-			</article>
+	</article>
+	<?php	endif; ?>
 
-			<?php	endwhile; else : ?>
+	<?php wp_reset_postdata(); ?>
 
-			<article class="new_released_box">
+	<div class="clearfix"></div>
 
-				<figure class="thumb">
+</section>
+<!--End of news release section-->
 
+<div class="clearfix"></div>
 
-					<figcaption>
-
-						<p><?php esc_html_e( 'Sorry! No Video clashes to display.', 'clashvibes' ); ?></p>
-
-
-					</figcaption>
-
-				</figure>
-
-			</article>
-			<?php	endif; ?>
-
-			<?php wp_reset_postdata(); ?>
-
-			<div class="clearfix"></div>
-
-		</section>
-		<!--End of news release section-->
-
-		
-
-		<div class="clearfix"></div>
-
-		<!-- end of right panel -->
-
-	</section>
-
-</div>
+<!-- end of right panel -->
 
 
 <?php get_footer(); ?>

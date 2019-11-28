@@ -17,7 +17,7 @@
 get_header(); ?>
 	  
 
-<div id="clashvibes_content">
+
 
 	<?php get_sidebar( 'video' ); ?>
 	
@@ -29,6 +29,5 @@ get_header(); ?>
 
 <div class="clearfix"></div>
 
-</div>
 
 <?php get_footer(); ?>

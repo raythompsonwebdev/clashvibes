@@ -17,7 +17,7 @@
  */
 get_header(); ?>
 
-<div id="clashvibes_content_front">
+
 
 <article id="clashvibes-text">
 
@@ -179,5 +179,5 @@ get_header(); ?>
 
 </article >
 
-</div>
+
 <?php get_footer(); ?>

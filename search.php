@@ -17,7 +17,7 @@
  */
 get_header(); ?>
 
-<div id="clashvibes_content">
+
 
 	<?php get_sidebar(); ?>
 
@@ -27,6 +27,6 @@ get_header(); ?>
 		<?php get_template_part( 'template-parts/content', 'custom' ); ?>
 
 	</section>
-</div>
+
 
 <?php get_footer(); ?>

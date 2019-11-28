@@ -3,7 +3,7 @@
   /*
   var position, direction, previous;
  
-  window.scroll = function() {
+  window.onscroll = function() {
 
       if (this.scrollTop() >= position) {
 
@@ -27,8 +27,9 @@
   };
 */
   var toggleNav = document.querySelector("#toggle-nav");
+  var toggleSide = document.querySelector("#toggle-side");
+  
 
-  console.log(toggleNav)
 
   //main nav
   toggleNav.addEventListener("click", function(event) {
@@ -61,7 +62,7 @@
 
   });
 
-  var toggleSide = document.querySelector("#toggle-side");
+  
   //side nav
   toggleSide.addEventListener("click", function(event) {
 

@@ -17,15 +17,14 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 
-<div id="clashvibes_content">
-
-	<section id="clashvibes_right_column">
+<section id="clashvibes_right_column">
 
 	<?php
-/**
- * Check if there are any posts to display.
- */
-if ( have_posts() ) : ?>
+		/**
+		 * Check if there are any posts to display.
+		 */
+		if ( have_posts() ) : 
+	?>
 
 	<h1 class="archive-title">Category: <?php single_cat_title( '', true ); ?></h1>
 
@@ -34,8 +33,6 @@ if ( have_posts() ) : ?>
 	 * Display optional category description.
 	 */
 	if ( category_description() ) :	?>
-
-		
 
 		<?php endif; ?>
 
@@ -110,17 +107,20 @@ if ( have_posts() ) : ?>
 
 		</article>
 
-		<?php endwhile;	else :	?>
+		<?php 
+			endwhile;	
+			else :
+		?>
 
-	<?php get_template_part( 'template-part/content', 'none' ); ?>
+		<?php get_template_part( 'template-part/content', 'none' ); ?>
 
-<?php endif; ?>
+	<?php endif; ?>
 
-<!--end of Comment box-->
-<div class="clearfix"></div>
+	<!--end of Comment box-->
+	<div class="clearfix"></div>
 
 
-	</section>
+</section>
 
-</div>
+
 <?php get_footer(); ?>

@@ -17,15 +17,15 @@
  */
 get_header(); ?>
 
-<div id="clashvibes_content_front">
 
-		<h1><?php the_title(); ?> Page</h1>
 
-		<div id="contactform">
-		
-		</div>
+<h1><?php the_title(); ?> Page</h1>
 
+<div id="contactform">
 
 </div>
+
+
+
 
 <?php get_footer(); ?>

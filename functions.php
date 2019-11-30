@@ -225,7 +225,15 @@ add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
  */
 function clashvibes_scripts() {
 
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main-es6.js', array(), '1.0.0', 'true' );
+	//mobile side menu script for mobile blog, archive, audio and video pages.
+
+	if('clash-audio' === get_post_type() || 'clash-videos' === get_post_type() ){
+		
+		wp_enqueue_script( 'sidenav', get_template_directory_uri() . '/js/mobile-sidenav-es6.js', array(), '1.0.0', 'true' );
+	}
+	
+		//mobile main menu script for all mobile pages
+		wp_enqueue_script( 'main-mobile', get_template_directory_uri() . '/js/mobile-mainnav-es6.js', array(), '1.0.0', 'true' );
 
 	if ( 'clash-audio' === get_post_type() ) {
 		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/audio-es6.js', array(), '1.0.0', true );

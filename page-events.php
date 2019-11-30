@@ -27,6 +27,8 @@ get_header(); ?>
  * 3. Require the google/apiclient library
  *    $ composer require google/apiclient:~2.0
  */
+
+ /*
 if (!file_exists(__DIR__ . '/vendor/autoload.php')) {
   throw new \Exception('please run "composer require google/apiclient:~2.0" in "' . __DIR__ .'"');
 }
@@ -54,6 +56,7 @@ if (isset($_GET['q']) && isset($_GET['maxResults'])) {
    * {{ Google Cloud Console }} <{{ https://cloud.google.com/console }}>
    * Please ensure that you have enabled the YouTube Data API for your project.
    */
+  /*
   $DEVELOPER_KEY = '';
 
   $client = new Google_Client();
@@ -114,16 +117,16 @@ END;
     $htmlBody .= sprintf('<p>An client error occurred: <code>%s</code></p>',
       htmlspecialchars($e->getMessage()));
   }
-}
+}*/
 ?>
 
 <h1><?php the_title(); ?> Page</h1>
 
 <div class="results">
 
-<?=$htmlBody?>
 
-	<!-- <article class="events_box">
+
+ <article class="events_box">
 		
 		<figure class="events">
 			<img src="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php esc_attr_e( 'sliderimage', 'raythompsonwebdev-com' ); ?>">
@@ -134,7 +137,7 @@ END;
 		</figure>
 
 		<input type="submit" value="Find Event" name="event" id="event-submit-btn" />
-	</article> -->
+	</article> 
 
 </div>
 

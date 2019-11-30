@@ -172,6 +172,20 @@
     
      </header>
 
+      <!--Main navigation-->
+		<nav id="mobileNav">
+			
+      <?php
+        wp_nav_menu(
+          array(
+            'menu'      => 'mobile',
+            'container' => 'ul',
+          )
+        );
+      ?>
+    
+  </nav>
+
     <!--Main navigation-->
 		<nav id="mainNav">
 			

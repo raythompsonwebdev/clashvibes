@@ -26,8 +26,8 @@ jQuery(document).ready(function($) {
     event.preventDefault();
 
     // create menu variables
-    var slideoutMenu = $("nav");
-    var slideoutMenuHeight = $("nav").height();
+    var slideoutMenu = $("nav#mobileNav");
+    var slideoutMenuHeight = $("nav#mobileNav").height();
 
     // toggle open class
     slideoutMenu.toggleClass("open");
@@ -49,6 +49,7 @@ jQuery(document).ready(function($) {
   });
 
   $("#tog-menu button#toggle-side").on("click", function(event) {
+
     event.preventDefault();
 
     // create menu variables

@@ -25,7 +25,7 @@
 	?>
 	</h1>
 
-	<section id="new_releases_section">
+	<section id="audio_releases_section">
 
 
 		<?php
@@ -47,7 +47,7 @@
 				$the_query->the_post();
 				?>
 
-		<article class="new_releases_box">
+		<article class="audio_releases_box">
 
 			<h1>
 				<?php the_title(); ?>

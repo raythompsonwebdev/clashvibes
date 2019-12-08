@@ -14,6 +14,8 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template.
  */
 
+require_once( get_stylesheet_directory() . '/clashvibes-customv2/clashvibes-customv2.php');
+
 add_filter( 'wp_title', 'clashvibes_filter_wp_title', 10, 2 );
 /**
  * Filters the page title appropriately depending on the current page.
@@ -26,6 +28,7 @@ add_filter( 'wp_title', 'clashvibes_filter_wp_title', 10, 2 );
  * @uses    is_front_page()
  */
 function clashvibes_filter_wp_title( $title ) {
+	
 	global $page, $paged;
 
 	if ( is_feed() ) {
@@ -219,6 +222,36 @@ function ie_style_sheets() {
 }
 add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
 
+/**
+ * Load the html5.
+ *  */
+add_action( 'wp_enqueue_scripts', function ()
+{
+	$conditional_scripts = [
+
+		'html5shiv'   => '/js/old-browser-scripts/html5shiv.min.js',
+		'respond'     => '/js/old-browser-scripts/Respond-master/dest/respond.src.js',
+		'selectivizr' => '/js/old-browser-scripts/selectivizr-min.js',
+
+	];
+	foreach ( $conditional_scripts as $handle => $src ) {
+		wp_enqueue_script( $handle, get_template_directory_uri() , array(), '1.0', false );
+	}
+	add_filter(
+		'script_loader_tag',
+
+		function( $tag, $handle ) use ( $conditional_scripts ) {
+
+			if ( array_key_exists( $handle, $conditional_scripts ) ) {
+				$tag = '<!--[if (lt IE 8) & (!IEMobile)]>' . $tag . '<![endif]-->' . "\n";
+			}
+			return $tag;
+		},
+		10,
+		2
+	);
+}, 11 );
+
 
 /**
  * Clashvibes scripts.
@@ -267,6 +300,7 @@ add_action( 'wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles' );
  * Sidebars!
  */
 if ( function_exists( 'register_sidebar' ) ) {
+	
 	register_sidebar(
 		array(
 			'name'          => __( 'Primary Sidebar', 'clashvibes' ),
@@ -290,8 +324,8 @@ function clashvibes_audio_widgets_init() {
 			'name'          => __( 'Audio-Nav', 'clashvibes' ),
 			'id'            => 'Audio-Nav',
 			'description'   => __( 'Audio Side bar', 'clashvibes' ),
-			'before_widget' => '<div class="blog_box">',
-			'after_widget'  => '</div>',
+			'before_widget' => '<section class="clashvibes_left_column_box">',
+			'after_widget'  => '</section>',
 			'before_title'  => '<h2>',
 			'after_title'   => '</h2>',
 		)
@@ -308,7 +342,7 @@ function clashvibes_video_widgets_init() {
 			'name'          => __( 'Video-Nav', 'clashvibes' ),
 			'id'            => 'Video-Nav',
 			'description'   => __( 'Video Side bar', 'clashvibes' ),
-			'before_widget' => '<div class="blog_box">',
+			'before_widget' => '<div class="clashvibes_left_column_box">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2>',
 			'after_title'   => '</h2>',
@@ -327,8 +361,8 @@ function clashvibes_contact_widgets_init() {
 			'name'          => __( 'contact', 'clashvibes' ),
 			'id'            => 'contact',
 			'description'   => __( 'Contact Side bar', 'clashvibes' ),
-			'before_widget' => '<div id="contactform">',
-			'after_widget'  => '</div>',
+			'before_widget' => '<section id="contactform">',
+			'after_widget'  => '</section>',
 			'before_title'  => '<h2>',
 			'after_title'   => '</h2>',
 		)
@@ -417,95 +451,12 @@ function clashvibes_content_image_sizes_attr( $sizes, $size ) {
 		736 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	} else {
 		736 > $width && 360 <= $width && $sizes = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 61vw, (max-width: 1920px) 45vw, 667px';
-		360 > $width && $sizes                  = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+		360 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	}
 
 	return $sizes;
 }
 add_filter( 'wp_calculate_image_sizes', 'clashvibes_content_image_sizes_attr', 10, 2 );
-
-
-
-// Attachment page script.
-if ( ! function_exists( 'clashvibes_com_attachment_nav' ) ) :
-	/**
-	 * Display navigation to next/previous image in attachment pages.
-	 */
-	function clashvibes_attachment_nav() {
-		?>
-	<nav class="navigation post-navigation" role="navigation">
-		<div class="post-nav-box clear">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Attachment post navigation', 'clashvibes' ); ?></h2>
-			<div class="nav-links">
-				<div class="nav-previous">
-					<?php previous_image_link( false, '<span class="post-title">Previous image</span>' ); ?>
-				</div>
-				<div class="nav-next">
-					<?php next_image_link( false, '<span class="post-title">Next image</span>' ); ?>
-				</div>
-			</div><!-- .nav-links -->
-
-
-		</div>
-	</nav>
-		<?php
-	}
-endif;
-
-
-// Attachment page script.
-if ( ! function_exists( 'clashvibes_attached_image' ) ) :
-	/**
-	 * Print the attached image with a link to the next attached image. Appropriated from Twenty Fourteen 1.0.
-	 */
-	function clashvibes_attached_image() {
-		$post = get_post();
-
-		// Filter the default attachment size.
-		$attachment_size     = apply_filters( 'clashvibes_attachment_size', array( 810, 810 ) );
-		$next_attachment_url = wp_get_attachment_url();
-
-		/*
-		* Grab the IDs of all the image attachments in a gallery so we can get the URL
-		* of the next adjacent image in a gallery, or the first image (if we're
-		* looking at the last image in a gallery), or, in a gallery of one, just the
-		* link to that image file.
-		 */
-		$attachment_ids = new WP_Query(
-			array(
-				'post_parent'      => $post->post_parent,
-				'fields'           => 'ids',
-				'numberposts'      => 1,
-				'post_status'      => 'inherit',
-				'post_type'        => 'attachment',
-				'post_mime_type'   => 'image',
-				'order'            => 'ASC',
-				'orderby'          => 'menu_order ID',
-				'suppress_filters' => false,
-			)
-		);
-		// If there is more than 1 attachment in a gallery...
-		if ( count( $attachment_ids ) > 1 ) {
-			foreach ( $attachment_ids as $attachment_id ) {
-				if ( $attachment_id === $post->ID ) {
-					$next_id = current( $attachment_ids );
-					break;
-				}
-			}
-			// get the URL of the next image attachment...
-			if ( $next_id ) {
-				$next_attachment_url = get_attachment_link( $next_id );
-			} else { // or get the URL of the first image attachment.
-				$next_attachment_url = get_attachment_link( array_shift( $attachment_ids ) );
-			}
-		}
-		printf(
-			'<a href="%1$s" rel="attachment">%2$s</a>',
-			esc_url( $next_attachment_url ),
-			wp_get_attachment_image( $post->ID, $attachment_size )
-		);
-	}
-endif;
 
 
 /**

@@ -60,17 +60,15 @@ get_header(); ?>
 				$the_query->the_post();
 			?>
 
-			<article class="new_releases_box">
+			
+				<figure class="new_releases_box">
 
-				<h1>
-					<?php the_title(); ?>
-				</h1>
-
-				<figure class="new-release-thumb">
-
-					<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail('thumbnail', array('class' => 'new-release-thumb')); ?>
 
 					<figcaption>
+						<h1>
+							<?php the_title(); ?>
+						</h1>
 
 						<?php if ( 'clash-audio' === get_post_type() ) : ?>
 						<a class="Morebutton" href=" <?php echo esc_url( get_permalink(), 'clashvibes' ); ?> " title="Listen to <?php esc_attr( the_title_attribute(), 'clashvibes' ); ?>">
@@ -86,11 +84,6 @@ get_header(); ?>
 
 				</figure>
 				
-
-        
-        		<div class="clearfix"></div>
-        
-			</article>
 
 			<?php
 				endwhile;

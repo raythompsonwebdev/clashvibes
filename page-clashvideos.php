@@ -42,21 +42,19 @@
 			while ( $the_query->have_posts() ) :
 				$the_query->the_post();
 				?>
+			
 
-	<article class="video_releases_box">
-
-		<h1>
-			<?php the_title(); ?>
-		</h1>
-
-		<figure class="video-thumb">
-			<?php the_post_thumbnail(); ?>
+	<figure class="video_releases_box">
+		<?php the_post_thumbnail('thumbnail', array('class' => 'video-thumb')); ?>
 			<figcaption>
+			<h1>
+				<?php the_title(); ?>
+			</h1>
 
 				<a 
 					class="Morebutton"
 					href="<?php echo esc_url( get_permalink() ); ?>">
-					<?php esc_html_e( 'View', 'clashvibes' ); ?>
+					<?php _e( 'View', 'clashvibes' ); ?>
 				</a>
 
 
@@ -64,7 +62,7 @@
 
 		</figure>
 
-	</article>
+
 
 	<?php	endwhile; else : ?>
 
@@ -85,7 +83,7 @@
 	</article>
 	<?php	endif; ?>
 
-	<?php wp_reset_postdata(); ?>
+	<?php wp_reset_query(); ?>
 
 	<div class="clearfix"></div>
 

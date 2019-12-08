@@ -7,10 +7,11 @@ dist/
 images/
 js/old-browser-scripts/
 js/sparefiles/
+template-parts/content-events.php
 
 
 fonts/
-files-doc/
+docs/
 phpcs.xml.dist
 
 composer.json

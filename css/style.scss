@@ -62,7 +62,7 @@ License: GNU General Public License v2 or later
         position: relative;
         top: 0;
         left: 0;
-        width: 5%;
+        width: 5%;       
 
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
@@ -73,10 +73,10 @@ License: GNU General Public License v2 or later
           z-index: 1;
           top: 0;
           left: 0;
-          background: $color1;
+          background: $color2;
           color: $color4;
           text-decoration: none;
-          line-height: 40px;
+          line-height: 46px;
           width: 100%;
           @include originTran(50% 50%);
           @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
@@ -136,8 +136,8 @@ License: GNU General Public License v2 or later
 
       .site-logo a:focus .site-firstletter,
       .site-logo a:hover .site-firstletter {
-        background: $color4;
-        color: $color8;
+        background-color: $color4;
+        color: $color2;
         font-weight: normal;
         text-align: center;
       }
@@ -155,7 +155,7 @@ License: GNU General Public License v2 or later
         flex: 0 1 auto;
 
         h1 {
-          color: $color2;
+          color: $color1;
           margin: 0;
           padding: 0;
           line-height: 40px;
@@ -169,7 +169,7 @@ License: GNU General Public License v2 or later
         h2.site-description {
           text-indent: 0.5em;
           height: 20px;
-          color: $color5a;
+          color: $color5;
           width: 100%;
           line-height: 20px;
           font-size: 0.7em;
@@ -267,7 +267,7 @@ License: GNU General Public License v2 or later
 
             &:hover {
               cursor: pointer;
-              background-color: $color1;
+              background-color: $color7;
               color: $color4;
               font-weight: bold;
             }
@@ -285,14 +285,28 @@ License: GNU General Public License v2 or later
     main#clashvibes_content {
       padding: 0.25em;
       margin: 0 auto;
-      min-height: 1280px;
+      min-height: 1200px;
+      background-color: $color;
 
     }
 
     h1 {
       font-size: 1.5em;
-      letter-spacing: 0.03em;
+
       line-height: 45px;
+      color:$color4;
+      margin: 0.5em 0;
+      a {
+        font-size: 1em;
+        display:block;
+        background-color:unset;
+
+        &:hover {
+          text-decoration: none;
+          font-weight:bold;
+          background-color:unset;
+        }
+      }
     }
     
     /********** front page **********/    
@@ -300,8 +314,9 @@ License: GNU General Public License v2 or later
       padding: 1em;
 
       h1 {
-        color: $color;
+        color: $color4;
         margin-bottom: 0.5em;
+        text-indent:0;
       }
 
       h2 {
@@ -327,6 +342,7 @@ License: GNU General Public License v2 or later
         width: 10%;
         border: 2px solid $color7;
         margin: 0 0 0.5em 0.5em;
+        min-height: 150px;
 
         img {
           width: 100%;
@@ -483,7 +499,7 @@ License: GNU General Public License v2 or later
 
           &:hover {
             font-weight: bold;
-            background-color: $color2a;
+            background-color: $color2;
 
             color: $colors;
           }
@@ -541,7 +557,8 @@ License: GNU General Public License v2 or later
       height:auto;
       h1 {
         width: 100%;
-        background-color:$color4;  
+        //background-color:$color4; 
+        color:$color4; 
         a {
           font-size: 0.8em;
           display: block;
@@ -551,96 +568,92 @@ License: GNU General Public License v2 or later
           }
         }
       }
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box{
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box{
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
         flex: 0 1 auto;
-        width: 19.425%;
+        width: 19.2%;
         min-height: 320px;
         padding: 0;
         margin: 0.2em;
-        background-color: $color2;
+        
+        background-color: $color3;
 
-        h1 {
-          color: $color;
-          font-size: 0.9em;
-          height: auto;
-          text-align: center;
-          line-height: 35px;
-          margin:0;
-          padding: 3%;
-          width: 94%;
-          text-transform:capitalize;
-
-        }
-
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
-          width: 100%;
-          height: auto;
-          margin: 0;
+        
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
+          width: 50%;
+          margin: 1em auto;
           @include originTran(50% 50%);
           @include box-sizing($type: border-box);
           @include Transition(all 0.5s ease-in-out 0s);
+          display: block;      
 
-          img {
-            height: auto;
-            width: 50%;
-            margin: 1em auto;
-            display: block;
-          }
-
-          figcaption {
-            margin: 0 auto;
-            height: auto;
-            width: 100%;
-            z-index: 100;
-            display: block;
-
-            a.Morebutton {
-              font-size: 0.9em;
-              color: $color;
-              position: relative;
-              background-color: $color4;
-              text-align:center;
-              margin: 0 auto;
-              padding: 0;
-              line-height: 40px;
-              height: 40px;
-              letter-spacing: 0.05em;
-              width: 65%;
-              @include Transition(all 0.5s ease-in-out 0s);
-
-              &:hover {
-                color: $color;
-                background-color: $color7;
-                letter-spacing: 0.055em;
-                font-weight: bold;
-              }
-            }
-          }
+          
         }
 
-        figure.audio-thumb:hover img,
-        figure.video-thumb:hover img,
-        figure.new-release-thumb:hover img  {
+        img.audio-thumb:hover img,
+        img.video-thumb:hover img,
+        img.new-release-thumb:hover img  {
           @include TransScale(scale(1.05));
           @include Transition(all 0.5s ease-in-out 0s);
           cursor: pointer;
           border: none;
         }
 
-        figure.audio-thumb:hover figcaption,
-        figure.video-thumb:hover figcaption,
-        figure.new-release-thumb:hover figcaption {
+        img.audio-thumb:hover figcaption,
+        img.video-thumb:hover figcaption,
+        img.new-release-thumb:hover figcaption {
           @include Transition(all 0.5s ease-in-out 0s);
 
           a.Morebutton {
             @include TransScale(scale(1.05));
             cursor: pointer;
+          }
+        }
+
+        figcaption {
+          margin: 0 auto;
+          height: auto;
+          width: 100%;
+          z-index: 100;
+          display: block;
+          h1 {
+            color: $color4;
+            font-size: 0.9em;
+            min-height: 60px;
+            text-align: center;
+            line-height: 35px;
+            margin:0;
+            padding: 0 2%;
+            width: 96%;
+            text-transform:capitalize;
+  
+          }
+
+          a.Morebutton {
+            font-size: 0.9em;
+            color: $color;
+            position: relative;
+            background-color: $color4;
+            text-align:center;
+            margin: 0 auto;
+            padding: 0;
+            line-height: 40px;
+            height: 40px;
+            letter-spacing: 0.05em;
+            width: 65%;
+            @include Transition(all 0.5s ease-in-out 0s);
+
+            &:hover {
+              color: $color;
+              background-color: $color7;
+              letter-spacing: 0.055em;
+              font-weight: bold;
+            }
           }
         }
       }
@@ -705,6 +718,7 @@ License: GNU General Public License v2 or later
           color: $color;
           width: 100%;
           background-color:$color4;
+          text-indent: 0.5em;
         }
 
         span.popularclashes-box {
@@ -726,7 +740,7 @@ License: GNU General Public License v2 or later
           padding: 0;
           list-style: none;
 
-          background-color: $color2;
+          background-color: $color3;
 
           span.popularclashes-image {
             float: left;
@@ -738,6 +752,7 @@ License: GNU General Public License v2 or later
             color: $color4;
             height: 100%;
             display: block;
+            padding: 0 0.15em 0 0;
 
             a {
               background-color: $color2;
@@ -763,7 +778,7 @@ License: GNU General Public License v2 or later
             display: block;
             font-weight: normal;
             float: left;
-            background-color: $color2;
+            
           }          
    
           a.popularclashes-link {
@@ -785,7 +800,7 @@ License: GNU General Public License v2 or later
             @include Transition(all 0.2s linear 0s);
 
             &:hover {
-              background-color: $color1;
+              background-color: $color7;
               color: $color4;
               font-weight: bold;
               letter-spacing: 0.055em;
@@ -949,61 +964,15 @@ License: GNU General Public License v2 or later
         list-style: none;
         margin: 0px;
         letter-spacing: 0.04em;
-      }
-
-      .left_col_box {
-        margin: 0;
-        color: $color4;
-        list-style: none;
-
-        ul {
-          margin: 0;
-          padding: 0;
-
-          li {
-            list-style: none;
-            text-align: center;
-            height: 40px;
-            line-height: 40px;
-            color: $color4;
-
-            a {
-              font-size: 0.85em;
-              height: 100%;
-              padding: 0;
-              line-height: 40px;
-              text-align: center;
-              text-decoration: none;
-              width: 100%;
-              color: $color9;
-              list-style: none;
-              margin: 0;
-              letter-spacing: 0.05em;
-            }
-          }
-        }
-      }
+      }    
 
       /*side bar navigation blog and custom posts*/
-      .blog_box {
+      section.clashvibes_left_column_box {
         list-style: none;
         width: 96%;
         margin: 0 auto;
 
-        p {
-          font-family: $font-main;
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 1em;
-            color: $color2a;
-            text-align: center;
-            letter-spacing: 0.04em;
-          }
-        }
-
+        
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -1057,7 +1026,7 @@ License: GNU General Public License v2 or later
             text-align: center;
             height: 40px;
             line-height: 40px;
-            margin: 3% 0;
+            margin: 0;
             padding: 0;
             font-size: 1.2em;
           }
@@ -1130,7 +1099,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -1550,7 +1519,7 @@ License: GNU General Public License v2 or later
             margin: 0 auto;
             border: $color11 solid 1px;
             padding: 0.5em;
-            background-color: rgb(12, 14, 12);
+            background-color: $color4;
             display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
@@ -1615,11 +1584,11 @@ License: GNU General Public License v2 or later
 
             div#progress {
               width: 64%;
-              -webkit-flex: 0 0 auto;
-              -ms-flex: 0 0 auto;
-              flex: 0 0 auto;
+              -webkit-flex: 1 0 auto;
+              -ms-flex: 1 0 auto;
+              flex: 1 0 auto;
               display: inline-block;
-              margin: 0 0.2em;
+              margin: 0 0 0 0.2em;
               background-color: $color;
               position: relative;
 
@@ -1717,8 +1686,7 @@ License: GNU General Public License v2 or later
               }
 
               input[type="range"] {
-                width: 75%;
-                clear: both;
+                width: 78%;                clear: both;
                 display: inline-block;
                 height: 32px;
               }
@@ -1788,7 +1756,7 @@ License: GNU General Public License v2 or later
               list-style: none;
               line-height: 39px;
               height: 40px;
-              background-color: $color2a;
+              background-color: $color2;
               color: $color4;
               text-indent: 0;
               margin-bottom: 0.25em;
@@ -1894,8 +1862,8 @@ License: GNU General Public License v2 or later
         height: auto;
         h2 {
           margin-bottom: 0.2em;
-          color: $color2;
-          background-color: $color7;
+          color: $color;
+          background-color: $color4;
         }
         span {
           display: inline-block;
@@ -2063,10 +2031,10 @@ License: GNU General Public License v2 or later
     width: 92%;
 
     h1 {
-      margin: 0.5em 0;
+      font-size: 1.5em;
 
       a {
-        font-size: 0.95em;
+        font-size: 1em;
 
         &:hover {
           text-decoration: none;
@@ -2136,7 +2104,7 @@ License: GNU General Public License v2 or later
 
  
     main#clashvibes_content {
-      min-height: 440px;
+      min-height: 1200px;
     }    
 
     h1 {
@@ -2175,11 +2143,7 @@ License: GNU General Public License v2 or later
     }
 
     
-    h1 {
-      text-indent: 0.5em;
-      font-size: 1.25em;
-    }
-
+    
     div.results {
       article.events_box {
         width: 19%;
@@ -2225,36 +2189,31 @@ License: GNU General Public License v2 or later
     #audio_releases_section {
       padding: 0;
 
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box {
-        width: 19.25%;
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box {
+        width: 19.2%;
         min-height: 280px;
 
-        h1 {
-          font-size: 0.9em;
-          line-height: 30px;
-        }
-
-        
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
           height: auto;
-
-          img {
-            width: 50%;
+          width: 50%;          
+          
+        }
+        figcaption {
+          margin: 0 auto;
+          h1 {
+            font-size: 0.9em;
+            line-height: 30px;
           }
 
-          figcaption {
-            margin: 0 auto;
+          a.Morebutton {
+            font-size: 0.9em;
 
-            a.Morebutton {
-              font-size: 0.9em;
-
-              &:hover {
-                letter-spacing: 0.055em;
-              }
+            &:hover {
+              letter-spacing: 0.055em;
             }
           }
         }
@@ -2370,37 +2329,12 @@ License: GNU General Public License v2 or later
         font-size: 0.85em;
       }
 
-      .left_col_box {
-        list-style: none;
+     
 
-        ul {
-          padding: 0;
-
-          li {
-            list-style: none;
-
-            a {
-              font-size: 0.8em;
-              
-            }
-          }
-        }
-      }
-
-      .blog_box {
+      section.clashvibes_left_column_box {
         width: 96%;
 
-        p {
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 0.95em;
-            
-          }
-        }
-
+        
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -2444,7 +2378,7 @@ License: GNU General Public License v2 or later
               }
 
               a {
-                font-size: 0.9em;
+                font-size: 1em;
 
                 &:hover {
                   font-weight: bold;
@@ -2461,7 +2395,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -2714,7 +2648,7 @@ License: GNU General Public License v2 or later
             }
 
             div#progress {
-              width: 63%;
+              width: 64%;
 
               span#play_progress {
                 display: block;
@@ -2748,7 +2682,7 @@ License: GNU General Public License v2 or later
               }
 
               input[type="range"] {
-                width: 75%;
+                width: 78%;
                 height: 32px;
               }
             }
@@ -2790,9 +2724,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            p {
-              width: 79%;
-            }
+           
           }
         }
 
@@ -2918,10 +2850,10 @@ License: GNU General Public License v2 or later
     width: 94%;
 
     h1 {
-      margin: 0.5em 0;
+      font-size: 1.5em;
 
       a {
-        font-size: 0.9em;
+        font-size: 1em;
 
         &:hover {
           text-decoration: none;
@@ -3005,7 +2937,7 @@ License: GNU General Public License v2 or later
 
    
     main#clashvibes_content {
-      min-height: 440px;
+      min-height: 1100px;
     }
 
        
@@ -3044,6 +2976,60 @@ License: GNU General Public License v2 or later
       }
     }
 
+    /********** login form **********/
+    #contactform {
+      margin: 1% auto;
+
+      div.wpcf7 {
+ 
+
+        span.ajax-loader {
+
+          margin: 3% auto;
+
+        }
+
+        form {
+          padding: 0.5em;
+
+          p {
+            padding: 1% 0;
+
+            label {
+
+              .wpcf7-form-control-wrap {
+                height: auto;
+                display: block;
+              }
+
+              textarea {
+
+                width: 100%;
+              }
+
+              input[type="text"],
+              input[type="email"],
+              select {
+
+                height: 35px;
+              }
+
+              
+            }
+
+            input[type="submit"] {
+
+              font-size: 1.1em;
+
+              &:hover {
+                background-color: $color1;
+
+              }
+            }
+          }
+        }
+      }
+    }
         
     div.results {
       margin: 0 0 0.5em 0;
@@ -3092,36 +3078,32 @@ License: GNU General Public License v2 or later
     #audio_releases_section {
       margin: 0 0 0.5em 0;
 
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box {
-        width: 19.325%;
-        min-height: 280px;
-
-        h1 {
-          font-size: 0.8em;
-          
-        }
-
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box {
+        width: 19.2%;
+        min-height: 265px;
         
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
           height: auto;
-
-          img {
-            width: 50%;
+          width: 50%; 
+        }
+        figcaption {
+          margin: 0 auto;
+          h1 {
+            font-size: 0.85em;
+            line-height:25px;
+            
+            
           }
 
-          figcaption {
-            margin: 0 auto;
+          a.Morebutton {
+            font-size: 0.85em;
 
-            a.Morebutton {
-              font-size: 0.85em;
-
-              &:hover {
-                letter-spacing: 0.05em;
-              }
+            &:hover {
+              letter-spacing: 0.05em;
             }
           }
         }
@@ -3230,38 +3212,13 @@ License: GNU General Public License v2 or later
         font-size: 0.8em;
       }
 
-      .left_col_box {
-        list-style: none;
-
-        ul {
-          padding: 0;
-
-          li {
-            list-style: none;
-
-            a {
-              font-size: 0.8em;
-              
-            }
-          }
-        }
-      }
+      
 
       /*side bar navigation blog and custom posts*/
-      .blog_box {
+      section.clashvibes_left_column_box {
         width: 96%;
 
-        p {
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 0.9em;
-            
-          }
-        }
-
+        
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -3319,7 +3276,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -3527,7 +3484,7 @@ License: GNU General Public License v2 or later
             }
 
             div#progress {
-              width: 62%;
+              width: 64%;
 
               span#play_progress {
                 display: block;
@@ -3597,7 +3554,7 @@ License: GNU General Public License v2 or later
               font-size: 0.8em;
 
               span.post-meta-key {
-                width: 21%;
+                width: 20%;
               }
 
               p {
@@ -3605,9 +3562,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            p {
-              width: 77%;
-            }
+            
           }
         }
 
@@ -3735,10 +3690,10 @@ License: GNU General Public License v2 or later
     margin-right: 0;
     margin-left: 0;
     h1 {
-      margin: 0.5em 0;
+      font-size: 1.5em;
 
       a {
-        font-size: 0.9em;
+        font-size: 1em;
 
         &:hover {
           text-decoration: none;
@@ -3863,36 +3818,31 @@ License: GNU General Public License v2 or later
     #audio_releases_section {
       margin: 0 0 0.5em 0;
 
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box {
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box {
         width: 24.115%;
         min-height: 280px;
-
-        h1 {
-          font-size: 0.75em;
-          line-height: 25px;
-        }
-
-       
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
+               
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
           height: auto;
-
-          img {
-            width: 60%;
+          width: 60%;
+          
+        }
+        figcaption {
+          margin: 0 auto;
+          h1 {
+            font-size: 0.75em;
+            line-height: 25px;
           }
 
-          figcaption {
-            margin: 0 auto;
+          a.Morebutton {
+            font-size: 0.85em;
 
-            a.Morebutton {
-              font-size: 0.85em;
-
-              &:hover {
-                letter-spacing: 0.05em;
-              }
+            &:hover {
+              letter-spacing: 0.05em;
             }
           }
         }
@@ -4002,38 +3952,13 @@ License: GNU General Public License v2 or later
         font-size: 0.8em;
       }
 
-      .left_col_box {
-        list-style: none;
-
-        ul {
-          padding: 0;
-
-          li {
-            list-style: none;
-
-            a {
-              font-size: 0.8em;
-              
-            }
-          }
-        }
-      }
+      
 
       
-      .blog_box {
+      section.clashvibes_left_column_box {
         width: 96%;
 
-        p {
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 0.85em;
-            
-          }
-        }
-
+        
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -4090,7 +4015,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -4387,9 +4312,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            p {
-              width: 76%;
-            }
+            
           }
         }
 
@@ -4472,10 +4395,10 @@ License: GNU General Public License v2 or later
     width: 98%;
 
     h1 {
-      margin: 0.5em 0;
+      font-size: 1.4em;
 
       a {
-        font-size: 0.9em;
+        font-size: 1em;
 
         &:hover {
           text-decoration: none;
@@ -4566,6 +4489,61 @@ License: GNU General Public License v2 or later
       }
     }
 
+    /********** login form **********/
+    #contactform {
+      margin: 1% auto;
+
+      div.wpcf7 {
+ 
+
+        span.ajax-loader {
+
+          margin: 3% auto;
+
+        }
+
+        form {
+          padding: 0.5em;
+
+          p {
+            padding: 1% 0;
+
+            label {
+
+              .wpcf7-form-control-wrap {
+                height: auto;
+                display: block;
+              }
+
+              textarea {
+
+                width: 100%;
+              }
+
+              input[type="text"],
+              input[type="email"],
+              select {
+
+                height: 35px;
+              }
+
+              
+            }
+
+            input[type="submit"] {
+
+              font-size: 1.1em;
+
+              &:hover {
+                background-color: $color1;
+
+              }
+            }
+          }
+        }
+      }
+    }
+
     
     h2 {
       font-size: 1.2em;
@@ -4596,35 +4574,30 @@ License: GNU General Public License v2 or later
     #audio_releases_section {
       margin-bottom: 0.5em;
 
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box {
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box {
         width: 32.1%;
         min-height: 300px;
 
-        h1 {
-          font-size: 0.75em;
-        }
-
-        
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
           height: auto;
-
-          img {
-            width: 60%;
+          width: 60%;          
+          
+        }
+        figcaption {
+          margin: 0 auto;
+          h1 {
+            font-size: 0.75em;
           }
 
-          figcaption {
-            margin: 0 auto;
+          a.Morebutton {
+            font-size: 0.8em;
 
-            a.Morebutton {
-              font-size: 0.8em;
-
-              &:hover {
-                letter-spacing: 0.05em;
-              }
+            &:hover {
+              letter-spacing: 0.05em;
             }
           }
         }
@@ -4738,38 +4711,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      .left_col_box {
-        list-style: none;
-
-        ul {
-          padding: 0;
-
-          li {
-            list-style: none;
-
-            a {
-              font-size: 0.75em;
-              
-            }
-          }
-        }
-      }
-
       
-      .blog_box {
+      
+      section.clashvibes_left_column_box {
         width: 96%;
 
-        p {
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 0.8em;
-            
-          }
-        }
-
+        
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -4828,7 +4775,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -5128,12 +5075,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            p {
-              width: 97%;
-              display: block;
-              line-height: 20px;
-              padding: 1em 0.5em;
-            }
+            
           }
         }
 
@@ -5255,11 +5197,10 @@ License: GNU General Public License v2 or later
     width: 98%;
 
     h1 {
-      width: 100%;
+      font-size: 1.4em;
 
       a {
-        font-size: 0.85em;
-        display: block;
+        font-size: 1em;
 
         &:hover {
           text-decoration: none;
@@ -5405,40 +5346,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      .left_col_box {
-        margin: 0;
-        list-style: none;
-
-        ul {
-          margin: 0;
-          padding: 0;
-
-          li {
-            list-style: none;
-
-            a {
-              position: relative;
-              
-            }
-          }
-        }
-      }
-
+      
       /*side bar navigation blog and custom posts*/
-      .blog_box {
+      section.clashvibes_left_column_box {
         width: 96%;
 
-        p {
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 0.8em;
-            
-          }
-        }
-
+        
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           position: unset;
@@ -5504,7 +5417,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -5789,9 +5702,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            p {
-              width: 97%;
-            }
+            
           }
         }
 
@@ -5858,33 +5769,28 @@ License: GNU General Public License v2 or later
     #audio_releases_section {
       width: 100%;
 
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box {
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box {
         width: 32%;
-
-        h1 {
-          font-size: 0.8em;
+        
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
+          height: auto;
+          width: 60%;          
           
         }
-
-        
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
-          height: auto;
-
-          img {
-            width: 60%;
+        figcaption {
+          margin: 0 auto;
+          h1 {
+            font-size: 0.8em;
+            
           }
 
-          figcaption {
-            margin: 0 auto;
-
-            a.Morebutton {
-              &:hover {
-                letter-spacing: 0.05em;
-              }
+          a.Morebutton {
+            &:hover {
+              letter-spacing: 0.05em;
             }
           }
         }
@@ -6036,11 +5942,10 @@ License: GNU General Public License v2 or later
     width: 98%;
 
     h1 {
-      width: 100%;
+      font-size: 1.3em;
 
       a {
-        font-size: 0.85em;
-        display: block;
+        font-size: 1em;
 
         &:hover {
           text-decoration: none;
@@ -6155,40 +6060,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      .left_col_box {
-        margin: 0;
-        list-style: none;
-
-        ul {
-          margin: 0;
-          padding: 0;
-
-          li {
-            list-style: none;
-
-            a {
-              position: relative;
-              font-size: 0.75em;
-            }
-          }
-        }
-      }
-
+      
       /*/*side bar navigation blog and custom posts*/
-      .blog_box {
+      section.clashvibes_left_column_box {
         width: 96%;
 
-        p {
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 0.8em;
-            
-          }
-        }
-
+        
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -6249,7 +6126,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -6528,9 +6405,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            p {
-              width: 97%;
-            }
+            
           }
         }
       }
@@ -6565,34 +6440,84 @@ License: GNU General Public License v2 or later
       }
     }
 
+    /********** login form **********/
+    #contactform {
+      margin: 1% auto;
+
+      div.wpcf7 {
+ 
+
+        span.ajax-loader {
+
+          margin: 3% auto;
+
+        }
+
+        form {
+          padding: 0.25em;
+
+          p {
+            padding: 1% 0;
+
+            label {
+
+              .wpcf7-form-control-wrap {
+                height: auto;
+                display: block;
+              }
+
+              textarea {
+
+                width: 100%;
+              }
+
+              input[type="text"],
+              input[type="email"],
+              select {
+
+                height: 35px;
+              }
+
+              
+            }
+
+            input[type="submit"] {
+
+              font-size: 1.1em;
+
+              &:hover {
+                background-color: $color1;
+
+              }
+            }
+          }
+        }
+      }
+    }
+
         
     #new_releases_section,
     #video_releases_section,
     #audio_releases_section {
       width: 100%;
 
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box{
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box{
         width: 32%;
-
-        h1 {
-          font-size: 0.8em;
-          
-        }
-
         
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
           height: auto;
-
-          img {
-            width: 60%;
-          }
-
+          width: 60%;
+          
           figcaption {
             margin: 0 auto;
+            h1 {
+              font-size: 0.8em;
+              
+            }
 
             a.Morebutton {
               &:hover {
@@ -6728,11 +6653,10 @@ License: GNU General Public License v2 or later
     width: 98%;
 
     h1 {
-      width: 100%;
+      font-size: 1.3em;
 
       a {
-        font-size: 0.8em;
-        display: block;
+        font-size: 1em;
 
         &:hover {
           text-decoration: none;
@@ -6833,40 +6757,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      .left_col_box {
-        margin: 0;
-        list-style: none;
-
-        ul {
-          margin: 0;
-          padding: 0;
-
-          li {
-            list-style: none;
-
-            a {
-              position: relative;
-              font-size: 0.75em;
-            }
-          }
-        }
-      }
-
+      
       /*/*side bar navigation blog and custom posts*/
-      .blog_box {
+      section.clashvibes_left_column_box {
         width: 96%;
 
-        p {
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 0.8em;
-            
-          }
-        }
-
+        
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -6927,7 +6823,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -7193,11 +7089,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            p {
-              width: 97%;
-
-              line-height: 20px;
-            }
+            
           }
         }
         .navigation {
@@ -7259,28 +7151,23 @@ License: GNU General Public License v2 or later
     #audio_releases_section {
       width: 100%;
 
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box {
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box {
         width: 48%;
-
-        h1 {
-          font-size: 0.8em;
-         
-        }
-
         
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
           height: auto;
-
-          img {
-            width: 55%;
-          }
+          width: 55%;
 
           figcaption {
             margin: 0 auto;
+            h1 {
+              font-size: 0.8em;
+             
+            }
 
             a.Morebutton {
               &:hover {
@@ -7422,11 +7309,10 @@ License: GNU General Public License v2 or later
     width: 100%;
 
     h1 {
-      width: 100%;
+      font-size: 1.3em;
 
       a {
-        font-size: 0.8em;
-        display: block;
+        font-size: 1em;
 
         &:hover {
           text-decoration: none;
@@ -7526,40 +7412,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      .left_col_box {
-        margin: 0;
-        list-style: none;
-
-        ul {
-          margin: 0;
-          padding: 0;
-
-          li {
-            list-style: none;
-
-            a {
-              position: relative;
-              font-size: 0.75em;
-            }
-          }
-        }
-      }
-
+      
       /*/*side bar navigation blog and custom posts*/
-      .blog_box {
+      section.clashvibes_left_column_box {
         width: 96%;
 
-        p {
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 0.8em;
-            
-          }
-        }
-
+        
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -7621,7 +7479,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -7942,29 +7800,24 @@ License: GNU General Public License v2 or later
     #audio_releases_section {
       width: 100%;
 
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box {
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box {
         width: 48%;
-
-        h1 {
-          font-size: 0.8em;
-          line-height: 20px;
-          text-indent: 0;
-        }
-
         
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
           height: auto;
-
-          img {
-            width: 60%;
-          }
-
+          width: 60%;
+          
           figcaption {
             margin: 0 auto;
+            h1 {
+              font-size: 0.8em;
+              line-height: 20px;
+              text-indent: 0;
+            }
 
             a.Morebutton {
               &:hover {
@@ -8093,11 +7946,10 @@ License: GNU General Public License v2 or later
 
   #container {
     h1 {
-      width: 100%;
+      font-size: 1.2em;
 
       a {
-        font-size: 0.8em;
-        display: block;
+        font-size: 1em;
 
         &:hover {
           text-decoration: none;
@@ -8175,40 +8027,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      .left_col_box {
-        margin: 0;
-        list-style: none;
-
-        ul {
-          margin: 0;
-          padding: 0;
-
-          li {
-            list-style: none;
-
-            a {
-              position: relative;
-              font-size: 0.75em;
-            }
-          }
-        }
-      }
-
+      
       /*/*side bar navigation blog and custom posts*/
-      .blog_box {
+      section.clashvibes_left_column_box {
         width: 96%;
 
-        p {
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 0.8em;
-            
-          }
-        }
-
+        
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -8269,7 +8093,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -8613,32 +8437,29 @@ License: GNU General Public License v2 or later
     #audio_releases_section {
       width: 100%;
 
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box {
-        width: 48%;
-
-        h1 {
-          font-size: 0.75em;
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box {
+        width: 48%;        
+        
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
+          height: auto;
+          width: 60%;
+          
+          
         }
 
-        
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
-          height: auto;
-
-          img {
-            width: 60%;
+        figcaption {
+          margin: 0 auto;
+          h1 {
+            font-size: 0.75em;
           }
 
-          figcaption {
-            margin: 0 auto;
-
-            a.Morebutton {
-              &:hover {
-                letter-spacing: 0.05em;
-              }
+          a.Morebutton {
+            &:hover {
+              letter-spacing: 0.05em;
             }
           }
         }
@@ -8770,11 +8591,10 @@ License: GNU General Public License v2 or later
 
   #container {
     h1 {
-      width: 100%;
+      font-size: 1.2em;
 
       a {
-        font-size: 0.8em;
-        display: block;
+        font-size: 1em;
 
         &:hover {
           text-decoration: none;
@@ -8853,40 +8673,10 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      .left_col_box {
-        margin: 0;
-        list-style: none;
-
-        ul {
-          margin: 0;
-          padding: 0;
-
-          li {
-            list-style: none;
-
-            a {
-              position: relative;
-              font-size: 0.75em;
-            }
-          }
-        }
-      }
-
-      /*/*side bar navigation blog and custom posts*/
-      .blog_box {
+           /*/*side bar navigation blog and custom posts*/
+      section.clashvibes_left_column_box {
         width: 96%;
-
-        p {
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 0.8em;
-            
-          }
-        }
-
+       
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -8947,7 +8737,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -9273,32 +9063,28 @@ License: GNU General Public License v2 or later
       align-items: center;
       width: 100%;
 
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box {
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box {
         width: 68%;
         min-height: 300px;
-        h1 {
-          font-size: 0.9em;
-        }
-
         
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
           height: auto;
-
-          img {
-            width: 60%;
+          width: 60%; 
+          
+        }
+        figcaption {
+          margin: 0 auto;
+          h1 {
+            font-size: 0.9em;
           }
 
-          figcaption {
-            margin: 0 auto;
-
-            a.Morebutton {
-              &:hover {
-                letter-spacing: 0.05em;
-              }
+          a.Morebutton {
+            &:hover {
+              letter-spacing: 0.05em;
             }
           }
         }
@@ -9520,20 +9306,10 @@ License: GNU General Public License v2 or later
       }
 
       /*/*side bar navigation blog and custom posts*/
-      .blog_box {
+      section.clashvibes_left_column_box {
         width: 96%;
 
-        p {
-          margin-left: 5px;
-        }
-
-        h3 {
-          a {
-            font-size: 0.8em;
-            
-          }
-        }
-
+        
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -9594,7 +9370,7 @@ License: GNU General Public License v2 or later
         }
 
         span {
-          color: $color11a;
+          color: $color11;
         }
       }
     }
@@ -9904,39 +9680,37 @@ License: GNU General Public License v2 or later
       width: 100%;
       
 
-      .new_releases_box,
-      .video_releases_box,
-      .audio_releases_box{
+      figure.new_releases_box,
+      figure.video_releases_box,
+      figure.audio_releases_box{
         width: 70%;
 
-        h1 {
-          font-size: 0.85em;
-        }
-
-        a {
-          font-size: 0.7em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-
-        figure.audio-thumb,
-        figure.video-thumb,
-        figure.new-release-thumb {
+        
+        img.audio-thumb,
+        img.video-thumb,
+        img.new-release-thumb {
           height: auto;
+          width: 65%;
 
-          img {
-            width: 65%;
+          
+        }
+        figcaption {
+          margin: 0 auto;
+          h1 {
+            font-size: 0.85em;
+          }
+  
+          a {
+            font-size: 0.7em;
+  
+            &:hover {
+              font-weight: bold;
+            }
           }
 
-          figcaption {
-            margin: 0 auto;
-
-            a.Morebutton {
-              &:hover {
-                letter-spacing: 0.05em;
-              }
+          a.Morebutton {
+            &:hover {
+              letter-spacing: 0.05em;
             }
           }
         }

@@ -19,14 +19,14 @@
 <aside id="clashvibes_left_column">
 
 	<h1>
-		<?php esc_html_e( 'Search Audio', 'clashvibes' ); ?>
+		<?php esc_html_e( 'Audio', 'clashvibes' ); ?>
 	</h1>
 
 	<section id="clashvibes_login">
 		<?php get_search_form(); ?>
 	</section>
 
-	<div class="blog_box">
+	<section class="clashvibes_left_column_box">
 
 		<?php
 			wp_nav_menu(
@@ -37,7 +37,7 @@
 			);
 		?>
 
-	</div>
+	</section>
 
 	<div class="clearfix"></div>
 </aside>

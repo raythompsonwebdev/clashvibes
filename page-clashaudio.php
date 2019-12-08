@@ -47,26 +47,27 @@
 				$the_query->the_post();
 				?>
 
-		<article class="audio_releases_box">
+		
 
-			<h1>
-				<?php the_title(); ?>
-			</h1>
+			
 
-			<figure class="audio-thumb">
-				<?php the_post_thumbnail(); ?>
+			<figure class="audio_releases_box">
+
+				<?php the_post_thumbnail('thumbnail', array('class' => 'audio-thumb')); ?>
 
 				<figcaption>
-
+				<h1>
+				<?php the_title(); ?>
+			</h1>
 					<a class="Morebutton" href="<?php echo esc_url( get_permalink() ); ?>" alt="">
-					<?php esc_html_e( 'Listen', 'clashvibes' ); ?></a>
+					<?php _e( 'Listen', 'clashvibes' ); ?></a>
 
 
 				</figcaption>
 
 			</figure>
 
-		</article>
+		
 
 				<?php
 			endwhile;
@@ -90,10 +91,8 @@
 		</article>
 
 			<?php
-			endif;
-
-		wp_reset_postdata();
-		?>
+			endif;?>
+			<?php wp_reset_query(); ?>
 
 		<div class="clearfix"></div>
 	</section>

@@ -15,6 +15,7 @@
  */
 ?>  
 
+<div class="clearfix"></div>
   </main><!--end of main content-->
 
 	<!--footer-->

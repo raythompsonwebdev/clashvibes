@@ -147,6 +147,8 @@
 			</ul>
 
 		</footer>
+
+		
 		<div class="navigation">
 			<h2><?php esc_html_e( 'Navigation', 'clashvibes' ); ?></h2>
 				<?php previous_post_link('<span>%link</span>'); ?>

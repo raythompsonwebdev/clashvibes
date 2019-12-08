@@ -138,7 +138,7 @@
                 h2.site-description{
                     text-indent: 0.5em;
                     float: none;
-                    color:$color5a;
+                    color:$color5;
                     display: block;
                     width: 100%;
                     line-height: 20px;
@@ -393,7 +393,7 @@
                             @include Transition( all 0.2s linear 0s);
                             &:hover {
                                 font-weight: bold;
-                                background-color: $color2a;
+                                background-color: $color2;
 
                                 color: $colors;
                             }
@@ -873,7 +873,7 @@
                 h3 {
                     a {
                         font-size: 1em;
-                        color: $color2a;
+                        color: $color2;
                         text-align: center;
                         letter-spacing: 0.05em;
                     }
@@ -994,7 +994,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
 
             }
@@ -1640,7 +1640,7 @@
                             list-style: none;
                             line-height: 39px;
                             height: 40px;
-                            background-color: $color2a;
+                            background-color: $color2;
                             color: $color4;
                             text-indent: 0;
                             margin-bottom:0.25em;
@@ -1648,7 +1648,7 @@
                             span.post-meta-key {
                                 width: 20%;
                                 float:left;
-                                display: inline-block;
+                                display: block;
                                 height: 40px;
                                 line-height: 40px;
                                 text-indent: 1%;
@@ -2405,7 +2405,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
 
             }
@@ -3348,7 +3348,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
 
             }
@@ -4280,7 +4280,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
 
             }
@@ -5189,7 +5189,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
 
             }
@@ -6048,7 +6048,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
 
             }
@@ -6941,7 +6941,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
 
             }
@@ -7797,7 +7797,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
             }
         }
@@ -8635,7 +8635,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
             }
         }
@@ -9544,7 +9544,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
             }
         }
@@ -10463,7 +10463,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
             }
         }
@@ -11385,7 +11385,7 @@
                 }
 
                 span {
-                    color: $color11a;
+                    color: $color11;
                 }
             }
         }

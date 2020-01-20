@@ -12,8 +12,8 @@ template-parts/content-events.php
 
 fonts/
 docs/
-phpcs.xml.dist
-
+phpcs.xml
+xmlrpc.php
 composer.json
 composer.lock
 videos/

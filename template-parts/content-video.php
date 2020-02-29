@@ -63,18 +63,18 @@ if ( have_posts() ) :
 			<video id="video_player" >
 
    
-				<?php  $urlmp4 = get_site_url(); ?>
+				
 
-				<source src="<?php echo esc_url( $urlmp4);?>/wp-content/uploads/sites/2/2019/08/<?php echo esc_html( $meta );?>.mp4" preload="metadata" type='video/mp4'  />
+				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Videos/');?><?php echo esc_html( $meta );?>.mp4" preload="metadata" type='video/mp4'  />
 
 
-				<?php  $urlmp3 = get_site_url(); ?>
+				
 
-				<source src="<?php echo esc_url( $urlmp3);?>/wp-content/uploads/sites/2/2019/08/<?php echo esc_html( $meta );?>.m4v" preload="metadata" type='video/m4v'  />
+				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Videos/');?><?php echo esc_html( $meta );?>.m4v" preload="metadata" type='video/m4v'  />
 
-				<?php $urlogg = get_site_url();?>
+			
 
-				<source src="<?php echo esc_url( $urlogg );?>/wp-content/uploads/sites/2/2019/08/<?php echo esc_html( $meta );?>.webm" preload="metadata" type='video/webm' />
+				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Videos/' );?><?php echo esc_html( $meta );?>.webm" preload="metadata" type='video/webm' />
 
 				<p><?php esc_html_e( 'Your browser does not support HTML5 video.', 'clashvibes' ); ?></p>
 

@@ -42,14 +42,6 @@
 
 		<?php clashvibes_post_thumbnail(); ?>
 
-	<?php else : ?>
-
-		<figure class="featuredImage">
-		<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
-			<img src="<?php echo esc_url('https://raythompsonwebdev.co.uk/wp-content/themes/clashvibes/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
-		</a>
-		</figure>
-
 	<?php endif; ?>
 
 	
@@ -71,10 +63,22 @@
 				get_the_title()
 			)
 		);
+
+		
 		
 		?>
+		<a href="<?php echo esc_url( get_permalink() ); ?>" class="read_more" rel="bookmark">
+			<?php
+				printf(
+					/* Translators: %s = Name of the current post. */
+						wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ), the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				);
+			?>
+	</a>
 	</div><!-- .entry-content -->
-
+	
+	
+			
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 				<?php clashvibes_entry_footer(); ?>

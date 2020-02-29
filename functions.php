@@ -61,6 +61,80 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 	 */
 	function clashvibes_theme_setup() {
 
+		//audio
+		register_meta(
+			'post',
+			'sound_system_name',
+			[
+				'object_subtype' => 'clash-audio',
+				'show_in_rest'   => true,
+			]
+		);
+
+		register_meta(
+			'post',
+			'sound_clash_year',
+			[
+				'object_subtype' => 'clash-audio',
+				'show_in_rest'   => true,
+			]
+		);
+
+		register_meta(
+			'post',
+			'sound_clash_location',
+			[
+				'object_subtype' => 'clash-audio',
+				'show_in_rest'   => true,
+			]
+		);
+
+		register_meta(
+			'post',
+			'sound_clash_url',
+			[
+				'object_subtype' => 'clash-audio',
+				'show_in_rest'   => true,
+			]
+		);
+
+		//video
+		register_meta(
+			'post',
+			'sound_system_name',
+			[
+				'object_subtype' => 'clash-videos',
+				'show_in_rest'   => true,
+			]
+		);
+
+		register_meta(
+			'post',
+			'sound_clash_year',
+			[
+				'object_subtype' => 'clash-videos',
+				'show_in_rest'   => true,
+			]
+		);
+
+		register_meta(
+			'post',
+			'sound_clash_location',
+			[
+				'object_subtype' => 'clash-videos',
+				'show_in_rest'   => true,
+			]
+		);
+
+		register_meta(
+			'post',
+			'sound_clash_url',
+			[
+				'object_subtype' => 'clash-videos',
+				'show_in_rest'   => true,
+			]
+		);
+
 		/**
 		 * Text domain.
 		 */
@@ -110,10 +184,10 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// Create new image sizes.
-		add_image_size( 'featured-image', 783, 250 );
-		add_image_size( 'post-image', 284, 9999 );
+		add_image_size( 'featured-image', 800, 250 );
+		add_image_size( 'post-image', 400, 9999 );
 
-		set_post_thumbnail_size( 250, 250, true );
+		set_post_thumbnail_size( 300, 300, true );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -391,14 +465,16 @@ add_filter( 'upload_mimes', 'clashvibes_cc_mime_types' );
  * @global array $post post array.
  * @param array $output post array output.
  */
-function clashvibes_excerpt_read_more_link( $output ) {
-	global $post;
+// function clashvibes_excerpt_read_more_link( $output ) {
 
-	$output = '<a href="' . esc_url(get_permalink( $post->ID )) . '" class="read_more"> Continue...</a>';
+// 	global $post;
 
-	return $output;
-}
-add_filter( 'the_excerpt', 'clashvibes_excerpt_read_more_link' );
+// 	$output = '<a href="' . esc_url(get_permalink( $post->ID )) . '" class="read_more">..Continue</a>';
+	
+
+// 	return $output;
+// }
+// add_filter( 'the_excerpt', 'clashvibes_excerpt_read_more_link' );
 
 
 /**

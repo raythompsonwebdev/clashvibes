@@ -26,18 +26,21 @@ get_header(); ?>
 
 
 
- <article class="events_box">
+<article class="events_box">
 		
-		<figure class="events">
-			<img src="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php esc_attr_e( 'sliderimage', 'raythompsonwebdev-com' ); ?>">
-			<figcaption class="event-text">
-			
-			</figcaption>
+	<figure class="events">
 
-		</figure>
+		<img src="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php esc_attr_e( 'sliderimage', 'raythompsonwebdev-com' ); ?>">
+		
+		<figcaption class="event-text">
+		
+		</figcaption>
 
-		<input type="submit" value="Find Event" name="event" id="event-submit-btn" />
-	</article> 
+	</figure>
+
+	<input type="submit" value="Find Event" name="event" id="event-submit-btn" />
+
+</article> 
 
 </div>
 

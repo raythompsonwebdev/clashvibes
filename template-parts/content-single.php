@@ -39,17 +39,10 @@ if ( have_posts() ) :
 		<!--featured Image-->
 		
 
-			<?php if ( has_post_thumbnail() ) : ?>
+			<?php if (has_post_thumbnail() ) : ?>
 
 				<?php clashvibes_post_thumbnail(); ?>
-
-			<?php else : ?>
-
-				<figure class="featuredImage">
-					<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
-					<img src="<?php echo esc_url('https://raythompsonwebdev.co.uk/wordpress/wp-content/themes/clashvibes/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
-					</a>
-				</figure>
+			
 
 			<?php endif; ?>
 
@@ -76,6 +69,12 @@ if ( have_posts() ) :
 				$default = array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
 					'after'  => '</div>',
+					'link_before'       => '<span class="page-link">',
+					'link_after'        => '</span>',
+					'next_or_number'    => 'next',
+					'separator'         => ' | ',
+					'nextpagelink'      => __( 'Next &raquo', 'textdomain' ),
+					'previouspagelink'  => __( '&laquo Previous', 'textdomain' ),
 				);
 				wp_link_pages($default);
 			

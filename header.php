@@ -180,6 +180,8 @@
           array(
             'menu'      => 'mobile',
             'container' => 'ul',
+            'fallback_cb' => false,
+            'theme_location' => 'mobile',
           )
         );
       ?>
@@ -194,6 +196,8 @@
             array(
               'menu'      => 'Main',
               'container' => 'ul',
+              'fallback_cb' => false,
+              'theme_location' => 'Main',
             )
           );
 				?>

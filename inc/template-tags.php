@@ -138,9 +138,7 @@ if ( ! function_exists( 'clashvibes_post_thumbnail' ) ) :
 		<?php else : ?>
 		
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-			<?php
-				the_post_thumbnail('post-image');
-			?>
+			<?php	the_post_thumbnail('post-image');	?>
 		</a>
 		
 		

@@ -5,13 +5,15 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package clashvibes
- *
  */
+
 ?>
 
-<?php if ( have_posts() ) :
+<?php
+if ( have_posts() ) :
 	while ( have_posts() ) :
-		the_post(); ?>
+		the_post();
+		?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -37,7 +39,7 @@
 
 		</header>
 
-		<?php clashvibes_post_thumbnail();  ?>
+		<?php clashvibes_post_thumbnail(); ?>
 
 		<div class="audioExcerpt">
 
@@ -51,22 +53,18 @@
 
 				$meta = get_post_meta( $post->ID, 'sound_system_url', true );
 
-				//$urlmp3 = get_site_url('');
-
 			?>
 
 			<audio id="result_player" >
 
-      
-				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/');?><?php echo esc_html( $meta );?>.mp3" preload="metadata" type='audio/mpeg'  />
+	  
+				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.mp3" preload="metadata" type='audio/mpeg'  />
 
-				<?php //$urlogg = get_site_url();?>
+			
+				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.ogg" preload="metadata" type='audio/ogg' />
 
-				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' );?><?php echo esc_html( $meta );?>.ogg" preload="metadata" type='audio/ogg' />
-
-				<?php //$urlma = get_site_url();?>
-
-				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' );?><?php echo esc_html( $meta );?>.m4a" preload="metadata" type='audio/mp4' />
+				
+				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.m4a" preload="metadata" type='audio/mp4' />
 
 				<p><?php esc_html_e( 'Your browser does not support HTML5 audio.', 'clashvibes' ); ?></p>
 
@@ -83,7 +81,7 @@
 				</div>
 
 				<div id="progress">
-        <progress value="0" id="playback"></progress>
+		<progress value="0" id="playback"></progress>
 				<span id="load_progress"></span>
 				<span id="play_progress"></span>
 				</div>
@@ -119,24 +117,24 @@
 				<li>
 
 					<span class="post-meta-key">
-					<?php $SoundName = get_post_meta( get_the_ID(),'sound_system_name', true); ?>
+					<?php $sound_name = get_post_meta( get_the_ID(), 'sound_system_name', true ); ?>
 					<?php esc_html_e( 'Sound System Name', 'clashvibes' ); ?>
 					</span>
-					<p><?php echo esc_html($SoundName); ?> </p>
+					<p><?php echo esc_html( $sound_name ); ?> </p>
 				</li>
 				<li>
 					<span class="post-meta-key">
-					<?php $SoundYear = get_post_meta( get_the_ID(),'sound_clash_year', true); ?>
+					<?php $sound_year = get_post_meta( get_the_ID(), 'sound_clash_year', true ); ?>
 					<?php esc_html_e( 'Sound Clash Year', 'clashvibes' ); ?>
 					</span>
-					<p><?php echo esc_html($SoundYear); ?>  </p>
+					<p><?php echo esc_html( $sound_year ); ?>  </p>
 				</li>
 				<li>
 					<span class="post-meta-key">
-					<?php $SoundLocation = get_post_meta( get_the_ID(),'sound_clash_location', true); ?>
+					<?php $clash_location = get_post_meta( get_the_ID(), 'sound_clash_location', true ); ?>
 					<?php esc_html_e( 'Sound Clash Location', 'clashvibes' ); ?>
 					</span>
-					<p><?php echo esc_html($SoundLocation); ?>  </p>
+					<p><?php echo esc_html( $clash_location ); ?>  </p>
 				</li>
 
 			</ul>
@@ -146,11 +144,11 @@
 		
 		<div class="navigation">
 			<h2><?php esc_html_e( 'More Clashes', 'clashvibes' ); ?></h2>
-				<?php previous_post_link('<span>%link</span>', '%title'); ?>
-				<?php next_post_link('<span>%link </span>', '%title'); ?>
+				<?php previous_post_link( '<span>%link</span>', '%title' ); ?>
+				<?php next_post_link( '<span>%link </span>', '%title' ); ?>
 		</div>
 	</article>
-	<?php
+		<?php
 	endwhile;
 
 	else :

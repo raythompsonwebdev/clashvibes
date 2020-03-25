@@ -5,12 +5,14 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package clashvibes
- * 
  */
 ?>
 
-<?php if ( have_posts() ) :
-	while ( have_posts() ) : the_post(); ?>
+<?php
+if ( have_posts() ) :
+	while ( have_posts() ) :
+		the_post();
+		?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -30,28 +32,29 @@
 	<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
 
 		<?php if ( has_post_thumbnail() ) : ?>
-
-			<?php clashvibes_post_thumbnail(); ?>
-
-		<?php else : ?>
-
-			<figure class="featuredImage">
-				
-				<img src="<?php echo esc_url('https://raythompsonwebdev.co.uk/wordpress/wp-content/themes/clashvibes/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
-				
-			</figure>
-
-		<?php endif; ?>
+					
+					<?php clashvibes_post_thumbnail(); ?>
+			
+								<?php else : ?>
+			
+									<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+										
+											<img src="<?php echo home_url( '/' ); ?>wp-content/uploads/2020/03/placeholder-1.jpg"
+												alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+										
+								</a>
+															
+							<?php endif; ?>
 
 	</a>
 	
-	<div class="entry-summary">
-	<?php
+	<div class="entry-content">
+		<?php
 		the_excerpt(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
+					__( 'Continue to<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -61,8 +64,17 @@
 				get_the_title()
 			)
 		);
-		
+
 		?>
+		<a href="<?php echo esc_url( get_permalink() ); ?>" class="read_more" rel="bookmark">
+			<?php
+				sprintf(
+					/* Translators: %s = Name of the current post. */
+					wp_kses( __( 'Continue to %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				);
+			?>
+	</a>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
@@ -71,9 +83,9 @@
 	
 </article><!-- #post-<?php the_ID(); ?> -->
 		
-	<?php endwhile;  else :	?>
+	<?php endwhile;  else : ?>
 
-	<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 	<?php endif; ?>
 

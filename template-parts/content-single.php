@@ -5,19 +5,21 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package clashvibes
- * 
  */
+
 ?>
 
 <?php
 if ( have_posts() ) :
-	while ( have_posts() ) : the_post();	?>
+	while ( have_posts() ) :
+		the_post();
+		?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<?php
-				if ( is_singular() ) :
-					the_title( '<h1 class="entry-title">', '</h1>' );
+			if ( is_singular() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
 				else :
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				endif;
@@ -25,12 +27,12 @@ if ( have_posts() ) :
 				if ( 'post' === get_post_type() ) :
 					?>
 			<div class="entry-meta">
-				<?php
+					<?php
 					clashvibes_posted_on();
 					clashvibes_posted_by();
 					?>
 			</div><!-- .entry-meta -->
-			<?php
+					<?php
 				endif;
 				?>
 		</header><!-- .entry-header -->
@@ -39,7 +41,7 @@ if ( have_posts() ) :
 		<!--featured Image-->
 		
 
-			<?php if (has_post_thumbnail() ) : ?>
+			<?php if ( has_post_thumbnail() ) : ?>
 
 				<?php clashvibes_post_thumbnail(); ?>
 			
@@ -67,18 +69,18 @@ if ( have_posts() ) :
 				);
 
 				$default = array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
-					'after'  => '</div>',
-					'link_before'       => '<span class="page-link">',
-					'link_after'        => '</span>',
-					'next_or_number'    => 'next',
-					'separator'         => ' | ',
-					'nextpagelink'      => __( 'Next &raquo', 'textdomain' ),
-					'previouspagelink'  => __( '&laquo Previous', 'textdomain' ),
+					'before'           => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
+					'after'            => '</div>',
+					'link_before'      => '<span class="page-link">',
+					'link_after'       => '</span>',
+					'next_or_number'   => 'next',
+					'separator'        => ' | ',
+					'nextpagelink'     => __( 'Next &raquo', 'textdomain' ),
+					'previouspagelink' => __( '&laquo Previous', 'textdomain' ),
 				);
-				wp_link_pages($default);
-			
-			?>
+				wp_link_pages( $default );
+
+				?>
 		</div><!-- .entry-content -->
 <br/>
 <br/>
@@ -90,12 +92,12 @@ if ( have_posts() ) :
 		
 	</article>
 
-<?php endwhile;	?>
+<?php endwhile; ?>
 
 <div class="navigation">
 	<h2><?php esc_html_e( 'Navigation', 'clashvibes' ); ?></h2>
-	<?php previous_post_link('<span>%link</span>'); ?>
-	<?php next_post_link('<span>%link</span>'); ?>
+	<?php previous_post_link( '<span>%link</span>' ); ?>
+	<?php next_post_link( '<span>%link</span>' ); ?>
 </div>
 
 <?php else : ?>

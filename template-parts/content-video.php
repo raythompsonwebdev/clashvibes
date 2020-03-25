@@ -6,8 +6,8 @@
  *
  * @package clashvibes
  */
-?>
 
+?>
 
 <?php
 if ( have_posts() ) :
@@ -21,23 +21,23 @@ if ( have_posts() ) :
 
 		<?php
 
-			if ( is_singular() ) :
-				the_title( '<h1 class="entry-title"><span> Sound Clash Video:</span> <a href="'. esc_url( get_permalink() ) . '"></a>', '</h1>' );
+		if ( is_singular() ) :
+			the_title( '<h1 class="entry-title"><span> Sound Clash Video:</span> <a href="' . esc_url( get_permalink() ) . '"></a>', '</h1>' );
 			else :
 				the_title( '<h2 class="entry-title"><span> Sound Clash Video:</span><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 
 			if ( 'clash-videos' === get_post_type() ) :
-		?>
+				?>
 
 		<div class="entry-meta">
-			<?php
-			clashvibes_posted_on();
-			clashvibes_posted_by();
-			?>
+				<?php
+				clashvibes_posted_on();
+				clashvibes_posted_by();
+				?>
 		</div><!-- .entry-meta -->
 
-		<?php endif;?>
+		<?php endif; ?>
 
 
 	</header>
@@ -46,7 +46,7 @@ if ( have_posts() ) :
 
 			<!--audio player and audio controls-->
 
-			<?php the_content();?>
+			<?php the_content(); ?>
 
 			<!--audio player and audio controls-->
 
@@ -65,16 +65,16 @@ if ( have_posts() ) :
    
 				
 
-				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Videos/');?><?php echo esc_html( $meta );?>.mp4" preload="metadata" type='video/mp4'  />
+				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Videos/' ); ?><?php echo esc_html( $meta ); ?>.mp4" preload="metadata" type='video/mp4'  />
 
 
 				
 
-				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Videos/');?><?php echo esc_html( $meta );?>.m4v" preload="metadata" type='video/m4v'  />
+				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Videos/' ); ?><?php echo esc_html( $meta ); ?>.m4v" preload="metadata" type='video/m4v'  />
 
 			
 
-				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Videos/' );?><?php echo esc_html( $meta );?>.webm" preload="metadata" type='video/webm' />
+				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Videos/' ); ?><?php echo esc_html( $meta ); ?>.webm" preload="metadata" type='video/webm' />
 
 				<p><?php esc_html_e( 'Your browser does not support HTML5 video.', 'clashvibes' ); ?></p>
 
@@ -128,24 +128,24 @@ if ( have_posts() ) :
 				<li>
 
 					<span class="post-meta-key">
-					<?php $SoundName = get_post_meta( get_the_ID(),'sound_system_name', true); ?>
+					<?php $sound_name = get_post_meta( get_the_ID(), 'sound_system_name', true ); ?>
 					<?php esc_html_e( 'Sound System Name', 'clashvibes' ); ?>
 					</span>
-					<p><?php echo esc_html($SoundName); ?> </p>
+					<p><?php echo esc_html( $sound_name ); ?> </p>
 				</li>
 				<li>
 					<span class="post-meta-key">
-					<?php $SoundYear = get_post_meta( get_the_ID(),'sound_clash_year', true); ?>
+					<?php $sound_year = get_post_meta( get_the_ID(), 'sound_clash_year', true ); ?>
 					<?php esc_html_e( 'Sound Clash Year', 'clashvibes' ); ?>
 					</span>
-					<p><?php echo esc_html($SoundYear); ?>  </p>
+					<p><?php echo esc_html( $sound_year ); ?>  </p>
 				</li>
 				<li>
 					<span class="post-meta-key">
-					<?php $SoundLocation = get_post_meta( get_the_ID(),'sound_clash_location', true); ?>
+					<?php $sound_location = get_post_meta( get_the_ID(), 'sound_clash_location', true ); ?>
 					<?php esc_html_e( 'Sound Clash Location', 'clashvibes' ); ?>
 					</span>
-					<p><?php echo esc_html($SoundLocation); ?>  </p>
+					<p><?php echo esc_html( $sound_location ); ?>  </p>
 				</li>
 
 			</ul>
@@ -153,16 +153,16 @@ if ( have_posts() ) :
 		</footer>
 		<div class="navigation">
 			<h2><?php esc_html_e( 'Navigation', 'clashvibes' ); ?></h2>
-				<?php previous_post_link('<span>%link</span>'); ?>
-				<?php next_post_link('<span>%link</span>'); ?>
+				<?php previous_post_link( '<span>%link</span>' ); ?>
+				<?php next_post_link( '<span>%link</span>' ); ?>
 		</div>
 
 
 </article>
-<?php
+		<?php
 endwhile;
 else :
 	?>
-<?php get_template_part( 'template-parts/content', 'none' ); ?>
+	<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 <?php endif; ?>

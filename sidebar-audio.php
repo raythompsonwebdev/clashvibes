@@ -35,7 +35,7 @@
 					'container' => 'nav',
 				)
 			);
-		?>
+			?>
 
 	</section>
 

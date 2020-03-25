@@ -18,8 +18,10 @@
  */
 function clashvibes_custom_header_setup() {
 	add_theme_support(
-		'custom-header', apply_filters(
-			'clashvibes_custom_header_args', array(
+		'custom-header',
+		apply_filters(
+			'clashvibes_custom_header_args',
+			array(
 				'default-image'      => '',
 				'default-text-color' => '#FFFFFF',
 				'width'              => 1600,
@@ -30,7 +32,8 @@ function clashvibes_custom_header_setup() {
 		)
 	);
 	add_theme_support(
-		'custom-logo', array(
+		'custom-logo',
+		array(
 			'width'       => 96,
 			'height'      => 96,
 			'flex-width'  => false,
@@ -47,7 +50,7 @@ if ( ! function_exists( 'clashvibes_header_style' ) ) :
 	 * @see clashvibes_custom_header_setup().
 	 */
 	function clashvibes_header_style() {
-		
+
 		$header_text_color = get_header_textcolor();
 		/*
 		 * If no custom options for text are set, let's bail.
@@ -81,5 +84,5 @@ if ( ! function_exists( 'clashvibes_header_style' ) ) :
 		</style>
 		<?php
 	}
-	
+
 endif;

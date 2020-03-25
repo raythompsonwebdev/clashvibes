@@ -12,7 +12,6 @@
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
- * 
  */
  get_header(); ?>
 
@@ -31,33 +30,33 @@
 			<header class="entry-header">
 				<h1 class="page-title">
 					<?php
-							$current_term = get_queried_object();
-							$taxonomy     = get_taxonomy( $current_term->taxonomy );
+							$current_term  = get_queried_object();
+							$clashtaxonomy = get_taxonomy( $current_term->taxonomy );
 							echo esc_html( $taxonomy->label ) . ':' . esc_html( $current_term->name );
-							?>
+					?>
 				</h1>
 				<?php
 						// Show an optional term description.
 						$term_description = term_description();
-						if ( ! empty( $term_description ) ) :
-							printf( '<div class="taxonomy-description">%s</div>', esc_html( $term_description ) );
+				if ( ! empty( $term_description ) ) :
+					printf( '<div class="taxonomy-description">%s</div>', esc_html( $term_description ) );
 						endif;
-						?>
+				?>
 			</header><!-- .page-header -->
 
 			<?php
-					if ( is_author() && get_the_author_meta( 'description' ) ) {
-						echo '<div class="author-index shorter">';
-						get_template_part( 'inc/author', 'box' );
-						echo '</div>';
-					}
-					?>
+			if ( is_author() && get_the_author_meta( 'description' ) ) {
+				echo '<div class="author-index shorter">';
+				get_template_part( 'inc/author', 'box' );
+				echo '</div>';
+			}
+			?>
 
 			<?php /* Start the Loop */ ?>
 			<?php
-					while ( have_posts() ) :
-						the_post();
-						?>
+			while ( have_posts() ) :
+				the_post();
+				?>
 
 			<figure class="thumb">
 				<?php clashvibes_post_thumbnail(); ?>
@@ -65,28 +64,28 @@
 
 			<div class="entry-content">
 				<?php
-						the_content(
-							sprintf(
-								wp_kses(
-									/* translators: %s: Name of current post. Only visible to screen readers */
-									__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
-									array(
-										'span' => array(
-											'class' => array(),
-										),
-									)
-								),
-								get_the_title()
-							)
-						);
-
-						wp_link_pages(
+				the_content(
+					sprintf(
+						wp_kses(
+							/* translators: %s: Name of current post. Only visible to screen readers */
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
 							array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
-								'after'  => '</div>',
+								'span' => array(
+									'class' => array(),
+								),
 							)
-						);
-						?>
+						),
+						get_the_title()
+					)
+				);
+
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
+						'after'  => '</div>',
+					)
+				);
+				?>
 			</div><!-- .entry-content -->
 
 			<footer class="entry-footer">
@@ -97,7 +96,7 @@
 		<?php endwhile; ?>
 		<?php else : ?>
 
-		<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
 

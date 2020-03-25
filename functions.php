@@ -14,7 +14,7 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template.
  */
 
-require_once( get_stylesheet_directory() . '/clashvibes-customv2/clashvibes-customv2.php');
+require_once get_stylesheet_directory() . '/clashvibes-customv2/clashvibes-customv2.php';
 
 add_filter( 'wp_title', 'clashvibes_filter_wp_title', 10, 2 );
 /**
@@ -28,7 +28,7 @@ add_filter( 'wp_title', 'clashvibes_filter_wp_title', 10, 2 );
  * @uses    is_front_page()
  */
 function clashvibes_filter_wp_title( $title ) {
-	
+
 	global $page, $paged;
 
 	if ( is_feed() ) {
@@ -61,7 +61,7 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 	 */
 	function clashvibes_theme_setup() {
 
-		//audio
+		// audio.
 		register_meta(
 			'post',
 			'sound_system_name',
@@ -98,7 +98,7 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			]
 		);
 
-		//video
+		// video.
 		register_meta(
 			'post',
 			'sound_system_name',
@@ -184,7 +184,7 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// Create new image sizes.
-		add_image_size( 'featured-image', 800, 250 );
+		add_image_size( 'featured-image', 800, 999 );
 		add_image_size( 'post-image', 400, 9999 );
 
 		set_post_thumbnail_size( 300, 300, true );
@@ -203,7 +203,6 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 				'caption',
 			)
 		);
-
 
 		$defaults = array(
 			'default-color'          => 'e9ad29',
@@ -248,12 +247,9 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		);
 		wp_link_pages( $links );
 
-
 		add_filter( 'the_generator', '__return_false' );
 		// remove version from rss.
 		add_filter( 'the_generator', '__return_empty_string' );
-
-
 
 	}
 
@@ -299,32 +295,34 @@ add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
 /**
  * Load the html5.
  *  */
-add_action( 'wp_enqueue_scripts', function ()
-{
-	$conditional_scripts = [
+add_action(
+	'wp_enqueue_scripts',
+	function () {
+		$conditional_scripts = [
 
-		'html5shiv'   => '/js/old-browser-scripts/html5shiv.min.js',
-		'respond'     => '/js/old-browser-scripts/Respond-master/dest/respond.src.js',
-		'selectivizr' => '/js/old-browser-scripts/selectivizr-min.js',
+			'html5shiv'   => '/js/old-browser-scripts/html5shiv.min.js',
+			'respond'     => '/js/old-browser-scripts/Respond-master/dest/respond.src.js',
+			'selectivizr' => '/js/old-browser-scripts/selectivizr-min.js',
 
-	];
-	foreach ( $conditional_scripts as $handle => $src ) {
-		wp_enqueue_script( $handle, get_template_directory_uri() , array(), '1.0', false );
-	}
-	add_filter(
-		'script_loader_tag',
+		];
+		foreach ( $conditional_scripts as $handle => $src ) {
+			wp_enqueue_script( $handle, get_template_directory_uri(), array(), '1.0', false );
+		}
+		add_filter(
+			'script_loader_tag',
+			function( $tag, $handle ) use ( $conditional_scripts ) {
 
-		function( $tag, $handle ) use ( $conditional_scripts ) {
-
-			if ( array_key_exists( $handle, $conditional_scripts ) ) {
-				$tag = '<!--[if (lt IE 8) & (!IEMobile)]>' . $tag . '<![endif]-->' . "\n";
-			}
-			return $tag;
-		},
-		10,
-		2
-	);
-}, 11 );
+				if ( array_key_exists( $handle, $conditional_scripts ) ) {
+					$tag = '<!--[if (lt IE 8) & (!IEMobile)]>' . $tag . '<![endif]-->' . "\n";
+				}
+				return $tag;
+			},
+			10,
+			2
+		);
+	},
+	11
+);
 
 
 /**
@@ -332,14 +330,14 @@ add_action( 'wp_enqueue_scripts', function ()
  */
 function clashvibes_scripts() {
 
-	//mobile side menu script for mobile blog, archive, audio and video pages.
+	// mobile side menu script for mobile blog, archive, audio and video pages.
 
-	if('clash-audio' === get_post_type() || 'clash-videos' === get_post_type() ){
-		
+	if ( 'clash-audio' === get_post_type() || 'clash-videos' === get_post_type() ) {
+
 		wp_enqueue_script( 'sidenav', get_template_directory_uri() . '/js/mobile-sidenav-es6.js', array(), '1.0.0', 'true' );
 	}
-	
-		//mobile main menu script for all mobile pages
+
+		// mobile main menu script for all mobile pages.
 		wp_enqueue_script( 'main-mobile', get_template_directory_uri() . '/js/mobile-mainnav-es6.js', array(), '1.0.0', 'true' );
 
 	if ( 'clash-audio' === get_post_type() ) {
@@ -363,8 +361,8 @@ add_action( 'wp_enqueue_scripts', 'clashvibes_scripts' );
 function clashvibes_enqueue_extra_styles() {
 
 	wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri(), '1.0', true );
-	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', '1.0', false );
-	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', false, '1.0', 'all' );
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', array(), '1.0', false );
+	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', array(), '1.0', false );
 
 }
 add_action( 'wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles' );
@@ -374,7 +372,7 @@ add_action( 'wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles' );
  * Sidebars!
  */
 if ( function_exists( 'register_sidebar' ) ) {
-	
+
 	register_sidebar(
 		array(
 			'name'          => __( 'Primary Sidebar', 'clashvibes' ),
@@ -457,26 +455,6 @@ function clashvibes_cc_mime_types( $mimes ) {
 }
 add_filter( 'upload_mimes', 'clashvibes_cc_mime_types' );
 
-
-/**
- *
- * Except more function.
- *
- * @global array $post post array.
- * @param array $output post array output.
- */
-// function clashvibes_excerpt_read_more_link( $output ) {
-
-// 	global $post;
-
-// 	$output = '<a href="' . esc_url(get_permalink( $post->ID )) . '" class="read_more">..Continue</a>';
-	
-
-// 	return $output;
-// }
-// add_filter( 'the_excerpt', 'clashvibes_excerpt_read_more_link' );
-
-
 /**
  *  Remove WordPress.
  *
@@ -491,10 +469,10 @@ add_filter( 'wp_headers', 'clashvibes_remove_change_myheaders' );
 
 
 /**
- * Add custom image sizes attribute to enhance responsive image functionality
+ * Add custom image sizes attribute to enhance responsive image functionality.
  * for post thumbnails.
  *
- * @since Twenty Sixteen 1.0
+ * @since Twenty Sixteen 1.0.
  *
  * @param  array $attr       Attributes for the image markup.
  * @param  int   $attachment Image attachment ID.
@@ -527,7 +505,7 @@ function clashvibes_content_image_sizes_attr( $sizes, $size ) {
 		736 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	} else {
 		736 > $width && 360 <= $width && $sizes = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 61vw, (max-width: 1920px) 45vw, 667px';
-		360 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+		360 > $width && $sizes                  = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	}
 
 	return $sizes;

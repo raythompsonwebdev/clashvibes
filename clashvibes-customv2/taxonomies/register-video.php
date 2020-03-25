@@ -1,7 +1,21 @@
 <?php
+/**
+ * *PHP version 7
+ *
+ * Video Plugin Taxonomy | registervideo.php.
+ *
+ * @category   Video plugin taxonomy
+ * @package    Clashvibes
+ * @subpackage Video plugin taxonomy
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
+ * @link       http:www.raythompsonwebdev.co.uk custom template
+ */
 
 /**
- *  Taxonomies
+ * Taxonomies.
  */
 function clashvibes_register_taxonomies_video() {
 
@@ -29,5 +43,5 @@ function clashvibes_register_taxonomies_video() {
 
 	);
 	register_taxonomy( 'video-category', 'clash-videos', $args );
-	
+
 }

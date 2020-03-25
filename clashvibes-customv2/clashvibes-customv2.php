@@ -1,4 +1,18 @@
 <?php
+/**
+ * PHP version 7
+ *
+ * Plugin | clashvibes-customv2.php.
+ *
+ * @category   plugin 
+ * @package    Clashvibes
+ * @subpackage plugin 
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
+ * @link       http:www.raythompsonwebdev.co.uk custom template
+ */
 
 /**
  * Creating a function to create our CPT.
@@ -328,4 +342,4 @@ function clashvibes_meta_save( $post_id ) {
 }
 add_action( 'save_post', 'clashvibes_meta_save' );
 
-?>
+

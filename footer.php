@@ -13,6 +13,7 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
+
 ?>  
 
 <div class="clearfix"></div>
@@ -24,12 +25,12 @@
 		<?php
 			wp_nav_menu(
 				array(
-					'menu'      => 'Secondary',
-					'container' => 'footer',
+					'menu'           => 'Secondary',
+					'container'      => 'footer',
 					'theme_location' => 'secondary',
 				)
 			);
-		?>
+			?>
 
 		<ul id="footer-content">
 						
@@ -76,22 +77,22 @@
   
   <!--info-->
   <p class="copy">
-    <?php echo esc_attr( '&copy; 2018 - Raymond Thompson - UK :', 'clashvibes' ); ?>
-      <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clashvibes' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/"></a>
-        
-        
-      <?php
-      /* translators: %1$s by %2$s: Theme name, clashvibes: Raymond Thompson. */
-      printf( esc_html__( 'Theme: %1$s by %2$s.', 'clashvibes' ), 'clashvibes', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
-      ?>
-    <br/>
+	<?php echo esc_attr( '&copy; 2018 - Raymond Thompson - UK :', 'clashvibes' ); ?>
+	  <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clashvibes' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/"></a>
+		
+		
+	  <?php
+		/* translators: %1$s by %2$s: Theme name, clashvibes: Raymond Thompson. */
+		printf( esc_html__( 'Theme: %1$s by %2$s.', 'clashvibes' ), 'clashvibes', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
+		?>
+	<br/>
 
-    <?php
-    //$mysql_datetime = strftime( '%Y-%m-%d %H:%M:%S', $dt );
-    $today = date("F j, Y, g:i a" ); 
-    echo _e('Page was last updated : ') . $today ;
-    //printf( esc_html__( 'Page was last updated :', 'clashvibes' ), __( $today, 'clashvibes' ), 'clashvibes' );
-    ?>
+	<?php
+
+	$today = date( 'F j, Y, g:i a' );
+	esc_html_e( 'Page was last updated : ' ) . $today;
+
+	?>
   </p>
 
 </div>

@@ -13,6 +13,7 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
+
 get_header(); ?>
 
 	<?php get_sidebar(); ?>

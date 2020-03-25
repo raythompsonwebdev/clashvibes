@@ -13,20 +13,21 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
+
 get_header(); ?>
 
 
 			<?php
-				if ( have_posts() ) :
+			if ( have_posts() ) :
 				while ( have_posts() ) :
-					the_post();					
-			?>
+					the_post();
+					?>
 
 			<h1>
 					<?php the_title(); ?>
 			</h1>
 			
-			<?php the_content( 'Read More...' ); ?>
+					<?php the_content( 'Read More...' ); ?>
 
 			<?php endwhile; else : ?>
 

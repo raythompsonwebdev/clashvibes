@@ -1,7 +1,7 @@
 <?php
 /**
  * *PHP version 7
- * 
+ *
  * Template Name: clashaudio
  *
  * Archive Clash Audio | core/page-clashaudio.php.
@@ -29,7 +29,7 @@
 
 
 		<?php
-		
+
 
 		$the_query = null;
 
@@ -53,14 +53,14 @@
 
 			<figure class="audio_releases_box">
 
-				<?php the_post_thumbnail('thumbnail', array('class' => 'audio-thumb')); ?>
+				<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'audio-thumb' ) ); ?>
 
 				<figcaption>
 				<h1>
 				<?php the_title(); ?>
 			</h1>
 					<a class="Morebutton" href="<?php echo esc_url( get_permalink() ); ?>" alt="">
-					<?php _e( 'Listen', 'clashvibes' ); ?></a>
+					<?php esc_html_e( 'Listen', 'clashvibes' ); ?></a>
 
 
 				</figcaption>
@@ -91,8 +91,9 @@
 		</article>
 
 			<?php
-			endif;?>
-			<?php wp_reset_query(); ?>
+			endif;
+		?>
+			<?php wp_reset_postadata(); ?>
 
 		<div class="clearfix"></div>
 	</section>

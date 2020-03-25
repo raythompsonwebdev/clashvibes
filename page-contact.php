@@ -15,17 +15,17 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
+
 get_header(); ?>
 
+<?php
+/**
+ * Customizer additions.
+ */
+	// include get_template_directory() . '/inc/contact-form.php';
+
+?>
 
 
-<h1><?php the_title(); ?> Page</h1>
-
-<div id="contactform">
-
-</div>
-
-
-
-
-<?php get_footer(); ?>
+<?php
+get_footer();

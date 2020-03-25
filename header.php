@@ -12,8 +12,8 @@
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes .git
  * @link       http:www.raythompsonwebdev.co.uk custom template.
- * 
  */
+
 ?>
 <!DOCTYPE html >
 <html class="no-js" <?php language_attributes(); ?>>
@@ -40,168 +40,168 @@
 
   <!--Mobile Menu-->
   <span id="tog-menu">
-    <?php if ( is_front_page()) : ?>
+	<?php if ( is_front_page() ) : ?>
 
-      <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-      <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
+	  <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+		<?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
 
-      <?php elseif(is_home()) : ?>
+	  <?php elseif ( is_home() ) : ?>
 
-      <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-      <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
+	  <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+		  <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
 
-      <button id="toggle-side" class="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false">
-      <?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
+	  <button id="toggle-side" class="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false">
+		  <?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
 
-      <?php elseif(is_page()) : ?>
+	  <?php elseif ( is_page() ) : ?>
 
-      <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-      <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
+	  <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+		  <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
 
-      <?php elseif(is_post_type_archive()) : ?>
+	  <?php elseif ( is_post_type_archive() ) : ?>
 
-      <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-      <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
+	  <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+		  <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
 
-      <?php else : ?>
+	  <?php else : ?>
 
-      <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-      <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
-    
-      <button id="toggle-side" class="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false">
-      <?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
+	  <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+		  <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
+	
+	  <button id="toggle-side" class="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false">
+		  <?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
 
-    <?php endif; ?>
+	<?php endif; ?>
   </span>
 
 	<div id="container">
 
 		<header>
 
-      <!--site logo-->
+	  <!--site logo-->
 			<div class="site-logo">
 				<?php $site_title = get_bloginfo( 'name' ); ?>
 				<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 					<div class="screen-reader-text">
 
 						<?php
-              /* translators: %1$s:, CMSname: WordPress. */
-              printf( esc_html_e( 'Go to the home page of %1$s', 'clashvibes' ), esc_html( $site_title ) );
-            ?>
-            
+						/* translators: %1$s:, CMSname: WordPress. */
+						printf( esc_html_e( 'Go to the home page of %1$s', 'clashvibes' ), esc_html( $site_title ) );
+						?>
+			
 					</div>
-            <?php
-            
-              if ( has_custom_logo() ) :
-                the_custom_logo();
-              else :
+			<?php
 
-            ?>
+			if ( has_custom_logo() ) :
+				the_custom_logo();
+			  else :
+
+					?>
 
 					<div class="site-firstletter" aria-hidden="true">
 
-            <?php echo esc_html( substr( $site_title, 0, 1 ) ); ?>
-            
-          </div>
-          
-          <?php endif; ?>
+				  <?php echo esc_html( substr( $site_title, 0, 1 ) ); ?>
+			
+		  </div>
+		  
+		  <?php endif; ?>
 
 				</a>
-      </div>
+	  </div>
 
-      <!--header title-->
+	  <!--header title-->
 			<section id="clashvibes_title">
 
 				<h1>
 					<?php esc_html_e( 'Clashvibes', 'clashvibes' ); ?>
-        </h1>
-        
+		</h1>
+		
 				<?php
 				  $description = get_bloginfo( 'description', 'display' );
 
-				  if ( esc_html( $description ) || is_customize_preview() ) :
-				?>
+				if ( esc_html( $description ) || is_customize_preview() ) :
+					?>
 
 				<h2 class="site-description">
 					<?php echo esc_html( $description ); ?>
 				</h2>
 
 				<?php endif; ?>
-      </section>
-      
-      <!--Social Media Icons-->
+	  </section>
+	  
+	  <!--Social Media Icons-->
 			<aside id="socialmediatop">
 				
-        <a class="social-icon linkedin-icon" 
-          href="" 
-          target="new" 
-          title="Follow me on LinkedIn">
-          <span>
-            <i class="fa fa-instagram"></i>
-          </span>
-        </a>
-        
-        <a class="social-icon twitter-icon" 
-          href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>" 
-          target="new" 
-          title="Follow me on Twitter">
-          <span>
-            <i class="fa fa-twitter"></i>
-          </span>
-        </a>
-        
-        <a class="social-icon facebook-icon" 
-          href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
-          target="new" 
-          title="Follow me on Facebook">
-          <span>
-            <i class="fa fa-facebook"></i>
-          </span>
-        </a>
+		<a class="social-icon linkedin-icon" 
+		  href="" 
+		  target="new" 
+		  title="Follow me on LinkedIn">
+		  <span>
+			<i class="fa fa-instagram"></i>
+		  </span>
+		</a>
+		
+		<a class="social-icon twitter-icon" 
+		  href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>" 
+		  target="new" 
+		  title="Follow me on Twitter">
+		  <span>
+			<i class="fa fa-twitter"></i>
+		  </span>
+		</a>
+		
+		<a class="social-icon facebook-icon" 
+		  href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
+		  target="new" 
+		  title="Follow me on Facebook">
+		  <span>
+			<i class="fa fa-facebook"></i>
+		  </span>
+		</a>
 
-        <a class="social-icon facebook-icon" 
-          href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
-          target="new" 
-          title="Follow me on Facebook">
-          <span>
-            <i class="fa fa-facebook"></i>
-          </span>
-        </a>	
+		<a class="social-icon facebook-icon" 
+		  href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
+		  target="new" 
+		  title="Follow me on Facebook">
+		  <span>
+			<i class="fa fa-facebook"></i>
+		  </span>
+		</a>	
 
-      </aside>		
-    
-     </header>
+	  </aside>		
+	
+	 </header>
 
-      <!--Main navigation-->
+	  <!--Main navigation-->
 		<nav id="mobileNav">
 			
-      <?php
-        wp_nav_menu(
-          array(
-            'menu'      => 'mobile',
-            'container' => 'ul',
-            'fallback_cb' => false,
-            'theme_location' => 'mobile',
-          )
-        );
-      ?>
-    
+	  <?php
+		wp_nav_menu(
+			array(
+				'menu'           => 'mobile',
+				'container'      => 'ul',
+				'fallback_cb'    => false,
+				'theme_location' => 'mobile',
+			)
+		);
+		?>
+	
   </nav>
 
-    <!--Main navigation-->
+	<!--Main navigation-->
 		<nav id="mainNav">
 			
 				<?php
-          wp_nav_menu(
-            array(
-              'menu'      => 'Main',
-              'container' => 'ul',
-              'fallback_cb' => false,
-              'theme_location' => 'Main',
-            )
-          );
+				wp_nav_menu(
+					array(
+						'menu'           => 'Main',
+						'container'      => 'ul',
+						'fallback_cb'    => false,
+						'theme_location' => 'Main',
+					)
+				);
 				?>
 			
 		</nav>
 
-    <main id="clashvibes_content">
+	<main id="clashvibes_content">

@@ -12,7 +12,9 @@
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
+ * 
  */
+
  get_header(); ?>
 
 <?php get_sidebar(); ?>
@@ -47,6 +49,13 @@ the_archive_title( '<h1 class="page-title">', '</h1>' );
 		endif;
 		?>
 	</header><!-- .entry-header -->
+	<!--featured Image-->
+	
+	<?php if ( has_post_thumbnail() ) : ?>
+
+		<?php clashvibes_post_thumbnail(); ?>
+
+	<?php endif; ?>
 		<div class="entry-content">
 		<?php
 			the_excerpt(

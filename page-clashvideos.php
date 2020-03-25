@@ -1,7 +1,7 @@
 <?php
 /**
  * *PHP version 7
- * 
+ *
  * Template Name: clashvideos
  *
  * Archive Clash Audio | core/page-clashvideos.php.
@@ -26,7 +26,7 @@
 <section id="video_releases_section">
 
 	<?php
-	
+
 		$the_query = null;
 
 		$args      = array(
@@ -35,17 +35,17 @@
 			'post_count' => '20',
 		);
 		$the_query = new WP_Query( $args );
-	?>
+		?>
 
 	<?php
-		if ( $the_query->have_posts() ) :
-			while ( $the_query->have_posts() ) :
-				$the_query->the_post();
-				?>
+	if ( $the_query->have_posts() ) :
+		while ( $the_query->have_posts() ) :
+			$the_query->the_post();
+			?>
 			
 
 	<figure class="video_releases_box">
-		<?php the_post_thumbnail('thumbnail', array('class' => 'video-thumb')); ?>
+			<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'video-thumb' ) ); ?>
 			<figcaption>
 			<h1>
 				<?php the_title(); ?>
@@ -54,7 +54,7 @@
 				<a 
 					class="Morebutton"
 					href="<?php echo esc_url( get_permalink() ); ?>">
-					<?php _e( 'View', 'clashvibes' ); ?>
+				<?php esc_html_e( 'View', 'clashvibes' ); ?>
 				</a>
 
 
@@ -83,7 +83,7 @@
 	</article>
 	<?php	endif; ?>
 
-	<?php wp_reset_query(); ?>
+	<?php wp_reset_postdata(); ?>
 
 	<div class="clearfix"></div>
 

@@ -16,7 +16,7 @@
 
  get_header();
 
-$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+$videoterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
 
 
@@ -25,10 +25,10 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 	<section id="clashvibes_right_column">
 
 
-		<?php $archivetitle = apply_filters( 'the_title', $term->name ); ?>
+		<?php $archivetitle = apply_filters( 'the_title', $videoterm->name ); ?>
 
 		<h1 class="archive-title">Video Category:
-			<?php echo esc_html($archivetitle); ?>
+			<?php echo esc_html( $archivetitle ); ?>
 		</h1>
 
 

@@ -14,6 +14,7 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes .git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
+
 ?>
 
 <aside id="clashvibes_left_column">
@@ -27,8 +28,8 @@
 <section class="clashvibes_left_column_box">
 	
 	<?php
-		if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Primary Sidebar' ) ) :
-	?>
+	if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Primary Sidebar' ) ) :
+		?>
 				   
 		
 	<section class="widget">

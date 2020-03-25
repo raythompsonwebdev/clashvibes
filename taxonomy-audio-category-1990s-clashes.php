@@ -15,7 +15,7 @@
  */
 
  get_header();
-$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+ $audioterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
 
 
@@ -25,10 +25,10 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 
 
-		<?php $archivetitle = apply_filters( 'the_title', $term->name ); ?>
+		<?php $archivetitle = apply_filters( 'the_title', $audioterm->name ); ?>
 
 		<h1 class="archive-title">Audio Category:
-			<?php echo esc_html($archivetitle); ?>
+			<?php echo esc_html( $archivetitle ); ?>
 		</h1>
 
 

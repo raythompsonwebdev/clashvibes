@@ -14,17 +14,19 @@ function clashvibes_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-  $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
-			'blogname', array(
+			'blogname',
+			array(
 				'selector'        => '.site-title a',
 				'render_callback' => 'clashvibes_customize_partial_blogname',
 			)
 		);
 		$wp_customize->selective_refresh->add_partial(
-			'blogdescription', array(
+			'blogdescription',
+			array(
 				'selector'        => '.site-description',
 				'render_callback' => 'clashvibes_customize_partial_blogdescription',
 			)
@@ -65,13 +67,14 @@ add_action( 'customize_preview_init', 'clashvibes_customize_preview_js' );
 
 function clashvibes_customizer_css() {
 	$header_color = get_theme_mod( 'clashvibes_header_color' );
+	$link_color   = get_theme_mod( 'clashvibes_link_color' );
 
 	?>
 
 	<style type="text/css">
 			.site-branding {
-					background: <?php echo get_theme_mod( 'clashvibes_header_color' ); ?>;
-					background-color: <?php echo $header_color; ?>
+					background: <?php echo esc_html( $header_color ); ?>;
+					background-color: <?php echo esc_html( $header_color ); ?>
 			}
 
 			.category-list a:hover,
@@ -84,11 +87,11 @@ function clashvibes_customizer_css() {
 			.entry-title a:hover,
 			.entry-content a,
 			.comment-content a {
-					color: <?php echo get_theme_mod( 'clashvibes_link_color' ); ?>;
+					color: <?php echo esc_html( $link_color ); ?>;
 			}
 
 			.border-custom {
-					border: <?php echo get_theme_mod( 'clashvibes_link_color' ); ?> solid 1px;
+					border: <?php echo esc_html( $link_color ); ?> solid 1px;
 			}
 
 	</style>

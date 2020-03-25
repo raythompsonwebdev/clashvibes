@@ -1,4 +1,19 @@
 <?php
+/**
+ * *PHP version 7
+ *
+ * Audio Plugin | registeraudio.php.
+ *
+ * @category   Audio Plugin
+ * @package    Clashvibes
+ * @subpackage Audio Plugin
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
+ * @link       http:www.raythompsonwebdev.co.uk custom template
+ */
+
 
 /**
  * Creating a function to create our CPT.
@@ -10,9 +25,8 @@ function clashvibes_custom_post_audio() {
 	 * 'menu_icon'  => get_stylesheet_directory_uri() . '/images/portfolio-icon.png',
 	 * 'menu_icon' => 'dashicons-download',
 	 */
-	
 
-	// Set UI labels for Audio Custom Post Type. 
+	// Set UI labels for Audio Custom Post Type.
 	$labels = array(
 		'name'                  => _x( 'Sound Clash Audio', 'Post Type General Name', 'CLVBDOMAIN' ),
 		'singular_name'         => _x( 'Sound Clash Audio', 'Post Type Singular Name', 'CLVBDOMAIN' ),
@@ -61,7 +75,7 @@ function clashvibes_custom_post_audio() {
 		'menu_position'        => 5,
 		'can_export'           => true,
 		'query_var'            => true,
-		'has_archive'          => true,
+		'has_archive'          => false,
 		'exclude_from_search'  => false,
 		'publicly_queryable'   => true,
 		'capability_type'      => 'post',

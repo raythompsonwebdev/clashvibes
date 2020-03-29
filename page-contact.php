@@ -18,6 +18,7 @@
 
 get_header(); ?>
 
+<h1><?php the_title(); ?> Page</h1>
 <?php
 /**
  * Customizer additions.

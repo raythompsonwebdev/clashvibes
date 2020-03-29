@@ -33,8 +33,18 @@
 		<?php wp_title( '|', true, 'right' ); ?>
 	</title>
 
+	<link rel="preconnect" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700&display=swap" >
+
+		<script src="https://kit.fontawesome.com/3ef7bd2328.js" crossorigin="anonymous" defer ></script>
+		<!-- Global site tag (gtag.js) - Google Analytics-->
+		
+
 	<?php wp_head(); ?>
 </head>
+
+<!--[if lt IE 9]>
+	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://outdatedbrowser.com/en">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
 
 <body <?php body_class(); ?> >
 
@@ -133,9 +143,9 @@
 			<aside id="socialmediatop">
 				
 		<a class="social-icon linkedin-icon" 
-		  href="" 
+		  href="<?php echo esc_url( __( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'clashvibes' ) ); ?>" 
 		  target="new" 
-		  title="Follow me on LinkedIn">
+		  title= <?php esc_attr_e("Follow me on LinkedIn", 'clashvibes'); ?>>
 		  <span>
 			<i class="fa fa-instagram"></i>
 		  </span>
@@ -144,7 +154,8 @@
 		<a class="social-icon twitter-icon" 
 		  href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>" 
 		  target="new" 
-		  title="Follow me on Twitter">
+		  title=<?php esc_attr_e("Follow me on Twitter", 'clashvibes'); ?>
+		>
 		  <span>
 			<i class="fa fa-twitter"></i>
 		  </span>
@@ -153,7 +164,8 @@
 		<a class="social-icon facebook-icon" 
 		  href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
 		  target="new" 
-		  title="Follow me on Facebook">
+		  title=<?php esc_attr_e("Follow me on Facebook", 'clashvibes'); ?>
+		>
 		  <span>
 			<i class="fa fa-facebook"></i>
 		  </span>
@@ -162,7 +174,8 @@
 		<a class="social-icon facebook-icon" 
 		  href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
 		  target="new" 
-		  title="Follow me on Facebook">
+		  title=<?php esc_attr_e("Follow me on Facebook", 'clashvibes'); ?>
+		>
 		  <span>
 			<i class="fa fa-facebook"></i>
 		  </span>

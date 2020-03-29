@@ -18,26 +18,6 @@ Clashvibes is based on Underscores http://underscores.me/,
 License: GNU General Public License v2 or later
 
 */
-/* titillium-web-regular - latin */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../../fonts/titillium-web/titillium-web-v4-latin-regular.eot");
-  /* IE9 Compat Modes */
-  src: local("Titillium Web"), local("TitilliumWeb-Regular"), url("../../fonts/titillium-web/titillium-web-v4-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/titillium-web/titillium-web-v4-latin-regular.woff2") format("woff2"), url("../../fonts/titillium-web/titillium-web-v4-latin-regular.woff") format("woff"), url("../../fonts/titillium-web/titillium-web-v4-latin-regular.ttf") format("truetype"), url("../../fonts/titillium-web/titillium-web-v4-latin-regular.svg#TitilliumWeb") format("svg");
-  /* Legacy iOS */ }
-
-/* titillium-web-700 - latin */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 700;
-  src: url("../../fonts/titillium-web/titillium-web-v4-latin-700.eot");
-  /* IE9 Compat Modes */
-  src: local("Titillium WebBold"), local("TitilliumWeb-Bold"), url("../../fonts/titillium-web/titillium-web-v4-latin-700.eot?#iefix") format("embedded-opentype"), url("../../fonts/titillium-web/titillium-web-v4-latin-700.woff2") format("woff2"), url("../../fonts/titillium-web/titillium-web-v4-latin-700.woff") format("woff"), url("../../fonts/titillium-web/titillium-web-v4-latin-700.ttf") format("truetype"), url("../../fonts/titillium-web/titillium-web-v4-latin-700.svg#TitilliumWeb") format("svg");
-  /* Legacy iOS */ }
-
 /**GENERAL CLASSES (alpha order)**/
 .left-col {
   width: 66%;
@@ -184,26 +164,6 @@ a {
   font-family: "Titillium Web", arial, verdana, helvetica, sans-serif; }
 
 /* Text meant only for screen readers. */
-/* titillium-web-regular - latin */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../../fonts/titillium-web/titillium-web-v4-latin-regular.eot");
-  /* IE9 Compat Modes */
-  src: local("Titillium Web"), local("TitilliumWeb-Regular"), url("../../fonts/titillium-web/titillium-web-v4-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/titillium-web/titillium-web-v4-latin-regular.woff2") format("woff2"), url("../../fonts/titillium-web/titillium-web-v4-latin-regular.woff") format("woff"), url("../../fonts/titillium-web/titillium-web-v4-latin-regular.ttf") format("truetype"), url("../../fonts/titillium-web/titillium-web-v4-latin-regular.svg#TitilliumWeb") format("svg");
-  /* Legacy iOS */ }
-
-/* titillium-web-700 - latin */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 700;
-  src: url("../../fonts/titillium-web/titillium-web-v4-latin-700.eot");
-  /* IE9 Compat Modes */
-  src: local("Titillium WebBold"), local("TitilliumWeb-Bold"), url("../../fonts/titillium-web/titillium-web-v4-latin-700.eot?#iefix") format("embedded-opentype"), url("../../fonts/titillium-web/titillium-web-v4-latin-700.woff2") format("woff2"), url("../../fonts/titillium-web/titillium-web-v4-latin-700.woff") format("woff"), url("../../fonts/titillium-web/titillium-web-v4-latin-700.ttf") format("truetype"), url("../../fonts/titillium-web/titillium-web-v4-latin-700.svg#TitilliumWeb") format("svg");
-  /* Legacy iOS */ }
-
 @media only screen and (max-width: 1920px) {
   #tog-menu {
     display: none; }
@@ -219,7 +179,7 @@ a {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    /********** navigation **********/
+    /**** navigation ***/
     /*--- Content ---*/
     /********** front page **********/
     /********** login form **********/
@@ -1496,7 +1456,7 @@ a {
           #container #clashvibes_right_column article.clash-audio header.entry-header div.entry-meta,
           #container #clashvibes_right_column article.post header.entry-header div.entry-meta,
           #container #clashvibes_right_column article.page header.entry-header div.entry-meta {
-            height: 123px;
+            height: auto;
             display: block; }
             #container #clashvibes_right_column article.clash-videos header.entry-header div.entry-meta span.parent-post-link,
             #container #clashvibes_right_column article.clash-videos header.entry-header div.entry-meta span.full-size-link,
@@ -6425,7 +6385,8 @@ a {
           #container #clashvibes_right_column article.clash-audio div.entry-content a.read_more,
           #container #clashvibes_right_column article.post div.entry-content a.read_more,
           #container #clashvibes_right_column article.page div.entry-content a.read_more {
-            width: 70%; }
+            width: 70%;
+            font-size: 0.9em; }
         #container #clashvibes_right_column article.clash-videos div.audioExcerpt,
         #container #clashvibes_right_column article.clash-videos div.videoExcerpt,
         #container #clashvibes_right_column article.clash-audio div.audioExcerpt,
@@ -7399,6 +7360,46 @@ a {
           #container #clashvibes_right_column article.page figure.thumb img,
           #container #clashvibes_right_column article.page figure.attachment img {
             margin: 0; }
+        #container #clashvibes_right_column article.clash-videos div.entry-content,
+        #container #clashvibes_right_column article.clash-audio div.entry-content,
+        #container #clashvibes_right_column article.post div.entry-content,
+        #container #clashvibes_right_column article.page div.entry-content {
+          width: 98%; }
+          #container #clashvibes_right_column article.clash-videos div.entry-content p,
+          #container #clashvibes_right_column article.clash-audio div.entry-content p,
+          #container #clashvibes_right_column article.post div.entry-content p,
+          #container #clashvibes_right_column article.page div.entry-content p {
+            line-height: 1.8em; }
+            #container #clashvibes_right_column article.clash-videos div.entry-content p a,
+            #container #clashvibes_right_column article.clash-audio div.entry-content p a,
+            #container #clashvibes_right_column article.post div.entry-content p a,
+            #container #clashvibes_right_column article.page div.entry-content p a {
+              display: inline-block; }
+              #container #clashvibes_right_column article.clash-videos div.entry-content p a:hover,
+              #container #clashvibes_right_column article.clash-audio div.entry-content p a:hover,
+              #container #clashvibes_right_column article.post div.entry-content p a:hover,
+              #container #clashvibes_right_column article.page div.entry-content p a:hover {
+                font-weight: bold; }
+          #container #clashvibes_right_column article.clash-videos div.entry-content ul,
+          #container #clashvibes_right_column article.clash-audio div.entry-content ul,
+          #container #clashvibes_right_column article.post div.entry-content ul,
+          #container #clashvibes_right_column article.page div.entry-content ul {
+            width: 90%; }
+            #container #clashvibes_right_column article.clash-videos div.entry-content ul figure,
+            #container #clashvibes_right_column article.clash-audio div.entry-content ul figure,
+            #container #clashvibes_right_column article.post div.entry-content ul figure,
+            #container #clashvibes_right_column article.page div.entry-content ul figure {
+              width: 90%; }
+            #container #clashvibes_right_column article.clash-videos div.entry-content ul li,
+            #container #clashvibes_right_column article.clash-audio div.entry-content ul li,
+            #container #clashvibes_right_column article.post div.entry-content ul li,
+            #container #clashvibes_right_column article.page div.entry-content ul li {
+              line-height: 40px; }
+          #container #clashvibes_right_column article.clash-videos div.entry-content a.read_more,
+          #container #clashvibes_right_column article.clash-audio div.entry-content a.read_more,
+          #container #clashvibes_right_column article.post div.entry-content a.read_more,
+          #container #clashvibes_right_column article.page div.entry-content a.read_more {
+            width: 80%; }
         #container #clashvibes_right_column article.clash-videos div.audioExcerpt,
         #container #clashvibes_right_column article.clash-videos div.videoExcerpt,
         #container #clashvibes_right_column article.clash-audio div.audioExcerpt,
@@ -10398,6 +10399,46 @@ a {
         #container #clashvibes_right_column article.page figure.featuredImage img,
         #container #clashvibes_right_column article.page figure.attachment img {
           margin: 0 auto; }
+        #container #clashvibes_right_column article.clash-videos div.entry-content,
+        #container #clashvibes_right_column article.clash-audio div.entry-content,
+        #container #clashvibes_right_column article.post div.entry-content,
+        #container #clashvibes_right_column article.page div.entry-content {
+          width: 98%; }
+          #container #clashvibes_right_column article.clash-videos div.entry-content p,
+          #container #clashvibes_right_column article.clash-audio div.entry-content p,
+          #container #clashvibes_right_column article.post div.entry-content p,
+          #container #clashvibes_right_column article.page div.entry-content p {
+            line-height: 1.6em; }
+            #container #clashvibes_right_column article.clash-videos div.entry-content p a,
+            #container #clashvibes_right_column article.clash-audio div.entry-content p a,
+            #container #clashvibes_right_column article.post div.entry-content p a,
+            #container #clashvibes_right_column article.page div.entry-content p a {
+              display: inline-block; }
+              #container #clashvibes_right_column article.clash-videos div.entry-content p a:hover,
+              #container #clashvibes_right_column article.clash-audio div.entry-content p a:hover,
+              #container #clashvibes_right_column article.post div.entry-content p a:hover,
+              #container #clashvibes_right_column article.page div.entry-content p a:hover {
+                font-weight: bold; }
+          #container #clashvibes_right_column article.clash-videos div.entry-content ul,
+          #container #clashvibes_right_column article.clash-audio div.entry-content ul,
+          #container #clashvibes_right_column article.post div.entry-content ul,
+          #container #clashvibes_right_column article.page div.entry-content ul {
+            width: 90%; }
+            #container #clashvibes_right_column article.clash-videos div.entry-content ul figure,
+            #container #clashvibes_right_column article.clash-audio div.entry-content ul figure,
+            #container #clashvibes_right_column article.post div.entry-content ul figure,
+            #container #clashvibes_right_column article.page div.entry-content ul figure {
+              width: 90%; }
+            #container #clashvibes_right_column article.clash-videos div.entry-content ul li,
+            #container #clashvibes_right_column article.clash-audio div.entry-content ul li,
+            #container #clashvibes_right_column article.post div.entry-content ul li,
+            #container #clashvibes_right_column article.page div.entry-content ul li {
+              line-height: 40px; }
+          #container #clashvibes_right_column article.clash-videos div.entry-content a.read_more,
+          #container #clashvibes_right_column article.clash-audio div.entry-content a.read_more,
+          #container #clashvibes_right_column article.post div.entry-content a.read_more,
+          #container #clashvibes_right_column article.page div.entry-content a.read_more {
+            width: 90%; }
         #container #clashvibes_right_column article.clash-videos div.audioExcerpt,
         #container #clashvibes_right_column article.clash-videos div.videoExcerpt,
         #container #clashvibes_right_column article.clash-audio div.audioExcerpt,
@@ -11044,6 +11085,15 @@ a {
           text-decoration: none; }
     #container header {
       height: 60px; }
+      #container header .site-logo {
+        width: 14%; }
+        #container header .site-logo a {
+          /* Text meant only for screen readers. */ }
+          #container header .site-logo a div.screen-reader-text:focus {
+            font-size: 14px;
+            /* Above WP toolbar. */ }
+          #container header .site-logo a div.site-firstletter {
+            font-size: 2em; }
       #container header #clashvibes_title h1 {
         font-size: 1.8em; }
       #container header #clashvibes_title h2.site-description {
@@ -12904,8 +12954,17 @@ a {
     left: 100vw; }
   #container header {
     height: 60px; }
+    #container header .site-logo {
+      width: 15%; }
+      #container header .site-logo a {
+        /* Text meant only for screen readers. */ }
+        #container header .site-logo a div.screen-reader-text:focus {
+          font-size: 14px;
+          /* Above WP toolbar. */ }
+        #container header .site-logo a div.site-firstletter {
+          font-size: 2em; }
     #container header #clashvibes_title {
-      width: 50%; }
+      width: 84%; }
       #container header #clashvibes_title h1 {
         font-size: 1.7em; }
       #container header #clashvibes_title h2.site-description {

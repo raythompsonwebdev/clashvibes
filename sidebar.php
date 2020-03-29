@@ -19,7 +19,7 @@
 
 <aside id="clashvibes_left_column">
 
- <h1>Blog</h1>
+ <h1><?php esc_html_e( 'Blog', 'clashvibes' ); ?></h1>
 
 <section id="clashvibes_login">
 	<?php get_search_form(); ?>

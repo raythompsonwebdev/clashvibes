@@ -93,7 +93,7 @@
 			<?php
 			endif;
 		?>
-			<?php wp_reset_postadata(); ?>
+			<?php wp_reset_postdata(); ?>
 
 		<div class="clearfix"></div>
 	</section>

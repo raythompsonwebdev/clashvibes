@@ -135,10 +135,25 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			]
 		);
 
+		// Set content-width.
+		global $content_width;
+		if ( ! isset( $content_width ) ) {
+			$content_width = 1024;
+		}
+
+		// Add support for full and wide align images.
+		add_theme_support( 'align-wide' );
+
 		/**
 		 * Text domain.
 		 */
 		load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
+
+		$locale      = get_locale();
+		$locale_file = get_template_directory() . "/languages/$locale.php";
+		if ( is_readable( $locale_file ) ) {
+			require_once $locale_file;
+		}
 
 		/**
 		 * Register menus.
@@ -186,9 +201,7 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		// Create new image sizes.
 		add_image_size( 'featured-image', 800, 999 );
 		add_image_size( 'post-image', 400, 9999 );
-
-		set_post_thumbnail_size( 300, 300, true );
-
+		
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -258,25 +271,23 @@ add_action( 'after_setup_theme', 'clashvibes_theme_setup' );
 
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function clashvibes_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
-
-
-/**
  * Remove comment-reply.min.js from footer
  */
 function comments_clean_header_hook() {
 	wp_deregister_script( 'comment-reply' );
 }
 add_action( 'init', 'comments_clean_header_hook' );
+
+/**
+ *  To register my css styles I use the function below.
+ */
+function clashvibes_enqueue_extra_styles() {
+
+	wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri(), '1.0', true );
+	
+
+}
+add_action( 'wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles' );
 
 
 /**
@@ -332,7 +343,7 @@ function clashvibes_scripts() {
 
 	// mobile side menu script for mobile blog, archive, audio and video pages.
 
-	if ( 'clash-audio' === get_post_type() || 'clash-videos' === get_post_type() ) {
+	if ( 'clash-audio' === get_post_type() || 'clash-videos' === get_post_type() || is_home() || is_singular() || is_category()  ) {
 
 		wp_enqueue_script( 'sidenav', get_template_directory_uri() . '/js/mobile-sidenav-es6.js', array(), '1.0.0', 'true' );
 	}
@@ -354,18 +365,6 @@ function clashvibes_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'clashvibes_scripts' );
 
-
-/**
- *  To register my css styles I use the function below.
- */
-function clashvibes_enqueue_extra_styles() {
-
-	wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri(), '1.0', true );
-	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', array(), '1.0', false );
-	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', array(), '1.0', false );
-
-}
-add_action( 'wp_enqueue_scripts', 'clashvibes_enqueue_extra_styles' );
 
 
 /**
@@ -466,51 +465,6 @@ function clashvibes_remove_change_myheaders( $headers ) {
 	return $headers;
 }
 add_filter( 'wp_headers', 'clashvibes_remove_change_myheaders' );
-
-
-/**
- * Add custom image sizes attribute to enhance responsive image functionality.
- * for post thumbnails.
- *
- * @since Twenty Sixteen 1.0.
- *
- * @param  array $attr       Attributes for the image markup.
- * @param  int   $attachment Image attachment ID.
- * @param  array $size       Registered image size or flat array of height and width dimensions.
- * @return string A source size value for use in a post thumbnail 'sizes' attribute.
- */
-function clashvibes_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
-	if ( 'post-thumbnail' === $size ) {
-		$attr['sizes']   = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 60vw, (max-width: 1920px) 62vw, 840px';
-		! $attr['sizes'] = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1920px) 88vw, 1024px';
-	}
-	return $attr;
-}
-add_filter( 'wp_get_attachment_image_attributes', 'clashvibes_post_thumbnail_sizes_attr', 10, 3 );
-
-
-/**
- *  Responsive images.
- *
- *  @param  array $sizes    Registered image size or flat array of height and width dimensions.
- *  @param  array $size     Registered image size or flat array of height and width dimensions.
- */
-function clashvibes_content_image_sizes_attr( $sizes, $size ) {
-
-	$width = $size[0];
-
-	736 <= $width && $sizes = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1920px) 62vw, 980px';
-
-	if ( 'page' === get_post_type() ) {
-		736 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
-	} else {
-		736 > $width && 360 <= $width && $sizes = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 61vw, (max-width: 1920px) 45vw, 667px';
-		360 > $width && $sizes                  = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
-	}
-
-	return $sizes;
-}
-add_filter( 'wp_calculate_image_sizes', 'clashvibes_content_image_sizes_attr', 10, 2 );
 
 
 /**

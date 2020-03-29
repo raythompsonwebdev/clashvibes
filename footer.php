@@ -78,7 +78,7 @@
   <!--info-->
   <p class="copy">
 	<?php echo esc_attr( '&copy; 2018 - Raymond Thompson - UK :', 'clashvibes' ); ?>
-	  <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clashvibes' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/"></a>
+	  <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clashvibes' ) ); ?>" alt="wordpress.org" aria-label=<?php echo esc_url( __( "https://wordpress.org/", 'clashvibes' ) ); ?>></a>
 		
 		
 	  <?php
@@ -98,20 +98,6 @@
 </div>
 <!-- container end-->																											
 
-
-<script type="text/javascript">
-	WebFontConfig = {
-		google: { families: [ 'Cabin:400,700', 'PT+Sans:400,700' ] }
-	};
-	(function() {
-		var wf = document.createElement('script');
-		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-		wf.type = 'text/javascript';
-		wf.async = 'true';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(wf, s);
-	})(); 
-</script>
 
 <?php wp_footer(); ?> 
 

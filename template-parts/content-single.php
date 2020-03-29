@@ -53,32 +53,7 @@ if ( have_posts() ) :
 
 		<div class="entry-content">
 			<?php
-				the_content(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
-					)
-				);
-
-				$default = array(
-					'before'           => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
-					'after'            => '</div>',
-					'link_before'      => '<span class="page-link">',
-					'link_after'       => '</span>',
-					'next_or_number'   => 'next',
-					'separator'        => ' | ',
-					'nextpagelink'     => __( 'Next &raquo', 'textdomain' ),
-					'previouspagelink' => __( '&laquo Previous', 'textdomain' ),
-				);
-				wp_link_pages( $default );
+				the_content();
 
 				?>
 		</div><!-- .entry-content -->

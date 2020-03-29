@@ -219,7 +219,7 @@ License: GNU General Public License v2 or later
       display:none;
     }
 
-    /********** navigation **********/
+    /**** navigation ***/
     nav#mainNav {
       display: block;
       width: 100%;
@@ -1246,7 +1246,7 @@ License: GNU General Public License v2 or later
           }
 
           div.entry-meta {
-            height: 123px;
+            height: auto;
             display: block;
 
             span.parent-post-link,
@@ -4955,6 +4955,7 @@ License: GNU General Public License v2 or later
 
           a.read_more {
             width: 70%;
+            font-size:0.9em;
           }
         }
 
@@ -5587,6 +5588,40 @@ License: GNU General Public License v2 or later
 
           img {
             margin: 0;
+          }
+        }
+
+        div.entry-content {
+          width: 98%;
+
+          //text
+          p {
+            
+            line-height: 1.8em;
+
+            a {
+              display: inline-block;
+
+              &:hover {
+                font-weight: bold;
+              }
+            }
+          }
+
+          ul {
+            width: 90%;
+
+            figure {
+              width: 90%;
+            }
+
+            li {
+              line-height: 40px;
+            }
+          }
+
+          a.read_more {
+            width: 80%;
           }
         }
 
@@ -6980,6 +7015,8 @@ License: GNU General Public License v2 or later
           }
         }
 
+        
+
         div.audioExcerpt,
         div.videoExcerpt {
           width: 96%;
@@ -7645,6 +7682,40 @@ License: GNU General Public License v2 or later
           }
         }
 
+        div.entry-content {
+          width: 98%;
+
+          //text
+          p {
+            
+            line-height: 1.6em;
+
+            a {
+              display: inline-block;
+
+              &:hover {
+                font-weight: bold;
+              }
+            }
+          }
+
+          ul {
+            width: 90%;
+
+            figure {
+              width: 90%;
+            }
+
+            li {
+              line-height: 40px;
+            }
+          }
+
+          a.read_more {
+            width: 90%;
+          }
+        }
+
         div.audioExcerpt,
         div.videoExcerpt {
           width: 96%;
@@ -7963,6 +8034,26 @@ License: GNU General Public License v2 or later
    
     header {
       height: 60px;
+
+      .site-logo {
+        width: 14%;
+
+        a {
+          
+          /* Text meant only for screen readers. */
+          div.screen-reader-text {
+            &:focus {
+              font-size: 14px;
+
+              /* Above WP toolbar. */
+            }
+          }
+
+          div.site-firstletter {
+            font-size: 2em;
+          }
+        }
+      }
 
       #clashvibes_title {
         h1 {
@@ -9222,8 +9313,28 @@ License: GNU General Public License v2 or later
     header {
       height: 60px;
 
+      .site-logo {
+        width: 15%;
+
+        a {
+          
+          /* Text meant only for screen readers. */
+          div.screen-reader-text {
+            &:focus {
+              font-size: 14px;
+
+              /* Above WP toolbar. */
+            }
+          }
+
+          div.site-firstletter {
+            font-size: 2em;
+          }
+        }
+      }
+
       #clashvibes_title {
-        width: 50%;
+        width: 84%;
 
         h1 {
           font-size: 1.7em;

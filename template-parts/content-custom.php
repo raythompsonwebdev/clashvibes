@@ -50,29 +50,24 @@ if ( have_posts() ) :
 	
 	<div class="entry-content">
 		<?php
-		the_excerpt(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue to<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			)
-		);
+		the_excerpt();
 
 		?>
 		<a href="<?php echo esc_url( get_permalink() ); ?>" class="read_more" rel="bookmark">
 			<?php
-				sprintf(
-					/* Translators: %s = Name of the current post. */
-					wp_kses( __( 'Continue to %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				);
+			if(is_tax('video-category')){
+
+				esc_html(the_title("Continue Watching : "), 'clashvibes');
+
+			}elseif(is_tax('audio-category')){
+
+				esc_html(the_title("Continue Listening : "), 'clashvibes');
+
+			}else{
+
+				esc_html(the_title("Continue : "), 'clashvibes');
+			}
+				
 			?>
 	</a>
 	</div><!-- .entry-summary -->

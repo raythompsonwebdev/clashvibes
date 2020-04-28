@@ -50,36 +50,18 @@
 
   <!--Mobile Menu-->
   <span id="tog-menu">
-	<?php if ( is_front_page() ) : ?>
 
-	  <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-		<?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
+	<?php if ( is_front_page() || is_page('events') || is_page('contact') || is_page('clashaudio') || is_page('clashvideos')  ) : ?>
 
-	  <?php elseif ( is_home() ) : ?>
-
-	  <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-		  <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
-
-	  <button id="toggle-side" class="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false">
-		  <?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
-
-	  <?php elseif ( is_page() ) : ?>
-
-	  <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-		  <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
-
-	  <?php elseif ( is_post_type_archive() ) : ?>
-
-	  <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-		  <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
-
+		<button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
+			
+						  
 	  <?php else : ?>
 
-	  <button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-		  <?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
-	
-	  <button id="toggle-side" class="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false">
-		  <?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
+		<button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>	
+		
+		<button id="sidebar_toggle" class="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
+	  
 
 	<?php endif; ?>
   </span>

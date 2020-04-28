@@ -6922,7 +6922,7 @@ a {
     width: 25%;
     left: calc(73% - 1vw); }
     #tog-menu button.menu-toggle,
-    #tog-menu button.sidebar-toggle {
+    #tog-menu button.sidebar_toggle {
       line-height: 60px;
       width: 100%;
       background-color: #262626;
@@ -6936,7 +6936,7 @@ a {
       -ms-transition: all 0.2s linear 0s;
       transition: all 0.2s linear 0s; }
       #tog-menu button.menu-toggle:hover,
-      #tog-menu button.sidebar-toggle:hover {
+      #tog-menu button.sidebar_toggle:hover {
         background-color: #658905;
         color: #262626;
         text-align: center;
@@ -8039,10 +8039,10 @@ a {
     width: 30%;
     left: calc(68% - 1vw); }
     #tog-menu button.menu-toggle,
-    #tog-menu button.sidebar-toggle {
+    #tog-menu button.sidebar_toggle {
       line-height: 60px; }
       #tog-menu button.menu-toggle:hover,
-      #tog-menu button.sidebar-toggle:hover {
+      #tog-menu button.sidebar_toggle:hover {
         text-align: center; }
     #tog-menu .hide-side {
       left: 150vw; }
@@ -9073,10 +9073,10 @@ a {
     width: 30%;
     left: calc(67% - 1vw); }
     #tog-menu button.menu-toggle,
-    #tog-menu button.sidebar-toggle {
+    #tog-menu button.sidebar_toggle {
       line-height: 60px; }
       #tog-menu button.menu-toggle:hover,
-      #tog-menu button.sidebar-toggle:hover {
+      #tog-menu button.sidebar_toggle:hover {
         text-align: center; }
     #tog-menu .hide-side {
       left: 150vw; }
@@ -10055,10 +10055,10 @@ a {
     width: 35%;
     left: calc(64% - 1vw); }
     #tog-menu button.menu-toggle,
-    #tog-menu button.sidebar-toggle {
+    #tog-menu button.sidebar_toggle {
       line-height: 60px; }
       #tog-menu button.menu-toggle:hover,
-      #tog-menu button.sidebar-toggle:hover {
+      #tog-menu button.sidebar_toggle:hover {
         text-align: center; }
     #tog-menu .hide-side {
       left: 150vw; }
@@ -11065,10 +11065,10 @@ a {
     width: 35%;
     left: calc(64% - 1vw); }
     #tog-menu button.menu-toggle,
-    #tog-menu button.sidebar-toggle {
+    #tog-menu button.sidebar_toggle {
       line-height: 60px; }
       #tog-menu button.menu-toggle:hover,
-      #tog-menu button.sidebar-toggle:hover {
+      #tog-menu button.sidebar_toggle:hover {
         text-align: center; }
     #tog-menu .hide-side {
       left: 150vw; }
@@ -12021,10 +12021,10 @@ a {
     width: 40%;
     left: calc(59% - 1vw); }
     #tog-menu button.menu-toggle,
-    #tog-menu button.sidebar-toggle {
+    #tog-menu button.sidebar_toggle {
       line-height: 60px; }
       #tog-menu button.menu-toggle:hover,
-      #tog-menu button.sidebar-toggle:hover {
+      #tog-menu button.sidebar_toggle:hover {
         text-align: center; }
     #tog-menu .hide-side {
       left: 150vw; }
@@ -12943,10 +12943,10 @@ a {
 
 @media only screen and (max-width: 320px) {
   #tog-menu button.menu-toggle,
-  #tog-menu button.sidebar-toggle {
+  #tog-menu button.sidebar_toggle {
     line-height: 60px; }
     #tog-menu button.menu-toggle:hover,
-    #tog-menu button.sidebar-toggle:hover {
+    #tog-menu button.sidebar_toggle:hover {
       text-align: center; }
   #tog-menu .hide-side {
     left: 150vw; }

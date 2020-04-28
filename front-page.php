@@ -16,7 +16,7 @@
 
 get_header(); ?>
 
-	<!--Banner section-->
+    <!--Banner section-->
 		<section id="clashvibes_banner">
 			<!--2/2018/07-->
 			<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sliderimage.jpg" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
@@ -30,7 +30,7 @@ get_header(); ?>
 				<?php esc_html_e( 'Latest Sound Clashes ', 'clashvibes' ); ?>
 			</h1>
 
-			<?php
+			<?php			
 
 				$the_query = null;
 
@@ -52,18 +52,18 @@ get_header(); ?>
 					'post_count' => '5',
 				);
 				$the_query = new WP_Query( $args );
-				?>
+			?>
 
 			<?php
-			if ( $the_query->have_posts() ) :
+				if ( $the_query->have_posts() ) :
 				while ( $the_query->have_posts() ) :
-					$the_query->the_post();
-					?>
+				$the_query->the_post();
+			?>
 
 			
 				<figure class="new_releases_box">
 
-					<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'new-release-thumb' ) ); ?>
+				<?php the_post_thumbnail('thumbnail', array('class' => 'new-release-thumb')); ?>
 
 					<figcaption>
 						<h1>
@@ -85,11 +85,11 @@ get_header(); ?>
 				</figure>
 				
 
-					<?php
+			<?php
 				endwhile;
 				else :
-					?>
-		
+			?>
+        
 			<article class="new_releases_box">
 
 				<figure class="new-release-thumb">
@@ -106,17 +106,17 @@ get_header(); ?>
 
 				</figure>
 
-			  </article>
-	  
-					<?php
+      		</article>
+      
+			<?php
 				endif;
 				wp_reset_postdata();
-				?>
+			?>
 
 
 		</section>
 		
-		<!--Top 10 download section-->
+    	<!--Top 10 download section-->
 		<div id="popularclashes-section">
 
 			<!--Top 10 Audio Section-->
@@ -143,10 +143,10 @@ get_header(); ?>
 					$the_query      = new WP_Query( $args );
 					?>
 				<?php
-				if ( $the_query->have_posts() ) :
+					if ( $the_query->have_posts() ) :
 					while ( $the_query->have_posts() ) :
-						$the_query->the_post();
-						?>
+					$the_query->the_post();
+				?>
 				<span class="popularclashes-box">
 
 					<span class="popularclashes-image">
@@ -167,19 +167,19 @@ get_header(); ?>
 
 				</span>
 
-						<?php
+				<?php
 					endwhile;
 					else :
-						?>
+				?>
 
 				<p>
-						<?php esc_html_e( 'Oops! There are no posts to display.', 'clashvibes' ); ?>
+					<?php esc_html_e( 'Oops! There are no posts to display.', 'clashvibes' ); ?>
 				</p>
 
-						<?php
+				<?php
 					endif;
 					wp_reset_postdata();
-					?>
+				?>
 
 
 
@@ -210,10 +210,10 @@ get_header(); ?>
 						$the_query  = new WP_Query( $args );
 					?>
 				<?php
-				if ( $the_query->have_posts() ) :
+					if ( $the_query->have_posts() ) :
 					while ( $the_query->have_posts() ) :
 						$the_query->the_post();
-						?>
+				?>
 				<span class="popularclashes-box">
 
 					<span class="popularclashes-image">
@@ -237,7 +237,7 @@ get_header(); ?>
 					<?php esc_html_e( 'Oops! There are no posts to display.', 'clashvibes' ); ?>
 				</p>
 
-					<?php
+				<?php
 					endif;
 					wp_reset_postdata();
 				?>

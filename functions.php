@@ -135,12 +135,7 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			]
 		);
 
-		// Set content-width.
-		global $content_width;
-		if ( ! isset( $content_width ) ) {
-			$content_width = 1024;
-		}
-
+		
 		// Add support for full and wide align images.
 		add_theme_support( 'align-wide' );
 
@@ -271,6 +266,22 @@ add_action( 'after_setup_theme', 'clashvibes_theme_setup' );
 
 
 /**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function clashvibes_content_width() {
+	// This variable is intended to be overruled from themes.
+	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
+	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+	$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
+}
+add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
+
+
+/**
  * Remove comment-reply.min.js from footer
  */
 function comments_clean_header_hook() {
@@ -343,9 +354,10 @@ function clashvibes_scripts() {
 
 	// mobile side menu script for mobile blog, archive, audio and video pages.
 
-	if ( 'clash-audio' === get_post_type() || 'clash-videos' === get_post_type() || is_home() || is_singular() || is_category()  ) {
+	if ( 'clash-audio' === get_post_type() || 'clash-videos' === get_post_type() || !is_front_page() || is_category() || is_home()) {
 
 		wp_enqueue_script( 'sidenav', get_template_directory_uri() . '/js/mobile-sidenav-es6.js', array(), '1.0.0', 'true' );
+		
 	}
 
 		// mobile main menu script for all mobile pages.
@@ -422,37 +434,6 @@ function clashvibes_video_widgets_init() {
 }
 add_action( 'widgets_init', 'clashvibes_video_widgets_init' );
 
-/**
- *
- *  Contact form area.
- */
-function clashvibes_contact_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => __( 'contact', 'clashvibes' ),
-			'id'            => 'contact',
-			'description'   => __( 'Contact Side bar', 'clashvibes' ),
-			'before_widget' => '<section id="contactform">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2>',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'clashvibes_contact_widgets_init' );
-
-
-/**
- *
- *  SVG cc_mime_types.
- *
- *  @param array $mimes SVG files.
- */
-function clashvibes_cc_mime_types( $mimes ) {
-	$mimes['svg'] = 'image/svg+xml';
-	return $mimes;
-}
-add_filter( 'upload_mimes', 'clashvibes_cc_mime_types' );
 
 /**
  *  Remove WordPress.

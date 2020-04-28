@@ -5170,7 +5170,7 @@ License: GNU General Public License v2 or later
     width: 25%;
     left: calc(73% - 1vw);
     button.menu-toggle,
-    button.sidebar-toggle {
+    button.sidebar_toggle {
       line-height: 60px;
       width: 100%;
       background-color: $color4;
@@ -5951,7 +5951,7 @@ License: GNU General Public License v2 or later
     width: 30%;
     left: calc(68% - 1vw);
     button.menu-toggle,
-    button.sidebar-toggle {
+    button.sidebar_toggle {
       line-height: 60px;
 
       &:hover {
@@ -6670,7 +6670,7 @@ License: GNU General Public License v2 or later
     width: 30%;
     left: calc(67% - 1vw);
     button.menu-toggle,
-    button.sidebar-toggle {
+    button.sidebar_toggle {
       line-height: 60px;
 
       &:hover {
@@ -7328,7 +7328,7 @@ License: GNU General Public License v2 or later
     width: 35%;
     left: calc(64% - 1vw);
     button.menu-toggle,
-    button.sidebar-toggle {
+    button.sidebar_toggle {
       line-height: 60px;
 
       &:hover {
@@ -8001,7 +8001,7 @@ License: GNU General Public License v2 or later
     width: 35%;
     left: calc(64% - 1vw);
     button.menu-toggle,
-    button.sidebar-toggle {
+    button.sidebar_toggle {
       line-height: 60px;
 
       &:hover {
@@ -8664,7 +8664,7 @@ License: GNU General Public License v2 or later
     width: 40%;
     left: calc(59% - 1vw);
     button.menu-toggle,
-    button.sidebar-toggle {
+    button.sidebar_toggle {
       line-height: 60px;
 
       &:hover {
@@ -9290,7 +9290,7 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 320px) {
   #tog-menu {
     button.menu-toggle,
-    button.sidebar-toggle {
+    button.sidebar_toggle {
       line-height: 60px;
 
       &:hover {

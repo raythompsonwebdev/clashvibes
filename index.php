@@ -20,9 +20,25 @@ get_header(); ?>
 
     <section id="clashvibes_right_column">
 
-    <h1><?php _e('Blog Page');?></h1>
+    <h1><?php esc_html_e('Blog Page');?></h1>
+
+        <!--Post loop start -->
+		<?php if ( have_posts() ) : ?>
+
+        <?php
+            while ( have_posts() ) :
+            the_post();
+        ?>
 
         <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+
+        <?php endwhile; ?>
+
+        <?php else : ?>
+
+        <?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+        <?php endif; ?>
 
 
     </section><!-- end of right panel -->

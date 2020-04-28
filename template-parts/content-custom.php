@@ -8,11 +8,6 @@
  */
 ?>
 
-<?php
-if ( have_posts() ) :
-	while ( have_posts() ) :
-		the_post();
-		?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -77,12 +72,7 @@ if ( have_posts() ) :
 	</footer><!-- .entry-footer -->
 	
 </article><!-- #post-<?php the_ID(); ?> -->
-		
-	<?php endwhile;  else : ?>
-
-		<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-	<?php endif; ?>
+			
 
 	<!--end of Comment box-->
 </article>

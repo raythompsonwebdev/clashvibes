@@ -13,7 +13,6 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
-
 get_header(); ?>
 
 <?php get_sidebar(); ?>
@@ -24,31 +23,27 @@ get_header(); ?>
 		/**
 		 * Check if there are any posts to display.
 		 */
-	if ( have_posts() ) :
-		?>
+		if ( have_posts() ) : 
+	?>
 
 	<h1 class="archive-title">Category: <?php single_cat_title( '', true ); ?></h1>
 
-		<?php
-		/**
-		 * Display optional category description.
-		 */
-		if ( category_description() ) :
-			?>
+	<?php
+	/**
+	 * Display optional category description.
+	 */
+	if ( category_description() ) :	?>
 
-			<?php endif; ?>
+		<?php endif; ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-			?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
 		<article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
 			
 
 			<header class="entry-header">
 				<?php
-				if ( is_singular() ) :
+					if ( is_singular() ) :
 					the_title( '<h1 class="entry-title">', '</h1>' );
 					else :
 						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -64,7 +59,7 @@ get_header(); ?>
 					</div><!-- .entry-meta -->
 						<?php
 					endif;
-					?>
+				?>
 			</header><!-- .entry-header -->
 
 			<!--featured Image-->
@@ -78,7 +73,7 @@ get_header(); ?>
 
 					<figure class="featuredImage">
 						
-						<img src="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg', 'display' ); ?>" alt="<?php echo esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+						<img src="<?php echo esc_url('https://raythompsonwebdev.co.uk/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
 						
 					</figure>
 
@@ -89,17 +84,16 @@ get_header(); ?>
 
 			<div class="entry">
 
-				<?php	the_excerpt(); ?>
+				<?php	the_excerpt();	?>
 
 			</div>
 
 			<div class="continue-reading">
 				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 					<?php
-					sprintf(
+					printf(
 						/* Translators: %s = Name of the current post. */
-						wp_kses( __( 'Continue reading %s', 'clashvibes' ), array( 'span' => array( 'class' => array() ) ) ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+							wp_kses( __( 'Continue reading %s', 'clashvibes' ), array( 'span' => array( 'class' => array() ) ) ), the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					);
 					?>
 				</a>
@@ -113,12 +107,12 @@ get_header(); ?>
 
 		</article>
 
-			<?php
-			endwhile;
+		<?php 
+			endwhile;	
 			else :
-				?>
+		?>
 
-				<?php get_template_part( 'template-part/content', 'none' ); ?>
+		<?php get_template_part( 'template-part/content', 'none' ); ?>
 
 	<?php endif; ?>
 

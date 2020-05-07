@@ -1703,7 +1703,7 @@ a {
           width: 98%;
           display: block;
           margin: 0 auto;
-          min-height: 50px; }
+          min-height: 100px; }
           #container #clashvibes_right_column article.clash-videos div.entry-content p,
           #container #clashvibes_right_column article.clash-videos div.entry-attachment p,
           #container #clashvibes_right_column article.clash-audio div.entry-content p,
@@ -1716,8 +1716,9 @@ a {
             font-size: 0.9em;
             line-height: 1.9em;
             display: block;
-            margin: 0;
-            padding: 0; }
+            margin: 0 auto;
+            padding: 0;
+            width: 90%; }
             #container #clashvibes_right_column article.clash-videos div.entry-content p a,
             #container #clashvibes_right_column article.clash-videos div.entry-attachment p a,
             #container #clashvibes_right_column article.clash-audio div.entry-content p a,

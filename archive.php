@@ -1,25 +1,14 @@
 <?php
-/**
- * *PHP version 5
- *
- * Archive page | core/archive.php.
- *
- * @category   Archive_Page
- * @package    Clashvibes
- * @subpackage Archive_Page
- * @author     Raymond Thompson <ray_thomp@hushmail.com>
- * @copyright  2017 Raymond Thompson
- * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
- * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
- * @link       http:www.raythompsonwebdev.co.uk custom template
- */
+/*
+Template Name: Archives
+*/
  get_header(); ?>
 
 <?php get_sidebar(); ?>
 
 <section id="clashvibes_right_column">
 	<!--Post loop start -->
-	<?php if ( have_posts() ) : 
+	<?php if ( have_posts()) : 
 
 		the_archive_title( '<h1 class="page-title">', '</h1>' );
 		the_archive_description( '<div class="taxonomy-description">', '</div>' );

@@ -212,16 +212,17 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			)
 		);
 
+		// Add theme support for custom background.
 		$defaults = array(
 			'default-color'          => 'e9ad29',
 			'default-image'          => '',
 			'wp-head-callback'       => '_custom_background_cb',
 			'admin-head-callback'    => '',
 			'admin-preview-callback' => '',
-		);
-		// Add theme support for custom background.
+		);		
 		add_theme_support( 'custom-background', $defaults );
 
+		// Add theme support for nav-menus.
 		$args = array(
 			'default-image'          => '',
 			'default-color'          => 'ffffff',
@@ -237,10 +238,10 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			'admin-head-callback'    => '',
 			'admin-preview-callback' => '',
 
-		);
-		// Add theme support for nav-menus.
+		);		
 		add_theme_support( 'nav-menus', $args );
 
+		//link pages
 		$links = array(
 			'before'           => '<p>' . __( 'Pages:', 'clashvibes' ),
 			'after'            => '</p>',
@@ -361,7 +362,11 @@ function clashvibes_scripts() {
 	}
 
 		// mobile main menu script for all mobile pages.
-		wp_enqueue_script( 'main-mobile', get_template_directory_uri() . '/js/mobile-mainnav-es6.js', array(), '1.0.0', 'true' );
+		wp_enqueue_script( 'main-mobile', get_template_directory_uri() . '/js/mobile-mainnav-es6.js', array(), '1.0.0', true );
+
+		wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+		wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( 'clash-audio' === get_post_type() ) {
 		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/audio-es6.js', array(), '1.0.0', true );

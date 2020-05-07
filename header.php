@@ -71,7 +71,7 @@
 		<header>
 
 	  <!--site logo-->
-			<div class="site-logo">
+		<div class="site-logo">
 				<?php $site_title = get_bloginfo( 'name' ); ?>
 				<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 					<div class="screen-reader-text">
@@ -82,86 +82,86 @@
 						?>
 			
 					</div>
-			<?php
+					<?php
 
-			if ( has_custom_logo() ) :
-				the_custom_logo();
-			  else :
+						if ( has_custom_logo() ) :
+						the_custom_logo();
+						else :
 
 					?>
 
 					<div class="site-firstletter" aria-hidden="true">
 
-				  <?php echo esc_html( substr( $site_title, 0, 1 ) ); ?>
+					<?php echo esc_html( substr( $site_title, 0, 1 ) ); ?>
 			
-		  </div>
+		  		</div>
 		  
-		  <?php endif; ?>
+		  			<?php endif; ?>
 
 				</a>
 	  </div>
 
 	  <!--header title-->
-			<section id="clashvibes_title">
+		<section id="clashvibes_title">
 
-				<h1>
-					<?php esc_html_e( 'Clashvibes', 'clashvibes' ); ?>
-		</h1>
-		
-				<?php
-				  $description = get_bloginfo( 'description', 'display' );
+			<h1>
+				<?php esc_html_e( 'Clashvibes', 'clashvibes' ); ?>
+			</h1>
+	
+			<?php
+				$description = get_bloginfo( 'description', 'display' );
 
-				if ( esc_html( $description ) || is_customize_preview() ) :
-					?>
+			if ( esc_html( $description ) || is_customize_preview() ) :
+				?>
 
-				<h2 class="site-description">
-					<?php echo esc_html( $description ); ?>
-				</h2>
+			<h2 class="site-description">
+				<?php echo esc_html( $description ); ?>
+			</h2>
 
-				<?php endif; ?>
-	  </section>
+			<?php endif; ?>
+		</section>
 	  
 	  <!--Social Media Icons-->
-			<aside id="socialmediatop">
+		<aside id="socialmediatop">
 				
-		<a class="social-icon linkedin-icon" 
-		  href="<?php echo esc_url( __( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'clashvibes' ) ); ?>" 
-		  target="new" 
-		  title= <?php esc_attr_e("Follow me on LinkedIn", 'clashvibes'); ?>>
-		  <span>
-			<i class="fa fa-instagram"></i>
-		  </span>
-		</a>
-		
-		<a class="social-icon twitter-icon" 
-		  href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>" 
-		  target="new" 
-		  title=<?php esc_attr_e("Follow me on Twitter", 'clashvibes'); ?>
-		>
-		  <span>
-			<i class="fa fa-twitter"></i>
-		  </span>
-		</a>
-		
-		<a class="social-icon facebook-icon" 
-		  href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
-		  target="new" 
-		  title=<?php esc_attr_e("Follow me on Facebook", 'clashvibes'); ?>
-		>
-		  <span>
-			<i class="fa fa-facebook"></i>
-		  </span>
-		</a>
+			<a class="social-icon linkedin-icon" 
+				href="<?php echo esc_url( __( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'clashvibes' ) ); ?>" 
+				target="new" 
+				title= <?php esc_attr_e("Follow me on LinkedIn", 'clashvibes'); ?>>
+				<span>
+				<i class="fa fa-instagram"></i>
+				</span>
+			</a>
+			
+			<a class="social-icon twitter-icon" 
+				href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>" 
+				target="new" 
+				title=<?php esc_attr_e("Follow me on Twitter", 'clashvibes'); ?>
+			>
+				<span>
+				<i class="fa fa-twitter"></i>
+				</span>
+			</a>
+			
+			<a class="social-icon facebook-icon" 
+				href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
+				target="new" 
+				title=<?php esc_attr_e("Follow me on Facebook", 'clashvibes'); ?>
+			>
+				<span>
+				<i class="fa fa-facebook"></i>
+				</span>
+			</a>
 
-		<a class="social-icon facebook-icon" 
-		  href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
-		  target="new" 
-		  title=<?php esc_attr_e("Follow me on Facebook", 'clashvibes'); ?>
-		>
-		  <span>
-			<i class="fa fa-facebook"></i>
-		  </span>
-		</a>	
+			<a class="social-icon facebook-icon" 
+				href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>" 
+				target="new" 
+				title=<?php esc_attr_e("Follow me on Facebook", 'clashvibes'); ?>
+			>
+				<span>
+				<i class="fa fa-facebook"></i>
+				</span>
+			</a>	
 
 	  </aside>		
 	

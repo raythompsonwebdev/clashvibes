@@ -1,7 +1,6 @@
   var toggleSide = document.querySelector("#sidebar_toggle");
 
-  console.log(toggleSide);
-    
+      
   //side nav
   toggleSide.addEventListener("click", function(event) {
 

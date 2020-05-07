@@ -1418,16 +1418,17 @@ License: GNU General Public License v2 or later
           width: 98%;
           display: block;
           margin: 0 auto;
-          min-height: 50px;
+          min-height: 100px;
 
-          //text
+          
           p {
             color: $color4;
             font-size: 0.9em;
             line-height: 1.9em;
             display: block;
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
+            width:90%;
 
             a {
               color: $color4;

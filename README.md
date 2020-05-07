@@ -46,6 +46,9 @@ Audio and Video website for fans of Jamaican Sound System culture in the 90's an
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
 * HTML5 Shiv 3.7.3 (C) @afarkas (C) @jdalton (C)@jon_neal @rem | MIT/GPL2 Licensed,https://github.com/aFarkas/html5shiv
+
+* selectivizr v1.0.2 - (c) Keith Clark, freely distributable under the terms of the MIT license.
  
 * skip-link-focus-fix.js- Helps with accessibility for keyboard only users. Learn more: https://git.io/vWdr2
  
+* Font Awesome Free license: https://fontawesome.com/license/free

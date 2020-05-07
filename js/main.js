@@ -74,3 +74,8 @@ jQuery(document).ready(function($) {
     }
   });
 }); //end of jquery
+
+//USE  IIFE
+// ( function( $ ) {
+//   // Your code goes here
+// } )( jQuery );

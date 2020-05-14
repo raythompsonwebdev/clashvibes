@@ -52,6 +52,7 @@ function clashvibes_custom_post_type() {
 		'description'          => __( 'Sound Clash Video news and reviews', 'clashvibes' ),
 		'labels'               => $labels,
 		// Features this CPT supports in Post Editor.
+		'show_in_rest' 				 => true,
 		'supports'             => array( 'title', 'editor', 'post-formats', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
 		// You can associate this CPT with a taxonomy or custom taxonomy.
 		'taxonomies'           => array( 'video-category', 'post_tag' ),

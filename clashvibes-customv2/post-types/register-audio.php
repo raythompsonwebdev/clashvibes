@@ -53,6 +53,7 @@ function clashvibes_custom_post_audio() {
 		'label'                => __( 'Sound Clash Audio', 'CLVBDOMAIN' ),
 		'description'          => __( 'Sound Clash Audio news and reviews', 'CLVBDOMAIN' ),
 		'labels'               => $labels,
+		'show_in_rest' 				 => true,	
 		// Features this CPT supports in Post Editor.
 		'supports'             => array( 'title', 'editor', 'post-formats', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
 		// You can associate this CPT with a taxonomy or custom taxonomy.
@@ -67,7 +68,7 @@ function clashvibes_custom_post_audio() {
 
 		'register_meta_box_cb' => 'add_audio_clashes_metaboxes',
 		'hierarchical'         => false,
-		'public'               => true,
+		'public'               => true,		
 		'show_ui'              => true,
 		'show_in_menu'         => true,
 		'show_in_nav_menus'    => true,

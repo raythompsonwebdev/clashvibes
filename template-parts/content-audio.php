@@ -15,11 +15,11 @@ if ( have_posts() ) :
 		the_post();
 		?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<header class="entry-header">
+  <header class="entry-header">
 
-					<?php
+    <?php
 
 					if ( is_singular() ) :
 						the_title( '<h1 class="entry-title"><span> Sound Clash Audio:</span> <a href="' . esc_url( get_permalink() ) . '"></a>', '</h1>' );
@@ -29,131 +29,140 @@ if ( have_posts() ) :
 
 			if ( 'clash-audio' === get_post_type() ) :
 				?>
-		<div class="entry-meta">
-				<?php
+    <div class="entry-meta">
+      <?php
 				clashvibes_posted_on();
 				clashvibes_posted_by();
 				?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+    </div><!-- .entry-meta -->
+    <?php endif; ?>
 
-		</header>
+  </header>
 
-		<?php clashvibes_post_thumbnail(); ?>
+  <?php clashvibes_post_thumbnail(); ?>
 
-		<div class="audioExcerpt">
+  <div class="audioExcerpt">
 
-		<?php the_content(); ?>
+    <?php the_content(); ?>
 
-			<!--audio player and audio controls-->
+    <!--audio player and audio controls-->
 
-			<?php
+    <?php
 
-				global $post;
+			global $post;
 
-				$meta = get_post_meta( $post->ID, 'sound_system_url', true );
+			$meta = get_post_meta( $post->ID, 'sound_system_url', true );
 
-			?>
+		?>
 
-			<audio id="result_player" >
-
-	  
-				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.mp3" preload="metadata" type='audio/mpeg'  />
-
-			
-				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.ogg" preload="metadata" type='audio/ogg' />
-
-				
-				<source src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.m4a" preload="metadata" type='audio/mp4' />
-
-				<p><?php esc_html_e( 'Your browser does not support HTML5 audio.', 'clashvibes' ); ?></p>
-
-			</audio>
-
-			<br/>
-
-			<div id="audio_controls">
-
-				<div id="btns_box">
-				<button id="play_toggle" class="player-button"><i class="fa fa-play" aria-hidden="true" title="Play"></i></button>
-				<button id="rewind" class="player-button"><i class="fa fa-backward" aria-hidden="true" title="Backward"></i></button>
-				<button id="forward" class="player-button"><i class="fa fa-forward" aria-hidden="true" title="Forward"></i></button>
-				</div>
-
-				<div id="progress">
-		<progress value="0" id="playback"></progress>
-				<span id="load_progress"></span>
-				<span id="play_progress"></span>
-				</div>
-
-				<div id="time">
-
-					<span><?php esc_html_e( 'Current Time', 'clashvibes' ); ?></span><span id="current_time">00:00</span>
-					<span><?php esc_html_e( 'Duration', 'clashvibes' ); ?></span> <span id="duration_time">00:00</span>
-				</div>
-
-				<div id="video_volume">
-					<label id="volume_bar" for="volume"><?php esc_html_e( 'Volume', 'clashvibes' ); ?></label>
-					<input type="range" id="volume" title="volume" min="0" max="1" step="0.1" value="1">
-				</div>
-				<div id="video_seek">
-					<label for="seek"><?php esc_html_e( 'SEEK', 'clashvibes' ); ?></label>
-					<input type="range" id="seek" title="seek" min="0" value="0" max="0">
-				</div>
-
-			</div>
+    <audio id="result_player">
 
 
-			<div class="clearfix"></div>
+      <source
+        src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.mp3"
+        preload="metadata" type='audio/mpeg' />
 
 
-		</div>
+      <source
+        src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.ogg"
+        preload="metadata" type='audio/ogg' />
 
-		<br/>
 
-		<footer class="speaker-meta">
+      <source
+        src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.m4a"
+        preload="metadata" type='audio/mp4' />
 
-			<ul class="post-meta">
-				<li>
+      <p><?php esc_html_e( 'Your browser does not support HTML5 audio.', 'clashvibes' ); ?></p>
 
-					<span class="post-meta-key">
-					<?php $sound_name = get_post_meta( get_the_ID(), 'sound_system_name', true ); ?>
-					<?php esc_html_e( 'Sound System Name', 'clashvibes' ); ?>
-					</span>
-					<p><?php echo esc_html( $sound_name ); ?> </p>
-				</li>
-				<li>
-					<span class="post-meta-key">
-					<?php $sound_year = get_post_meta( get_the_ID(), 'sound_clash_year', true ); ?>
-					<?php esc_html_e( 'Sound Clash Year', 'clashvibes' ); ?>
-					</span>
-					<p><?php echo esc_html( $sound_year ); ?>  </p>
-				</li>
-				<li>
-					<span class="post-meta-key">
-					<?php $clash_location = get_post_meta( get_the_ID(), 'sound_clash_location', true ); ?>
-					<?php esc_html_e( 'Sound Clash Location', 'clashvibes' ); ?>
-					</span>
-					<p><?php echo esc_html( $clash_location ); ?>  </p>
-				</li>
+    </audio>
 
-			</ul>
+    <br />
 
-		</footer>
+    <div id="audio_controls">
 
-		
-		<div class="navigation">
-			<h2><?php esc_html_e( 'More Clashes', 'clashvibes' ); ?></h2>
-				<?php previous_post_link( '<span>%link</span>', '%title' ); ?>
-				<?php next_post_link( '<span>%link </span>', '%title' ); ?>
-		</div>
-	</article>
-		<?php
+      <div id="btns_box">
+        <button id="play_toggle" class="player-button"><i class="fa fa-play" aria-hidden="true"
+            title="Play"></i></button>
+        <button id="rewind" class="player-button"><i class="fa fa-backward" aria-hidden="true"
+            title="Backward"></i></button>
+        <button id="forward" class="player-button"><i class="fa fa-forward" aria-hidden="true"
+            title="Forward"></i></button>
+      </div>
+
+      <div id="progress">
+        <progress value="0" id="playback"></progress>
+        <span id="load_progress"></span>
+        <span id="play_progress"></span>
+      </div>
+
+      <div id="time">
+
+        <span><?php esc_html_e( 'Current Time', 'clashvibes' ); ?></span><span id="current_time">00:00</span>
+        <span><?php esc_html_e( 'Duration', 'clashvibes' ); ?></span> <span id="duration_time">00:00</span>
+      </div>
+
+      <div id="video_volume">
+        <label id="volume_bar" for="volume"><?php esc_html_e( 'Volume', 'clashvibes' ); ?></label>
+        <input type="range" id="volume" title="volume" min="0" max="1" step="0.1" value="1">
+      </div>
+      <div id="video_seek">
+        <label for="seek"><?php esc_html_e( 'SEEK', 'clashvibes' ); ?></label>
+        <input type="range" id="seek" title="seek" min="0" value="0" max="0">
+      </div>
+
+    </div>
+
+
+    <div class="clearfix"></div>
+
+
+  </div>
+
+  <br />
+
+  <footer class="speaker-meta">
+
+    <ul class="post-meta">
+      <li>
+
+        <span class="post-meta-key">
+          <?php $sound_name = get_post_meta( get_the_ID(), 'sound_system_name', true ); ?>
+          <?php esc_html_e( 'Sound System Name', 'clashvibes' ); ?>
+        </span>
+        <p><?php echo esc_html( $sound_name ); ?> </p>
+      </li>
+      <li>
+        <span class="post-meta-key">
+          <?php $sound_year = get_post_meta( get_the_ID(), 'sound_clash_year', true ); ?>
+          <?php esc_html_e( 'Sound Clash Year', 'clashvibes' ); ?>
+        </span>
+        <p><?php echo esc_html( $sound_year ); ?> </p>
+      </li>
+      <li>
+        <span class="post-meta-key">
+          <?php $clash_location = get_post_meta( get_the_ID(), 'sound_clash_location', true ); ?>
+          <?php esc_html_e( 'Sound Clash Location', 'clashvibes' ); ?>
+        </span>
+        <p><?php echo esc_html( $clash_location ); ?> </p>
+      </li>
+
+    </ul>
+
+  </footer>
+
+
+  <div class="navigation">
+    <h2><?php esc_html_e( 'More Clashes', 'clashvibes' ); ?></h2>
+    <?php previous_post_link( '<span>%link</span>', '%title' ); ?>
+    <?php next_post_link( '<span>%link </span>', '%title' ); ?>
+  </div>
+</article>
+<?php
 	endwhile;
 
 	else :
 		?>
 
-		<?php get_template_part( 'template-parts/content', 'none' ); ?>
+<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-	<?php endif; ?>
+<?php endif; ?>

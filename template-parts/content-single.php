@@ -37,12 +37,20 @@
 		<!--featured Image-->
 		
 
-			<?php if ( has_post_thumbnail() ) : ?>
-
-				<?php clashvibes_post_thumbnail(); ?>
-			
-
-			<?php endif; ?>
+		<?php if ( has_post_thumbnail() ) : ?>
+							
+							<?php clashvibes_post_thumbnail(); ?>
+	
+								<?php else : ?>
+	
+									<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+										
+										<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/03/placeholder-1.jpg"
+												alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+										
+								</a>
+															
+							<?php endif; ?>
 
 		
 		<!--featured Image end-->

@@ -25,7 +25,7 @@ get_header(); ?>
 		the_post();
 	?>
 	
-	<?php get_template_part( 'template-parts/content', 'single' ); ?>
+			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
 		<?php endwhile; ?>
 

@@ -71,33 +71,36 @@ get_header(); ?>
 
 				<?php else : ?>
 
-					<figure class="featuredImage">
-						
-						<img src="<?php echo esc_url('https://raythompsonwebdev.co.uk/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
-						
-					</figure>
+					<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+										
+										<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/05/placeholder-1.jpg"
+												alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+										
+								</a>
 
 				<?php endif; ?>
 
 			</a>
 			<!--featured Image end-->
 
-			<div class="entry">
+			<div class="entry-content">
+				<?php
+					the_excerpt();
 
-				<?php	the_excerpt();	?>
-
-			</div>
-
-			<div class="continue-reading">
-				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-					<?php
-					printf(
-						/* Translators: %s = Name of the current post. */
-							wp_kses( __( 'Continue reading %s', 'clashvibes' ), array( 'span' => array( 'class' => array() ) ) ), the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					wp_link_pages(
+						array(
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
+							'after'  => '</div>',
+						)
 					);
+				?>
+				<a href="<?php echo esc_url( get_permalink() ); ?>" class="read_more" rel="bookmark">
+					<?php
+						esc_html(the_title("Continue Reading : "), 'clashvibes');
 					?>
-				</a>
-			</div>
+			</a>
+			</div><!-- .entry-content -->
+		
 
 			<?php if ( get_edit_post_link() ) : ?>
 				<footer class="entry-footer">

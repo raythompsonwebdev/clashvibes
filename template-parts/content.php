@@ -43,7 +43,7 @@
 
 								<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 									
-									<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/03/placeholder-1.jpg"
+									<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/05/placeholder-1.jpg"
 											alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 									
 							</a>
@@ -55,7 +55,7 @@
 
 			<div class="entry-content">
 				<?php
-					the_content(
+					the_excerpt(
 						sprintf(
 							wp_kses(
 								/* translators: %s: Name of current post. Only visible to screen readers */

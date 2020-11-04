@@ -17,5 +17,6 @@ xmlrpc.php
 composer.json
 composer.lock
 videos/
+doumentation/
 
 /vendor/

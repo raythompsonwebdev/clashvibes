@@ -45,7 +45,7 @@
 	
 									<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 										
-										<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/03/placeholder-1.jpg"
+										<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/sites/2/2020/06/placeholder-1.jpg"
 												alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 										
 								</a>

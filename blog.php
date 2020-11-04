@@ -15,30 +15,31 @@
  * @version    GIT: https://github.com/raythompsonwebdev/mannering-music.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
-get_header(); ?>
+get_header();
+?>
 
 
 <?php get_sidebar(); ?>
 
 <section id="clashvibes_right_column">
 
-<!--Post loop start -->
-		<?php if ( have_posts() ) : ?>
+    <!--Post loop start -->
+    <?php if (have_posts()) : ?>
 
-			<?php
-				while ( have_posts() ) :
-				the_post();
-			?>
+        <?php
+        while (have_posts()) :
+            the_post();
+            ?>
 
-			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+            <?php get_template_part('template-parts/content', get_post_format()); ?>
 
-		<?php endwhile; ?>
+        <?php endwhile; ?>
 
-	<?php else : ?>
+    <?php else : ?>
 
-	<?php get_template_part( 'template-parts/content', 'none' ); ?>
+        <?php get_template_part('template-parts/content', 'none'); ?>
 
-	<?php endif; ?>
+<?php endif; ?>
 
 </section><!-- end of right panel -->
 

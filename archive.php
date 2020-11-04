@@ -1,34 +1,35 @@
 <?php
 /*
-Template Name: Archives
-*/
- get_header(); ?>
+  Template Name: Archives
+ */
+get_header();
+?>
 
 <?php get_sidebar(); ?>
 
 <section id="clashvibes_right_column">
-	<!--Post loop start -->
-	<?php if ( have_posts()) : 
+    <!--Post loop start -->
+    <?php
+    if (have_posts()) :
 
-		the_archive_title( '<h1 class="page-title">', '</h1>' );
-		the_archive_description( '<div class="taxonomy-description">', '</div>' );
-		
-	?>
+        the_archive_title('<h1 class="page-title">', '</h1>');
+        the_archive_description('<div class="taxonomy-description">', '</div>');
+        ?>
 
-		<?php while ( have_posts() ) : the_post();	
-					
-			get_template_part( 'template-parts/content', get_post_type() );
+        <?php
+        while (have_posts()) : the_post();
 
-		?>
-		<!-- #post-<?php the_ID(); ?> -->
+            get_template_part('template-parts/content', get_post_type());
+            ?>
+            <!-- #post-<?php the_ID(); ?> -->
 
-		<?php endwhile; ?>
+        <?php endwhile; ?>
 
-	<?php else : ?>
+    <?php else : ?>
 
-	<?php get_template_part( 'template-parts/content', 'none' ); ?>
+        <?php get_template_part('template-parts/content', 'none'); ?>
 
-	<?php endif; ?>
+<?php endif; ?>
 
 </section><!-- end of right panel -->
 

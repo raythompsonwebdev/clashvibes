@@ -59,17 +59,17 @@ if ( have_posts() ) :
 
 
       <source
-        src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.mp3"
+        src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/clashbucket/' ); ?><?php echo esc_html( $meta ); ?>.mp3"
         preload="metadata" type='audio/mpeg' />
 
 
       <source
-        src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.ogg"
+        src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/clashbucket/' ); ?><?php echo esc_html( $meta ); ?>.ogg"
         preload="metadata" type='audio/ogg' />
 
 
       <source
-        src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/Music/' ); ?><?php echo esc_html( $meta ); ?>.m4a"
+        src="<?php echo esc_url( 'https://clashbucket.s3.eu-west-2.amazonaws.com/clashbucket/' ); ?><?php echo esc_html( $meta ); ?>.m4a"
         preload="metadata" type='audio/mp4' />
 
       <p><?php esc_html_e( 'Your browser does not support HTML5 audio.', 'clashvibes' ); ?></p>

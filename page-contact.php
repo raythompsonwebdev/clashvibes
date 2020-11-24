@@ -23,7 +23,9 @@ get_header(); ?>
 /**
  * Customizer additions.
  */
-	// include get_template_directory() . '/inc/contact-form.php';
+   include get_template_directory() . '/inc/contact-form.php';
+
+
 
 ?>
 

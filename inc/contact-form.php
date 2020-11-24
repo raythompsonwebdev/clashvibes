@@ -1,100 +1,138 @@
 <?php
+// process submitted form
+function clashvibes_process_contact_form() {
 
-  // response generation function
+  // get the nonce
+	// if ( !isset( $_POST['contact_nonce_field'] ) ) {
 
-  $response = '';
+	// 	$nonce = $_POST['contact_nonce_field'];
 
-  // function to generate response
-function my_contact_form_generate_response( $type, $message ) {
+	// } else {
 
-	global $response;
+	// 	$nonce = false;
 
-	if ( $type == 'success' ) {
-		$response = "<div class='success'>{$message}</div>";
-	} else {
-		$response = "<div class='error'>{$message}</div>";
-	}
+	// }
 
-}
+	// if ( !wp_verify_nonce( $nonce, 'contact_form_action' ) ) {
 
-  // response messages
-  $not_human       = 'Human verification incorrect.';
-  $missing_content = 'Please supply all information.';
-  $email_invalid   = 'Email Address Invalid.';
-  $message_unsent  = 'Message was not sent. Try Again.';
-  $message_sent    = 'Thanks! Your message has been sent.';
+  //   wp_die( 'Incorrect nonce!' );
 
-  // user posted variables
-  $name    = $_POST['message_name'];
-  $email   = $_POST['message_email'];
-  $message = $_POST['message_text'];
-  $human   = $_POST['message_human'];
+  // } else {
 
-  // php mailer variables
-  $to      = get_option( 'admin_email' );
-  $subject = 'Someone sent a message from ' . get_bloginfo( 'name' );
-  $headers = 'From: ' . $email . "\r\n" .
-	'Reply-To: ' . $email . "\r\n";
+	// 	$name = sanitize_text_field( $_POST[ 'message_name' ] );
 
-if ( ! $human == 0 ) {
-	if ( $human != 2 ) {
-		my_contact_form_generate_response( 'error', $not_human ); // not human!
-	} else {
+	// 	if ( !empty( $name ) ) {
 
-		// validate email
-		if ( ! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
-			my_contact_form_generate_response( 'error', $email_invalid );
-		} else // email is valid
-		{
-			// validate presence of name and message
-			if ( empty( $name ) || empty( $message ) ) {
-				my_contact_form_generate_response( 'error', $missing_content );
-			} else // ready to go!
-			{
-				$sent = wp_mail( $to, $subject, strip_tags( $message ), $headers );
-				if ( $sent ) {
-					my_contact_form_generate_response( 'success', $message_sent ); // message sent!
-				} else {
-					my_contact_form_generate_response( 'error', $message_unsent ); // message wasn't sent
-				}
-			}
+	// 		echo '<p>Your name is '. $name .'.</p>';
+
+	// 	} else {
+
+	// 		echo '<p>Please enter your name!</p>';
+
+  //   }
+
+  //   $email = sanitize_email( $_POST[ 'message_email' ] );
+
+	// 	if ( !empty( $email ) ) {
+
+	// 		echo '<p>Your email is '. $email .'.</p>';
+
+	// 	} else {
+
+	// 		echo '<p>Please enter your email!</p>';
+
+  //   }
+
+  //   $text_input = sanitize_text_field( $_POST[ 'message_text' ] );
+
+	// 	if ( !empty( $text_input ) ) {
+
+	// 		echo '<p>Your text is '. $text_input .'.</p>';
+
+	// 	} else {
+
+	// 		echo '<p>Please enter some text!</p>';
+
+	// 	}
+
+  // }
+
+  $name = sanitize_text_field( $_POST[ 'message_name' ] );
+
+		if ( !empty( $name ) ) {
+
+			echo '<p>Your name is '. $name .'.</p>';
+
+		} else {
+
+			echo '<p>Please enter your name!</p>';
+
+    }
+
+    $email = sanitize_email( $_POST[ 'message_email' ] );
+
+		if ( !empty( $email ) ) {
+
+			echo '<p>Your email is '. $email .'.</p>';
+
+		} else {
+
+			echo '<p>Please enter your email!</p>';
+
+    }
+
+    $text_input = sanitize_text_field( $_POST[ 'message_text' ] );
+
+		if ( !empty( $text_input ) ) {
+
+			echo '<p>Your text is '. $text_input .'.</p>';
+
+		} else {
+
+			echo '<p>Please enter some text!</p>';
+
 		}
-	}
-} elseif ( $_POST['submitted'] ) {
-	my_contact_form_generate_response( 'error', $missing_content );
+
 }
+
+
+// display form
+function clashvibes_contact_form() {
 
 ?>
 
-<h1><?php the_title(); ?> Page</h1>
 
-<div id="contactform">
-<div class="wpcf7">
-  <?php echo $response; ?>
-  <form action="<?php the_permalink(); ?>" method="post">
-  <p>
-	<label for="name">Name: <span>*</span> <br><input type="text" name="message_name" value="<?php echo esc_attr( $_POST['message_name'] ); ?>">
-	</label>
-  </p>
-  <p>
-	<label for="message_email">Email: <span>*</span> <br><input type="text" name="message_email" value="<?php echo esc_attr( $_POST['message_email'] ); ?>">
-	</label>
-  </p>
-  <p>
-	<label for="message_text">Message: <span>*</span> <br>
-	<textarea type="text" name="message_text"><?php echo esc_textarea( $_POST['message_text'] ); ?></textarea>
-	</label>
-  </p>
-  <p>
-	<label for="message_human">Human Verification: <span>*</span> <br>
-	<input type="text" style="width: 60px;" name="message_human"> + 3 = 5
-	</label>
-  </p>
-	<input type="hidden" name="submitted" value="1">
-  <p>
-	<input type="submit">
-  </p>
-  </form>
-	</div>          
+  <div id="contactform">
+    <div class="wpcf7">
+    <form method="post">
+    <p>
+    <label for="message_name">Name: <span>*</span> <br>
+      <input type="text" name="message_name" value="<?php echo esc_attr( $_POST['message_name'] ); ?>">
+    </label>
+    </p>
+    <p>
+    <label for="message_email">Email: <span>*</span> <br>
+      <input type="text" name="message_email" value="<?php echo esc_attr( $_POST['message_email'] ); ?>">
+    </label>
+    </p>
+    <p>
+    <label for="message_text">Message: <span>*</span> <br>
+      <textarea type="text" name="message_text"><?php echo esc_textarea( $_POST['message_text'] ); ?></textarea>
+    </label>
+    </p>
+      <input type="submit">
+    </p>
 
-</div>
+    </form>
+    </div>
+    <?php  //wp_nonce_field( 'contact_form_action', 'contact_nonce_field', false ); ?>
+  </div>
+
+<?php
+
+
+
+}
+
+clashvibes_contact_form();
+clashvibes_process_contact_form();

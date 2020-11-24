@@ -20,17 +20,17 @@
 function clashvibes_register_taxonomies_audio() {
 
 	$labels = array(
-		'name'              => _x( 'Audio Categories', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Audio Category', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Audio Categories' ),
-		'all_items'         => __( 'All Audio Categories' ),
-		'parent_item'       => __( 'Parent Audio Category' ),
-		'parent_item_colon' => __( 'Parent Audio Category:' ),
-		'edit_item'         => __( 'Edit Audio Category' ),
-		'update_item'       => __( 'Update Audio Category' ),
-		'add_new_item'      => __( 'Add New Audio Category' ),
-		'new_item_name'     => __( 'New Audio Category' ),
-		'menu_name'         => __( 'Audio Categories' ),
+		'name'              => _x( 'Audio Categories', 'taxonomy general name', 'clashvibes' ),
+		'singular_name'     => _x( 'Audio Category', 'taxonomy singular name', 'clashvibes' ),
+		'search_items'      => __( 'Search Audio Categories', 'clashvibes' ),
+		'all_items'         => __( 'All Audio Categories', 'clashvibes' ),
+		'parent_item'       => __( 'Parent Audio Category' , 'clashvibes'),
+		'parent_item_colon' => __( 'Parent Audio Category:', 'clashvibes' ),
+		'edit_item'         => __( 'Edit Audio Category', 'clashvibes' ),
+		'update_item'       => __( 'Update Audio Category', 'clashvibes' ),
+		'add_new_item'      => __( 'Add New Audio Category' , 'clashvibes'),
+		'new_item_name'     => __( 'New Audio Category', 'clashvibes' ),
+		'menu_name'         => __( 'Audio Categories', 'clashvibes' ),
 	);
 	$args   = array(
 		'labels'       => $labels,

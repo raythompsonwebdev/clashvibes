@@ -4,9 +4,9 @@
  *
  * Plugin | clashvibes-customv2.php.
  *
- * @category   plugin 
+ * @category   plugin
  * @package    Clashvibes
- * @subpackage plugin 
+ * @subpackage plugin
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
@@ -14,155 +14,46 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 
-/**
- * Creating a function to create our CPT.
- */
-function clashvibes_custom_post_type() {
-
-	/**
-	 * 'menu_icon'   => get_stylesheet_directory_uri() . '/images/portfolio-icon.png',
-	 * 'menu_icon' => 'dashicons-download',
-	 */
-
-	// Set UI labels for Video Custom Post Type.
-	$labels = array(
-		'name'                  => _x( 'Sound Clash Video', 'Post Type General Name', 'clashvibes' ),
-		'singular_name'         => _x( 'Sound Clash Video', 'Post Type Singular Name', 'clashvibes' ),
-		'menu_name'             => __( 'Sound Clash Video', 'clashvibes' ),
-		'name_admin_bar'        => __( 'Sound Clash Video', 'clashvibes' ),
-		'parent_item_colon'     => __( 'Parent Sound Clash Video', 'clashvibes' ),
-		'all_items'             => __( 'Sound Clash Video', 'clashvibes' ),
-		'view_item'             => __( 'View Sound Clash Video', 'clashvibes' ),
-		'add_new_item'          => __( 'Add New Sound Clash Video', 'clashvibes' ),
-		'add_new'               => __( 'Add Sound Clash Video', 'clashvibes' ),
-		'edit_item'             => __( 'Edit Sound Clash Video', 'clashvibes' ),
-		'update_item'           => __( 'Update Sound Clash Video', 'clashvibes' ),
-		'search_items'          => __( 'Search Sound Clash Video', 'clashvibes' ),
-		'not_found'             => __( 'Not Found', 'clashvibes' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'clashvibes' ),
-		'featured_image'        => __( 'Featured Image', 'clashvibes' ),
-		'set_featured_image'    => __( 'Set featured image', 'clashvibes' ),
-		'remove_featured_image' => __( 'Remove featured image', 'clashvibes' ),
-		'use_featured_image'    => __( 'Use as featured image', 'clashvibes' ),
-	);
-
-	// Set other options for Video Custom Post Type.
-	$args = array(
-		'label'                => __( 'Sound Clash Video', 'clashvibes' ),
-		'description'          => __( 'Sound Clash Video news and reviews', 'clashvibes' ),
-		'labels'               => $labels,
-		// Features this CPT supports in Post Editor.
-		'show_in_rest' 				 => true,
-		'supports'             => array( 'title', 'editor', 'post-formats', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
-		// You can associate this CPT with a taxonomy or custom taxonomy.
-		'taxonomies'           => array( 'video-category', 'post_tag' ),
-		/**
-		* A hierarchical CPT is like Pages and can have
-		* Parent and child items. A non-hierarchical CPT
-		* is like Posts.
-		*
-		* 'menu_icon' => get_stylesheet_directory_uri() . '/functions/panel/images/catchinternet-small.png',
-		*/
-		'register_meta_box_cb' => 'add_video_clashes_metaboxes',
-		'hierarchical'         => false,
-		'public'               => true,
-		'show_ui'              => true,
-		'show_in_menu'         => true,
-		'show_in_nav_menus'    => true,
-		'show_in_admin_bar'    => true,
-		'menu_position'        => 5,
-		'query_var'            => true,
-		'can_export'           => true,
-		'has_archive'          => true,
-		'exclude_from_search'  => false,
-		'publicly_queryable'   => true,
-		'capability_type'      => 'post',
-	);
-
-	// Registering Video Custom Post Type.
-	register_post_type( 'clash-videos', $args );
-
-	// Set UI labels for Custom Post Type.
-	/**
-	 * 'menu_icon'  => get_stylesheet_directory_uri() . '/images/portfolio-icon.png',
-	 * 'menu_icon' => 'dashicons-download',
-	 */
-	
-
-	// Set UI labels for Audio Custom Post Type. 
-	$labels = array(
-		'name'                  => _x( 'Sound Clash Audio', 'Post Type General Name', 'clashvibes' ),
-		'singular_name'         => _x( 'Sound Clash Audio', 'Post Type Singular Name', 'clashvibes' ),
-		'menu_name'             => __( 'Sound Clash Audio', 'clashvibes' ),
-		'name_admin_bar'        => __( 'Sound Clash Audio', 'clashvibes' ),
-		'parent_item_colon'     => __( 'Parent Sound Clash Audio', 'clashvibes' ),
-		'all_items'             => __( 'Sound Clash Audio', 'clashvibes' ),
-		'view_item'             => __( 'View Sound Clash Audio', 'clashvibes' ),
-		'add_new_item'          => __( 'Add New Sound Clash Audio', 'clashvibes' ),
-		'add_new'               => __( 'Add Sound Clash Audio', 'clashvibes' ),
-		'edit_item'             => __( 'Edit Sound Clash Audio', 'clashvibes' ),
-		'update_item'           => __( 'Update Sound Clash Audio', 'clashvibes' ),
-		'search_items'          => __( 'Search Sound Clash Audio', 'clashvibes' ),
-		'not_found'             => __( 'Not Found', 'clashvibes' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'clashvibes' ),
-		'featured_image'        => __( 'Featured Image', 'clashvibes' ),
-		'set_featured_image'    => __( 'Set featured image', 'clashvibes' ),
-		'remove_featured_image' => __( 'Remove featured image', 'clashvibes' ),
-		'use_featured_image'    => __( 'Use as featured image', 'clashvibes' ),
-	);
-
-	// Set other options for Audio Custom Post Type.
-	$args = array(
-		'label'                => __( 'Sound Clash Audio', 'clashvibes' ),
-		'description'          => __( 'Sound Clash Audio news and reviews', 'clashvibes' ),
-		'labels'               => $labels,
-		// Features this CPT supports in Post Editor.
-		'show_in_rest' 				 => true,
-		'supports'             => array( 'title', 'editor', 'post-formats', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
-		// You can associate this CPT with a taxonomy or custom taxonomy.
-		'taxonomies'           => array( 'audio-category', 'post_tag' ),
-		/**
-		 * A hierarchical CPT is like Pages and can have
-		 * Parent and child items. A non-hierarchical CPT
-		 * is like Posts.
-		 *
-		 * 'menu_icon' => get_stylesheet_directory_uri() . '/functions/panel/images/catchinternet-small.png',
-		 */
-
-		'register_meta_box_cb' => 'add_audio_clashes_metaboxes',
-		'hierarchical'         => false,
-		'public'               => true,
-		'show_ui'              => true,
-		'show_in_menu'         => true,
-		'show_in_nav_menus'    => true,
-		'show_in_admin_bar'    => true,
-		'menu_position'        => 5,
-		'can_export'           => true,
-		'query_var'            => true,
-		'has_archive'          => true,
-		'exclude_from_search'  => false,
-		'publicly_queryable'   => true,
-		'capability_type'      => 'post',
-	);
-
-	// Registering your Audio Custom Post Type.
-	register_post_type( 'clash-audio', $args );
+ // If this file is called directly, abort.
+ if ( ! defined( 'WPINC' ) ) {
+	die;
 }
 
+define( 'CVWD_VERSION', '1.0.0' );
+define( 'CVWDDOMAIN', 'clashvibes' );
+define( 'CVWDPATH', get_stylesheet_directory() . '/clashvibes-customv2/' );
+
+require_once CVWDPATH . '/post-types/register-audio.php';
+// Audio Custom Post.
+add_action( 'init', 'clashvibes_audio_custom_post_type', 0 );
+
+require_once CVWDPATH . '/post-types/register-video.php';
+// Video Custom Post.
+add_action( 'init', 'clashvibes_video_custom_post_type', 0 );
+
+require_once CVWDPATH . '/taxonomies/register-audio.php';
+// Audio Taxonomy.
+add_action( 'init', 'clashvibes_taxonomies_product', 0 );
+
+require_once CVWDPATH . '/taxonomies/register-video.php';
+// Video Taxonomy.
+add_action( 'init', 'clashvibes_taxonomies_product', 0 );
+
 /**
-* Hook into the 'init' action so that the function
-* Containing our post type registration is not
-* unnecessarily executed.
-*/
-
-add_action( 'init', 'clashvibes_custom_post_type', 0 );
-
+ *  Flush rewrite rules to add "project" as a permalink slug.
+ */
+function clashvibes_rewrite_flush() {
+	clashvibes_register_post_type();
+	flush_rewrite_rules();
+}
+register_activation_hook( __FILE__, 'clashvibes_rewrite_flush' );
 
 /**
  *  Taxonomies
  */
 function clashvibes_taxonomies_product() {
 
+  //video
 	$labels = array(
 		'name'              => _x( 'Video Categories', 'taxonomy general name' ),
 		'singular_name'     => _x( 'Video Category', 'taxonomy singular name' ),
@@ -179,15 +70,18 @@ function clashvibes_taxonomies_product() {
 	$args   = array(
 		'labels'       => $labels,
 		'hierarchical' => true,
-		'query_var'    => true,
+    'query_var'    => true,
+    'show_ui'           => true,
+		'show_admin_column' => true,
 		'rewrite'      => array(
 			'slug'       => 'video-category', // This controls the base slug that will display before each term.
 			'with_front' => false, // Don't display the category base before.
 		),
 
 	);
-	register_taxonomy( 'video-category', 'clash-videos', $args );
+  register_taxonomy( 'video-category', 'clash-videos', $args );
 
+  //audio
 	$labels = array(
 		'name'              => _x( 'Audio Categories', 'taxonomy general name' ),
 		'singular_name'     => _x( 'Audio Category', 'taxonomy singular name' ),
@@ -204,7 +98,9 @@ function clashvibes_taxonomies_product() {
 	$args   = array(
 		'labels'       => $labels,
 		'hierarchical' => true,
-		'query_var'    => true,
+    'query_var'    => true,
+    'show_ui'           => true,
+		'show_admin_column' => true,
 		'rewrite'      => array(
 			'slug'       => 'audio-category', // This controls the base slug that will display before each term.
 			'with_front' => false, // Don't display the category base before.
@@ -214,92 +110,114 @@ function clashvibes_taxonomies_product() {
 }
 add_action( 'init', 'clashvibes_taxonomies_product', 0 );
 
-/**
- * Flush rewrite rules to add "review" as a permalink slug.
- */
-function clashvibes_rewrite_flush() {
-	clashvibes_custom_post_type();
-	flush_rewrite_rules();
-}
-register_activation_hook( __FILE__, 'clashvibes_rewrite_flush' );
 
+/**
+ * Add video meta box.
+ */
+function add_video_clashes_metaboxes() {
+	add_meta_box(
+    'video_clash_details',
+    esc_html__( 'Video Clash Details', 'clashvibes' ),
+    'clashvibes_meta_box_fields',
+    'clash-videos',
+    'normal',
+    'default'
+  );
+}
+add_action( 'add_meta_boxes', 'add_video_clashes_metaboxes' );
+
+//video
 add_action( 'load-post.php', 'add_video_clashes_metaboxes' );
 add_action( 'load-post-new.php', 'add_video_clashes_metaboxes' );
+
+
+/**
+ * Add audio meta box.
+ */
+function add_audio_clashes_metaboxes() {
+
+	add_meta_box(
+    'audio_clash_details',
+    esc_html__( 'Audio Clash Details', 'clashvibes' ),
+    'clashvibes_meta_box_fields',
+    'clash-audio',
+    'normal',
+    'default'
+  );
+}
+add_action( 'add_meta_boxes', 'add_audio_clashes_metaboxes' );
+
+ //audio
 add_action( 'load-post.php', 'add_audio_clashes_metaboxes' );
 add_action( 'load-post-new.php', 'add_audio_clashes_metaboxes' );
 
 
-
-/**
- * Add video.
- */
-function add_video_clashes_metaboxes() {
-	add_meta_box( 'video_clash_details', esc_html__( 'Video Clash Details', 'clashvibes' ), 'sound_clash_fields', 'clash-videos', 'normal', 'default' );
-}
-// add video meta boxes.
-add_action( 'add_meta_boxes', 'add_video_clashes_metaboxes' );
-
-
-/**
- * Add audio.
- */
-function add_audio_clashes_metaboxes() {
-	add_meta_box( 'audio_clash_details', esc_html__( 'Audio Clash Details', 'clashvibes' ), 'sound_clash_fields', 'clash-audio', 'normal', 'default' );
-}
-// add audio meta boxes.
-add_action( 'add_meta_boxes', 'add_audio_clashes_metaboxes' );
-
-/**
+ /**
  *
- *  Metabox fields.
+ *  Display Metabox.
  *
  *  @param post $post post object.
  */
-function sound_clash_fields( $post ) {
+function clashvibes_meta_box_fields( $post ) {
 
-	wp_nonce_field( basename( __FILE__ ), 'sound_clash_nonce' );
+  $clashvibes_stored_meta = get_post_meta( $post->ID);
 
-	$dwwp_stored_meta = get_post_meta( $post->ID );
+  //add nonce field
+  wp_nonce_field( basename( __FILE__ ), 'clashvibes_meta_box_nonce' );
 
 	?>
+    <!--display mark up for metabox-->
+    <h1>Sound System Details</h1>
+    <p>
+      <label for="sound_system_name">Sound System Name:</label>
+      <br />
+        <input size="45" id="sound_system_name" name="sound_system_name"  value="
+          <?php
+            if ( ! empty( $clashvibes_stored_meta['sound_system_name'] ) ) :
+              echo esc_attr( $clashvibes_stored_meta['sound_system_name'][0] );
+            endif;
+          ?>"
+        />
+    </p>
 
-	<p><label>Sound Sytem Name:</label><br /><input size="45" name="sound_system_name"  value="
-		<?php
-		if ( ! empty( $dwwp_stored_meta['sound_system_name'] ) ) {
-			echo esc_attr( $dwwp_stored_meta['sound_system_name'][0] );
-		}
-		?>
-	" /></p>
+    <p>
+      <label for="sound_clash_year">Sound Class Year:</label>
+      <br />
+      <input size="45" id="sound_clash_year" name="sound_clash_year" value="
+        <?php
+          if ( ! empty( $clashvibes_stored_meta['sound_clash_year'] ) ) :
+            echo esc_attr( $clashvibes_stored_meta['sound_clash_year'][0] );
+          endif;
+        ?>"
+      />
+    </p>
 
-	<p><label>Sound Class Year:</label><br /><input size="45" name="sound_clash_year" value="
-		<?php
-		if ( ! empty( $dwwp_stored_meta['sound_clash_year'] ) ) {
-			echo esc_attr( $dwwp_stored_meta['sound_clash_year'][0] );
-		}
-		?>
-	" /></p>
+    <p>
+      <label for="sound_clash_location">Sound Clash Location:</label>
+      <br />
+        <input size="45" id="sound_clash_location" name="sound_clash_location" value="
+          <?php
+            if ( ! empty( $clashvibes_stored_meta['sound_clash_location'] ) ) :
+              echo esc_attr( $clashvibes_stored_meta['sound_clash_location'][0] );
+            endif;
+          ?>"
+        />
+    </p>
 
-	<p><label>Sound Clash Location:</label><br /><input size="45" name="sound_clash_location" value=" 
-		<?php
-		if ( ! empty( $dwwp_stored_meta['sound_clash_location'] ) ) {
-			echo esc_attr( $dwwp_stored_meta['sound_clash_location'][0] );
-		}
-		?>
-	" /></p>
+    <p>
+      <label for="sound_system_url">URL:</label>
+      <br />
+        <input size="45" id="sound_system_url" name="sound_system_url" value="
+          <?php
+            if ( ! empty( $clashvibes_stored_meta['sound_system_url'] ) ) :
+              echo esc_attr( $clashvibes_stored_meta['sound_system_url'][0] );
+            endif;
+          ?>"
+        />
+    </p>
 
-	<p><label>URL:</label><br /><input size="45" name="sound_system_url" value=" 
-		<?php
-		if ( ! empty( $dwwp_stored_meta['sound_system_url'] ) ) {
-			echo esc_attr( $dwwp_stored_meta['sound_system_url'][0] );
-		}
-		?>
-	" /></p>
-
-<?php 
+  <?php
 }
-
-add_action( 'save_post', 'clashvibes_meta_save' );
-add_action( 'publish_post', 'clashvibes_meta_save' );
 
 /**
  *
@@ -311,37 +229,55 @@ function clashvibes_meta_save( $post_id ) {
 
 	// Checks save status.
 	$is_autosave = wp_is_post_autosave( $post_id );
-
 	$is_revision = wp_is_post_revision( $post_id );
 
-	$is_valid_nonce = ( isset( $_POST['sound_clash_nonce'] ) && wp_verify_nonce( $_POST['sound_clash_nonce'], basename( __FILE__ ) ) ) ? 'true' : 'false'; // input var okay; sanitization okay.
+  $is_valid_nonce =  ( isset( $_POST['clashvibes_meta_box_nonce'] ) && wp_verify_nonce( $_POST['clashvibes_meta_box_nonce'], basename( __FILE__ ) ) ) ? 'true' : 'false';
 
 	// Exits script depending on save status.
 	if ( $is_autosave || $is_revision || ! $is_valid_nonce ) {
 		return;
+  }
+
+  if ( isset( $_POST['sound_system_name'] ) ) {
+
+		update_post_meta(
+			$post_id,                                            // Post ID
+			'sound_system_name',                                // Meta key
+			sanitize_text_field( $_POST[ 'sound_system_name' ] ) // Meta value
+		);
+
 	}
 
-	if ( isset( $_POST['sound_system_name'] ) ) {// input var okay; sanitization okay.
+	if ( isset( $_POST['sound_clash_year'] ) ) {
 
-		update_post_meta( $post_id, 'sound_system_name', sanitize_text_field( $_POST['sound_system_name'] ) );// input var okay; sanitization okay.
+		update_post_meta(
+      $post_id,
+      'sound_clash_year',
+      sanitize_text_field( $_POST['sound_clash_year'] )
+    );
 	}
 
-	if ( isset( $_POST['sound_clash_year'] ) ) {// input var okay; sanitization okay.
+	if ( isset( $_POST['sound_clash_location'] ) ) {
 
-		update_post_meta( $post_id, 'sound_clash_year', sanitize_text_field( $_POST['sound_clash_year'] ) );// input var okay; sanitization okay.
+		update_post_meta(
+      $post_id,
+      'sound_clash_location',
+      sanitize_text_field( $_POST['sound_clash_location'] )
+    );
 	}
 
-	if ( isset( $_POST['sound_clash_location'] ) ) {// input var okay; sanitization okay.
+	if ( isset( $_POST['sound_system_url'] ) ) {
 
-		update_post_meta( $post_id, 'sound_clash_location', sanitize_text_field( $_POST['sound_clash_location'] ) );// input var okay; sanitization okay.
-	}
-
-	if ( isset( $_POST['sound_system_url'] ) ) {// input var okay; sanitization okay.
-
-		update_post_meta( $post_id, 'sound_system_url', sanitize_text_field( $_POST['sound_system_url'] ) );// input var okay; sanitization okay.
+		update_post_meta(
+      $post_id,
+      'sound_system_url',
+      sanitize_text_field( $_POST['sound_system_url'] )
+    );
 	}
 
 }
 add_action( 'save_post', 'clashvibes_meta_save' );
+
+
 
 

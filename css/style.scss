@@ -25,9 +25,9 @@ License: GNU General Public License v2 or later
 
 @media only screen and (max-width: 1920px) {
   #tog-menu {
-    
+
     display: none;
-    
+
   }
 
   /********** page container **********/
@@ -40,8 +40,8 @@ License: GNU General Public License v2 or later
     padding: 0.5em;
     background-color: $color;
     @include box-sizing($type: border-box);
-   
-    
+
+
     header {
       width: 100%;
       padding: 0;
@@ -62,7 +62,7 @@ License: GNU General Public License v2 or later
         position: relative;
         top: 0;
         left: 0;
-        width: 5%;       
+        width: 5%;
 
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
@@ -280,7 +280,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     /*--- Content ---*/
     main#clashvibes_content {
       padding: 0.25em;
@@ -308,8 +308,8 @@ License: GNU General Public License v2 or later
         }
       }
     }
-    
-    /********** front page **********/    
+
+    /********** front page **********/
     article#clashvibes-text {
       padding: 1em;
 
@@ -443,7 +443,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-        
+
     div.results {
       padding: 0;
       width: 100%;
@@ -557,12 +557,12 @@ License: GNU General Public License v2 or later
       height:auto;
       h1 {
         width: 100%;
-        //background-color:$color4; 
-        color:$color4; 
+        //background-color:$color4;
+        color:$color4;
         a {
           font-size: 0.8em;
           display: block;
-  
+
           &:hover {
             text-decoration: none;
           }
@@ -578,10 +578,10 @@ License: GNU General Public License v2 or later
         min-height: 320px;
         padding: 0;
         margin: 0.2em;
-        
+
         background-color: $color3;
 
-        
+
         img.audio-thumb,
         img.video-thumb,
         img.new-release-thumb {
@@ -591,9 +591,9 @@ License: GNU General Public License v2 or later
           @include box-sizing($type: border-box);
           @include Transition(all 0.5s ease-in-out 0s);
           display: block;
-          height: auto;      
+          height: auto;
 
-          
+
         }
 
         img.audio-thumb:hover img,
@@ -632,7 +632,7 @@ License: GNU General Public License v2 or later
             padding: 0 2%;
             width: 96%;
             text-transform:capitalize;
-  
+
           }
 
           a.Morebutton {
@@ -658,7 +658,7 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }  
+    }
 
     /*front page banner*/
     #clashvibes_banner {
@@ -779,9 +779,9 @@ License: GNU General Public License v2 or later
             display: block;
             font-weight: normal;
             float: left;
-            
-          }          
-   
+
+          }
+
           a.popularclashes-link {
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
@@ -807,10 +807,10 @@ License: GNU General Public License v2 or later
               letter-spacing: 0.055em;
             }
           }
-          
+
         }
       }
-    }   
+    }
 
     section.contact-wide {
       /********** comments form **********/
@@ -965,7 +965,7 @@ License: GNU General Public License v2 or later
         list-style: none;
         margin: 0px;
         letter-spacing: 0.04em;
-      }    
+      }
 
       /*side bar navigation blog and custom posts*/
       section.clashvibes_left_column_box {
@@ -973,7 +973,7 @@ License: GNU General Public License v2 or later
         width: 96%;
         margin: 0 auto;
 
-        
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -1107,13 +1107,13 @@ License: GNU General Public License v2 or later
 
     form.search-form {
       label {
-        
+
         font-size: 0.9em;
- 
+
         span.screen-reader-text {
-          
+
           line-height: 35px;
-          
+
         }
 
         input.search-field {
@@ -1420,7 +1420,7 @@ License: GNU General Public License v2 or later
           margin: 0 auto;
           min-height: 100px;
 
-          
+
           p {
             color: $color4;
             font-size: 0.9em;
@@ -1688,7 +1688,7 @@ License: GNU General Public License v2 or later
               }
 
               input[type="range"] {
-                width: 75%;                
+                width: 75%;
                 clear: both;
                 display: inline-block;
                 height: 32px;
@@ -1903,9 +1903,9 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }   
+    }
 
-    
+
     /* ----- Footer ----- */
     #clashvibes_footer {
       clear: both;
@@ -2045,7 +2045,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-   
+
     header {
       height: 70px;
 
@@ -2079,7 +2079,7 @@ License: GNU General Public License v2 or later
       }
     }
 
- 
+
     nav#mainNav {
       height: 45px;
 
@@ -2105,10 +2105,10 @@ License: GNU General Public License v2 or later
       }
     }
 
- 
+
     main#clashvibes_content {
       min-height: 1200px;
-    }    
+    }
 
     h1 {
       font-size: 1.4em;
@@ -2145,8 +2145,8 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
-    
+
+
     div.results {
       article.events_box {
         width: 19%;
@@ -2202,8 +2202,8 @@ License: GNU General Public License v2 or later
         img.video-thumb,
         img.new-release-thumb {
           height: auto;
-          width: 50%;          
-          
+          width: 50%;
+
         }
         figcaption {
           margin: 0 auto;
@@ -2221,7 +2221,7 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }    
+    }
 
     /*front page banner*/
     #clashvibes_banner {
@@ -2252,7 +2252,7 @@ License: GNU General Public License v2 or later
         }
 
         span.popularclashes-box {
-          
+
           span.popularclashes-image {
             width: 7%;
 
@@ -2271,7 +2271,7 @@ License: GNU General Public License v2 or later
 
             font-size: 0.8em;
           }
-            
+
 
           a.popularclashes-link {
             width: 15%;
@@ -2282,10 +2282,10 @@ License: GNU General Public License v2 or later
               letter-spacing: 0.055em;
             }
           }
-         
+
         }
       }
-    }   
+    }
 
     /*--- Left Column---*/
     #clashvibes_left_column {
@@ -2332,12 +2332,12 @@ License: GNU General Public License v2 or later
         font-size: 0.85em;
       }
 
-     
+
 
       section.clashvibes_left_column_box {
         width: 96%;
 
-        
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -2601,7 +2601,7 @@ License: GNU General Public License v2 or later
 
           a.read_more {
             width: 50%;
-            
+
           }
 
           .tag-cloud-link {
@@ -2728,7 +2728,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-           
+
           }
         }
 
@@ -2797,8 +2797,8 @@ License: GNU General Public License v2 or later
       }
     }
 
-   
-    
+
+
     /* ----- Footer ----- */
     #clashvibes_footer {
       ul#menu-secondary {
@@ -2865,7 +2865,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     header {
       height: 70px;
 
@@ -2917,7 +2917,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     nav#mainNav {
       height: 45px;
 
@@ -2939,12 +2939,12 @@ License: GNU General Public License v2 or later
       }
     }
 
-   
+
     main#clashvibes_content {
       min-height: 1100px;
     }
 
-       
+
     h1 {
       font-size: 1.3em;
     }
@@ -2985,7 +2985,7 @@ License: GNU General Public License v2 or later
       margin: 1% auto;
 
       div.wpcf7 {
- 
+
 
         span.ajax-loader {
 
@@ -3018,7 +3018,7 @@ License: GNU General Public License v2 or later
                 height: 35px;
               }
 
-              
+
             }
 
             input[type="submit"] {
@@ -3034,7 +3034,7 @@ License: GNU General Public License v2 or later
         }
       }
     }
-        
+
     div.results {
       margin: 0 0 0.5em 0;
 
@@ -3087,20 +3087,20 @@ License: GNU General Public License v2 or later
       figure.audio_releases_box {
         width: 19.2%;
         min-height: 265px;
-        
+
         img.audio-thumb,
         img.video-thumb,
         img.new-release-thumb {
           height: auto;
-          width: 50%; 
+          width: 50%;
         }
         figcaption {
           margin: 0 auto;
           h1 {
             font-size: 0.85em;
             line-height:25px;
-            
-            
+
+
           }
 
           a.Morebutton {
@@ -3113,9 +3113,9 @@ License: GNU General Public License v2 or later
         }
       }
     }
-    
 
-    
+
+
     #clashvibes_banner {
       width: 99%;
       margin: 0.5%;
@@ -3129,7 +3129,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     div#popularclashes-section {
       padding: 0.5em;
 
@@ -3140,7 +3140,7 @@ License: GNU General Public License v2 or later
         }
 
         span.popularclashes-box {
-          
+
 
           span.popularclashes-image {
             width: 10%;
@@ -3158,7 +3158,7 @@ License: GNU General Public License v2 or later
             width: 75%;
 
             font-size: 0.75em;
-          }          
+          }
 
           a.popularclashes-link {
             font-size: 0.85em;
@@ -3168,12 +3168,12 @@ License: GNU General Public License v2 or later
               letter-spacing: 0.055em;
             }
           }
-          
+
         }
       }
-    }   
+    }
 
-    
+
     #clashvibes_left_column {
       width: 21%;
 
@@ -3216,13 +3216,13 @@ License: GNU General Public License v2 or later
         font-size: 0.8em;
       }
 
-      
+
 
       /*side bar navigation blog and custom posts*/
       section.clashvibes_left_column_box {
         width: 96%;
 
-        
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -3285,14 +3285,14 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     #clashvibes_right_column {
       padding: 1%;
       width: 75%; //global post
 
       h1 {
         font-size: 1.2em;
-        
+
         a {
           width: 71%;
         }
@@ -3315,7 +3315,7 @@ License: GNU General Public License v2 or later
       article.post,
       article.page {
         display: block;
-        
+
         header.entry-header {
           display: block;
 
@@ -3566,7 +3566,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            
+
           }
         }
 
@@ -3634,7 +3634,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     /* ----- Footer ----- */
     #clashvibes_footer {
       ul#menu-secondary {
@@ -3705,7 +3705,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     header {
       height: 65px;
 
@@ -3758,7 +3758,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     nav#mainNav {
       height: 45px;
 
@@ -3780,12 +3780,12 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     main#clashvibes_content {
       min-height: 1000px;
     }
 
-        
+
     article#clashvibes-text {
       padding: 1em;
       h1 {
@@ -3816,7 +3816,7 @@ License: GNU General Public License v2 or later
         }
       }
     }
-    
+
     #new_releases_section,
     #video_releases_section,
     #audio_releases_section {
@@ -3827,13 +3827,13 @@ License: GNU General Public License v2 or later
       figure.audio_releases_box {
         width: 24.115%;
         min-height: 280px;
-               
+
         img.audio-thumb,
         img.video-thumb,
         img.new-release-thumb {
           height: auto;
           width: 60%;
-          
+
         }
         figcaption {
           margin: 0 auto;
@@ -3852,8 +3852,8 @@ License: GNU General Public License v2 or later
         }
       }
     }
-   
-    
+
+
     #clashvibes_banner {
       width: 99%;
       margin: 0.5%;
@@ -3867,7 +3867,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     div#popularclashes-section {
       padding: 0.5em;
 
@@ -3881,7 +3881,7 @@ License: GNU General Public License v2 or later
         }
 
         span.popularclashes-box {
-          
+
 
           span.popularclashes-image {
             width: 10%;
@@ -3899,7 +3899,7 @@ License: GNU General Public License v2 or later
             font-size: 0.75em;
           }
 
-          
+
           a.popularclashes-link {
             font-size: 0.75em;
             width: 15%;
@@ -3908,12 +3908,12 @@ License: GNU General Public License v2 or later
               letter-spacing: 0.055em;
             }
           }
-          
+
         }
       }
-    }  
+    }
 
-    
+
     #clashvibes_left_column {
       width: 21%;
 
@@ -3956,13 +3956,13 @@ License: GNU General Public License v2 or later
         font-size: 0.8em;
       }
 
-      
 
-      
+
+
       section.clashvibes_left_column_box {
         width: 96%;
 
-        
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -4024,7 +4024,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     #clashvibes_right_column {
       padding: 1%;
       width: 76%; //global post
@@ -4316,7 +4316,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            
+
           }
         }
 
@@ -4341,9 +4341,9 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }    
+    }
 
-        
+
     #clashvibes_footer {
       ul#menu-secondary {
         width: 12%;
@@ -4410,7 +4410,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     header {
       height: 65px;
 
@@ -4435,7 +4435,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-   
+
     nav#mainNav {
       height: 45px;
 
@@ -4456,12 +4456,12 @@ License: GNU General Public License v2 or later
       }
     }
 
-   
+
     main#clashvibes_content {
       min-height: 1150px;
     }
 
-       
+
     article#clashvibes-text {
       padding: 1em;
       h1 {
@@ -4498,7 +4498,7 @@ License: GNU General Public License v2 or later
       margin: 1% auto;
 
       div.wpcf7 {
- 
+
 
         span.ajax-loader {
 
@@ -4531,7 +4531,7 @@ License: GNU General Public License v2 or later
                 height: 35px;
               }
 
-              
+
             }
 
             input[type="submit"] {
@@ -4548,7 +4548,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     h2 {
       font-size: 1.2em;
     }
@@ -4571,7 +4571,7 @@ License: GNU General Public License v2 or later
       img {
         width: 100%;
       }
-    } 
+    }
 
     #new_releases_section,
     #video_releases_section,
@@ -4588,8 +4588,8 @@ License: GNU General Public License v2 or later
         img.video-thumb,
         img.new-release-thumb {
           height: auto;
-          width: 60%;          
-          
+          width: 60%;
+
         }
         figcaption {
           margin: 0 auto;
@@ -4606,9 +4606,9 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }    
+    }
 
-    
+
     #clashvibes_banner {
       width: 99%;
       margin: 0.5%;
@@ -4622,7 +4622,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     div#popularclashes-section {
       padding: 0.5em;
       -webkit-flex-flow: column;
@@ -4640,7 +4640,7 @@ License: GNU General Public License v2 or later
         }
 
         span.popularclashes-box {
-          
+
 
           span.popularclashes-image {
             width: 8%;
@@ -4657,7 +4657,7 @@ License: GNU General Public License v2 or later
           span.popularclashes-title {
             width: 77%;
             text-indent: 0.25em;
-          }          
+          }
 
           a.popularclashes-link {
             width: 15%;
@@ -4666,13 +4666,13 @@ License: GNU General Public License v2 or later
               letter-spacing: 0.055em;
             }
           }
-          
+
         }
       }
     }
-    
 
-    
+
+
     #clashvibes_left_column {
       width: 23%;
 
@@ -4715,12 +4715,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      
-      
+
+
       section.clashvibes_left_column_box {
         width: 96%;
 
-        
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -4784,7 +4784,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-    
+
     #clashvibes_right_column {
       width: 74%; //global post.
 
@@ -5080,7 +5080,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            
+
           }
         }
 
@@ -5217,7 +5217,7 @@ License: GNU General Public License v2 or later
       left: 50vw;
     }
 
-   
+
     header {
       height: 65px;
 
@@ -5289,7 +5289,7 @@ License: GNU General Public License v2 or later
           margin-right: 0;
           width: 100%;
           height: 50px;
-          
+
           a {
             font-size: 0.9em;
             line-height: 50px;
@@ -5321,13 +5321,13 @@ License: GNU General Public License v2 or later
           overflow: hidden;
         }
       }
-    }    
- 
+    }
+
     main#clashvibes_content {
       padding: 0;
       min-height: 1250px;
     }
-  
+
     #clashvibes_left_column {
       width: 250px;
       position: fixed;
@@ -5351,12 +5351,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      
+
       /*side bar navigation blog and custom posts*/
       section.clashvibes_left_column_box {
         width: 96%;
 
-        
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           position: unset;
@@ -5426,7 +5426,7 @@ License: GNU General Public License v2 or later
         }
       }
     }
-  
+
     #clashvibes_right_column {
       width: 98%;
 
@@ -5597,7 +5597,7 @@ License: GNU General Public License v2 or later
 
           //text
           p {
-            
+
             line-height: 1.8em;
 
             a {
@@ -5741,7 +5741,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            
+
           }
         }
 
@@ -5768,8 +5768,8 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }    
-   
+    }
+
     article#clashvibes-text {
       padding: 1em;
       h1 {
@@ -5802,7 +5802,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-        
+
     #new_releases_section,
     #video_releases_section,
     #audio_releases_section {
@@ -5812,19 +5812,19 @@ License: GNU General Public License v2 or later
       figure.video_releases_box,
       figure.audio_releases_box {
         width: 32%;
-        
+
         img.audio-thumb,
         img.video-thumb,
         img.new-release-thumb {
           height: auto;
-          width: 60%;          
-          
+          width: 60%;
+
         }
         figcaption {
           margin: 0 auto;
           h1 {
             font-size: 0.8em;
-            
+
           }
 
           a.Morebutton {
@@ -5834,7 +5834,7 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }  
+    }
 
     /*front page banner*/
     #clashvibes_banner {
@@ -5861,11 +5861,11 @@ License: GNU General Public License v2 or later
 
         h1 {
           font-size: 1em;
-          
+
         }
 
         span.popularclashes-box {
-          
+
 
           span.popularclashes-image {
             a {
@@ -5881,7 +5881,7 @@ License: GNU General Public License v2 or later
             font-size: 0.7em;
           }
 
-          
+
           a.popularclashes-link {
             font-size: 0.8em;
             letter-spacing: 0.05em;
@@ -5890,10 +5890,10 @@ License: GNU General Public License v2 or later
               letter-spacing: 0.05em;
             }
           }
-          
+
         }
       }
-    }   
+    }
 
 
     /* ----- Footer ----- */
@@ -5996,7 +5996,7 @@ License: GNU General Public License v2 or later
       left: 50vw;
     }
 
-    
+
     header {
       height: 70px;
       .site-logo {
@@ -6034,7 +6034,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-   
+
     nav#mobileNav {
       position: fixed;
 
@@ -6060,7 +6060,7 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }    
+    }
 
     /*front page banner*/
     #clashvibes_banner {
@@ -6073,7 +6073,7 @@ License: GNU General Public License v2 or later
           overflow: hidden;
         }
       }
-    }   
+    }
 
     /*--- Content ---*/
     main#clashvibes_content {
@@ -6099,12 +6099,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      
+
       /*/*side bar navigation blog and custom posts*/
       section.clashvibes_left_column_box {
         width: 96%;
 
-        
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -6444,12 +6444,12 @@ License: GNU General Public License v2 or later
               }
             }
 
-            
+
           }
         }
       }
-    }    
-    
+    }
+
     article#clashvibes-text {
       padding: 1em;
       h1 {
@@ -6484,7 +6484,7 @@ License: GNU General Public License v2 or later
       margin: 1% auto;
 
       div.wpcf7 {
- 
+
 
         span.ajax-loader {
 
@@ -6517,7 +6517,7 @@ License: GNU General Public License v2 or later
                 height: 35px;
               }
 
-              
+
             }
 
             input[type="submit"] {
@@ -6534,7 +6534,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-        
+
     #new_releases_section,
     #video_releases_section,
     #audio_releases_section {
@@ -6544,18 +6544,18 @@ License: GNU General Public License v2 or later
       figure.video_releases_box,
       figure.audio_releases_box{
         width: 32%;
-        
+
         img.audio-thumb,
         img.video-thumb,
         img.new-release-thumb {
           height: auto;
           width: 60%;
-          
+
           figcaption {
             margin: 0 auto;
             h1 {
               font-size: 0.8em;
-              
+
             }
 
             a.Morebutton {
@@ -6567,21 +6567,21 @@ License: GNU General Public License v2 or later
         }
       }
     }
-   
+
 
     div#popularclashes-section {
       padding: 0.5em;
-      
+
 
       section#popularclashes-audio,
       section#popularclashes-video {
         h1 {
           font-size: 1em;
-          
+
         }
 
         span.popularclashes-box {
-          
+
 
           span.popularclashes-image {
             a {
@@ -6596,7 +6596,7 @@ License: GNU General Public License v2 or later
           span.popularclashes-title {
             font-size: 0.75em;
           }
-          
+
           a.popularclashes-link {
             font-size: 0.75em;
 
@@ -6604,12 +6604,12 @@ License: GNU General Public License v2 or later
               letter-spacing: 0.05em;
             }
           }
-          
+
         }
       }
-    }   
+    }
 
-    
+
     /* ----- Footer ----- */
     #clashvibes_footer {
       ul#menu-secondary {
@@ -6737,7 +6737,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-   
+
     nav#mobileNav {
       ul#menu-mobile {
         list-style: none;
@@ -6760,7 +6760,7 @@ License: GNU General Public License v2 or later
         }
       }
     }
-   
+
 
 
     #clashvibes_banner {
@@ -6774,7 +6774,7 @@ License: GNU General Public License v2 or later
         }
       }
     }
-   
+
 
     /*--- Content ---*/
     main#clashvibes_content {
@@ -6796,12 +6796,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      
+
       /*/*side bar navigation blog and custom posts*/
       section.clashvibes_left_column_box {
         width: 96%;
 
-        
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -7016,7 +7016,7 @@ License: GNU General Public License v2 or later
           }
         }
 
-        
+
 
         div.audioExcerpt,
         div.videoExcerpt {
@@ -7130,7 +7130,7 @@ License: GNU General Public License v2 or later
               }
             }
 
-            
+
           }
         }
         .navigation {
@@ -7155,8 +7155,8 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }    
-    
+    }
+
     article#clashvibes-text {
       padding: 1em;
       h1 {
@@ -7186,7 +7186,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-        
+
     #new_releases_section,
     #video_releases_section,
     #audio_releases_section {
@@ -7196,7 +7196,7 @@ License: GNU General Public License v2 or later
       figure.video_releases_box,
       figure.audio_releases_box {
         width: 48%;
-        
+
         img.audio-thumb,
         img.video-thumb,
         img.new-release-thumb {
@@ -7207,7 +7207,7 @@ License: GNU General Public License v2 or later
             margin: 0 auto;
             h1 {
               font-size: 0.8em;
-             
+
             }
 
             a.Morebutton {
@@ -7219,11 +7219,11 @@ License: GNU General Public License v2 or later
         }
       }
     }
-    
+
 
     div#popularclashes-section {
       padding: 0.5em;
-      
+
 
       section#popularclashes-audio,
       section#popularclashes-video {
@@ -7231,11 +7231,11 @@ License: GNU General Public License v2 or later
 
         h1 {
           font-size: 1em;
-          
+
         }
 
         span.popularclashes-box {
-          
+
 
           span.popularclashes-image {
             a {
@@ -7250,21 +7250,21 @@ License: GNU General Public License v2 or later
           span.popularclashes-title {
             font-size: 0.7em;
           }
-          
+
           a.popularclashes-link {
             font-size: 0.8em;
-            
+
 
             &:hover {
               letter-spacing: 0.05em;
             }
           }
-          
+
         }
       }
-    }    
+    }
 
-    
+
     /* ----- Footer ----- */
     #clashvibes_footer {
       ul#menu-secondary {
@@ -7396,7 +7396,7 @@ License: GNU General Public License v2 or later
       }
     }
 
- 
+
     nav#mobileNav {
       ul#menu-mobile {
         list-style: none;
@@ -7418,8 +7418,8 @@ License: GNU General Public License v2 or later
         }
       }
     }
-  
-  
+
+
     #clashvibes_banner {
       width: 99%;
       height: 200px;
@@ -7430,7 +7430,7 @@ License: GNU General Public License v2 or later
           overflow: hidden;
         }
       }
-    }   
+    }
 
 
     main#clashvibes_content {
@@ -7438,7 +7438,7 @@ License: GNU General Public License v2 or later
       min-height: 1300px;
     }
 
- 
+
     #clashvibes_left_column {
       h1 {
         position: relative;
@@ -7453,12 +7453,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      
+
       /*/*side bar navigation blog and custom posts*/
       section.clashvibes_left_column_box {
         width: 96%;
 
-        
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -7688,7 +7688,7 @@ License: GNU General Public License v2 or later
 
           //text
           p {
-            
+
             line-height: 1.6em;
 
             a {
@@ -7838,7 +7838,7 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }   
+    }
 
     article#clashvibes-text {
       padding: 1em;
@@ -7879,13 +7879,13 @@ License: GNU General Public License v2 or later
       figure.video_releases_box,
       figure.audio_releases_box {
         width: 48%;
-        
+
         img.audio-thumb,
         img.video-thumb,
         img.new-release-thumb {
           height: auto;
           width: 60%;
-          
+
           figcaption {
             margin: 0 auto;
             h1 {
@@ -7902,11 +7902,11 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }    
+    }
 
     div#popularclashes-section {
       padding: 0;
-      
+
 
       section#popularclashes-audio,
       section#popularclashes-video {
@@ -7914,11 +7914,11 @@ License: GNU General Public License v2 or later
 
         h1 {
           font-size: 1em;
-          
+
         }
 
         span.popularclashes-box {
-          
+
 
           span.popularclashes-image {
             a {
@@ -7933,7 +7933,7 @@ License: GNU General Public License v2 or later
           span.popularclashes-title {
             font-size: 0.6em;
           }
-          
+
           a.popularclashes-link {
             font-size: 0.75em;
             letter-spacing: 0.05em;
@@ -7942,13 +7942,13 @@ License: GNU General Public License v2 or later
               letter-spacing: 0.05em;
             }
           }
-          
+
         }
       }
     }
-    
 
-    
+
+
     /* ----- Footer ----- */
     #clashvibes_footer {
       ul#menu-secondary {
@@ -8032,7 +8032,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-   
+
     header {
       height: 60px;
 
@@ -8040,7 +8040,7 @@ License: GNU General Public License v2 or later
         width: 14%;
 
         a {
-          
+
           /* Text meant only for screen readers. */
           div.screen-reader-text {
             &:focus {
@@ -8067,7 +8067,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-  
+
     nav#mobileNav {
       ul#menu-mobile {
         list-style: none;
@@ -8088,7 +8088,7 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }   
+    }
 
 
     #clashvibes_banner {
@@ -8101,13 +8101,13 @@ License: GNU General Public License v2 or later
           overflow: hidden;
         }
       }
-    }    
+    }
 
     main#clashvibes_content {
       padding: 0;
     }
 
-  
+
     #clashvibes_left_column {
       h1 {
         position: relative;
@@ -8122,12 +8122,12 @@ License: GNU General Public License v2 or later
         font-size: 0.75em;
       }
 
-      
+
       /*/*side bar navigation blog and custom posts*/
       section.clashvibes_left_column_box {
         width: 96%;
 
-        
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -8194,7 +8194,7 @@ License: GNU General Public License v2 or later
     }
 
 
-  
+
     #clashvibes_right_column {
       width: 98%;
 
@@ -8432,7 +8432,7 @@ License: GNU General Public License v2 or later
               }
 
               input[type="range"] {
-                
+
                 width:74%;
               }
             }
@@ -8445,7 +8445,7 @@ License: GNU General Public License v2 or later
               }
 
               input[type="range"] {
-                
+
                 width:74%;
               }
             }
@@ -8498,7 +8498,7 @@ License: GNU General Public License v2 or later
         }
       }
     }
-    
+
     article#clashvibes-text {
       padding: 1em;
       h1 {
@@ -8528,7 +8528,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-          
+
     #new_releases_section,
     #video_releases_section,
     #audio_releases_section {
@@ -8537,15 +8537,15 @@ License: GNU General Public License v2 or later
       figure.new_releases_box,
       figure.video_releases_box,
       figure.audio_releases_box {
-        width: 48%;        
-        
+        width: 48%;
+
         img.audio-thumb,
         img.video-thumb,
         img.new-release-thumb {
           height: auto;
           width: 60%;
-          
-          
+
+
         }
 
         figcaption {
@@ -8561,11 +8561,11 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }   
+    }
 
     div#popularclashes-section {
       padding: 0;
-      
+
 
       section#popularclashes-audio,
       section#popularclashes-video {
@@ -8573,11 +8573,11 @@ License: GNU General Public License v2 or later
 
         h1 {
           font-size: 1em;
-          
+
         }
 
         span.popularclashes-box {
-          
+
 
           span.popularclashes-image {
             width: 6%;
@@ -8596,7 +8596,7 @@ License: GNU General Public License v2 or later
             font-size: 0.6em;
             text-indent: 0.2em;
           }
-          
+
           a.popularclashes-link {
             font-size: 0.7em;
             letter-spacing: 0.05em;
@@ -8605,12 +8605,12 @@ License: GNU General Public License v2 or later
               letter-spacing: 0.05em;
             }
           }
-          
+
         }
       }
-    }    
+    }
 
-    
+
     /* ----- Footer ----- */
     #clashvibes_footer {
       ul#menu-secondary {
@@ -8736,7 +8736,7 @@ License: GNU General Public License v2 or later
         }
       }
     }
-    
+
 
     #clashvibes_banner {
       width: 99%;
@@ -8749,13 +8749,13 @@ License: GNU General Public License v2 or later
         }
       }
     }
-   
-    
+
+
     main#clashvibes_content {
       padding: 0;
     }
 
-   
+
     #clashvibes_left_column {
       h1 {
         position: relative;
@@ -8773,7 +8773,7 @@ License: GNU General Public License v2 or later
            /*/*side bar navigation blog and custom posts*/
       section.clashvibes_left_column_box {
         width: 96%;
-       
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -9115,7 +9115,7 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }       
+    }
 
     article#clashvibes-text {
       padding: 1em;
@@ -9165,13 +9165,13 @@ License: GNU General Public License v2 or later
       figure.audio_releases_box {
         width: 68%;
         min-height: 300px;
-        
+
         img.audio-thumb,
         img.video-thumb,
         img.new-release-thumb {
           height: auto;
-          width: 60%; 
-          
+          width: 60%;
+
         }
         figcaption {
           margin: 0 auto;
@@ -9187,11 +9187,11 @@ License: GNU General Public License v2 or later
         }
       }
     }
-    
+
 
     div#popularclashes-section {
       padding: 0;
-      
+
 
       section#popularclashes-audio,
       section#popularclashes-video {
@@ -9199,11 +9199,11 @@ License: GNU General Public License v2 or later
 
         h1 {
           font-size: 0.9em;
-          
+
         }
 
         span.popularclashes-box {
-          
+
 
           span.popularclashes-image {
             width: 13%;
@@ -9221,7 +9221,7 @@ License: GNU General Public License v2 or later
             font-size: 0.55em;
             text-indent: 0.2em;
           }
-          
+
           a.popularclashes-link {
             font-size: 0.7em;
             letter-spacing: 0.05em;
@@ -9230,12 +9230,12 @@ License: GNU General Public License v2 or later
               letter-spacing: 0.05em;
             }
           }
-          
+
         }
       }
     }
-    
-    
+
+
     /* ----- Footer ----- */
     #clashvibes_footer {
       ul#menu-secondary {
@@ -9309,8 +9309,8 @@ License: GNU General Public License v2 or later
   }
 
   #container {
-    
-   
+
+
     header {
       height: 60px;
 
@@ -9318,7 +9318,7 @@ License: GNU General Public License v2 or later
         width: 15%;
 
         a {
-          
+
           /* Text meant only for screen readers. */
           div.screen-reader-text {
             &:focus {
@@ -9347,7 +9347,7 @@ License: GNU General Public License v2 or later
       }
     }
 
-   
+
     nav#mobileNav {
 
       ul#menu-mobile {
@@ -9369,9 +9369,9 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }    
+    }
 
-    
+
     #clashvibes_banner {
       width: 99%;
 
@@ -9382,13 +9382,13 @@ License: GNU General Public License v2 or later
           overflow: hidden;
         }
       }
-    }  
+    }
 
 
     main#clashvibes_content {
       padding: 0;
     }
-   
+
     #clashvibes_left_column {
       h1 {
         position: relative;
@@ -9426,7 +9426,7 @@ License: GNU General Public License v2 or later
       section.clashvibes_left_column_box {
         width: 96%;
 
-        
+
         nav.menu-video-nav-container,
         nav.menu-audio-nav-container {
           height: auto;
@@ -9491,7 +9491,7 @@ License: GNU General Public License v2 or later
         }
       }
     }
-   
+
     #clashvibes_right_column {
       h1 {
         font-size: 1em;
@@ -9759,8 +9759,8 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }    
-    
+    }
+
     article#clashvibes-text {
       padding: 1em;
       h1 {
@@ -9790,36 +9790,36 @@ License: GNU General Public License v2 or later
       }
     }
 
-        
+
     #new_releases_section,
     #video_releases_section,
     #audio_releases_section {
       width: 100%;
-      
+
 
       figure.new_releases_box,
       figure.video_releases_box,
       figure.audio_releases_box{
         width: 70%;
 
-        
+
         img.audio-thumb,
         img.video-thumb,
         img.new-release-thumb {
           height: auto;
           width: 65%;
 
-          
+
         }
         figcaption {
           margin: 0 auto;
           h1 {
             font-size: 0.85em;
           }
-  
+
           a {
             font-size: 0.7em;
-  
+
             &:hover {
               font-weight: bold;
             }
@@ -9832,11 +9832,11 @@ License: GNU General Public License v2 or later
           }
         }
       }
-    }    
+    }
 
     div#popularclashes-section {
       padding: 0;
-      
+
 
       section#popularclashes-audio,
       section#popularclashes-video {
@@ -9844,12 +9844,12 @@ License: GNU General Public License v2 or later
 
         h1 {
           font-size: 0.9em;
-          
+
         }
 
         span.popularclashes-box {
           width: 100%;
-          
+
           span.popularclashes-image {
             width: 13%;
 
@@ -9868,7 +9868,7 @@ License: GNU General Public License v2 or later
             font-size: 0.55em;
             text-indent: 0.2em;
           }
-          
+
           a.popularclashes-link {
             font-size: 0.7em;
             letter-spacing: 0.05em;
@@ -9877,11 +9877,11 @@ License: GNU General Public License v2 or later
               letter-spacing: 0.05em;
             }
           }
-          
+
         }
       }
-    }    
-       
+    }
+
 
     #clashvibes_footer {
       ul#menu-secondary {

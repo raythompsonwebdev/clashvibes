@@ -17,7 +17,7 @@
 /**
  * Creating a function to create our CPT.
  */
-function clashvibes_custom_post_video() {
+function clashvibes_video_custom_post_type() {
 
 	/**
 	 * 'menu_icon'   => get_stylesheet_directory_uri() . '/images/portfolio-icon.png',
@@ -51,21 +51,19 @@ function clashvibes_custom_post_video() {
 		'label'                => __( 'Sound Clash Video', 'clashvibes' ),
 		'description'          => __( 'Sound Clash Video news and reviews', 'clashvibes' ),
 		'labels'               => $labels,
-		'show_in_rest' 				 => true,	
-		// Features this CPT supports in Post Editor.
+		'show_in_rest' 				 => true,
 		'supports'             => array( 'title', 'editor', 'post-formats', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
-		// You can associate this CPT with a taxonomy or custom taxonomy.
 		'taxonomies'           => array( 'video-category', 'post_tag' ),
 		/**
 		* A hierarchical CPT is like Pages and can have
 		* Parent and child items. A non-hierarchical CPT
 		* is like Posts.
 		*
-		* 'menu_icon' => get_stylesheet_directory_uri() . '/functions/panel/images/catchinternet-small.png',
-		*/
+    */
+    //'menu_icon'   => get_stylesheet_directory_uri() . '/images/portfolio-icon.png',
 		'register_meta_box_cb' => 'add_video_clashes_metaboxes',
 		'hierarchical'         => false,
-		'public'               => true,			
+		'public'               => true,
 		'show_ui'              => true,
 		'show_in_menu'         => true,
 		'show_in_nav_menus'    => true,
@@ -73,7 +71,7 @@ function clashvibes_custom_post_video() {
 		'menu_position'        => 5,
 		'query_var'            => true,
 		'can_export'           => true,
-		'has_archive'          => false,
+		'has_archive'          => true,
 		'exclude_from_search'  => false,
 		'publicly_queryable'   => true,
 		'capability_type'      => 'post',
@@ -81,5 +79,4 @@ function clashvibes_custom_post_video() {
 
 	// Registering Video Custom Post Type.
 	register_post_type( 'clash-videos', $args );
-
 }

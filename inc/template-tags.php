@@ -16,7 +16,7 @@ if ( ! function_exists( 'clashvibes_posted_on' ) ) :
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> - Updated:<time class="updated" datetime="%3$s">%4$s</time>';
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> - Updated: <time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf(
@@ -29,7 +29,7 @@ if ( ! function_exists( 'clashvibes_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'clashvibes' ),
+			esc_html_x( 'Posted on: %s', 'post date', 'clashvibes' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -133,15 +133,15 @@ if ( ! function_exists( 'clashvibes_post_thumbnail' ) ) :
 			<?php the_post_thumbnail( 'featured-image' ); ?>
 		</a>
 		</figure><!-- .post-thumbnail -->
-		
-		
+
+
 		<?php else : ?>
-		
+
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 			<?php	the_post_thumbnail( 'post-image' ); ?>
 		</a>
-		
-		
+
+
 
 			<?php
 		endif; // End is_singular().

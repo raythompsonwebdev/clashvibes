@@ -33,11 +33,11 @@ add_action( 'init', 'clashvibes_video_custom_post_type', 0 );
 
 require_once CVWDPATH . '/taxonomies/register-audio.php';
 // Audio Taxonomy.
-add_action( 'init', 'clashvibes_taxonomies_product', 0 );
+add_action( 'init', 'clashvibes_register_taxonomies_audio', 0 );
 
 require_once CVWDPATH . '/taxonomies/register-video.php';
 // Video Taxonomy.
-add_action( 'init', 'clashvibes_taxonomies_product', 0 );
+add_action( 'init', 'clashvibes_register_taxonomies_video', 0 );
 
 /**
  *  Flush rewrite rules to add "project" as a permalink slug.
@@ -47,68 +47,6 @@ function clashvibes_rewrite_flush() {
 	flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'clashvibes_rewrite_flush' );
-
-/**
- *  Taxonomies
- */
-function clashvibes_taxonomies_product() {
-
-  //video
-	$labels = array(
-		'name'              => _x( 'Video Categories', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Video Category', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Video Categories' ),
-		'all_items'         => __( 'All Video Categories' ),
-		'parent_item'       => __( 'Parent Video Category' ),
-		'parent_item_colon' => __( 'Parent Video Category:' ),
-		'edit_item'         => __( 'Edit Video Category' ),
-		'update_item'       => __( 'Update Video Category' ),
-		'add_new_item'      => __( 'Add New Video Category' ),
-		'new_item_name'     => __( 'New Video Category' ),
-		'menu_name'         => __( 'Video Categories' ),
-	);
-	$args   = array(
-		'labels'       => $labels,
-		'hierarchical' => true,
-    'query_var'    => true,
-    'show_ui'           => true,
-		'show_admin_column' => true,
-		'rewrite'      => array(
-			'slug'       => 'video-category', // This controls the base slug that will display before each term.
-			'with_front' => false, // Don't display the category base before.
-		),
-
-	);
-  register_taxonomy( 'video-category', 'clash-videos', $args );
-
-  //audio
-	$labels = array(
-		'name'              => _x( 'Audio Categories', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Audio Category', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Audio Categories' ),
-		'all_items'         => __( 'All Audio Categories' ),
-		'parent_item'       => __( 'Parent Audio Category' ),
-		'parent_item_colon' => __( 'Parent Audio Category:' ),
-		'edit_item'         => __( 'Edit Audio Category' ),
-		'update_item'       => __( 'Update Audio Category' ),
-		'add_new_item'      => __( 'Add New Audio Category' ),
-		'new_item_name'     => __( 'New Audio Category' ),
-		'menu_name'         => __( 'Audio Categories' ),
-	);
-	$args   = array(
-		'labels'       => $labels,
-		'hierarchical' => true,
-    'query_var'    => true,
-    'show_ui'           => true,
-		'show_admin_column' => true,
-		'rewrite'      => array(
-			'slug'       => 'audio-category', // This controls the base slug that will display before each term.
-			'with_front' => false, // Don't display the category base before.
-		),
-	);
-	register_taxonomy( 'audio-category', 'clash-audio', $args );
-}
-add_action( 'init', 'clashvibes_taxonomies_product', 0 );
 
 
 /**

@@ -1,98 +1,95 @@
 <?php
+
+
 // process submitted form
 function clashvibes_process_contact_form() {
 
   // get the nonce
-	// if ( !isset( $_POST['contact_nonce_field'] ) ) {
+  // if ( isset( $_POST['myplugin_nonce_field'] ) ) :
 
-	// 	$nonce = $_POST['contact_nonce_field'];
+  //     $nonce = $_POST['myplugin_nonce_field'];
 
-	// } else {
+  //   else:
+  //     $nonce = false;
 
-	// 	$nonce = false;
+  // endif;
 
-	// }
+  // sanitise form data
+  if ( isset( $_POST['message_name'] ) ) :
 
-	// if ( !wp_verify_nonce( $nonce, 'contact_form_action' ) ) {
+  //   // verify nonce
+  //   if ( ! wp_verify_nonce( $nonce, 'contact_form_action' ) ) :
 
-  //   wp_die( 'Incorrect nonce!' );
+  //     wp_die( 'Incorrect nonce!' );
 
-  // } else {
+  //   else :
 
-	// 	$name = sanitize_text_field( $_POST[ 'message_name' ] );
+        $name = sanitize_text_field( $_POST[ 'message_name' ] );
 
-	// 	if ( !empty( $name ) ) {
+        if ( !empty( $name )  ) :
 
-	// 		echo '<p>Your name is '. $name .'.</p>';
+          echo '<p>Your name is '. $name .'.</p>';
 
-	// 	} else {
+        else:
 
-	// 		echo '<p>Please enter your name!</p>';
+          echo '<p>Please enter your name!</p>';
 
-  //   }
+        endif;
 
-  //   $email = sanitize_email( $_POST[ 'message_email' ] );
+  //   endif;
 
-	// 	if ( !empty( $email ) ) {
+  endif;
 
-	// 		echo '<p>Your email is '. $email .'.</p>';
+  if ( isset( $_POST['message_email'] ) ) :
+    // verify nonce
+    // if ( ! wp_verify_nonce( $nonce, 'contact_form_action' ) ) :
 
-	// 	} else {
+    //   wp_die( 'Incorrect nonce!' );
 
-	// 		echo '<p>Please enter your email!</p>';
+    // else :
 
-  //   }
+        $email = sanitize_email( $_POST[ 'message_email' ] );
 
-  //   $text_input = sanitize_text_field( $_POST[ 'message_text' ] );
+        if ( !empty( $email) )  :
 
-	// 	if ( !empty( $text_input ) ) {
+          echo '<p>Your email is '. $email .'.</p>';
 
-	// 		echo '<p>Your text is '. $text_input .'.</p>';
+        else :
 
-	// 	} else {
+          echo '<p>Please enter your email!</p>';
 
-	// 		echo '<p>Please enter some text!</p>';
+        endif;
 
-	// 	}
+  //   endif;
 
-  // }
+  endif;
 
-  $name = sanitize_text_field( $_POST[ 'message_name' ] );
+  if ( isset( $_POST['message_email'] ) ) :
 
-		if ( !empty( $name ) ) {
+    // verify nonce
+    // if ( ! wp_verify_nonce( $nonce, 'contact_form_action' ) ) :
 
-			echo '<p>Your name is '. $name .'.</p>';
+    //   wp_die( 'Incorrect nonce!' );
 
-		} else {
+    // else :
 
-			echo '<p>Please enter your name!</p>';
+      $text_input = sanitize_text_field( $_POST[ 'message_text' ] );
 
-    }
+      if ( !empty( $text_input ) ) :
 
-    $email = sanitize_email( $_POST[ 'message_email' ] );
+        echo '<p>Your text is '. $text_input .'.</p>';
 
-		if ( !empty( $email ) ) {
+      else :
 
-			echo '<p>Your email is '. $email .'.</p>';
+        echo '<p>Please enter some text!</p>';
 
-		} else {
+      endif;
 
-			echo '<p>Please enter your email!</p>';
+  //   endif;
 
-    }
+  // endif;
 
-    $text_input = sanitize_text_field( $_POST[ 'message_text' ] );
-
-		if ( !empty( $text_input ) ) {
-
-			echo '<p>Your text is '. $text_input .'.</p>';
-
-		} else {
-
-			echo '<p>Please enter some text!</p>';
-
-		}
-
+  endif;
 }
 
 
@@ -107,25 +104,25 @@ function clashvibes_contact_form() {
     <form method="post">
     <p>
     <label for="message_name">Name: <span>*</span> <br>
-      <input type="text" name="message_name" value="<?php echo esc_attr( $_POST['message_name'] ); ?>">
+      <input type="text" name="message_name" value="">
     </label>
     </p>
     <p>
     <label for="message_email">Email: <span>*</span> <br>
-      <input type="text" name="message_email" value="<?php echo esc_attr( $_POST['message_email'] ); ?>">
+      <input type="text" name="message_email" value="">
     </label>
     </p>
     <p>
     <label for="message_text">Message: <span>*</span> <br>
-      <textarea type="text" name="message_text"><?php echo esc_textarea( $_POST['message_text'] ); ?></textarea>
+      <textarea type="text" name="message_text"></textarea>
     </label>
     </p>
       <input type="submit">
     </p>
-
+    <?php wp_nonce_field( 'contact_form_action', 'contact_nonce_field', false ); ?>
     </form>
     </div>
-    <?php  //wp_nonce_field( 'contact_form_action', 'contact_nonce_field', false ); ?>
+
   </div>
 
 <?php

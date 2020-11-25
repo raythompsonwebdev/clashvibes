@@ -1686,9 +1686,10 @@ License: GNU General Public License v2 or later
           }
 
           #video_player {
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
             display: block;
+            padding: 1em 0;
           }
 
           /*video*/

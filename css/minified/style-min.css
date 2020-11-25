@@ -2456,9 +2456,10 @@ a {
           #container #clashvibes_right_column article.post div.videoExcerpt #video_player,
           #container #clashvibes_right_column article.page div.audioExcerpt #video_player,
           #container #clashvibes_right_column article.page div.videoExcerpt #video_player {
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
-            display: block; }
+            display: block;
+            padding: 1em 0; }
           #container #clashvibes_right_column article.clash-videos div.audioExcerpt iframe,
           #container #clashvibes_right_column article.clash-videos div.videoExcerpt iframe,
           #container #clashvibes_right_column article.clash-audio div.audioExcerpt iframe,

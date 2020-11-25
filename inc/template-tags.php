@@ -125,7 +125,7 @@ if ( ! function_exists( 'clashvibes_post_thumbnail' ) ) :
 			return;
 		}
 
-		if ( is_singular() ) :
+		if ( is_singular() || 'clash-videos' == get_post_type() || 'clash-audio' == get_post_type() ) :
 			?>
 
 		<figure class="featuredImage">

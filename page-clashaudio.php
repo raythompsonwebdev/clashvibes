@@ -47,9 +47,7 @@
 				$the_query->the_post();
 				?>
 
-		
 
-			
 
 			<figure class="audio_releases_box">
 
@@ -67,7 +65,7 @@
 
 			</figure>
 
-		
+
 
 				<?php
 			endwhile;

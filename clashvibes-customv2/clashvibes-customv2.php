@@ -142,18 +142,6 @@ function clashvibes_meta_box_fields( $post ) {
         />
     </p>
 
-    <p>
-      <label for="sound_system_url">URL:</label>
-      <br />
-        <input size="45" id="sound_system_url" name="sound_system_url" value="
-          <?php
-            if ( ! empty( $clashvibes_stored_meta['sound_system_url'] ) ) :
-              echo esc_attr( $clashvibes_stored_meta['sound_system_url'][0] );
-            endif;
-          ?>"
-        />
-    </p>
-
   <?php
 }
 

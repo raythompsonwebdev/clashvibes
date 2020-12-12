@@ -32,7 +32,8 @@
 			wp_nav_menu(
 				array(
 					'menu'      => 'Audio-Nav',
-					'container' => 'nav',
+          'container' => 'nav',
+          'theme_location'    => "audio-nav",
 				)
 			);
 			?>

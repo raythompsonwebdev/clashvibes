@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 7
+ * PHP version 7
  *
  * Functions | core/functions.php.
  *
@@ -14,9 +14,16 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template.
  */
 
-require_once get_stylesheet_directory() . '/clashvibes-customv2/clashvibes-customv2.php';
+//require_once get_stylesheet_directory() . '/clashvibes-customv2/clashvibes-customv2.php';
 
-add_filter( 'wp_title', 'clashvibes_filter_wp_title', 10, 2 );
+/**
+ * Returns a custom login error message.
+ */
+function cwpl_error_message() {
+	return 'Well, that was not it rudeboy/girl!';
+}
+add_filter( 'login_errors', 'cwpl_error_message' );
+
 /**
  * Filters the page title appropriately depending on the current page.
  *
@@ -44,9 +51,15 @@ function clashvibes_filter_wp_title( $title ) {
 
 	return $filtered_title;
 }
+add_filter( 'wp_title', 'clashvibes_filter_wp_title', 10, 2 );
 
 // Remove version from head.
 remove_action( 'wp_head', 'wp_generator' );
+
+/**
+ * Text domain.
+ */
+load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
 
 /**
  * Theme set up.
@@ -60,6 +73,8 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function clashvibes_theme_setup() {
+
+		$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
 
 		// audio.
 		register_meta(
@@ -83,15 +98,6 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		register_meta(
 			'post',
 			'sound_clash_location',
-			[
-				'object_subtype' => 'clash-audio',
-				'show_in_rest'   => true,
-			]
-		);
-
-		register_meta(
-			'post',
-			'sound_clash_url',
 			[
 				'object_subtype' => 'clash-audio',
 				'show_in_rest'   => true,
@@ -126,37 +132,17 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 			]
 		);
 
-		register_meta(
-			'post',
-			'sound_clash_url',
-			[
-				'object_subtype' => 'clash-videos',
-				'show_in_rest'   => true,
-			]
-		);
-
 		// Add support for full and wide align images.
 		add_theme_support( 'align-wide' );
-
-		/**
-		 * Text domain.
-		 */
-		load_theme_textdomain( 'clashvibes', get_template_directory() . '/languages' );
-
-		$locale      = get_locale();
-		$locale_file = get_template_directory() . "/languages/$locale.php";
-		if ( is_readable( $locale_file ) ) {
-			require_once $locale_file;
-		}
 
 		/**
 		 * Register menus.
 		 */
 		register_nav_menus(
 			array(
-				'main'      => esc_html__( 'Main Nav', 'clashvibes' ),
-				'Secondary' => esc_html__( 'Secondary', 'clashvibes' ),
-				'mobile'    => esc_html__( 'mobile', 'clashvibes' ),
+				'main'      => esc_html__( 'main', 'clashvibes' ),
+				'Secondary' => esc_html__( 'secondary', 'clashvibes' ),
+				'Mobile'    => esc_html__( 'mobile', 'clashvibes' ),
 				'Audio-Nav' => esc_html__( 'audio-nav', 'clashvibes' ),
 				'Video-Nav' => esc_html__( 'video-nav', 'clashvibes' ),
 			)
@@ -193,8 +179,10 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// Create new image sizes.
-		add_image_size( 'featured-image', 800, 999 );
-		add_image_size( 'post-image', 400, 9999 );
+		add_image_size( 'featured-image', 1200, 999 );
+    add_image_size( 'post-image', 600, 999 );
+    add_image_size( 'popular-image', 60, 60 ); //front page popular video & audio images
+
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -209,7 +197,26 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 				'gallery',
 				'caption',
 			)
-		);
+    );
+
+    // Add theme support for custom Header.
+    $defaults = array(
+      'default-image'          => '',
+      'random-default'         => false,
+      'width'                  => 0,
+      'height'                 => 0,
+      'flex-height'            => false,
+      'flex-width'             => false,
+      'default-text-color'     => '',
+      'header-text'            => true,
+      'uploads'                => true,
+      'wp-head-callback'       => '',
+      'admin-head-callback'    => '',
+      'admin-preview-callback' => '',
+      'video'                  => false,
+      'video-active-callback'  => 'is_front_page',
+    );
+    add_theme_support( 'custom-header', $defaults );
 
 		// Add theme support for custom background.
 		$defaults = array(
@@ -240,54 +247,131 @@ if ( ! function_exists( 'clashvibes_theme_setup' ) ) :
 		);
 		add_theme_support( 'nav-menus', $args );
 
-		// link pages
-		$links = array(
-			'before'           => '<p>' . __( 'Pages:', 'clashvibes' ),
-			'after'            => '</p>',
-			'link_before'      => '',
-			'link_after'       => '',
-			'next_or_number'   => 'number',
-			'separator'        => ' ',
-			'nextpagelink'     => __( 'Next page', 'clashvibes' ),
-			'previouspagelink' => __( 'Previous page', 'clashvibes' ),
-			'pagelink'         => '%',
-			'echo'             => 1,
-		);
-		wp_link_pages( $links );
 
-		add_filter( 'the_generator', '__return_false' );
+		// 2 removes the “wlwmanifest” link. wlwmanifest.xml is the resource file needed to enable support for Windows Live Writer. Nobody on Earth needs that. Note that this command simply removes the link, if you want to completely disable the functionality you need to deny access to the file /wp-includes/wlwmanifest.xml probably from your .htaccess (but that’s not strictly needed).
+		remove_action( 'wp_head', 'wlwmanifest_link' );
+
+		// 3 The RSD is an API to edit your blog from external services and clients. If you edit your blog exclusively from the WP admin console, you don’t need this.
+		remove_action( 'wp_head', 'rsd_link' );
+
+		// 4 “wp_shortlink_wp_head” adds a “shortlink” into your document head that will look like http://example.com/?p=ID. No need, thanks.
+		remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+
+		// 5 Removes a link to the next and previous post from the document header. This could be theoretically beneficial, but to my experience it introduces more problems than it solves. Please note that this has nothing to deal with the “next/previous” post that you may want to add at the end of each post.
+		remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
+
 		// remove version from rss.
-		add_filter( 'the_generator', '__return_empty_string' );
+		// add_filter( 'the_generator', '__return_empty_string' );.
+
+		// 6 Removes the generator name from the RSS feeds.
+		add_filter( 'the_generator', '__return_false' );
+
+		// 7 Removes the administrator’s bar and also the associated CSS styles. Especially during the development phase I find it very annoying.
+		// add_filter('show_admin_bar','__return_false');
+
+		// 8 Removes WP 4.2 emoji styles and JS. Nasty stuff.
+		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+		remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+		// Allowed tags
+		// How many times your users used the del or abbr tag? Yeah, exactly, zero. Let’s remove some of the allowed tags in comments.
+		// We can just add to the setup function the following.
+		global $allowedtags;
+		unset( $allowedtags['cite'] );
+		unset( $allowedtags['q'] );
+		unset( $allowedtags['del'] );
+		unset( $allowedtags['abbr'] );
+		unset( $allowedtags['acronym'] );
 
 	}
 
 endif;
 add_action( 'after_setup_theme', 'clashvibes_theme_setup' );
 
+/**
+ * Disable the emoji's
+ */
+function clashvibes_disable_emojis() {
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+
+}
+add_action( 'init', 'clashvibes_disable_emojis' );
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
+ * Filter function used to remove the tinymce emoji plugin.
  *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
+ * @param    array $plugins plugins array.
+ * @return   array Difference betwen the two arrays.
  */
-function clashvibes_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
+function clashvibes_disable_emojis_tinymce( $plugins ) {
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
 }
-add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
+add_filter( 'tiny_mce_plugins', 'clashvibes_disable_emojis_tinymce' );
+
+/**
+ * Remove Query Strings – Optional Step.
+ *
+ * @param array $src parameter.
+ */
+function clashvibes_remove_script_version( $src ) {
+	$parts = explode( '?ver', $src );
+	return $parts[0];
+}
+add_filter( 'script_loader_src', 'clashvibes_remove_script_version', 15, 1 );
+
+/**
+ * Remove WP embed script.
+ */
+function speed_stop_loading_wp_embed() {
+	if ( ! is_admin() ) {
+		wp_deregister_script( 'wp-embed' );
+	}
+}
+add_action( 'init', 'speed_stop_loading_wp_embed' );
 
 
 /**
- * Remove comment-reply.min.js from footer
+ *  Remove comment cookies.
  */
-function comments_clean_header_hook() {
-	wp_deregister_script( 'comment-reply' );
+remove_action( 'set_comment_cookies', 'wp_set_comment_cookies' );
+
+/**
+ *  Remove version from scripts and styles.
+ *
+ *  @param array $src array of.
+ *  @var array $src array of.
+ */
+function shape_space_remove_version_scripts_styles( $src ) {
+	if ( strpos( $src, 'ver=' ) ) {
+		$src = remove_query_arg( 'ver', $src );
+	}
+	return $src;
 }
-add_action( 'init', 'comments_clean_header_hook' );
+add_filter( 'style_loader_src', 'shape_space_remove_version_scripts_styles', 9999 );
+add_filter( 'script_loader_src', 'shape_space_remove_version_scripts_styles', 9999 );
+
+/**
+ * Enqueue Jquery.
+ *
+ * @return void
+ */
+function my_jquery_enqueue() {
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
+	wp_enqueue_script( 'jquery' );
+}
+if ( ! is_admin() ) {
+	add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
+}
+
 
 /**
  *  To register my css styles I use the function below.
@@ -314,7 +398,7 @@ function ie_style_sheets() {
 add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
 
 /**
- * Load the html5.
+ * Load the IE8 Scripts.
  *  */
 add_action(
 	'wp_enqueue_scripts',
@@ -359,12 +443,14 @@ function clashvibes_scripts() {
 
 	}
 
+	 wp_enqueue_script( 'contact-form', get_template_directory_uri() . '/js/contact-form.js', array('jquery'), '1.0', true );
+
 		// mobile main menu script for all mobile pages.
 		wp_enqueue_script( 'main-mobile', get_template_directory_uri() . '/js/mobile-mainnav-es6.js', array(), '1.0.0', true );
 
-		wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+		wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
 
-		wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+		wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '1.0', true );
 
 	if ( 'clash-audio' === get_post_type() ) {
 		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/audio-es6.js', array(), '1.0.0', true );
@@ -381,6 +467,44 @@ function clashvibes_scripts() {
 add_action( 'wp_enqueue_scripts', 'clashvibes_scripts' );
 
 
+/**
+ * Replaces the excerpt "Read More" text by a link.
+ *
+ * @param mixed $more variable added.
+ * @return $more
+ */
+function new_excerpt_more( $more ) {
+	return '';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more', 21 );
+/**
+ * Replaces the excerpt more "Read More" text by a link.
+ *
+ * @param mixed $excerpt variable added.
+ * @return $excerpt
+ */
+function the_excerpt_more_link( $excerpt ) {
+  $post     = get_post();
+
+  if(is_tax('video-category')){
+
+    $excerpt .= '<a class="read_more" href="' . get_permalink( $post->ID ) . '">Continue Watching: ' . get_the_title( $post->ID ) . '</a>';
+    return $excerpt;
+
+  }elseif(is_tax('audio-category')){
+
+    $excerpt .= '<a class="read_more" href="' . get_permalink( $post->ID ) . '">Continue Listening: ' . get_the_title( $post->ID ) . '</a>';
+    return $excerpt;
+
+  }else{
+
+    $excerpt .= '<a class="read_more" href="' . get_permalink( $post->ID ) . '">continue reading: ' . get_the_title( $post->ID ) . '</a>';
+    return $excerpt;
+
+  }
+
+}
+add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );
 
 
 

@@ -13,7 +13,7 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
-?>  
+?>
 
 <div class="clearfix"></div>
 </main><!--end of main content-->
@@ -24,9 +24,9 @@
     <?php
     wp_nav_menu(
         array(
-            'menu' => 'Secondary',
+            'menu' => 'secondary',
             'container' => 'footer',
-            'theme_location' => 'secondary',
+            'theme_location' => 'Secondary',
         )
     );
     ?>
@@ -38,9 +38,9 @@
     <ul id="social-media-box">
 
         <li>
-            <a class="social-icon linkedin-icon" 
-               href="" 
-               target="new" 
+            <a class="social-icon linkedin-icon"
+               href=""
+               target="new"
                title="Follow me on LinkedIn">
                 <span>
                     <i class="fa fa-instagram"></i>
@@ -49,19 +49,19 @@
         </li>
 
         <li>
-            <a class="social-icon twitter-icon" 
-               href="<?php echo esc_url(__('http://twitter.com/RayThompWeb', 'clashvibes')); ?>" 
-               target="new" 
+            <a class="social-icon twitter-icon"
+               href="<?php echo esc_url(__('http://twitter.com/RayThompWeb', 'clashvibes')); ?>"
+               target="new"
                title="Follow me on Twitter">
                 <span>
                     <i class="fa fa-twitter"></i>
                 </span>
             </a>
-        </li> 
+        </li>
 
         <li>
-            <a class="social-icon facebook-icon" href="<?php echo esc_url(__('https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes')); ?>" 
-               target="new" 
+            <a class="social-icon facebook-icon" href="<?php echo esc_url(__('https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes')); ?>"
+               target="new"
                title="Follow me on Facebook">
                 <span>
                     <i class="fa fa-facebook"></i>
@@ -88,15 +88,15 @@
 
     <?php
     $today = date('F j, Y, g:i a');
-    esc_html_e('Page was last updated : ') . $today;
+    esc_html_e('Page was last updated : ' , 'clashvibes') . $today;
     ?>
 </p>
 
 </div>
-<!-- container end-->																											
+<!-- container end-->
 
 
-<?php wp_footer(); ?> 
+<?php wp_footer(); ?>
 
 </body>
 </html>

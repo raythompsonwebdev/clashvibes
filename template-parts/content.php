@@ -34,23 +34,22 @@
 			</header><!-- .entry-header -->
 
 				<!--featured Image-->
-				
+
 			<?php if ( has_post_thumbnail() ) : ?>
-							
+
 						<?php clashvibes_post_thumbnail(); ?>
 
 							<?php else : ?>
 
 								<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-									
-									<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/sites/2/2020/06/placeholder-1.jpg"
-											alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
-									
-							</a>
-														
+
+                  <img src="<?php echo esc_url( home_url( '/' ) . 'wp-content//uploads/sites/3/2020/12/nothing.jpg' ); ?>" alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
+
+							  </a>
+
 						<?php endif; ?>
 
-			
+
 			<!--featured Image end-->
 
 			<div class="entry-content">
@@ -69,29 +68,18 @@
 							wp_kses_post( get_the_title() )
 						)
 					);
-
-					wp_link_pages(
-						array(
-							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
-							'after'  => '</div>',
-						)
-					);
 				?>
-				<a href="<?php echo esc_url( get_permalink() ); ?>" class="read_more" rel="bookmark">
-					<?php
-						esc_html(the_title("Continue Reading : "), 'clashvibes');
-					?>
-			</a>
+
 			</div><!-- .entry-content -->
-			
-			
-					
+
+
+
 					<?php if ( get_edit_post_link() ) : ?>
 				<footer class="entry-footer">
 						<?php clashvibes_entry_footer(); ?>
 				</footer><!-- .entry-footer -->
 			<?php endif; ?>
-			
+
 		</article>
 <!-- #post-<?php the_ID(); ?> -->
 

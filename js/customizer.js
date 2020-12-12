@@ -13,7 +13,8 @@
 		value.bind( function( to ) {
 			$( '.site-title a' ).text( to );
 		} );
-	} );
+  } );
+
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-description' ).text( to );
@@ -38,6 +39,15 @@
 				} );
 			}
 		} );
+  } );
+
+  // Custom Header Background Color
+	wp.customize( 'header_color', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-header' ).css( {
+				'background-color': to
+			});
+		} );
 	} );
 
   //Update site background color...
@@ -47,12 +57,5 @@
 		} );
 	} );
 
-	// Custom Layout Options
-	wp.customize( 'layout_setting', function( value ) {
-		value.bind( function( to ) {
-			$( '#page' ).removeClass( 'no-sidebar sidebar-left sidebar-right' );
-			$( '#page' ).addClass( to );
-		} );
-  } );
 
 } )( jQuery );

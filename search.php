@@ -23,9 +23,9 @@ get_header(); ?>
 	<?php get_sidebar(); ?>
 
 	<section id="clashvibes_right_column">
-	
 
-		<?php get_template_part( 'template-parts/content', 'custom' ); ?>
+
+		<?php get_template_part( 'template-parts/content', 'search' ); ?>
 
 	</section>
 

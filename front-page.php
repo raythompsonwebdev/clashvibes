@@ -21,7 +21,7 @@ get_header(); ?>
 			<!--2/2018/07-->
 			<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sliderimage.jpg" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
 
-		</section>		
+		</section>
 
 		<!--new releases section-->
 		<section id="new_releases_section">
@@ -30,7 +30,7 @@ get_header(); ?>
 				<?php esc_html_e( 'Latest Sound Clashes ', 'clashvibes' ); ?>
 			</h1>
 
-			<?php			
+			<?php
 
 				$the_query = null;
 
@@ -60,7 +60,7 @@ get_header(); ?>
 				$the_query->the_post();
 			?>
 
-			
+
 				<figure class="new_releases_box">
 
 				<?php the_post_thumbnail('thumbnail', array('class' => 'new-release-thumb')); ?>
@@ -83,31 +83,31 @@ get_header(); ?>
 					</figcaption>
 
 				</figure>
-				
+
 
 			<?php
 				endwhile;
 				else :
 			?>
-        
-			<article class="new_releases_box">
 
-				<figure class="new-release-thumb">
+        <article class="new_releases_box">
 
-
-					<figcaption>
-
-						<p>
-							<?php esc_html_e( 'Sorry! No clashes to display.', 'clashvibes' ); ?>
-						</p>
+          <figure class="new-release-thumb">
 
 
-					</figcaption>
+            <figcaption>
 
-				</figure>
+              <p>
+                <?php esc_html_e( 'Sorry! No clashes to display.', 'clashvibes' ); ?>
+              </p>
 
-      		</article>
-      
+
+            </figcaption>
+
+          </figure>
+
+        </article>
+
 			<?php
 				endif;
 				wp_reset_postdata();
@@ -115,7 +115,7 @@ get_header(); ?>
 
 
 		</section>
-		
+
     	<!--Top 10 download section-->
 		<div id="popularclashes-section">
 
@@ -151,7 +151,7 @@ get_header(); ?>
 
 					<span class="popularclashes-image">
 						<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail(); ?>
+							<?php the_post_thumbnail('popular-image'); ?>
 						</a>
 					</span>
 
@@ -159,7 +159,7 @@ get_header(); ?>
 						<?php the_title(); ?>
 					</span>
 
-					
+
 					<a class="popularclashes-link" href="<?php echo esc_url( get_permalink(), 'clashvibes' ); ?>" title="Listen to <?php esc_attr( the_title_attribute(), 'clashvibes' ); ?>">
 						<?php esc_html_e( 'Listen', 'clashvibes' ); ?>
 					</a>
@@ -218,17 +218,17 @@ get_header(); ?>
 
 					<span class="popularclashes-image">
 						<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail(); ?>
+							<?php the_post_thumbnail('popular-image'); ?>
 						</a>
 					</span>
 					<span class="popularclashes-title">
 						<?php the_title(); ?>
 					</span>
-					
+
 					<a class="popularclashes-link" href="<?php echo esc_url( get_permalink() ); ?>" title="View <?php esc_attr( the_title_attribute(), 'clashvibes' ); ?> Video">
 						<?php esc_html_e( 'View', 'clashvibes' ); ?>
 					</a>
-					
+
 				</span>
 
 				<?php endwhile; else : ?>

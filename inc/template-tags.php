@@ -48,7 +48,9 @@ if ( ! function_exists( 'clashvibes_posted_by' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+    echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+
+
 	}
 endif;
 
@@ -125,23 +127,27 @@ if ( ! function_exists( 'clashvibes_post_thumbnail' ) ) :
 			return;
 		}
 
-		if ( is_singular() || 'clash-videos' == get_post_type() || 'clash-audio' == get_post_type() ) :
+		if ( is_singular() ) :
 			?>
 
-		<figure class="featuredImage">
-		<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
-			<?php the_post_thumbnail( 'featured-image' ); ?>
-		</a>
-		</figure><!-- .post-thumbnail -->
+      <figure class="featuredImage">
 
+        <a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+          <?php the_post_thumbnail( 'featured-image' ); ?>
+        </a>
+      </figure><!-- featured-image -->
 
-		<?php else : ?>
+        <?php elseif(is_page('clashaudio') || is_page('clashvideo') || is_front_page()) : ?>
 
-		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-			<?php	the_post_thumbnail( 'post-image' ); ?>
-		</a>
+          <?php	the_post_thumbnail( 'thumbnail' ); ?><!-- thumbnail -->
 
+		    <?php else : ?>
 
+        <a class="post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" aria-hidden="true">
+
+          <?php	the_post_thumbnail( 'post-image' ); ?><!-- post-image -->
+
+        </a>
 
 			<?php
 		endif; // End is_singular().

@@ -30,15 +30,16 @@
 wp_nav_menu(
 	array(
 		'menu'      => 'Video-Nav',
-		'container' => 'nav',
+    'container' => 'nav',
+    'theme_location'    => "video-nav",
 	)
 );
 ?>
-		
+
 </section>
 
 
  <div class="clearfix"></div>
-											
+
 </aside>
 

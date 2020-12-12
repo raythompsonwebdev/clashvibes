@@ -27,20 +27,20 @@ get_header(); ?>
 
 
 <article class="events_box">
-		
+
 	<figure class="events">
 
-		<img src="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php esc_attr_e( 'sliderimage', 'raythompsonwebdev-com' ); ?>">
-		
+		<img src="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
+
 		<figcaption class="event-text">
-		
+
 		</figcaption>
 
 	</figure>
 
 	<input type="submit" value="Find Event" name="event" id="event-submit-btn" />
 
-</article> 
+</article>
 
 </div>
 

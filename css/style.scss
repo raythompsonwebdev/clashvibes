@@ -1,13 +1,13 @@
 /*
 Theme Name: Clashvibes
-Theme URI: http://www.clashvibes.com
+Theme URI: https://clashvibes.raythompsnwebdev.co.uk
 Description: Reggae sound clashes.
 Version: 1.0
 Author: Raymond Thompson
 Author URI:
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: custom-header, custom-background, editor-style, left-sidebar, flexible-header, custom-background
+Tags: custom-header, editor-style, left-sidebar, flexible-header, custom-background
 Text Domain: clashvibes
 Domain Path: /languages
 
@@ -1003,6 +1003,19 @@ License: GNU General Public License v2 or later
             font-size: 1.2em;
           }
 
+          div.textwidget{
+            form{
+              select{
+                width: 100%;
+                option{
+                  width: 100%;
+                }
+              }
+            }
+
+          }
+
+
           ul,
           ul.comments,
           ul.recentcomments {
@@ -1027,10 +1040,16 @@ License: GNU General Public License v2 or later
                 height: 100%;
               }
 
+              span.rss-date{
+                clear: both;
+                display: block;
+              }
+
               a {
                 padding: 0;
                 margin: 0;
                 height: 100%;
+                width: auto;
                 text-align: center;
                 display: inline-block;
                 text-decoration: none;
@@ -1231,13 +1250,11 @@ License: GNU General Public License v2 or later
 
         a.post-thumbnail,
         div.post-thumbnail {
-          width: 50%;
+          width: auto;
           margin: 1em auto;
           height: auto;
           display: block;
-          @include originTran(50% 50%);
           @include box-sizing($type: border-box);
-          @include Transition(all 0.2s linear 0s);
           img {
             margin: 0 auto;
             display: block;
@@ -1248,21 +1265,20 @@ License: GNU General Public License v2 or later
         /*--- custom post images---*/
         figure.featuredImage,
         figure.attachment {
-          width: 80%;
+          width: 94%;
           height: auto;
           margin: 2em auto;
           display: block;
-
-          @include originTran(50% 50%);
           @include box-sizing($type: border-box);
-          @include Transition(all 0.2s linear 0s);
 
           a {
             width: 100%;
+
             img {
-              margin: 0 auto;
+              margin: 0 auto ;
               display: block;
-              width: auto;
+              width:auto;
+
             }
           }
         }
@@ -2419,7 +2435,7 @@ License: GNU General Public License v2 or later
         /*--- blog image---*/
         a.post-thumbnail,
         div.post-thumbnail {
-          width: 60%;
+          width: auto;
           img {
             margin: 0 auto;
           }
@@ -2428,8 +2444,12 @@ License: GNU General Public License v2 or later
         /*--- custom post images---*/
         figure.featuredImage,
         figure.attachment {
-          img {
-            margin: 0 auto;
+          a {
+
+            img {
+              margin: 0 auto ;
+
+            }
           }
         }
 
@@ -3243,15 +3263,19 @@ License: GNU General Public License v2 or later
         a.post-thumbnail,
         div.post-thumbnail {
           img {
-            margin: 0 auto;
+            margin: 0 auto ;
           }
         }
 
         /*--- custom post images---*/
         figure.featuredImage,
         figure.attachment {
-          img {
-            margin: 0 auto;
+          a {
+
+            img {
+              margin: 0 auto ;
+
+            }
           }
         }
 
@@ -3965,7 +3989,7 @@ License: GNU General Public License v2 or later
 
         a.post-thumbnail,
         div.post-thumbnail {
-          width: 65%;
+          width: auto;
           img {
             margin: 0 auto;
           }
@@ -3974,8 +3998,12 @@ License: GNU General Public License v2 or later
         /*--- custom post images---*/
         figure.featuredImage,
         figure.attachment {
-          img {
-            margin: 0 auto;
+          a {
+
+            img {
+              margin: 0 auto ;
+
+            }
           }
         }
 
@@ -4683,7 +4711,7 @@ License: GNU General Public License v2 or later
         /*--- blog image---*/
         a.post-thumbnail,
         div.post-thumbnail {
-          width: 70%;
+          width: auto;
           img {
             margin: 0 auto;
           }
@@ -4692,8 +4720,12 @@ License: GNU General Public License v2 or later
         /*--- custom post images---*/
         figure.featuredImage,
         figure.attachment {
-          img {
-            margin: 0 auto;
+          a {
+
+            img {
+              margin: 0 auto ;
+
+            }
           }
         }
 
@@ -6102,12 +6134,23 @@ License: GNU General Public License v2 or later
           padding: 0;
         }
 
+        /*--- blog image---*/
+        a.post-thumbnail,
+        div.post-thumbnail {
+          width: auto;
+          img {
+            margin: 0 auto;
+          }
+        }
+
         figure.featuredImage,
         figure.attachment {
-          width: 90%;
+          width: 96%;
+          a {
+            img {
+              margin: 0 auto ;
 
-          img {
-            margin: 0;
+            }
           }
         }
 
@@ -6758,8 +6801,12 @@ License: GNU General Public License v2 or later
         //image
         figure.featuredImage,
         figure.attachment {
-          img {
-            margin: 0 auto;
+          a {
+
+            img {
+              margin: 0 auto ;
+
+            }
           }
         }
 
@@ -7386,7 +7433,7 @@ License: GNU General Public License v2 or later
 
         a.post-thumbnail,
         div.post-thumbnail {
-          width: 75%;
+          width: auto;
           img {
             margin: 0 auto;
           }
@@ -7395,8 +7442,11 @@ License: GNU General Public License v2 or later
         //image
         figure.featuredImage,
         figure.attachment {
-          img {
-            margin: 0 auto;
+          a {
+            img {
+              margin: 0 auto ;
+
+            }
           }
         }
 
@@ -8047,8 +8097,11 @@ License: GNU General Public License v2 or later
         //image
         figure.featuredImage,
         figure.attachment {
-          img {
-            margin: 0 auto;
+          a {
+            img {
+              margin: 0 auto ;
+
+            }
           }
         }
 
@@ -8658,8 +8711,11 @@ License: GNU General Public License v2 or later
         //image
         figure.featuredImage,
         figure.attachment {
-          img {
-            margin: 0 auto;
+          a {
+            img {
+              margin: 0 auto ;
+
+            }
           }
         }
 
@@ -9277,8 +9333,11 @@ License: GNU General Public License v2 or later
 
         figure.featuredImage,
         figure.attachment {
-          img {
-            margin: 0 auto;
+          a {
+            img {
+              margin: 0 auto ;
+
+            }
           }
         }
 

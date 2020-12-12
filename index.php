@@ -20,7 +20,7 @@ get_header(); ?>
 
     <section id="clashvibes_right_column">
 
-    <h1><?php esc_html_e('Blog Page');?></h1>
+    <h1><?php esc_html_e('Blog Page', 'clashvibes');?></h1>
 
         <!--Post loop start -->
 		<?php if ( have_posts() ) : ?>

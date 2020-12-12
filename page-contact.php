@@ -19,15 +19,8 @@
 get_header(); ?>
 
 <h1><?php the_title(); ?> Page</h1>
-<?php
-/**
- * Customizer additions.
- */
-   include get_template_directory() . '/inc/contact-form.php';
 
-
-
-?>
+  <?php //get_template_part( 'template-parts/content', 'contactform' ); ?>
 
 
 <?php

@@ -1,46 +1,32 @@
 <?php
 /**
- * *PHP version 7
+ * The sidebar containing the main widget area
  *
- * *
- * Sidebar | core/sidebar.php.
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @category   Sidebar
- * @package    Clashvibes
- * @subpackage Sidebar
- * @author     Raymond Thompson <ray_thomp@hushmail.com>
- * @copyright  2017 Raymond Thompson
- * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
- * @version    GIT: https://github.com/raythompsonwebdev/clashvibes .git
- * @link       http:www.raythompsonwebdev.co.uk custom template
+ * @package clashvibes
  */
 
+if ( ! is_active_sidebar( 'Primary Sidebar' ) ) {
+	return;
+}
 ?>
-
-<aside id="clashvibes_left_column">
-
- <h1><?php esc_html_e( 'Blog', 'clashvibes' ); ?></h1>
-
-<section id="clashvibes_login">
-	<?php get_search_form(); ?>
-</section>
-
-<section class="clashvibes_left_column_box">
-	
-	<?php
+<!--id="secondary"-->
+<aside id="clashvibes_left_column" class="widget-area">
+<?php
 	if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Primary Sidebar' ) ) :
 		?>
-				   
-		
+
+<!--class="clashvibes_left_column_box"-->
+	<section class="widget ">
+
+		<h2 class="widget-title"><?php esc_html__( 'Links', 'clashvibes' ); ?></h2>
+
+	</section>
 	<section class="widget">
 
 		<h2 class="widget-title"><?php esc_html__( 'Links', 'clashvibes' ); ?></h2>
 
 	</section>
 	<?php endif; ?>
-
-</section>
-	   
-											
-</aside>
-
+</aside><!-- #secondary -->

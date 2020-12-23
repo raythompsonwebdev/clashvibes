@@ -15,7 +15,7 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 ?>
-
+<!--id="secondary"-->
 <aside id="clashvibes_left_column">
 
 	<h1>
@@ -26,6 +26,7 @@
 		<?php get_search_form(); ?>
 	</section>
 
+<!--class="widget"-->
 	<section class="clashvibes_left_column_box">
 
 		<?php

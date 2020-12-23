@@ -1,27 +1,23 @@
 <?php
 /**
- * *PHP version 7
+ * The template for displaying the footer
  *
- * Footer | core/footer.php.
+ * Contains the closing of the #content div and all content after.
  *
- * @category   Footer
- * @package    Clashvibes
- * @subpackage Footer
- * @author     Raymond Thompson <ray_thomp@hushmail.com>
- * @copyright  2017 Raymond Thompson
- * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
- * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
- * @link       http:www.raythompsonwebdev.co.uk custom template
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package clashvibes
  */
+
 ?>
 
 <div class="clearfix"></div>
-</main><!--end of main content-->
 
-<!--footer-->
-<footer id="clashvibes_footer">
+</main>
 
-    <?php
+<!-- <footer id="clashvibes_footer"> -->
+	<footer id="colophon" class="site-footer">
+			<?php
     wp_nav_menu(
         array(
             'menu' => 'secondary',
@@ -29,7 +25,7 @@
             'theme_location' => 'Secondary',
         )
     );
-    ?>
+   ?>
 
     <ul id="footer-content">
 
@@ -71,34 +67,26 @@
 
 
     </ul>
+	</footer><!-- #colophon -->
 
-</footer>
+</div><!-- #page -->
 
 <!--info-->
-<p class="copy">
-    <?php echo esc_attr('&copy; 2018 - Raymond Thompson - UK :', 'clashvibes'); ?>
-    <a href="<?php echo esc_url(__('https://wordpress.org/', 'clashvibes')); ?>" alt="wordpress.org" aria-label=<?php echo esc_url(__("https://wordpress.org/", 'clashvibes')); ?>></a>
-
-
-    <?php
-    /* translators: %1$s by %2$s: Theme name, clashvibes: Raymond Thompson. */
-    printf(esc_html__('Theme: %1$s by %2$s.', 'clashvibes'), 'clashvibes', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>');
-    ?>
-    <br/>
-
-    <?php
-    $today = date('F j, Y, g:i a');
-    esc_html_e('Page was last updated : ' , 'clashvibes') . $today;
-    ?>
-</p>
-
-</div>
-<!-- container end-->
-
+	<div class="site-info copy">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clashvibes' ) ); ?>">
+				<?php
+				/* translators: %s: CMS name, i.e. WordPress. */
+				printf( esc_html__( 'Proudly powered by %s', 'clashvibes' ), 'WordPress' );
+				?>
+			</a>
+			<span class="sep"> | </span>
+				<?php
+				/* translators: 1: Theme name, 2: Theme author. */
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'clashvibes' ), 'clashvibes', '<a href="http://underscores.me/">raythompsonwebdev</a>' );
+				?>
+	</div><!-- .site-info -->
 
 <?php wp_footer(); ?>
 
 </body>
 </html>
-
-

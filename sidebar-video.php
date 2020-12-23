@@ -16,7 +16,8 @@
  */
 ?>
 
-<aside id="clashvibes_left_column">
+<!--id="secondary"-->
+<aside id="clashvibes_left_column" class="widget-area" >
 
  <h1><?php esc_html_e( 'Video', 'clashvibes' ); ?></h1>
 
@@ -24,6 +25,7 @@
 	<?php get_search_form(); ?>
 </section>
 
+<!--class="widget"-->
 <section class="clashvibes_left_column_box">
 
 <?php

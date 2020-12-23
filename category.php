@@ -18,6 +18,7 @@ get_header();
 
 <?php get_sidebar(); ?>
 
+<!--<main id="primary" class="site-main">-->
 <section id="clashvibes_right_column">
 
     <?php

@@ -43,7 +43,7 @@
 
 								<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 
-                  <img src="<?php echo esc_url( home_url( '/' ) . 'wp-content//uploads/sites/3/2020/12/nothing.jpg' ); ?>" alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
+                  <img src="<?php echo esc_url( home_url( '/' ) . 'wp-content//uploads/sites/2/2020/12/nothing.jpg' ); ?>" alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
 
 							  </a>
 

@@ -1165,6 +1165,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         display: block;
         color: $color4;
@@ -2385,6 +2386,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         display: block;
 
@@ -3231,6 +3233,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         display: block;
 
@@ -3939,6 +3942,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         display: block;
 
@@ -4660,6 +4664,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         display: block;
 
@@ -5294,6 +5299,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         margin-bottom: 1%;
 
@@ -6009,6 +6015,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         margin-bottom: 1%;
 
@@ -6678,6 +6685,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         margin-bottom: 1%;
 
@@ -7310,6 +7318,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         margin-bottom: 1%;
 
@@ -7958,6 +7967,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         margin-bottom: 1%;
 
@@ -8579,6 +8589,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         margin-bottom: 1%;
 
@@ -9204,6 +9215,7 @@ License: GNU General Public License v2 or later
       article.clash-videos,
       article.clash-audio,
       article.post,
+      article.search-results,
       article.page {
         margin-bottom: 1%;
 
@@ -9328,6 +9340,19 @@ License: GNU General Public License v2 or later
         div.post-thumbnail {
           img {
             margin: 0 auto;
+          }
+        }
+
+        a.no-post-thumbnail {
+          margin: 0.5em auto;
+          width: 100%;
+
+          img.attachment-post-thumbnail{
+            display: block;
+            margin: 0.5em auto;
+            width: auto;
+
+
           }
         }
 

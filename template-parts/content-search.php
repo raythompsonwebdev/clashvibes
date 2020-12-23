@@ -18,15 +18,17 @@ $classess = array(
 <article id="post-<?php the_ID(); ?>" <?php post_class( $classess ); ?>>
 <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-	<header class="byline">
+	<header class="entry-header">
 
 
-		<?php if ( 'post' === get_post_type() ) : ?>
+		<?php if ( 'post' === get_post_type()  ) : ?>
 		<!-- .entry-meta -->
 		<div class="entry-meta">
 
-      <?php clashvibes_posted_on(); ?>
-			<?php clashvibes_posted_by(); ?>
+      <?php
+        clashvibes_posted_on();
+        clashvibes_posted_by();
+      ?>
 
 		</div>
 		<?php endif; ?>
@@ -42,9 +44,9 @@ $classess = array(
 
 					<?php else : ?>
 
-						<a class="post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" aria-hidden="true">
+						<a class="no-post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" aria-hidden="true">
 
-              <img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/sites/3/2020/12/nothing.jpg' ); ?>" alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
+              <img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/sites/2/2020/12/nothing.jpg' ); ?>" alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
 
             </a>
 
@@ -52,7 +54,7 @@ $classess = array(
 	</a>
 
 	<!-- .entry-summary -->
-	<div class="entry">
+	<div class="entry-content">
 		<?php
 
 		if ( 'clash-audio' === get_post_type() || 'clash-video' === get_post_type() || 'post' === get_post_type() ) :
@@ -72,7 +74,7 @@ $classess = array(
 								),
 							)
 						),
-						wp_kses_post( get_the_title() )
+						 get_the_title()
 					)
 				);
 

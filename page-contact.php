@@ -20,7 +20,7 @@ get_header(); ?>
 
 <h1><?php the_title(); ?> Page</h1>
 
-  <?php //get_template_part( 'template-parts/content', 'contactform' ); ?>
+  <?php // get_template_part( 'template-parts/content', 'contactform' ); ?>
 
 
 <?php

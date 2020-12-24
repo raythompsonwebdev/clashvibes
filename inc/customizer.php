@@ -56,6 +56,6 @@ function clashvibes_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function clashvibes_customize_preview_js() {
-	wp_enqueue_script( 'clashvibes-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'clashvibes-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), CLASHVIBES_VERSION, true );
 }
 add_action( 'customize_preview_init', 'clashvibes_customize_preview_js' );

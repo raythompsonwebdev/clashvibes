@@ -27,6 +27,42 @@ License: GNU General Public License v2 or later
 		display: none;
 	}
 
+	/* Text meant only for screen readers. */
+	.screen-reader-text {
+		border: 0;
+		clip: rect(1px, 1px, 1px, 1px);
+		clip-path: inset(50%);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+		word-wrap: normal !important;
+
+		&:focus {
+			background-color: #f1f1f1;
+			border-radius: 3px;
+			box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+			clip: auto !important;
+			color: #21759b;
+			display: block;
+			font-size: 14px;
+			font-size: 0.875rem;
+			font-weight: bold;
+			height: auto;
+			left: 5px;
+			line-height: normal;
+			padding: 15px 23px 14px;
+			text-decoration: none;
+			top: 5px;
+			width: auto;
+			z-index: 100000;
+
+			/* Above WP toolbar. */
+		}
+	}
+
 	/* page container */
 	#page {
 		margin-right: auto;
@@ -54,138 +90,102 @@ License: GNU General Public License v2 or later
 			justify-content: flex-start;
 			background-color: $color;
 
-			.site-logo {
-				position: relative;
-				top: 0;
-				left: 0;
-				width: 5%;
-				-webkit-flex: 0 1 auto;
-				-ms-flex: 0 1 auto;
-				flex: 0 1 auto;
+			.site-branding {
+				width: 70%;
+				display:flex;
 
-				a {
-					position: absolute;
-					z-index: 1;
+				.site-logo {
+					position: relative;
 					top: 0;
 					left: 0;
-					background: $color2;
-					color: $color4;
-					text-decoration: none;
-					line-height: 46px;
-					width: 100%;
-					@include originTran(50% 50%);
-					@include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
-					height: 80%;
+					width: 15%;
+					-webkit-flex: 0 1 auto;
+					-ms-flex: 0 1 auto;
+					flex: 0 1 auto;
 
-					/* Text meant only for screen readers. */
-					div.screen-reader-text {
-						border: 0;
-						clip: rect(1px, 1px, 1px, 1px);
-						clip-path: inset(50%);
-						height: 1px;
-						margin: -1px;
-						overflow: hidden;
-						padding: 0;
+					a {
 						position: absolute;
-						width: 1px;
-						word-wrap: normal !important;
+						z-index: 1;
+						top: 0;
+						left: 0;
+						background: $color2;
+						color: $color4;
+						text-decoration: none;
+						line-height: 46px;
+						width: 100%;
+						@include originTran(50% 50%);
+						@include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
+						height: 80%;
 
-						&:focus {
-							background-color: #f1f1f1;
-							border-radius: 3px;
-							box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-							clip: auto !important;
-							color: #21759b;
-							display: block;
-							font-size: 14px;
-							font-size: 0.875rem;
-							font-weight: bold;
-							height: auto;
-							left: 5px;
-							line-height: normal;
-							padding: 15px 23px 14px;
-							text-decoration: none;
-							top: 5px;
-							width: auto;
-							z-index: 100000;
-
-							/* Above WP toolbar. */
+						div.site-firstletter {
+							font-family: $font-main;
+							font-size: 4em;
+							font-weight: normal;
+							text-align: center;
+							margin: 0;
+							padding: 0;
+							height: 100%;
 						}
 					}
+				}
 
-					div.site-firstletter {
-						font-family: $font-main;
-						font-size: 4em;
-						font-weight: normal;
-						text-align: center;
+				.site-logo a:focus,
+				.site-logo a:hover {
+					outline: 2px solid white;
+				}
+
+				.site-logo a:focus .site-firstletter,
+				.site-logo a:hover .site-firstletter {
+					background-color: $color4;
+					color: $color2;
+					font-weight: normal;
+					text-align: center;
+				}
+
+				#clashvibes-title {
+					width: 85%;
+					display: flex;
+					-webkit-flex-flow: column;
+					-ms-flex-flow: column;
+					flex-flow: column;
+					-webkit-flex: 0 1 auto;
+					-ms-flex: 0 1 auto;
+					flex: 0 1 auto;
+
+					h1.site-title {
+						color: $color1;
 						margin: 0;
 						padding: 0;
-						height: 100%;
+						line-height: 40px;
+						font-size: 2.5em;
+						text-indent: 0.1em;
+						text-shadow: 1px 1px 1px $color4;
+						width: 100%;
+						height: 40px;
+					}
+
+					h2.site-description {
+						text-indent: 0.5em;
+						height: 20px;
+						color: $color5;
+						width: 100%;
+						line-height: 20px;
+						font-size: 0.7em;
+						font-weight: normal;
+						padding: 0;
+						clear: left;
+						text-shadow: 0.5px 0.5px 0.5px $color4;
+						margin: 0;
 					}
 				}
 			}
-
-			.site-logo a:focus,
-			.site-logo a:hover {
-				outline: 2px solid white;
-			}
-
-			.site-logo a:focus .site-firstletter,
-			.site-logo a:hover .site-firstletter {
-				background-color: $color4;
-				color: $color2;
-				font-weight: normal;
-				text-align: center;
-			}
-
-			#clashvibes-title {
-				width: 75%;
-				display: -webkit-flex;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-flex-flow: column;
-				-ms-flex-flow: column;
-				flex-flow: column;
-				-webkit-flex: 0 1 auto;
-				-ms-flex: 0 1 auto;
-				flex: 0 1 auto;
-
-				h1.site-title {
-					color: $color1;
-					margin: 0;
-					padding: 0;
-					line-height: 40px;
-					font-size: 2.5em;
-					text-indent: 0.1em;
-					text-shadow: 1px 1px 1px $color4;
-					width: 100%;
-					height: 40px;
-				}
-
-				h2.site-description {
-					text-indent: 0.5em;
-					height: 20px;
-					color: $color5;
-					width: 100%;
-					line-height: 20px;
-					font-size: 0.7em;
-					font-weight: normal;
-					padding: 0;
-					clear: left;
-					text-shadow: 0.5px 0.5px 0.5px $color4;
-					margin: 0;
-				}
-			}
-
 			aside#socialmediatop {
-				width: 20%;
-				display: -webkit-flex;
-				display: -ms-flexbox;
+				width: 30%;
 				display: flex;
 				height: 40px;
-				-webkit-flex: 0 1 auto;
-				-ms-flex: 0 1 auto;
-				flex: 0 1 auto;
+				-webkit-flex: 0 0 auto;
+				-ms-flex: 0 0 auto;
+				flex: 0 0 auto;
 
 				a.social-icon {
 					height: 100%;
@@ -1828,52 +1828,60 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
-			}
 
-			.navigation {
-				margin: 0;
-				padding: 0;
-				height: auto;
-				h2 {
-					margin-bottom: 0.2em;
-					color: $color;
-					background-color: $color4;
-				}
-				span {
-					display: inline-block;
-					width: 100%;
-					height: 100%;
-
-					a {
-						font-size: 0.9em;
-						width: 100%;
-						display: inline-block;
+				.navigation {
+					margin: 0;
+					padding: 0;
+					height: auto;
+					h2 {
+						margin-bottom: 0.2em;
 						color: $color;
 						background-color: $color4;
-						line-height: 50px;
-						text-align: center;
-						@include Transition(all 0.2s linear 0s);
-						&:hover {
-							color: $color4;
-							background-color: $color7;
-							font-weight: bold;
-						}
-						&::after {
-							font-family: 'FontAwesome', $font-main;
-							content: '\f028';
-							font-size: 1.6em;
-							line-height: 50px;
-							float: right;
-							width: 3%;
-							display: block;
-						}
-						&:active {
-							background-color: $color7;
-							color: $color;
+					}
+					.nav-links{
+						margin:0;
+						display:block;
+						.nav-next,
+						.nav-previous {
+							display: inline-block;
+							width: 100%;
+							height: 100%;
+							a {
+								font-size: 0.9em;
+								width: 100%;
+								display: inline-block;
+								color: $color;
+								background-color: $color4;
+								line-height: 50px;
+								text-align: center;
+								@include Transition(all 0.2s linear 0s);
+								&:hover {
+									color: $color4;
+									background-color: $color7;
+									font-weight: bold;
+								}
+								&::after {
+									font-family: 'FontAwesome', $font-main;
+									content: '\f028';
+									font-size: 1.6em;
+									line-height: 50px;
+									float: right;
+									width: 3%;
+									display: block;
+								}
+								&:active {
+									background-color: $color7;
+									color: $color;
+								}
+							}
 						}
 					}
+
 				}
+
 			}
+
+
 		}
 
 		/* ----- Footer ----- */
@@ -1999,32 +2007,25 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 1440px) {
 	#page {
 		width: 92%;
-		h1 {
-			font-size: 1.5em;
-
-			a {
-				font-size: 1em;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
 
 		header.site-header {
 			height: 70px;
 
-			#clashvibes-title {
-				width: 69%;
+			.site-branding {
 
-				h1.site-title {
-					font-size: 2.4em;
+				#clashvibes-title {
+					width: 69%;
+
+					h1.site-title {
+						font-size: 2.4em;
+					}
+
+					h2.site-description {
+						line-height: 20px;
+						font-size: 0.7em;
+					}
 				}
 
-				h2.site-description {
-					line-height: 20px;
-					font-size: 0.7em;
-				}
 			}
 
 			aside#socialmediatop {
@@ -2699,29 +2700,38 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
-			}
-			.navigation {
-				margin: 0;
+				.navigation {
+					margin: 0;
 
-				h2 {
-					color: $color;
-				}
-				span {
-					display: inline-block;
+					h2 {
+						color: $color;
+					}
+					.nav-links{
+						margin:0;
+						display:block;
+						.nav-next,
+						.nav-previous {
+							display: inline-block;
 
-					a {
-						font-size: 0.9em;
+							a {
+								font-size: 0.9em;
 
-						&:hover {
-							font-weight: bold;
-						}
-						&::after {
-							font-size: 1.5em;
-							width: 4%;
+								&:hover {
+
+									font-weight: bold;
+								}
+								&::after {
+									font-size: 1.6em;
+								}
+								&:active {
+									background-color: $color7;
+								}
+							}
 						}
 					}
 				}
 			}
+
 		}
 
 		footer.site-footer {
@@ -2773,48 +2783,37 @@ License: GNU General Public License v2 or later
 	#page {
 		width: 94%;
 
-		h1 {
-			font-size: 1.5em;
-
-			a {
-				font-size: 1em;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
-
 		header.site-header {
 			height: 70px;
+			.site-branding {
+				.site-logo {
+					width: 7%;
 
-			.site-logo {
-				width: 7%;
+					a {
+						div.screen-reader-text {
+							&:focus {
+								font-size: 14px;
+								font-size: 0.875rem;
+							}
+						}
 
-				a {
-					div.screen-reader-text {
-						&:focus {
-							font-size: 14px;
-							font-size: 0.875rem;
+						div.site-firstletter {
+							font-size: 3em;
 						}
 					}
+				}
 
-					div.site-firstletter {
-						font-size: 3em;
+				#clashvibes-title {
+					width: 68%;
+
+					h1.site-title {
+						font-size: 2.3em;
 					}
-				}
-			}
 
-			#clashvibes-title {
-				width: 68%;
-
-				h1.site-title {
-					font-size: 2.3em;
-				}
-
-				h2.site-description {
-					line-height: 20px;
-					font-size: 0.7em;
+					h2.site-description {
+						line-height: 20px;
+						font-size: 0.7em;
+					}
 				}
 			}
 
@@ -3483,28 +3482,37 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
-			}
-
-			/* post navigation */
+				/* post navigation */
 			.navigation {
 				margin: 0;
 
 				h2 {
 					color: $color2;
 				}
-				span {
-					display: inline-block;
+				.nav-links{
+					margin:0;
+					display:block;
+					.nav-next,
+					.nav-previous {
+						display: inline-block;
 
-					a {
-						&:hover {
-							font-weight: bold;
-						}
-						&::after {
-							font-size: 1.4em;
-							width: 5%;
+						a {
+							font-size: 0.9em;
+
+							&:hover {
+
+								font-weight: bold;
+							}
+							&::after {
+								font-size: 1.6em;
+							}
+							&:active {
+								background-color: $color7;
+							}
 						}
 					}
 				}
+			}
 			}
 		}
 
@@ -3560,47 +3568,37 @@ License: GNU General Public License v2 or later
 		width: 96%;
 		margin-right: 0;
 		margin-left: 0;
-		h1 {
-			font-size: 1.5em;
-
-			a {
-				font-size: 1em;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
 
 		header.site-header {
 			height: 65px;
 
-			.site-logo {
-				width: 7%;
+			.site-branding {
+				.site-logo {
+					width: 7%;
 
-				a {
-					div.screen-reader-text {
-						&:focus {
-							font-size: 14px;
-							font-size: 0.875rem;
+					a {
+						div.screen-reader-text {
+							&:focus {
+								font-size: 14px;
+								font-size: 0.875rem;
+							}
+						}
+
+						div.site-firstletter {
+							font-size: 2em;
 						}
 					}
+				}
+				#clashvibes-title {
+					width: 60%;
 
-					div.site-firstletter {
-						font-size: 2em;
+					h1.site-title {
+						font-size: 2.2em;
 					}
-				}
-			}
 
-			#clashvibes-title {
-				width: 60%;
-
-				h1.site-title {
-					font-size: 2.2em;
-				}
-
-				h2.site-description {
-					font-size: 0.7em;
+					h2.site-description {
+						font-size: 0.7em;
+					}
 				}
 			}
 
@@ -4161,16 +4159,26 @@ License: GNU General Public License v2 or later
 					h2 {
 						color: $color;
 					}
-					span {
-						display: inline-block;
+					.nav-links{
+						margin:0;
+						display:block;
+						.nav-next,
+						.nav-previous {
+							display: inline-block;
 
-						a {
-							&:hover {
-								font-weight: bold;
-							}
-							&::after {
-								font-size: 1.3em;
-								width: 6%;
+							a {
+								font-size: 0.9em;
+
+								&:hover {
+
+									font-weight: bold;
+								}
+								&::after {
+									font-size: 1.6em;
+								}
+								&:active {
+									background-color: $color7;
+								}
 							}
 						}
 					}
@@ -4229,24 +4237,13 @@ License: GNU General Public License v2 or later
 	#page {
 		width: 98%;
 
-		h1 {
-			font-size: 1.4em;
-
-			a {
-				font-size: 1em;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
-
 		header.site-header {
 			height: 65px;
-
-			#clashvibes-title {
-				h2.site-description {
-					font-size: 0.7em;
+			.site-branding {
+				#clashvibes-title {
+					h2.site-description {
+						font-size: 0.7em;
+					}
 				}
 			}
 
@@ -4879,16 +4876,26 @@ License: GNU General Public License v2 or later
 					h2 {
 						color: $color;
 					}
-					span {
-						display: inline-block;
+					.nav-links{
+						margin:0;
+						display:block;
+						.nav-next,
+						.nav-previous {
+							display: inline-block;
 
-						a {
-							font-size: 0.85em;
-							&:hover {
-								font-weight: bold;
-							}
-							&::after {
-								width: 7%;
+							a {
+								font-size: 0.9em;
+
+								&:hover {
+
+									font-weight: bold;
+								}
+								&::after {
+									font-size: 1.6em;
+								}
+								&:active {
+									background-color: $color7;
+								}
 							}
 						}
 					}
@@ -4985,18 +4992,6 @@ License: GNU General Public License v2 or later
 	#page {
 		width: 98%;
 
-		h1 {
-			font-size: 1.4em;
-
-			a {
-				font-size: 1em;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
-
 		.hide-side {
 			left: 50vw;
 		}
@@ -5004,32 +4999,34 @@ License: GNU General Public License v2 or later
 		header.site-header {
 			height: 65px;
 
-			.site-logo {
-				width: 9%;
+			.site-branding {
+				.site-logo {
+					width: 9%;
 
-				a {
-					div.screen-reader-text {
-						&:focus {
-							font-size: 14px;
-							font-size: 0.875rem;
+					a {
+						div.screen-reader-text {
+							&:focus {
+								font-size: 14px;
+								font-size: 0.875rem;
+							}
+						}
+
+						div.site-firstletter {
+							font-size: 3em;
 						}
 					}
+				}
 
-					div.site-firstletter {
-						font-size: 3em;
+				#clashvibes-title {
+					width: 90%;
+
+					h1.site-title {
+						font-size: 2.2em;
 					}
-				}
-			}
 
-			#clashvibes-title {
-				width: 90%;
-
-				h1.site-title {
-					font-size: 2.2em;
-				}
-
-				h2.site-description {
-					font-size: 0.65em;
+					h2.site-description {
+						font-size: 0.65em;
+					}
 				}
 			}
 
@@ -5516,16 +5513,26 @@ License: GNU General Public License v2 or later
 						text-align: center;
 						font-size: 1.2em;
 					}
-					span {
-						display: inline-block;
+					.nav-links{
+						margin:0;
+						display:block;
+						.nav-next,
+						.nav-previous {
+							display: inline-block;
 
-						a {
-							&:hover {
-								font-weight: bold;
-							}
-							&::after {
-								font-size: 1.2em;
-								width: 7%;
+							a {
+								font-size: 0.9em;
+
+								&:hover {
+
+									font-weight: bold;
+								}
+								&::after {
+									font-size: 1.6em;
+								}
+								&:active {
+									background-color: $color7;
+								}
 							}
 						}
 					}
@@ -5715,21 +5722,10 @@ License: GNU General Public License v2 or later
 	#page {
 		width: 98%;
 
-		h1 {
-			font-size: 1.3em;
-
-			a {
-				font-size: 1em;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
-
 		header.site-header {
 			height: 70px;
-			.site-logo {
+			.site-branding {
+				.site-logo {
 				width: 10%;
 
 				a {
@@ -5744,19 +5740,20 @@ License: GNU General Public License v2 or later
 						font-size: 3em;
 					}
 				}
-			}
-
-			#clashvibes-title {
-				width: 85%;
-
-				h1.site-title {
-					font-size: 2em;
-					line-height: 35px;
-					height: 35px;
 				}
 
-				h2.site-description {
-					font-size: 0.65em;
+				#clashvibes-title {
+					width: 85%;
+
+					h1.site-title {
+						font-size: 2em;
+						line-height: 35px;
+						height: 35px;
+					}
+
+					h2.site-description {
+						font-size: 0.65em;
+					}
 				}
 			}
 		}
@@ -6382,44 +6379,34 @@ License: GNU General Public License v2 or later
 	#page {
 		width: 98%;
 
-		h1 {
-			font-size: 1.3em;
-
-			a {
-				font-size: 1em;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
-
 		header.site-header {
 			height: 70px;
 
-			.site-logo {
-				width: 11%;
+			.site-branding {
+				.site-logo {
+					width: 11%;
 
-				a {
-					div.screen-reader-text {
-						&:focus {
-							font-size: 14px;
+					a {
+						div.screen-reader-text {
+							&:focus {
+								font-size: 14px;
+							}
+						}
+
+						div.site-firstletter {
+							font-size: 3em;
 						}
 					}
+				}
 
-					div.site-firstletter {
-						font-size: 3em;
+				#clashvibes-title {
+					h1.site-title {
+						font-size: 2em;
 					}
-				}
-			}
 
-			#clashvibes-title {
-				h1.site-title {
-					font-size: 2em;
-				}
-
-				h2.site-description {
-					font-size: 0.65em;
+					h2.site-description {
+						font-size: 0.65em;
+					}
 				}
 			}
 		}
@@ -6807,17 +6794,26 @@ License: GNU General Public License v2 or later
 					h2 {
 						color: $color;
 					}
-					span {
-						display: inline-block;
+					.nav-links{
+						margin:0;
+						display:block;
+						.nav-next,
+						.nav-previous {
+							display: inline-block;
 
-						a {
-							font-size: 0.75em;
-							&:hover {
-								font-weight: bold;
-							}
-							&::after {
-								font-size: 1.2em;
-								width: 8%;
+							a {
+								font-size: 0.9em;
+
+								&:hover {
+
+									font-weight: bold;
+								}
+								&::after {
+									font-size: 1.6em;
+								}
+								&:active {
+									background-color: $color7;
+								}
 							}
 						}
 					}
@@ -7002,46 +6998,35 @@ License: GNU General Public License v2 or later
 	#page {
 		width: 100%;
 
-		h1 {
-			font-size: 1.3em;
-
-			a {
-				font-size: 1em;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
-
 		header.site-header {
 			height: 65px;
+			.site-branding {
+				.site-logo {
+					width: 12%;
 
-			.site-logo {
-				width: 12%;
+					a {
+						height: 80%;
 
-				a {
-					height: 80%;
+						div.screen-reader-text {
+							&:focus {
+								font-size: 14px;
+							}
+						}
 
-					div.screen-reader-text {
-						&:focus {
-							font-size: 14px;
+						div.site-firstletter {
+							font-size: 3em;
 						}
 					}
+				}
 
-					div.site-firstletter {
-						font-size: 3em;
+				#clashvibes-title {
+					h1.site-title {
+						font-size: 2em;
 					}
-				}
-			}
 
-			#clashvibes-title {
-				h1.site-title {
-					font-size: 2em;
-				}
-
-				h2.site-description {
-					font-size: 0.6em;
+					h2.site-description {
+						font-size: 0.6em;
+					}
 				}
 			}
 		}
@@ -7641,44 +7626,33 @@ License: GNU General Public License v2 or later
 	}
 
 	#page {
-		h1 {
-			font-size: 1.2em;
-
-			a {
-				font-size: 1em;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
-
 		header.site-header {
 			height: 60px;
+			.site-branding {
+				.site-logo {
+					width: 14%;
 
-			.site-logo {
-				width: 14%;
+					a {
+						div.screen-reader-text {
+							&:focus {
+								font-size: 14px;
+							}
+						}
 
-				a {
-					div.screen-reader-text {
-						&:focus {
-							font-size: 14px;
+						div.site-firstletter {
+							font-size: 2em;
 						}
 					}
+				}
 
-					div.site-firstletter {
-						font-size: 2em;
+				#clashvibes-title {
+					h1.site-title {
+						font-size: 1.8em;
 					}
-				}
-			}
 
-			#clashvibes-title {
-				h1.site-title {
-					font-size: 1.8em;
-				}
-
-				h2.site-description {
-					font-size: 0.6em;
+					h2.site-description {
+						font-size: 0.6em;
+					}
 				}
 			}
 		}
@@ -8080,16 +8054,26 @@ License: GNU General Public License v2 or later
 					h2 {
 						color: $color;
 					}
-					span {
-						display: inline-block;
+					.nav-links{
+						margin:0;
+						display:block;
+						.nav-next,
+						.nav-previous {
+							display: inline-block;
 
-						a {
-							&:hover {
-								font-weight: bold;
-							}
-							&::after {
-								width: 10%;
-								font-size: 1.1em;
+							a {
+								font-size: 0.9em;
+
+								&:hover {
+
+									font-weight: bold;
+								}
+								&::after {
+									font-size: 1.6em;
+								}
+								&:active {
+									background-color: $color7;
+								}
 							}
 						}
 					}
@@ -8268,28 +8252,17 @@ License: GNU General Public License v2 or later
 	}
 
 	#page {
-		h1 {
-			font-size: 1.2em;
-
-			a {
-				font-size: 1em;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
-
 		header.site-header {
 			height: 60px;
+			.site-branding {
+				#clashvibes-title {
+					h1.site-title {
+						font-size: 1.7em;
+					}
 
-			#clashvibes-title {
-				h1.site-title {
-					font-size: 1.7em;
-				}
-
-				h2.site-description {
-					font-size: 0.6em;
+					h2.site-description {
+						font-size: 0.6em;
+					}
 				}
 			}
 		}
@@ -8861,32 +8834,33 @@ License: GNU General Public License v2 or later
 	#page {
 		header.site-header {
 			height: 60px;
+			.site-branding {
+				.site-logo {
+					width: 15%;
 
-			.site-logo {
-				width: 15%;
+					a {
+						div.screen-reader-text {
+							&:focus {
+								font-size: 14px;
+							}
+						}
 
-				a {
-					div.screen-reader-text {
-						&:focus {
-							font-size: 14px;
+						div.site-firstletter {
+							font-size: 2em;
 						}
 					}
+				}
 
-					div.site-firstletter {
-						font-size: 2em;
+				#clashvibes-title {
+					width: 84%;
+
+					h1.site-title {
+						font-size: 1.7em;
 					}
-				}
-			}
 
-			#clashvibes-title {
-				width: 84%;
-
-				h1.site-title {
-					font-size: 1.7em;
-				}
-
-				h2.site-description {
-					font-size: 0.6em;
+					h2.site-description {
+						font-size: 0.6em;
+					}
 				}
 			}
 		}

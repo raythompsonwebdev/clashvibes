@@ -21,14 +21,14 @@ get_header(); ?>
 
 	<h1><?php the_title(); ?> Page</h1>
 
-		
+
 	<p>
 	<?php
 		esc_html_e(
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
 			'clashvibes'
 		);
-	?>
+		?>
 	</p>
 
 	<h2><?php esc_html_e( 'Heading 1', 'clashvibes' ); ?></h2>
@@ -61,7 +61,7 @@ get_header(); ?>
 
 	<p>
 	<?php
-	_e(
+	esc_html_e(
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
 		'clashvibes'
 	);

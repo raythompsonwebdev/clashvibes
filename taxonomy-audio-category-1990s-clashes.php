@@ -21,7 +21,7 @@
 
 	<?php get_sidebar( 'audio' ); ?>
 
-	<section id="clashvibes_right_column">
+	<main id="primary" class="site-main">
 
 
 
@@ -36,7 +36,7 @@
 
 
 
-	</section><!-- end of right panel -->
+	</main><!-- end of right panel -->
 
 
 <?php get_footer(); ?>

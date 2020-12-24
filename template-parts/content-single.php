@@ -77,8 +77,14 @@
 
 	<div class="navigation">
 		<h2><?php esc_html_e( 'Navigation', 'clashvibes' ); ?></h2>
-		<?php previous_post_link( '<span>%link</span>' ); ?>
-		<?php next_post_link( '<span>%link</span>' ); ?>
+			<?php
+					the_post_navigation(
+						array(
+							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
+							'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
+						)
+					);
+				?>
 	</div>
 
 	<?php else : ?>

@@ -1,7 +1,7 @@
 <?php
 /**
  * *PHP version 7
- * 
+ *
  * Tag page | core/tag.php.
  *
  * @category   Tag_Page
@@ -17,27 +17,26 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 
-
   	<h1 class="archive-title">Tag: <?php single_tag_title( '', true ); ?></h1>
-    <section id="clashvibes_right_column">
-    		
-		<!-- Display optional tag description-->
-		<?php if ( tag_description() ) : ?>
+    <main id="primary" class="site-main">
 
-				<div class="archive-meta"><?php echo tag_description(); ?></div>
-		
-			<?php endif; ?>
- 
-		<?php 	
-		
-			get_template_part( 'template-parts/content', get_post_format() );
-			
-		?>
+					<!-- Display optional tag description-->
+					<?php if ( tag_description() ) : ?>
 
-    </section><!-- end of right panel -->
+							<div class="archive-meta"><?php echo tag_description(); ?></div>
+
+						<?php endif; ?>
+
+					<?php
+
+						get_template_part( 'template-parts/content', get_post_format() );
+
+					?>
+
+    </main><!-- end of right panel -->
 
 <?php get_footer(); ?>
 
 
- 
-</div> 
+
+</div>

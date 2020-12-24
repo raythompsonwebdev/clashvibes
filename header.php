@@ -75,7 +75,7 @@
 				</div>
 
 				<!--header title-->
-				<section id="clashvibes_title">
+				<section id="clashvibestitle">
 
 						<?php	if ( is_front_page() && is_home() ) :	?>
 							<h1 class="site-title">
@@ -117,7 +117,7 @@
 		</header><!-- #masthead -->
 
 		<!--Main navigation-->
-		<nav id="mobileNav">
+		<nav id="cv-mobilenav">
 
 			<?php
 			wp_nav_menu(
@@ -133,7 +133,7 @@
 		</nav>
 
 		<!--Main navigation-->
-		<nav id="mainNav">
+		<nav id="cv-mainnav">
 
 			<?php
 			wp_nav_menu(
@@ -148,4 +148,4 @@
 
 		</nav>
 
-<main id="clashvibes_content">
+<div class="clashvibes-content">

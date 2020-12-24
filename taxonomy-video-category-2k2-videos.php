@@ -22,7 +22,7 @@ $videoterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxon
 
 	<?php get_sidebar( 'video' ); ?>
 
-	<section id="clashvibes_right_column">
+	<main id="primary" class="site-main">
 
 
 		<?php $archivetitle = apply_filters( 'the_title', $videoterm->name ); ?>
@@ -35,6 +35,6 @@ $videoterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxon
 		<?php get_template_part( 'template-parts/content', 'custom' ); ?>
 
 
-	</section><!-- end of right panel -->
+	</main><!-- end of right panel -->
 
 <?php get_footer(); ?>

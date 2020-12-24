@@ -15,17 +15,17 @@
  */
 
 get_header(); ?>
-	  
+
 
 
 
 	<?php get_sidebar( 'video' ); ?>
-	
-<section id="clashvibes_right_column">
-							   
+
+<main id="primary" class="site-main">
+
 	<?php get_template_part( 'template-parts/content', 'video' ); ?>
 
-</section><!-- end of clashvibes_right_panel_fullwidth -->
+</main><!-- end of clashvibes_right_panel_fullwidth -->
 
 <div class="clearfix"></div>
 

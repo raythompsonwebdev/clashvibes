@@ -1,85 +1,82 @@
-@import "variables";
+@import 'variables';
 
-/**GENERAL CLASSES (alpha order)**/
+/* *GENERAL CLASSES (alpha order)* */
 
 .left-col {
-    width: 66%;
-    float: left;
-
+	width: 66%;
+	float: left;
 }
 
 .right-col {
-    float: right;
-    width: 32%;
-    margin-left: 2%;
+	float: right;
+	width: 32%;
+	margin-left: 2%;
 }
 
 .left {
-    float: left;
-    display: block;
-    height: 40px;
-    margin: 0 5%;
-    color: $color4;
-    line-height: 40px;
-    a {
-        margin: 0;
-        height: 100%;
-        line-height: 40px;
-    }
+	float: left;
+	display: block;
+	height: 40px;
+	margin: 0 5%;
+	color: $color4;
+	line-height: 40px;
+	a {
+		margin: 0;
+		height: 100%;
+		line-height: 40px;
+	}
 }
 
 .right {
-    float: left;
-    display: block;
-    height: 40px;
-    color: $color4;
-    a {
-        margin: 0;
-        height: 100%;
-        line-height: 40px;
-    }
+	float: left;
+	display: block;
+	height: 40px;
+	color: $color4;
+	a {
+		margin: 0;
+		height: 100%;
+		line-height: 40px;
+	}
 }
 
-.sticky{
-    margin:0;
+.sticky {
+	margin: 0;
 }
 
-.gallery-caption{
-    font-size:1em;
+.gallery-caption {
+	font-size: 1em;
 }
 
-.bypostauthor{
-    font-size:1em;
-
+.bypostauthor {
+	font-size: 1em;
 }
 
-/*WordPress Image Classes*/
+/* WordPress Image Classes */
 img.centered {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	}
+}
 
 .alignright {
-    float: right;
-    width: auto;
-    height: auto;
-	}
+	float: right;
+	width: auto;
+	height: auto;
+}
 
 .alignleft {
-    float: left;
-    width: auto;
-    height: auto;
-	}
-
+	float: left;
+	width: auto;
+	height: auto;
+}
 
 .aligncenter,
 div.aligncenter {
 	display: block;
 	margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    height: auto;
+	margin-right: auto;
+	width: auto;
+	height: auto;
 }
 
 .wp-caption {
@@ -87,9 +84,9 @@ div.aligncenter {
 	text-align: center;
 	background-color: #d4d4d4;
 	padding-top: 4px;
-    margin: 10px;
-    width: 100%;
-    clear: both;
+	margin: 10px;
+	width: 100%;
+	clear: both;
 }
 
 .wp-caption img {
@@ -105,80 +102,75 @@ div.aligncenter {
 	margin: 0;
 }
 
-
-
 /* self-clear floats */
 
-.clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
+.clearfix::after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
 }
 
 .clearfix {
-    display: inline-block;
+	display: inline-block;
 }
 
-.clearfix:before,
-.group:before,
-.group:after {
-    content: "";
-    display: table;
+.clearfix::before,
+.group::before,
+.group::after {
+	content: '';
+	display: table;
 }
 
-.group:after {
-    clear: both;
+.group::after {
+	clear: both;
 }
 
 .group {
-    *zoom: 1;
+	*zoom: 1;
 }
 
-
 img#wpstats {
-    display: none;
-    width: 1px;
+	display: none;
+	width: 1px;
 }
 
 img {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-    vertical-align: middle;
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	vertical-align: middle;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: $font-main;
-    font-size: 1em;
-    background-color:$color;
+	margin: 0;
+	padding: 0;
+	font-family: $font-main;
+	font-size: 1em;
+	background-color: $color;
 }
 
 h1,
 h2,
 h3,
 h4 {
-
-    padding: 0;
-    font-weight: bold;
-    width: 100%;
-    font-family: $font-main;
-    display: block;
-
+	padding: 0;
+	font-weight: bold;
+	width: 100%;
+	font-family: $font-main;
+	display: block;
 }
 
 a {
-    color: $color;
-    text-decoration: none;
-    font-size: 1em;
-    display: block;
-    font-family: $font-main;
+	color: $color;
+	text-decoration: none;
+	font-size: 1em;
+	display: block;
+	font-family: $font-main;
 }
 
 /* Text meant only for screen readers. */

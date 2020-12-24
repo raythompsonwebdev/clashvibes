@@ -21,7 +21,7 @@ get_header();
 
 <?php get_sidebar(); ?>
 
-<section id="clashvibes_right_column">
+<main id="primary" class="site-main">
 
     <!--Post loop start -->
     <?php if (have_posts()) : ?>
@@ -41,7 +41,7 @@ get_header();
 
 <?php endif; ?>
 
-</section><!-- end of right panel -->
+</main><!-- end of right panel -->
 
 
 <?php get_footer(); ?>

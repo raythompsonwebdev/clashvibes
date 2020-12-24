@@ -17,7 +17,7 @@
 get_header(); ?>
 
     <!--Banner section-->
-		<section id="clashvibes_banner">
+		<section id="clashvibes-banner">
 			<!--2/2018/07-->
 			<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sliderimage.jpg" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
 
@@ -150,7 +150,7 @@ get_header(); ?>
 				<span class="popularclashes-box">
 
 					<span class="popularclashes-image">
-						<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>">
+						<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php esc_attr( the_title_attribute(), 'clashvibes' ); ?>">
 							<?php the_post_thumbnail('popular-image'); ?>
 						</a>
 					</span>
@@ -217,7 +217,7 @@ get_header(); ?>
 				<span class="popularclashes-box">
 
 					<span class="popularclashes-image">
-						<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>">
+						<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php esc_attr( the_title_attribute(), 'clashvibes' ); ?>">
 							<?php the_post_thumbnail('popular-image'); ?>
 						</a>
 					</span>

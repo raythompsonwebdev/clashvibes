@@ -59,21 +59,21 @@ if ( have_posts() ) :
           <?php $sound_name = get_post_meta( get_the_ID(), 'sound_system_name', true ); ?>
           <?php esc_html_e( 'Sound System Name', 'clashvibes' ); ?>
         </span>
-        <p><?php echo esc_html( $sound_name ); ?> </p>
+        <p><?php printf( '%s', esc_html( $sound_name ), 'clashvibes' ); ?> </p>
       </li>
       <li>
         <span class="post-meta-key">
           <?php $sound_year = get_post_meta( get_the_ID(), 'sound_clash_year', true ); ?>
           <?php esc_html_e( 'Sound Clash Year', 'clashvibes' ); ?>
         </span>
-        <p><?php echo esc_html( $sound_year ); ?> </p>
+        <p><?php printf( '%s', esc_html( $sound_year ), 'clashvibes' ); ?> </p>
       </li>
       <li>
         <span class="post-meta-key">
           <?php $clash_location = get_post_meta( get_the_ID(), 'sound_clash_location', true ); ?>
           <?php esc_html_e( 'Sound Clash Location', 'clashvibes' ); ?>
         </span>
-        <p><?php echo esc_html( $clash_location ); ?> </p>
+        <p><?php printf( '%s', esc_html( $clash_location ), 'clashvibes' ); ?> </p>
       </li>
 
     </ul>
@@ -82,11 +82,20 @@ if ( have_posts() ) :
 
 
   <div class="navigation">
+
     <h2><?php esc_html_e( 'More Clashes', 'clashvibes' ); ?></h2>
-    <?php previous_post_link( '<span>%link</span>', '%title' ); ?>
-    <?php next_post_link( '<span>%link </span>', '%title' ); ?>
+				<?php
+					the_post_navigation(
+						array(
+							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
+							'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
+						)
+					);
+				?>
+
   </div>
 </article>
+
 <?php
 	endwhile;
 

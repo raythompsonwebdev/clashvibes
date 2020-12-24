@@ -19,7 +19,7 @@ get_header();
 <?php get_sidebar(); ?>
 
 <!--<main id="primary" class="site-main">-->
-<section id="clashvibes_right_column">
+<main id="primary" class="site-main">
 
     <?php
     /**
@@ -66,7 +66,7 @@ get_header();
                 </header><!-- .entry-header -->
 
                 <!--featured Image-->
-                <a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+                <a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php esc_attr( the_title_attribute(), 'clashvibes' ); ?>;">
 
                     <?php if (has_post_thumbnail()) : ?>
 
@@ -74,7 +74,7 @@ get_header();
 
         <?php else : ?>
 
-                        <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+                        <a class="post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" aria-hidden="true">
 
                             <img src="<?php echo esc_url(home_url('/')); ?>wp-content/uploads/2020/05/placeholder-1.jpg"
                                  alt="<?php esc_attr_e('No image Available', 'clashvibes'); ?>" rel="prefetch" />
@@ -116,7 +116,7 @@ get_header();
     <div class="clearfix"></div>
 
 
-</section>
+</main>
 
 
 <?php get_footer(); ?>

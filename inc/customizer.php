@@ -1,6 +1,6 @@
 <?php
 /**
- * clashvibes Theme Customizer
+ * clashvibes Theme Customizer.
  *
  * @package clashvibes
  */

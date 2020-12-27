@@ -13,14 +13,12 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
- get_header(); ?>
 
+get_header(); ?>
 
 	<?php get_sidebar(); ?>
 
-
 	<main id="primary" class="site-main">
-
 
 		<?php if ( have_posts() ) : ?>
 
@@ -30,16 +28,16 @@
 			<header class="entry-header">
 				<h1 class="page-title">
 					<?php
-							$current_term  = get_queried_object();
-							$clashtaxonomy = get_taxonomy( $current_term->taxonomy );
-							echo esc_html( $taxonomy->label ) . ':' . esc_html( $current_term->name );
+							$clashvibes_current_term = get_queried_object();
+							$clashvibes_taxonomy     = get_taxonomy( $clashvibes_current_term->taxonomy );
+							echo esc_html( $clashvibes_taxonomy->label ) . ':' . esc_html( $clashvibes_current_term->name );
 					?>
 				</h1>
 				<?php
 						// Show an optional term description.
-						$term_description = term_description();
-				if ( ! empty( $term_description ) ) :
-					printf( '<div class="taxonomy-description">%s</div>', esc_html( $term_description ) );
+						$clashvibes_term_description = term_description();
+				if ( ! empty( $clashvibes_term_description ) ) :
+					printf( '<div class="taxonomy-description">%s</div>', esc_html( $clashvibes_term_description ) );
 						endif;
 				?>
 			</header><!-- .page-header -->

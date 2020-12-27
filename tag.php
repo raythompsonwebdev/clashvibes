@@ -13,12 +13,13 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
+
 get_header(); ?>
 
 <?php get_sidebar(); ?>
 
-  	<h1 class="archive-title">Tag: <?php single_tag_title( '', true ); ?></h1>
-    <main id="primary" class="site-main">
+	  <h1 class="archive-title">Tag: <?php single_tag_title( '', true ); ?></h1>
+	<main id="primary" class="site-main">
 
 					<!-- Display optional tag description-->
 					<?php if ( tag_description() ) : ?>
@@ -33,7 +34,7 @@ get_header(); ?>
 
 					?>
 
-    </main><!-- end of right panel -->
+	</main><!-- end of right panel -->
 
 <?php get_footer(); ?>
 

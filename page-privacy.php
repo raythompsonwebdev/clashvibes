@@ -23,15 +23,14 @@ get_header(); ?>
 <article id="clashvibes-text">
 
 	<h1><?php the_title(); ?> Page</h1>
-	
+
 	<p>
-	<?php
-	esc_html_e(
-		'The policy: This privacy policy is for this website; [www.clashvibes.raythompsonwebdev.co.uk] and served by [1&amp;1 Internet Ltd. Discovery House, 154 Southgate Street, Gloucester, GL1 2EX
-	United Kingdom] and governs the privacy of its users who choose to use it.',
-		'clashvibes'
-	);
-	?>
+		<?php
+			esc_html_e(
+				'The policy: This privacy policy is for this website; [www.clashvibes.raythompsonwebdev.co.uk] and served by [1&amp;1 Internet Ltd. Discovery House, 154 Southgate Street, Gloucester, GL1 2EX	United Kingdom] and governs the privacy of its users who choose to use it.',
+				'clashvibes'
+			);
+			?>
 	</p>
 
 	<p><?php esc_html_e( 'It explains how we comply with the GDPR (General Data Protection Regulation), the DPA (Data Protection Act) [pre GDPR enforcement] and the PECR (Privacy and Electronic Communications Regulations).', 'clashvibes' ); ?></p>
@@ -124,7 +123,7 @@ get_header(); ?>
 	<p><?php esc_html_e( 'We will never lease, distribute or sell your personal information unless we have your permission or the law requires us to.	Any personal information we hold about you is stored and processed under our data protection policy, in line with the Data Protection Act 1998.', 'clashvibes' ); ?></p>
 
 	<br />
-	
+
 	<h2><?php esc_html_e( 'Downloads &amp; Media Files', 'clashvibes' ); ?></h2>
 	<p><?php esc_html_e( 'Any downloadable documents, files or media made available on this website are provided to users at their own risk. While all precautions have been undertaken to ensure only genuine downloads are available users are advised to verify their authenticity using third party anti virus software or similar applications.', 'clashvibes' ); ?></p>
 
@@ -154,25 +153,25 @@ get_header(); ?>
 	<p>Resources &amp; Further Information</p>
 
 	<ul>
-	<li><a href="<?php echo esc_url( 'https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf', 'display' ); ?>" alt="<?php esc_attr_e( 'Overview of the GDPR - General Data Protection Regulation' ); ?>" target="new"><?php esc_html_e( 'Overview of the GDPR - General Data Protection Regulation?' ); ?></a></li>
+	<li><a href="<?php echo esc_url( 'https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf', 'display', 'clashvibes' ); ?>" alt="<?php esc_attr_e( 'Overview of the GDPR - General Data Protection Regulation', 'clashvibes' ); ?>" target="new"><?php esc_html_e( 'Overview of the GDPR - General Data Protection Regulation?', 'clashvibes' ); ?></a></li>
 
-	<li><a href="<?php echo esc_url( 'https://www.gov.uk/data-protection', 'display' ); ?>" alt="<?php esc_attr_e( 'Data Protection Act 1998' ); ?>" target="new"><?php esc_html_e( 'Data Protection Act 1998' ); ?></a></li>
+	<li><a href="<?php echo esc_url( 'https://www.gov.uk/data-protection', 'display', 'clashvibes' ); ?>" alt="<?php esc_attr_e( 'Data Protection Act 1998', 'clashvibes' ); ?>" target="new"><?php esc_html_e( 'Data Protection Act 1998', 'clashvibes' ); ?></a></li>
 
-	<li><a href="<?php echo esc_url( 'https://ico.org.uk/for-organisations/guide-to-pecr/', 'display' ); ?>" alt="<?php esc_attr_e( 'Privacy and Electronic Communications Regulations 2003' ); ?>" target="new">Privacy and Electronic Communications Regulations 2003</a></li>
+	<li><a href="<?php echo esc_url( 'https://ico.org.uk/for-organisations/guide-to-pecr/', 'display' ); ?>" alt="<?php esc_attr_e( 'Privacy and Electronic Communications Regulations 2003', 'clashvibes' ); ?>" target="new">Privacy and Electronic Communications Regulations 2003</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://ico.org.uk/media/for-organisations/guide-to-pecr-2-3.pdf', 'display' ); ?>" alt="<?php esc_attr_e( 'The Guide to the PECR 2003' ); ?>" target="new" >The Guide to the PECR 2003</a></li>
+	<li><a href="<?php echo esc_url( 'https://ico.org.uk/media/for-organisations/guide-to-pecr-2-3.pdf', 'display' ); ?>" alt="<?php esc_attr_e( 'The Guide to the PECR 2003', 'clashvibes' ); ?>" target="new" >The Guide to the PECR 2003</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://twitter.com/en/privacy', 'display' ); ?>" alt="<?php esc_attr_e( 'Twitter Privacy Policy' ); ?>" target="new">Twitter Privacy Policy</a></li>
+	<li><a href="<?php echo esc_url( 'https://twitter.com/en/privacy', 'display' ); ?>" alt="<?php esc_attr_e( 'Twitter Privacy Policy', 'clashvibes' ); ?>" target="new">Twitter Privacy Policy</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://www.facebook.com/legal/FB_Work_Privacy', 'display' ); ?>" alt="<?php esc_attr_e( 'Facebook Privacy Policy' ); ?>" target="new"> Facebook Privacy Policy</a></li>
+	<li><a href="<?php echo esc_url( 'https://www.facebook.com/legal/FB_Work_Privacy', 'display' ); ?>" alt="<?php esc_attr_e( 'Facebook Privacy Policy', 'clashvibes' ); ?>" target="new"> Facebook Privacy Policy</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://www.google.com/policies/privacy/', 'display' ); ?>" alt="<?php esc_attr_e( 'Google Privacy Policy' ); ?>" target="new">Google Privacy Policy</a></li>
+	<li><a href="<?php echo esc_url( 'https://www.google.com/policies/privacy/', 'display' ); ?>" alt="<?php esc_attr_e( 'Google Privacy Policy', 'clashvibes' ); ?>" target="new">Google Privacy Policy</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://www.linkedin.com/legal/privacy-policy', 'display' ); ?>" alt="<?php esc_attr_e( 'Linkedin Privacy Policy' ); ?>" target="new">Linkedin Privacy Policy</a></li>
+	<li><a href="<?php echo esc_url( 'https://www.linkedin.com/legal/privacy-policy', 'display' ); ?>" alt="<?php esc_attr_e( 'Linkedin Privacy Policy', 'clashvibes' ); ?>" target="new">Linkedin Privacy Policy</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://help.github.com/articles/github-privacy-statement/', 'display' ); ?>" alt="<?php esc_attr_e( 'GitHub Privacy Policy' ); ?>" target="new">GitHub Privacy Policy</a></li>
+	<li><a href="<?php echo esc_url( 'https://help.github.com/articles/github-privacy-statement/', 'display' ); ?>" alt="<?php esc_attr_e( 'GitHub Privacy Policy', 'clashvibes' ); ?>" target="new">GitHub Privacy Policy</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://jamieking.co.uk/blog/cyber-security/policies/free-sample-privacy-policy.php', 'display' ); ?>" alt="<?php esc_attr_e( 'Website Privacy Policy Template' ); ?>" target="new">Website Privacy Policy Template</a></li>
+	<li><a href="<?php echo esc_url( 'https://jamieking.co.uk/blog/cyber-security/policies/free-sample-privacy-policy.php', 'display' ); ?>" alt="<?php esc_attr_e( 'Website Privacy Policy Template', 'clashvibes' ); ?>" target="new">Website Privacy Policy Template</a></li>
 
 	</ul>
 

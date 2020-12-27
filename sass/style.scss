@@ -1215,31 +1215,78 @@ License: GNU General Public License v2 or later
 
 					div.entry-meta {
 						height: auto;
-						display: block;
+						margin-top: 0.25em;
 
-						span.parent-post-link,
-						span.full-size-link,
-						span.posted-on,
-						span.byline {
-							font-size: 1em;
-							width: auto;
-							height: 40px;
-							line-height: 40px;
-							background-color: $colors;
-							border-bottom: 1px solid $color;
-							color: $color;
-							letter-spacing: 0.05em;
-							display: block;
-							text-align: center;
 
-							a {
-								width: auto;
-								display: inline-block;
-								padding-left: 0.5em;
-								time.entry-date {
-									display: inline-block;
+						.has-avatar {
+							width: 100%;
+							min-height: unset;
+							height:auto;
+							align-self: flex-start;
+
+							.author-avatar {
+								width: 90%;
+								height:90%;
+								margin:5%;
+								display: block;
+								img{
+									height:auto;
+									width:auto;
 								}
 							}
+						}
+						.meta-content {
+							width: 100%;
+							height:auto;
+							display: grid;
+							grid-template-columns: 10% 2fr;
+							grid-template-rows: 25px 25px 25px 25px;
+							gap: 5px 0px;
+							grid-template-areas:
+									"Image posted-on"
+									"Image byline"
+									"Image comments-link"
+									"Image spare";
+
+							.posted-on { grid-area: posted-on; }
+							.byline { grid-area: byline; }
+							.comments-link { grid-area: comments-link; }
+							.spare { grid-area: spare; }
+							.author-avatar {
+								display: grid;
+								grid-template-columns: 1fr;
+								grid-template-rows: 4fr;
+								gap: 0px 0px;
+								grid-template-areas:
+										".";
+								grid-area: Image;
+							}
+
+							span.parent-post-link,
+							span.full-size-link,
+							span.comments-link,
+							span.posted-on,
+							span.byline {
+								font-size: 1em;
+								width: 99%;
+								height: 25px;
+								line-height: 25px;
+								background-color: $colors;
+								border-bottom: 1px solid $color;
+								color: $color;
+								letter-spacing: 0.05em;
+								display: inline-block;
+								text-align: left;
+								text-indent:0.5em;
+								a {
+									width: auto;
+									display: inline-block;
+									padding: 0;
+									text-indent:unset;
+
+								}
+							}
+
 						}
 					}
 				}
@@ -2409,11 +2456,15 @@ License: GNU General Public License v2 or later
 
 					div.entry-meta {
 						display: block;
+						.meta-content {
+							width: 100%;
 
-						span.posted-on,
-						span.byline {
-							a {
-								width: auto;
+							span.parent-post-link,
+							span.full-size-link,
+							span.comments-link,
+							span.posted-on,
+							span.byline {
+								font-size: 1em;
 							}
 						}
 					}
@@ -3212,13 +3263,16 @@ License: GNU General Public License v2 or later
 
 					div.entry-meta {
 						display: block;
+						.meta-content {
+							width: 100%;
 
-						span.posted-on,
-						span.byline {
-							font-size: 0.9em;
+							span.parent-post-link,
+							span.full-size-link,
+							span.comments-link,
+							span.posted-on,
+							span.byline {
+								font-size: 0.9em;
 
-							a {
-								width: auto;
 							}
 						}
 					}
@@ -3927,11 +3981,12 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
+						span.parent-post-link,
+						span.full-size-link,
+						span.comments-link,
 						span.posted-on,
 						span.byline {
-							a {
-								width: auto;
-							}
+							font-size: 0.85em;
 						}
 					}
 				}
@@ -4636,13 +4691,14 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
+						span.parent-post-link,
+						span.full-size-link,
+						span.comments-link,
 						span.posted-on,
 						span.byline {
 							font-size: 0.85em;
 
-							a {
-								width: auto;
-							}
+
 						}
 					}
 				}
@@ -5256,11 +5312,12 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						text-align: center;
 
+						span.parent-post-link,
+						span.full-size-link,
+						span.comments-link,
 						span.posted-on,
 						span.byline {
-							a {
-								text-align: center;
-							}
+							font-size: 0.85em;
 						}
 					}
 
@@ -5935,11 +5992,12 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
+						span.parent-post-link,
+						span.full-size-link,
+						span.comments-link,
 						span.posted-on,
 						span.byline {
-							a {
-								width: auto;
-							}
+							font-size: 0.85em;
 						}
 					}
 
@@ -7824,14 +7882,15 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
+						span.parent-post-link,
+						span.full-size-link,
+						span.comments-link,
 						span.posted-on,
 						span.byline {
 							font-size: 0.75em;
 							height: auto;
 							line-height: 25px;
-							a {
-								width: auto;
-							}
+
 						}
 					}
 
@@ -8430,11 +8489,12 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
+						span.parent-post-link,
+						span.full-size-link,
+						span.comments-link,
 						span.posted-on,
 						span.byline {
-							a {
-								width: auto;
-							}
+							font-size: 0.75em;
 						}
 					}
 
@@ -9045,11 +9105,12 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
+						span.parent-post-link,
+						span.full-size-link,
+						span.comments-link,
 						span.posted-on,
 						span.byline {
-							a {
-								width: auto;
-							}
+							font-size: 0.75em;
 						}
 					}
 

@@ -16,7 +16,7 @@
 
 get_header();
 
-$audioterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+$clashvibes_audioterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 
 ?>
 
@@ -26,9 +26,9 @@ $audioterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxon
 
 		<main id="primary" class="site-main">
 
-		<?php $archivetitle = apply_filters( 'the_title', $audioterm->name ); ?>
+		<?php $clashvibes_archivetitle = apply_filters( 'the_title', $clashvibes_audioterm->name ); ?>
 
-		<h1 class="archive-title">Audio Category: <?php echo esc_html( $archivetitle ); ?> </h1>
+		<h1 class="archive-title">Audio Category: <?php echo esc_html( $clashvibes_archivetitle ); ?> </h1>
 
 		<?php get_template_part( 'template-parts/content', 'custom' ); ?>
 

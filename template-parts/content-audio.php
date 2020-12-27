@@ -15,93 +15,88 @@ if ( have_posts() ) :
 		the_post();
 		?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <header class="entry-header">
+		<header class="entry-header">
 
-    <?php
+				<?php
 
-					if ( is_singular() ) :
-						the_title( '<h1 class="entry-title"><span> Sound Clash Audio:</span> <a href="' . esc_url( get_permalink() ) . '"></a>', '</h1>' );
-			else :
-				the_title( '<h2 class="entry-title"><span> Sound Clash Audio:</span> <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			endif;
+				if ( is_singular() ) :
+					the_title( '<h1 class="entry-title"><span> Sound Clash Audio:</span> <a href="' . esc_url( get_permalink() ) . '"></a>', '</h1>' );
+						else :
+							the_title( '<h2 class="entry-title"><span> Sound Clash Audio:</span> <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+						endif;
 
-			if ( 'clash-audio' === get_post_type() ) :
-				?>
-    <div class="entry-meta">
-      <?php
-				clashvibes_posted_on();
-				clashvibes_posted_by();
-				?>
-    </div><!-- .entry-meta -->
-    <?php endif; ?>
+						if ( 'clash-audio' === get_post_type() ) :
+							?>
 
-  </header>
+			<div class="entry-meta">
+							<?php
+							clashvibes_posted_on()
+							?>
+			</div><!-- .entry-meta -->
 
-  <?php clashvibes_post_thumbnail(); ?>
+				<?php endif; ?>
 
+		</header>
 
+		<?php clashvibes_post_thumbnail(); ?>
 
-    <?php the_content(); ?>
+		<?php the_content(); ?>
 
+		<br />
 
+		<footer class="speaker-meta">
 
+			<ul class="post-meta">
+				<li>
+					<span class="post-meta-key">
+							<?php $clashvibes_sound_name = get_post_meta( get_the_ID(), 'sound_system_name', true ); ?>
+							<?php esc_html_e( 'Sound System Name', 'clashvibes' ); ?>
+					</span>
+					<p><?php printf( '%s', esc_html( $clashvibes_sound_name ), 'clashvibes' ); ?> </p>
+					</li>
+				<li>
+					<span class="post-meta-key">
+							<?php $clashvibes_sound_year = get_post_meta( get_the_ID(), 'sound_clash_year', true ); ?>
+							<?php esc_html_e( 'Sound Clash Year', 'clashvibes' ); ?>
+					</span>
+					<p><?php printf( '%s', esc_html( $clashvibes_sound_year ), 'clashvibes' ); ?> </p>
+				</li>
+				<li>
+						<span class="post-meta-key">
+								<?php $clashvibes_clash_location = get_post_meta( get_the_ID(), 'sound_clash_location', true ); ?>
+								<?php esc_html_e( 'Sound Clash Location', 'clashvibes' ); ?>
+						</span>
+						<p><?php printf( '%s', esc_html( $clashvibes_clash_location ), 'clashvibes' ); ?> </p>
+				</li>
+			</ul>
 
-  <br />
-
-  <footer class="speaker-meta">
-
-    <ul class="post-meta">
-      <li>
-
-        <span class="post-meta-key">
-          <?php $sound_name = get_post_meta( get_the_ID(), 'sound_system_name', true ); ?>
-          <?php esc_html_e( 'Sound System Name', 'clashvibes' ); ?>
-        </span>
-        <p><?php printf( '%s', esc_html( $sound_name ), 'clashvibes' ); ?> </p>
-      </li>
-      <li>
-        <span class="post-meta-key">
-          <?php $sound_year = get_post_meta( get_the_ID(), 'sound_clash_year', true ); ?>
-          <?php esc_html_e( 'Sound Clash Year', 'clashvibes' ); ?>
-        </span>
-        <p><?php printf( '%s', esc_html( $sound_year ), 'clashvibes' ); ?> </p>
-      </li>
-      <li>
-        <span class="post-meta-key">
-          <?php $clash_location = get_post_meta( get_the_ID(), 'sound_clash_location', true ); ?>
-          <?php esc_html_e( 'Sound Clash Location', 'clashvibes' ); ?>
-        </span>
-        <p><?php printf( '%s', esc_html( $clash_location ), 'clashvibes' ); ?> </p>
-      </li>
-
-    </ul>
-
-  </footer>
+		</footer>
 
 
-  <div class="navigation">
+		<div class="navigation">
 
-    <h2><?php esc_html_e( 'More Clashes', 'clashvibes' ); ?></h2>
+			<h2><?php esc_html_e( 'More Clashes', 'clashvibes' ); ?></h2>
 				<?php
 					the_post_navigation(
 						array(
-							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
-							'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
+							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'clashvibes' ) . '</span> <span class="nav-title">%title</span>',
+							'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'clashvibes' ) . '</span> <span class="nav-title">%title</span>',
 						)
 					);
 				?>
 
-  </div>
-</article>
+		</div>
 
-<?php
-	endwhile;
+	</article>
 
-	else :
-		?>
+		<?php
+		endwhile;
 
-<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		else :
+			?>
+
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 <?php endif; ?>

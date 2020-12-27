@@ -1,6 +1,6 @@
 <?php
 /**
- * clashvibes functions and definitions
+ * Clashvibes functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -16,10 +16,10 @@ if ( ! defined( 'CLASHVIBES_VERSION' ) ) {
 /**
  * Returns a custom login error message.
  */
-function cwpl_error_message() {
+function clashvibes__error_message() {
 	return 'Well, that was not it rudeboy/girl!';
 }
-add_filter( 'login_errors', 'cwpl_error_message' );
+add_filter( 'login_errors', 'clashvibes__error_message' );
 
 if ( ! function_exists( 'clashvibes_setup' ) ) :
 	/**
@@ -62,7 +62,7 @@ if ( ! function_exists( 'clashvibes_setup' ) ) :
 		// Create new image sizes.
 		add_image_size( 'featured-image', 1200, 999 );
 		add_image_size( 'post-image', 600, 999 );
-		add_image_size( 'popular-image', 60, 60 ); // front page popular video & audio images
+		add_image_size( 'popular-image', 60, 60 ); // front page popular video & audio images.
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
@@ -265,10 +265,10 @@ add_action( 'widgets_init', 'clashvibes_video_widgets_init' );
  * Enqueue scripts and styles.
  */
 function clashvibes_scripts() {
-	wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri(), array(), CLASHVIBES_VERSION_VERSION );
+	wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri(), array(), CLASHVIBES_VERSION );
 	wp_style_add_data( 'clashvibes-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'clashvibes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), CLASHVIBES_VERSION_VERSION, true );
+wp_enqueue_script( 'clashvibes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), CLASHVIBES_VERSION, true );
 
 	if ( 'clash-audio' === get_post_type() || 'clash-videos' === get_post_type() || ! is_front_page() || is_category() || is_home() ) {
 
@@ -276,14 +276,14 @@ function clashvibes_scripts() {
 
 	}
 
-	 wp_enqueue_script( 'contact-form', get_template_directory_uri() . '/js/contact-form.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'contact-form', get_template_directory_uri() . '/js/contact-form.js', array( 'jquery' ), '1.0', true );
 
-		// mobile main menu script for all mobile pages.
-		wp_enqueue_script( 'main-mobile', get_template_directory_uri() . '/js/mobile-mainnav-es6.js', array(), '1.0.0', true );
+	// mobile main menu script for all mobile pages.
+	wp_enqueue_script( 'main-mobile', get_template_directory_uri() . '/js/mobile-mainnav-es6.js', array(), '1.0.0', true );
 
-		wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
+	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
 
-		wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '1.0', true );
+	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '1.0', true );
 
 	if ( 'clash-audio' === get_post_type() ) {
 		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/audio-es6.js', array(), '1.0.0', true );
@@ -306,10 +306,10 @@ add_action( 'wp_enqueue_scripts', 'clashvibes_scripts' );
  * @param mixed $more variable added.
  * @return $more
  */
-function new_excerpt_more( $more ) {
+function clashvibes_new_excerpt_more( $more ) {
 	return '';
 }
-add_filter( 'excerpt_more', 'new_excerpt_more', 21 );
+add_filter( 'excerpt_more', 'clashvibes_new_excerpt_more', 21 );
 
 /**
  * Replaces the excerpt more "Read More" text by a link.
@@ -317,7 +317,7 @@ add_filter( 'excerpt_more', 'new_excerpt_more', 21 );
  * @param mixed $excerpt variable added.
  * @return $excerpt
  */
-function the_excerpt_more_link( $excerpt ) {
+function clashvibes_the_excerpt_more_link( $excerpt ) {
 	$post = get_post();
 
 	if ( is_tax( 'video-category' ) ) {
@@ -338,11 +338,7 @@ function the_excerpt_more_link( $excerpt ) {
 	}
 
 }
-add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );
-
-
-// require get_template_directory() . '/inc/clashvibes-shorties-audio.php';
-// require get_template_directory() . '/inc/clashvibes-shorties-video.php';
+add_filter( 'the_excerpt', 'clashvibes_the_excerpt_more_link', 21 );
 
 /**
  * Implement the Custom Header feature.

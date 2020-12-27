@@ -50,13 +50,13 @@
 
 				<!--site logo-->
 				<div class="site-logo">
-						<?php $site_title = get_bloginfo( 'name' ); ?>
+						<?php $clashvibes_site_title = get_bloginfo( 'name' ); ?>
 							<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 								<div class="screen-reader-text">
 
 										<?php
 											/* translators: %1$s:, CMSname: WordPress. */
-											printf( esc_html_e( 'Go to the home page of %1$s', 'clashvibes' ), esc_html( $site_title ) );
+											printf( esc_html_e( 'Go to the home page of %1$s', 'clashvibes' ), esc_html( $clashvibes_site_title ) );
 										?>
 
 								</div>
@@ -68,7 +68,7 @@
 
 												?>
 										<div class="site-firstletter" aria-hidden="true">
-												<?php echo esc_html( substr( $site_title, 0, 1 ) ); ?>
+												<?php echo esc_html( substr( $clashvibes_site_title, 0, 1 ) ); ?>
 										</div>
 
 								<?php endif; ?>
@@ -85,14 +85,14 @@
 									<?php
 
 									$clashvibes_description = get_bloginfo( 'description', 'display' );
-								if ( $clashvibes_description || is_customize_preview() ) :
-									?>
+									if ( $clashvibes_description || is_customize_preview() ) :
+										?>
 
 									<h2 class="site-description">
 										<?php echo esc_html( $clashvibes_description ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 									</h2>
 
-							<?php	endif; ?>
+								<?php	endif; ?>
 
 				</section>
 
@@ -101,14 +101,14 @@
 			<!--Social Media Icons-->
 			<aside id="socialmediatop">
 
-				<a class="social-icon linkedin-icon"	href="<?php echo esc_url( __( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'clashvibes' ) ); ?>"	target="new"	title= <?php esc_attr_e("Follow me on LinkedIn", 'clashvibes'); ?>><span><i class="fa fa-instagram"></i></span></a>
+				<a class="social-icon linkedin-icon"	href="<?php echo esc_url( __( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'clashvibes' ) ); ?>"	target="new"	title= <?php esc_attr_e( 'Follow me on LinkedIn', 'clashvibes' ); ?>><span><i class="fa fa-instagram"></i></span></a>
 
-				<a class="social-icon twitter-icon"	href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e("Follow me on Twitter", 'clashvibes'); ?>><span>	<i class="fa fa-twitter"></i>	</span></a>
+				<a class="social-icon twitter-icon"	href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e( 'Follow me on Twitter', 'clashvibes' ); ?>><span>	<i class="fa fa-twitter"></i>	</span></a>
 
 				<a class="social-icon facebook-icon"
-					href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e("Follow me on Facebook", 'clashvibes'); ?>>	<span><i class="fa fa-facebook"></i></span></a>
+					href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e( 'Follow me on Facebook', 'clashvibes' ); ?>>	<span><i class="fa fa-facebook"></i></span></a>
 
-				<a class="social-icon facebook-icon"	href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e("Follow me on Facebook", 'clashvibes'); ?>>	<span>	<i class="fa fa-facebook"></i></span>
+				<a class="social-icon facebook-icon"	href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e( 'Follow me on Facebook', 'clashvibes' ); ?>>	<span>	<i class="fa fa-facebook"></i></span>
 				</a>
 
 			</aside>

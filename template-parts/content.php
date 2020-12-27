@@ -23,7 +23,7 @@
 			<div class="entry-meta">
 				<?php
 				clashvibes_posted_on();
-				clashvibes_posted_by();
+
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>

@@ -15,6 +15,7 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
+
 get_header(); ?>
 
 <article id="clashvibes-text">
@@ -34,55 +35,73 @@ get_header(); ?>
 		<li><?php esc_html_e( 'Heading 6', 'clashvibes' ); ?></li>
 	</ul>
 	<br/>
-	<h2><?php esc_html_e('Heading 1', 'clashvibes'); ?></h2>
+	<h2><?php esc_html_e( 'Heading 1', 'clashvibes' ); ?></h2>
 
 	<p>
 	<?php
 	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
+		'clashvibes'
+	);
+	?>
 	</p>
 
-	<h2><?php esc_html_e('Heading 2', 'clashvibes'); ?></h2>
+	<h2><?php esc_html_e( 'Heading 2', 'clashvibes' ); ?></h2>
 
 	<p>
 	<?php
 	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
+		'clashvibes'
+	);
+	?>
 	</p>
 
-	<h2><?php esc_html_e('Heading 3', 'clashvibes'); ?></h2>
+	<h2><?php esc_html_e( 'Heading 3', 'clashvibes' ); ?></h2>
 
 	<p>
 	<?php
 	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
+		'clashvibes'
+	);
+	?>
 	</p>
 
-	<h2><?php esc_html_e('Heading 4', 'clashvibes'); ?></h2>
+	<h2><?php esc_html_e( 'Heading 4', 'clashvibes' ); ?></h2>
 
 	<p>
 	<?php
 	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
+		'clashvibes'
+	);
+	?>
 	</p>
 
-	<h2><?php esc_html_e('Heading 5', 'clashvibes'); ?></h2>
+	<h2><?php esc_html_e( 'Heading 5', 'clashvibes' ); ?></h2>
 
 	<p>
 	<?php
 	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
+		'clashvibes'
+	);
+	?>
 	</p>
 
-	<h2><?php esc_html_e('Heading 6', 'clashvibes'); ?></h2>
+	<h2><?php esc_html_e( 'Heading 6', 'clashvibes' ); ?></h2>
 
 	<p>
 	<?php
 	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,','clashvibes');?>
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
+		'clashvibes'
+	);
+	?>
 	</p>
-	
+
 </article>
-	
+
 
 <?php get_footer(); ?>

@@ -32,9 +32,9 @@
 		<?php
 			wp_nav_menu(
 				array(
-					'menu'      => 'Audio-Nav',
-          'container' => 'nav',
-          'theme_location'    => "audio-nav",
+					'menu'           => 'Audio-Nav',
+					'container'      => 'nav',
+					'theme_location' => 'audio-nav',
 				)
 			);
 			?>

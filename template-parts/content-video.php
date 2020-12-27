@@ -32,8 +32,7 @@ if ( have_posts() ) :
 
 		<div class="entry-meta">
 				<?php
-				clashvibes_posted_on();
-				clashvibes_posted_by();
+				clashvibes_index_posted_on()
 				?>
 		</div><!-- .entry-meta -->
 
@@ -86,7 +85,7 @@ if ( have_posts() ) :
 							'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
 						)
 					);
-				?>
+			?>
 		</div>
 
 

@@ -17,9 +17,9 @@
  */
 get_header();
 ?>
-
-
 <?php get_sidebar(); ?>
+
+
 
 <main id="primary" class="site-main">
 

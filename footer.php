@@ -13,7 +13,7 @@
 
 <div class="clearfix"></div>
 
-</div>
+</div><!-- #clashvibes-content -->
 
 <!-- <footer id="clashvibes_footer"> -->
 	<footer id="colophon" class="site-footer">

@@ -22,6 +22,7 @@ License: GNU General Public License v2 or later
 @import 'partials/base';
 @import 'partials/variables';
 @import 'partials/mixins';
+
 @media only screen and (max-width: 1920px) {
 	#tog-menu {
 		display: none;
@@ -65,8 +66,7 @@ License: GNU General Public License v2 or later
 
 	/* page container */
 	#page {
-		margin-right: auto;
-		margin-left: auto;
+		margin:auto;
 		width: 86%;
 		height: auto;
 		font-family: $font-main;
@@ -92,16 +92,16 @@ License: GNU General Public License v2 or later
 
 			.site-branding {
 				width: 70%;
-				display:flex;
+				display: flex;
 
 				.site-logo {
 					position: relative;
 					top: 0;
 					left: 0;
-					width: 15%;
-					-webkit-flex: 0 1 auto;
-					-ms-flex: 0 1 auto;
-					flex: 0 1 auto;
+					width: 8%;
+					-webkit-flex: 1 0 auto;
+					-ms-flex: 1 0 auto;
+					flex: 1 0 auto;
 
 					a {
 						position: absolute;
@@ -143,14 +143,14 @@ License: GNU General Public License v2 or later
 				}
 
 				#clashvibes-title {
-					width: 85%;
+					width: 92%;
 					display: flex;
 					-webkit-flex-flow: column;
 					-ms-flex-flow: column;
 					flex-flow: column;
-					-webkit-flex: 0 1 auto;
-					-ms-flex: 0 1 auto;
-					flex: 0 1 auto;
+					-webkit-flex: 0 0 auto;
+					-ms-flex: 0 0 auto;
+					flex: 0 0 auto;
 
 					h1.site-title {
 						color: $color1;
@@ -275,9 +275,10 @@ License: GNU General Public License v2 or later
 		/* --- Content --- */
 		div.clashvibes-content {
 			padding: 0.25em;
-			margin: 0 auto;
-			min-height: 1200px;
+			margin: 0;
+			height:auto;
 			background-color: $color;
+
 		}
 
 		h1 {
@@ -783,77 +784,6 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		section.contact-wide {
-			/* comments form */
-			#clashvibes_comments_form {
-				div#comments {
-					div#respond {
-						h3#reply-title {
-							display: block;
-							line-height: 40px;
-							background-color: $color4;
-							color: $color;
-							text-indent: 0.5em;
-						}
-
-						form#commentform {
-							padding: 0.5em;
-
-							p.logged-in-as {
-								display: block;
-
-								a {
-									display: inline-block;
-									line-height: 40px;
-									color: $color4;
-									width: auto;
-									padding: 0 0.5em;
-
-									&:hover {
-										font-weight: bold;
-									}
-								}
-							}
-
-							p.comment-form-comment {
-								label {
-									display: block;
-									line-height: 40px;
-									text-align: left;
-									font-weight: bold;
-									font-size: 1.2em;
-									text-indent: 0.5em;
-								}
-
-								textarea {
-									width: 100%;
-								}
-							}
-
-							p.form-submit {
-								input[type='submit'] {
-									display: block;
-									margin: 0 auto;
-									height: 40px;
-									width: 20%;
-									background-color: $color4;
-									color: $color;
-									border: none;
-									outline: none;
-
-									&:hover {
-										cursor: pointer;
-										background-color: $color;
-										color: $color4;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-
 		/* --- Left Column--- */
 		#secondary {
 			float: left;
@@ -1217,48 +1147,50 @@ License: GNU General Public License v2 or later
 						height: auto;
 						margin-top: 0.25em;
 
-
 						.has-avatar {
 							width: 100%;
 							min-height: unset;
-							height:auto;
+							height: auto;
 							align-self: flex-start;
 
 							.author-avatar {
-								width: 90%;
-								height:90%;
-								margin:5%;
-								display: block;
-								img{
-									height:auto;
-									width:auto;
+								width: 100%;
+								img {
+									height: auto;
+									width: 100%;
 								}
 							}
 						}
 						.meta-content {
 							width: 100%;
-							height:auto;
+							height: auto;
 							display: grid;
-							grid-template-columns: 10% 2fr;
+							grid-template-columns: 9% 2fr;
 							grid-template-rows: 25px 25px 25px 25px;
-							gap: 5px 0px;
+							gap: 2px 2px;
 							grid-template-areas:
-									"Image posted-on"
-									"Image byline"
-									"Image comments-link"
-									"Image spare";
+								'Image posted-on'
+								'Image byline'
+								'Image comments-link'
+								'Image spare';
 
-							.posted-on { grid-area: posted-on; }
-							.byline { grid-area: byline; }
-							.comments-link { grid-area: comments-link; }
-							.spare { grid-area: spare; }
+							.posted-on {
+								grid-area: posted-on;
+							}
+							.byline {
+								grid-area: byline;
+							}
+							.comments-link {
+								grid-area: comments-link;
+							}
+							.spare {
+								grid-area: spare;
+							}
 							.author-avatar {
 								display: grid;
 								grid-template-columns: 1fr;
 								grid-template-rows: 4fr;
-								gap: 0px 0px;
-								grid-template-areas:
-										".";
+								grid-template-areas: '.';
 								grid-area: Image;
 							}
 
@@ -1268,7 +1200,7 @@ License: GNU General Public License v2 or later
 							span.posted-on,
 							span.byline {
 								font-size: 1em;
-								width: 99%;
+								width: 100%;
 								height: 25px;
 								line-height: 25px;
 								background-color: $colors;
@@ -1277,16 +1209,14 @@ License: GNU General Public License v2 or later
 								letter-spacing: 0.05em;
 								display: inline-block;
 								text-align: left;
-								text-indent:0.5em;
+								text-indent: 0.5em;
 								a {
 									width: auto;
 									display: inline-block;
 									padding: 0;
-									text-indent:unset;
-
+									text-indent: unset;
 								}
 							}
-
 						}
 					}
 				}
@@ -1875,57 +1805,539 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+			}
 
-				.navigation {
+			.navigation {
+				margin: 0;
+				padding: 0;
+				height: auto;
+				h2 {
+					margin-bottom: 0.2em;
+					color: $color;
+					background-color: $color4;
+				}
+				.nav-links {
 					margin: 0;
-					padding: 0;
-					height: auto;
-					h2 {
-						margin-bottom: 0.2em;
-						color: $color;
-						background-color: $color4;
-					}
-					.nav-links{
-						margin:0;
-						display:block;
-						.nav-next,
-						.nav-previous {
-							display: inline-block;
+					display: block;
+					.nav-next,
+					.nav-previous {
+						display: inline-block;
+						width: 100%;
+						height: 100%;
+						a {
+							font-size: 1.1em;
 							width: 100%;
-							height: 100%;
-							a {
-								font-size: 0.9em;
-								width: 100%;
-								display: inline-block;
-								color: $color;
-								background-color: $color4;
+							display: inline-block;
+							color: $color;
+							background-color: $color4;
+							line-height: 50px;
+							text-align: center;
+							@include Transition(all 0.2s linear 0s);
+							&:hover {
+								color: $color4;
+								background-color: $color7;
+								font-weight: bold;
+							}
+							&::after {
+								font-family: 'FontAwesome', $font-main;
+								content: '\f028';
+								font-size: 1.6em;
 								line-height: 50px;
-								text-align: center;
-								@include Transition(all 0.2s linear 0s);
+								float: right;
+								width: 3%;
+								display: block;
+							}
+							&:active {
+								background-color: $color7;
+								color: $color;
+							}
+						}
+					}
+				}
+			}
+
+			#comments {
+				.navigation {
+					height: auto;
+					width: 100%;
+					margin: 1% auto;
+					background-color: $color4;
+					color: $color1;
+
+					h1 {
+						margin: 0 auto;
+						color: $color4;
+						font-size: 1.3em;
+						width: 96%;
+					}
+
+					div.nav-previous,
+					div.nav-next {
+						width: 100%;
+
+						a {
+							height: 40px;
+							margin: 0;
+							&:hover {
+								color: $color4;
+							}
+						}
+					}
+				}
+
+				/* Comment title */
+				h2.comments-title {
+					min-height: 35px;
+					line-height: 35px;
+					text-indent: 1%;
+					width: 96%;
+					font-size: 1em;
+					margin: 2% auto;
+					display: block;
+					height: auto;
+				}
+
+				ol.comment-list {
+					padding-left: 0;
+					margin: 0;
+					list-style: none;
+
+					li.comment {
+						padding: 0;
+
+						ol.children {
+							margin: auto;
+							padding: 0;
+							width: 100%;
+
+							li.odd {
+								margin: 0;
+
+								article.comment-body {
+									background-color: $color4;
+									footer.comment-meta {
+										height: 60px;
+										margin-top: 0;
+										.comment-author {
+											display: inline-block;
+											height: auto;
+											width: auto;
+											font-size: 0.9em;
+											background-color: $color1;
+											color: $color11;
+											padding: 0.25em;
+
+											img {
+												width: 16%;
+												height: auto;
+												margin-right: 0.5em;
+												display: block;
+												float: left;
+											}
+
+											b.fn,
+											cite.fn {
+												display: inline-block;
+												height: auto;
+												width: auto;
+												padding: 0;
+												text-align: left;
+												line-height: 1.5;
+												color: $color11;
+												a {
+													background-color: $color1;
+												}
+											}
+
+											span.says {
+												display: inline-block;
+												width: auto;
+												height: 100%;
+												color: $color4;
+											}
+										}
+
+										.comment-metadata {
+											float: right;
+											line-height: 30px;
+											height: auto;
+											padding: 0 0.5em;
+											width: auto;
+											display: block;
+											background-color: $color1;
+											font-size: 0.8em;
+											color: $color11;
+											a {
+												color: $color11;
+											}
+											span.edit-link {
+												display: inline;
+												padding: 10px;
+											}
+										}
+									}
+									.comment-content {
+										p {
+											width: 100%;
+											font-size: 0.9em;
+											line-height: 1.5em;
+											margin: 0 auto;
+											min-height: 100px;
+											color: $color4;
+											background-color: $color11;
+											text-align: left;
+											a {
+												background-color: $color11;
+												&:hover {
+													color: $color11;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						article.comment-body {
+							letter-spacing: 0.1em;
+							padding: 0.5em;
+							display: block;
+							background-color: $color7;
+							height: auto;
+							text-indent: 0;
+							width: 100%;
+							margin: 0.5em auto;
+
+							footer.comment-meta {
+								height: 60px;
+								margin-top: 0;
+								.comment-author {
+									display: inline-block;
+									height: auto;
+									width: auto;
+									font-size: 0.9em;
+									background-color: $color7;
+									color: $color11;
+									padding: 0.25em;
+
+									img {
+										width: 16%;
+										height: auto;
+										margin-right: 0.5em;
+										display: block;
+										float: left;
+									}
+
+									b.fn,
+									cite.fn {
+										display: inline-block;
+										height: auto;
+										width: auto;
+										padding: 0;
+										text-align: left;
+										line-height: 1.5;
+										color: $color11;
+										background-color: $color7;
+										a, a.url {
+											background-color: $color7;
+										}
+									}
+
+									span.says {
+										display: inline-block;
+										width: auto;
+										height: 100%;
+										color: $color4;
+									}
+								}
+
+								.comment-metadata {
+									float: right;
+									line-height: 30px;
+									height: auto;
+									padding: 0 0.5em;
+									width: auto;
+									display: block;
+									background-color: $color7;
+									font-size: 0.8em;
+									color: $color11;
+									a {
+										color: $color11;
+									}
+									span.edit-link {
+										display: inline;
+										padding: 10px;
+									}
+								}
+							}
+
+							.comment-content {
+								p {
+									width: 100%;
+									font-size: 0.9em;
+									line-height: 1.5em;
+									margin: 0 auto;
+									min-height: 100px;
+									color: $color4;
+									background-color: $color11;
+									text-align: left;
+									a {
+										background-color: $color11;
+										&:hover {
+											color: $color11;
+										}
+									}
+								}
+							}
+
+							ul.children {
+								width: 100%;
+								margin-left: 0;
+							}
+						}
+					}
+
+					.reply {
+						width: 96%;
+						min-height: 35px;
+						margin: 2% auto;
+
+						a {
+							display: block;
+							float: right;
+							margin: 0;
+							height: 35px;
+							list-style: none;
+							width: 25%;
+							background-color: $color4;
+							padding: 0;
+							border: none;
+							color: $color11;
+							font-family: $font-main;
+							line-height: 35px;
+							text-align: center;
+							font-size: 1em;
+
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				#respond {
+					display: block;
+					clear: both;
+
+					h3#reply-title {
+						width: 92%;
+						margin: 1em auto;
+						padding: 0;
+						font-size: 1em;
+						background-color: $color7;						color: $color11;
+
+						line-height: 35px;
+						text-indent: 0.5em;
+
+						small {
+							a {
+								font-size: 1em;
+
+								@include Transition(all 0.2s ease-in 0s);
+								display: inline-block;
+								padding: 0 2%;
+
 								&:hover {
 									color: $color4;
-									background-color: $color7;
-									font-weight: bold;
-								}
-								&::after {
-									font-family: 'FontAwesome', $font-main;
-									content: '\f028';
-									font-size: 1.6em;
-									line-height: 50px;
-									float: right;
-									width: 3%;
-									display: block;
-								}
-								&:active {
-									background-color: $color7;
-									color: $color;
 								}
 							}
 						}
 					}
 
+					.comment-form {
+						width: 82%;
+						height: auto;
+						margin: 2% auto;
+						font-family: $font-main;
+						padding: 0;
+
+						p.comment-notes {
+							font-size: 0.9em;
+							width: 95%;
+							letter-spacing: 0.095em;
+							line-height: 1.7em;
+							margin: 0;
+						}
+
+						textarea#comment {
+							@include Transition(all 0.2s ease-in 0s);
+							outline: none;
+							padding: 3px 0 3px 3px;
+							margin: 5px 1px 3px 0;
+							border: 1px solid #ddd;
+							width: 100%;
+						}
+
+						p.comment-form-author {
+							label {
+								height: 30px;
+								line-height: 30px;
+								width: 30px;
+							}
+
+							input {
+								@include Transition(all 0.2s ease-in 0s);
+								outline: none;
+								padding: 3px 0 3px 3px;
+								margin: 5px 1px 3px 0;
+								border: 1px solid #ddd;
+								width: 100%;
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+								padding: 3px 0 3px 3px;
+								margin: 5px 1px 3px 0;
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-email {
+							label {
+								height: 30px;
+								line-height: 30px;
+								width: 30px;
+							}
+
+							input {
+								@include Transition(all 0.2s ease-in 0s);
+								outline: none;
+								padding: 3px 0 3px 3px;
+								margin: 5px 1px 3px 0;
+								border: 1px solid #ddd;
+								width: 100%;
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+								padding: 3px 0 3px 3px;
+								margin: 5px 1px 3px 0;
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-url {
+							label {
+								height: 30px;
+								line-height: 30px;
+								width: 30px;
+							}
+
+							input {
+								@include Transition(all 0.2s ease-in 0s);
+								outline: none;
+								padding: 3px 0 3px 3px;
+								margin: 5px 1px 3px 0;
+								border: 1px solid #ddd;
+								width: 100%;
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+								padding: 3px 0 3px 3px;
+								margin: 5px 1px 3px 0;
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.form-submit {
+							margin: 2% 0;
+							width: 100%;
+
+							input[type="submit"] {
+								height: 35px;
+								list-style: none;
+								background-color: $color4;
+								@include Transition(all 0.2s ease-in 0s);
+								padding: 0;
+								border: none;
+								color: $color11;
+								font-family: $font-main;
+								width: 15%;
+
+								&:hover {
+									color: $color11;
+									font-weight: bold;
+									cursor: pointer;
+								}
+							}
+						}
+					}
 				}
 
+				p {
+					padding: 0.5em;
+					a {
+						background-color: unset;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p:last-of-type {
+					text-align: center;
+					a {
+						background-color: $color11;
+						line-height: 40px;
+						display: inline-block;
+						width: auto;
+						margin: 0 0.25em;
+						color: $color4;
+
+						&:hover {
+							background-color: $color4;
+							color: $color11;
+						}
+					}
+				}
+
+				p.must-log-in {
+					width: 90%;
+					display: block;
+					line-height: 35px;
+					margin: 1em auto;
+					text-align: center;
+					background-color: $color4;
+
+					a {
+						display: inline-block;
+						line-height: 25px;
+						background-color: unset;
+						width: auto;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p.nocomments {
+					display: block;
+					margin: 0 auto;
+					width: 96%;
+					line-height: 40px;
+					margin-bottom: 1em;
+					text-align: center;
+					font-size: 1.1em;
+				}
 			}
 
 
@@ -2050,6 +2462,7 @@ License: GNU General Public License v2 or later
 			}
 		}
 	}
+
 }
 @media only screen and (max-width: 1440px) {
 	#page {
@@ -2061,7 +2474,7 @@ License: GNU General Public License v2 or later
 			.site-branding {
 
 				#clashvibes-title {
-					width: 69%;
+					width: 92%;
 
 					h1.site-title {
 						font-size: 2.4em;
@@ -2072,7 +2485,6 @@ License: GNU General Public License v2 or later
 						font-size: 0.7em;
 					}
 				}
-
 			}
 
 			aside#socialmediatop {
@@ -2109,7 +2521,7 @@ License: GNU General Public License v2 or later
 		}
 
 		div.clashvibes-content {
-			min-height: 1200px;
+			margin: 0;
 		}
 
 		article#clashvibes-text {
@@ -2457,7 +2869,7 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 						.meta-content {
-							width: 100%;
+							grid-template-columns: 10% 2fr;
 
 							span.parent-post-link,
 							span.full-size-link,
@@ -2751,35 +3163,322 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
-				.navigation {
+			}
+
+			.navigation {
+				margin: 0;
+
+				h2 {
+					color: $color;
+				}
+				.nav-links {
 					margin: 0;
+					display: block;
+					.nav-next,
+					.nav-previous {
+						display: inline-block;
 
-					h2 {
-						color: $color;
+						a {
+							font-size: 1.1em;
+
+							&:hover {
+								font-weight: bold;
+							}
+							&::after {
+								font-size: 1.6em;
+							}
+							&:active {
+								background-color: $color7;
+							}
+						}
 					}
-					.nav-links{
-						margin:0;
-						display:block;
-						.nav-next,
-						.nav-previous {
-							display: inline-block;
+				}
+			}
 
+			#comments {
+				.navigation {
+					width: 100%;
+
+					h1 {
+						font-size: 1.3em;
+					}
+
+					div.nav-previous,
+					div.nav-next {
+						width: 100%;
+
+						a {
+							margin: 0;
+							&:hover {
+								color: $color4;
+							}
+						}
+					}
+				}
+
+				h2.comments-title {
+					font-size: 1em;
+				}
+
+				ol.comment-list {
+					padding-left: 0;
+
+					li.comment {
+						padding: 0;
+
+						ol.children {
+							margin: auto;
+
+							li.odd {
+								margin: 0;
+
+								article.comment-body {
+									background-color: $color4;
+									footer.comment-meta {
+										height: 60px;
+										margin-top: 0;
+										.comment-author {
+											font-size: 0.9em;
+
+											img {
+												width: 16%;
+											}
+
+											b.fn,
+											cite.fn {
+												line-height: 1.5;
+
+												a {
+													background-color: $color1;
+												}
+											}
+
+											span.says {
+												display: inline-block;
+											}
+										}
+
+										.comment-metadata {
+											font-size: 0.8em;
+
+											a {
+												color: $color11;
+											}
+											span.edit-link {
+												display: inline;
+											}
+										}
+									}
+									.comment-content {
+										p {
+											font-size: 0.9em;
+
+											a {
+												background-color: $color11;
+												&:hover {
+													color: $color11;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						article.comment-body {
+							padding: 0.5em;
+
+							footer.comment-meta {
+								height: 60px;
+
+								.comment-author {
+									font-size: 0.9em;
+
+									img {
+										width: 16%;
+									}
+
+									b.fn,
+									cite.fn {
+										display: inline-block;
+
+										a {
+											background-color: $color1;
+										}
+									}
+
+									span.says {
+										display: inline-block;
+									}
+								}
+
+								.comment-metadata {
+									font-size: 0.8em;
+
+									a {
+										color: $color11;
+									}
+									span.edit-link {
+										display: inline;
+									}
+								}
+							}
+
+							.comment-content {
+								p {
+									font-size: 0.9em;
+
+									a {
+										&:hover {
+											color: $color11;
+										}
+									}
+								}
+							}
+
+							ul.children {
+								margin-left: 0;
+							}
+						}
+					}
+
+					.reply {
+						width: 96%;
+
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				#respond {
+					display: block;
+					clear: both;
+
+					h3#reply-title {
+						font-size: 1em;
+
+						small {
 							a {
 								font-size: 0.9em;
 
 								&:hover {
-
-									font-weight: bold;
-								}
-								&::after {
-									font-size: 1.6em;
-								}
-								&:active {
-									background-color: $color7;
+									color: $color4;
 								}
 							}
 						}
 					}
+
+					.comment-form {
+						padding: 1em;
+
+						p.comment-notes {
+							font-size: 0.9em;
+						}
+
+						textarea#comment {
+							width: 100%;
+						}
+
+						p.comment-form-author {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-email {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-url {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.form-submit {
+															width: 100%;
+
+							input[type="submit"] {
+								width: 25%;
+
+								&:hover {
+									cursor: pointer;
+								}
+							}
+						}
+					}
+				}
+
+				p {
+					padding: 0.5em;
+					a {
+						background-color: unset;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p:last-of-type {
+					text-align: center;
+					a {
+						margin: 0 0.25em;
+
+						&:hover {
+							background-color: $color4;
+						}
+					}
+				}
+
+				p.must-log-in {
+					width: 90%;
+
+					a {
+						display: inline-block;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p.nocomments {
+					font-size: 1.1em;
 				}
 			}
 
@@ -2838,7 +3537,7 @@ License: GNU General Public License v2 or later
 			height: 70px;
 			.site-branding {
 				.site-logo {
-					width: 7%;
+					width:8%;
 
 					a {
 						div.screen-reader-text {
@@ -2855,7 +3554,7 @@ License: GNU General Public License v2 or later
 				}
 
 				#clashvibes-title {
-					width: 68%;
+					width: 91%;
 
 					h1.site-title {
 						font-size: 2.3em;
@@ -2905,7 +3604,7 @@ License: GNU General Public License v2 or later
 		}
 
 		div.clashvibes-content {
-			min-height: 1100px;
+			margin: 0;
 		}
 
 		article#clashvibes-text {
@@ -3265,6 +3964,7 @@ License: GNU General Public License v2 or later
 						display: block;
 						.meta-content {
 							width: 100%;
+							grid-template-columns: 11% 2fr;
 
 							span.parent-post-link,
 							span.full-size-link,
@@ -3272,7 +3972,6 @@ License: GNU General Public License v2 or later
 							span.posted-on,
 							span.byline {
 								font-size: 0.9em;
-
 							}
 						}
 					}
@@ -3536,25 +4235,26 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
-				/* post navigation */
+			}
+
+			/* post navigation */
 			.navigation {
 				margin: 0;
 
 				h2 {
 					color: $color2;
 				}
-				.nav-links{
-					margin:0;
-					display:block;
+				.nav-links {
+					margin: 0;
+					display: block;
 					.nav-next,
 					.nav-previous {
 						display: inline-block;
 
 						a {
-							font-size: 0.9em;
+							font-size: 1.1em;
 
 							&:hover {
-
 								font-weight: bold;
 							}
 							&::after {
@@ -3567,7 +4267,294 @@ License: GNU General Public License v2 or later
 					}
 				}
 			}
+
+			#comments {
+				.navigation {
+					width: 100%;
+
+					h1 {
+						font-size: 1.3em;
+					}
+
+					div.nav-previous,
+					div.nav-next {
+						width: 100%;
+
+						a {
+							margin: 0;
+							&:hover {
+								color: $color4;
+							}
+						}
+					}
+				}
+
+				h2.comments-title {
+					font-size: 1em;
+				}
+
+				ol.comment-list {
+					padding-left: 0;
+
+					li.comment {
+						padding: 0;
+
+						ol.children {
+							margin: auto;
+
+							li.odd {
+								margin: 0;
+
+								article.comment-body {
+									background-color: $color4;
+									footer.comment-meta {
+										height: 60px;
+										margin-top: 0;
+										.comment-author {
+											font-size: 0.9em;
+
+											img {
+												width: 16%;
+											}
+
+											b.fn,
+											cite.fn {
+												line-height: 1.5;
+
+												a {
+													background-color: $color1;
+												}
+											}
+
+											span.says {
+												display: inline-block;
+											}
+										}
+
+										.comment-metadata {
+											font-size: 0.8em;
+
+											a {
+												color: $color11;
+											}
+											span.edit-link {
+												display: inline;
+											}
+										}
+									}
+									.comment-content {
+										p {
+											font-size: 0.9em;
+
+											a {
+												background-color: $color11;
+												&:hover {
+													color: $color11;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						article.comment-body {
+							padding: 0.5em;
+
+							footer.comment-meta {
+								height: 60px;
+
+								.comment-author {
+									font-size: 0.9em;
+
+									img {
+										width: 16%;
+									}
+
+									b.fn,
+									cite.fn {
+										display: inline-block;
+
+										a {
+											background-color: $color1;
+										}
+									}
+
+									span.says {
+										display: inline-block;
+									}
+								}
+
+								.comment-metadata {
+									font-size: 0.8em;
+
+									a {
+										color: $color11;
+									}
+									span.edit-link {
+										display: inline;
+									}
+								}
+							}
+
+							.comment-content {
+								p {
+									font-size: 0.9em;
+
+									a {
+										&:hover {
+											color: $color11;
+										}
+									}
+								}
+							}
+
+							ul.children {
+								margin-left: 0;
+							}
+						}
+					}
+
+					.reply {
+						width: 96%;
+
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				#respond {
+					display: block;
+					clear: both;
+
+					h3#reply-title {
+						font-size: 1em;
+
+						small {
+							a {
+								font-size: 0.9em;
+
+								&:hover {
+									color: $color4;
+								}
+							}
+						}
+					}
+
+					.comment-form {
+						padding: 1em;
+
+						p.comment-notes {
+							font-size: 0.9em;
+						}
+
+						textarea#comment {
+							width: 100%;
+						}
+
+						p.comment-form-author {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-email {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-url {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.form-submit {
+															width: 100%;
+
+							input[type="submit"] {
+								width: 25%;
+
+								&:hover {
+									cursor: pointer;
+								}
+							}
+						}
+					}
+				}
+
+				p {
+					padding: 0.5em;
+					a {
+						background-color: unset;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p:last-of-type {
+					text-align: center;
+					a {
+						margin: 0 0.25em;
+
+						&:hover {
+							background-color: $color4;
+						}
+					}
+				}
+
+				p.must-log-in {
+					width: 90%;
+
+					a {
+						display: inline-block;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p.nocomments {
+					font-size: 1.1em;
+				}
 			}
+
 		}
 
 		footer.site-footer {
@@ -3628,7 +4615,7 @@ License: GNU General Public License v2 or later
 
 			.site-branding {
 				.site-logo {
-					width: 7%;
+					width: 8%;
 
 					a {
 						div.screen-reader-text {
@@ -3644,7 +4631,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 				#clashvibes-title {
-					width: 60%;
+					width: 91%;
 
 					h1.site-title {
 						font-size: 2.2em;
@@ -3695,7 +4682,7 @@ License: GNU General Public License v2 or later
 		}
 
 		div.clashvibes-content {
-			min-height: 1000px;
+			margin: 0;;
 		}
 
 		article#clashvibes-text {
@@ -3981,6 +4968,10 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
+						.meta-content {
+							grid-template-columns: 13% 2fr;
+
+
 						span.parent-post-link,
 						span.full-size-link,
 						span.comments-link,
@@ -3988,6 +4979,7 @@ License: GNU General Public License v2 or later
 						span.byline {
 							font-size: 0.85em;
 						}
+					}
 					}
 				}
 
@@ -4069,6 +5061,7 @@ License: GNU General Public License v2 or later
 
 					//text
 					p {
+						font-size:0.9em;
 						a {
 							display: inline-block;
 
@@ -4207,36 +5200,321 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+			}
+			.navigation {
+				margin: 0;
 
-				.navigation {
+				h2 {
+					color: $color;
+				}
+				.nav-links {
 					margin: 0;
+					display: block;
+					.nav-next,
+					.nav-previous {
+						display: inline-block;
 
-					h2 {
-						color: $color;
+						a {
+							font-size: 1.1em;
+
+							&:hover {
+								font-weight: bold;
+							}
+							&::after {
+								font-size: 1.6em;
+							}
+							&:active {
+								background-color: $color7;
+							}
+						}
 					}
-					.nav-links{
-						margin:0;
-						display:block;
-						.nav-next,
-						.nav-previous {
-							display: inline-block;
+				}
+			}
+			#comments {
+				.navigation {
+					width: 100%;
 
+					h1 {
+						font-size: 1.3em;
+					}
+
+					div.nav-previous,
+					div.nav-next {
+						width: 100%;
+
+						a {
+							margin: 0;
+							&:hover {
+								color: $color4;
+							}
+						}
+					}
+				}
+
+				h2.comments-title {
+					font-size: 1em;
+				}
+
+				ol.comment-list {
+					padding-left: 0;
+
+					li.comment {
+						padding: 0;
+
+						ol.children {
+							margin: auto;
+
+							li.odd {
+								margin: 0;
+
+								article.comment-body {
+									background-color: $color4;
+									footer.comment-meta {
+										height: 60px;
+										margin-top: 0;
+										.comment-author {
+											font-size: 0.9em;
+
+											img {
+												width: 16%;
+											}
+
+											b.fn,
+											cite.fn {
+												line-height: 1.5;
+
+												a {
+													background-color: $color1;
+												}
+											}
+
+											span.says {
+												display: inline-block;
+											}
+										}
+
+										.comment-metadata {
+											font-size: 0.8em;
+
+											a {
+												color: $color11;
+											}
+											span.edit-link {
+												display: inline;
+											}
+										}
+									}
+									.comment-content {
+										p {
+											font-size: 0.9em;
+
+											a {
+												background-color: $color11;
+												&:hover {
+													color: $color11;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						article.comment-body {
+							padding: 0.5em;
+
+							footer.comment-meta {
+								height: 60px;
+
+								.comment-author {
+									font-size: 0.9em;
+
+									img {
+										width: 16%;
+									}
+
+									b.fn,
+									cite.fn {
+										display: inline-block;
+
+										a {
+											background-color: $color1;
+										}
+									}
+
+									span.says {
+										display: inline-block;
+									}
+								}
+
+								.comment-metadata {
+									font-size: 0.8em;
+
+									a {
+										color: $color11;
+									}
+									span.edit-link {
+										display: inline;
+									}
+								}
+							}
+
+							.comment-content {
+								p {
+									font-size: 0.9em;
+
+									a {
+										&:hover {
+											color: $color11;
+										}
+									}
+								}
+							}
+
+							ul.children {
+								margin-left: 0;
+							}
+						}
+					}
+
+					.reply {
+						width: 96%;
+
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				#respond {
+					display: block;
+					clear: both;
+
+					h3#reply-title {
+						font-size: 1em;
+
+						small {
 							a {
 								font-size: 0.9em;
 
 								&:hover {
-
-									font-weight: bold;
-								}
-								&::after {
-									font-size: 1.6em;
-								}
-								&:active {
-									background-color: $color7;
+									color: $color4;
 								}
 							}
 						}
 					}
+
+					.comment-form {
+						padding: 1em;
+
+						p.comment-notes {
+							font-size: 0.9em;
+						}
+
+						textarea#comment {
+							width: 100%;
+						}
+
+						p.comment-form-author {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-email {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-url {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.form-submit {
+
+							width: 100%;
+
+							input[type="submit"] {
+								width: 25%;
+
+								&:hover {
+									cursor: pointer;
+								}
+							}
+						}
+					}
+				}
+
+				p {
+					padding: 0.5em;
+					a {
+						background-color: unset;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p:last-of-type {
+					text-align: center;
+					a {
+						margin: 0 0.25em;
+
+						&:hover {
+							background-color: $color4;
+						}
+					}
+				}
+
+				p.must-log-in {
+					width: 90%;
+
+					a {
+						display: inline-block;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p.nocomments {
+					font-size: 1.1em;
 				}
 			}
 		}
@@ -4295,7 +5573,18 @@ License: GNU General Public License v2 or later
 		header.site-header {
 			height: 65px;
 			.site-branding {
+				.site-logo {
+					width: 10%;
+
+					a {
+
+						div.site-firstletter {
+							font-size: 2em;
+						}
+					}
+				}
 				#clashvibes-title {
+					width:88%;
 					h2.site-description {
 						font-size: 0.7em;
 					}
@@ -4334,7 +5623,7 @@ License: GNU General Public License v2 or later
 		}
 
 		div.clashvibes-content {
-			min-height: 1150px;
+			margin: 0;
 		}
 
 		article#clashvibes-text {
@@ -4691,14 +5980,17 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
+						.meta-content {
+							grid-template-columns: 16% 2fr;
+
+
 						span.parent-post-link,
 						span.full-size-link,
 						span.comments-link,
 						span.posted-on,
 						span.byline {
 							font-size: 0.85em;
-
-
+						}
 						}
 					}
 				}
@@ -4781,6 +6073,7 @@ License: GNU General Public License v2 or later
 
 					//text
 					p {
+						font-size:0.85em;
 						a {
 							display: inline-block;
 
@@ -4925,36 +6218,321 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+			}
+			.navigation {
+				margin: 0;
 
-				.navigation {
+				h2 {
+					color: $color;
+				}
+				.nav-links {
 					margin: 0;
+					display: block;
+					.nav-next,
+					.nav-previous {
+						display: inline-block;
 
-					h2 {
-						color: $color;
+						a {
+							font-size: 1.1em;
+
+							&:hover {
+								font-weight: bold;
+							}
+							&::after {
+								font-size: 1.6em;
+							}
+							&:active {
+								background-color: $color7;
+							}
+						}
 					}
-					.nav-links{
-						margin:0;
-						display:block;
-						.nav-next,
-						.nav-previous {
-							display: inline-block;
+				}
+			}
+			#comments {
+				.navigation {
+					width: 100%;
 
+					h1 {
+						font-size: 1.3em;
+					}
+
+					div.nav-previous,
+					div.nav-next {
+						width: 100%;
+
+						a {
+							margin: 0;
+							&:hover {
+								color: $color4;
+							}
+						}
+					}
+				}
+
+				h2.comments-title {
+					font-size: 1em;
+				}
+
+				ol.comment-list {
+					padding-left: 0;
+
+					li.comment {
+						padding: 0;
+
+						ol.children {
+							margin: auto;
+
+							li.odd {
+								margin: 0;
+
+								article.comment-body {
+									background-color: $color4;
+									footer.comment-meta {
+										height: 60px;
+										margin-top: 0;
+										.comment-author {
+											font-size: 0.9em;
+
+											img {
+												width: 16%;
+											}
+
+											b.fn,
+											cite.fn {
+												line-height: 1.5;
+
+												a {
+													background-color: $color1;
+												}
+											}
+
+											span.says {
+												display: inline-block;
+											}
+										}
+
+										.comment-metadata {
+											font-size: 0.8em;
+
+											a {
+												color: $color11;
+											}
+											span.edit-link {
+												display: inline;
+											}
+										}
+									}
+									.comment-content {
+										p {
+											font-size: 0.9em;
+
+											a {
+												background-color: $color11;
+												&:hover {
+													color: $color11;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						article.comment-body {
+							padding: 0.5em;
+
+							footer.comment-meta {
+								height: 60px;
+
+								.comment-author {
+									font-size: 0.9em;
+
+									img {
+										width: 16%;
+									}
+
+									b.fn,
+									cite.fn {
+										display: inline-block;
+
+										a {
+											background-color: $color1;
+										}
+									}
+
+									span.says {
+										display: inline-block;
+									}
+								}
+
+								.comment-metadata {
+									font-size: 0.8em;
+
+									a {
+										color: $color11;
+									}
+									span.edit-link {
+										display: inline;
+									}
+								}
+							}
+
+							.comment-content {
+								p {
+									font-size: 0.9em;
+
+									a {
+										&:hover {
+											color: $color11;
+										}
+									}
+								}
+							}
+
+							ul.children {
+								margin-left: 0;
+							}
+						}
+					}
+
+					.reply {
+						width: 96%;
+
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				#respond {
+					display: block;
+					clear: both;
+
+					h3#reply-title {
+						font-size: 1em;
+
+						small {
 							a {
 								font-size: 0.9em;
 
 								&:hover {
-
-									font-weight: bold;
-								}
-								&::after {
-									font-size: 1.6em;
-								}
-								&:active {
-									background-color: $color7;
+									color: $color4;
 								}
 							}
 						}
 					}
+
+					.comment-form {
+						padding: 1em;
+
+						p.comment-notes {
+							font-size: 0.9em;
+						}
+
+						textarea#comment {
+							width: 100%;
+						}
+
+						p.comment-form-author {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-email {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-url {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.form-submit {
+
+							width: 100%;
+
+							input[type="submit"] {
+								width: 35%;
+
+								&:hover {
+									cursor: pointer;
+								}
+							}
+						}
+					}
+				}
+
+				p {
+					padding: 0.5em;
+					a {
+						background-color: unset;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p:last-of-type {
+					text-align: center;
+					a {
+						margin: 0 0.25em;
+
+						&:hover {
+							background-color: $color4;
+						}
+					}
+				}
+
+				p.must-log-in {
+					width: 90%;
+
+					a {
+						display: inline-block;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p.nocomments {
+					font-size: 1.1em;
 				}
 			}
 		}
@@ -5057,15 +6635,9 @@ License: GNU General Public License v2 or later
 
 			.site-branding {
 				.site-logo {
-					width: 9%;
+					width: 10%;
 
 					a {
-						div.screen-reader-text {
-							&:focus {
-								font-size: 14px;
-								font-size: 0.875rem;
-							}
-						}
 
 						div.site-firstletter {
 							font-size: 3em;
@@ -5074,7 +6646,7 @@ License: GNU General Public License v2 or later
 				}
 
 				#clashvibes-title {
-					width: 90%;
+					width: 88%;
 
 					h1.site-title {
 						font-size: 2.2em;
@@ -5152,7 +6724,7 @@ License: GNU General Public License v2 or later
 
 		div.clashvibes-content {
 			padding: 0;
-			min-height: 1250px;
+
 		}
 
 		#secondary {
@@ -5252,8 +6824,8 @@ License: GNU General Public License v2 or later
 		}
 
 		#primary {
-			width: 98%;
-
+			width: 95%;
+			float: none;
 			h1 {
 				font-size: 1.3em;
 				padding: 0.5em 0;
@@ -5287,9 +6859,11 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					h1 {
-						font-size: 1em;
+						font-size: 1.3em;
 						text-indent: 0;
 						text-align: center;
+						height: 40px;
+						line-height: 40px;
 
 						a {
 							letter-spacing: 0.03em;
@@ -5312,6 +6886,10 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						text-align: center;
 
+						.meta-content {
+							grid-template-columns: 15% 2fr;
+
+
 						span.parent-post-link,
 						span.full-size-link,
 						span.comments-link,
@@ -5319,6 +6897,7 @@ License: GNU General Public License v2 or later
 						span.byline {
 							font-size: 0.85em;
 						}
+					}
 					}
 
 					section.byline {
@@ -5561,38 +7140,323 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+			}
+			.navigation {
+				margin: 0;
 
-				.navigation {
+				h2 {
+					color: $color;
+					text-align: center;
+					font-size: 1.2em;
+				}
+				.nav-links {
 					margin: 0;
+					display: block;
+					.nav-next,
+					.nav-previous {
+						display: inline-block;
 
-					h2 {
-						color: $color;
-						text-align: center;
-						font-size: 1.2em;
+						a {
+							font-size: 1em;
+
+							&:hover {
+								font-weight: bold;
+							}
+							&::after {
+								font-size: 1.6em;
+							}
+							&:active {
+								background-color: $color7;
+							}
+						}
 					}
-					.nav-links{
-						margin:0;
-						display:block;
-						.nav-next,
-						.nav-previous {
-							display: inline-block;
+				}
+			}
+			#comments {
+				.navigation {
+					width: 100%;
 
+					h1 {
+						font-size: 1.3em;
+					}
+
+					div.nav-previous,
+					div.nav-next {
+						width: 100%;
+
+						a {
+							margin: 0;
+							&:hover {
+								color: $color4;
+							}
+						}
+					}
+				}
+
+				h2.comments-title {
+					font-size: 1em;
+				}
+
+				ol.comment-list {
+					padding-left: 0;
+
+					li.comment {
+						padding: 0;
+
+						ol.children {
+							margin: auto;
+
+							li.odd {
+								margin: 0;
+
+								article.comment-body {
+									background-color: $color4;
+									footer.comment-meta {
+										height: 60px;
+										margin-top: 0;
+										.comment-author {
+											font-size: 0.85em;
+
+											img {
+												width: 16%;
+											}
+
+											b.fn,
+											cite.fn {
+												line-height: 1.5;
+
+												a {
+													background-color: $color1;
+												}
+											}
+
+											span.says {
+												display: inline-block;
+											}
+										}
+
+										.comment-metadata {
+											font-size: 0.8em;
+
+											a {
+												color: $color11;
+											}
+											span.edit-link {
+												display: inline;
+											}
+										}
+									}
+									.comment-content {
+										p {
+											font-size: 0.85em;
+
+											a {
+												background-color: $color11;
+												&:hover {
+													color: $color11;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						article.comment-body {
+							padding: 0.5em;
+
+							footer.comment-meta {
+								height: 60px;
+
+								.comment-author {
+									font-size: 0.85em;
+
+									img {
+										width: 16%;
+									}
+
+									b.fn,
+									cite.fn {
+										display: inline-block;
+
+										a {
+											background-color: $color1;
+										}
+									}
+
+									span.says {
+										display: inline-block;
+									}
+								}
+
+								.comment-metadata {
+									font-size: 0.8em;
+
+									a {
+										color: $color11;
+									}
+									span.edit-link {
+										display: inline;
+									}
+								}
+							}
+
+							.comment-content {
+								p {
+									font-size: 0.85em;
+
+									a {
+										&:hover {
+											color: $color11;
+										}
+									}
+								}
+							}
+
+							ul.children {
+								margin-left: 0;
+							}
+						}
+					}
+
+					.reply {
+						width: 96%;
+
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				#respond {
+					display: block;
+					clear: both;
+
+					h3#reply-title {
+						font-size: 1em;
+
+						small {
 							a {
 								font-size: 0.9em;
 
 								&:hover {
-
-									font-weight: bold;
-								}
-								&::after {
-									font-size: 1.6em;
-								}
-								&:active {
-									background-color: $color7;
+									color: $color4;
 								}
 							}
 						}
 					}
+
+					.comment-form {
+						padding: 1em;
+
+						p.comment-notes {
+							font-size: 0.9em;
+						}
+
+						textarea#comment {
+							width: 100%;
+						}
+
+						p.comment-form-author {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-email {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-url {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.form-submit {
+
+							width: 100%;
+
+							input[type="submit"] {
+								width: 45%;
+
+								&:hover {
+									cursor: pointer;
+								}
+							}
+						}
+					}
+				}
+
+				p {
+					padding: 0.5em;
+					a {
+						background-color: unset;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p:last-of-type {
+					text-align: center;
+					a {
+						margin: 0 0.25em;
+
+						&:hover {
+							background-color: $color4;
+						}
+					}
+				}
+
+				p.must-log-in {
+					width: 90%;
+
+					a {
+						display: inline-block;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p.nocomments {
+					font-size: 1.1em;
 				}
 			}
 		}
@@ -5749,7 +7613,7 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 640px) {
 	#tog-menu {
 		width: 30%;
-		left: calc(68% - 1vw);
+		left: calc(57% - 1vw);
 		button.menu-toggle,
 		button.sidebar_toggle {
 			line-height: 60px;
@@ -5783,24 +7647,24 @@ License: GNU General Public License v2 or later
 			height: 70px;
 			.site-branding {
 				.site-logo {
-				width: 10%;
+					width: 12%;
 
-				a {
-					div.screen-reader-text {
-						&:focus {
-							font-size: 14px;
-							font-size: 0.875rem;
+					a {
+						div.screen-reader-text {
+							&:focus {
+								font-size: 14px;
+								font-size: 0.875rem;
+							}
+						}
+
+						div.site-firstletter {
+							font-size: 3em;
 						}
 					}
-
-					div.site-firstletter {
-						font-size: 3em;
-					}
-				}
 				}
 
 				#clashvibes-title {
-					width: 85%;
+					width: 87%;
 
 					h1.site-title {
 						font-size: 2em;
@@ -5851,7 +7715,7 @@ License: GNU General Public License v2 or later
 		/* --- Content --- */
 		div.clashvibes-content {
 			padding: 0;
-			min-height: 1150px;
+
 		}
 
 		#secondary {
@@ -5991,14 +7855,18 @@ License: GNU General Public License v2 or later
 
 					div.entry-meta {
 						display: block;
+						.meta-content{
+							grid-template-columns: 17% 2fr;
+
 
 						span.parent-post-link,
 						span.full-size-link,
 						span.comments-link,
 						span.posted-on,
 						span.byline {
-							font-size: 0.85em;
+							font-size: 0.80em;
 						}
+					}
 					}
 
 					section.byline {
@@ -6219,6 +8087,295 @@ License: GNU General Public License v2 or later
 					}
 				}
 			}
+
+			#comments {
+				.navigation {
+					width: 100%;
+
+					h1 {
+						font-size: 1.3em;
+					}
+
+					div.nav-previous,
+					div.nav-next {
+						width: 100%;
+
+						a {
+							margin: 0;
+							&:hover {
+								color: $color4;
+							}
+						}
+					}
+				}
+
+				h2.comments-title {
+					font-size: 1em;
+				}
+
+				ol.comment-list {
+					padding-left: 0;
+
+					li.comment {
+						padding: 0;
+
+						ol.children {
+							margin: auto;
+
+							li.odd {
+								margin: 0;
+
+								article.comment-body {
+									background-color: $color4;
+									footer.comment-meta {
+										height: 60px;
+										margin-top: 0;
+										.comment-author {
+											font-size: 0.8em;
+
+											img {
+												width: 16%;
+											}
+
+											b.fn,
+											cite.fn {
+												line-height: 1.5;
+
+												a {
+													background-color: $color1;
+												}
+											}
+
+											span.says {
+												display: inline-block;
+											}
+										}
+
+										.comment-metadata {
+											font-size: 0.8em;
+
+											a {
+												color: $color11;
+											}
+											span.edit-link {
+												display: inline;
+											}
+										}
+									}
+									.comment-content {
+										p {
+											font-size: 0.85em;
+
+											a {
+												background-color: $color11;
+												&:hover {
+													color: $color11;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						article.comment-body {
+							padding: 0.5em;
+
+							footer.comment-meta {
+								height: 60px;
+
+								.comment-author {
+									font-size: 0.8em;
+
+									img {
+										width: 16%;
+									}
+
+									b.fn,
+									cite.fn {
+										display: inline-block;
+
+										a {
+											background-color: $color1;
+										}
+									}
+
+									span.says {
+										display: inline-block;
+									}
+								}
+
+								.comment-metadata {
+									font-size: 0.8em;
+
+									a {
+										color: $color11;
+									}
+									span.edit-link {
+										display: inline;
+									}
+								}
+							}
+
+							.comment-content {
+								p {
+									font-size: 0.85em;
+
+									a {
+										&:hover {
+											color: $color11;
+										}
+									}
+								}
+							}
+
+							ul.children {
+								margin-left: 0;
+							}
+						}
+					}
+
+					.reply {
+						width: 96%;
+
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				#respond {
+					display: block;
+					clear: both;
+
+					h3#reply-title {
+						font-size: 1em;
+
+						small {
+							a {
+								font-size: 0.9em;
+
+								&:hover {
+									color: $color4;
+								}
+							}
+						}
+					}
+
+					.comment-form {
+						padding: 1em;
+
+						p.comment-notes {
+							font-size: 0.9em;
+						}
+
+						textarea#comment {
+							width: 100%;
+						}
+
+						p.comment-form-author {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-email {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-url {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.form-submit {
+
+							width: 100%;
+
+							input[type="submit"] {
+								width: 45%;
+
+								&:hover {
+									cursor: pointer;
+								}
+							}
+						}
+					}
+				}
+
+				p {
+					padding: 0.5em;
+					a {
+						background-color: unset;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p:last-of-type {
+					text-align: center;
+					a {
+						margin: 0 0.25em;
+
+						&:hover {
+							background-color: $color4;
+						}
+					}
+				}
+
+				p.must-log-in {
+					width: 90%;
+
+					a {
+						display: inline-block;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p.nocomments {
+					font-size: 1.1em;
+				}
+			}
+
 		}
 
 		article#clashvibes-text {
@@ -6442,7 +8599,7 @@ License: GNU General Public License v2 or later
 
 			.site-branding {
 				.site-logo {
-					width: 11%;
+					width: 15%;
 
 					a {
 						div.screen-reader-text {
@@ -6458,6 +8615,7 @@ License: GNU General Public License v2 or later
 				}
 
 				#clashvibes-title {
+					width:84%;
 					h1.site-title {
 						font-size: 2em;
 					}
@@ -6635,6 +8793,26 @@ License: GNU General Public License v2 or later
 						a {
 							color: $color;
 						}
+					}
+
+					div.entry-meta {
+						display: block;
+
+						.meta-content{
+							grid-template-columns: 16% 2fr;
+							grid-template-rows: 20px 20px 20px 20px;
+
+
+						span.parent-post-link,
+						span.full-size-link,
+						span.comments-link,
+						span.posted-on,
+						span.byline {
+							font-size: 0.75em;
+							height: 20px;
+							line-height: 20px;
+						}
+					}
 					}
 
 					section.byline {
@@ -6846,35 +9024,322 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
-				.navigation {
+			}
+			.navigation {
+				margin: 0;
+
+				h2 {
+					color: $color;
+				}
+				.nav-links {
 					margin: 0;
+					display: block;
+					.nav-next,
+					.nav-previous {
+						display: inline-block;
 
-					h2 {
-						color: $color;
+						a {
+							font-size: 1em;
+
+							&:hover {
+								font-weight: bold;
+							}
+							&::after {
+								font-size: 1.6em;
+							}
+							&:active {
+								background-color: $color7;
+							}
+						}
 					}
-					.nav-links{
-						margin:0;
-						display:block;
-						.nav-next,
-						.nav-previous {
-							display: inline-block;
+				}
+			}
 
+			#comments {
+				.navigation {
+					width: 100%;
+
+					h1 {
+						font-size: 1.3em;
+					}
+
+					div.nav-previous,
+					div.nav-next {
+						width: 100%;
+
+						a {
+							margin: 0;
+							&:hover {
+								color: $color4;
+							}
+						}
+					}
+				}
+
+				h2.comments-title {
+					font-size: 1em;
+				}
+
+				ol.comment-list {
+					padding-left: 0;
+
+					li.comment {
+						padding: 0;
+
+						ol.children {
+							margin: auto;
+
+							li.odd {
+								margin: 0;
+
+								article.comment-body {
+									background-color: $color4;
+									footer.comment-meta {
+										height: 60px;
+										margin-top: 0;
+										.comment-author {
+											font-size: 0.75em;
+
+											img {
+												width: 16%;
+											}
+
+											b.fn,
+											cite.fn {
+												line-height: 1.5;
+
+												a {
+													background-color: $color1;
+												}
+											}
+
+											span.says {
+												display: inline-block;
+											}
+										}
+
+										.comment-metadata {
+											font-size: 0.8em;
+
+											a {
+												color: $color11;
+											}
+											span.edit-link {
+												display: inline;
+											}
+										}
+									}
+									.comment-content {
+										p {
+											font-size: 0.75em;
+
+											a {
+												background-color: $color11;
+												&:hover {
+													color: $color11;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						article.comment-body {
+							padding: 0.5em;
+
+							footer.comment-meta {
+								height: 60px;
+
+								.comment-author {
+									font-size: 0.7em;
+
+									img {
+										width: 13%;
+									}
+
+									b.fn,
+									cite.fn {
+										display: inline-block;
+
+										a {
+											background-color: $color1;
+										}
+									}
+
+									span.says {
+										display: inline-block;
+									}
+								}
+
+								.comment-metadata {
+									font-size: 0.7em;
+
+									a {
+										color: $color11;
+									}
+									span.edit-link {
+										display: inline;
+									}
+								}
+							}
+
+							.comment-content {
+								p {
+									font-size: 0.75em;
+
+									a {
+										&:hover {
+											color: $color11;
+										}
+									}
+								}
+							}
+
+							ul.children {
+								margin-left: 0;
+							}
+						}
+					}
+
+					.reply {
+						width: 96%;
+
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				#respond {
+					display: block;
+					clear: both;
+
+					h3#reply-title {
+						font-size: 1em;
+
+						small {
 							a {
 								font-size: 0.9em;
 
 								&:hover {
-
-									font-weight: bold;
-								}
-								&::after {
-									font-size: 1.6em;
-								}
-								&:active {
-									background-color: $color7;
+									color: $color4;
 								}
 							}
 						}
 					}
+
+					.comment-form {
+						padding: 1em;
+
+						p.comment-notes {
+							font-size: 0.9em;
+						}
+
+						textarea#comment {
+							width: 100%;
+						}
+
+						p.comment-form-author {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-email {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-url {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.form-submit {
+
+							width: 100%;
+
+							input[type="submit"] {
+								width: 55%;
+
+								&:hover {
+									cursor: pointer;
+								}
+							}
+						}
+					}
+				}
+
+				p {
+					padding: 0.5em;
+					a {
+						background-color: unset;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p:last-of-type {
+					text-align: center;
+					a {
+						margin: 0 0.25em;
+
+						&:hover {
+							background-color: $color4;
+						}
+					}
+				}
+
+				p.must-log-in {
+					width: 90%;
+
+					a {
+						display: inline-block;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p.nocomments {
+					font-size: 1.1em;
 				}
 			}
 		}
@@ -7060,7 +9525,7 @@ License: GNU General Public License v2 or later
 			height: 65px;
 			.site-branding {
 				.site-logo {
-					width: 12%;
+					width: 17%;
 
 					a {
 						height: 80%;
@@ -7078,6 +9543,7 @@ License: GNU General Public License v2 or later
 				}
 
 				#clashvibes-title {
+					width:100%;
 					h1.site-title {
 						font-size: 2em;
 					}
@@ -7119,7 +9585,7 @@ License: GNU General Public License v2 or later
 
 		div.clashvibes-content {
 			padding: 0;
-			min-height: 1300px;
+
 		}
 
 		#secondary {
@@ -7660,6 +10126,7 @@ License: GNU General Public License v2 or later
 			}
 		}
 	}
+
 }
 @media only screen and (max-width: 414px) {
 	#tog-menu {
@@ -7688,7 +10155,7 @@ License: GNU General Public License v2 or later
 			height: 60px;
 			.site-branding {
 				.site-logo {
-					width: 14%;
+					width: 16%;
 
 					a {
 						div.screen-reader-text {
@@ -7704,6 +10171,7 @@ License: GNU General Public License v2 or later
 				}
 
 				#clashvibes-title {
+					width:83%;
 					h1.site-title {
 						font-size: 1.8em;
 					}
@@ -7882,16 +10350,17 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
+						.meta-content{
+							grid-template-columns: 18% 2fr;
+
 						span.parent-post-link,
 						span.full-size-link,
 						span.comments-link,
 						span.posted-on,
 						span.byline {
 							font-size: 0.75em;
-							height: auto;
-							line-height: 25px;
-
 						}
+					}
 					}
 
 					section.byline {
@@ -8106,33 +10575,31 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+			}
+			.navigation {
+				margin: 0;
 
-				.navigation {
+				h2 {
+					color: $color;
+				}
+				.nav-links {
 					margin: 0;
+					display: block;
+					.nav-next,
+					.nav-previous {
+						display: inline-block;
 
-					h2 {
-						color: $color;
-					}
-					.nav-links{
-						margin:0;
-						display:block;
-						.nav-next,
-						.nav-previous {
-							display: inline-block;
+						a {
+							font-size: 1em;
 
-							a {
-								font-size: 0.9em;
-
-								&:hover {
-
-									font-weight: bold;
-								}
-								&::after {
-									font-size: 1.6em;
-								}
-								&:active {
-									background-color: $color7;
-								}
+							&:hover {
+								font-weight: bold;
+							}
+							&::after {
+								font-size: 1.6em;
+							}
+							&:active {
+								background-color: $color7;
 							}
 						}
 					}
@@ -8489,12 +10956,16 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
-						span.parent-post-link,
-						span.full-size-link,
-						span.comments-link,
-						span.posted-on,
-						span.byline {
-							font-size: 0.75em;
+						.meta-content{
+							grid-template-columns: 20% 2fr;
+
+							span.parent-post-link,
+							span.full-size-link,
+							span.comments-link,
+							span.posted-on,
+							span.byline {
+								font-size: 0.7em;
+							}
 						}
 					}
 
@@ -8711,6 +11182,293 @@ License: GNU General Public License v2 or later
 							width: 100%;
 						}
 					}
+				}
+			}
+			#comments {
+				.navigation {
+					width: 100%;
+
+					h1 {
+						font-size: 1.3em;
+					}
+
+					div.nav-previous,
+					div.nav-next {
+						width: 100%;
+
+						a {
+							margin: 0;
+							&:hover {
+								color: $color4;
+							}
+						}
+					}
+				}
+
+				h2.comments-title {
+					font-size: 1em;
+				}
+
+				ol.comment-list {
+					padding-left: 0;
+
+					li.comment {
+						padding: 0;
+
+						ol.children {
+							margin: auto;
+
+							li.odd {
+								margin: 0;
+
+								article.comment-body {
+									background-color: $color4;
+									footer.comment-meta {
+										height: 60px;
+										margin-top: 0;
+										.comment-author {
+											font-size: 0.75em;
+
+											img {
+												width: 16%;
+											}
+
+											b.fn,
+											cite.fn {
+												line-height: 1.5;
+
+												a {
+													background-color: $color1;
+												}
+											}
+
+											span.says {
+												display: inline-block;
+											}
+										}
+
+										.comment-metadata {
+											font-size: 0.8em;
+
+											a {
+												color: $color11;
+											}
+											span.edit-link {
+												display: inline;
+											}
+										}
+									}
+									.comment-content {
+										p {
+											font-size: 0.75em;
+
+											a {
+												background-color: $color11;
+												&:hover {
+													color: $color11;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						article.comment-body {
+							padding: 0.5em;
+
+							footer.comment-meta {
+								height: 60px;
+
+								.comment-author {
+									font-size: 0.75em;
+
+									img {
+										width: 16%;
+									}
+
+									b.fn,
+									cite.fn {
+										display: inline-block;
+
+										a {
+											background-color: $color1;
+										}
+									}
+
+									span.says {
+										display: inline-block;
+									}
+								}
+
+								.comment-metadata {
+									font-size: 0.8em;
+
+									a {
+										color: $color11;
+									}
+									span.edit-link {
+										display: inline;
+									}
+								}
+							}
+
+							.comment-content {
+								p {
+									font-size: 0.75em;
+
+									a {
+										&:hover {
+											color: $color11;
+										}
+									}
+								}
+							}
+
+							ul.children {
+								margin-left: 0;
+							}
+						}
+					}
+
+					.reply {
+						width: 96%;
+
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				#respond {
+					display: block;
+					clear: both;
+
+					h3#reply-title {
+						font-size: 1em;
+
+						small {
+							a {
+								font-size: 0.9em;
+
+								&:hover {
+									color: $color4;
+								}
+							}
+						}
+					}
+
+					.comment-form {
+						padding: 1em;
+
+						p.comment-notes {
+							font-size: 0.9em;
+						}
+
+						textarea#comment {
+							width: 100%;
+						}
+
+						p.comment-form-author {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-email {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-url {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.form-submit {
+
+							width: 100%;
+
+							input[type="submit"] {
+								width: 60%;
+
+								&:hover {
+									cursor: pointer;
+								}
+							}
+						}
+					}
+				}
+
+				p {
+					padding: 0.5em;
+					a {
+						background-color: unset;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p:last-of-type {
+					text-align: center;
+					a {
+						margin: 0 0.25em;
+
+						&:hover {
+							background-color: $color4;
+						}
+					}
+				}
+
+				p.must-log-in {
+					width: 90%;
+
+					a {
+						display: inline-block;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p.nocomments {
+					font-size: 1.1em;
 				}
 			}
 		}
@@ -9105,12 +11863,16 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
-						span.parent-post-link,
-						span.full-size-link,
-						span.comments-link,
-						span.posted-on,
-						span.byline {
-							font-size: 0.75em;
+						.meta-content{
+							grid-template-columns: 21% 2fr;
+
+							span.parent-post-link,
+							span.full-size-link,
+							span.comments-link,
+							span.posted-on,
+							span.byline {
+								font-size: 0.7em;
+							}
 						}
 					}
 
@@ -9333,6 +12095,293 @@ License: GNU General Public License v2 or later
 							width: 100%;
 						}
 					}
+				}
+			}
+			#comments {
+				.navigation {
+					width: 100%;
+
+					h1 {
+						font-size: 1.3em;
+					}
+
+					div.nav-previous,
+					div.nav-next {
+						width: 100%;
+
+						a {
+							margin: 0;
+							&:hover {
+								color: $color4;
+							}
+						}
+					}
+				}
+
+				h2.comments-title {
+					font-size: 1em;
+				}
+
+				ol.comment-list {
+					padding-left: 0;
+
+					li.comment {
+						padding: 0;
+
+						ol.children {
+							margin: auto;
+
+							li.odd {
+								margin: 0;
+
+								article.comment-body {
+									background-color: $color4;
+									footer.comment-meta {
+										height: 60px;
+										margin-top: 0;
+										.comment-author {
+											font-size: 0.7em;
+
+											img {
+												width: 16%;
+											}
+
+											b.fn,
+											cite.fn {
+												line-height: 1.5;
+
+												a {
+													background-color: $color1;
+												}
+											}
+
+											span.says {
+												display: inline-block;
+											}
+										}
+
+										.comment-metadata {
+											font-size: 0.8em;
+
+											a {
+												color: $color11;
+											}
+											span.edit-link {
+												display: inline;
+											}
+										}
+									}
+									.comment-content {
+										p {
+											font-size: 0.7em;
+
+											a {
+												background-color: $color11;
+												&:hover {
+													color: $color11;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						article.comment-body {
+							padding: 0.5em;
+
+							footer.comment-meta {
+								height: 60px;
+
+								.comment-author {
+									font-size: 0.7em;
+
+									img {
+										width: 16%;
+									}
+
+									b.fn,
+									cite.fn {
+										display: inline-block;
+
+										a {
+											background-color: $color1;
+										}
+									}
+
+									span.says {
+										display: inline-block;
+									}
+								}
+
+								.comment-metadata {
+									font-size: 0.8em;
+
+									a {
+										color: $color11;
+									}
+									span.edit-link {
+										display: inline;
+									}
+								}
+							}
+
+							.comment-content {
+								p {
+									font-size: 0.7em;
+
+									a {
+										&:hover {
+											color: $color11;
+										}
+									}
+								}
+							}
+
+							ul.children {
+								margin-left: 0;
+							}
+						}
+					}
+
+					.reply {
+						width: 96%;
+
+						a {
+							font-size: 1em;
+
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				#respond {
+					display: block;
+					clear: both;
+
+					h3#reply-title {
+						font-size: 1em;
+
+						small {
+							a {
+								font-size: 0.9em;
+
+								&:hover {
+									color: $color4;
+								}
+							}
+						}
+					}
+
+					.comment-form {
+						padding: 1em;
+
+						p.comment-notes {
+							font-size: 0.9em;
+						}
+
+						textarea#comment {
+							width: 100%;
+						}
+
+						p.comment-form-author {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-email {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.comment-form-url {
+							label {
+								height: 30px;
+							}
+
+							input {
+								height: 35px;
+							}
+
+							input:focus,
+							textarea#comment:focus {
+								border: 1px solid rgba(81, 203, 238, 1);
+							}
+						}
+
+						p.form-submit {
+
+							width: 100%;
+
+							input[type="submit"] {
+								width: 60%;
+
+								&:hover {
+									cursor: pointer;
+								}
+							}
+						}
+					}
+				}
+
+				p {
+					padding: 0.5em;
+					a {
+						background-color: unset;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p:last-of-type {
+					text-align: center;
+					a {
+						margin: 0 0.25em;
+
+						&:hover {
+							background-color: $color4;
+						}
+					}
+				}
+
+				p.must-log-in {
+					width: 90%;
+
+					a {
+						display: inline-block;
+
+						&:hover {
+							color: $color11;
+						}
+					}
+				}
+
+				p.nocomments {
+					font-size: 1.1em;
 				}
 			}
 		}

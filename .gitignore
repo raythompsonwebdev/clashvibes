@@ -2,6 +2,7 @@
 .phpintel/
 .sass-cache/
 node_modules/
+
 nbproject/
 images/
 js/old-browser-scripts/
@@ -15,9 +16,7 @@ fonts/
 spare-docs/
 phpcs.xml
 xmlrpc.php
-composer.json
-composer.lock
 videos/
 doumentation/
 
-/vendor/
+vendor/

@@ -18,6 +18,37 @@ Clashvibes is based on Underscores http://underscores.me/,
 License: GNU General Public License v2 or later
 
 */
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	max-width: 100% !important;
+}
+
+* html {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
 /* *GENERAL CLASSES (alpha order)* */
 .left-col {
 	width: 66%;
@@ -122,8 +153,7 @@ div.aligncenter {
 }
 
 /* self-clear floats */
-.clearfix::after {
-	content: '.';
+.clearfix {
 	display: block;
 	clear: both;
 	visibility: hidden;
@@ -131,8 +161,13 @@ div.aligncenter {
 	height: 0;
 }
 
-.clearfix {
-	display: inline-block;
+.clearfix::after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
 }
 
 .clearfix::before,
@@ -231,8 +266,7 @@ a {
 	}
 	/* page container */
 	#page {
-		margin-right: auto;
-		margin-left: auto;
+		margin: auto;
 		width: 86%;
 		height: auto;
 		font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
@@ -275,10 +309,10 @@ a {
 		position: relative;
 		top: 0;
 		left: 0;
-		width: 15%;
-		-webkit-flex: 0 1 auto;
-		-ms-flex: 0 1 auto;
-		flex: 0 1 auto;
+		width: 8%;
+		-webkit-flex: 1 0 auto;
+		-ms-flex: 1 0 auto;
+		flex: 1 0 auto;
 	}
 	#page header.site-header .site-branding .site-logo a {
 		position: absolute;
@@ -322,14 +356,14 @@ a {
 		text-align: center;
 	}
 	#page header.site-header .site-branding #clashvibes-title {
-		width: 85%;
+		width: 92%;
 		display: flex;
 		-webkit-flex-flow: column;
 		-ms-flex-flow: column;
 		flex-flow: column;
-		-webkit-flex: 0 1 auto;
-		-ms-flex: 0 1 auto;
-		flex: 0 1 auto;
+		-webkit-flex: 0 0 auto;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		color: #256b40;
@@ -442,8 +476,8 @@ a {
 	}
 	#page div.clashvibes-content {
 		padding: 0.25em;
-		margin: 0 auto;
-		min-height: 1200px;
+		margin: 0;
+		height: auto;
 		background-color: #fff;
 	}
 	#page h1 {
@@ -1100,58 +1134,6 @@ a {
 		font-weight: bold;
 		letter-spacing: 0.055em;
 	}
-	#page section.contact-wide {
-		/* comments form */
-	}
-	#page section.contact-wide #clashvibes_comments_form div#comments div#respond h3#reply-title {
-		display: block;
-		line-height: 40px;
-		background-color: #262626;
-		color: #fff;
-		text-indent: 0.5em;
-	}
-	#page section.contact-wide #clashvibes_comments_form div#comments div#respond form#commentform {
-		padding: 0.5em;
-	}
-	#page section.contact-wide #clashvibes_comments_form div#comments div#respond form#commentform p.logged-in-as {
-		display: block;
-	}
-	#page section.contact-wide #clashvibes_comments_form div#comments div#respond form#commentform p.logged-in-as a {
-		display: inline-block;
-		line-height: 40px;
-		color: #262626;
-		width: auto;
-		padding: 0 0.5em;
-	}
-	#page section.contact-wide #clashvibes_comments_form div#comments div#respond form#commentform p.logged-in-as a:hover {
-		font-weight: bold;
-	}
-	#page section.contact-wide #clashvibes_comments_form div#comments div#respond form#commentform p.comment-form-comment label {
-		display: block;
-		line-height: 40px;
-		text-align: left;
-		font-weight: bold;
-		font-size: 1.2em;
-		text-indent: 0.5em;
-	}
-	#page section.contact-wide #clashvibes_comments_form div#comments div#respond form#commentform p.comment-form-comment textarea {
-		width: 100%;
-	}
-	#page section.contact-wide #clashvibes_comments_form div#comments div#respond form#commentform p.form-submit input[type='submit'] {
-		display: block;
-		margin: 0 auto;
-		height: 40px;
-		width: 20%;
-		background-color: #262626;
-		color: #fff;
-		border: none;
-		outline: none;
-	}
-	#page section.contact-wide #clashvibes_comments_form div#comments div#respond form#commentform p.form-submit input[type='submit']:hover {
-		cursor: pointer;
-		background-color: #fff;
-		color: #262626;
-	}
 	#page #secondary {
 		float: left;
 		margin: 0;
@@ -1643,10 +1625,7 @@ a {
 	#page #primary article.post header.entry-header div.entry-meta .has-avatar .author-avatar,
 	#page #primary article.search-results header.entry-header div.entry-meta .has-avatar .author-avatar,
 	#page #primary article.page header.entry-header div.entry-meta .has-avatar .author-avatar {
-		width: 90%;
-		height: 90%;
-		margin: 5%;
-		display: block;
+		width: 100%;
 	}
 	#page #primary article.clash-videos header.entry-header div.entry-meta .has-avatar .author-avatar img,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .has-avatar .author-avatar img,
@@ -1654,7 +1633,7 @@ a {
 	#page #primary article.search-results header.entry-header div.entry-meta .has-avatar .author-avatar img,
 	#page #primary article.page header.entry-header div.entry-meta .has-avatar .author-avatar img {
 		height: auto;
-		width: auto;
+		width: 100%;
 	}
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
@@ -1664,10 +1643,10 @@ a {
 		width: 100%;
 		height: auto;
 		display: grid;
-		grid-template-columns: 10% 2fr;
+		grid-template-columns: 9% 2fr;
 		grid-template-rows: 25px 25px 25px 25px;
-		gap: 5px 0px;
-		grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image spare";
+		gap: 2px 2px;
+		grid-template-areas: 'Image posted-on' 'Image byline' 'Image comments-link' 'Image spare';
 	}
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content .posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content .posted-on,
@@ -1705,8 +1684,7 @@ a {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 4fr;
-		gap: 0px 0px;
-		grid-template-areas: ".";
+		grid-template-areas: '.';
 		grid-area: Image;
 	}
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
@@ -1735,7 +1713,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 1em;
-		width: 99%;
+		width: 100%;
 		height: 25px;
 		line-height: 25px;
 		background-color: #253901;
@@ -3115,57 +3093,29 @@ a {
 		color: #262626;
 		width: 100%;
 	}
-	#page #primary article.clash-videos .navigation,
-	#page #primary article.clash-audio .navigation,
-	#page #primary article.post .navigation,
-	#page #primary article.search-results .navigation,
-	#page #primary article.page .navigation {
+	#page #primary .navigation {
 		margin: 0;
 		padding: 0;
 		height: auto;
 	}
-	#page #primary article.clash-videos .navigation h2,
-	#page #primary article.clash-audio .navigation h2,
-	#page #primary article.post .navigation h2,
-	#page #primary article.search-results .navigation h2,
-	#page #primary article.page .navigation h2 {
+	#page #primary .navigation h2 {
 		margin-bottom: 0.2em;
 		color: #fff;
 		background-color: #262626;
 	}
-	#page #primary article.clash-videos .navigation .nav-links,
-	#page #primary article.clash-audio .navigation .nav-links,
-	#page #primary article.post .navigation .nav-links,
-	#page #primary article.search-results .navigation .nav-links,
-	#page #primary article.page .navigation .nav-links {
+	#page #primary .navigation .nav-links {
 		margin: 0;
 		display: block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous,
-	#page #primary article.post .navigation .nav-links .nav-next,
-	#page #primary article.post .navigation .nav-links .nav-previous,
-	#page #primary article.search-results .navigation .nav-links .nav-next,
-	#page #primary article.search-results .navigation .nav-links .nav-previous,
-	#page #primary article.page .navigation .nav-links .nav-next,
-	#page #primary article.page .navigation .nav-links .nav-previous {
+	#page #primary .navigation .nav-links .nav-next,
+	#page #primary .navigation .nav-links .nav-previous {
 		display: inline-block;
 		width: 100%;
 		height: 100%;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a,
-	#page #primary article.post .navigation .nav-links .nav-next a,
-	#page #primary article.post .navigation .nav-links .nav-previous a,
-	#page #primary article.search-results .navigation .nav-links .nav-next a,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a,
-	#page #primary article.page .navigation .nav-links .nav-next a,
-	#page #primary article.page .navigation .nav-links .nav-previous a {
-		font-size: 0.9em;
+	#page #primary .navigation .nav-links .nav-next a,
+	#page #primary .navigation .nav-links .nav-previous a {
+		font-size: 1.1em;
 		width: 100%;
 		display: inline-block;
 		color: #fff;
@@ -3178,30 +3128,14 @@ a {
 		-ms-transition: all 0.2s linear 0s;
 		transition: all 0.2s linear 0s;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.post .navigation .nav-links .nav-next a:hover,
-	#page #primary article.post .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.page .navigation .nav-links .nav-next a:hover,
-	#page #primary article.page .navigation .nav-links .nav-previous a:hover {
+	#page #primary .navigation .nav-links .nav-next a:hover,
+	#page #primary .navigation .nav-links .nav-previous a:hover {
 		color: #262626;
 		background-color: #658905;
 		font-weight: bold;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a::after,
-	#page #primary article.post .navigation .nav-links .nav-next a::after,
-	#page #primary article.post .navigation .nav-links .nav-previous a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-next a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a::after,
-	#page #primary article.page .navigation .nav-links .nav-next a::after,
-	#page #primary article.page .navigation .nav-links .nav-previous a::after {
+	#page #primary .navigation .nav-links .nav-next a::after,
+	#page #primary .navigation .nav-links .nav-previous a::after {
 		font-family: "FontAwesome", "Titillium Web", arial, sans-serif, verdana, helvetica;
 		content: '\f028';
 		font-size: 1.6em;
@@ -3210,18 +3144,458 @@ a {
 		width: 3%;
 		display: block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:active,
-	#page #primary article.post .navigation .nav-links .nav-next a:active,
-	#page #primary article.post .navigation .nav-links .nav-previous a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:active,
-	#page #primary article.page .navigation .nav-links .nav-next a:active,
-	#page #primary article.page .navigation .nav-links .nav-previous a:active {
+	#page #primary .navigation .nav-links .nav-next a:active,
+	#page #primary .navigation .nav-links .nav-previous a:active {
 		background-color: #658905;
 		color: #fff;
+	}
+	#page #primary #comments {
+		/* Comment title */
+	}
+	#page #primary #comments .navigation {
+		height: auto;
+		width: 100%;
+		margin: 1% auto;
+		background-color: #262626;
+		color: #256b40;
+	}
+	#page #primary #comments .navigation h1 {
+		margin: 0 auto;
+		color: #262626;
+		font-size: 1.3em;
+		width: 96%;
+	}
+	#page #primary #comments .navigation div.nav-previous,
+	#page #primary #comments .navigation div.nav-next {
+		width: 100%;
+	}
+	#page #primary #comments .navigation div.nav-previous a,
+	#page #primary #comments .navigation div.nav-next a {
+		height: 40px;
+		margin: 0;
+	}
+	#page #primary #comments .navigation div.nav-previous a:hover,
+	#page #primary #comments .navigation div.nav-next a:hover {
+		color: #262626;
+	}
+	#page #primary #comments h2.comments-title {
+		min-height: 35px;
+		line-height: 35px;
+		text-indent: 1%;
+		width: 96%;
+		font-size: 1em;
+		margin: 2% auto;
+		display: block;
+		height: auto;
+	}
+	#page #primary #comments ol.comment-list {
+		padding-left: 0;
+		margin: 0;
+		list-style: none;
+	}
+	#page #primary #comments ol.comment-list li.comment {
+		padding: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children {
+		margin: auto;
+		padding: 0;
+		width: 100%;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd {
+		margin: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body {
+		background-color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta {
+		height: 60px;
+		margin-top: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author {
+		display: inline-block;
+		height: auto;
+		width: auto;
+		font-size: 0.9em;
+		background-color: #256b40;
+		color: #ebeadd;
+		padding: 0.25em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+		height: auto;
+		margin-right: 0.5em;
+		display: block;
+		float: left;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn {
+		display: inline-block;
+		height: auto;
+		width: auto;
+		padding: 0;
+		text-align: left;
+		line-height: 1.5;
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+		width: auto;
+		height: 100%;
+		color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata {
+		float: right;
+		line-height: 30px;
+		height: auto;
+		padding: 0 0.5em;
+		width: auto;
+		display: block;
+		background-color: #256b40;
+		font-size: 0.8em;
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+		padding: 10px;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p {
+		width: 100%;
+		font-size: 0.9em;
+		line-height: 1.5em;
+		margin: 0 auto;
+		min-height: 100px;
+		color: #262626;
+		background-color: #ebeadd;
+		text-align: left;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a {
+		background-color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body {
+		letter-spacing: 0.1em;
+		padding: 0.5em;
+		display: block;
+		background-color: #658905;
+		height: auto;
+		text-indent: 0;
+		width: 100%;
+		margin: 0.5em auto;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta {
+		height: 60px;
+		margin-top: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author {
+		display: inline-block;
+		height: auto;
+		width: auto;
+		font-size: 0.9em;
+		background-color: #658905;
+		color: #ebeadd;
+		padding: 0.25em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+		height: auto;
+		margin-right: 0.5em;
+		display: block;
+		float: left;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn {
+		display: inline-block;
+		height: auto;
+		width: auto;
+		padding: 0;
+		text-align: left;
+		line-height: 1.5;
+		color: #ebeadd;
+		background-color: #658905;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a, #page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a.url,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a.url {
+		background-color: #658905;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+		width: auto;
+		height: 100%;
+		color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
+		float: right;
+		line-height: 30px;
+		height: auto;
+		padding: 0 0.5em;
+		width: auto;
+		display: block;
+		background-color: #658905;
+		font-size: 0.8em;
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+		padding: 10px;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
+		width: 100%;
+		font-size: 0.9em;
+		line-height: 1.5em;
+		margin: 0 auto;
+		min-height: 100px;
+		color: #262626;
+		background-color: #ebeadd;
+		text-align: left;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a {
+		background-color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body ul.children {
+		width: 100%;
+		margin-left: 0;
+	}
+	#page #primary #comments ol.comment-list .reply {
+		width: 96%;
+		min-height: 35px;
+		margin: 2% auto;
+	}
+	#page #primary #comments ol.comment-list .reply a {
+		display: block;
+		float: right;
+		margin: 0;
+		height: 35px;
+		list-style: none;
+		width: 25%;
+		background-color: #262626;
+		padding: 0;
+		border: none;
+		color: #ebeadd;
+		font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
+		line-height: 35px;
+		text-align: center;
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list .reply a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments #respond {
+		display: block;
+		clear: both;
+	}
+	#page #primary #comments #respond h3#reply-title {
+		width: 92%;
+		margin: 1em auto;
+		padding: 0;
+		font-size: 1em;
+		background-color: #658905;
+		color: #ebeadd;
+		line-height: 35px;
+		text-indent: 0.5em;
+	}
+	#page #primary #comments #respond h3#reply-title small a {
+		font-size: 1em;
+		-webkit-transition: all 0.2s ease-in 0s;
+		-moz-transition: all 0.2s ease-in 0s;
+		-o-transition: all 0.2s ease-in 0s;
+		-ms-transition: all 0.2s ease-in 0s;
+		transition: all 0.2s ease-in 0s;
+		display: inline-block;
+		padding: 0 2%;
+	}
+	#page #primary #comments #respond h3#reply-title small a:hover {
+		color: #262626;
+	}
+	#page #primary #comments #respond .comment-form {
+		width: 82%;
+		height: auto;
+		margin: 2% auto;
+		font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
+		padding: 0;
+	}
+	#page #primary #comments #respond .comment-form p.comment-notes {
+		font-size: 0.9em;
+		width: 95%;
+		letter-spacing: 0.095em;
+		line-height: 1.7em;
+		margin: 0;
+	}
+	#page #primary #comments #respond .comment-form textarea#comment {
+		-webkit-transition: all 0.2s ease-in 0s;
+		-moz-transition: all 0.2s ease-in 0s;
+		-o-transition: all 0.2s ease-in 0s;
+		-ms-transition: all 0.2s ease-in 0s;
+		transition: all 0.2s ease-in 0s;
+		outline: none;
+		padding: 3px 0 3px 3px;
+		margin: 5px 1px 3px 0;
+		border: 1px solid #ddd;
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author label {
+		height: 30px;
+		line-height: 30px;
+		width: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input {
+		-webkit-transition: all 0.2s ease-in 0s;
+		-moz-transition: all 0.2s ease-in 0s;
+		-o-transition: all 0.2s ease-in 0s;
+		-ms-transition: all 0.2s ease-in 0s;
+		transition: all 0.2s ease-in 0s;
+		outline: none;
+		padding: 3px 0 3px 3px;
+		margin: 5px 1px 3px 0;
+		border: 1px solid #ddd;
+		width: 100%;
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+		padding: 3px 0 3px 3px;
+		margin: 5px 1px 3px 0;
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email label {
+		height: 30px;
+		line-height: 30px;
+		width: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input {
+		-webkit-transition: all 0.2s ease-in 0s;
+		-moz-transition: all 0.2s ease-in 0s;
+		-o-transition: all 0.2s ease-in 0s;
+		-ms-transition: all 0.2s ease-in 0s;
+		transition: all 0.2s ease-in 0s;
+		outline: none;
+		padding: 3px 0 3px 3px;
+		margin: 5px 1px 3px 0;
+		border: 1px solid #ddd;
+		width: 100%;
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+		padding: 3px 0 3px 3px;
+		margin: 5px 1px 3px 0;
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url label {
+		height: 30px;
+		line-height: 30px;
+		width: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input {
+		-webkit-transition: all 0.2s ease-in 0s;
+		-moz-transition: all 0.2s ease-in 0s;
+		-o-transition: all 0.2s ease-in 0s;
+		-ms-transition: all 0.2s ease-in 0s;
+		transition: all 0.2s ease-in 0s;
+		outline: none;
+		padding: 3px 0 3px 3px;
+		margin: 5px 1px 3px 0;
+		border: 1px solid #ddd;
+		width: 100%;
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+		padding: 3px 0 3px 3px;
+		margin: 5px 1px 3px 0;
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit {
+		margin: 2% 0;
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+		height: 35px;
+		list-style: none;
+		background-color: #262626;
+		-webkit-transition: all 0.2s ease-in 0s;
+		-moz-transition: all 0.2s ease-in 0s;
+		-o-transition: all 0.2s ease-in 0s;
+		-ms-transition: all 0.2s ease-in 0s;
+		transition: all 0.2s ease-in 0s;
+		padding: 0;
+		border: none;
+		color: #ebeadd;
+		font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
+		width: 15%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+		color: #ebeadd;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	#page #primary #comments p {
+		padding: 0.5em;
+	}
+	#page #primary #comments p a {
+		background-color: unset;
+	}
+	#page #primary #comments p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p:last-of-type {
+		text-align: center;
+	}
+	#page #primary #comments p:last-of-type a {
+		background-color: #ebeadd;
+		line-height: 40px;
+		display: inline-block;
+		width: auto;
+		margin: 0 0.25em;
+		color: #262626;
+	}
+	#page #primary #comments p:last-of-type a:hover {
+		background-color: #262626;
+		color: #ebeadd;
+	}
+	#page #primary #comments p.must-log-in {
+		width: 90%;
+		display: block;
+		line-height: 35px;
+		margin: 1em auto;
+		text-align: center;
+		background-color: #262626;
+	}
+	#page #primary #comments p.must-log-in a {
+		display: inline-block;
+		line-height: 25px;
+		background-color: unset;
+		width: auto;
+	}
+	#page #primary #comments p.must-log-in a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p.nocomments {
+		display: block;
+		margin: 0 auto;
+		width: 96%;
+		line-height: 40px;
+		margin-bottom: 1em;
+		text-align: center;
+		font-size: 1.1em;
 	}
 	#page footer.site-footer {
 		clear: both;
@@ -3339,7 +3713,7 @@ a {
 		height: 70px;
 	}
 	#page header.site-header .site-branding #clashvibes-title {
-		width: 69%;
+		width: 92%;
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 2.4em;
@@ -3373,7 +3747,7 @@ a {
 		font-size: 0.9em;
 	}
 	#page div.clashvibes-content {
-		min-height: 1200px;
+		margin: 0;
 	}
 	#page article#clashvibes-text {
 		padding: 1em;
@@ -3814,7 +4188,7 @@ a {
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content {
-		width: 100%;
+		grid-template-columns: 10% 2fr;
 	}
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
@@ -4700,87 +5074,251 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul li a span {
 		display: block;
 	}
-	#page #primary article.clash-videos .navigation,
-	#page #primary article.clash-audio .navigation,
-	#page #primary article.post .navigation,
-	#page #primary article.search-results .navigation,
-	#page #primary article.page .navigation {
+	#page #primary .navigation {
 		margin: 0;
 	}
-	#page #primary article.clash-videos .navigation h2,
-	#page #primary article.clash-audio .navigation h2,
-	#page #primary article.post .navigation h2,
-	#page #primary article.search-results .navigation h2,
-	#page #primary article.page .navigation h2 {
+	#page #primary .navigation h2 {
 		color: #fff;
 	}
-	#page #primary article.clash-videos .navigation .nav-links,
-	#page #primary article.clash-audio .navigation .nav-links,
-	#page #primary article.post .navigation .nav-links,
-	#page #primary article.search-results .navigation .nav-links,
-	#page #primary article.page .navigation .nav-links {
+	#page #primary .navigation .nav-links {
 		margin: 0;
 		display: block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous,
-	#page #primary article.post .navigation .nav-links .nav-next,
-	#page #primary article.post .navigation .nav-links .nav-previous,
-	#page #primary article.search-results .navigation .nav-links .nav-next,
-	#page #primary article.search-results .navigation .nav-links .nav-previous,
-	#page #primary article.page .navigation .nav-links .nav-next,
-	#page #primary article.page .navigation .nav-links .nav-previous {
+	#page #primary .navigation .nav-links .nav-next,
+	#page #primary .navigation .nav-links .nav-previous {
 		display: inline-block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a,
-	#page #primary article.post .navigation .nav-links .nav-next a,
-	#page #primary article.post .navigation .nav-links .nav-previous a,
-	#page #primary article.search-results .navigation .nav-links .nav-next a,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a,
-	#page #primary article.page .navigation .nav-links .nav-next a,
-	#page #primary article.page .navigation .nav-links .nav-previous a {
-		font-size: 0.9em;
+	#page #primary .navigation .nav-links .nav-next a,
+	#page #primary .navigation .nav-links .nav-previous a {
+		font-size: 1.1em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.post .navigation .nav-links .nav-next a:hover,
-	#page #primary article.post .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.page .navigation .nav-links .nav-next a:hover,
-	#page #primary article.page .navigation .nav-links .nav-previous a:hover {
+	#page #primary .navigation .nav-links .nav-next a:hover,
+	#page #primary .navigation .nav-links .nav-previous a:hover {
 		font-weight: bold;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a::after,
-	#page #primary article.post .navigation .nav-links .nav-next a::after,
-	#page #primary article.post .navigation .nav-links .nav-previous a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-next a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a::after,
-	#page #primary article.page .navigation .nav-links .nav-next a::after,
-	#page #primary article.page .navigation .nav-links .nav-previous a::after {
+	#page #primary .navigation .nav-links .nav-next a::after,
+	#page #primary .navigation .nav-links .nav-previous a::after {
 		font-size: 1.6em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:active,
-	#page #primary article.post .navigation .nav-links .nav-next a:active,
-	#page #primary article.post .navigation .nav-links .nav-previous a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:active,
-	#page #primary article.page .navigation .nav-links .nav-next a:active,
-	#page #primary article.page .navigation .nav-links .nav-previous a:active {
+	#page #primary .navigation .nav-links .nav-next a:active,
+	#page #primary .navigation .nav-links .nav-previous a:active {
 		background-color: #658905;
+	}
+	#page #primary #comments .navigation {
+		width: 100%;
+	}
+	#page #primary #comments .navigation h1 {
+		font-size: 1.3em;
+	}
+	#page #primary #comments .navigation div.nav-previous,
+	#page #primary #comments .navigation div.nav-next {
+		width: 100%;
+	}
+	#page #primary #comments .navigation div.nav-previous a,
+	#page #primary #comments .navigation div.nav-next a {
+		margin: 0;
+	}
+	#page #primary #comments .navigation div.nav-previous a:hover,
+	#page #primary #comments .navigation div.nav-next a:hover {
+		color: #262626;
+	}
+	#page #primary #comments h2.comments-title {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list {
+		padding-left: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment {
+		padding: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children {
+		margin: auto;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd {
+		margin: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body {
+		background-color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta {
+		height: 60px;
+		margin-top: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn {
+		line-height: 1.5;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a {
+		background-color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body {
+		padding: 0.5em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta {
+		height: 60px;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body ul.children {
+		margin-left: 0;
+	}
+	#page #primary #comments ol.comment-list .reply {
+		width: 96%;
+	}
+	#page #primary #comments ol.comment-list .reply a {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list .reply a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments #respond {
+		display: block;
+		clear: both;
+	}
+	#page #primary #comments #respond h3#reply-title {
+		font-size: 1em;
+	}
+	#page #primary #comments #respond h3#reply-title small a {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond h3#reply-title small a:hover {
+		color: #262626;
+	}
+	#page #primary #comments #respond .comment-form {
+		padding: 1em;
+	}
+	#page #primary #comments #respond .comment-form p.comment-notes {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond .comment-form textarea#comment {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+		width: 25%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+		cursor: pointer;
+	}
+	#page #primary #comments p {
+		padding: 0.5em;
+	}
+	#page #primary #comments p a {
+		background-color: unset;
+	}
+	#page #primary #comments p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p:last-of-type {
+		text-align: center;
+	}
+	#page #primary #comments p:last-of-type a {
+		margin: 0 0.25em;
+	}
+	#page #primary #comments p:last-of-type a:hover {
+		background-color: #262626;
+	}
+	#page #primary #comments p.must-log-in {
+		width: 90%;
+	}
+	#page #primary #comments p.must-log-in a {
+		display: inline-block;
+	}
+	#page #primary #comments p.must-log-in a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p.nocomments {
+		font-size: 1.1em;
 	}
 	#page footer.site-footer ul#menu-secondary {
 		width: 12%;
@@ -4821,7 +5359,7 @@ a {
 		height: 70px;
 	}
 	#page header.site-header .site-branding .site-logo {
-		width: 7%;
+		width: 8%;
 	}
 	#page header.site-header .site-branding .site-logo a div.screen-reader-text:focus {
 		font-size: 14px;
@@ -4831,7 +5369,7 @@ a {
 		font-size: 3em;
 	}
 	#page header.site-header .site-branding #clashvibes-title {
-		width: 68%;
+		width: 91%;
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 2.3em;
@@ -4866,7 +5404,7 @@ a {
 		border-right: none;
 	}
 	#page div.clashvibes-content {
-		min-height: 1100px;
+		margin: 0;
 	}
 	#page article#clashvibes-text {
 		padding: 1em;
@@ -5210,6 +5748,7 @@ a {
 	#page #primary {
 		padding: 1%;
 		width: 75%;
+		/* post navigation */
 	}
 	#page #primary h1 {
 		font-size: 1.2em;
@@ -5234,7 +5773,6 @@ a {
 	#page #primary article.page {
 		display: block;
 		/* --- custom post images--- */
-		/* post navigation */
 	}
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
@@ -5270,6 +5808,7 @@ a {
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content {
 		width: 100%;
+		grid-template-columns: 11% 2fr;
 	}
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
@@ -6108,87 +6647,251 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul li a span {
 		display: block;
 	}
-	#page #primary article.clash-videos .navigation,
-	#page #primary article.clash-audio .navigation,
-	#page #primary article.post .navigation,
-	#page #primary article.search-results .navigation,
-	#page #primary article.page .navigation {
+	#page #primary .navigation {
 		margin: 0;
 	}
-	#page #primary article.clash-videos .navigation h2,
-	#page #primary article.clash-audio .navigation h2,
-	#page #primary article.post .navigation h2,
-	#page #primary article.search-results .navigation h2,
-	#page #primary article.page .navigation h2 {
+	#page #primary .navigation h2 {
 		color: #fdd015;
 	}
-	#page #primary article.clash-videos .navigation .nav-links,
-	#page #primary article.clash-audio .navigation .nav-links,
-	#page #primary article.post .navigation .nav-links,
-	#page #primary article.search-results .navigation .nav-links,
-	#page #primary article.page .navigation .nav-links {
+	#page #primary .navigation .nav-links {
 		margin: 0;
 		display: block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous,
-	#page #primary article.post .navigation .nav-links .nav-next,
-	#page #primary article.post .navigation .nav-links .nav-previous,
-	#page #primary article.search-results .navigation .nav-links .nav-next,
-	#page #primary article.search-results .navigation .nav-links .nav-previous,
-	#page #primary article.page .navigation .nav-links .nav-next,
-	#page #primary article.page .navigation .nav-links .nav-previous {
+	#page #primary .navigation .nav-links .nav-next,
+	#page #primary .navigation .nav-links .nav-previous {
 		display: inline-block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a,
-	#page #primary article.post .navigation .nav-links .nav-next a,
-	#page #primary article.post .navigation .nav-links .nav-previous a,
-	#page #primary article.search-results .navigation .nav-links .nav-next a,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a,
-	#page #primary article.page .navigation .nav-links .nav-next a,
-	#page #primary article.page .navigation .nav-links .nav-previous a {
-		font-size: 0.9em;
+	#page #primary .navigation .nav-links .nav-next a,
+	#page #primary .navigation .nav-links .nav-previous a {
+		font-size: 1.1em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.post .navigation .nav-links .nav-next a:hover,
-	#page #primary article.post .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.page .navigation .nav-links .nav-next a:hover,
-	#page #primary article.page .navigation .nav-links .nav-previous a:hover {
+	#page #primary .navigation .nav-links .nav-next a:hover,
+	#page #primary .navigation .nav-links .nav-previous a:hover {
 		font-weight: bold;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a::after,
-	#page #primary article.post .navigation .nav-links .nav-next a::after,
-	#page #primary article.post .navigation .nav-links .nav-previous a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-next a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a::after,
-	#page #primary article.page .navigation .nav-links .nav-next a::after,
-	#page #primary article.page .navigation .nav-links .nav-previous a::after {
+	#page #primary .navigation .nav-links .nav-next a::after,
+	#page #primary .navigation .nav-links .nav-previous a::after {
 		font-size: 1.6em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:active,
-	#page #primary article.post .navigation .nav-links .nav-next a:active,
-	#page #primary article.post .navigation .nav-links .nav-previous a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:active,
-	#page #primary article.page .navigation .nav-links .nav-next a:active,
-	#page #primary article.page .navigation .nav-links .nav-previous a:active {
+	#page #primary .navigation .nav-links .nav-next a:active,
+	#page #primary .navigation .nav-links .nav-previous a:active {
 		background-color: #658905;
+	}
+	#page #primary #comments .navigation {
+		width: 100%;
+	}
+	#page #primary #comments .navigation h1 {
+		font-size: 1.3em;
+	}
+	#page #primary #comments .navigation div.nav-previous,
+	#page #primary #comments .navigation div.nav-next {
+		width: 100%;
+	}
+	#page #primary #comments .navigation div.nav-previous a,
+	#page #primary #comments .navigation div.nav-next a {
+		margin: 0;
+	}
+	#page #primary #comments .navigation div.nav-previous a:hover,
+	#page #primary #comments .navigation div.nav-next a:hover {
+		color: #262626;
+	}
+	#page #primary #comments h2.comments-title {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list {
+		padding-left: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment {
+		padding: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children {
+		margin: auto;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd {
+		margin: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body {
+		background-color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta {
+		height: 60px;
+		margin-top: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn {
+		line-height: 1.5;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a {
+		background-color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body {
+		padding: 0.5em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta {
+		height: 60px;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body ul.children {
+		margin-left: 0;
+	}
+	#page #primary #comments ol.comment-list .reply {
+		width: 96%;
+	}
+	#page #primary #comments ol.comment-list .reply a {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list .reply a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments #respond {
+		display: block;
+		clear: both;
+	}
+	#page #primary #comments #respond h3#reply-title {
+		font-size: 1em;
+	}
+	#page #primary #comments #respond h3#reply-title small a {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond h3#reply-title small a:hover {
+		color: #262626;
+	}
+	#page #primary #comments #respond .comment-form {
+		padding: 1em;
+	}
+	#page #primary #comments #respond .comment-form p.comment-notes {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond .comment-form textarea#comment {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+		width: 25%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+		cursor: pointer;
+	}
+	#page #primary #comments p {
+		padding: 0.5em;
+	}
+	#page #primary #comments p a {
+		background-color: unset;
+	}
+	#page #primary #comments p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p:last-of-type {
+		text-align: center;
+	}
+	#page #primary #comments p:last-of-type a {
+		margin: 0 0.25em;
+	}
+	#page #primary #comments p:last-of-type a:hover {
+		background-color: #262626;
+	}
+	#page #primary #comments p.must-log-in {
+		width: 90%;
+	}
+	#page #primary #comments p.must-log-in a {
+		display: inline-block;
+	}
+	#page #primary #comments p.must-log-in a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p.nocomments {
+		font-size: 1.1em;
 	}
 	#page footer.site-footer ul#menu-secondary {
 		width: 12%;
@@ -6234,7 +6937,7 @@ a {
 		height: 65px;
 	}
 	#page header.site-header .site-branding .site-logo {
-		width: 7%;
+		width: 8%;
 	}
 	#page header.site-header .site-branding .site-logo a div.screen-reader-text:focus {
 		font-size: 14px;
@@ -6244,7 +6947,7 @@ a {
 		font-size: 2em;
 	}
 	#page header.site-header .site-branding #clashvibes-title {
-		width: 60%;
+		width: 91%;
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 2.2em;
@@ -6281,7 +6984,7 @@ a {
 		border-right: none;
 	}
 	#page div.clashvibes-content {
-		min-height: 1000px;
+		margin: 0;
 	}
 	#page article#clashvibes-text {
 		padding: 1em;
@@ -6637,31 +7340,38 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.byline,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.byline,
-	#page #primary article.post header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.post header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.post header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.post header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.post header.entry-header div.entry-meta span.byline,
-	#page #primary article.search-results header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.search-results header.entry-header div.entry-meta span.byline,
-	#page #primary article.page header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.page header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.page header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.page header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta span.byline {
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content {
+		grid-template-columns: 13% 2fr;
+	}
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos a.post-thumbnail,
@@ -6799,6 +7509,13 @@ a {
 	#page #primary article.search-results div.entry-content,
 	#page #primary article.page div.entry-content {
 		width: 98%;
+	}
+	#page #primary article.clash-videos div.entry-content p,
+	#page #primary article.clash-audio div.entry-content p,
+	#page #primary article.post div.entry-content p,
+	#page #primary article.search-results div.entry-content p,
+	#page #primary article.page div.entry-content p {
+		font-size: 0.9em;
 	}
 	#page #primary article.clash-videos div.entry-content p a,
 	#page #primary article.clash-audio div.entry-content p a,
@@ -7414,87 +8131,251 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 76%;
 	}
-	#page #primary article.clash-videos .navigation,
-	#page #primary article.clash-audio .navigation,
-	#page #primary article.post .navigation,
-	#page #primary article.search-results .navigation,
-	#page #primary article.page .navigation {
+	#page #primary .navigation {
 		margin: 0;
 	}
-	#page #primary article.clash-videos .navigation h2,
-	#page #primary article.clash-audio .navigation h2,
-	#page #primary article.post .navigation h2,
-	#page #primary article.search-results .navigation h2,
-	#page #primary article.page .navigation h2 {
+	#page #primary .navigation h2 {
 		color: #fff;
 	}
-	#page #primary article.clash-videos .navigation .nav-links,
-	#page #primary article.clash-audio .navigation .nav-links,
-	#page #primary article.post .navigation .nav-links,
-	#page #primary article.search-results .navigation .nav-links,
-	#page #primary article.page .navigation .nav-links {
+	#page #primary .navigation .nav-links {
 		margin: 0;
 		display: block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous,
-	#page #primary article.post .navigation .nav-links .nav-next,
-	#page #primary article.post .navigation .nav-links .nav-previous,
-	#page #primary article.search-results .navigation .nav-links .nav-next,
-	#page #primary article.search-results .navigation .nav-links .nav-previous,
-	#page #primary article.page .navigation .nav-links .nav-next,
-	#page #primary article.page .navigation .nav-links .nav-previous {
+	#page #primary .navigation .nav-links .nav-next,
+	#page #primary .navigation .nav-links .nav-previous {
 		display: inline-block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a,
-	#page #primary article.post .navigation .nav-links .nav-next a,
-	#page #primary article.post .navigation .nav-links .nav-previous a,
-	#page #primary article.search-results .navigation .nav-links .nav-next a,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a,
-	#page #primary article.page .navigation .nav-links .nav-next a,
-	#page #primary article.page .navigation .nav-links .nav-previous a {
-		font-size: 0.9em;
+	#page #primary .navigation .nav-links .nav-next a,
+	#page #primary .navigation .nav-links .nav-previous a {
+		font-size: 1.1em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.post .navigation .nav-links .nav-next a:hover,
-	#page #primary article.post .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.page .navigation .nav-links .nav-next a:hover,
-	#page #primary article.page .navigation .nav-links .nav-previous a:hover {
+	#page #primary .navigation .nav-links .nav-next a:hover,
+	#page #primary .navigation .nav-links .nav-previous a:hover {
 		font-weight: bold;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a::after,
-	#page #primary article.post .navigation .nav-links .nav-next a::after,
-	#page #primary article.post .navigation .nav-links .nav-previous a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-next a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a::after,
-	#page #primary article.page .navigation .nav-links .nav-next a::after,
-	#page #primary article.page .navigation .nav-links .nav-previous a::after {
+	#page #primary .navigation .nav-links .nav-next a::after,
+	#page #primary .navigation .nav-links .nav-previous a::after {
 		font-size: 1.6em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:active,
-	#page #primary article.post .navigation .nav-links .nav-next a:active,
-	#page #primary article.post .navigation .nav-links .nav-previous a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:active,
-	#page #primary article.page .navigation .nav-links .nav-next a:active,
-	#page #primary article.page .navigation .nav-links .nav-previous a:active {
+	#page #primary .navigation .nav-links .nav-next a:active,
+	#page #primary .navigation .nav-links .nav-previous a:active {
 		background-color: #658905;
+	}
+	#page #primary #comments .navigation {
+		width: 100%;
+	}
+	#page #primary #comments .navigation h1 {
+		font-size: 1.3em;
+	}
+	#page #primary #comments .navigation div.nav-previous,
+	#page #primary #comments .navigation div.nav-next {
+		width: 100%;
+	}
+	#page #primary #comments .navigation div.nav-previous a,
+	#page #primary #comments .navigation div.nav-next a {
+		margin: 0;
+	}
+	#page #primary #comments .navigation div.nav-previous a:hover,
+	#page #primary #comments .navigation div.nav-next a:hover {
+		color: #262626;
+	}
+	#page #primary #comments h2.comments-title {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list {
+		padding-left: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment {
+		padding: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children {
+		margin: auto;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd {
+		margin: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body {
+		background-color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta {
+		height: 60px;
+		margin-top: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn {
+		line-height: 1.5;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a {
+		background-color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body {
+		padding: 0.5em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta {
+		height: 60px;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body ul.children {
+		margin-left: 0;
+	}
+	#page #primary #comments ol.comment-list .reply {
+		width: 96%;
+	}
+	#page #primary #comments ol.comment-list .reply a {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list .reply a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments #respond {
+		display: block;
+		clear: both;
+	}
+	#page #primary #comments #respond h3#reply-title {
+		font-size: 1em;
+	}
+	#page #primary #comments #respond h3#reply-title small a {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond h3#reply-title small a:hover {
+		color: #262626;
+	}
+	#page #primary #comments #respond .comment-form {
+		padding: 1em;
+	}
+	#page #primary #comments #respond .comment-form p.comment-notes {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond .comment-form textarea#comment {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+		width: 25%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+		cursor: pointer;
+	}
+	#page #primary #comments p {
+		padding: 0.5em;
+	}
+	#page #primary #comments p a {
+		background-color: unset;
+	}
+	#page #primary #comments p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p:last-of-type {
+		text-align: center;
+	}
+	#page #primary #comments p:last-of-type a {
+		margin: 0 0.25em;
+	}
+	#page #primary #comments p:last-of-type a:hover {
+		background-color: #262626;
+	}
+	#page #primary #comments p.must-log-in {
+		width: 90%;
+	}
+	#page #primary #comments p.must-log-in a {
+		display: inline-block;
+	}
+	#page #primary #comments p.must-log-in a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p.nocomments {
+		font-size: 1.1em;
 	}
 	#page footer.site-footer ul#menu-secondary {
 		width: 12%;
@@ -7537,6 +8418,15 @@ a {
 	#page header.site-header {
 		height: 65px;
 	}
+	#page header.site-header .site-branding .site-logo {
+		width: 10%;
+	}
+	#page header.site-header .site-branding .site-logo a div.site-firstletter {
+		font-size: 2em;
+	}
+	#page header.site-header .site-branding #clashvibes-title {
+		width: 88%;
+	}
 	#page header.site-header .site-branding #clashvibes-title h2.site-description {
 		font-size: 0.7em;
 	}
@@ -7562,7 +8452,7 @@ a {
 		font-size: 0.85em;
 	}
 	#page div.clashvibes-content {
-		min-height: 1150px;
+		margin: 0;
 	}
 	#page article#clashvibes-text {
 		padding: 1em;
@@ -7972,31 +8862,38 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.byline,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.byline,
-	#page #primary article.post header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.post header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.post header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.post header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.post header.entry-header div.entry-meta span.byline,
-	#page #primary article.search-results header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.search-results header.entry-header div.entry-meta span.byline,
-	#page #primary article.page header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.page header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.page header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.page header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta span.byline {
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content {
+		grid-template-columns: 16% 2fr;
+	}
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos a.post-thumbnail,
@@ -8134,6 +9031,13 @@ a {
 	#page #primary article.search-results div.entry-content,
 	#page #primary article.page div.entry-content {
 		width: 98%;
+	}
+	#page #primary article.clash-videos div.entry-content p,
+	#page #primary article.clash-audio div.entry-content p,
+	#page #primary article.post div.entry-content p,
+	#page #primary article.search-results div.entry-content p,
+	#page #primary article.page div.entry-content p {
+		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos div.entry-content p a,
 	#page #primary article.clash-audio div.entry-content p a,
@@ -8780,87 +9684,251 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 100%;
 	}
-	#page #primary article.clash-videos .navigation,
-	#page #primary article.clash-audio .navigation,
-	#page #primary article.post .navigation,
-	#page #primary article.search-results .navigation,
-	#page #primary article.page .navigation {
+	#page #primary .navigation {
 		margin: 0;
 	}
-	#page #primary article.clash-videos .navigation h2,
-	#page #primary article.clash-audio .navigation h2,
-	#page #primary article.post .navigation h2,
-	#page #primary article.search-results .navigation h2,
-	#page #primary article.page .navigation h2 {
+	#page #primary .navigation h2 {
 		color: #fff;
 	}
-	#page #primary article.clash-videos .navigation .nav-links,
-	#page #primary article.clash-audio .navigation .nav-links,
-	#page #primary article.post .navigation .nav-links,
-	#page #primary article.search-results .navigation .nav-links,
-	#page #primary article.page .navigation .nav-links {
+	#page #primary .navigation .nav-links {
 		margin: 0;
 		display: block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous,
-	#page #primary article.post .navigation .nav-links .nav-next,
-	#page #primary article.post .navigation .nav-links .nav-previous,
-	#page #primary article.search-results .navigation .nav-links .nav-next,
-	#page #primary article.search-results .navigation .nav-links .nav-previous,
-	#page #primary article.page .navigation .nav-links .nav-next,
-	#page #primary article.page .navigation .nav-links .nav-previous {
+	#page #primary .navigation .nav-links .nav-next,
+	#page #primary .navigation .nav-links .nav-previous {
 		display: inline-block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a,
-	#page #primary article.post .navigation .nav-links .nav-next a,
-	#page #primary article.post .navigation .nav-links .nav-previous a,
-	#page #primary article.search-results .navigation .nav-links .nav-next a,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a,
-	#page #primary article.page .navigation .nav-links .nav-next a,
-	#page #primary article.page .navigation .nav-links .nav-previous a {
-		font-size: 0.9em;
+	#page #primary .navigation .nav-links .nav-next a,
+	#page #primary .navigation .nav-links .nav-previous a {
+		font-size: 1.1em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.post .navigation .nav-links .nav-next a:hover,
-	#page #primary article.post .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.page .navigation .nav-links .nav-next a:hover,
-	#page #primary article.page .navigation .nav-links .nav-previous a:hover {
+	#page #primary .navigation .nav-links .nav-next a:hover,
+	#page #primary .navigation .nav-links .nav-previous a:hover {
 		font-weight: bold;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a::after,
-	#page #primary article.post .navigation .nav-links .nav-next a::after,
-	#page #primary article.post .navigation .nav-links .nav-previous a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-next a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a::after,
-	#page #primary article.page .navigation .nav-links .nav-next a::after,
-	#page #primary article.page .navigation .nav-links .nav-previous a::after {
+	#page #primary .navigation .nav-links .nav-next a::after,
+	#page #primary .navigation .nav-links .nav-previous a::after {
 		font-size: 1.6em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:active,
-	#page #primary article.post .navigation .nav-links .nav-next a:active,
-	#page #primary article.post .navigation .nav-links .nav-previous a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:active,
-	#page #primary article.page .navigation .nav-links .nav-next a:active,
-	#page #primary article.page .navigation .nav-links .nav-previous a:active {
+	#page #primary .navigation .nav-links .nav-next a:active,
+	#page #primary .navigation .nav-links .nav-previous a:active {
 		background-color: #658905;
+	}
+	#page #primary #comments .navigation {
+		width: 100%;
+	}
+	#page #primary #comments .navigation h1 {
+		font-size: 1.3em;
+	}
+	#page #primary #comments .navigation div.nav-previous,
+	#page #primary #comments .navigation div.nav-next {
+		width: 100%;
+	}
+	#page #primary #comments .navigation div.nav-previous a,
+	#page #primary #comments .navigation div.nav-next a {
+		margin: 0;
+	}
+	#page #primary #comments .navigation div.nav-previous a:hover,
+	#page #primary #comments .navigation div.nav-next a:hover {
+		color: #262626;
+	}
+	#page #primary #comments h2.comments-title {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list {
+		padding-left: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment {
+		padding: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children {
+		margin: auto;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd {
+		margin: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body {
+		background-color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta {
+		height: 60px;
+		margin-top: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn {
+		line-height: 1.5;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a {
+		background-color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body {
+		padding: 0.5em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta {
+		height: 60px;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
+		font-size: 0.9em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body ul.children {
+		margin-left: 0;
+	}
+	#page #primary #comments ol.comment-list .reply {
+		width: 96%;
+	}
+	#page #primary #comments ol.comment-list .reply a {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list .reply a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments #respond {
+		display: block;
+		clear: both;
+	}
+	#page #primary #comments #respond h3#reply-title {
+		font-size: 1em;
+	}
+	#page #primary #comments #respond h3#reply-title small a {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond h3#reply-title small a:hover {
+		color: #262626;
+	}
+	#page #primary #comments #respond .comment-form {
+		padding: 1em;
+	}
+	#page #primary #comments #respond .comment-form p.comment-notes {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond .comment-form textarea#comment {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+		width: 35%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+		cursor: pointer;
+	}
+	#page #primary #comments p {
+		padding: 0.5em;
+	}
+	#page #primary #comments p a {
+		background-color: unset;
+	}
+	#page #primary #comments p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p:last-of-type {
+		text-align: center;
+	}
+	#page #primary #comments p:last-of-type a {
+		margin: 0 0.25em;
+	}
+	#page #primary #comments p:last-of-type a:hover {
+		background-color: #262626;
+	}
+	#page #primary #comments p.must-log-in {
+		width: 90%;
+	}
+	#page #primary #comments p.must-log-in a {
+		display: inline-block;
+	}
+	#page #primary #comments p.must-log-in a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p.nocomments {
+		font-size: 1.1em;
 	}
 	#page footer.site-footer ul#menu-secondary {
 		width: 12%;
@@ -8944,17 +10012,13 @@ a {
 		height: 65px;
 	}
 	#page header.site-header .site-branding .site-logo {
-		width: 9%;
-	}
-	#page header.site-header .site-branding .site-logo a div.screen-reader-text:focus {
-		font-size: 14px;
-		font-size: 0.875rem;
+		width: 10%;
 	}
 	#page header.site-header .site-branding .site-logo a div.site-firstletter {
 		font-size: 3em;
 	}
 	#page header.site-header .site-branding #clashvibes-title {
-		width: 90%;
+		width: 88%;
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 2.2em;
@@ -9019,7 +10083,6 @@ a {
 	}
 	#page div.clashvibes-content {
 		padding: 0;
-		min-height: 1250px;
 	}
 	#page #secondary {
 		width: 250px;
@@ -9177,7 +10240,8 @@ a {
 		color: #ebeadd;
 	}
 	#page #primary {
-		width: 98%;
+		width: 95%;
+		float: none;
 		/* blog */
 	}
 	#page #primary h1 {
@@ -9220,9 +10284,11 @@ a {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 1em;
+		font-size: 1.3em;
 		text-indent: 0;
 		text-align: center;
+		height: 40px;
+		line-height: 40px;
 	}
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
@@ -9260,31 +10326,38 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		text-align: center;
 	}
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.byline,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.byline,
-	#page #primary article.post header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.post header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.post header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.post header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.post header.entry-header div.entry-meta span.byline,
-	#page #primary article.search-results header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.search-results header.entry-header div.entry-meta span.byline,
-	#page #primary article.page header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.page header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.page header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.page header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta span.byline {
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content {
+		grid-template-columns: 15% 2fr;
+	}
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos header.entry-header section.byline,
@@ -10098,89 +11171,253 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 100%;
 	}
-	#page #primary article.clash-videos .navigation,
-	#page #primary article.clash-audio .navigation,
-	#page #primary article.post .navigation,
-	#page #primary article.search-results .navigation,
-	#page #primary article.page .navigation {
+	#page #primary .navigation {
 		margin: 0;
 	}
-	#page #primary article.clash-videos .navigation h2,
-	#page #primary article.clash-audio .navigation h2,
-	#page #primary article.post .navigation h2,
-	#page #primary article.search-results .navigation h2,
-	#page #primary article.page .navigation h2 {
+	#page #primary .navigation h2 {
 		color: #fff;
 		text-align: center;
 		font-size: 1.2em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links,
-	#page #primary article.clash-audio .navigation .nav-links,
-	#page #primary article.post .navigation .nav-links,
-	#page #primary article.search-results .navigation .nav-links,
-	#page #primary article.page .navigation .nav-links {
+	#page #primary .navigation .nav-links {
 		margin: 0;
 		display: block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous,
-	#page #primary article.post .navigation .nav-links .nav-next,
-	#page #primary article.post .navigation .nav-links .nav-previous,
-	#page #primary article.search-results .navigation .nav-links .nav-next,
-	#page #primary article.search-results .navigation .nav-links .nav-previous,
-	#page #primary article.page .navigation .nav-links .nav-next,
-	#page #primary article.page .navigation .nav-links .nav-previous {
+	#page #primary .navigation .nav-links .nav-next,
+	#page #primary .navigation .nav-links .nav-previous {
 		display: inline-block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a,
-	#page #primary article.post .navigation .nav-links .nav-next a,
-	#page #primary article.post .navigation .nav-links .nav-previous a,
-	#page #primary article.search-results .navigation .nav-links .nav-next a,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a,
-	#page #primary article.page .navigation .nav-links .nav-next a,
-	#page #primary article.page .navigation .nav-links .nav-previous a {
-		font-size: 0.9em;
+	#page #primary .navigation .nav-links .nav-next a,
+	#page #primary .navigation .nav-links .nav-previous a {
+		font-size: 1em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.post .navigation .nav-links .nav-next a:hover,
-	#page #primary article.post .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.page .navigation .nav-links .nav-next a:hover,
-	#page #primary article.page .navigation .nav-links .nav-previous a:hover {
+	#page #primary .navigation .nav-links .nav-next a:hover,
+	#page #primary .navigation .nav-links .nav-previous a:hover {
 		font-weight: bold;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a::after,
-	#page #primary article.post .navigation .nav-links .nav-next a::after,
-	#page #primary article.post .navigation .nav-links .nav-previous a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-next a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a::after,
-	#page #primary article.page .navigation .nav-links .nav-next a::after,
-	#page #primary article.page .navigation .nav-links .nav-previous a::after {
+	#page #primary .navigation .nav-links .nav-next a::after,
+	#page #primary .navigation .nav-links .nav-previous a::after {
 		font-size: 1.6em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:active,
-	#page #primary article.post .navigation .nav-links .nav-next a:active,
-	#page #primary article.post .navigation .nav-links .nav-previous a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:active,
-	#page #primary article.page .navigation .nav-links .nav-next a:active,
-	#page #primary article.page .navigation .nav-links .nav-previous a:active {
+	#page #primary .navigation .nav-links .nav-next a:active,
+	#page #primary .navigation .nav-links .nav-previous a:active {
 		background-color: #658905;
+	}
+	#page #primary #comments .navigation {
+		width: 100%;
+	}
+	#page #primary #comments .navigation h1 {
+		font-size: 1.3em;
+	}
+	#page #primary #comments .navigation div.nav-previous,
+	#page #primary #comments .navigation div.nav-next {
+		width: 100%;
+	}
+	#page #primary #comments .navigation div.nav-previous a,
+	#page #primary #comments .navigation div.nav-next a {
+		margin: 0;
+	}
+	#page #primary #comments .navigation div.nav-previous a:hover,
+	#page #primary #comments .navigation div.nav-next a:hover {
+		color: #262626;
+	}
+	#page #primary #comments h2.comments-title {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list {
+		padding-left: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment {
+		padding: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children {
+		margin: auto;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd {
+		margin: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body {
+		background-color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta {
+		height: 60px;
+		margin-top: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.85em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn {
+		line-height: 1.5;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p {
+		font-size: 0.85em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a {
+		background-color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body {
+		padding: 0.5em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta {
+		height: 60px;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.85em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
+		font-size: 0.85em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body ul.children {
+		margin-left: 0;
+	}
+	#page #primary #comments ol.comment-list .reply {
+		width: 96%;
+	}
+	#page #primary #comments ol.comment-list .reply a {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list .reply a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments #respond {
+		display: block;
+		clear: both;
+	}
+	#page #primary #comments #respond h3#reply-title {
+		font-size: 1em;
+	}
+	#page #primary #comments #respond h3#reply-title small a {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond h3#reply-title small a:hover {
+		color: #262626;
+	}
+	#page #primary #comments #respond .comment-form {
+		padding: 1em;
+	}
+	#page #primary #comments #respond .comment-form p.comment-notes {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond .comment-form textarea#comment {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+		width: 45%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+		cursor: pointer;
+	}
+	#page #primary #comments p {
+		padding: 0.5em;
+	}
+	#page #primary #comments p a {
+		background-color: unset;
+	}
+	#page #primary #comments p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p:last-of-type {
+		text-align: center;
+	}
+	#page #primary #comments p:last-of-type a {
+		margin: 0 0.25em;
+	}
+	#page #primary #comments p:last-of-type a:hover {
+		background-color: #262626;
+	}
+	#page #primary #comments p.must-log-in {
+		width: 90%;
+	}
+	#page #primary #comments p.must-log-in a {
+		display: inline-block;
+	}
+	#page #primary #comments p.must-log-in a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p.nocomments {
+		font-size: 1.1em;
 	}
 	#page article#clashvibes-text {
 		padding: 1em;
@@ -10348,7 +11585,7 @@ a {
 @media only screen and (max-width: 640px) {
 	#tog-menu {
 		width: 30%;
-		left: calc(68% - 1vw);
+		left: calc(57% - 1vw);
 	}
 	#tog-menu button.menu-toggle,
 	#tog-menu button.sidebar_toggle {
@@ -10379,7 +11616,7 @@ a {
 		height: 70px;
 	}
 	#page header.site-header .site-branding .site-logo {
-		width: 10%;
+		width: 12%;
 	}
 	#page header.site-header .site-branding .site-logo a div.screen-reader-text:focus {
 		font-size: 14px;
@@ -10389,7 +11626,7 @@ a {
 		font-size: 3em;
 	}
 	#page header.site-header .site-branding #clashvibes-title {
-		width: 85%;
+		width: 87%;
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 2em;
@@ -10426,7 +11663,6 @@ a {
 	}
 	#page div.clashvibes-content {
 		padding: 0;
-		min-height: 1150px;
 	}
 	#page #secondary {
 		position: fixed;
@@ -10622,32 +11858,39 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.byline,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.byline,
-	#page #primary article.post header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.post header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.post header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.post header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.post header.entry-header div.entry-meta span.byline,
-	#page #primary article.search-results header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.search-results header.entry-header div.entry-meta span.byline,
-	#page #primary article.page header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.page header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.page header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.page header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta span.byline {
-		font-size: 0.85em;
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content {
+		grid-template-columns: 17% 2fr;
+	}
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+		font-size: 0.80em;
 	}
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
@@ -11427,6 +12670,222 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 100%;
 	}
+	#page #primary #comments .navigation {
+		width: 100%;
+	}
+	#page #primary #comments .navigation h1 {
+		font-size: 1.3em;
+	}
+	#page #primary #comments .navigation div.nav-previous,
+	#page #primary #comments .navigation div.nav-next {
+		width: 100%;
+	}
+	#page #primary #comments .navigation div.nav-previous a,
+	#page #primary #comments .navigation div.nav-next a {
+		margin: 0;
+	}
+	#page #primary #comments .navigation div.nav-previous a:hover,
+	#page #primary #comments .navigation div.nav-next a:hover {
+		color: #262626;
+	}
+	#page #primary #comments h2.comments-title {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list {
+		padding-left: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment {
+		padding: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children {
+		margin: auto;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd {
+		margin: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body {
+		background-color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta {
+		height: 60px;
+		margin-top: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn {
+		line-height: 1.5;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p {
+		font-size: 0.85em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a {
+		background-color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body {
+		padding: 0.5em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta {
+		height: 60px;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
+		font-size: 0.85em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body ul.children {
+		margin-left: 0;
+	}
+	#page #primary #comments ol.comment-list .reply {
+		width: 96%;
+	}
+	#page #primary #comments ol.comment-list .reply a {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list .reply a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments #respond {
+		display: block;
+		clear: both;
+	}
+	#page #primary #comments #respond h3#reply-title {
+		font-size: 1em;
+	}
+	#page #primary #comments #respond h3#reply-title small a {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond h3#reply-title small a:hover {
+		color: #262626;
+	}
+	#page #primary #comments #respond .comment-form {
+		padding: 1em;
+	}
+	#page #primary #comments #respond .comment-form p.comment-notes {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond .comment-form textarea#comment {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+		width: 45%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+		cursor: pointer;
+	}
+	#page #primary #comments p {
+		padding: 0.5em;
+	}
+	#page #primary #comments p a {
+		background-color: unset;
+	}
+	#page #primary #comments p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p:last-of-type {
+		text-align: center;
+	}
+	#page #primary #comments p:last-of-type a {
+		margin: 0 0.25em;
+	}
+	#page #primary #comments p:last-of-type a:hover {
+		background-color: #262626;
+	}
+	#page #primary #comments p.must-log-in {
+		width: 90%;
+	}
+	#page #primary #comments p.must-log-in a {
+		display: inline-block;
+	}
+	#page #primary #comments p.must-log-in a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p.nocomments {
+		font-size: 1.1em;
+	}
 	#page article#clashvibes-text {
 		padding: 1em;
 	}
@@ -11697,13 +13156,16 @@ a {
 		height: 70px;
 	}
 	#page header.site-header .site-branding .site-logo {
-		width: 11%;
+		width: 15%;
 	}
 	#page header.site-header .site-branding .site-logo a div.screen-reader-text:focus {
 		font-size: 14px;
 	}
 	#page header.site-header .site-branding .site-logo a div.site-firstletter {
 		font-size: 3em;
+	}
+	#page header.site-header .site-branding #clashvibes-title {
+		width: 84%;
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 2em;
@@ -11924,6 +13386,50 @@ a {
 	#page #primary article.search-results header.entry-header h2.entry-title a,
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
+	}
+	#page #primary article.clash-videos header.entry-header div.entry-meta,
+	#page #primary article.clash-audio header.entry-header div.entry-meta,
+	#page #primary article.post header.entry-header div.entry-meta,
+	#page #primary article.search-results header.entry-header div.entry-meta,
+	#page #primary article.page header.entry-header div.entry-meta {
+		display: block;
+	}
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content {
+		grid-template-columns: 16% 2fr;
+		grid-template-rows: 20px 20px 20px 20px;
+	}
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+		font-size: 0.75em;
+		height: 20px;
+		line-height: 20px;
 	}
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
@@ -12632,87 +14138,251 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 100%;
 	}
-	#page #primary article.clash-videos .navigation,
-	#page #primary article.clash-audio .navigation,
-	#page #primary article.post .navigation,
-	#page #primary article.search-results .navigation,
-	#page #primary article.page .navigation {
+	#page #primary .navigation {
 		margin: 0;
 	}
-	#page #primary article.clash-videos .navigation h2,
-	#page #primary article.clash-audio .navigation h2,
-	#page #primary article.post .navigation h2,
-	#page #primary article.search-results .navigation h2,
-	#page #primary article.page .navigation h2 {
+	#page #primary .navigation h2 {
 		color: #fff;
 	}
-	#page #primary article.clash-videos .navigation .nav-links,
-	#page #primary article.clash-audio .navigation .nav-links,
-	#page #primary article.post .navigation .nav-links,
-	#page #primary article.search-results .navigation .nav-links,
-	#page #primary article.page .navigation .nav-links {
+	#page #primary .navigation .nav-links {
 		margin: 0;
 		display: block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous,
-	#page #primary article.post .navigation .nav-links .nav-next,
-	#page #primary article.post .navigation .nav-links .nav-previous,
-	#page #primary article.search-results .navigation .nav-links .nav-next,
-	#page #primary article.search-results .navigation .nav-links .nav-previous,
-	#page #primary article.page .navigation .nav-links .nav-next,
-	#page #primary article.page .navigation .nav-links .nav-previous {
+	#page #primary .navigation .nav-links .nav-next,
+	#page #primary .navigation .nav-links .nav-previous {
 		display: inline-block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a,
-	#page #primary article.post .navigation .nav-links .nav-next a,
-	#page #primary article.post .navigation .nav-links .nav-previous a,
-	#page #primary article.search-results .navigation .nav-links .nav-next a,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a,
-	#page #primary article.page .navigation .nav-links .nav-next a,
-	#page #primary article.page .navigation .nav-links .nav-previous a {
-		font-size: 0.9em;
+	#page #primary .navigation .nav-links .nav-next a,
+	#page #primary .navigation .nav-links .nav-previous a {
+		font-size: 1em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.post .navigation .nav-links .nav-next a:hover,
-	#page #primary article.post .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.page .navigation .nav-links .nav-next a:hover,
-	#page #primary article.page .navigation .nav-links .nav-previous a:hover {
+	#page #primary .navigation .nav-links .nav-next a:hover,
+	#page #primary .navigation .nav-links .nav-previous a:hover {
 		font-weight: bold;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a::after,
-	#page #primary article.post .navigation .nav-links .nav-next a::after,
-	#page #primary article.post .navigation .nav-links .nav-previous a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-next a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a::after,
-	#page #primary article.page .navigation .nav-links .nav-next a::after,
-	#page #primary article.page .navigation .nav-links .nav-previous a::after {
+	#page #primary .navigation .nav-links .nav-next a::after,
+	#page #primary .navigation .nav-links .nav-previous a::after {
 		font-size: 1.6em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:active,
-	#page #primary article.post .navigation .nav-links .nav-next a:active,
-	#page #primary article.post .navigation .nav-links .nav-previous a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:active,
-	#page #primary article.page .navigation .nav-links .nav-next a:active,
-	#page #primary article.page .navigation .nav-links .nav-previous a:active {
+	#page #primary .navigation .nav-links .nav-next a:active,
+	#page #primary .navigation .nav-links .nav-previous a:active {
 		background-color: #658905;
+	}
+	#page #primary #comments .navigation {
+		width: 100%;
+	}
+	#page #primary #comments .navigation h1 {
+		font-size: 1.3em;
+	}
+	#page #primary #comments .navigation div.nav-previous,
+	#page #primary #comments .navigation div.nav-next {
+		width: 100%;
+	}
+	#page #primary #comments .navigation div.nav-previous a,
+	#page #primary #comments .navigation div.nav-next a {
+		margin: 0;
+	}
+	#page #primary #comments .navigation div.nav-previous a:hover,
+	#page #primary #comments .navigation div.nav-next a:hover {
+		color: #262626;
+	}
+	#page #primary #comments h2.comments-title {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list {
+		padding-left: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment {
+		padding: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children {
+		margin: auto;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd {
+		margin: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body {
+		background-color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta {
+		height: 60px;
+		margin-top: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.75em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn {
+		line-height: 1.5;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p {
+		font-size: 0.75em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a {
+		background-color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body {
+		padding: 0.5em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta {
+		height: 60px;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.7em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author img {
+		width: 13%;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.7em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
+		font-size: 0.75em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body ul.children {
+		margin-left: 0;
+	}
+	#page #primary #comments ol.comment-list .reply {
+		width: 96%;
+	}
+	#page #primary #comments ol.comment-list .reply a {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list .reply a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments #respond {
+		display: block;
+		clear: both;
+	}
+	#page #primary #comments #respond h3#reply-title {
+		font-size: 1em;
+	}
+	#page #primary #comments #respond h3#reply-title small a {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond h3#reply-title small a:hover {
+		color: #262626;
+	}
+	#page #primary #comments #respond .comment-form {
+		padding: 1em;
+	}
+	#page #primary #comments #respond .comment-form p.comment-notes {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond .comment-form textarea#comment {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+		width: 55%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+		cursor: pointer;
+	}
+	#page #primary #comments p {
+		padding: 0.5em;
+	}
+	#page #primary #comments p a {
+		background-color: unset;
+	}
+	#page #primary #comments p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p:last-of-type {
+		text-align: center;
+	}
+	#page #primary #comments p:last-of-type a {
+		margin: 0 0.25em;
+	}
+	#page #primary #comments p:last-of-type a:hover {
+		background-color: #262626;
+	}
+	#page #primary #comments p.must-log-in {
+		width: 90%;
+	}
+	#page #primary #comments p.must-log-in a {
+		display: inline-block;
+	}
+	#page #primary #comments p.must-log-in a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p.nocomments {
+		font-size: 1.1em;
 	}
 	#page article#clashvibes-text {
 		padding: 1em;
@@ -12961,7 +14631,7 @@ a {
 		height: 65px;
 	}
 	#page header.site-header .site-branding .site-logo {
-		width: 12%;
+		width: 17%;
 	}
 	#page header.site-header .site-branding .site-logo a {
 		height: 80%;
@@ -12971,6 +14641,9 @@ a {
 	}
 	#page header.site-header .site-branding .site-logo a div.site-firstletter {
 		font-size: 3em;
+	}
+	#page header.site-header .site-branding #clashvibes-title {
+		width: 100%;
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 2em;
@@ -12999,7 +14672,6 @@ a {
 	}
 	#page div.clashvibes-content {
 		padding: 0;
-		min-height: 1300px;
 	}
 	#page #secondary h1 {
 		position: relative;
@@ -14221,13 +15893,16 @@ a {
 		height: 60px;
 	}
 	#page header.site-header .site-branding .site-logo {
-		width: 14%;
+		width: 16%;
 	}
 	#page header.site-header .site-branding .site-logo a div.screen-reader-text:focus {
 		font-size: 14px;
 	}
 	#page header.site-header .site-branding .site-logo a div.site-firstletter {
 		font-size: 2em;
+	}
+	#page header.site-header .site-branding #clashvibes-title {
+		width: 83%;
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 1.8em;
@@ -14451,34 +16126,39 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.byline,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.byline,
-	#page #primary article.post header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.post header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.post header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.post header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.post header.entry-header div.entry-meta span.byline,
-	#page #primary article.search-results header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.search-results header.entry-header div.entry-meta span.byline,
-	#page #primary article.page header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.page header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.page header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.page header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta span.byline {
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content {
+		grid-template-columns: 18% 2fr;
+	}
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.75em;
-		height: auto;
-		line-height: 25px;
 	}
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
@@ -15210,86 +16890,34 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta p {
 		width: 100%;
 	}
-	#page #primary article.clash-videos .navigation,
-	#page #primary article.clash-audio .navigation,
-	#page #primary article.post .navigation,
-	#page #primary article.search-results .navigation,
-	#page #primary article.page .navigation {
+	#page #primary .navigation {
 		margin: 0;
 	}
-	#page #primary article.clash-videos .navigation h2,
-	#page #primary article.clash-audio .navigation h2,
-	#page #primary article.post .navigation h2,
-	#page #primary article.search-results .navigation h2,
-	#page #primary article.page .navigation h2 {
+	#page #primary .navigation h2 {
 		color: #fff;
 	}
-	#page #primary article.clash-videos .navigation .nav-links,
-	#page #primary article.clash-audio .navigation .nav-links,
-	#page #primary article.post .navigation .nav-links,
-	#page #primary article.search-results .navigation .nav-links,
-	#page #primary article.page .navigation .nav-links {
+	#page #primary .navigation .nav-links {
 		margin: 0;
 		display: block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous,
-	#page #primary article.post .navigation .nav-links .nav-next,
-	#page #primary article.post .navigation .nav-links .nav-previous,
-	#page #primary article.search-results .navigation .nav-links .nav-next,
-	#page #primary article.search-results .navigation .nav-links .nav-previous,
-	#page #primary article.page .navigation .nav-links .nav-next,
-	#page #primary article.page .navigation .nav-links .nav-previous {
+	#page #primary .navigation .nav-links .nav-next,
+	#page #primary .navigation .nav-links .nav-previous {
 		display: inline-block;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a,
-	#page #primary article.post .navigation .nav-links .nav-next a,
-	#page #primary article.post .navigation .nav-links .nav-previous a,
-	#page #primary article.search-results .navigation .nav-links .nav-next a,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a,
-	#page #primary article.page .navigation .nav-links .nav-next a,
-	#page #primary article.page .navigation .nav-links .nav-previous a {
-		font-size: 0.9em;
+	#page #primary .navigation .nav-links .nav-next a,
+	#page #primary .navigation .nav-links .nav-previous a {
+		font-size: 1em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:hover,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.post .navigation .nav-links .nav-next a:hover,
-	#page #primary article.post .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:hover,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:hover,
-	#page #primary article.page .navigation .nav-links .nav-next a:hover,
-	#page #primary article.page .navigation .nav-links .nav-previous a:hover {
+	#page #primary .navigation .nav-links .nav-next a:hover,
+	#page #primary .navigation .nav-links .nav-previous a:hover {
 		font-weight: bold;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a::after,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a::after,
-	#page #primary article.post .navigation .nav-links .nav-next a::after,
-	#page #primary article.post .navigation .nav-links .nav-previous a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-next a::after,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a::after,
-	#page #primary article.page .navigation .nav-links .nav-next a::after,
-	#page #primary article.page .navigation .nav-links .nav-previous a::after {
+	#page #primary .navigation .nav-links .nav-next a::after,
+	#page #primary .navigation .nav-links .nav-previous a::after {
 		font-size: 1.6em;
 	}
-	#page #primary article.clash-videos .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-videos .navigation .nav-links .nav-previous a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-next a:active,
-	#page #primary article.clash-audio .navigation .nav-links .nav-previous a:active,
-	#page #primary article.post .navigation .nav-links .nav-next a:active,
-	#page #primary article.post .navigation .nav-links .nav-previous a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-next a:active,
-	#page #primary article.search-results .navigation .nav-links .nav-previous a:active,
-	#page #primary article.page .navigation .nav-links .nav-next a:active,
-	#page #primary article.page .navigation .nav-links .nav-previous a:active {
+	#page #primary .navigation .nav-links .nav-next a:active,
+	#page #primary .navigation .nav-links .nav-previous a:active {
 		background-color: #658905;
 	}
 	#page article#clashvibes-text {
@@ -15693,32 +17321,39 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.byline,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.byline,
-	#page #primary article.post header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.post header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.post header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.post header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.post header.entry-header div.entry-meta span.byline,
-	#page #primary article.search-results header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.search-results header.entry-header div.entry-meta span.byline,
-	#page #primary article.page header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.page header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.page header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.page header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta span.byline {
-		font-size: 0.75em;
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content {
+		grid-template-columns: 20% 2fr;
+	}
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+		font-size: 0.7em;
 	}
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
@@ -16457,6 +18092,222 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta p {
 		width: 100%;
 	}
+	#page #primary #comments .navigation {
+		width: 100%;
+	}
+	#page #primary #comments .navigation h1 {
+		font-size: 1.3em;
+	}
+	#page #primary #comments .navigation div.nav-previous,
+	#page #primary #comments .navigation div.nav-next {
+		width: 100%;
+	}
+	#page #primary #comments .navigation div.nav-previous a,
+	#page #primary #comments .navigation div.nav-next a {
+		margin: 0;
+	}
+	#page #primary #comments .navigation div.nav-previous a:hover,
+	#page #primary #comments .navigation div.nav-next a:hover {
+		color: #262626;
+	}
+	#page #primary #comments h2.comments-title {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list {
+		padding-left: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment {
+		padding: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children {
+		margin: auto;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd {
+		margin: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body {
+		background-color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta {
+		height: 60px;
+		margin-top: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.75em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn {
+		line-height: 1.5;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p {
+		font-size: 0.75em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a {
+		background-color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body {
+		padding: 0.5em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta {
+		height: 60px;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.75em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
+		font-size: 0.75em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body ul.children {
+		margin-left: 0;
+	}
+	#page #primary #comments ol.comment-list .reply {
+		width: 96%;
+	}
+	#page #primary #comments ol.comment-list .reply a {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list .reply a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments #respond {
+		display: block;
+		clear: both;
+	}
+	#page #primary #comments #respond h3#reply-title {
+		font-size: 1em;
+	}
+	#page #primary #comments #respond h3#reply-title small a {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond h3#reply-title small a:hover {
+		color: #262626;
+	}
+	#page #primary #comments #respond .comment-form {
+		padding: 1em;
+	}
+	#page #primary #comments #respond .comment-form p.comment-notes {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond .comment-form textarea#comment {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+		width: 60%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+		cursor: pointer;
+	}
+	#page #primary #comments p {
+		padding: 0.5em;
+	}
+	#page #primary #comments p a {
+		background-color: unset;
+	}
+	#page #primary #comments p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p:last-of-type {
+		text-align: center;
+	}
+	#page #primary #comments p:last-of-type a {
+		margin: 0 0.25em;
+	}
+	#page #primary #comments p:last-of-type a:hover {
+		background-color: #262626;
+	}
+	#page #primary #comments p.must-log-in {
+		width: 90%;
+	}
+	#page #primary #comments p.must-log-in a {
+		display: inline-block;
+	}
+	#page #primary #comments p.must-log-in a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p.nocomments {
+		font-size: 1.1em;
+	}
 	#page article#clashvibes-text {
 		padding: 1em;
 	}
@@ -16891,32 +18742,39 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-videos header.entry-header div.entry-meta span.byline,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.clash-audio header.entry-header div.entry-meta span.byline,
-	#page #primary article.post header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.post header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.post header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.post header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.post header.entry-header div.entry-meta span.byline,
-	#page #primary article.search-results header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.search-results header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.search-results header.entry-header div.entry-meta span.byline,
-	#page #primary article.page header.entry-header div.entry-meta span.parent-post-link,
-	#page #primary article.page header.entry-header div.entry-meta span.full-size-link,
-	#page #primary article.page header.entry-header div.entry-meta span.comments-link,
-	#page #primary article.page header.entry-header div.entry-meta span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta span.byline {
-		font-size: 0.75em;
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content {
+		grid-template-columns: 21% 2fr;
+	}
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+		font-size: 0.7em;
 	}
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
@@ -17663,6 +19521,222 @@ a {
 	#page #primary article.search-results footer.speaker-meta ul.post-meta p,
 	#page #primary article.page footer.speaker-meta ul.post-meta p {
 		width: 100%;
+	}
+	#page #primary #comments .navigation {
+		width: 100%;
+	}
+	#page #primary #comments .navigation h1 {
+		font-size: 1.3em;
+	}
+	#page #primary #comments .navigation div.nav-previous,
+	#page #primary #comments .navigation div.nav-next {
+		width: 100%;
+	}
+	#page #primary #comments .navigation div.nav-previous a,
+	#page #primary #comments .navigation div.nav-next a {
+		margin: 0;
+	}
+	#page #primary #comments .navigation div.nav-previous a:hover,
+	#page #primary #comments .navigation div.nav-next a:hover {
+		color: #262626;
+	}
+	#page #primary #comments h2.comments-title {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list {
+		padding-left: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment {
+		padding: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children {
+		margin: auto;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd {
+		margin: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body {
+		background-color: #262626;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta {
+		height: 60px;
+		margin-top: 0;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.7em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn {
+		line-height: 1.5;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p {
+		font-size: 0.7em;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a {
+		background-color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body {
+		padding: 0.5em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta {
+		height: 60px;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author {
+		font-size: 0.7em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author img {
+		width: 16%;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a {
+		background-color: #256b40;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author span.says {
+		display: inline-block;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
+		font-size: 0.8em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata a {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata span.edit-link {
+		display: inline;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
+		font-size: 0.7em;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments ol.comment-list li.comment article.comment-body ul.children {
+		margin-left: 0;
+	}
+	#page #primary #comments ol.comment-list .reply {
+		width: 96%;
+	}
+	#page #primary #comments ol.comment-list .reply a {
+		font-size: 1em;
+	}
+	#page #primary #comments ol.comment-list .reply a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments #respond {
+		display: block;
+		clear: both;
+	}
+	#page #primary #comments #respond h3#reply-title {
+		font-size: 1em;
+	}
+	#page #primary #comments #respond h3#reply-title small a {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond h3#reply-title small a:hover {
+		color: #262626;
+	}
+	#page #primary #comments #respond .comment-form {
+		padding: 1em;
+	}
+	#page #primary #comments #respond .comment-form p.comment-notes {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond .comment-form textarea#comment {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url label {
+		height: 30px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input {
+		height: 35px;
+	}
+	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
+	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+		width: 60%;
+	}
+	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+		cursor: pointer;
+	}
+	#page #primary #comments p {
+		padding: 0.5em;
+	}
+	#page #primary #comments p a {
+		background-color: unset;
+	}
+	#page #primary #comments p a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p:last-of-type {
+		text-align: center;
+	}
+	#page #primary #comments p:last-of-type a {
+		margin: 0 0.25em;
+	}
+	#page #primary #comments p:last-of-type a:hover {
+		background-color: #262626;
+	}
+	#page #primary #comments p.must-log-in {
+		width: 90%;
+	}
+	#page #primary #comments p.must-log-in a {
+		display: inline-block;
+	}
+	#page #primary #comments p.must-log-in a:hover {
+		color: #ebeadd;
+	}
+	#page #primary #comments p.nocomments {
+		font-size: 1.1em;
 	}
 	#page article#clashvibes-text {
 		padding: 1em;

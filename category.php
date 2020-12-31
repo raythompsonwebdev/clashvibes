@@ -60,7 +60,7 @@ get_header();
 						<div class="entry-meta">
 							<?php
 							clashvibes_posted_on();
-							clashvibes_posted_by();
+
 							?>
 						</div><!-- .entry-meta -->
 						<?php
@@ -79,7 +79,7 @@ get_header();
 
 						<a class="post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" aria-hidden="true">
 
-							<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/05/placeholder-1.jpg"
+							<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/sites/2/2020/12/nothing.jpg"
 								 alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
 
 						</a>

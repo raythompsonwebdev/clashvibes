@@ -16,7 +16,7 @@ function clashvibes_contact_form() {
         </p>
         <p>
           <label for="message_email">Email: <span>*</span> <br>
-            <input type="text" name="message_email" value="<?php if (isset($email)) { echo $email; } ?>"">
+            <input type="text" name="message_email" value="<?php if (isset($email)) { echo $email; } ?>">
           </label>
         </p>
         <p>
@@ -36,4 +36,4 @@ function clashvibes_contact_form() {
 	endif;
 }
 clashvibes_contact_form();
-clashvibes_process_contact_form();
+

@@ -1,11 +1,11 @@
-var toggleSide = document.querySelector('#sidebar_toggle')
+var toggleSide = document.querySelector('#toggle-side')
 
 //side nav
 toggleSide.addEventListener('click', function (event) {
 	event.preventDefault()
 
 	// create menu variables
-	var slideoutSideMenu = document.querySelector('#clashvibes_left_column')
+	var slideoutSideMenu = document.querySelector('#secondary')
 
 	var slideoutSideMenuWidth = slideoutSideMenu.offsetWidth
 

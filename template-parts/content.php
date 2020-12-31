@@ -29,8 +29,22 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php clashvibes_post_thumbnail(); ?>
+	<!--featured Image-->
+	<?php if ( has_post_thumbnail() ) : ?>
 
+<?php clashvibes_post_thumbnail(); ?>
+
+<?php else : ?>
+
+<figure class="post-thumbnail">
+
+<a href="#" aria-hidden="true">
+
+	<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/sites/2/2020/12/nothing.jpg' ); ?>" alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
+
+</a>
+</figure><!-- featured-image -->
+<?php endif;?>
 	<div class="entry-content">
 		<?php
 		the_content(

@@ -34,7 +34,7 @@
 
 			<button id="toggle-nav" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'clashvibes' ); ?></button>
 
-			<button id="sidebar_toggle" class="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
+			<button id="toggle-side" class="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'SideBar', 'clashvibes' ); ?></button>
 
 
 			<?php endif; ?>
@@ -101,14 +101,14 @@
 			<!--Social Media Icons-->
 			<aside id="socialmediatop">
 
-				<a class="social-icon linkedin-icon"	href="<?php echo esc_url( __( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'clashvibes' ) ); ?>"	target="new"	title= <?php esc_attr_e( 'Follow me on LinkedIn', 'clashvibes' ); ?>><span><i class="fa fa-instagram"></i></span></a>
+				<a class="social-icon linkedin-icon"	href="<?php echo esc_url( __( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'clashvibes' ) ); ?>"	target="new"	title= <?php esc_attr_e( 'Follow me on LinkedIn', 'clashvibes' ); ?>><span><i class="fab fa-instagram"></i></span></a>
 
-				<a class="social-icon twitter-icon"	href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e( 'Follow me on Twitter', 'clashvibes' ); ?>><span>	<i class="fa fa-twitter"></i>	</span></a>
+				<a class="social-icon twitter-icon"	href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e( 'Follow me on Twitter', 'clashvibes' ); ?>><span>	<i class="fab fa-twitter"></i>	</span></a>
 
 				<a class="social-icon facebook-icon"
-					href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e( 'Follow me on Facebook', 'clashvibes' ); ?>>	<span><i class="fa fa-facebook"></i></span></a>
+					href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e( 'Follow me on Facebook', 'clashvibes' ); ?>>	<span><i class="fab fa-facebook"></i></span></a>
 
-				<a class="social-icon facebook-icon"	href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e( 'Follow me on Facebook', 'clashvibes' ); ?>>	<span>	<i class="fa fa-facebook"></i></span>
+				<a class="social-icon facebook-icon"	href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>"	target="new"	title=<?php esc_attr_e( 'Follow me on Facebook', 'clashvibes' ); ?>>	<span>	<i class="fab fa-facebook"></i></span>
 				</a>
 
 			</aside>

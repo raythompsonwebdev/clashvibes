@@ -12,6 +12,7 @@ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 	max-width: 100% !important;
+
 }
 
 * html {
@@ -27,6 +28,13 @@ html {
 
 html[xmlns] .clearfix {
 	display: block;
+}
+html,
+body{
+		margin: 0;
+		padding: 0;
+		width:100%;
+
 }
 
 
@@ -188,6 +196,8 @@ body {
 	font-family: $font-main;
 	font-size: 1em;
 	background-color: $color;
+	overflow-x:hidden;
+
 }
 
 h1,

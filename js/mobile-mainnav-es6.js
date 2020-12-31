@@ -5,7 +5,7 @@ toggleNav.addEventListener('click', function (event) {
 	event.preventDefault()
 
 	// create menu variables
-	let slideoutMenu = document.querySelector('#mobileNav')
+	let slideoutMenu = document.querySelector('#cv-mobilenav')
 
 	let slideoutMenuHeight = slideoutMenu.offsetHeight
 

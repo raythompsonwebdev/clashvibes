@@ -14,7 +14,7 @@ if ( ! function_exists( 'clashvibes_posted_on' ) ) :
 	function clashvibes_posted_on() {
 		$clashvibes_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$clashvibes_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$clashvibes_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>Updated:<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$clashvibes_time_string = sprintf(
@@ -68,7 +68,7 @@ if ( ! function_exists( 'clashvibes_index_posted_on' ) ) :
 
 		$clashvibes_index_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$clashvibes_index_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$clashvibes_index_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>Updated: <time class="updated" datetime="%3$s">%4$s</time>';
 		}
 		$clashvibes_index_time_string = sprintf(
 			$clashvibes_index_time_string,
@@ -178,9 +178,9 @@ if ( ! function_exists( 'clashvibes_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div><!-- .post-thumbnail -->
+			<figure class="featured-image">
+				<?php the_post_thumbnail('featured-image'); ?>
+			</figure><!-- .post-thumbnail -->
 
 		<?php else : ?>
 
@@ -275,3 +275,43 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+/**
+ * Replaces the excerpt "Read More" text by a link.
+ *
+ * @param mixed $more variable added.
+ * @return $more
+ */
+function clashvibes_new_excerpt_more( $more ) {
+	return '';
+}
+add_filter( 'excerpt_more', 'clashvibes_new_excerpt_more', 21 );
+
+/**
+ * Replaces the excerpt more "Read More" text by a link.
+ *
+ * @param mixed $excerpt variable added.
+ * @return $excerpt
+ */
+function clashvibes_the_excerpt_more_link( $excerpt ) {
+	$post = get_post();
+
+	if ( is_tax( 'video-category' ) ) {
+
+		$excerpt .= '<a class="read-more" href="' . get_permalink( $post->ID ) . '">Continue Watching: ' . get_the_title( $post->ID ) . '</a>';
+		return $excerpt;
+
+	} elseif ( is_tax( 'audio-category' ) ) {
+
+		$excerpt .= '<a class="read-more" href="' . get_permalink( $post->ID ) . '">Continue Listening: ' . get_the_title( $post->ID ) . '</a>';
+		return $excerpt;
+
+	} else {
+		$excerpt .= '<a class="read-more" href="' . get_permalink( $post->ID ) . '">continue reading: ' . get_the_title( $post->ID ) . '</a>';
+
+		return $excerpt;
+
+	}
+
+}
+add_filter( 'the_excerpt', 'clashvibes_the_excerpt_more_link', 21 );

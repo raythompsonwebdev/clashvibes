@@ -39,7 +39,7 @@
                target="new"
                title="Follow me on LinkedIn">
                 <span>
-                    <i class="fa fa-instagram"></i>
+                    <i class="fab fa-instagram"></i>
                 </span>
             </a>
         </li>
@@ -50,7 +50,7 @@
                target="new"
                title="Follow me on Twitter">
                 <span>
-                    <i class="fa fa-twitter"></i>
+                    <i class="fab fa-twitter"></i>
                 </span>
             </a>
         </li>
@@ -60,7 +60,7 @@
                target="new"
                title="Follow me on Facebook">
                 <span>
-                    <i class="fa fa-facebook"></i>
+                    <i class="fab fa-facebook"></i>
                 </span>
             </a>
         </li>
@@ -82,7 +82,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'clashvibes' ), 'clashvibes', '<a href="http://underscores.me/">raythompsonwebdev</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'clashvibes' ), 'clashvibes', '<a href="https://underscores.me/">raythompsonwebdev</a>' );
 				?>
 	</div><!-- .site-info -->
 

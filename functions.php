@@ -41,8 +41,9 @@ if ( ! function_exists( 'clashvibes_setup' ) ) :
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
-		// Add editor styles.
-		add_editor_style( array( 'css/custom-editor-style.css' ) );
+		// Add block editor  styles.
+		add_editor_style( array( 'css/editor-style.css' ) );
+		add_theme_support('editor-style.css');
 
 		/*
 		 * Let WordPress manage the document title.
@@ -187,6 +188,10 @@ if ( ! function_exists( 'clashvibes_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		//Enable block styles on the front end.
+		add_theme_support('wp-block-styles');
+
 	}
 endif;
 add_action( 'after_setup_theme', 'clashvibes_setup' );
@@ -261,14 +266,26 @@ function clashvibes_video_widgets_init() {
 }
 add_action( 'widgets_init', 'clashvibes_video_widgets_init' );
 
+function clashvibes_block_editor_fonts(){
+	wp_enqueue_style( 'clashvibes-block-editor-fonts', 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap', array(), CLASHVIBES_VERSION );
+
+}
+add_action('enqueue_block_editor_assets', 'clashvibes_block_editor_fonts');
+
 /**
  * Enqueue scripts and styles.
  */
 function clashvibes_scripts() {
+
 	wp_enqueue_style( 'clashvibes-style', get_stylesheet_uri(), array(), CLASHVIBES_VERSION );
 	wp_style_add_data( 'clashvibes-style', 'rtl', 'replace' );
 
-wp_enqueue_script( 'clashvibes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), CLASHVIBES_VERSION, true );
+	wp_enqueue_style( 'clashvibes-fonts', 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap', array(), CLASHVIBES_VERSION );
+
+	wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/fonts/fontawesome/js/all.js', array(), CLASHVIBES_VERSION, false );
+
+
+	wp_enqueue_script( 'clashvibes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), CLASHVIBES_VERSION, true );
 
 	if ( 'clash-audio' === get_post_type() || 'clash-videos' === get_post_type() || ! is_front_page() || is_category() || is_home() ) {
 
@@ -300,45 +317,7 @@ wp_enqueue_script( 'clashvibes-navigation', get_template_directory_uri() . '/js/
 }
 add_action( 'wp_enqueue_scripts', 'clashvibes_scripts' );
 
-/**
- * Replaces the excerpt "Read More" text by a link.
- *
- * @param mixed $more variable added.
- * @return $more
- */
-function clashvibes_new_excerpt_more( $more ) {
-	return '';
-}
-add_filter( 'excerpt_more', 'clashvibes_new_excerpt_more', 21 );
 
-/**
- * Replaces the excerpt more "Read More" text by a link.
- *
- * @param mixed $excerpt variable added.
- * @return $excerpt
- */
-function clashvibes_the_excerpt_more_link( $excerpt ) {
-	$post = get_post();
-
-	if ( is_tax( 'video-category' ) ) {
-
-		$excerpt .= '<a class="read_more" href="' . get_permalink( $post->ID ) . '">Continue Watching: ' . get_the_title( $post->ID ) . '</a>';
-		return $excerpt;
-
-	} elseif ( is_tax( 'audio-category' ) ) {
-
-		$excerpt .= '<a class="read_more" href="' . get_permalink( $post->ID ) . '">Continue Listening: ' . get_the_title( $post->ID ) . '</a>';
-		return $excerpt;
-
-	} else {
-
-		$excerpt .= '<a class="read_more" href="' . get_permalink( $post->ID ) . '">continue reading: ' . get_the_title( $post->ID ) . '</a>';
-		return $excerpt;
-
-	}
-
-}
-add_filter( 'the_excerpt', 'clashvibes_the_excerpt_more_link', 21 );
 
 /**
  * Implement the Custom Header feature.

@@ -41,7 +41,7 @@ if ( have_posts() ) :
 
 		<?php else : ?>
 
-		<figure class="featuredImage">
+		<figure class="featured-image">
 
 			<a href="#" aria-hidden="true">
 

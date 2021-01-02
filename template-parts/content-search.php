@@ -16,8 +16,8 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
-			clashvibes_posted_on();
-			clashvibes_posted_by();
+			clashvibes_index_posted_on();
+
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>

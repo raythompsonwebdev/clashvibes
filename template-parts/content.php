@@ -38,7 +38,7 @@
 
 <figure class="post-thumbnail">
 
-<a href="#" aria-hidden="true">
+<a href="#" aria-hidden="true" title="no image available">
 
 	<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/sites/2/2020/12/nothing.jpg' ); ?>" alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
 

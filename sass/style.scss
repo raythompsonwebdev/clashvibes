@@ -287,11 +287,12 @@ License: GNU General Public License v2 or later
 			color: $color4;
 			margin: 0.5em 0;
 		}
-
+		/* --- Error page --- */
 		section.error-404 {
 			margin:0;
 
 		}
+
 		header.page-header{
 
 			h1 {
@@ -300,6 +301,7 @@ License: GNU General Public License v2 or later
 
 		}
 
+		/* --- Error page content --- */
 		div.page-content{
 
 			p{
@@ -357,10 +359,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			}
-
-
-
+		}
 
 		/* front page */
 		article#clashvibes-text {
@@ -1088,6 +1087,12 @@ License: GNU General Public License v2 or later
 							}
 						}
 					}
+					select.archives-dropdown--1{
+						display:block;
+						width:100%;
+						line-height:35px;
+
+					}
 				}
 
 				span {
@@ -1461,7 +1466,7 @@ License: GNU General Public License v2 or later
 						margin: 0 auto;
 						width: 90%;
 						padding: 0.5em;
-						background-color: $color11;
+						//background-color: $color11;
 
 						a {
 							color: $color4;
@@ -1474,34 +1479,6 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					ul {
-						list-style: none;
-						margin: 1em auto;
-						padding: 0;
-						color: $color4;
-						width: 90%;
-
-						figure {
-							width: 90%;
-							margin: 0 auto;
-							padding: 0;
-						}
-
-						li {
-							display: block;
-							line-height: 40px;
-							width: 100%;
-							background-color: $color2;
-
-							padding: 1%;
-
-							a {
-								width: auto;
-								display: inline-block;
-								margin: 0 0.5em;
-							}
-						}
-					}
 
 
 					a.tag-cloud-link {
@@ -3053,13 +3030,6 @@ License: GNU General Public License v2 or later
 					ul {
 						font-size: 0.9em;
 
-						figure {
-							width: 90%;
-						}
-
-						li {
-							line-height: 40px;
-						}
 					}
 
 					ul.post-list {
@@ -4134,6 +4104,10 @@ License: GNU General Public License v2 or later
 				div.entry-content {
 					width: 98%;
 
+					.wp-block-image{
+						height:auto;
+					}
+
 					//text
 					p {
 						a {
@@ -4145,17 +4119,6 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					ul {
-						width: 90%;
-
-						figure {
-							width: 90%;
-						}
-
-						li {
-							line-height: 40px;
-						}
-					}
 
 					a.read-more {
 						width: 60%;
@@ -4723,7 +4686,7 @@ License: GNU General Public License v2 or later
 			}
 
 			aside#socialmediatop {
-				width: 30%;
+				width: 25%;
 
 				a {
 					width: 23.5%;
@@ -5150,17 +5113,6 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					ul {
-						width: 90%;
-
-						figure {
-							width: 90%;
-						}
-
-						li {
-							line-height: 40px;
-						}
-					}
 
 					a.read-more {
 						width: 60%;
@@ -6163,17 +6115,7 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					ul {
-						width: 90%;
 
-						figure {
-							width: 90%;
-						}
-
-						li {
-							line-height: 40px;
-						}
-					}
 
 					a.read-more {
 						width: 70%;
@@ -6666,6 +6608,9 @@ License: GNU General Public License v2 or later
 
 /* tablet */
 @media only screen and (max-width: 667px) {
+
+
+
 	#tog-menu {
 		position: fixed;
 		top: 0.25em;
@@ -6674,6 +6619,7 @@ License: GNU General Public License v2 or later
 		display: block;
 		width: 25%;
 		left: calc(71% - 1vw);
+		@include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
 		button.menu-toggle,
 		button.sidebar-toggle {
 			display:block;
@@ -6696,20 +6642,14 @@ License: GNU General Public License v2 or later
 		}
 	}
 
-	.hide-side {
-		left: 150vw;
-	}
-
-	.hide {
+	#tog-menu.hide {
 		left: 100vw;
 	}
+
 
 	#page {
 		width: 100%;
 
-		.hide-side {
-			left: 50vw;
-		}
 
 		header.site-header {
 			height: 65px;
@@ -7096,17 +7036,7 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					ul {
-						width: 90%;
 
-						figure {
-							width: 90%;
-						}
-
-						li {
-							line-height: 40px;
-						}
-					}
 
 					a.read-more {
 						width: 80%;
@@ -9937,17 +9867,6 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					ul {
-						width: 90%;
-
-						figure {
-							width: 90%;
-						}
-
-						li {
-							line-height: 40px;
-						}
-					}
 
 					a.read-more {
 						width: 90%;

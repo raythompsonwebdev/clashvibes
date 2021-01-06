@@ -31,9 +31,9 @@
 <?php
 wp_nav_menu(
 	array(
-		'menu'      => 'Video-Nav',
-    'container' => 'nav',
-    'theme_location'    => "video-nav",
+		'menu'           => 'Video-Nav',
+		'container'      => 'nav',
+		'theme_location' => 'video-nav',
 	)
 );
 ?>

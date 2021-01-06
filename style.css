@@ -490,6 +490,7 @@ a {
 		margin: 0;
 		height: auto;
 		background-color: #fff;
+		min-height: 600px;
 	}
 	#page h1 {
 		font-size: 1.5em;
@@ -690,10 +691,10 @@ a {
 		-webkit-flex: 0 1 auto;
 		-ms-flex: 0 1 auto;
 		flex: 0 1 auto;
-		width: 19%;
-		min-height: 330px;
+		width: 19.25%;
+		height: auto;
 		padding: 0;
-		margin: 0.5%;
+		margin: 0.25em;
 		background-color: #fff;
 	}
 	#page div.results article.events_box h1 {
@@ -709,8 +710,7 @@ a {
 		letter-spacing: 0.03em;
 		font-weight: bold;
 	}
-	#page div.results article.events_box #event-submit-btn,
-	#page div.results article.events_box input[type='submit'] {
+	#page div.results article.events_box a#event-submit-btn {
 		width: 90%;
 		text-align: center;
 		color: #fff;
@@ -727,16 +727,15 @@ a {
 		-ms-transition: all 0.2s linear 0s;
 		transition: all 0.2s linear 0s;
 	}
-	#page div.results article.events_box #event-submit-btn:hover,
-	#page div.results article.events_box input[type='submit']:hover {
+	#page div.results article.events_box a#event-submit-btn:hover {
 		font-weight: bold;
 		background-color: #fdd015;
 		color: #253901;
 	}
 	#page div.results article.events_box figure.events {
-		width: 90%;
-		min-height: 100px;
-		margin: 4% auto;
+		width: 96%;
+		height: auto;
+		margin: 0 auto;
 		-webkit-transform-origin: 50% 50%;
 		-moz-transform-origin: 50% 50%;
 		-o-transform-origin: 50% 50%;
@@ -755,15 +754,24 @@ a {
 		border: none;
 		width: 92%;
 	}
-	#page div.results article.events_box figure.events img {
+	#page div.results article.events_box figure.events img.attachment-event-image {
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
+		width: 70%;
+		margin: 0 auto;
+		display: block;
 	}
 	#page div.results article.events_box figure.events figcaption.event-text {
-		min-height: 100px;
+		height: auto;
 		display: block;
-		background-color: #c90;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		display: block;
+		line-height: 35px;
+		margin: 0;
+		padding: 0;
+		text-align: center;
 	}
 	#page div.results article.events_box figure.events figcaption.event-text p {
 		font-size: 0.9em;
@@ -1589,6 +1597,7 @@ a {
 		background-color: #262626;
 		color: #fdd015;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -1606,6 +1615,7 @@ a {
 		/* custom-post-footer */
 		/* Social media share buttons */
 	}
+	#page #primary article.event iframe,
 	#page #primary article.clash-videos iframe,
 	#page #primary article.clash-audio iframe,
 	#page #primary article.post iframe,
@@ -1616,6 +1626,7 @@ a {
 		width: 75%;
 		height: 300px;
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -1624,6 +1635,7 @@ a {
 		height: auto;
 		display: block;
 	}
+	#page #primary article.event header.entry-header h1,
 	#page #primary article.clash-videos header.entry-header h1,
 	#page #primary article.clash-audio header.entry-header h1,
 	#page #primary article.post header.entry-header h1,
@@ -1637,6 +1649,7 @@ a {
 		text-align: center;
 		padding: 0;
 	}
+	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
 	#page #primary article.post header.entry-header h1 a,
@@ -1647,6 +1660,7 @@ a {
 		letter-spacing: 0.03em;
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header h1 span,
 	#page #primary article.clash-videos header.entry-header h1 span,
 	#page #primary article.clash-audio header.entry-header h1 span,
 	#page #primary article.post header.entry-header h1 span,
@@ -1655,6 +1669,7 @@ a {
 		display: inline-block;
 		width: auto;
 	}
+	#page #primary article.event header.entry-header h2.entry-title,
 	#page #primary article.clash-videos header.entry-header h2.entry-title,
 	#page #primary article.clash-audio header.entry-header h2.entry-title,
 	#page #primary article.post header.entry-header h2.entry-title,
@@ -1666,6 +1681,7 @@ a {
 		font-size: 1.5em;
 		text-align: center;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -1673,6 +1689,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header div.entry-meta,
 	#page #primary article.clash-videos header.entry-header div.entry-meta,
 	#page #primary article.clash-audio header.entry-header div.entry-meta,
 	#page #primary article.post header.entry-header div.entry-meta,
@@ -1681,6 +1698,7 @@ a {
 		height: auto;
 		margin-top: 0.25em;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .has-avatar,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .has-avatar,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .has-avatar,
 	#page #primary article.post header.entry-header div.entry-meta .has-avatar,
@@ -1691,6 +1709,7 @@ a {
 		height: auto;
 		align-self: flex-start;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .has-avatar .author-avatar,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .has-avatar .author-avatar,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .has-avatar .author-avatar,
 	#page #primary article.post header.entry-header div.entry-meta .has-avatar .author-avatar,
@@ -1698,6 +1717,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .has-avatar .author-avatar {
 		width: 100%;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .has-avatar .author-avatar img,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .has-avatar .author-avatar img,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .has-avatar .author-avatar img,
 	#page #primary article.post header.entry-header div.entry-meta .has-avatar .author-avatar img,
@@ -1706,6 +1726,7 @@ a {
 		height: auto;
 		width: 100%;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
@@ -1719,6 +1740,7 @@ a {
 		gap: 2px 2px;
 		grid-template-areas: 'Image posted-on' 'Image byline' 'Image comments-link' 'Image spare';
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content .posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content .posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content .posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content .posted-on,
@@ -1726,6 +1748,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content .posted-on {
 		grid-area: posted-on;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content .byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content .byline,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content .byline,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content .byline,
@@ -1733,6 +1756,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content .byline {
 		grid-area: byline;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content .comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content .comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content .comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content .comments-link,
@@ -1740,6 +1764,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content .comments-link {
 		grid-area: comments-link;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content .spare,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content .spare,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content .spare,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content .spare,
@@ -1747,6 +1772,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content .spare {
 		grid-area: spare;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content .author-avatar,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content .author-avatar,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content .author-avatar,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content .author-avatar,
@@ -1758,6 +1784,11 @@ a {
 		grid-template-areas: '.';
 		grid-area: Image;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
@@ -1795,6 +1826,11 @@ a {
 		text-align: left;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link a,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link a,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link a,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on a,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline a,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link a,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link a,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link a,
@@ -1825,6 +1861,8 @@ a {
 		padding: 0;
 		text-indent: unset;
 	}
+	#page #primary article.event a.post-thumbnail,
+	#page #primary article.event div.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
 	#page #primary article.clash-videos div.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
@@ -1843,6 +1881,8 @@ a {
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
+	#page #primary article.event a.post-thumbnail img,
+	#page #primary article.event div.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
 	#page #primary article.clash-videos div.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
@@ -1857,6 +1897,8 @@ a {
 		display: block;
 		width: auto;
 	}
+	#page #primary article.event figure.featured-image,
+	#page #primary article.event figure.attachment,
 	#page #primary article.clash-videos figure.featured-image,
 	#page #primary article.clash-videos figure.attachment,
 	#page #primary article.clash-audio figure.featured-image,
@@ -1875,6 +1917,8 @@ a {
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
+	#page #primary article.event figure.featured-image a,
+	#page #primary article.event figure.attachment a,
 	#page #primary article.clash-videos figure.featured-image a,
 	#page #primary article.clash-videos figure.attachment a,
 	#page #primary article.clash-audio figure.featured-image a,
@@ -1887,6 +1931,8 @@ a {
 	#page #primary article.page figure.attachment a {
 		width: 100%;
 	}
+	#page #primary article.event figure.featured-image a img,
+	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
 	#page #primary article.clash-videos figure.attachment a img,
 	#page #primary article.clash-audio figure.featured-image a img,
@@ -1901,6 +1947,7 @@ a {
 		display: block;
 		width: auto;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -1913,6 +1960,7 @@ a {
 		background-color: #fff;
 		height: auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -1922,6 +1970,7 @@ a {
 		text-indent: 1%;
 		height: 123px;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -1937,6 +1986,7 @@ a {
 		border-bottom: 1px solid #fff;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -1946,6 +1996,7 @@ a {
 		display: inline-block;
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -1956,6 +2007,7 @@ a {
 		letter-spacing: 0.05em;
 		background-color: #262626;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -1967,6 +2019,7 @@ a {
 		display: block;
 		width: 100%;
 	}
+	#page #primary article.event footer.entry-footer,
 	#page #primary article.clash-videos footer.entry-footer,
 	#page #primary article.clash-audio footer.entry-footer,
 	#page #primary article.post footer.entry-footer,
@@ -1977,6 +2030,7 @@ a {
 		text-indent: 0.25em;
 		background-color: #253901;
 	}
+	#page #primary article.event footer.entry-footer span,
 	#page #primary article.clash-videos footer.entry-footer span,
 	#page #primary article.clash-audio footer.entry-footer span,
 	#page #primary article.post footer.entry-footer span,
@@ -1989,6 +2043,7 @@ a {
 		width: 100%;
 		height: 35px;
 	}
+	#page #primary article.event footer.entry-footer span span.screen-reader-text,
 	#page #primary article.clash-videos footer.entry-footer span span.screen-reader-text,
 	#page #primary article.clash-audio footer.entry-footer span span.screen-reader-text,
 	#page #primary article.post footer.entry-footer span span.screen-reader-text,
@@ -1997,6 +2052,7 @@ a {
 		width: auto;
 		display: inline-block;
 	}
+	#page #primary article.event footer.entry-footer span a,
 	#page #primary article.clash-videos footer.entry-footer span a,
 	#page #primary article.clash-audio footer.entry-footer span a,
 	#page #primary article.post footer.entry-footer span a,
@@ -2008,6 +2064,7 @@ a {
 		display: inline-block;
 		line-height: 35px;
 	}
+	#page #primary article.event footer.entry-footer span a:hover,
 	#page #primary article.clash-videos footer.entry-footer span a:hover,
 	#page #primary article.clash-audio footer.entry-footer span a:hover,
 	#page #primary article.post footer.entry-footer span a:hover,
@@ -2015,6 +2072,7 @@ a {
 	#page #primary article.page footer.entry-footer span a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event footer.entry-footer span a.comments-count,
 	#page #primary article.clash-videos footer.entry-footer span a.comments-count,
 	#page #primary article.clash-audio footer.entry-footer span a.comments-count,
 	#page #primary article.post footer.entry-footer span a.comments-count,
@@ -2028,6 +2086,7 @@ a {
 		line-height: 50px;
 		text-align: center;
 	}
+	#page #primary article.event footer.entry-footer p,
 	#page #primary article.clash-videos footer.entry-footer p,
 	#page #primary article.clash-audio footer.entry-footer p,
 	#page #primary article.post footer.entry-footer p,
@@ -2038,6 +2097,9 @@ a {
 		line-height: 35px;
 		display: block;
 	}
+	#page #primary article.event div.entry-content,
+	#page #primary article.event div.entry-summary,
+	#page #primary article.event div.entry-attachment,
 	#page #primary article.clash-videos div.entry-content,
 	#page #primary article.clash-videos div.entry-summary,
 	#page #primary article.clash-videos div.entry-attachment,
@@ -2058,6 +2120,9 @@ a {
 		margin: 0 auto;
 		min-height: 200px;
 	}
+	#page #primary article.event div.entry-content p,
+	#page #primary article.event div.entry-summary p,
+	#page #primary article.event div.entry-attachment p,
 	#page #primary article.clash-videos div.entry-content p,
 	#page #primary article.clash-videos div.entry-summary p,
 	#page #primary article.clash-videos div.entry-attachment p,
@@ -2081,6 +2146,9 @@ a {
 		width: 90%;
 		padding: 0.5em;
 	}
+	#page #primary article.event div.entry-content p a,
+	#page #primary article.event div.entry-summary p a,
+	#page #primary article.event div.entry-attachment p a,
 	#page #primary article.clash-videos div.entry-content p a,
 	#page #primary article.clash-videos div.entry-summary p a,
 	#page #primary article.clash-videos div.entry-attachment p a,
@@ -2100,6 +2168,9 @@ a {
 		width: auto;
 		display: inline-block;
 	}
+	#page #primary article.event div.entry-content p a:hover,
+	#page #primary article.event div.entry-summary p a:hover,
+	#page #primary article.event div.entry-attachment p a:hover,
 	#page #primary article.clash-videos div.entry-content p a:hover,
 	#page #primary article.clash-videos div.entry-summary p a:hover,
 	#page #primary article.clash-videos div.entry-attachment p a:hover,
@@ -2117,6 +2188,9 @@ a {
 	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event div.entry-content a.read-more,
+	#page #primary article.event div.entry-summary a.read-more,
+	#page #primary article.event div.entry-attachment a.read-more,
 	#page #primary article.clash-videos div.entry-content a.read-more,
 	#page #primary article.clash-videos div.entry-summary a.read-more,
 	#page #primary article.clash-videos div.entry-attachment a.read-more,
@@ -2141,6 +2215,9 @@ a {
 		text-align: center;
 		background-color: #262626;
 	}
+	#page #primary article.event div.entry-content a.read-more:hover,
+	#page #primary article.event div.entry-summary a.read-more:hover,
+	#page #primary article.event div.entry-attachment a.read-more:hover,
 	#page #primary article.clash-videos div.entry-content a.read-more:hover,
 	#page #primary article.clash-videos div.entry-summary a.read-more:hover,
 	#page #primary article.clash-videos div.entry-attachment a.read-more:hover,
@@ -2159,6 +2236,9 @@ a {
 		background-color: #f0ecec;
 		color: #262626;
 	}
+	#page #primary article.event div.entry-content a.tag-cloud-link,
+	#page #primary article.event div.entry-summary a.tag-cloud-link,
+	#page #primary article.event div.entry-attachment a.tag-cloud-link,
 	#page #primary article.clash-videos div.entry-content a.tag-cloud-link,
 	#page #primary article.clash-videos div.entry-summary a.tag-cloud-link,
 	#page #primary article.clash-videos div.entry-attachment a.tag-cloud-link,
@@ -2178,6 +2258,7 @@ a {
 		width: auto;
 		display: inline-block;
 	}
+	#page #primary article.event footer.speaker-meta,
 	#page #primary article.clash-videos footer.speaker-meta,
 	#page #primary article.clash-audio footer.speaker-meta,
 	#page #primary article.post footer.speaker-meta,
@@ -2190,6 +2271,7 @@ a {
 		margin: 0;
 		padding: 0;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -2202,6 +2284,7 @@ a {
 		letter-spacing: 0.05em;
 		width: 100%;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li,
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
@@ -2216,6 +2299,7 @@ a {
 		margin-bottom: 0.25em;
 		font-size: 0.9em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -2229,6 +2313,7 @@ a {
 		background-color: #253901;
 		color: #fff;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li p,
 	#page #primary article.post footer.speaker-meta ul.post-meta li p,
@@ -2240,6 +2325,7 @@ a {
 		padding: 0;
 		text-indent: 0.2em;
 	}
+	#page #primary article.event div.sharedaddy,
 	#page #primary article.clash-videos div.sharedaddy,
 	#page #primary article.clash-audio div.sharedaddy,
 	#page #primary article.post div.sharedaddy,
@@ -2249,6 +2335,7 @@ a {
 		margin: 3% auto;
 		display: block;
 	}
+	#page #primary article.event div.sharedaddy h3.sd-title,
 	#page #primary article.clash-videos div.sharedaddy h3.sd-title,
 	#page #primary article.clash-audio div.sharedaddy h3.sd-title,
 	#page #primary article.post div.sharedaddy h3.sd-title,
@@ -2262,6 +2349,7 @@ a {
 		width: 100%;
 		height: auto;
 	}
+	#page #primary article.event div.sharedaddy h3.sd-title::before,
 	#page #primary article.clash-videos div.sharedaddy h3.sd-title::before,
 	#page #primary article.clash-audio div.sharedaddy h3.sd-title::before,
 	#page #primary article.post div.sharedaddy h3.sd-title::before,
@@ -2270,6 +2358,7 @@ a {
 		border: none;
 		width: 10%;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content,
 	#page #primary article.post div.sharedaddy div.sd-content,
@@ -2279,6 +2368,7 @@ a {
 		width: 100%;
 		display: inline-block;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul,
 	#page #primary article.post div.sharedaddy div.sd-content ul,
@@ -2291,6 +2381,7 @@ a {
 		display: inline-block;
 		margin: 0;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li,
 	#page #primary article.post div.sharedaddy div.sd-content ul li,
@@ -2303,6 +2394,7 @@ a {
 		height: 100%;
 		color: #262626;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a,
@@ -2322,6 +2414,7 @@ a {
 		-ms-transition: all 0.2s ease-in 0s;
 		transition: all 0.2s ease-in 0s;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a:hover,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a:hover,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a:hover,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a:hover,
@@ -2331,6 +2424,7 @@ a {
 		background-color: #f0ecec;
 		width: 100%;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a::before,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a::before,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a::before,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a::before,
@@ -2340,6 +2434,7 @@ a {
 		width: 100%;
 		color: #262626;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a span,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a span,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a span,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a span,
@@ -3023,34 +3118,36 @@ a {
 	#page article#clashvibes-text figure.text-img img {
 		width: 100%;
 	}
+	#page div.results {
+		padding: 0;
+		margin: 0 0 0.5em 0;
+	}
 	#page div.results article.events_box {
-		width: 19%;
-		min-height: 330px;
+		width: 19.25%;
 	}
 	#page div.results article.events_box h1 {
 		font-size: 0.9em;
 	}
-	#page div.results article.events_box #event-submit-btn,
-	#page div.results article.events_box input[type='submit'] {
-		width: 90%;
+	#page div.results article.events_box a#event-submit-btn {
+		font-size: 0.9em;
 	}
-	#page div.results article.events_box #event-submit-btn:hover,
-	#page div.results article.events_box input[type='submit']:hover {
+	#page div.results article.events_box a#event-submit-btn:hover {
 		font-weight: bold;
 	}
 	#page div.results article.events_box figure.events {
 		width: 90%;
 	}
 	#page div.results article.events_box figure.events:hover {
-		width: 92%;
+		cursor: pointer;
 	}
-	#page div.results article.events_box figure.events img {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
+	#page div.results article.events_box figure.events img.attachment-event-image {
+		margin: 0 auto;
 	}
 	#page div.results article.events_box figure.events figcaption.event-text {
-		min-height: 100px;
+		height: auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		line-height: 35px;
 	}
 	#page div.results article.events_box figure.events figcaption.event-text p {
 		font-size: 0.9em;
@@ -3349,6 +3446,7 @@ a {
 		line-height: 40px;
 		text-indent: 0.25em;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -3357,6 +3455,12 @@ a {
 		display: block;
 		/* --- custom post images--- */
 	}
+	#page #primary article.event h1,
+	#page #primary article.event h2,
+	#page #primary article.event h3,
+	#page #primary article.event h4,
+	#page #primary article.event h5,
+	#page #primary article.event h6,
 	#page #primary article.clash-videos h1,
 	#page #primary article.clash-videos h2,
 	#page #primary article.clash-videos h3,
@@ -3389,6 +3493,7 @@ a {
 	#page #primary article.page h6 {
 		margin-bottom: 1%;
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -3396,6 +3501,7 @@ a {
 	#page #primary article.page header.entry-header {
 		display: block;
 	}
+	#page #primary article.event header.entry-header h1,
 	#page #primary article.clash-videos header.entry-header h1,
 	#page #primary article.clash-audio header.entry-header h1,
 	#page #primary article.post header.entry-header h1,
@@ -3403,6 +3509,7 @@ a {
 	#page #primary article.page header.entry-header h1 {
 		font-size: 1.2em;
 	}
+	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
 	#page #primary article.post header.entry-header h1 a,
@@ -3410,6 +3517,7 @@ a {
 	#page #primary article.page header.entry-header h1 a {
 		width: auto;
 	}
+	#page #primary article.event header.entry-header h1 span,
 	#page #primary article.clash-videos header.entry-header h1 span,
 	#page #primary article.clash-audio header.entry-header h1 span,
 	#page #primary article.post header.entry-header h1 span,
@@ -3417,6 +3525,7 @@ a {
 	#page #primary article.page header.entry-header h1 span {
 		text-indent: 0.25em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title,
 	#page #primary article.clash-videos header.entry-header h2.entry-title,
 	#page #primary article.clash-audio header.entry-header h2.entry-title,
 	#page #primary article.post header.entry-header h2.entry-title,
@@ -3424,6 +3533,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title {
 		font-size: 1.4em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -3431,6 +3541,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header div.entry-meta,
 	#page #primary article.clash-videos header.entry-header div.entry-meta,
 	#page #primary article.clash-audio header.entry-header div.entry-meta,
 	#page #primary article.post header.entry-header div.entry-meta,
@@ -3438,6 +3549,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
@@ -3445,6 +3557,11 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content {
 		grid-template-columns: 10% 2fr;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
@@ -3472,6 +3589,8 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 1em;
 	}
+	#page #primary article.event a.post-thumbnail,
+	#page #primary article.event div.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
 	#page #primary article.clash-videos div.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
@@ -3484,6 +3603,8 @@ a {
 	#page #primary article.page div.post-thumbnail {
 		width: auto;
 	}
+	#page #primary article.event a.post-thumbnail img,
+	#page #primary article.event div.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
 	#page #primary article.clash-videos div.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
@@ -3496,6 +3617,8 @@ a {
 	#page #primary article.page div.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image a img,
+	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
 	#page #primary article.clash-videos figure.attachment a img,
 	#page #primary article.clash-audio figure.featured-image a img,
@@ -3508,6 +3631,7 @@ a {
 	#page #primary article.page figure.attachment a img {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -3515,6 +3639,7 @@ a {
 	#page #primary article.page header.archive-header {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -3522,6 +3647,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta {
 		text-indent: 1%;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -3529,6 +3655,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span {
 		font-size: 0.85em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -3536,6 +3663,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span a {
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -3543,6 +3671,7 @@ a {
 	#page #primary article.page header.archive-header h2 {
 		line-height: 50px;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -3550,6 +3679,7 @@ a {
 	#page #primary article.page header.archive-header h2 a {
 		font-size: 1.1em;
 	}
+	#page #primary article.event footer.entry-footer,
 	#page #primary article.clash-videos footer.entry-footer,
 	#page #primary article.clash-audio footer.entry-footer,
 	#page #primary article.post footer.entry-footer,
@@ -3557,6 +3687,7 @@ a {
 	#page #primary article.page footer.entry-footer {
 		height: auto;
 	}
+	#page #primary article.event footer.entry-footer span,
 	#page #primary article.clash-videos footer.entry-footer span,
 	#page #primary article.clash-audio footer.entry-footer span,
 	#page #primary article.post footer.entry-footer span,
@@ -3564,6 +3695,7 @@ a {
 	#page #primary article.page footer.entry-footer span {
 		height: 35px;
 	}
+	#page #primary article.event footer.entry-footer span span.screen-reader-text,
 	#page #primary article.clash-videos footer.entry-footer span span.screen-reader-text,
 	#page #primary article.clash-audio footer.entry-footer span span.screen-reader-text,
 	#page #primary article.post footer.entry-footer span span.screen-reader-text,
@@ -3571,6 +3703,7 @@ a {
 	#page #primary article.page footer.entry-footer span span.screen-reader-text {
 		width: auto;
 	}
+	#page #primary article.event footer.entry-footer span a,
 	#page #primary article.clash-videos footer.entry-footer span a,
 	#page #primary article.clash-audio footer.entry-footer span a,
 	#page #primary article.post footer.entry-footer span a,
@@ -3579,6 +3712,7 @@ a {
 		font-size: 0.85em;
 		line-height: 35px;
 	}
+	#page #primary article.event footer.entry-footer span a:hover,
 	#page #primary article.clash-videos footer.entry-footer span a:hover,
 	#page #primary article.clash-audio footer.entry-footer span a:hover,
 	#page #primary article.post footer.entry-footer span a:hover,
@@ -3586,6 +3720,7 @@ a {
 	#page #primary article.page footer.entry-footer span a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event footer.entry-footer span a.comments-count,
 	#page #primary article.clash-videos footer.entry-footer span a.comments-count,
 	#page #primary article.clash-audio footer.entry-footer span a.comments-count,
 	#page #primary article.post footer.entry-footer span a.comments-count,
@@ -3594,6 +3729,7 @@ a {
 		font-size: 1.1em;
 		width: 5%;
 	}
+	#page #primary article.event footer.entry-footer p,
 	#page #primary article.clash-videos footer.entry-footer p,
 	#page #primary article.clash-audio footer.entry-footer p,
 	#page #primary article.post footer.entry-footer p,
@@ -3601,6 +3737,9 @@ a {
 	#page #primary article.page footer.entry-footer p {
 		font-size: 0.85em;
 	}
+	#page #primary article.event div.entry-content,
+	#page #primary article.event div.entry-summary,
+	#page #primary article.event div.entry-attachment,
 	#page #primary article.clash-videos div.entry-content,
 	#page #primary article.clash-videos div.entry-summary,
 	#page #primary article.clash-videos div.entry-attachment,
@@ -3618,6 +3757,9 @@ a {
 	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
+	#page #primary article.event div.entry-content p,
+	#page #primary article.event div.entry-summary p,
+	#page #primary article.event div.entry-attachment p,
 	#page #primary article.clash-videos div.entry-content p,
 	#page #primary article.clash-videos div.entry-summary p,
 	#page #primary article.clash-videos div.entry-attachment p,
@@ -3635,6 +3777,9 @@ a {
 	#page #primary article.page div.entry-attachment p {
 		line-height: 1.9em;
 	}
+	#page #primary article.event div.entry-content p a,
+	#page #primary article.event div.entry-summary p a,
+	#page #primary article.event div.entry-attachment p a,
 	#page #primary article.clash-videos div.entry-content p a,
 	#page #primary article.clash-videos div.entry-summary p a,
 	#page #primary article.clash-videos div.entry-attachment p a,
@@ -3652,6 +3797,9 @@ a {
 	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
+	#page #primary article.event div.entry-content p a:hover,
+	#page #primary article.event div.entry-summary p a:hover,
+	#page #primary article.event div.entry-attachment p a:hover,
 	#page #primary article.clash-videos div.entry-content p a:hover,
 	#page #primary article.clash-videos div.entry-summary p a:hover,
 	#page #primary article.clash-videos div.entry-attachment p a:hover,
@@ -3669,6 +3817,9 @@ a {
 	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event div.entry-content ul,
+	#page #primary article.event div.entry-summary ul,
+	#page #primary article.event div.entry-attachment ul,
 	#page #primary article.clash-videos div.entry-content ul,
 	#page #primary article.clash-videos div.entry-summary ul,
 	#page #primary article.clash-videos div.entry-attachment ul,
@@ -3686,6 +3837,9 @@ a {
 	#page #primary article.page div.entry-attachment ul {
 		font-size: 0.9em;
 	}
+	#page #primary article.event div.entry-content ul.post-list li,
+	#page #primary article.event div.entry-summary ul.post-list li,
+	#page #primary article.event div.entry-attachment ul.post-list li,
 	#page #primary article.clash-videos div.entry-content ul.post-list li,
 	#page #primary article.clash-videos div.entry-summary ul.post-list li,
 	#page #primary article.clash-videos div.entry-attachment ul.post-list li,
@@ -3703,6 +3857,9 @@ a {
 	#page #primary article.page div.entry-attachment ul.post-list li {
 		height: auto;
 	}
+	#page #primary article.event div.entry-content ul.post-list li a,
+	#page #primary article.event div.entry-summary ul.post-list li a,
+	#page #primary article.event div.entry-attachment ul.post-list li a,
 	#page #primary article.clash-videos div.entry-content ul.post-list li a,
 	#page #primary article.clash-videos div.entry-summary ul.post-list li a,
 	#page #primary article.clash-videos div.entry-attachment ul.post-list li a,
@@ -3724,6 +3881,9 @@ a {
 		color: #fdd015;
 		text-align: center;
 	}
+	#page #primary article.event div.entry-content ul.post-list li a:hover,
+	#page #primary article.event div.entry-summary ul.post-list li a:hover,
+	#page #primary article.event div.entry-attachment ul.post-list li a:hover,
 	#page #primary article.clash-videos div.entry-content ul.post-list li a:hover,
 	#page #primary article.clash-videos div.entry-summary ul.post-list li a:hover,
 	#page #primary article.clash-videos div.entry-attachment ul.post-list li a:hover,
@@ -3742,6 +3902,9 @@ a {
 		background-color: #fdd015;
 		color: #256b40;
 	}
+	#page #primary article.event div.entry-content a.read-more,
+	#page #primary article.event div.entry-summary a.read-more,
+	#page #primary article.event div.entry-attachment a.read-more,
 	#page #primary article.clash-videos div.entry-content a.read-more,
 	#page #primary article.clash-videos div.entry-summary a.read-more,
 	#page #primary article.clash-videos div.entry-attachment a.read-more,
@@ -3759,6 +3922,9 @@ a {
 	#page #primary article.page div.entry-attachment a.read-more {
 		width: 50%;
 	}
+	#page #primary article.event div.entry-content .tag-cloud-link,
+	#page #primary article.event div.entry-summary .tag-cloud-link,
+	#page #primary article.event div.entry-attachment .tag-cloud-link,
 	#page #primary article.clash-videos div.entry-content .tag-cloud-link,
 	#page #primary article.clash-videos div.entry-summary .tag-cloud-link,
 	#page #primary article.clash-videos div.entry-attachment .tag-cloud-link,
@@ -3776,6 +3942,7 @@ a {
 	#page #primary article.page div.entry-attachment .tag-cloud-link {
 		color: #000;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -3783,6 +3950,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta {
 		height: 100%;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li,
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
@@ -3790,6 +3958,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
 		font-size: 0.9em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -3797,6 +3966,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li span.post-meta-key {
 		width: 20%;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li p,
 	#page #primary article.post footer.speaker-meta ul.post-meta li p,
@@ -3804,6 +3974,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 79%;
 	}
+	#page #primary article.event div.sharedaddy,
 	#page #primary article.clash-videos div.sharedaddy,
 	#page #primary article.clash-audio div.sharedaddy,
 	#page #primary article.post div.sharedaddy,
@@ -3811,6 +3982,7 @@ a {
 	#page #primary article.page div.sharedaddy {
 		margin: 3% auto;
 	}
+	#page #primary article.event div.sharedaddy h3.sd-title,
 	#page #primary article.clash-videos div.sharedaddy h3.sd-title,
 	#page #primary article.clash-audio div.sharedaddy h3.sd-title,
 	#page #primary article.post div.sharedaddy h3.sd-title,
@@ -3819,6 +3991,7 @@ a {
 		font-size: 0.95em;
 		line-height: 40px;
 	}
+	#page #primary article.event div.sharedaddy h3.sd-title::before,
 	#page #primary article.clash-videos div.sharedaddy h3.sd-title::before,
 	#page #primary article.clash-audio div.sharedaddy h3.sd-title::before,
 	#page #primary article.post div.sharedaddy h3.sd-title::before,
@@ -3826,6 +3999,7 @@ a {
 	#page #primary article.page div.sharedaddy h3.sd-title::before {
 		width: 10%;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul,
 	#page #primary article.post div.sharedaddy div.sd-content ul,
@@ -3833,6 +4007,7 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul {
 		font-size: 1em;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li,
 	#page #primary article.post div.sharedaddy div.sd-content ul li,
@@ -3840,6 +4015,7 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul li {
 		width: 10%;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a,
@@ -3847,6 +4023,7 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul li a {
 		background-color: #256b40;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a:hover,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a:hover,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a:hover,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a:hover,
@@ -3854,6 +4031,7 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul li a:hover {
 		color: #256b40;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a::before,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a::before,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a::before,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a::before,
@@ -3861,6 +4039,7 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul li a::before {
 		display: block;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a span,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a span,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a span,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a span,
@@ -4250,39 +4429,37 @@ a {
 		background-color: #256b40;
 	}
 	#page div.results {
-		margin: 0 0 0.5em 0;
+		padding: 0;
 	}
 	#page div.results article.events_box {
 		width: 19%;
-		min-height: 330px;
 	}
 	#page div.results article.events_box h1 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn {
 		font-size: 0.9em;
 	}
-	#page div.results article.events_box #event-submit-btn,
-	#page div.results article.events_box input[type='submit'] {
-		width: 90%;
-	}
-	#page div.results article.events_box #event-submit-btn:hover,
-	#page div.results article.events_box input[type='submit']:hover {
+	#page div.results article.events_box a#event-submit-btn:hover {
 		font-weight: bold;
 	}
 	#page div.results article.events_box figure.events {
 		width: 90%;
 	}
 	#page div.results article.events_box figure.events:hover {
-		width: 92%;
+		cursor: pointer;
 	}
-	#page div.results article.events_box figure.events img {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
+	#page div.results article.events_box figure.events img.attachment-event-image {
+		margin: 0 auto;
 	}
 	#page div.results article.events_box figure.events figcaption.event-text {
-		min-height: 100px;
+		height: auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		font-size: 0.9em;
 	}
 	#page div.results article.events_box figure.events figcaption.event-text p {
-		font-size: 0.9em;
+		font-size: 0.85em;
 	}
 	#page #new_releases_section,
 	#page #video_releases_section,
@@ -4568,6 +4745,7 @@ a {
 	#page #primary h6 {
 		text-indent: 0.25em;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -4576,6 +4754,7 @@ a {
 		display: block;
 		/* --- custom post images--- */
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -4583,6 +4762,7 @@ a {
 	#page #primary article.page header.entry-header {
 		display: block;
 	}
+	#page #primary article.event header.entry-header h2.entry-title,
 	#page #primary article.clash-videos header.entry-header h2.entry-title,
 	#page #primary article.clash-audio header.entry-header h2.entry-title,
 	#page #primary article.post header.entry-header h2.entry-title,
@@ -4590,6 +4770,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title {
 		font-size: 1.3em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -4597,6 +4778,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header div.entry-meta,
 	#page #primary article.clash-videos header.entry-header div.entry-meta,
 	#page #primary article.clash-audio header.entry-header div.entry-meta,
 	#page #primary article.post header.entry-header div.entry-meta,
@@ -4604,6 +4786,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
@@ -4612,6 +4795,11 @@ a {
 		width: 100%;
 		grid-template-columns: 11% 2fr;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
@@ -4639,6 +4827,8 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.9em;
 	}
+	#page #primary article.event a.post-thumbnail img,
+	#page #primary article.event div.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
 	#page #primary article.clash-videos div.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
@@ -4651,6 +4841,8 @@ a {
 	#page #primary article.page div.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image a img,
+	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
 	#page #primary article.clash-videos figure.attachment a img,
 	#page #primary article.clash-audio figure.featured-image a img,
@@ -4663,6 +4855,7 @@ a {
 	#page #primary article.page figure.attachment a img {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -4670,6 +4863,7 @@ a {
 	#page #primary article.page header.archive-header {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -4677,6 +4871,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta {
 		text-indent: 1%;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -4684,6 +4879,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span {
 		font-size: 0.85em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -4691,6 +4887,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span a {
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -4698,6 +4895,7 @@ a {
 	#page #primary article.page header.archive-header h2 {
 		line-height: 50px;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -4705,6 +4903,7 @@ a {
 	#page #primary article.page header.archive-header h2 a {
 		font-size: 1.1em;
 	}
+	#page #primary article.event footer.entry-footer,
 	#page #primary article.clash-videos footer.entry-footer,
 	#page #primary article.clash-audio footer.entry-footer,
 	#page #primary article.post footer.entry-footer,
@@ -4712,6 +4911,7 @@ a {
 	#page #primary article.page footer.entry-footer {
 		height: auto;
 	}
+	#page #primary article.event footer.entry-footer span,
 	#page #primary article.clash-videos footer.entry-footer span,
 	#page #primary article.clash-audio footer.entry-footer span,
 	#page #primary article.post footer.entry-footer span,
@@ -4719,6 +4919,7 @@ a {
 	#page #primary article.page footer.entry-footer span {
 		height: 35px;
 	}
+	#page #primary article.event footer.entry-footer span span.screen-reader-text,
 	#page #primary article.clash-videos footer.entry-footer span span.screen-reader-text,
 	#page #primary article.clash-audio footer.entry-footer span span.screen-reader-text,
 	#page #primary article.post footer.entry-footer span span.screen-reader-text,
@@ -4726,6 +4927,7 @@ a {
 	#page #primary article.page footer.entry-footer span span.screen-reader-text {
 		width: auto;
 	}
+	#page #primary article.event footer.entry-footer span a,
 	#page #primary article.clash-videos footer.entry-footer span a,
 	#page #primary article.clash-audio footer.entry-footer span a,
 	#page #primary article.post footer.entry-footer span a,
@@ -4734,6 +4936,7 @@ a {
 		font-size: 0.85em;
 		line-height: 35px;
 	}
+	#page #primary article.event footer.entry-footer span a:hover,
 	#page #primary article.clash-videos footer.entry-footer span a:hover,
 	#page #primary article.clash-audio footer.entry-footer span a:hover,
 	#page #primary article.post footer.entry-footer span a:hover,
@@ -4741,6 +4944,7 @@ a {
 	#page #primary article.page footer.entry-footer span a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event footer.entry-footer span a.comments-count,
 	#page #primary article.clash-videos footer.entry-footer span a.comments-count,
 	#page #primary article.clash-audio footer.entry-footer span a.comments-count,
 	#page #primary article.post footer.entry-footer span a.comments-count,
@@ -4749,6 +4953,7 @@ a {
 		font-size: 1.1em;
 		width: 5%;
 	}
+	#page #primary article.event footer.entry-footer p,
 	#page #primary article.clash-videos footer.entry-footer p,
 	#page #primary article.clash-audio footer.entry-footer p,
 	#page #primary article.post footer.entry-footer p,
@@ -4756,6 +4961,9 @@ a {
 	#page #primary article.page footer.entry-footer p {
 		font-size: 0.85em;
 	}
+	#page #primary article.event div.entry-content,
+	#page #primary article.event div.entry-summary,
+	#page #primary article.event div.entry-attachment,
 	#page #primary article.clash-videos div.entry-content,
 	#page #primary article.clash-videos div.entry-summary,
 	#page #primary article.clash-videos div.entry-attachment,
@@ -4773,6 +4981,9 @@ a {
 	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
+	#page #primary article.event div.entry-content .wp-block-image,
+	#page #primary article.event div.entry-summary .wp-block-image,
+	#page #primary article.event div.entry-attachment .wp-block-image,
 	#page #primary article.clash-videos div.entry-content .wp-block-image,
 	#page #primary article.clash-videos div.entry-summary .wp-block-image,
 	#page #primary article.clash-videos div.entry-attachment .wp-block-image,
@@ -4790,6 +5001,9 @@ a {
 	#page #primary article.page div.entry-attachment .wp-block-image {
 		height: auto;
 	}
+	#page #primary article.event div.entry-content p a,
+	#page #primary article.event div.entry-summary p a,
+	#page #primary article.event div.entry-attachment p a,
 	#page #primary article.clash-videos div.entry-content p a,
 	#page #primary article.clash-videos div.entry-summary p a,
 	#page #primary article.clash-videos div.entry-attachment p a,
@@ -4807,6 +5021,9 @@ a {
 	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
+	#page #primary article.event div.entry-content p a:hover,
+	#page #primary article.event div.entry-summary p a:hover,
+	#page #primary article.event div.entry-attachment p a:hover,
 	#page #primary article.clash-videos div.entry-content p a:hover,
 	#page #primary article.clash-videos div.entry-summary p a:hover,
 	#page #primary article.clash-videos div.entry-attachment p a:hover,
@@ -4824,6 +5041,9 @@ a {
 	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event div.entry-content a.read-more,
+	#page #primary article.event div.entry-summary a.read-more,
+	#page #primary article.event div.entry-attachment a.read-more,
 	#page #primary article.clash-videos div.entry-content a.read-more,
 	#page #primary article.clash-videos div.entry-summary a.read-more,
 	#page #primary article.clash-videos div.entry-attachment a.read-more,
@@ -4841,6 +5061,7 @@ a {
 	#page #primary article.page div.entry-attachment a.read-more {
 		width: 60%;
 	}
+	#page #primary article.event footer.speaker-meta,
 	#page #primary article.clash-videos footer.speaker-meta,
 	#page #primary article.clash-audio footer.speaker-meta,
 	#page #primary article.post footer.speaker-meta,
@@ -4848,6 +5069,7 @@ a {
 	#page #primary article.page footer.speaker-meta {
 		height: auto;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -4856,6 +5078,7 @@ a {
 		height: 100%;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li,
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
@@ -4863,6 +5086,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
 		font-size: 0.85em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -4870,6 +5094,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li span.post-meta-key {
 		width: 20%;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li p,
 	#page #primary article.post footer.speaker-meta ul.post-meta li p,
@@ -4877,6 +5102,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 77%;
 	}
+	#page #primary article.event div.sharedaddy,
 	#page #primary article.clash-videos div.sharedaddy,
 	#page #primary article.clash-audio div.sharedaddy,
 	#page #primary article.post div.sharedaddy,
@@ -4884,6 +5110,7 @@ a {
 	#page #primary article.page div.sharedaddy {
 		margin: 3% auto;
 	}
+	#page #primary article.event div.sharedaddy h3.sd-title,
 	#page #primary article.clash-videos div.sharedaddy h3.sd-title,
 	#page #primary article.clash-audio div.sharedaddy h3.sd-title,
 	#page #primary article.post div.sharedaddy h3.sd-title,
@@ -4892,6 +5119,7 @@ a {
 		font-size: 0.9em;
 		line-height: 40px;
 	}
+	#page #primary article.event div.sharedaddy h3.sd-title::before,
 	#page #primary article.clash-videos div.sharedaddy h3.sd-title::before,
 	#page #primary article.clash-audio div.sharedaddy h3.sd-title::before,
 	#page #primary article.post div.sharedaddy h3.sd-title::before,
@@ -4899,6 +5127,7 @@ a {
 	#page #primary article.page div.sharedaddy h3.sd-title::before {
 		width: 10%;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul,
 	#page #primary article.post div.sharedaddy div.sd-content ul,
@@ -4906,6 +5135,7 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul {
 		font-size: 0.9em;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li,
 	#page #primary article.post div.sharedaddy div.sd-content ul li,
@@ -4913,6 +5143,7 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul li {
 		width: 10%;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a,
@@ -4920,6 +5151,7 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul li a {
 		background-color: #256b40;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a:hover,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a:hover,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a:hover,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a:hover,
@@ -4927,6 +5159,7 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul li a:hover {
 		color: #256b40;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a::before,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a::before,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a::before,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a::before,
@@ -4934,6 +5167,7 @@ a {
 	#page #primary article.page div.sharedaddy div.sd-content ul li a::before {
 		display: block;
 	}
+	#page #primary article.event div.sharedaddy div.sd-content ul li a span,
 	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a span,
 	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a span,
 	#page #primary article.post div.sharedaddy div.sd-content ul li a span,
@@ -5297,6 +5531,40 @@ a {
 	#page article#clashvibes-text figure.text-img img {
 		width: 100%;
 	}
+	#page div.results {
+		padding: 0;
+	}
+	#page div.results article.events_box {
+		width: 23.5%;
+	}
+	#page div.results article.events_box h1 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn {
+		font-size: 0.9em;
+	}
+	#page div.results article.events_box a#event-submit-btn:hover {
+		font-weight: bold;
+	}
+	#page div.results article.events_box figure.events {
+		width: 90%;
+	}
+	#page div.results article.events_box figure.events:hover {
+		cursor: pointer;
+	}
+	#page div.results article.events_box figure.events img.attachment-event-image {
+		margin: 0 auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text {
+		height: auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		font-size: 0.85em;
+		line-height: 25px;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text p {
+		font-size: 0.85em;
+	}
 	#page #new_releases_section,
 	#page #video_releases_section,
 	#page #audio_releases_section {
@@ -5561,6 +5829,7 @@ a {
 	#page #primary h1 span {
 		width: 27%;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -5569,6 +5838,7 @@ a {
 		display: block;
 		/* --- custom post images--- */
 	}
+	#page #primary article.event h1,
 	#page #primary article.clash-videos h1,
 	#page #primary article.clash-audio h1,
 	#page #primary article.post h1,
@@ -5576,6 +5846,7 @@ a {
 	#page #primary article.page h1 {
 		font-size: 1.2em;
 	}
+	#page #primary article.event h2,
 	#page #primary article.clash-videos h2,
 	#page #primary article.clash-audio h2,
 	#page #primary article.post h2,
@@ -5583,6 +5854,7 @@ a {
 	#page #primary article.page h2 {
 		font-size: 1.1em;
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -5590,6 +5862,7 @@ a {
 	#page #primary article.page header.entry-header {
 		display: block;
 	}
+	#page #primary article.event header.entry-header h1,
 	#page #primary article.clash-videos header.entry-header h1,
 	#page #primary article.clash-audio header.entry-header h1,
 	#page #primary article.post header.entry-header h1,
@@ -5597,6 +5870,7 @@ a {
 	#page #primary article.page header.entry-header h1 {
 		font-size: 1em;
 	}
+	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
 	#page #primary article.post header.entry-header h1 a,
@@ -5604,6 +5878,7 @@ a {
 	#page #primary article.page header.entry-header h1 a {
 		width: auto;
 	}
+	#page #primary article.event header.entry-header h1 span,
 	#page #primary article.clash-videos header.entry-header h1 span,
 	#page #primary article.clash-audio header.entry-header h1 span,
 	#page #primary article.post header.entry-header h1 span,
@@ -5611,6 +5886,7 @@ a {
 	#page #primary article.page header.entry-header h1 span {
 		text-indent: 0.25em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title,
 	#page #primary article.clash-videos header.entry-header h2.entry-title,
 	#page #primary article.clash-audio header.entry-header h2.entry-title,
 	#page #primary article.post header.entry-header h2.entry-title,
@@ -5618,6 +5894,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title {
 		font-size: 1.3em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -5625,6 +5902,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header div.entry-meta,
 	#page #primary article.clash-videos header.entry-header div.entry-meta,
 	#page #primary article.clash-audio header.entry-header div.entry-meta,
 	#page #primary article.post header.entry-header div.entry-meta,
@@ -5632,6 +5910,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
@@ -5639,6 +5918,11 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content {
 		grid-template-columns: 13% 2fr;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
@@ -5666,6 +5950,8 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.80em;
 	}
+	#page #primary article.event a.post-thumbnail,
+	#page #primary article.event div.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
 	#page #primary article.clash-videos div.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
@@ -5678,6 +5964,8 @@ a {
 	#page #primary article.page div.post-thumbnail {
 		width: auto;
 	}
+	#page #primary article.event a.post-thumbnail img,
+	#page #primary article.event div.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
 	#page #primary article.clash-videos div.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
@@ -5690,6 +5978,8 @@ a {
 	#page #primary article.page div.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image a img,
+	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
 	#page #primary article.clash-videos figure.attachment a img,
 	#page #primary article.clash-audio figure.featured-image a img,
@@ -5702,6 +5992,7 @@ a {
 	#page #primary article.page figure.attachment a img {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -5709,6 +6000,7 @@ a {
 	#page #primary article.page header.archive-header {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -5716,6 +6008,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta {
 		text-indent: 1%;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -5723,6 +6016,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span {
 		font-size: 0.8em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -5730,6 +6024,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span a {
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -5737,6 +6032,7 @@ a {
 	#page #primary article.page header.archive-header h2 {
 		line-height: 50px;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -5744,6 +6040,7 @@ a {
 	#page #primary article.page header.archive-header h2 a {
 		font-size: 1.1em;
 	}
+	#page #primary article.event footer.entry-footer,
 	#page #primary article.clash-videos footer.entry-footer,
 	#page #primary article.clash-audio footer.entry-footer,
 	#page #primary article.post footer.entry-footer,
@@ -5751,6 +6048,7 @@ a {
 	#page #primary article.page footer.entry-footer {
 		height: auto;
 	}
+	#page #primary article.event footer.entry-footer span,
 	#page #primary article.clash-videos footer.entry-footer span,
 	#page #primary article.clash-audio footer.entry-footer span,
 	#page #primary article.post footer.entry-footer span,
@@ -5758,6 +6056,7 @@ a {
 	#page #primary article.page footer.entry-footer span {
 		height: 35px;
 	}
+	#page #primary article.event footer.entry-footer span span.screen-reader-text,
 	#page #primary article.clash-videos footer.entry-footer span span.screen-reader-text,
 	#page #primary article.clash-audio footer.entry-footer span span.screen-reader-text,
 	#page #primary article.post footer.entry-footer span span.screen-reader-text,
@@ -5765,6 +6064,7 @@ a {
 	#page #primary article.page footer.entry-footer span span.screen-reader-text {
 		width: auto;
 	}
+	#page #primary article.event footer.entry-footer span a,
 	#page #primary article.clash-videos footer.entry-footer span a,
 	#page #primary article.clash-audio footer.entry-footer span a,
 	#page #primary article.post footer.entry-footer span a,
@@ -5773,6 +6073,7 @@ a {
 		font-size: 0.8em;
 		line-height: 35px;
 	}
+	#page #primary article.event footer.entry-footer span a:hover,
 	#page #primary article.clash-videos footer.entry-footer span a:hover,
 	#page #primary article.clash-audio footer.entry-footer span a:hover,
 	#page #primary article.post footer.entry-footer span a:hover,
@@ -5780,6 +6081,7 @@ a {
 	#page #primary article.page footer.entry-footer span a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event footer.entry-footer span a.comments-count,
 	#page #primary article.clash-videos footer.entry-footer span a.comments-count,
 	#page #primary article.clash-audio footer.entry-footer span a.comments-count,
 	#page #primary article.post footer.entry-footer span a.comments-count,
@@ -5788,6 +6090,7 @@ a {
 		font-size: 1.1em;
 		width: 5%;
 	}
+	#page #primary article.event footer.entry-footer p,
 	#page #primary article.clash-videos footer.entry-footer p,
 	#page #primary article.clash-audio footer.entry-footer p,
 	#page #primary article.post footer.entry-footer p,
@@ -5795,6 +6098,9 @@ a {
 	#page #primary article.page footer.entry-footer p {
 		font-size: 0.85em;
 	}
+	#page #primary article.event div.entry-content,
+	#page #primary article.event div.entry-summary,
+	#page #primary article.event div.entry-attachment,
 	#page #primary article.clash-videos div.entry-content,
 	#page #primary article.clash-videos div.entry-summary,
 	#page #primary article.clash-videos div.entry-attachment,
@@ -5812,6 +6118,9 @@ a {
 	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
+	#page #primary article.event div.entry-content p,
+	#page #primary article.event div.entry-summary p,
+	#page #primary article.event div.entry-attachment p,
 	#page #primary article.clash-videos div.entry-content p,
 	#page #primary article.clash-videos div.entry-summary p,
 	#page #primary article.clash-videos div.entry-attachment p,
@@ -5829,6 +6138,9 @@ a {
 	#page #primary article.page div.entry-attachment p {
 		font-size: 0.9em;
 	}
+	#page #primary article.event div.entry-content p a,
+	#page #primary article.event div.entry-summary p a,
+	#page #primary article.event div.entry-attachment p a,
 	#page #primary article.clash-videos div.entry-content p a,
 	#page #primary article.clash-videos div.entry-summary p a,
 	#page #primary article.clash-videos div.entry-attachment p a,
@@ -5846,6 +6158,9 @@ a {
 	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
+	#page #primary article.event div.entry-content p a:hover,
+	#page #primary article.event div.entry-summary p a:hover,
+	#page #primary article.event div.entry-attachment p a:hover,
 	#page #primary article.clash-videos div.entry-content p a:hover,
 	#page #primary article.clash-videos div.entry-summary p a:hover,
 	#page #primary article.clash-videos div.entry-attachment p a:hover,
@@ -5863,6 +6178,9 @@ a {
 	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event div.entry-content a.read-more,
+	#page #primary article.event div.entry-summary a.read-more,
+	#page #primary article.event div.entry-attachment a.read-more,
 	#page #primary article.clash-videos div.entry-content a.read-more,
 	#page #primary article.clash-videos div.entry-summary a.read-more,
 	#page #primary article.clash-videos div.entry-attachment a.read-more,
@@ -5880,6 +6198,7 @@ a {
 	#page #primary article.page div.entry-attachment a.read-more {
 		width: 60%;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -5887,6 +6206,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta {
 		height: 100%;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li,
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
@@ -5894,6 +6214,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
 		font-size: 0.8em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -5901,6 +6222,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li span.post-meta-key {
 		width: 23%;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li p,
 	#page #primary article.post footer.speaker-meta ul.post-meta li p,
@@ -6293,6 +6615,39 @@ a {
 	#page figure.text-img img {
 		width: 100%;
 	}
+	#page div.results {
+		padding: 0;
+	}
+	#page div.results article.events_box {
+		width: 23.25%;
+	}
+	#page div.results article.events_box h1 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn {
+		font-size: 0.8em;
+	}
+	#page div.results article.events_box a#event-submit-btn:hover {
+		font-weight: bold;
+	}
+	#page div.results article.events_box figure.events {
+		width: 90%;
+	}
+	#page div.results article.events_box figure.events:hover {
+		cursor: pointer;
+	}
+	#page div.results article.events_box figure.events img.attachment-event-image {
+		margin: 0 auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text {
+		height: auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		font-size: 0.8em;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text p {
+		font-size: 0.75em;
+	}
 	#page #new_releases_section,
 	#page #video_releases_section,
 	#page #audio_releases_section {
@@ -6576,6 +6931,7 @@ a {
 	#page #primary h1 span {
 		width: 27%;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -6584,6 +6940,7 @@ a {
 		display: block;
 		/* blog footer */
 	}
+	#page #primary article.event h1,
 	#page #primary article.clash-videos h1,
 	#page #primary article.clash-audio h1,
 	#page #primary article.post h1,
@@ -6591,6 +6948,7 @@ a {
 	#page #primary article.page h1 {
 		font-size: 1.1em;
 	}
+	#page #primary article.event h2,
 	#page #primary article.clash-videos h2,
 	#page #primary article.clash-audio h2,
 	#page #primary article.post h2,
@@ -6598,6 +6956,7 @@ a {
 	#page #primary article.page h2 {
 		font-size: 1em;
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -6605,6 +6964,7 @@ a {
 	#page #primary article.page header.entry-header {
 		display: block;
 	}
+	#page #primary article.event header.entry-header h1,
 	#page #primary article.clash-videos header.entry-header h1,
 	#page #primary article.clash-audio header.entry-header h1,
 	#page #primary article.post header.entry-header h1,
@@ -6612,6 +6972,7 @@ a {
 	#page #primary article.page header.entry-header h1 {
 		font-size: 0.9em;
 	}
+	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
 	#page #primary article.post header.entry-header h1 a,
@@ -6619,6 +6980,7 @@ a {
 	#page #primary article.page header.entry-header h1 a {
 		width: auto;
 	}
+	#page #primary article.event header.entry-header h1 span,
 	#page #primary article.clash-videos header.entry-header h1 span,
 	#page #primary article.clash-audio header.entry-header h1 span,
 	#page #primary article.post header.entry-header h1 span,
@@ -6626,6 +6988,7 @@ a {
 	#page #primary article.page header.entry-header h1 span {
 		text-indent: 0.25em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title,
 	#page #primary article.clash-videos header.entry-header h2.entry-title,
 	#page #primary article.clash-audio header.entry-header h2.entry-title,
 	#page #primary article.post header.entry-header h2.entry-title,
@@ -6633,6 +6996,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title {
 		font-size: 1.1em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -6640,6 +7004,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header div.entry-meta,
 	#page #primary article.clash-videos header.entry-header div.entry-meta,
 	#page #primary article.clash-audio header.entry-header div.entry-meta,
 	#page #primary article.post header.entry-header div.entry-meta,
@@ -6647,6 +7012,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
@@ -6654,6 +7020,11 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content {
 		grid-template-columns: 16% 2fr;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
@@ -6681,6 +7052,8 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.80em;
 	}
+	#page #primary article.event a.post-thumbnail,
+	#page #primary article.event div.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
 	#page #primary article.clash-videos div.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
@@ -6693,6 +7066,8 @@ a {
 	#page #primary article.page div.post-thumbnail {
 		width: auto;
 	}
+	#page #primary article.event a.post-thumbnail img,
+	#page #primary article.event div.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
 	#page #primary article.clash-videos div.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
@@ -6705,6 +7080,8 @@ a {
 	#page #primary article.page div.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image a img,
+	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
 	#page #primary article.clash-videos figure.attachment a img,
 	#page #primary article.clash-audio figure.featured-image a img,
@@ -6717,6 +7094,7 @@ a {
 	#page #primary article.page figure.attachment a img {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -6724,6 +7102,7 @@ a {
 	#page #primary article.page header.archive-header {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -6731,6 +7110,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta {
 		text-indent: 1%;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -6738,6 +7118,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span {
 		font-size: 0.8em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -6745,6 +7126,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span a {
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -6752,6 +7134,7 @@ a {
 	#page #primary article.page header.archive-header h2 {
 		line-height: 50px;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -6759,6 +7142,7 @@ a {
 	#page #primary article.page header.archive-header h2 a {
 		font-size: 1.1em;
 	}
+	#page #primary article.event footer.entry-footer,
 	#page #primary article.clash-videos footer.entry-footer,
 	#page #primary article.clash-audio footer.entry-footer,
 	#page #primary article.post footer.entry-footer,
@@ -6766,6 +7150,7 @@ a {
 	#page #primary article.page footer.entry-footer {
 		height: auto;
 	}
+	#page #primary article.event footer.entry-footer span,
 	#page #primary article.clash-videos footer.entry-footer span,
 	#page #primary article.clash-audio footer.entry-footer span,
 	#page #primary article.post footer.entry-footer span,
@@ -6773,6 +7158,7 @@ a {
 	#page #primary article.page footer.entry-footer span {
 		height: 35px;
 	}
+	#page #primary article.event footer.entry-footer span span.screen-reader-text,
 	#page #primary article.clash-videos footer.entry-footer span span.screen-reader-text,
 	#page #primary article.clash-audio footer.entry-footer span span.screen-reader-text,
 	#page #primary article.post footer.entry-footer span span.screen-reader-text,
@@ -6780,6 +7166,7 @@ a {
 	#page #primary article.page footer.entry-footer span span.screen-reader-text {
 		width: auto;
 	}
+	#page #primary article.event footer.entry-footer span a,
 	#page #primary article.clash-videos footer.entry-footer span a,
 	#page #primary article.clash-audio footer.entry-footer span a,
 	#page #primary article.post footer.entry-footer span a,
@@ -6788,6 +7175,7 @@ a {
 		font-size: 0.8em;
 		line-height: 35px;
 	}
+	#page #primary article.event footer.entry-footer span a:hover,
 	#page #primary article.clash-videos footer.entry-footer span a:hover,
 	#page #primary article.clash-audio footer.entry-footer span a:hover,
 	#page #primary article.post footer.entry-footer span a:hover,
@@ -6795,6 +7183,7 @@ a {
 	#page #primary article.page footer.entry-footer span a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event footer.entry-footer span a.comments-count,
 	#page #primary article.clash-videos footer.entry-footer span a.comments-count,
 	#page #primary article.clash-audio footer.entry-footer span a.comments-count,
 	#page #primary article.post footer.entry-footer span a.comments-count,
@@ -6803,6 +7192,7 @@ a {
 		font-size: 1.1em;
 		width: 5%;
 	}
+	#page #primary article.event footer.entry-footer p,
 	#page #primary article.clash-videos footer.entry-footer p,
 	#page #primary article.clash-audio footer.entry-footer p,
 	#page #primary article.post footer.entry-footer p,
@@ -6810,6 +7200,9 @@ a {
 	#page #primary article.page footer.entry-footer p {
 		font-size: 0.85em;
 	}
+	#page #primary article.event div.entry-content,
+	#page #primary article.event div.entry-summary,
+	#page #primary article.event div.entry-attachment,
 	#page #primary article.clash-videos div.entry-content,
 	#page #primary article.clash-videos div.entry-summary,
 	#page #primary article.clash-videos div.entry-attachment,
@@ -6827,6 +7220,9 @@ a {
 	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
+	#page #primary article.event div.entry-content p,
+	#page #primary article.event div.entry-summary p,
+	#page #primary article.event div.entry-attachment p,
 	#page #primary article.clash-videos div.entry-content p,
 	#page #primary article.clash-videos div.entry-summary p,
 	#page #primary article.clash-videos div.entry-attachment p,
@@ -6844,6 +7240,9 @@ a {
 	#page #primary article.page div.entry-attachment p {
 		font-size: 0.85em;
 	}
+	#page #primary article.event div.entry-content p a,
+	#page #primary article.event div.entry-summary p a,
+	#page #primary article.event div.entry-attachment p a,
 	#page #primary article.clash-videos div.entry-content p a,
 	#page #primary article.clash-videos div.entry-summary p a,
 	#page #primary article.clash-videos div.entry-attachment p a,
@@ -6861,6 +7260,9 @@ a {
 	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
+	#page #primary article.event div.entry-content p a:hover,
+	#page #primary article.event div.entry-summary p a:hover,
+	#page #primary article.event div.entry-attachment p a:hover,
 	#page #primary article.clash-videos div.entry-content p a:hover,
 	#page #primary article.clash-videos div.entry-summary p a:hover,
 	#page #primary article.clash-videos div.entry-attachment p a:hover,
@@ -6878,6 +7280,9 @@ a {
 	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event div.entry-content a.read-more,
+	#page #primary article.event div.entry-summary a.read-more,
+	#page #primary article.event div.entry-attachment a.read-more,
 	#page #primary article.clash-videos div.entry-content a.read-more,
 	#page #primary article.clash-videos div.entry-summary a.read-more,
 	#page #primary article.clash-videos div.entry-attachment a.read-more,
@@ -6896,6 +7301,7 @@ a {
 		width: 70%;
 		font-size: 0.9em;
 	}
+	#page #primary article.event footer.speaker-meta,
 	#page #primary article.clash-videos footer.speaker-meta,
 	#page #primary article.clash-audio footer.speaker-meta,
 	#page #primary article.post footer.speaker-meta,
@@ -6903,6 +7309,7 @@ a {
 	#page #primary article.page footer.speaker-meta {
 		height: auto;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -6910,6 +7317,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta {
 		height: 100%;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li,
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
@@ -6918,6 +7326,7 @@ a {
 		font-size: 0.75em;
 		height: auto;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -6926,6 +7335,7 @@ a {
 		width: 100%;
 		display: block;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li p,
 	#page #primary article.post footer.speaker-meta ul.post-meta li p,
@@ -7520,6 +7930,7 @@ a {
 		display: inline-block;
 		width: 27%;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -7527,6 +7938,7 @@ a {
 	#page #primary article.page {
 		margin-bottom: 1%;
 	}
+	#page #primary article.event h2,
 	#page #primary article.clash-videos h2,
 	#page #primary article.clash-audio h2,
 	#page #primary article.post h2,
@@ -7534,6 +7946,7 @@ a {
 	#page #primary article.page h2 {
 		font-size: 1em;
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -7541,6 +7954,7 @@ a {
 	#page #primary article.page header.entry-header {
 		height: auto;
 	}
+	#page #primary article.event header.entry-header h1,
 	#page #primary article.clash-videos header.entry-header h1,
 	#page #primary article.clash-audio header.entry-header h1,
 	#page #primary article.post header.entry-header h1,
@@ -7552,6 +7966,7 @@ a {
 		height: 40px;
 		line-height: 40px;
 	}
+	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
 	#page #primary article.post header.entry-header h1 a,
@@ -7559,6 +7974,7 @@ a {
 	#page #primary article.page header.entry-header h1 a {
 		letter-spacing: 0.03em;
 	}
+	#page #primary article.event header.entry-header h1 span,
 	#page #primary article.clash-videos header.entry-header h1 span,
 	#page #primary article.clash-audio header.entry-header h1 span,
 	#page #primary article.post header.entry-header h1 span,
@@ -7566,6 +7982,7 @@ a {
 	#page #primary article.page header.entry-header h1 span {
 		text-indent: 0;
 	}
+	#page #primary article.event header.entry-header h2.entry-title,
 	#page #primary article.clash-videos header.entry-header h2.entry-title,
 	#page #primary article.clash-audio header.entry-header h2.entry-title,
 	#page #primary article.post header.entry-header h2.entry-title,
@@ -7574,6 +7991,7 @@ a {
 		text-indent: 0;
 		text-align: center;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -7581,6 +7999,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header div.entry-meta,
 	#page #primary article.clash-videos header.entry-header div.entry-meta,
 	#page #primary article.clash-audio header.entry-header div.entry-meta,
 	#page #primary article.post header.entry-header div.entry-meta,
@@ -7588,6 +8007,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		text-align: center;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
@@ -7595,6 +8015,11 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content {
 		grid-template-columns: 15% 2fr;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
@@ -7622,6 +8047,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.75em;
 	}
+	#page #primary article.event header.entry-header section.byline,
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
 	#page #primary article.post header.entry-header section.byline,
@@ -7629,6 +8055,7 @@ a {
 	#page #primary article.page header.entry-header section.byline {
 		height: 123px;
 	}
+	#page #primary article.event header.entry-header section.byline span,
 	#page #primary article.clash-videos header.entry-header section.byline span,
 	#page #primary article.clash-audio header.entry-header section.byline span,
 	#page #primary article.post header.entry-header section.byline span,
@@ -7637,6 +8064,7 @@ a {
 		font-size: 0.75em;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -7644,6 +8072,7 @@ a {
 	#page #primary article.page header.archive-header {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -7652,6 +8081,7 @@ a {
 		text-indent: 1%;
 		height: 123px;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -7660,6 +8090,7 @@ a {
 		font-size: 0.75em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -7667,6 +8098,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span a {
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -7675,6 +8107,7 @@ a {
 		font-size: 1em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -7682,6 +8115,7 @@ a {
 	#page #primary article.page header.archive-header h2 a {
 		font-size: 1em;
 	}
+	#page #primary article.event footer.byline,
 	#page #primary article.clash-videos footer.byline,
 	#page #primary article.clash-audio footer.byline,
 	#page #primary article.post footer.byline,
@@ -7689,6 +8123,7 @@ a {
 	#page #primary article.page footer.byline {
 		text-indent: 0.5em;
 	}
+	#page #primary article.event footer.byline span,
 	#page #primary article.clash-videos footer.byline span,
 	#page #primary article.clash-audio footer.byline span,
 	#page #primary article.post footer.byline span,
@@ -7696,6 +8131,7 @@ a {
 	#page #primary article.page footer.byline span {
 		width: 80%;
 	}
+	#page #primary article.event footer.byline span span.screen-reader-text,
 	#page #primary article.clash-videos footer.byline span span.screen-reader-text,
 	#page #primary article.clash-audio footer.byline span span.screen-reader-text,
 	#page #primary article.post footer.byline span span.screen-reader-text,
@@ -7704,6 +8140,7 @@ a {
 		width: 75%;
 		font-size: 0.8em;
 	}
+	#page #primary article.event footer.byline a,
 	#page #primary article.clash-videos footer.byline a,
 	#page #primary article.clash-audio footer.byline a,
 	#page #primary article.post footer.byline a,
@@ -7712,6 +8149,7 @@ a {
 		width: 34%;
 		font-size: 0.75em;
 	}
+	#page #primary article.event footer.byline a.comments-count,
 	#page #primary article.clash-videos footer.byline a.comments-count,
 	#page #primary article.clash-audio footer.byline a.comments-count,
 	#page #primary article.post footer.byline a.comments-count,
@@ -7720,6 +8158,7 @@ a {
 		font-size: 1em;
 		width: 5%;
 	}
+	#page #primary article.event footer.byline p,
 	#page #primary article.clash-videos footer.byline p,
 	#page #primary article.clash-audio footer.byline p,
 	#page #primary article.post footer.byline p,
@@ -7728,6 +8167,7 @@ a {
 		font-size: 0.75em;
 		line-height: 30px;
 	}
+	#page #primary article.event p,
 	#page #primary article.clash-videos p,
 	#page #primary article.clash-audio p,
 	#page #primary article.post p,
@@ -7735,6 +8175,7 @@ a {
 	#page #primary article.page p {
 		font-size: 0.8em;
 	}
+	#page #primary article.event ul,
 	#page #primary article.clash-videos ul,
 	#page #primary article.clash-audio ul,
 	#page #primary article.post ul,
@@ -7743,6 +8184,7 @@ a {
 		margin: 0 auto;
 		width: 90%;
 	}
+	#page #primary article.event ul li,
 	#page #primary article.clash-videos ul li,
 	#page #primary article.clash-audio ul li,
 	#page #primary article.post ul li,
@@ -7751,6 +8193,7 @@ a {
 		line-height: 40px;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event ul figure,
 	#page #primary article.clash-videos ul figure,
 	#page #primary article.clash-audio ul figure,
 	#page #primary article.post ul figure,
@@ -7759,6 +8202,8 @@ a {
 		width: 90%;
 		padding: 0;
 	}
+	#page #primary article.event figure.thumb,
+	#page #primary article.event figure.attachment,
 	#page #primary article.clash-videos figure.thumb,
 	#page #primary article.clash-videos figure.attachment,
 	#page #primary article.clash-audio figure.thumb,
@@ -7771,6 +8216,8 @@ a {
 	#page #primary article.page figure.attachment {
 		width: 25%;
 	}
+	#page #primary article.event figure.thumb img,
+	#page #primary article.event figure.attachment img,
 	#page #primary article.clash-videos figure.thumb img,
 	#page #primary article.clash-videos figure.attachment img,
 	#page #primary article.clash-audio figure.thumb img,
@@ -7783,6 +8230,9 @@ a {
 	#page #primary article.page figure.attachment img {
 		margin: 0;
 	}
+	#page #primary article.event div.entry-content,
+	#page #primary article.event div.entry-summary,
+	#page #primary article.event div.entry-attachment,
 	#page #primary article.clash-videos div.entry-content,
 	#page #primary article.clash-videos div.entry-summary,
 	#page #primary article.clash-videos div.entry-attachment,
@@ -7800,6 +8250,9 @@ a {
 	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
+	#page #primary article.event div.entry-content p,
+	#page #primary article.event div.entry-summary p,
+	#page #primary article.event div.entry-attachment p,
 	#page #primary article.clash-videos div.entry-content p,
 	#page #primary article.clash-videos div.entry-summary p,
 	#page #primary article.clash-videos div.entry-attachment p,
@@ -7817,6 +8270,9 @@ a {
 	#page #primary article.page div.entry-attachment p {
 		line-height: 1.8em;
 	}
+	#page #primary article.event div.entry-content p a,
+	#page #primary article.event div.entry-summary p a,
+	#page #primary article.event div.entry-attachment p a,
 	#page #primary article.clash-videos div.entry-content p a,
 	#page #primary article.clash-videos div.entry-summary p a,
 	#page #primary article.clash-videos div.entry-attachment p a,
@@ -7834,6 +8290,9 @@ a {
 	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
+	#page #primary article.event div.entry-content p a:hover,
+	#page #primary article.event div.entry-summary p a:hover,
+	#page #primary article.event div.entry-attachment p a:hover,
 	#page #primary article.clash-videos div.entry-content p a:hover,
 	#page #primary article.clash-videos div.entry-summary p a:hover,
 	#page #primary article.clash-videos div.entry-attachment p a:hover,
@@ -7851,6 +8310,9 @@ a {
 	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event div.entry-content a.read-more,
+	#page #primary article.event div.entry-summary a.read-more,
+	#page #primary article.event div.entry-attachment a.read-more,
 	#page #primary article.clash-videos div.entry-content a.read-more,
 	#page #primary article.clash-videos div.entry-summary a.read-more,
 	#page #primary article.clash-videos div.entry-attachment a.read-more,
@@ -7869,6 +8331,7 @@ a {
 		width: 80%;
 		font-size: 0.8em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -7876,6 +8339,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta {
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li,
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
@@ -7883,6 +8347,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
 		font-size: 0.85em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -7890,6 +8355,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li span.post-meta-key {
 		display: block;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li p,
 	#page #primary article.post footer.speaker-meta ul.post-meta li p,
@@ -8167,6 +8633,40 @@ a {
 	}
 	#page article#clashvibes-text figure.text-img img {
 		width: 100%;
+	}
+	#page div.results {
+		padding: 0;
+	}
+	#page div.results article.events_box {
+		width: 31.25%;
+	}
+	#page div.results article.events_box h1 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn:hover {
+		font-weight: bold;
+	}
+	#page div.results article.events_box figure.events {
+		width: 90%;
+	}
+	#page div.results article.events_box figure.events:hover {
+		cursor: pointer;
+	}
+	#page div.results article.events_box figure.events img.attachment-event-image {
+		margin: 0 auto;
+		width: 80%;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text {
+		height: auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		font-size: 0.8em;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text p {
+		font-size: 0.75em;
 	}
 	#page #new_releases_section,
 	#page #video_releases_section,
@@ -8529,6 +9029,7 @@ a {
 		display: inline-block;
 		width: 27%;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -8536,6 +9037,7 @@ a {
 	#page #primary article.page {
 		margin-bottom: 1%;
 	}
+	#page #primary article.event h2,
 	#page #primary article.clash-videos h2,
 	#page #primary article.clash-audio h2,
 	#page #primary article.post h2,
@@ -8543,6 +9045,7 @@ a {
 	#page #primary article.page h2 {
 		font-size: 1em;
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -8550,6 +9053,7 @@ a {
 	#page #primary article.page header.entry-header {
 		height: auto;
 	}
+	#page #primary article.event header.entry-header h1,
 	#page #primary article.clash-videos header.entry-header h1,
 	#page #primary article.clash-audio header.entry-header h1,
 	#page #primary article.post header.entry-header h1,
@@ -8557,6 +9061,7 @@ a {
 	#page #primary article.page header.entry-header h1 {
 		font-size: 1em;
 	}
+	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
 	#page #primary article.post header.entry-header h1 a,
@@ -8564,6 +9069,7 @@ a {
 	#page #primary article.page header.entry-header h1 a {
 		letter-spacing: 0.03em;
 	}
+	#page #primary article.event header.entry-header h1 span,
 	#page #primary article.clash-videos header.entry-header h1 span,
 	#page #primary article.clash-audio header.entry-header h1 span,
 	#page #primary article.post header.entry-header h1 span,
@@ -8571,6 +9077,7 @@ a {
 	#page #primary article.page header.entry-header h1 span {
 		text-indent: 0;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -8578,6 +9085,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header div.entry-meta,
 	#page #primary article.clash-videos header.entry-header div.entry-meta,
 	#page #primary article.clash-audio header.entry-header div.entry-meta,
 	#page #primary article.post header.entry-header div.entry-meta,
@@ -8585,6 +9093,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
@@ -8592,6 +9101,11 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content {
 		grid-template-columns: 17% 2fr;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
@@ -8619,6 +9133,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.75em;
 	}
+	#page #primary article.event header.entry-header section.byline,
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
 	#page #primary article.post header.entry-header section.byline,
@@ -8626,6 +9141,7 @@ a {
 	#page #primary article.page header.entry-header section.byline {
 		height: 123px;
 	}
+	#page #primary article.event header.entry-header section.byline span,
 	#page #primary article.clash-videos header.entry-header section.byline span,
 	#page #primary article.clash-audio header.entry-header section.byline span,
 	#page #primary article.post header.entry-header section.byline span,
@@ -8634,6 +9150,7 @@ a {
 		font-size: 0.75em;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -8641,6 +9158,7 @@ a {
 	#page #primary article.page header.archive-header {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -8649,6 +9167,7 @@ a {
 		text-indent: 1%;
 		height: 123px;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -8657,6 +9176,7 @@ a {
 		font-size: 0.75em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -8664,6 +9184,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span a {
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -8672,6 +9193,7 @@ a {
 		font-size: 1em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -8679,6 +9201,7 @@ a {
 	#page #primary article.page header.archive-header h2 a {
 		font-size: 1em;
 	}
+	#page #primary article.event footer.byline,
 	#page #primary article.clash-videos footer.byline,
 	#page #primary article.clash-audio footer.byline,
 	#page #primary article.post footer.byline,
@@ -8686,6 +9209,7 @@ a {
 	#page #primary article.page footer.byline {
 		text-indent: 0.5em;
 	}
+	#page #primary article.event footer.byline span,
 	#page #primary article.clash-videos footer.byline span,
 	#page #primary article.clash-audio footer.byline span,
 	#page #primary article.post footer.byline span,
@@ -8693,6 +9217,7 @@ a {
 	#page #primary article.page footer.byline span {
 		width: 80%;
 	}
+	#page #primary article.event footer.byline span span.screen-reader-text,
 	#page #primary article.clash-videos footer.byline span span.screen-reader-text,
 	#page #primary article.clash-audio footer.byline span span.screen-reader-text,
 	#page #primary article.post footer.byline span span.screen-reader-text,
@@ -8701,6 +9226,7 @@ a {
 		width: 75%;
 		font-size: 0.8em;
 	}
+	#page #primary article.event footer.byline a,
 	#page #primary article.clash-videos footer.byline a,
 	#page #primary article.clash-audio footer.byline a,
 	#page #primary article.post footer.byline a,
@@ -8709,6 +9235,7 @@ a {
 		width: 34%;
 		font-size: 0.75em;
 	}
+	#page #primary article.event footer.byline a.comments-count,
 	#page #primary article.clash-videos footer.byline a.comments-count,
 	#page #primary article.clash-audio footer.byline a.comments-count,
 	#page #primary article.post footer.byline a.comments-count,
@@ -8717,6 +9244,7 @@ a {
 		font-size: 1em;
 		width: 5%;
 	}
+	#page #primary article.event footer.byline p,
 	#page #primary article.clash-videos footer.byline p,
 	#page #primary article.clash-audio footer.byline p,
 	#page #primary article.post footer.byline p,
@@ -8725,6 +9253,7 @@ a {
 		font-size: 0.75em;
 		line-height: 30px;
 	}
+	#page #primary article.event p,
 	#page #primary article.clash-videos p,
 	#page #primary article.clash-audio p,
 	#page #primary article.post p,
@@ -8732,6 +9261,7 @@ a {
 	#page #primary article.page p {
 		font-size: 0.8em;
 	}
+	#page #primary article.event ul,
 	#page #primary article.clash-videos ul,
 	#page #primary article.clash-audio ul,
 	#page #primary article.post ul,
@@ -8740,6 +9270,7 @@ a {
 		margin: 0 auto;
 		width: 90%;
 	}
+	#page #primary article.event ul li,
 	#page #primary article.clash-videos ul li,
 	#page #primary article.clash-audio ul li,
 	#page #primary article.post ul li,
@@ -8748,6 +9279,7 @@ a {
 		line-height: 40px;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event ul figure,
 	#page #primary article.clash-videos ul figure,
 	#page #primary article.clash-audio ul figure,
 	#page #primary article.post ul figure,
@@ -8756,6 +9288,8 @@ a {
 		width: 90%;
 		padding: 0;
 	}
+	#page #primary article.event a.post-thumbnail,
+	#page #primary article.event div.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
 	#page #primary article.clash-videos div.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
@@ -8768,6 +9302,8 @@ a {
 	#page #primary article.page div.post-thumbnail {
 		width: auto;
 	}
+	#page #primary article.event a.post-thumbnail img,
+	#page #primary article.event div.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
 	#page #primary article.clash-videos div.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
@@ -8780,6 +9316,8 @@ a {
 	#page #primary article.page div.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image,
+	#page #primary article.event figure.attachment,
 	#page #primary article.clash-videos figure.featured-image,
 	#page #primary article.clash-videos figure.attachment,
 	#page #primary article.clash-audio figure.featured-image,
@@ -8792,6 +9330,8 @@ a {
 	#page #primary article.page figure.attachment {
 		width: 96%;
 	}
+	#page #primary article.event figure.featured-image a img,
+	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
 	#page #primary article.clash-videos figure.attachment a img,
 	#page #primary article.clash-audio figure.featured-image a img,
@@ -8804,6 +9344,7 @@ a {
 	#page #primary article.page figure.attachment a img {
 		margin: 0 auto;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -8811,6 +9352,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta {
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li,
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
@@ -8818,6 +9360,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
 		font-size: 0.8em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -8825,6 +9368,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li span.post-meta-key {
 		display: block;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li p,
 	#page #primary article.post footer.speaker-meta ul.post-meta li p,
@@ -9095,6 +9639,40 @@ a {
 	}
 	#page #contactform div.wpcf7 form p input[type='submit']:hover {
 		background-color: #256b40;
+	}
+	#page div.results {
+		padding: 0;
+	}
+	#page div.results article.events_box {
+		width: 31.25%;
+	}
+	#page div.results article.events_box h1 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn {
+		font-size: 0.8em;
+	}
+	#page div.results article.events_box a#event-submit-btn:hover {
+		font-weight: bold;
+	}
+	#page div.results article.events_box figure.events {
+		width: 90%;
+	}
+	#page div.results article.events_box figure.events:hover {
+		cursor: pointer;
+	}
+	#page div.results article.events_box figure.events img.attachment-event-image {
+		margin: 0 auto;
+		width: 90%;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text {
+		height: auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		font-size: 0.75em;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text p {
+		font-size: 0.7em;
 	}
 	#page #new_releases_section,
 	#page #video_releases_section,
@@ -9492,6 +10070,7 @@ a {
 	#page #primary h1 span {
 		width: 27%;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -9499,6 +10078,7 @@ a {
 	#page #primary article.page {
 		margin-bottom: 1%;
 	}
+	#page #primary article.event h2,
 	#page #primary article.clash-videos h2,
 	#page #primary article.clash-audio h2,
 	#page #primary article.post h2,
@@ -9506,6 +10086,7 @@ a {
 	#page #primary article.page h2 {
 		font-size: 0.9em;
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -9513,6 +10094,7 @@ a {
 	#page #primary article.page header.entry-header {
 		height: auto;
 	}
+	#page #primary article.event header.entry-header h1,
 	#page #primary article.clash-videos header.entry-header h1,
 	#page #primary article.clash-audio header.entry-header h1,
 	#page #primary article.post header.entry-header h1,
@@ -9520,6 +10102,7 @@ a {
 	#page #primary article.page header.entry-header h1 {
 		font-size: 0.9em;
 	}
+	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
 	#page #primary article.post header.entry-header h1 a,
@@ -9527,6 +10110,7 @@ a {
 	#page #primary article.page header.entry-header h1 a {
 		letter-spacing: 0.03em;
 	}
+	#page #primary article.event header.entry-header h1 span,
 	#page #primary article.clash-videos header.entry-header h1 span,
 	#page #primary article.clash-audio header.entry-header h1 span,
 	#page #primary article.post header.entry-header h1 span,
@@ -9534,6 +10118,7 @@ a {
 	#page #primary article.page header.entry-header h1 span {
 		text-indent: 0;
 	}
+	#page #primary article.event header.entry-header h2.entry-title,
 	#page #primary article.clash-videos header.entry-header h2.entry-title,
 	#page #primary article.clash-audio header.entry-header h2.entry-title,
 	#page #primary article.post header.entry-header h2.entry-title,
@@ -9541,6 +10126,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title {
 		font-size: 1em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -9548,6 +10134,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header div.entry-meta,
 	#page #primary article.clash-videos header.entry-header div.entry-meta,
 	#page #primary article.clash-audio header.entry-header div.entry-meta,
 	#page #primary article.post header.entry-header div.entry-meta,
@@ -9555,6 +10142,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
@@ -9563,6 +10151,11 @@ a {
 		grid-template-columns: 16% 2fr;
 		grid-template-rows: 20px 20px 20px 20px;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
@@ -9592,6 +10185,7 @@ a {
 		height: 20px;
 		line-height: 20px;
 	}
+	#page #primary article.event header.entry-header section.byline,
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
 	#page #primary article.post header.entry-header section.byline,
@@ -9599,6 +10193,7 @@ a {
 	#page #primary article.page header.entry-header section.byline {
 		height: 123px;
 	}
+	#page #primary article.event header.entry-header section.byline span,
 	#page #primary article.clash-videos header.entry-header section.byline span,
 	#page #primary article.clash-audio header.entry-header section.byline span,
 	#page #primary article.post header.entry-header section.byline span,
@@ -9607,6 +10202,7 @@ a {
 		font-size: 0.7em;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -9614,6 +10210,7 @@ a {
 	#page #primary article.page header.archive-header {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -9621,6 +10218,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta {
 		height: 123px;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -9628,6 +10226,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span {
 		font-size: 0.75em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -9635,6 +10234,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span a {
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -9642,6 +10242,7 @@ a {
 	#page #primary article.page header.archive-header h2 {
 		font-size: 0.9em;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -9649,6 +10250,7 @@ a {
 	#page #primary article.page header.archive-header h2 a {
 		font-size: 1em;
 	}
+	#page #primary article.event footer.byline,
 	#page #primary article.clash-videos footer.byline,
 	#page #primary article.clash-audio footer.byline,
 	#page #primary article.post footer.byline,
@@ -9656,6 +10258,7 @@ a {
 	#page #primary article.page footer.byline {
 		text-indent: 0.5em;
 	}
+	#page #primary article.event footer.byline span,
 	#page #primary article.clash-videos footer.byline span,
 	#page #primary article.clash-audio footer.byline span,
 	#page #primary article.post footer.byline span,
@@ -9663,6 +10266,7 @@ a {
 	#page #primary article.page footer.byline span {
 		width: 80%;
 	}
+	#page #primary article.event footer.byline span span.screen-reader-text,
 	#page #primary article.clash-videos footer.byline span span.screen-reader-text,
 	#page #primary article.clash-audio footer.byline span span.screen-reader-text,
 	#page #primary article.post footer.byline span span.screen-reader-text,
@@ -9671,6 +10275,7 @@ a {
 		width: 75%;
 		font-size: 0.8em;
 	}
+	#page #primary article.event footer.byline a,
 	#page #primary article.clash-videos footer.byline a,
 	#page #primary article.clash-audio footer.byline a,
 	#page #primary article.post footer.byline a,
@@ -9679,6 +10284,7 @@ a {
 		width: 34%;
 		font-size: 0.75em;
 	}
+	#page #primary article.event footer.byline a.comments-count,
 	#page #primary article.clash-videos footer.byline a.comments-count,
 	#page #primary article.clash-audio footer.byline a.comments-count,
 	#page #primary article.post footer.byline a.comments-count,
@@ -9687,6 +10293,7 @@ a {
 		font-size: 1em;
 		width: 5%;
 	}
+	#page #primary article.event footer.byline p,
 	#page #primary article.clash-videos footer.byline p,
 	#page #primary article.clash-audio footer.byline p,
 	#page #primary article.post footer.byline p,
@@ -9695,6 +10302,7 @@ a {
 		font-size: 0.75em;
 		line-height: 30px;
 	}
+	#page #primary article.event p,
 	#page #primary article.clash-videos p,
 	#page #primary article.clash-audio p,
 	#page #primary article.post p,
@@ -9702,6 +10310,7 @@ a {
 	#page #primary article.page p {
 		font-size: 0.85em;
 	}
+	#page #primary article.event ul,
 	#page #primary article.clash-videos ul,
 	#page #primary article.clash-audio ul,
 	#page #primary article.post ul,
@@ -9710,6 +10319,7 @@ a {
 		margin: 0 auto;
 		width: 90%;
 	}
+	#page #primary article.event ul li,
 	#page #primary article.clash-videos ul li,
 	#page #primary article.clash-audio ul li,
 	#page #primary article.post ul li,
@@ -9718,6 +10328,7 @@ a {
 		line-height: 40px;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event ul figure,
 	#page #primary article.clash-videos ul figure,
 	#page #primary article.clash-audio ul figure,
 	#page #primary article.post ul figure,
@@ -9726,6 +10337,8 @@ a {
 		width: 90%;
 		padding: 0;
 	}
+	#page #primary article.event a.post-thumbnail img,
+	#page #primary article.event div.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
 	#page #primary article.clash-videos div.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
@@ -9738,6 +10351,8 @@ a {
 	#page #primary article.page div.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image a img,
+	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
 	#page #primary article.clash-videos figure.attachment a img,
 	#page #primary article.clash-audio figure.featured-image a img,
@@ -9750,6 +10365,7 @@ a {
 	#page #primary article.page figure.attachment a img {
 		margin: 0 auto;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -9757,6 +10373,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta {
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li,
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
@@ -9764,6 +10381,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
 		font-size: 0.75em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -9772,6 +10390,7 @@ a {
 		text-indent: 0.25em;
 		display: block;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li p,
 	#page #primary article.post footer.speaker-meta ul.post-meta li p,
@@ -10047,6 +10666,40 @@ a {
 	}
 	#page article#clashvibes-text figure.text-img img {
 		width: 100%;
+	}
+	#page div.results {
+		padding: 0;
+	}
+	#page div.results article.events_box {
+		width: 48.25%;
+	}
+	#page div.results article.events_box h1 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn:hover {
+		font-weight: bold;
+	}
+	#page div.results article.events_box figure.events {
+		width: 90%;
+	}
+	#page div.results article.events_box figure.events:hover {
+		cursor: pointer;
+	}
+	#page div.results article.events_box figure.events img.attachment-event-image {
+		margin: 0 auto;
+		width: 75%;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text {
+		height: auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text p {
+		font-size: 0.8em;
 	}
 	#page #new_releases_section,
 	#page #video_releases_section,
@@ -10458,6 +11111,7 @@ a {
 	#page #primary h1 span {
 		width: 27%;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -10465,6 +11119,7 @@ a {
 	#page #primary article.page {
 		margin-bottom: 1%;
 	}
+	#page #primary article.event h2,
 	#page #primary article.clash-videos h2,
 	#page #primary article.clash-audio h2,
 	#page #primary article.post h2,
@@ -10473,6 +11128,7 @@ a {
 		font-size: 0.9em;
 		text-align: center;
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -10480,6 +11136,7 @@ a {
 	#page #primary article.page header.entry-header {
 		height: auto;
 	}
+	#page #primary article.event header.entry-header h1,
 	#page #primary article.clash-videos header.entry-header h1,
 	#page #primary article.clash-audio header.entry-header h1,
 	#page #primary article.post header.entry-header h1,
@@ -10491,6 +11148,7 @@ a {
 		height: auto;
 		line-height: 25px;
 	}
+	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
 	#page #primary article.post header.entry-header h1 a,
@@ -10498,6 +11156,7 @@ a {
 	#page #primary article.page header.entry-header h1 a {
 		letter-spacing: 0.03em;
 	}
+	#page #primary article.event header.entry-header h1 span,
 	#page #primary article.clash-videos header.entry-header h1 span,
 	#page #primary article.clash-audio header.entry-header h1 span,
 	#page #primary article.post header.entry-header h1 span,
@@ -10505,6 +11164,7 @@ a {
 	#page #primary article.page header.entry-header h1 span {
 		text-indent: 0;
 	}
+	#page #primary article.event header.entry-header h2.entry-title,
 	#page #primary article.clash-videos header.entry-header h2.entry-title,
 	#page #primary article.clash-audio header.entry-header h2.entry-title,
 	#page #primary article.post header.entry-header h2.entry-title,
@@ -10513,6 +11173,7 @@ a {
 		font-size: 1em;
 		height: auto;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -10520,6 +11181,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header section.byline,
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
 	#page #primary article.post header.entry-header section.byline,
@@ -10527,6 +11189,7 @@ a {
 	#page #primary article.page header.entry-header section.byline {
 		height: 123px;
 	}
+	#page #primary article.event header.entry-header section.byline span,
 	#page #primary article.clash-videos header.entry-header section.byline span,
 	#page #primary article.clash-audio header.entry-header section.byline span,
 	#page #primary article.post header.entry-header section.byline span,
@@ -10535,6 +11198,7 @@ a {
 		font-size: 0.75em;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -10542,6 +11206,7 @@ a {
 	#page #primary article.page header.archive-header {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -10549,6 +11214,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta {
 		height: 123px;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -10557,6 +11223,7 @@ a {
 		font-size: 0.75em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -10564,6 +11231,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span a {
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -10572,6 +11240,7 @@ a {
 		font-size: 0.9em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -10579,6 +11248,7 @@ a {
 	#page #primary article.page header.archive-header h2 a {
 		font-size: 1em;
 	}
+	#page #primary article.event footer.byline,
 	#page #primary article.clash-videos footer.byline,
 	#page #primary article.clash-audio footer.byline,
 	#page #primary article.post footer.byline,
@@ -10586,6 +11256,7 @@ a {
 	#page #primary article.page footer.byline {
 		text-indent: 0.5em;
 	}
+	#page #primary article.event footer.byline span,
 	#page #primary article.clash-videos footer.byline span,
 	#page #primary article.clash-audio footer.byline span,
 	#page #primary article.post footer.byline span,
@@ -10593,6 +11264,7 @@ a {
 	#page #primary article.page footer.byline span {
 		width: 80%;
 	}
+	#page #primary article.event footer.byline span span.screen-reader-text,
 	#page #primary article.clash-videos footer.byline span span.screen-reader-text,
 	#page #primary article.clash-audio footer.byline span span.screen-reader-text,
 	#page #primary article.post footer.byline span span.screen-reader-text,
@@ -10601,6 +11273,7 @@ a {
 		width: 75%;
 		font-size: 0.8em;
 	}
+	#page #primary article.event footer.byline a,
 	#page #primary article.clash-videos footer.byline a,
 	#page #primary article.clash-audio footer.byline a,
 	#page #primary article.post footer.byline a,
@@ -10609,6 +11282,7 @@ a {
 		width: 34%;
 		font-size: 0.75em;
 	}
+	#page #primary article.event footer.byline a.comments-count,
 	#page #primary article.clash-videos footer.byline a.comments-count,
 	#page #primary article.clash-audio footer.byline a.comments-count,
 	#page #primary article.post footer.byline a.comments-count,
@@ -10617,6 +11291,7 @@ a {
 		font-size: 1em;
 		width: 5%;
 	}
+	#page #primary article.event footer.byline p,
 	#page #primary article.clash-videos footer.byline p,
 	#page #primary article.clash-audio footer.byline p,
 	#page #primary article.post footer.byline p,
@@ -10625,6 +11300,7 @@ a {
 		font-size: 0.75em;
 		line-height: 30px;
 	}
+	#page #primary article.event p,
 	#page #primary article.clash-videos p,
 	#page #primary article.clash-audio p,
 	#page #primary article.post p,
@@ -10632,6 +11308,7 @@ a {
 	#page #primary article.page p {
 		font-size: 0.85em;
 	}
+	#page #primary article.event ul,
 	#page #primary article.clash-videos ul,
 	#page #primary article.clash-audio ul,
 	#page #primary article.post ul,
@@ -10640,6 +11317,7 @@ a {
 		margin: 0 auto;
 		width: 90%;
 	}
+	#page #primary article.event ul li,
 	#page #primary article.clash-videos ul li,
 	#page #primary article.clash-audio ul li,
 	#page #primary article.post ul li,
@@ -10648,6 +11326,7 @@ a {
 		line-height: 40px;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event ul figure,
 	#page #primary article.clash-videos ul figure,
 	#page #primary article.clash-audio ul figure,
 	#page #primary article.post ul figure,
@@ -10656,6 +11335,8 @@ a {
 		width: 90%;
 		padding: 0;
 	}
+	#page #primary article.event a.post-thumbnail,
+	#page #primary article.event div.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
 	#page #primary article.clash-videos div.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
@@ -10668,6 +11349,8 @@ a {
 	#page #primary article.page div.post-thumbnail {
 		width: auto;
 	}
+	#page #primary article.event a.post-thumbnail img,
+	#page #primary article.event div.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
 	#page #primary article.clash-videos div.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
@@ -10680,6 +11363,8 @@ a {
 	#page #primary article.page div.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image a img,
+	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
 	#page #primary article.clash-videos figure.attachment a img,
 	#page #primary article.clash-audio figure.featured-image a img,
@@ -10692,6 +11377,9 @@ a {
 	#page #primary article.page figure.attachment a img {
 		margin: 0 auto;
 	}
+	#page #primary article.event div.entry-content,
+	#page #primary article.event div.entry-summary,
+	#page #primary article.event div.entry-attachment,
 	#page #primary article.clash-videos div.entry-content,
 	#page #primary article.clash-videos div.entry-summary,
 	#page #primary article.clash-videos div.entry-attachment,
@@ -10709,6 +11397,9 @@ a {
 	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
+	#page #primary article.event div.entry-content p,
+	#page #primary article.event div.entry-summary p,
+	#page #primary article.event div.entry-attachment p,
 	#page #primary article.clash-videos div.entry-content p,
 	#page #primary article.clash-videos div.entry-summary p,
 	#page #primary article.clash-videos div.entry-attachment p,
@@ -10726,6 +11417,9 @@ a {
 	#page #primary article.page div.entry-attachment p {
 		line-height: 1.6em;
 	}
+	#page #primary article.event div.entry-content p a,
+	#page #primary article.event div.entry-summary p a,
+	#page #primary article.event div.entry-attachment p a,
 	#page #primary article.clash-videos div.entry-content p a,
 	#page #primary article.clash-videos div.entry-summary p a,
 	#page #primary article.clash-videos div.entry-attachment p a,
@@ -10743,6 +11437,9 @@ a {
 	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
+	#page #primary article.event div.entry-content p a:hover,
+	#page #primary article.event div.entry-summary p a:hover,
+	#page #primary article.event div.entry-attachment p a:hover,
 	#page #primary article.clash-videos div.entry-content p a:hover,
 	#page #primary article.clash-videos div.entry-summary p a:hover,
 	#page #primary article.clash-videos div.entry-attachment p a:hover,
@@ -10760,6 +11457,9 @@ a {
 	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.event div.entry-content a.read-more,
+	#page #primary article.event div.entry-summary a.read-more,
+	#page #primary article.event div.entry-attachment a.read-more,
 	#page #primary article.clash-videos div.entry-content a.read-more,
 	#page #primary article.clash-videos div.entry-summary a.read-more,
 	#page #primary article.clash-videos div.entry-attachment a.read-more,
@@ -10778,6 +11478,7 @@ a {
 		width: 90%;
 		font-size: 0.75em;
 	}
+	#page #primary article.event footer.speaker-meta,
 	#page #primary article.clash-videos footer.speaker-meta,
 	#page #primary article.clash-audio footer.speaker-meta,
 	#page #primary article.post footer.speaker-meta,
@@ -10785,6 +11486,7 @@ a {
 	#page #primary article.page footer.speaker-meta {
 		min-height: 335px;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -10793,6 +11495,7 @@ a {
 		letter-spacing: 0.05em;
 		height: auto;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li,
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
@@ -10801,6 +11504,7 @@ a {
 		font-size: 0.7em;
 		height: auto;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -10809,6 +11513,7 @@ a {
 		width: 100%;
 		display: block;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta p,
 	#page #primary article.post footer.speaker-meta ul.post-meta p,
@@ -10836,6 +11541,40 @@ a {
 	}
 	#page article#clashvibes-text figure.text-img img {
 		width: 100%;
+	}
+	#page div.results {
+		padding: 0;
+	}
+	#page div.results article.events_box {
+		width: 47.25%;
+	}
+	#page div.results article.events_box h1 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn:hover {
+		font-weight: bold;
+	}
+	#page div.results article.events_box figure.events {
+		width: 90%;
+	}
+	#page div.results article.events_box figure.events:hover {
+		cursor: pointer;
+	}
+	#page div.results article.events_box figure.events img.attachment-event-image {
+		margin: 0 auto;
+		width: 75%;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text {
+		height: auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text p {
+		font-size: 0.8em;
 	}
 	#page #new_releases_section,
 	#page #video_releases_section,
@@ -11222,6 +11961,7 @@ a {
 	#page #primary h1 span {
 		width: 27%;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -11229,6 +11969,7 @@ a {
 	#page #primary article.page {
 		margin-bottom: 1%;
 	}
+	#page #primary article.event h2,
 	#page #primary article.clash-videos h2,
 	#page #primary article.clash-audio h2,
 	#page #primary article.post h2,
@@ -11236,6 +11977,7 @@ a {
 	#page #primary article.page h2 {
 		font-size: 0.85em;
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -11243,6 +11985,7 @@ a {
 	#page #primary article.page header.entry-header {
 		height: auto;
 	}
+	#page #primary article.event header.entry-header h1,
 	#page #primary article.clash-videos header.entry-header h1,
 	#page #primary article.clash-audio header.entry-header h1,
 	#page #primary article.post header.entry-header h1,
@@ -11250,6 +11993,7 @@ a {
 	#page #primary article.page header.entry-header h1 {
 		height: auto;
 	}
+	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
 	#page #primary article.post header.entry-header h1 a,
@@ -11257,6 +12001,7 @@ a {
 	#page #primary article.page header.entry-header h1 a {
 		letter-spacing: 0.03em;
 	}
+	#page #primary article.event header.entry-header h1 span,
 	#page #primary article.clash-videos header.entry-header h1 span,
 	#page #primary article.clash-audio header.entry-header h1 span,
 	#page #primary article.post header.entry-header h1 span,
@@ -11264,6 +12009,7 @@ a {
 	#page #primary article.page header.entry-header h1 span {
 		text-indent: 0;
 	}
+	#page #primary article.event header.entry-header h2.entry-title,
 	#page #primary article.clash-videos header.entry-header h2.entry-title,
 	#page #primary article.clash-audio header.entry-header h2.entry-title,
 	#page #primary article.post header.entry-header h2.entry-title,
@@ -11271,6 +12017,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title {
 		font-size: 0.9em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -11278,6 +12025,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header div.entry-meta,
 	#page #primary article.clash-videos header.entry-header div.entry-meta,
 	#page #primary article.clash-audio header.entry-header div.entry-meta,
 	#page #primary article.post header.entry-header div.entry-meta,
@@ -11285,6 +12033,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
@@ -11292,6 +12041,11 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content {
 		grid-template-columns: 18% 2fr;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
@@ -11319,6 +12073,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.7em;
 	}
+	#page #primary article.event header.entry-header section.byline,
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
 	#page #primary article.post header.entry-header section.byline,
@@ -11326,6 +12081,7 @@ a {
 	#page #primary article.page header.entry-header section.byline {
 		height: 123px;
 	}
+	#page #primary article.event header.entry-header section.byline span,
 	#page #primary article.clash-videos header.entry-header section.byline span,
 	#page #primary article.clash-audio header.entry-header section.byline span,
 	#page #primary article.post header.entry-header section.byline span,
@@ -11334,6 +12090,7 @@ a {
 		font-size: 0.75em;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -11341,6 +12098,7 @@ a {
 	#page #primary article.page header.archive-header {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -11348,6 +12106,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta {
 		height: 123px;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -11356,6 +12115,7 @@ a {
 		font-size: 0.75em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -11363,6 +12123,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span a {
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -11371,6 +12132,7 @@ a {
 		font-size: 0.9em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -11378,6 +12140,7 @@ a {
 	#page #primary article.page header.archive-header h2 a {
 		font-size: 1em;
 	}
+	#page #primary article.event footer.byline,
 	#page #primary article.clash-videos footer.byline,
 	#page #primary article.clash-audio footer.byline,
 	#page #primary article.post footer.byline,
@@ -11385,6 +12148,7 @@ a {
 	#page #primary article.page footer.byline {
 		text-indent: 0.5em;
 	}
+	#page #primary article.event footer.byline span,
 	#page #primary article.clash-videos footer.byline span,
 	#page #primary article.clash-audio footer.byline span,
 	#page #primary article.post footer.byline span,
@@ -11392,6 +12156,7 @@ a {
 	#page #primary article.page footer.byline span {
 		width: 80%;
 	}
+	#page #primary article.event footer.byline span span.screen-reader-text,
 	#page #primary article.clash-videos footer.byline span span.screen-reader-text,
 	#page #primary article.clash-audio footer.byline span span.screen-reader-text,
 	#page #primary article.post footer.byline span span.screen-reader-text,
@@ -11400,6 +12165,7 @@ a {
 		width: 75%;
 		font-size: 0.8em;
 	}
+	#page #primary article.event footer.byline a,
 	#page #primary article.clash-videos footer.byline a,
 	#page #primary article.clash-audio footer.byline a,
 	#page #primary article.post footer.byline a,
@@ -11408,6 +12174,7 @@ a {
 		width: 34%;
 		font-size: 0.75em;
 	}
+	#page #primary article.event footer.byline a.comments-count,
 	#page #primary article.clash-videos footer.byline a.comments-count,
 	#page #primary article.clash-audio footer.byline a.comments-count,
 	#page #primary article.post footer.byline a.comments-count,
@@ -11416,6 +12183,7 @@ a {
 		font-size: 1em;
 		width: 5%;
 	}
+	#page #primary article.event footer.byline p,
 	#page #primary article.clash-videos footer.byline p,
 	#page #primary article.clash-audio footer.byline p,
 	#page #primary article.post footer.byline p,
@@ -11424,6 +12192,7 @@ a {
 		font-size: 0.75em;
 		line-height: 30px;
 	}
+	#page #primary article.event p,
 	#page #primary article.clash-videos p,
 	#page #primary article.clash-audio p,
 	#page #primary article.post p,
@@ -11431,6 +12200,7 @@ a {
 	#page #primary article.page p {
 		font-size: 0.8em;
 	}
+	#page #primary article.event ul,
 	#page #primary article.clash-videos ul,
 	#page #primary article.clash-audio ul,
 	#page #primary article.post ul,
@@ -11439,6 +12209,7 @@ a {
 		margin: 0 auto;
 		width: 90%;
 	}
+	#page #primary article.event ul li,
 	#page #primary article.clash-videos ul li,
 	#page #primary article.clash-audio ul li,
 	#page #primary article.post ul li,
@@ -11447,6 +12218,7 @@ a {
 		line-height: 40px;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event ul figure,
 	#page #primary article.clash-videos ul figure,
 	#page #primary article.clash-audio ul figure,
 	#page #primary article.post ul figure,
@@ -11455,6 +12227,8 @@ a {
 		width: 90%;
 		padding: 0;
 	}
+	#page #primary article.event a.post-thumbnail img,
+	#page #primary article.event div.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
 	#page #primary article.clash-videos div.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
@@ -11467,6 +12241,8 @@ a {
 	#page #primary article.page div.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image a img,
+	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
 	#page #primary article.clash-videos figure.attachment a img,
 	#page #primary article.clash-audio figure.featured-image a img,
@@ -11479,6 +12255,7 @@ a {
 	#page #primary article.page figure.attachment a img {
 		margin: 0 auto;
 	}
+	#page #primary article.event footer.speaker-meta,
 	#page #primary article.clash-videos footer.speaker-meta,
 	#page #primary article.clash-audio footer.speaker-meta,
 	#page #primary article.post footer.speaker-meta,
@@ -11486,6 +12263,7 @@ a {
 	#page #primary article.page footer.speaker-meta {
 		min-height: 335px;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -11493,6 +12271,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta {
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -11500,6 +12279,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li span.post-meta-key {
 		width: 100%;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta p,
 	#page #primary article.post footer.speaker-meta ul.post-meta p,
@@ -11554,6 +12334,40 @@ a {
 	}
 	#page article#clashvibes-text figure.text-img img {
 		width: 100%;
+	}
+	#page div.results {
+		padding: 0;
+	}
+	#page div.results article.events_box {
+		width: 47.25%;
+	}
+	#page div.results article.events_box h1 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn:hover {
+		font-weight: bold;
+	}
+	#page div.results article.events_box figure.events {
+		width: 90%;
+	}
+	#page div.results article.events_box figure.events:hover {
+		cursor: pointer;
+	}
+	#page div.results article.events_box figure.events img.attachment-event-image {
+		margin: 0 auto;
+		width: 75%;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text {
+		height: auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text p {
+		font-size: 0.8em;
 	}
 	#page #new_releases_section,
 	#page #video_releases_section,
@@ -11882,6 +12696,7 @@ a {
 	#page #primary h1 span {
 		width: 27%;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -11889,6 +12704,7 @@ a {
 	#page #primary article.page {
 		margin-bottom: 1%;
 	}
+	#page #primary article.event h2,
 	#page #primary article.clash-videos h2,
 	#page #primary article.clash-audio h2,
 	#page #primary article.post h2,
@@ -11896,6 +12712,7 @@ a {
 	#page #primary article.page h2 {
 		font-size: 0.85em;
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -11903,6 +12720,7 @@ a {
 	#page #primary article.page header.entry-header {
 		height: auto;
 	}
+	#page #primary article.event header.entry-header h1,
 	#page #primary article.clash-videos header.entry-header h1,
 	#page #primary article.clash-audio header.entry-header h1,
 	#page #primary article.post header.entry-header h1,
@@ -11910,6 +12728,7 @@ a {
 	#page #primary article.page header.entry-header h1 {
 		font-size: 0.8em;
 	}
+	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
 	#page #primary article.post header.entry-header h1 a,
@@ -11917,6 +12736,7 @@ a {
 	#page #primary article.page header.entry-header h1 a {
 		letter-spacing: 0.02em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title,
 	#page #primary article.clash-videos header.entry-header h2.entry-title,
 	#page #primary article.clash-audio header.entry-header h2.entry-title,
 	#page #primary article.post header.entry-header h2.entry-title,
@@ -11924,6 +12744,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title {
 		font-size: 0.8em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -11931,6 +12752,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header div.entry-meta,
 	#page #primary article.clash-videos header.entry-header div.entry-meta,
 	#page #primary article.clash-audio header.entry-header div.entry-meta,
 	#page #primary article.post header.entry-header div.entry-meta,
@@ -11938,6 +12760,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
@@ -11945,6 +12768,11 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content {
 		grid-template-columns: 20% 2fr;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
@@ -11972,6 +12800,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.65em;
 	}
+	#page #primary article.event header.entry-header section.byline,
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
 	#page #primary article.post header.entry-header section.byline,
@@ -11979,6 +12808,7 @@ a {
 	#page #primary article.page header.entry-header section.byline {
 		height: 123px;
 	}
+	#page #primary article.event header.entry-header section.byline span,
 	#page #primary article.clash-videos header.entry-header section.byline span,
 	#page #primary article.clash-audio header.entry-header section.byline span,
 	#page #primary article.post header.entry-header section.byline span,
@@ -11987,6 +12817,7 @@ a {
 		font-size: 0.65em;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -11994,6 +12825,7 @@ a {
 	#page #primary article.page header.archive-header {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -12001,6 +12833,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta {
 		height: 123px;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -12009,6 +12842,7 @@ a {
 		font-size: 0.7em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -12016,6 +12850,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span a {
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -12024,6 +12859,7 @@ a {
 		font-size: 1em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -12031,6 +12867,7 @@ a {
 	#page #primary article.page header.archive-header h2 a {
 		font-size: 0.85em;
 	}
+	#page #primary article.event footer.byline,
 	#page #primary article.clash-videos footer.byline,
 	#page #primary article.clash-audio footer.byline,
 	#page #primary article.post footer.byline,
@@ -12038,6 +12875,7 @@ a {
 	#page #primary article.page footer.byline {
 		text-indent: 0.5em;
 	}
+	#page #primary article.event footer.byline span,
 	#page #primary article.clash-videos footer.byline span,
 	#page #primary article.clash-audio footer.byline span,
 	#page #primary article.post footer.byline span,
@@ -12045,6 +12883,7 @@ a {
 	#page #primary article.page footer.byline span {
 		width: 80%;
 	}
+	#page #primary article.event footer.byline span span.screen-reader-text,
 	#page #primary article.clash-videos footer.byline span span.screen-reader-text,
 	#page #primary article.clash-audio footer.byline span span.screen-reader-text,
 	#page #primary article.post footer.byline span span.screen-reader-text,
@@ -12053,6 +12892,7 @@ a {
 		width: 75%;
 		font-size: 0.75em;
 	}
+	#page #primary article.event footer.byline a,
 	#page #primary article.clash-videos footer.byline a,
 	#page #primary article.clash-audio footer.byline a,
 	#page #primary article.post footer.byline a,
@@ -12061,6 +12901,7 @@ a {
 		width: 34%;
 		font-size: 0.7em;
 	}
+	#page #primary article.event footer.byline a.comments-count,
 	#page #primary article.clash-videos footer.byline a.comments-count,
 	#page #primary article.clash-audio footer.byline a.comments-count,
 	#page #primary article.post footer.byline a.comments-count,
@@ -12069,6 +12910,7 @@ a {
 		font-size: 0.9em;
 		width: 5%;
 	}
+	#page #primary article.event footer.byline p,
 	#page #primary article.clash-videos footer.byline p,
 	#page #primary article.clash-audio footer.byline p,
 	#page #primary article.post footer.byline p,
@@ -12077,6 +12919,7 @@ a {
 		font-size: 0.7em;
 		line-height: 30px;
 	}
+	#page #primary article.event p,
 	#page #primary article.clash-videos p,
 	#page #primary article.clash-audio p,
 	#page #primary article.post p,
@@ -12084,6 +12927,7 @@ a {
 	#page #primary article.page p {
 		font-size: 0.8em;
 	}
+	#page #primary article.event ul,
 	#page #primary article.clash-videos ul,
 	#page #primary article.clash-audio ul,
 	#page #primary article.post ul,
@@ -12092,6 +12936,7 @@ a {
 		margin: 0 auto;
 		width: 90%;
 	}
+	#page #primary article.event ul li,
 	#page #primary article.clash-videos ul li,
 	#page #primary article.clash-audio ul li,
 	#page #primary article.post ul li,
@@ -12100,6 +12945,7 @@ a {
 		line-height: 40px;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event ul figure,
 	#page #primary article.clash-videos ul figure,
 	#page #primary article.clash-audio ul figure,
 	#page #primary article.post ul figure,
@@ -12108,6 +12954,8 @@ a {
 		width: 90%;
 		padding: 0;
 	}
+	#page #primary article.event a.post-thumbnail img,
+	#page #primary article.event div.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
 	#page #primary article.clash-videos div.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
@@ -12120,6 +12968,8 @@ a {
 	#page #primary article.page div.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image a img,
+	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
 	#page #primary article.clash-videos figure.attachment a img,
 	#page #primary article.clash-audio figure.featured-image a img,
@@ -12132,6 +12982,7 @@ a {
 	#page #primary article.page figure.attachment a img {
 		margin: 0 auto;
 	}
+	#page #primary article.event footer.speaker-meta,
 	#page #primary article.clash-videos footer.speaker-meta,
 	#page #primary article.clash-audio footer.speaker-meta,
 	#page #primary article.post footer.speaker-meta,
@@ -12139,6 +12990,7 @@ a {
 	#page #primary article.page footer.speaker-meta {
 		min-height: 335px;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -12146,6 +12998,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta {
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li,
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
@@ -12153,6 +13006,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
 		font-size: 0.65em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -12160,6 +13014,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li span.post-meta-key {
 		width: 100%;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta p,
 	#page #primary article.post footer.speaker-meta ul.post-meta p,
@@ -12402,6 +13257,46 @@ a {
 	}
 	#page article#clashvibes-text figure.text-img img {
 		width: 100%;
+	}
+	#page div.results {
+		-webkit-flex-flow: column;
+		-ms-flex-flow: column;
+		flex-flow: column;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		width: 100%;
+	}
+	#page div.results article.events_box {
+		width: 75%;
+	}
+	#page div.results article.events_box h1 {
+		font-size: 0.85em;
+	}
+	#page div.results article.events_box a#event-submit-btn {
+		font-size: 0.9em;
+	}
+	#page div.results article.events_box a#event-submit-btn:hover {
+		font-weight: bold;
+	}
+	#page div.results article.events_box figure.events {
+		width: 90%;
+	}
+	#page div.results article.events_box figure.events:hover {
+		cursor: pointer;
+	}
+	#page div.results article.events_box figure.events img.attachment-event-image {
+		margin: 0 auto;
+		width: 75%;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text {
+		height: auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		font-size: 0.9em;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text p {
+		font-size: 0.85em;
 	}
 	#page #new_releases_section,
 	#page #video_releases_section,
@@ -12762,6 +13657,7 @@ a {
 	#page #primary h1 span {
 		width: 27%;
 	}
+	#page #primary article.event,
 	#page #primary article.clash-videos,
 	#page #primary article.clash-audio,
 	#page #primary article.post,
@@ -12769,6 +13665,7 @@ a {
 	#page #primary article.page {
 		margin-bottom: 1%;
 	}
+	#page #primary article.event h2,
 	#page #primary article.clash-videos h2,
 	#page #primary article.clash-audio h2,
 	#page #primary article.post h2,
@@ -12776,6 +13673,7 @@ a {
 	#page #primary article.page h2 {
 		font-size: 1em;
 	}
+	#page #primary article.event header.entry-header,
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
 	#page #primary article.post header.entry-header,
@@ -12783,6 +13681,7 @@ a {
 	#page #primary article.page header.entry-header {
 		height: auto;
 	}
+	#page #primary article.event header.entry-header h1,
 	#page #primary article.clash-videos header.entry-header h1,
 	#page #primary article.clash-audio header.entry-header h1,
 	#page #primary article.post header.entry-header h1,
@@ -12790,6 +13689,7 @@ a {
 	#page #primary article.page header.entry-header h1 {
 		font-size: 0.80em;
 	}
+	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
 	#page #primary article.post header.entry-header h1 a,
@@ -12797,6 +13697,7 @@ a {
 	#page #primary article.page header.entry-header h1 a {
 		letter-spacing: 0.03em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title,
 	#page #primary article.clash-videos header.entry-header h2.entry-title,
 	#page #primary article.clash-audio header.entry-header h2.entry-title,
 	#page #primary article.post header.entry-header h2.entry-title,
@@ -12804,6 +13705,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title {
 		font-size: 0.75em;
 	}
+	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
 	#page #primary article.post header.entry-header h2.entry-title a,
@@ -12811,6 +13713,7 @@ a {
 	#page #primary article.page header.entry-header h2.entry-title a {
 		color: #fff;
 	}
+	#page #primary article.event header.entry-header div.entry-meta,
 	#page #primary article.clash-videos header.entry-header div.entry-meta,
 	#page #primary article.clash-audio header.entry-header div.entry-meta,
 	#page #primary article.post header.entry-header div.entry-meta,
@@ -12818,6 +13721,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta {
 		display: block;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content,
@@ -12825,6 +13729,11 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content {
 		grid-template-columns: 21% 2fr;
 	}
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
@@ -12852,6 +13761,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
 		font-size: 0.65em;
 	}
+	#page #primary article.event header.entry-header section.byline,
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
 	#page #primary article.post header.entry-header section.byline,
@@ -12859,6 +13769,7 @@ a {
 	#page #primary article.page header.entry-header section.byline {
 		height: 123px;
 	}
+	#page #primary article.event header.entry-header section.byline span,
 	#page #primary article.clash-videos header.entry-header section.byline span,
 	#page #primary article.clash-audio header.entry-header section.byline span,
 	#page #primary article.post header.entry-header section.byline span,
@@ -12866,6 +13777,7 @@ a {
 	#page #primary article.page header.entry-header section.byline span {
 		text-indent: 0;
 	}
+	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
 	#page #primary article.clash-audio header.archive-header,
 	#page #primary article.post header.archive-header,
@@ -12873,6 +13785,7 @@ a {
 	#page #primary article.page header.archive-header {
 		margin: 0 auto;
 	}
+	#page #primary article.event header.archive-header .archive-meta,
 	#page #primary article.clash-videos header.archive-header .archive-meta,
 	#page #primary article.clash-audio header.archive-header .archive-meta,
 	#page #primary article.post header.archive-header .archive-meta,
@@ -12880,6 +13793,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta {
 		height: 123px;
 	}
+	#page #primary article.event header.archive-header .archive-meta span,
 	#page #primary article.clash-videos header.archive-header .archive-meta span,
 	#page #primary article.clash-audio header.archive-header .archive-meta span,
 	#page #primary article.post header.archive-header .archive-meta span,
@@ -12888,6 +13802,7 @@ a {
 		font-size: 0.7em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header .archive-meta span a,
 	#page #primary article.clash-videos header.archive-header .archive-meta span a,
 	#page #primary article.clash-audio header.archive-header .archive-meta span a,
 	#page #primary article.post header.archive-header .archive-meta span a,
@@ -12895,6 +13810,7 @@ a {
 	#page #primary article.page header.archive-header .archive-meta span a {
 		width: auto;
 	}
+	#page #primary article.event header.archive-header h2,
 	#page #primary article.clash-videos header.archive-header h2,
 	#page #primary article.clash-audio header.archive-header h2,
 	#page #primary article.post header.archive-header h2,
@@ -12903,6 +13819,7 @@ a {
 		font-size: 1em;
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event header.archive-header h2 a,
 	#page #primary article.clash-videos header.archive-header h2 a,
 	#page #primary article.clash-audio header.archive-header h2 a,
 	#page #primary article.post header.archive-header h2 a,
@@ -12910,6 +13827,7 @@ a {
 	#page #primary article.page header.archive-header h2 a {
 		font-size: 0.85em;
 	}
+	#page #primary article.event footer.byline,
 	#page #primary article.clash-videos footer.byline,
 	#page #primary article.clash-audio footer.byline,
 	#page #primary article.post footer.byline,
@@ -12917,6 +13835,7 @@ a {
 	#page #primary article.page footer.byline {
 		text-indent: 0.5em;
 	}
+	#page #primary article.event footer.byline span,
 	#page #primary article.clash-videos footer.byline span,
 	#page #primary article.clash-audio footer.byline span,
 	#page #primary article.post footer.byline span,
@@ -12924,6 +13843,7 @@ a {
 	#page #primary article.page footer.byline span {
 		width: 80%;
 	}
+	#page #primary article.event footer.byline span span.screen-reader-text,
 	#page #primary article.clash-videos footer.byline span span.screen-reader-text,
 	#page #primary article.clash-audio footer.byline span span.screen-reader-text,
 	#page #primary article.post footer.byline span span.screen-reader-text,
@@ -12932,6 +13852,7 @@ a {
 		width: 75%;
 		font-size: 0.75em;
 	}
+	#page #primary article.event footer.byline a,
 	#page #primary article.clash-videos footer.byline a,
 	#page #primary article.clash-audio footer.byline a,
 	#page #primary article.post footer.byline a,
@@ -12940,6 +13861,7 @@ a {
 		width: 34%;
 		font-size: 0.7em;
 	}
+	#page #primary article.event footer.byline a.comments-count,
 	#page #primary article.clash-videos footer.byline a.comments-count,
 	#page #primary article.clash-audio footer.byline a.comments-count,
 	#page #primary article.post footer.byline a.comments-count,
@@ -12948,6 +13870,7 @@ a {
 		font-size: 0.9em;
 		width: 5%;
 	}
+	#page #primary article.event footer.byline p,
 	#page #primary article.clash-videos footer.byline p,
 	#page #primary article.clash-audio footer.byline p,
 	#page #primary article.post footer.byline p,
@@ -12956,6 +13879,7 @@ a {
 		font-size: 0.7em;
 		line-height: 30px;
 	}
+	#page #primary article.event p,
 	#page #primary article.clash-videos p,
 	#page #primary article.clash-audio p,
 	#page #primary article.post p,
@@ -12963,6 +13887,7 @@ a {
 	#page #primary article.page p {
 		font-size: 0.8em;
 	}
+	#page #primary article.event ul,
 	#page #primary article.clash-videos ul,
 	#page #primary article.clash-audio ul,
 	#page #primary article.post ul,
@@ -12971,6 +13896,7 @@ a {
 		margin: 0 auto;
 		width: 90%;
 	}
+	#page #primary article.event ul li,
 	#page #primary article.clash-videos ul li,
 	#page #primary article.clash-audio ul li,
 	#page #primary article.post ul li,
@@ -12979,6 +13905,7 @@ a {
 		line-height: 40px;
 		text-indent: 0.5em;
 	}
+	#page #primary article.event ul figure,
 	#page #primary article.clash-videos ul figure,
 	#page #primary article.clash-audio ul figure,
 	#page #primary article.post ul figure,
@@ -12987,6 +13914,8 @@ a {
 		width: 90%;
 		padding: 0;
 	}
+	#page #primary article.event a.post-thumbnail img,
+	#page #primary article.event div.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
 	#page #primary article.clash-videos div.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
@@ -12999,6 +13928,7 @@ a {
 	#page #primary article.page div.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event a.no-post-thumbnail,
 	#page #primary article.clash-videos a.no-post-thumbnail,
 	#page #primary article.clash-audio a.no-post-thumbnail,
 	#page #primary article.post a.no-post-thumbnail,
@@ -13007,6 +13937,7 @@ a {
 		margin: 0.5em auto;
 		width: 100%;
 	}
+	#page #primary article.event a.no-post-thumbnail img.attachment-post-thumbnail,
 	#page #primary article.clash-videos a.no-post-thumbnail img.attachment-post-thumbnail,
 	#page #primary article.clash-audio a.no-post-thumbnail img.attachment-post-thumbnail,
 	#page #primary article.post a.no-post-thumbnail img.attachment-post-thumbnail,
@@ -13016,6 +13947,8 @@ a {
 		margin: 0.5em auto;
 		width: auto;
 	}
+	#page #primary article.event figure.featured-image a img,
+	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
 	#page #primary article.clash-videos figure.attachment a img,
 	#page #primary article.clash-audio figure.featured-image a img,
@@ -13028,6 +13961,7 @@ a {
 	#page #primary article.page figure.attachment a img {
 		margin: 0 auto;
 	}
+	#page #primary article.event footer.speaker-meta,
 	#page #primary article.clash-videos footer.speaker-meta,
 	#page #primary article.clash-audio footer.speaker-meta,
 	#page #primary article.post footer.speaker-meta,
@@ -13035,6 +13969,7 @@ a {
 	#page #primary article.page footer.speaker-meta {
 		min-height: 335px;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
 	#page #primary article.post footer.speaker-meta ul.post-meta,
@@ -13042,6 +13977,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta {
 		letter-spacing: 0.05em;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.post footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -13049,6 +13985,7 @@ a {
 	#page #primary article.page footer.speaker-meta ul.post-meta li span.post-meta-key {
 		width: 100%;
 	}
+	#page #primary article.event footer.speaker-meta ul.post-meta p,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta p,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta p,
 	#page #primary article.post footer.speaker-meta ul.post-meta p,
@@ -13289,6 +14226,37 @@ a {
 	}
 	#page article#clashvibes-text figure.text-img img {
 		width: 100%;
+	}
+	#page div.results {
+		width: 100%;
+	}
+	#page div.results article.events_box {
+		width: 85%;
+	}
+	#page div.results article.events_box a#event-submit-btn {
+		font-size: 0.9em;
+	}
+	#page div.results article.events_box a#event-submit-btn:hover {
+		font-weight: bold;
+	}
+	#page div.results article.events_box figure.events {
+		width: 90%;
+	}
+	#page div.results article.events_box figure.events:hover {
+		cursor: pointer;
+	}
+	#page div.results article.events_box figure.events img.attachment-event-image {
+		margin: 0 auto;
+		width: 75%;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text {
+		height: auto;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text h4 {
+		font-size: 0.9em;
+	}
+	#page div.results article.events_box figure.events figcaption.event-text p {
+		font-size: 0.85em;
 	}
 	#page #new_releases_section,
 	#page #video_releases_section,

@@ -10,11 +10,12 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called clashvibes.
+A Audio/Video theme called clashvibes.
 
 == Description ==
 
-Description
+Music based theme displays collection of audio, video and events of reggae sound systems clashes held all over the world from UK to JA.
+Theme uses clashvibes-plugin audio and video player.
 
 == Installation ==
 

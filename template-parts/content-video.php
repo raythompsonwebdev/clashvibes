@@ -53,24 +53,24 @@ if ( have_posts() ) :
 				<li>
 
 					<span class="post-meta-key">
-					<?php $sound_name = get_post_meta( get_the_ID(), 'sound_system_name', true ); ?>
+					<?php $clashvibes_sound_name = get_post_meta( get_the_ID(), 'sound_system_name', true ); ?>
 					<?php esc_html_e( 'Sound System Name', 'clashvibes' ); ?>
 					</span>
-					<p><?php printf( '%s', esc_html( $sound_name ), 'clashvibes' ); ?> </p>
+					<p><?php printf( '%s', esc_html( $clashvibes_sound_name ), 'clashvibes' ); ?> </p>
 				</li>
 				<li>
 					<span class="post-meta-key">
-					<?php $sound_year = get_post_meta( get_the_ID(), 'sound_clash_year', true ); ?>
+					<?php $clashvibes_sound_year = get_post_meta( get_the_ID(), 'sound_clash_year', true ); ?>
 					<?php esc_html_e( 'Sound Clash Year', 'clashvibes' ); ?>
 					</span>
-					<p><?php printf( '%s', esc_html( $sound_year ), 'clashvibes' ); ?>  </p>
+					<p><?php printf( '%s', esc_html( $clashvibes_sound_year ), 'clashvibes' ); ?>  </p>
 				</li>
 				<li>
 					<span class="post-meta-key">
-					<?php $sound_location = get_post_meta( get_the_ID(), 'sound_clash_location', true ); ?>
+					<?php $clashvibes_sound_location = get_post_meta( get_the_ID(), 'sound_clash_location', true ); ?>
 					<?php esc_html_e( 'Sound Clash Location', 'clashvibes' ); ?>
 					</span>
-					<p><?php printf( '%s', esc_html( $sound_location ), 'clashvibes' ); ?>  </p>
+					<p><?php printf( '%s', esc_html( $clashvibes_sound_location ), 'clashvibes' ); ?>  </p>
 				</li>
 
 			</ul>
@@ -81,8 +81,8 @@ if ( have_posts() ) :
 			<?php
 					the_post_navigation(
 						array(
-							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
-							'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
+							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'clashvibes' ) . '</span> <span class="nav-title">%title</span>',
+							'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'clashvibes' ) . '</span> <span class="nav-title">%title</span>',
 						)
 					);
 			?>

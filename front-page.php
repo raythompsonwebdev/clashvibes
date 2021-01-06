@@ -118,7 +118,7 @@ get_header(); ?>
 				<?php
 
 					$clashvibes_the_query = null;
-					$clashvibes_args                 = array(
+					$clashvibes_args      = array(
 						'tax_query'  => array(
 
 							array(

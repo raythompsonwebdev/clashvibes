@@ -278,6 +278,7 @@ License: GNU General Public License v2 or later
 			margin: 0;
 			height:auto;
 			background-color: $color;
+			min-height:600px;
 
 		}
 
@@ -509,15 +510,15 @@ License: GNU General Public License v2 or later
 			-ms-flex-align: start;
 			align-items: flex-start;
 
+
 			article.events_box {
 				-webkit-flex: 0 1 auto;
 				-ms-flex: 0 1 auto;
 				flex: 0 1 auto;
-
-				width: 19%;
-				min-height: 330px;
+				width: 19.25%;
+				height:auto;
 				padding: 0;
-				margin: 0.5%;
+				margin: 0.25em;
 				background-color: $color;
 
 				h1 {
@@ -534,8 +535,8 @@ License: GNU General Public License v2 or later
 					font-weight: bold;
 				}
 
-				#event-submit-btn,
-				input[type='submit'] {
+				a#event-submit-btn
+				 {
 					width: 90%;
 					text-align: center;
 					color: $color;
@@ -557,9 +558,9 @@ License: GNU General Public License v2 or later
 				}
 
 				figure.events {
-					width: 90%;
-					min-height: 100px;
-					margin: 4% auto;
+					width: 96%;
+					height:auto;
+					margin: 0 auto;
 					@include originTran(50% 50%);
 					@include box-sizing($type: border-box);
 					@include Transition(all 0.2s linear 0s);
@@ -570,14 +571,24 @@ License: GNU General Public License v2 or later
 						width: 92%;
 					}
 
-					img {
+					img.attachment-event-image {
 						@include box-sizing($type: border-box);
+						width:70%;
+						margin:0 auto;
+						display:block;
 					}
 
 					figcaption.event-text {
-						min-height: 100px;
+						height:auto;
 						display: block;
-						background-color: #c90;
+
+						h4{
+							display:block;
+							line-height:35px;
+							margin:0;
+							padding:0;
+							text-align:center;
+						}
 
 						p {
 							font-size: 0.9em;
@@ -1169,6 +1180,7 @@ License: GNU General Public License v2 or later
 				color: $color2;
 			}
 
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -2362,18 +2374,20 @@ License: GNU General Public License v2 or later
 		}
 
 		div.results {
+			padding: 0;
+			margin: 0 0 0.5em 0;
+
 			article.events_box {
-				width: 19%;
-				min-height: 330px;
+				width: 19.25%;
+
 
 				h1 {
 					font-size: 0.9em;
 				}
 
-				#event-submit-btn,
-				input[type='submit'] {
-					width: 90%;
-
+				a#event-submit-btn
+				 {
+					font-size: 0.9em;
 					&:hover {
 						font-weight: bold;
 					}
@@ -2383,18 +2397,26 @@ License: GNU General Public License v2 or later
 					width: 90%;
 
 					&:hover {
-						width: 92%;
+						cursor: pointer;
+
 					}
 
-					img {
-						@include box-sizing($type: border-box);
+					img.attachment-event-image {
+						margin:0 auto;
 					}
 
 					figcaption.event-text {
-						min-height: 100px;
+						height:auto;
+
+						h4{
+
+							line-height:35px;
+
+						}
 
 						p {
 							font-size: 0.9em;
+
 						}
 					}
 				}
@@ -2633,6 +2655,7 @@ License: GNU General Public License v2 or later
 				text-indent: 0.25em;
 			}
 
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -3384,20 +3407,20 @@ License: GNU General Public License v2 or later
 		}
 
 		div.results {
-			margin: 0 0 0.5em 0;
+			padding: 0;
+
 
 			article.events_box {
 				width: 19%;
-				min-height: 330px;
+
 
 				h1 {
-					font-size: 0.9em;
+					font-size: 0.85em;
 				}
 
-				#event-submit-btn,
-				input[type='submit'] {
-					width: 90%;
-
+				a#event-submit-btn
+				 {
+					font-size: 0.9em;
 					&:hover {
 						font-weight: bold;
 					}
@@ -3407,18 +3430,26 @@ License: GNU General Public License v2 or later
 					width: 90%;
 
 					&:hover {
-						width: 92%;
+						cursor: pointer;
+
 					}
 
-					img {
-						@include box-sizing($type: border-box);
+					img.attachment-event-image {
+						margin:0 auto;
 					}
 
 					figcaption.event-text {
-						min-height: 100px;
+						height:auto;
+
+						h4{
+
+							font-size: 0.9em;
+
+						}
 
 						p {
-							font-size: 0.9em;
+							font-size: 0.85em;
+
 						}
 					}
 				}
@@ -3645,6 +3676,7 @@ License: GNU General Public License v2 or later
 				text-indent: 0.25em;
 			}
 
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -4319,6 +4351,57 @@ License: GNU General Public License v2 or later
 			}
 		}
 
+		div.results {
+			padding: 0;
+
+
+			article.events_box {
+				width: 23.5%;
+
+
+				h1 {
+					font-size: 0.85em;
+				}
+
+				a#event-submit-btn
+				 {
+					font-size: 0.9em;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+
+				figure.events {
+					width: 90%;
+
+					&:hover {
+						cursor: pointer;
+
+					}
+
+					img.attachment-event-image {
+						margin:0 auto;
+					}
+
+					figcaption.event-text {
+						height:auto;
+
+						h4{
+
+							font-size: 0.85em;
+							line-height: 25px;
+
+						}
+
+						p {
+							font-size: 0.85em;
+
+						}
+					}
+				}
+			}
+		}
+
 		#new_releases_section,
 		#video_releases_section,
 		#audio_releases_section {
@@ -4530,6 +4613,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -5224,6 +5308,56 @@ License: GNU General Public License v2 or later
 			}
 		}
 
+		div.results {
+			padding: 0;
+
+
+			article.events_box {
+				width: 23.25%;
+
+
+				h1 {
+					font-size: 0.85em;
+				}
+
+				a#event-submit-btn
+				 {
+					font-size: 0.8em;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+
+				figure.events {
+					width: 90%;
+
+					&:hover {
+						cursor: pointer;
+
+					}
+
+					img.attachment-event-image {
+						margin:0 auto;
+					}
+
+					figcaption.event-text {
+						height:auto;
+
+						h4{
+
+							font-size: 0.8em;
+
+						}
+
+						p {
+							font-size: 0.75em;
+
+						}
+					}
+				}
+			}
+		}
+
 		#new_releases_section,
 		#video_releases_section,
 		#audio_releases_section {
@@ -5440,6 +5574,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -6246,6 +6381,7 @@ License: GNU General Public License v2 or later
 			}
 
 			/* blog */
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -6796,6 +6932,57 @@ License: GNU General Public License v2 or later
 			}
 		}
 
+		div.results {
+			padding: 0;
+
+
+			article.events_box {
+				width: 31.25%;
+
+
+				h1 {
+					font-size: 0.85em;
+				}
+
+				a#event-submit-btn
+				 {
+					font-size: 0.85em;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+
+				figure.events {
+					width: 90%;
+
+					&:hover {
+						cursor: pointer;
+
+					}
+
+					img.attachment-event-image {
+						margin:0 auto;
+						width: 80%;
+					}
+
+					figcaption.event-text {
+						height:auto;
+
+						h4{
+
+							font-size: 0.8em;
+
+						}
+
+						p {
+							font-size: 0.75em;
+
+						}
+					}
+				}
+			}
+		}
+
 		#new_releases_section,
 		#video_releases_section,
 		#audio_releases_section {
@@ -7123,6 +7310,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -7657,6 +7845,57 @@ License: GNU General Public License v2 or later
 			}
 		}
 
+		div.results {
+			padding: 0;
+
+
+			article.events_box {
+				width: 31.25%;
+
+
+				h1 {
+					font-size: 0.85em;
+				}
+
+				a#event-submit-btn
+				 {
+					font-size: 0.8em;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+
+				figure.events {
+					width: 90%;
+
+					&:hover {
+						cursor: pointer;
+
+					}
+
+					img.attachment-event-image {
+						margin:0 auto;
+						width: 90%;
+					}
+
+					figcaption.event-text {
+						height:auto;
+
+						h4{
+
+							font-size: 0.75em;
+
+						}
+
+						p {
+							font-size: 0.7em;
+
+						}
+					}
+				}
+			}
+		}
+
 		#new_releases_section,
 		#video_releases_section,
 		#audio_releases_section {
@@ -7968,6 +8207,7 @@ License: GNU General Public License v2 or later
 			}
 
 			/* blog */
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -8495,6 +8735,57 @@ License: GNU General Public License v2 or later
 			}
 		}
 
+		div.results {
+			padding: 0;
+
+
+			article.events_box {
+				width: 48.25%;
+
+
+				h1 {
+					font-size: 0.85em;
+				}
+
+				a#event-submit-btn
+				 {
+					font-size: 0.85em;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+
+				figure.events {
+					width: 90%;
+
+					&:hover {
+						cursor: pointer;
+
+					}
+
+					img.attachment-event-image {
+						margin:0 auto;
+						width: 75%;
+					}
+
+					figcaption.event-text {
+						height:auto;
+
+						h4{
+
+							font-size: 0.85em;
+
+						}
+
+						p {
+							font-size: 0.8em;
+
+						}
+					}
+				}
+			}
+		}
+
 		#new_releases_section,
 		#video_releases_section,
 		#audio_releases_section {
@@ -8809,6 +9100,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -9031,6 +9323,57 @@ License: GNU General Public License v2 or later
 
 				img {
 					width: 100%;
+				}
+			}
+		}
+
+		div.results {
+			padding: 0;
+
+
+			article.events_box {
+				width: 47.25%;
+
+
+				h1 {
+					font-size: 0.85em;
+				}
+
+				a#event-submit-btn
+				 {
+					font-size: 0.85em;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+
+				figure.events {
+					width: 90%;
+
+					&:hover {
+						cursor: pointer;
+
+					}
+
+					img.attachment-event-image {
+						margin:0 auto;
+						width: 75%;
+					}
+
+					figcaption.event-text {
+						height:auto;
+
+						h4{
+
+							font-size: 0.85em;
+
+						}
+
+						p {
+							font-size: 0.8em;
+
+						}
+					}
 				}
 			}
 		}
@@ -9335,6 +9678,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -9561,6 +9905,57 @@ License: GNU General Public License v2 or later
 
 				img {
 					width: 100%;
+				}
+			}
+		}
+
+		div.results {
+			padding: 0;
+
+
+			article.events_box {
+				width: 47.25%;
+
+
+				h1 {
+					font-size: 0.85em;
+				}
+
+				a#event-submit-btn
+				 {
+					font-size: 0.85em;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+
+				figure.events {
+					width: 90%;
+
+					&:hover {
+						cursor: pointer;
+
+					}
+
+					img.attachment-event-image {
+						margin:0 auto;
+						width: 75%;
+					}
+
+					figcaption.event-text {
+						height:auto;
+
+						h4{
+
+							font-size: 0.85em;
+
+						}
+
+						p {
+							font-size: 0.8em;
+
+						}
+					}
 				}
 			}
 		}
@@ -9852,6 +10247,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -10341,6 +10737,64 @@ License: GNU General Public License v2 or later
 			}
 		}
 
+
+		div.results {
+			-webkit-flex-flow: column;
+			-ms-flex-flow: column;
+			flex-flow: column;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+			width: 100%;
+
+
+			article.events_box {
+				width: 75%;
+
+
+				h1 {
+					font-size: 0.85em;
+				}
+
+				a#event-submit-btn
+				 {
+					font-size: 0.9em;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+
+				figure.events {
+					width: 90%;
+
+					&:hover {
+						cursor: pointer;
+
+					}
+
+					img.attachment-event-image {
+						margin:0 auto;
+						width: 75%;
+					}
+
+					figcaption.event-text {
+						height:auto;
+
+						h4{
+
+							font-size: 0.9em;
+
+						}
+
+						p {
+							font-size: 0.85em;
+
+						}
+					}
+				}
+			}
+		}
+
 		#new_releases_section,
 		#video_releases_section,
 		#audio_releases_section {
@@ -10667,6 +11121,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 
+			article.event,
 			article.clash-videos,
 			article.clash-audio,
 			article.post,
@@ -11157,6 +11612,54 @@ License: GNU General Public License v2 or later
 
 				img {
 					width: 100%;
+				}
+			}
+		}
+
+		div.results {
+
+			width: 100%;
+
+
+			article.events_box {
+				width: 85%;
+
+
+				a#event-submit-btn
+				 {
+					font-size: 0.9em;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+
+				figure.events {
+					width: 90%;
+
+					&:hover {
+						cursor: pointer;
+
+					}
+
+					img.attachment-event-image {
+						margin:0 auto;
+						width: 75%;
+					}
+
+					figcaption.event-text {
+						height:auto;
+
+						h4{
+
+							font-size: 0.9em;
+
+						}
+
+						p {
+							font-size: 0.85em;
+
+						}
+					}
 				}
 			}
 		}

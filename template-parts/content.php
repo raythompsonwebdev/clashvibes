@@ -32,7 +32,7 @@
 	<!--featured Image-->
 	<?php if ( has_post_thumbnail() ) : ?>
 
-<?php clashvibes_post_thumbnail(); ?>
+		<?php clashvibes_post_thumbnail(); ?>
 
 <?php else : ?>
 
@@ -44,7 +44,7 @@
 
 </a>
 </figure><!-- featured-image -->
-<?php endif;?>
+<?php endif; ?>
 	<div class="entry-content">
 		<?php
 		the_content(

@@ -13,6 +13,7 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
+
 get_header();
 ?>
 
@@ -69,7 +70,7 @@ get_header();
 				</header><!-- .entry-header -->
 
 				<!--featured Image-->
-				<a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php esc_attr( the_title_attribute(), 'clashvibes' ); ?>;">
+				<a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
 
 					<?php if ( has_post_thumbnail() ) : ?>
 
@@ -79,8 +80,7 @@ get_header();
 
 						<a class="post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" aria-hidden="true">
 
-							<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/sites/2/2020/12/nothing.jpg"
-								 alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
+							<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/sites/2/2020/12/nothing.jpg"	alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
 
 						</a>
 

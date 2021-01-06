@@ -14,6 +14,7 @@
  * @version    GIT: https://github.com/raythompsonwebdev/clashvibes .git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
+
 ?>
 <!--id="secondary"-->
 <aside id="secondary" class="widget-area">

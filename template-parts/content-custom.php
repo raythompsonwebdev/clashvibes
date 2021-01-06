@@ -54,15 +54,15 @@
 				<?php
 				if ( is_tax( 'video-category' ) ) {
 
-					esc_html_e(  'Continue Watching : ' , 'clashvibes' );
+					esc_html_e( 'Continue Watching : ', 'clashvibes' );
 
 				} elseif ( is_tax( 'audio-category' ) ) {
 
-					esc_html_e(  'Continue Listening : ' , 'clashvibes' );
+					esc_html_e( 'Continue Listening : ', 'clashvibes' );
 
 				} else {
 
-					esc_html_e( 'Continue : ' , 'clashvibes' );
+					esc_html_e( 'Continue : ', 'clashvibes' );
 				}
 				?>
 			</a>

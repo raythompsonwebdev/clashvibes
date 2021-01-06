@@ -1,13 +1,10 @@
 <?php
 /**
- * clashvibes Theme Customizer.
+ * Clashvibes Theme Customizer.
  *
- * @package clashvibes
- */
-
-/**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
+ * @package clashvibes
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function clashvibes_customize_register( $wp_customize ) {

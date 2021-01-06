@@ -18,55 +18,55 @@
 <!-- <footer id="clashvibes_footer"> -->
 	<footer id="colophon" class="site-footer">
 			<?php
-    wp_nav_menu(
-        array(
-            'menu' => 'secondary',
-            'container' => 'footer',
-            'theme_location' => 'Secondary',
-        )
-    );
-   ?>
+			wp_nav_menu(
+				array(
+					'menu'           => 'secondary',
+					'container'      => 'footer',
+					'theme_location' => 'Secondary',
+				)
+			);
+			?>
 
-    <ul id="footer-content">
+	<ul id="footer-content">
 
-    </ul>
+	</ul>
 
-    <ul id="social-media-box">
+	<ul id="social-media-box">
 
-        <li>
-            <a class="social-icon linkedin-icon"
-               href=""
-               target="new"
-               title="Follow me on LinkedIn">
-                <span>
-                    <i class="fab fa-instagram"></i>
-                </span>
-            </a>
-        </li>
+		<li>
+			<a class="social-icon linkedin-icon"
+			   href=""
+			   target="new"
+			   title="Follow me on LinkedIn">
+				<span>
+					<i class="fab fa-instagram"></i>
+				</span>
+			</a>
+		</li>
 
-        <li>
-            <a class="social-icon twitter-icon"
-               href="<?php echo esc_url(__('http://twitter.com/RayThompWeb', 'clashvibes')); ?>"
-               target="new"
-               title="Follow me on Twitter">
-                <span>
-                    <i class="fab fa-twitter"></i>
-                </span>
-            </a>
-        </li>
+		<li>
+			<a class="social-icon twitter-icon"
+			   href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>"
+			   target="new"
+			   title="Follow me on Twitter">
+				<span>
+					<i class="fab fa-twitter"></i>
+				</span>
+			</a>
+		</li>
 
-        <li>
-            <a class="social-icon facebook-icon" href="<?php echo esc_url(__('https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes')); ?>"
-               target="new"
-               title="Follow me on Facebook">
-                <span>
-                    <i class="fab fa-facebook"></i>
-                </span>
-            </a>
-        </li>
+		<li>
+			<a class="social-icon facebook-icon" href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>"
+			   target="new"
+			   title="Follow me on Facebook">
+				<span>
+					<i class="fab fa-facebook"></i>
+				</span>
+			</a>
+		</li>
 
 
-    </ul>
+	</ul>
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->

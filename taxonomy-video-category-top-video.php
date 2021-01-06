@@ -14,9 +14,9 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 
- get_header();
+get_header();
 
- $clashvibes_videoterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+$clashvibes_videoterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
 
 	<?php get_sidebar( 'video' ); ?>

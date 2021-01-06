@@ -42,8 +42,9 @@ if ( ! function_exists( 'clashvibes_setup' ) ) :
 		add_theme_support( 'automatic-feed-links' );
 
 		// Add block editor  styles.
-		add_editor_style( array( 'css/editor-style.css' ) );
-		add_theme_support('editor-style');
+		$font_url = '//https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap';
+		add_editor_style( array( 'css/editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
+		add_theme_support('editor-styles');
 
 		/*
 		 * Let WordPress manage the document title.
@@ -195,6 +196,9 @@ if ( ! function_exists( 'clashvibes_setup' ) ) :
 		//Enable wide alignments in block editor.
 		add_theme_support('align-wide');
 
+		//allow embeds to be responsive.
+		add_theme_support('responsive_embeds');
+
 	}
 endif;
 add_action( 'after_setup_theme', 'clashvibes_setup' );
@@ -292,6 +296,11 @@ function clashvibes_block_editor_fonts(){
 }
 add_action('enqueue_block_editor_assets', 'clashvibes_block_editor_fonts');
 
+function clashvibes_add_block_style(){
+	wp_enqueue_script( 'clashvibes-block-variations', get_template_directory_uri() . '/js/custom-block-settings.js', array('wp-blocks'), CLASHVIBES_VERSION, false );
+}
+add_action('enqueue_block_editor_assets', 'clashvibes_add_block_style');
+
 /**
  * Enqueue scripts and styles.
  */
@@ -325,13 +334,6 @@ function clashvibes_scripts() {
 
 	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), CLASHVIBES_VERSION, true );
 
-	if ( 'clash-audio' === get_post_type() ) {
-		wp_enqueue_script( 'clashvibes-audio', get_template_directory_uri() . '/js/audio-es6.js', array(), CLASHVIBES_VERSION, true );
-	}
-
-	if ( 'clash-videos' === get_post_type() ) {
-		wp_enqueue_script( 'clashvibes-video', get_template_directory_uri() . '/js/video-es6.js', array(), CLASHVIBES_VERSION, true );
-	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -239,7 +239,6 @@ a {
 	#tog-menu {
 		display: none;
 	}
-
 	/* Text meant only for screen readers. */
 	.screen-reader-text {
 		border: 0;
@@ -271,10 +270,8 @@ a {
 		top: 5px;
 		width: auto;
 		z-index: 100000;
-
 		/* Above WP toolbar. */
 	}
-
 	/* page container */
 	#page {
 		margin: auto;
@@ -286,27 +283,16 @@ a {
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
-
 		/* navigation */
-
 		/* --- Content --- */
-
 		/* --- Error page --- */
-
 		/* --- Error page content --- */
-
 		/* front page */
-
 		/* login form */
-
 		/* front page banner */
-
 		/* front page top download section */
-
 		/* --- Left Column--- */
-
 		/* --- Right Column--- */
-
 		/* ----- Footer ----- */
 	}
 	#page header.site-header {
@@ -434,8 +420,7 @@ a {
 		display: block;
 		height: 100%;
 	}
-	#page header.site-header aside#socialmediatop a.social-icon span i,
-	#page header.site-header aside#socialmediatop a.social-icon span svg {
+	#page header.site-header aside#socialmediatop a.social-icon span i, #page header.site-header aside#socialmediatop a.social-icon span svg {
 		font-size: 1.4em;
 		display: block;
 		height: 100%;
@@ -1222,7 +1207,6 @@ a {
 		width: 21%;
 		list-style: none;
 		display: block;
-
 		/* side bar navigation blog and custom posts */
 	}
 	#page #secondary section#clashvibes-login {
@@ -1308,8 +1292,7 @@ a {
 		margin: 0.5em 0;
 		height: auto;
 	}
-	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::before,
-	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::after,
+	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::before, #page #secondary section.secondary_column_box nav.menu-video-nav-container ul::after,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-audio_nav::before,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-audio_nav::after,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-video_nav::before,
@@ -1422,8 +1405,7 @@ a {
 		margin: 0.5em 0;
 		height: auto;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before,
-	#page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -1595,6 +1577,7 @@ a {
 		font-size: 1.5em;
 		text-align: left;
 		text-indent: 0.5em;
+		padding: 0;
 	}
 	#page #primary h2,
 	#page #primary h3,
@@ -1615,19 +1598,12 @@ a {
 		color: #262626;
 		background-color: #fff;
 		margin-bottom: 1%;
-
 		/* --- blog image--- */
-
 		/* --- custom post images--- */
-
 		/* custom post header */
-
 		/* blog footer */
-
 		/* regular post entry */
-
 		/* custom-post-footer */
-
 		/* Social media share buttons */
 	}
 	#page #primary article.clash-videos iframe,
@@ -2062,37 +2038,20 @@ a {
 		line-height: 35px;
 		display: block;
 	}
-	#page #primary article.clash-videos a.read-more,
-	#page #primary article.clash-audio a.read-more,
-	#page #primary article.post a.read-more,
-	#page #primary article.search-results a.read-more,
-	#page #primary article.page a.read-more {
-		display: block;
-		width: 40%;
-		height: auto;
-		line-height: 30px;
-		margin: 1em auto;
-		color: #f0ecec;
-		text-align: center;
-		background-color: #262626;
-	}
-	#page #primary article.clash-videos a.read-more:hover,
-	#page #primary article.clash-audio a.read-more:hover,
-	#page #primary article.post a.read-more:hover,
-	#page #primary article.search-results a.read-more:hover,
-	#page #primary article.page a.read-more:hover {
-		background-color: #f0ecec;
-		color: #262626;
-	}
 	#page #primary article.clash-videos div.entry-content,
+	#page #primary article.clash-videos div.entry-summary,
 	#page #primary article.clash-videos div.entry-attachment,
 	#page #primary article.clash-audio div.entry-content,
+	#page #primary article.clash-audio div.entry-summary,
 	#page #primary article.clash-audio div.entry-attachment,
 	#page #primary article.post div.entry-content,
+	#page #primary article.post div.entry-summary,
 	#page #primary article.post div.entry-attachment,
 	#page #primary article.search-results div.entry-content,
+	#page #primary article.search-results div.entry-summary,
 	#page #primary article.search-results div.entry-attachment,
 	#page #primary article.page div.entry-content,
+	#page #primary article.page div.entry-summary,
 	#page #primary article.page div.entry-attachment {
 		width: 98%;
 		display: block;
@@ -2100,14 +2059,19 @@ a {
 		min-height: 200px;
 	}
 	#page #primary article.clash-videos div.entry-content p,
+	#page #primary article.clash-videos div.entry-summary p,
 	#page #primary article.clash-videos div.entry-attachment p,
 	#page #primary article.clash-audio div.entry-content p,
+	#page #primary article.clash-audio div.entry-summary p,
 	#page #primary article.clash-audio div.entry-attachment p,
 	#page #primary article.post div.entry-content p,
+	#page #primary article.post div.entry-summary p,
 	#page #primary article.post div.entry-attachment p,
 	#page #primary article.search-results div.entry-content p,
+	#page #primary article.search-results div.entry-summary p,
 	#page #primary article.search-results div.entry-attachment p,
 	#page #primary article.page div.entry-content p,
+	#page #primary article.page div.entry-summary p,
 	#page #primary article.page div.entry-attachment p {
 		color: #262626;
 		font-size: 1em;
@@ -2118,40 +2082,97 @@ a {
 		padding: 0.5em;
 	}
 	#page #primary article.clash-videos div.entry-content p a,
+	#page #primary article.clash-videos div.entry-summary p a,
 	#page #primary article.clash-videos div.entry-attachment p a,
 	#page #primary article.clash-audio div.entry-content p a,
+	#page #primary article.clash-audio div.entry-summary p a,
 	#page #primary article.clash-audio div.entry-attachment p a,
 	#page #primary article.post div.entry-content p a,
+	#page #primary article.post div.entry-summary p a,
 	#page #primary article.post div.entry-attachment p a,
 	#page #primary article.search-results div.entry-content p a,
+	#page #primary article.search-results div.entry-summary p a,
 	#page #primary article.search-results div.entry-attachment p a,
 	#page #primary article.page div.entry-content p a,
+	#page #primary article.page div.entry-summary p a,
 	#page #primary article.page div.entry-attachment p a {
 		color: #262626;
 		width: auto;
 		display: inline-block;
 	}
 	#page #primary article.clash-videos div.entry-content p a:hover,
+	#page #primary article.clash-videos div.entry-summary p a:hover,
 	#page #primary article.clash-videos div.entry-attachment p a:hover,
 	#page #primary article.clash-audio div.entry-content p a:hover,
+	#page #primary article.clash-audio div.entry-summary p a:hover,
 	#page #primary article.clash-audio div.entry-attachment p a:hover,
 	#page #primary article.post div.entry-content p a:hover,
+	#page #primary article.post div.entry-summary p a:hover,
 	#page #primary article.post div.entry-attachment p a:hover,
 	#page #primary article.search-results div.entry-content p a:hover,
+	#page #primary article.search-results div.entry-summary p a:hover,
 	#page #primary article.search-results div.entry-attachment p a:hover,
 	#page #primary article.page div.entry-content p a:hover,
+	#page #primary article.page div.entry-summary p a:hover,
 	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
+	#page #primary article.clash-videos div.entry-content a.read-more,
+	#page #primary article.clash-videos div.entry-summary a.read-more,
+	#page #primary article.clash-videos div.entry-attachment a.read-more,
+	#page #primary article.clash-audio div.entry-content a.read-more,
+	#page #primary article.clash-audio div.entry-summary a.read-more,
+	#page #primary article.clash-audio div.entry-attachment a.read-more,
+	#page #primary article.post div.entry-content a.read-more,
+	#page #primary article.post div.entry-summary a.read-more,
+	#page #primary article.post div.entry-attachment a.read-more,
+	#page #primary article.search-results div.entry-content a.read-more,
+	#page #primary article.search-results div.entry-summary a.read-more,
+	#page #primary article.search-results div.entry-attachment a.read-more,
+	#page #primary article.page div.entry-content a.read-more,
+	#page #primary article.page div.entry-summary a.read-more,
+	#page #primary article.page div.entry-attachment a.read-more {
+		display: block;
+		width: 40%;
+		height: auto;
+		line-height: 30px;
+		margin: 1em auto;
+		color: #f0ecec;
+		text-align: center;
+		background-color: #262626;
+	}
+	#page #primary article.clash-videos div.entry-content a.read-more:hover,
+	#page #primary article.clash-videos div.entry-summary a.read-more:hover,
+	#page #primary article.clash-videos div.entry-attachment a.read-more:hover,
+	#page #primary article.clash-audio div.entry-content a.read-more:hover,
+	#page #primary article.clash-audio div.entry-summary a.read-more:hover,
+	#page #primary article.clash-audio div.entry-attachment a.read-more:hover,
+	#page #primary article.post div.entry-content a.read-more:hover,
+	#page #primary article.post div.entry-summary a.read-more:hover,
+	#page #primary article.post div.entry-attachment a.read-more:hover,
+	#page #primary article.search-results div.entry-content a.read-more:hover,
+	#page #primary article.search-results div.entry-summary a.read-more:hover,
+	#page #primary article.search-results div.entry-attachment a.read-more:hover,
+	#page #primary article.page div.entry-content a.read-more:hover,
+	#page #primary article.page div.entry-summary a.read-more:hover,
+	#page #primary article.page div.entry-attachment a.read-more:hover {
+		background-color: #f0ecec;
+		color: #262626;
+	}
 	#page #primary article.clash-videos div.entry-content a.tag-cloud-link,
+	#page #primary article.clash-videos div.entry-summary a.tag-cloud-link,
 	#page #primary article.clash-videos div.entry-attachment a.tag-cloud-link,
 	#page #primary article.clash-audio div.entry-content a.tag-cloud-link,
+	#page #primary article.clash-audio div.entry-summary a.tag-cloud-link,
 	#page #primary article.clash-audio div.entry-attachment a.tag-cloud-link,
 	#page #primary article.post div.entry-content a.tag-cloud-link,
+	#page #primary article.post div.entry-summary a.tag-cloud-link,
 	#page #primary article.post div.entry-attachment a.tag-cloud-link,
 	#page #primary article.search-results div.entry-content a.tag-cloud-link,
+	#page #primary article.search-results div.entry-summary a.tag-cloud-link,
 	#page #primary article.search-results div.entry-attachment a.tag-cloud-link,
 	#page #primary article.page div.entry-content a.tag-cloud-link,
+	#page #primary article.page div.entry-summary a.tag-cloud-link,
 	#page #primary article.page div.entry-attachment a.tag-cloud-link {
 		color: #000;
 		width: auto;
@@ -2193,6 +2214,7 @@ a {
 		color: #262626;
 		text-indent: 0;
 		margin-bottom: 0.25em;
+		font-size: 0.9em;
 	}
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -2216,7 +2238,6 @@ a {
 		display: inline-block;
 		margin: 0;
 		padding: 0;
-		font-size: 0.9em;
 		text-indent: 0.2em;
 	}
 	#page #primary article.clash-videos div.sharedaddy,
@@ -2373,10 +2394,10 @@ a {
 	#page #primary .navigation .nav-links .nav-previous a::after {
 		font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
 		content: '>';
-		font-size: 1.6em;
+		font-size: 1.5em;
 		line-height: 50px;
 		float: right;
-		width: 3%;
+		width: 5%;
 		display: block;
 	}
 	#page #primary .navigation .nav-links .nav-next a:active,
@@ -2556,8 +2577,7 @@ a {
 		color: #ebeadd;
 		background-color: #658905;
 	}
-	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a,
-	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a.url,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a, #page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a.url,
 	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a,
 	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a.url {
 		background-color: #658905;
@@ -2937,12 +2957,11 @@ a {
 		font-weight: bold;
 	}
 }
+
 @media only screen and (max-width: 1440px) {
 	#page {
 		width: 92%;
-
 		/* front page banner */
-
 		/* front page top download section */
 	}
 	#page header.site-header {
@@ -3336,7 +3355,6 @@ a {
 	#page #primary article.search-results,
 	#page #primary article.page {
 		display: block;
-
 		/* --- custom post images--- */
 	}
 	#page #primary article.clash-videos h1,
@@ -3584,52 +3602,122 @@ a {
 		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos div.entry-content,
+	#page #primary article.clash-videos div.entry-summary,
+	#page #primary article.clash-videos div.entry-attachment,
 	#page #primary article.clash-audio div.entry-content,
+	#page #primary article.clash-audio div.entry-summary,
+	#page #primary article.clash-audio div.entry-attachment,
 	#page #primary article.post div.entry-content,
+	#page #primary article.post div.entry-summary,
+	#page #primary article.post div.entry-attachment,
 	#page #primary article.search-results div.entry-content,
-	#page #primary article.page div.entry-content {
+	#page #primary article.search-results div.entry-summary,
+	#page #primary article.search-results div.entry-attachment,
+	#page #primary article.page div.entry-content,
+	#page #primary article.page div.entry-summary,
+	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
 	#page #primary article.clash-videos div.entry-content p,
+	#page #primary article.clash-videos div.entry-summary p,
+	#page #primary article.clash-videos div.entry-attachment p,
 	#page #primary article.clash-audio div.entry-content p,
+	#page #primary article.clash-audio div.entry-summary p,
+	#page #primary article.clash-audio div.entry-attachment p,
 	#page #primary article.post div.entry-content p,
+	#page #primary article.post div.entry-summary p,
+	#page #primary article.post div.entry-attachment p,
 	#page #primary article.search-results div.entry-content p,
-	#page #primary article.page div.entry-content p {
+	#page #primary article.search-results div.entry-summary p,
+	#page #primary article.search-results div.entry-attachment p,
+	#page #primary article.page div.entry-content p,
+	#page #primary article.page div.entry-summary p,
+	#page #primary article.page div.entry-attachment p {
 		line-height: 1.9em;
 	}
 	#page #primary article.clash-videos div.entry-content p a,
+	#page #primary article.clash-videos div.entry-summary p a,
+	#page #primary article.clash-videos div.entry-attachment p a,
 	#page #primary article.clash-audio div.entry-content p a,
+	#page #primary article.clash-audio div.entry-summary p a,
+	#page #primary article.clash-audio div.entry-attachment p a,
 	#page #primary article.post div.entry-content p a,
+	#page #primary article.post div.entry-summary p a,
+	#page #primary article.post div.entry-attachment p a,
 	#page #primary article.search-results div.entry-content p a,
-	#page #primary article.page div.entry-content p a {
+	#page #primary article.search-results div.entry-summary p a,
+	#page #primary article.search-results div.entry-attachment p a,
+	#page #primary article.page div.entry-content p a,
+	#page #primary article.page div.entry-summary p a,
+	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
 	#page #primary article.clash-videos div.entry-content p a:hover,
+	#page #primary article.clash-videos div.entry-summary p a:hover,
+	#page #primary article.clash-videos div.entry-attachment p a:hover,
 	#page #primary article.clash-audio div.entry-content p a:hover,
+	#page #primary article.clash-audio div.entry-summary p a:hover,
+	#page #primary article.clash-audio div.entry-attachment p a:hover,
 	#page #primary article.post div.entry-content p a:hover,
+	#page #primary article.post div.entry-summary p a:hover,
+	#page #primary article.post div.entry-attachment p a:hover,
 	#page #primary article.search-results div.entry-content p a:hover,
-	#page #primary article.page div.entry-content p a:hover {
+	#page #primary article.search-results div.entry-summary p a:hover,
+	#page #primary article.search-results div.entry-attachment p a:hover,
+	#page #primary article.page div.entry-content p a:hover,
+	#page #primary article.page div.entry-summary p a:hover,
+	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
 	#page #primary article.clash-videos div.entry-content ul,
+	#page #primary article.clash-videos div.entry-summary ul,
+	#page #primary article.clash-videos div.entry-attachment ul,
 	#page #primary article.clash-audio div.entry-content ul,
+	#page #primary article.clash-audio div.entry-summary ul,
+	#page #primary article.clash-audio div.entry-attachment ul,
 	#page #primary article.post div.entry-content ul,
+	#page #primary article.post div.entry-summary ul,
+	#page #primary article.post div.entry-attachment ul,
 	#page #primary article.search-results div.entry-content ul,
-	#page #primary article.page div.entry-content ul {
+	#page #primary article.search-results div.entry-summary ul,
+	#page #primary article.search-results div.entry-attachment ul,
+	#page #primary article.page div.entry-content ul,
+	#page #primary article.page div.entry-summary ul,
+	#page #primary article.page div.entry-attachment ul {
 		font-size: 0.9em;
 	}
 	#page #primary article.clash-videos div.entry-content ul.post-list li,
+	#page #primary article.clash-videos div.entry-summary ul.post-list li,
+	#page #primary article.clash-videos div.entry-attachment ul.post-list li,
 	#page #primary article.clash-audio div.entry-content ul.post-list li,
+	#page #primary article.clash-audio div.entry-summary ul.post-list li,
+	#page #primary article.clash-audio div.entry-attachment ul.post-list li,
 	#page #primary article.post div.entry-content ul.post-list li,
+	#page #primary article.post div.entry-summary ul.post-list li,
+	#page #primary article.post div.entry-attachment ul.post-list li,
 	#page #primary article.search-results div.entry-content ul.post-list li,
-	#page #primary article.page div.entry-content ul.post-list li {
+	#page #primary article.search-results div.entry-summary ul.post-list li,
+	#page #primary article.search-results div.entry-attachment ul.post-list li,
+	#page #primary article.page div.entry-content ul.post-list li,
+	#page #primary article.page div.entry-summary ul.post-list li,
+	#page #primary article.page div.entry-attachment ul.post-list li {
 		height: auto;
 	}
 	#page #primary article.clash-videos div.entry-content ul.post-list li a,
+	#page #primary article.clash-videos div.entry-summary ul.post-list li a,
+	#page #primary article.clash-videos div.entry-attachment ul.post-list li a,
 	#page #primary article.clash-audio div.entry-content ul.post-list li a,
+	#page #primary article.clash-audio div.entry-summary ul.post-list li a,
+	#page #primary article.clash-audio div.entry-attachment ul.post-list li a,
 	#page #primary article.post div.entry-content ul.post-list li a,
+	#page #primary article.post div.entry-summary ul.post-list li a,
+	#page #primary article.post div.entry-attachment ul.post-list li a,
 	#page #primary article.search-results div.entry-content ul.post-list li a,
-	#page #primary article.page div.entry-content ul.post-list li a {
+	#page #primary article.search-results div.entry-summary ul.post-list li a,
+	#page #primary article.search-results div.entry-attachment ul.post-list li a,
+	#page #primary article.page div.entry-content ul.post-list li a,
+	#page #primary article.page div.entry-summary ul.post-list li a,
+	#page #primary article.page div.entry-attachment ul.post-list li a {
 		display: block;
 		line-height: 40px;
 		background-color: #256b40;
@@ -3637,25 +3725,55 @@ a {
 		text-align: center;
 	}
 	#page #primary article.clash-videos div.entry-content ul.post-list li a:hover,
+	#page #primary article.clash-videos div.entry-summary ul.post-list li a:hover,
+	#page #primary article.clash-videos div.entry-attachment ul.post-list li a:hover,
 	#page #primary article.clash-audio div.entry-content ul.post-list li a:hover,
+	#page #primary article.clash-audio div.entry-summary ul.post-list li a:hover,
+	#page #primary article.clash-audio div.entry-attachment ul.post-list li a:hover,
 	#page #primary article.post div.entry-content ul.post-list li a:hover,
+	#page #primary article.post div.entry-summary ul.post-list li a:hover,
+	#page #primary article.post div.entry-attachment ul.post-list li a:hover,
 	#page #primary article.search-results div.entry-content ul.post-list li a:hover,
-	#page #primary article.page div.entry-content ul.post-list li a:hover {
+	#page #primary article.search-results div.entry-summary ul.post-list li a:hover,
+	#page #primary article.search-results div.entry-attachment ul.post-list li a:hover,
+	#page #primary article.page div.entry-content ul.post-list li a:hover,
+	#page #primary article.page div.entry-summary ul.post-list li a:hover,
+	#page #primary article.page div.entry-attachment ul.post-list li a:hover {
 		background-color: #fdd015;
 		color: #256b40;
 	}
 	#page #primary article.clash-videos div.entry-content a.read-more,
+	#page #primary article.clash-videos div.entry-summary a.read-more,
+	#page #primary article.clash-videos div.entry-attachment a.read-more,
 	#page #primary article.clash-audio div.entry-content a.read-more,
+	#page #primary article.clash-audio div.entry-summary a.read-more,
+	#page #primary article.clash-audio div.entry-attachment a.read-more,
 	#page #primary article.post div.entry-content a.read-more,
+	#page #primary article.post div.entry-summary a.read-more,
+	#page #primary article.post div.entry-attachment a.read-more,
 	#page #primary article.search-results div.entry-content a.read-more,
-	#page #primary article.page div.entry-content a.read-more {
+	#page #primary article.search-results div.entry-summary a.read-more,
+	#page #primary article.search-results div.entry-attachment a.read-more,
+	#page #primary article.page div.entry-content a.read-more,
+	#page #primary article.page div.entry-summary a.read-more,
+	#page #primary article.page div.entry-attachment a.read-more {
 		width: 50%;
 	}
 	#page #primary article.clash-videos div.entry-content .tag-cloud-link,
+	#page #primary article.clash-videos div.entry-summary .tag-cloud-link,
+	#page #primary article.clash-videos div.entry-attachment .tag-cloud-link,
 	#page #primary article.clash-audio div.entry-content .tag-cloud-link,
+	#page #primary article.clash-audio div.entry-summary .tag-cloud-link,
+	#page #primary article.clash-audio div.entry-attachment .tag-cloud-link,
 	#page #primary article.post div.entry-content .tag-cloud-link,
+	#page #primary article.post div.entry-summary .tag-cloud-link,
+	#page #primary article.post div.entry-attachment .tag-cloud-link,
 	#page #primary article.search-results div.entry-content .tag-cloud-link,
-	#page #primary article.page div.entry-content .tag-cloud-link {
+	#page #primary article.search-results div.entry-summary .tag-cloud-link,
+	#page #primary article.search-results div.entry-attachment .tag-cloud-link,
+	#page #primary article.page div.entry-content .tag-cloud-link,
+	#page #primary article.page div.entry-summary .tag-cloud-link,
+	#page #primary article.page div.entry-attachment .tag-cloud-link {
 		color: #000;
 	}
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
@@ -3766,7 +3884,7 @@ a {
 	}
 	#page #primary .navigation .nav-links .nav-next a,
 	#page #primary .navigation .nav-links .nav-previous a {
-		font-size: 1.1em;
+		font-size: 1em;
 	}
 	#page #primary .navigation .nav-links .nav-next a:hover,
 	#page #primary .navigation .nav-links .nav-previous a:hover {
@@ -3774,7 +3892,7 @@ a {
 	}
 	#page #primary .navigation .nav-links .nav-next a::after,
 	#page #primary .navigation .nav-links .nav-previous a::after {
-		font-size: 1.6em;
+		font-size: 1.4em;
 	}
 	#page #primary .navigation .nav-links .nav-next a:active,
 	#page #primary .navigation .nav-links .nav-previous a:active {
@@ -4026,6 +4144,7 @@ a {
 		line-height: 50px;
 	}
 }
+
 @media only screen and (max-width: 1280px) {
 	#page {
 		width: 94%;
@@ -4431,7 +4550,6 @@ a {
 	#page #primary {
 		padding: 1%;
 		width: 75%;
-
 		/* post navigation */
 	}
 	#page #primary h1 {
@@ -4456,7 +4574,6 @@ a {
 	#page #primary article.search-results,
 	#page #primary article.page {
 		display: block;
-
 		/* --- custom post images--- */
 	}
 	#page #primary article.clash-videos header.entry-header,
@@ -4640,38 +4757,88 @@ a {
 		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos div.entry-content,
+	#page #primary article.clash-videos div.entry-summary,
+	#page #primary article.clash-videos div.entry-attachment,
 	#page #primary article.clash-audio div.entry-content,
+	#page #primary article.clash-audio div.entry-summary,
+	#page #primary article.clash-audio div.entry-attachment,
 	#page #primary article.post div.entry-content,
+	#page #primary article.post div.entry-summary,
+	#page #primary article.post div.entry-attachment,
 	#page #primary article.search-results div.entry-content,
-	#page #primary article.page div.entry-content {
+	#page #primary article.search-results div.entry-summary,
+	#page #primary article.search-results div.entry-attachment,
+	#page #primary article.page div.entry-content,
+	#page #primary article.page div.entry-summary,
+	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
 	#page #primary article.clash-videos div.entry-content .wp-block-image,
+	#page #primary article.clash-videos div.entry-summary .wp-block-image,
+	#page #primary article.clash-videos div.entry-attachment .wp-block-image,
 	#page #primary article.clash-audio div.entry-content .wp-block-image,
+	#page #primary article.clash-audio div.entry-summary .wp-block-image,
+	#page #primary article.clash-audio div.entry-attachment .wp-block-image,
 	#page #primary article.post div.entry-content .wp-block-image,
+	#page #primary article.post div.entry-summary .wp-block-image,
+	#page #primary article.post div.entry-attachment .wp-block-image,
 	#page #primary article.search-results div.entry-content .wp-block-image,
-	#page #primary article.page div.entry-content .wp-block-image {
+	#page #primary article.search-results div.entry-summary .wp-block-image,
+	#page #primary article.search-results div.entry-attachment .wp-block-image,
+	#page #primary article.page div.entry-content .wp-block-image,
+	#page #primary article.page div.entry-summary .wp-block-image,
+	#page #primary article.page div.entry-attachment .wp-block-image {
 		height: auto;
 	}
 	#page #primary article.clash-videos div.entry-content p a,
+	#page #primary article.clash-videos div.entry-summary p a,
+	#page #primary article.clash-videos div.entry-attachment p a,
 	#page #primary article.clash-audio div.entry-content p a,
+	#page #primary article.clash-audio div.entry-summary p a,
+	#page #primary article.clash-audio div.entry-attachment p a,
 	#page #primary article.post div.entry-content p a,
+	#page #primary article.post div.entry-summary p a,
+	#page #primary article.post div.entry-attachment p a,
 	#page #primary article.search-results div.entry-content p a,
-	#page #primary article.page div.entry-content p a {
+	#page #primary article.search-results div.entry-summary p a,
+	#page #primary article.search-results div.entry-attachment p a,
+	#page #primary article.page div.entry-content p a,
+	#page #primary article.page div.entry-summary p a,
+	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
 	#page #primary article.clash-videos div.entry-content p a:hover,
+	#page #primary article.clash-videos div.entry-summary p a:hover,
+	#page #primary article.clash-videos div.entry-attachment p a:hover,
 	#page #primary article.clash-audio div.entry-content p a:hover,
+	#page #primary article.clash-audio div.entry-summary p a:hover,
+	#page #primary article.clash-audio div.entry-attachment p a:hover,
 	#page #primary article.post div.entry-content p a:hover,
+	#page #primary article.post div.entry-summary p a:hover,
+	#page #primary article.post div.entry-attachment p a:hover,
 	#page #primary article.search-results div.entry-content p a:hover,
-	#page #primary article.page div.entry-content p a:hover {
+	#page #primary article.search-results div.entry-summary p a:hover,
+	#page #primary article.search-results div.entry-attachment p a:hover,
+	#page #primary article.page div.entry-content p a:hover,
+	#page #primary article.page div.entry-summary p a:hover,
+	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
 	#page #primary article.clash-videos div.entry-content a.read-more,
+	#page #primary article.clash-videos div.entry-summary a.read-more,
+	#page #primary article.clash-videos div.entry-attachment a.read-more,
 	#page #primary article.clash-audio div.entry-content a.read-more,
+	#page #primary article.clash-audio div.entry-summary a.read-more,
+	#page #primary article.clash-audio div.entry-attachment a.read-more,
 	#page #primary article.post div.entry-content a.read-more,
+	#page #primary article.post div.entry-summary a.read-more,
+	#page #primary article.post div.entry-attachment a.read-more,
 	#page #primary article.search-results div.entry-content a.read-more,
-	#page #primary article.page div.entry-content a.read-more {
+	#page #primary article.search-results div.entry-summary a.read-more,
+	#page #primary article.search-results div.entry-attachment a.read-more,
+	#page #primary article.page div.entry-content a.read-more,
+	#page #primary article.page div.entry-summary a.read-more,
+	#page #primary article.page div.entry-attachment a.read-more {
 		width: 60%;
 	}
 	#page #primary article.clash-videos footer.speaker-meta,
@@ -4694,7 +4861,7 @@ a {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.8em;
+		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -4790,7 +4957,7 @@ a {
 	}
 	#page #primary .navigation .nav-links .nav-next a,
 	#page #primary .navigation .nav-links .nav-previous a {
-		font-size: 1.1em;
+		font-size: 0.9em;
 	}
 	#page #primary .navigation .nav-links .nav-next a:hover,
 	#page #primary .navigation .nav-links .nav-previous a:hover {
@@ -4798,7 +4965,7 @@ a {
 	}
 	#page #primary .navigation .nav-links .nav-next a::after,
 	#page #primary .navigation .nav-links .nav-previous a::after {
-		font-size: 1.6em;
+		font-size: 1.5em;
 	}
 	#page #primary .navigation .nav-links .nav-next a:active,
 	#page #primary .navigation .nav-links .nav-previous a:active {
@@ -5053,6 +5220,7 @@ a {
 		line-height: 50px;
 	}
 }
+
 @media only screen and (max-width: 1024px) {
 	#page {
 		width: 96%;
@@ -5399,7 +5567,6 @@ a {
 	#page #primary article.search-results,
 	#page #primary article.page {
 		display: block;
-
 		/* --- custom post images--- */
 	}
 	#page #primary article.clash-videos h1,
@@ -5497,7 +5664,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
-		font-size: 0.85em;
+		font-size: 0.80em;
 	}
 	#page #primary article.clash-videos a.post-thumbnail,
 	#page #primary article.clash-videos div.post-thumbnail,
@@ -5629,38 +5796,88 @@ a {
 		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos div.entry-content,
+	#page #primary article.clash-videos div.entry-summary,
+	#page #primary article.clash-videos div.entry-attachment,
 	#page #primary article.clash-audio div.entry-content,
+	#page #primary article.clash-audio div.entry-summary,
+	#page #primary article.clash-audio div.entry-attachment,
 	#page #primary article.post div.entry-content,
+	#page #primary article.post div.entry-summary,
+	#page #primary article.post div.entry-attachment,
 	#page #primary article.search-results div.entry-content,
-	#page #primary article.page div.entry-content {
+	#page #primary article.search-results div.entry-summary,
+	#page #primary article.search-results div.entry-attachment,
+	#page #primary article.page div.entry-content,
+	#page #primary article.page div.entry-summary,
+	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
 	#page #primary article.clash-videos div.entry-content p,
+	#page #primary article.clash-videos div.entry-summary p,
+	#page #primary article.clash-videos div.entry-attachment p,
 	#page #primary article.clash-audio div.entry-content p,
+	#page #primary article.clash-audio div.entry-summary p,
+	#page #primary article.clash-audio div.entry-attachment p,
 	#page #primary article.post div.entry-content p,
+	#page #primary article.post div.entry-summary p,
+	#page #primary article.post div.entry-attachment p,
 	#page #primary article.search-results div.entry-content p,
-	#page #primary article.page div.entry-content p {
+	#page #primary article.search-results div.entry-summary p,
+	#page #primary article.search-results div.entry-attachment p,
+	#page #primary article.page div.entry-content p,
+	#page #primary article.page div.entry-summary p,
+	#page #primary article.page div.entry-attachment p {
 		font-size: 0.9em;
 	}
 	#page #primary article.clash-videos div.entry-content p a,
+	#page #primary article.clash-videos div.entry-summary p a,
+	#page #primary article.clash-videos div.entry-attachment p a,
 	#page #primary article.clash-audio div.entry-content p a,
+	#page #primary article.clash-audio div.entry-summary p a,
+	#page #primary article.clash-audio div.entry-attachment p a,
 	#page #primary article.post div.entry-content p a,
+	#page #primary article.post div.entry-summary p a,
+	#page #primary article.post div.entry-attachment p a,
 	#page #primary article.search-results div.entry-content p a,
-	#page #primary article.page div.entry-content p a {
+	#page #primary article.search-results div.entry-summary p a,
+	#page #primary article.search-results div.entry-attachment p a,
+	#page #primary article.page div.entry-content p a,
+	#page #primary article.page div.entry-summary p a,
+	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
 	#page #primary article.clash-videos div.entry-content p a:hover,
+	#page #primary article.clash-videos div.entry-summary p a:hover,
+	#page #primary article.clash-videos div.entry-attachment p a:hover,
 	#page #primary article.clash-audio div.entry-content p a:hover,
+	#page #primary article.clash-audio div.entry-summary p a:hover,
+	#page #primary article.clash-audio div.entry-attachment p a:hover,
 	#page #primary article.post div.entry-content p a:hover,
+	#page #primary article.post div.entry-summary p a:hover,
+	#page #primary article.post div.entry-attachment p a:hover,
 	#page #primary article.search-results div.entry-content p a:hover,
-	#page #primary article.page div.entry-content p a:hover {
+	#page #primary article.search-results div.entry-summary p a:hover,
+	#page #primary article.search-results div.entry-attachment p a:hover,
+	#page #primary article.page div.entry-content p a:hover,
+	#page #primary article.page div.entry-summary p a:hover,
+	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
 	#page #primary article.clash-videos div.entry-content a.read-more,
+	#page #primary article.clash-videos div.entry-summary a.read-more,
+	#page #primary article.clash-videos div.entry-attachment a.read-more,
 	#page #primary article.clash-audio div.entry-content a.read-more,
+	#page #primary article.clash-audio div.entry-summary a.read-more,
+	#page #primary article.clash-audio div.entry-attachment a.read-more,
 	#page #primary article.post div.entry-content a.read-more,
+	#page #primary article.post div.entry-summary a.read-more,
+	#page #primary article.post div.entry-attachment a.read-more,
 	#page #primary article.search-results div.entry-content a.read-more,
-	#page #primary article.page div.entry-content a.read-more {
+	#page #primary article.search-results div.entry-summary a.read-more,
+	#page #primary article.search-results div.entry-attachment a.read-more,
+	#page #primary article.page div.entry-content a.read-more,
+	#page #primary article.page div.entry-summary a.read-more,
+	#page #primary article.page div.entry-attachment a.read-more {
 		width: 60%;
 	}
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
@@ -5675,7 +5892,7 @@ a {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.75em;
+		font-size: 0.8em;
 	}
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -5707,7 +5924,7 @@ a {
 	}
 	#page #primary .navigation .nav-links .nav-next a,
 	#page #primary .navigation .nav-links .nav-previous a {
-		font-size: 1.1em;
+		font-size: 0.9em;
 	}
 	#page #primary .navigation .nav-links .nav-next a:hover,
 	#page #primary .navigation .nav-links .nav-previous a:hover {
@@ -5715,7 +5932,7 @@ a {
 	}
 	#page #primary .navigation .nav-links .nav-next a::after,
 	#page #primary .navigation .nav-links .nav-previous a::after {
-		font-size: 1.6em;
+		font-size: 1.5em;
 	}
 	#page #primary .navigation .nav-links .nav-next a:active,
 	#page #primary .navigation .nav-links .nav-previous a:active {
@@ -5970,6 +6187,7 @@ a {
 		line-height: 50px;
 	}
 }
+
 @media only screen and (max-width: 800px) {
 	#page {
 		width: 98%;
@@ -6364,7 +6582,6 @@ a {
 	#page #primary article.search-results,
 	#page #primary article.page {
 		display: block;
-
 		/* blog footer */
 	}
 	#page #primary article.clash-videos h1,
@@ -6462,7 +6679,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
-		font-size: 0.85em;
+		font-size: 0.80em;
 	}
 	#page #primary article.clash-videos a.post-thumbnail,
 	#page #primary article.clash-videos div.post-thumbnail,
@@ -6594,38 +6811,88 @@ a {
 		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos div.entry-content,
+	#page #primary article.clash-videos div.entry-summary,
+	#page #primary article.clash-videos div.entry-attachment,
 	#page #primary article.clash-audio div.entry-content,
+	#page #primary article.clash-audio div.entry-summary,
+	#page #primary article.clash-audio div.entry-attachment,
 	#page #primary article.post div.entry-content,
+	#page #primary article.post div.entry-summary,
+	#page #primary article.post div.entry-attachment,
 	#page #primary article.search-results div.entry-content,
-	#page #primary article.page div.entry-content {
+	#page #primary article.search-results div.entry-summary,
+	#page #primary article.search-results div.entry-attachment,
+	#page #primary article.page div.entry-content,
+	#page #primary article.page div.entry-summary,
+	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
 	#page #primary article.clash-videos div.entry-content p,
+	#page #primary article.clash-videos div.entry-summary p,
+	#page #primary article.clash-videos div.entry-attachment p,
 	#page #primary article.clash-audio div.entry-content p,
+	#page #primary article.clash-audio div.entry-summary p,
+	#page #primary article.clash-audio div.entry-attachment p,
 	#page #primary article.post div.entry-content p,
+	#page #primary article.post div.entry-summary p,
+	#page #primary article.post div.entry-attachment p,
 	#page #primary article.search-results div.entry-content p,
-	#page #primary article.page div.entry-content p {
+	#page #primary article.search-results div.entry-summary p,
+	#page #primary article.search-results div.entry-attachment p,
+	#page #primary article.page div.entry-content p,
+	#page #primary article.page div.entry-summary p,
+	#page #primary article.page div.entry-attachment p {
 		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos div.entry-content p a,
+	#page #primary article.clash-videos div.entry-summary p a,
+	#page #primary article.clash-videos div.entry-attachment p a,
 	#page #primary article.clash-audio div.entry-content p a,
+	#page #primary article.clash-audio div.entry-summary p a,
+	#page #primary article.clash-audio div.entry-attachment p a,
 	#page #primary article.post div.entry-content p a,
+	#page #primary article.post div.entry-summary p a,
+	#page #primary article.post div.entry-attachment p a,
 	#page #primary article.search-results div.entry-content p a,
-	#page #primary article.page div.entry-content p a {
+	#page #primary article.search-results div.entry-summary p a,
+	#page #primary article.search-results div.entry-attachment p a,
+	#page #primary article.page div.entry-content p a,
+	#page #primary article.page div.entry-summary p a,
+	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
 	#page #primary article.clash-videos div.entry-content p a:hover,
+	#page #primary article.clash-videos div.entry-summary p a:hover,
+	#page #primary article.clash-videos div.entry-attachment p a:hover,
 	#page #primary article.clash-audio div.entry-content p a:hover,
+	#page #primary article.clash-audio div.entry-summary p a:hover,
+	#page #primary article.clash-audio div.entry-attachment p a:hover,
 	#page #primary article.post div.entry-content p a:hover,
+	#page #primary article.post div.entry-summary p a:hover,
+	#page #primary article.post div.entry-attachment p a:hover,
 	#page #primary article.search-results div.entry-content p a:hover,
-	#page #primary article.page div.entry-content p a:hover {
+	#page #primary article.search-results div.entry-summary p a:hover,
+	#page #primary article.search-results div.entry-attachment p a:hover,
+	#page #primary article.page div.entry-content p a:hover,
+	#page #primary article.page div.entry-summary p a:hover,
+	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
 	#page #primary article.clash-videos div.entry-content a.read-more,
+	#page #primary article.clash-videos div.entry-summary a.read-more,
+	#page #primary article.clash-videos div.entry-attachment a.read-more,
 	#page #primary article.clash-audio div.entry-content a.read-more,
+	#page #primary article.clash-audio div.entry-summary a.read-more,
+	#page #primary article.clash-audio div.entry-attachment a.read-more,
 	#page #primary article.post div.entry-content a.read-more,
+	#page #primary article.post div.entry-summary a.read-more,
+	#page #primary article.post div.entry-attachment a.read-more,
 	#page #primary article.search-results div.entry-content a.read-more,
-	#page #primary article.page div.entry-content a.read-more {
+	#page #primary article.search-results div.entry-summary a.read-more,
+	#page #primary article.search-results div.entry-attachment a.read-more,
+	#page #primary article.page div.entry-content a.read-more,
+	#page #primary article.page div.entry-summary a.read-more,
+	#page #primary article.page div.entry-attachment a.read-more {
 		width: 70%;
 		font-size: 0.9em;
 	}
@@ -6989,6 +7256,7 @@ a {
 	}
 	#page {
 		width: 100%;
+		margin: 0;
 	}
 	#page header.site-header {
 		height: 65px;
@@ -7108,8 +7376,7 @@ a {
 	#page #secondary section.secondary_column_box nav.menu-audio-nav-container ul#menu-video_nav {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::before,
-	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::after,
+	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::before, #page #secondary section.secondary_column_box nav.menu-video-nav-container ul::after,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-audio_nav::before,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-audio_nav::after,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-video_nav::before,
@@ -7187,8 +7454,7 @@ a {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before,
-	#page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -7237,14 +7503,12 @@ a {
 		color: #ebeadd;
 	}
 	#page #primary {
-		width: 95%;
+		width: 100%;
 		float: none;
-
 		/* blog */
 	}
 	#page #primary h1 {
 		font-size: 1.3em;
-		padding: 0.5em 0;
 		text-align: center;
 		text-indent: 0;
 	}
@@ -7356,7 +7620,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
-		font-size: 0.85em;
+		font-size: 0.75em;
 	}
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
@@ -7520,39 +7784,90 @@ a {
 		margin: 0;
 	}
 	#page #primary article.clash-videos div.entry-content,
+	#page #primary article.clash-videos div.entry-summary,
+	#page #primary article.clash-videos div.entry-attachment,
 	#page #primary article.clash-audio div.entry-content,
+	#page #primary article.clash-audio div.entry-summary,
+	#page #primary article.clash-audio div.entry-attachment,
 	#page #primary article.post div.entry-content,
+	#page #primary article.post div.entry-summary,
+	#page #primary article.post div.entry-attachment,
 	#page #primary article.search-results div.entry-content,
-	#page #primary article.page div.entry-content {
+	#page #primary article.search-results div.entry-summary,
+	#page #primary article.search-results div.entry-attachment,
+	#page #primary article.page div.entry-content,
+	#page #primary article.page div.entry-summary,
+	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
 	#page #primary article.clash-videos div.entry-content p,
+	#page #primary article.clash-videos div.entry-summary p,
+	#page #primary article.clash-videos div.entry-attachment p,
 	#page #primary article.clash-audio div.entry-content p,
+	#page #primary article.clash-audio div.entry-summary p,
+	#page #primary article.clash-audio div.entry-attachment p,
 	#page #primary article.post div.entry-content p,
+	#page #primary article.post div.entry-summary p,
+	#page #primary article.post div.entry-attachment p,
 	#page #primary article.search-results div.entry-content p,
-	#page #primary article.page div.entry-content p {
+	#page #primary article.search-results div.entry-summary p,
+	#page #primary article.search-results div.entry-attachment p,
+	#page #primary article.page div.entry-content p,
+	#page #primary article.page div.entry-summary p,
+	#page #primary article.page div.entry-attachment p {
 		line-height: 1.8em;
 	}
 	#page #primary article.clash-videos div.entry-content p a,
+	#page #primary article.clash-videos div.entry-summary p a,
+	#page #primary article.clash-videos div.entry-attachment p a,
 	#page #primary article.clash-audio div.entry-content p a,
+	#page #primary article.clash-audio div.entry-summary p a,
+	#page #primary article.clash-audio div.entry-attachment p a,
 	#page #primary article.post div.entry-content p a,
+	#page #primary article.post div.entry-summary p a,
+	#page #primary article.post div.entry-attachment p a,
 	#page #primary article.search-results div.entry-content p a,
-	#page #primary article.page div.entry-content p a {
+	#page #primary article.search-results div.entry-summary p a,
+	#page #primary article.search-results div.entry-attachment p a,
+	#page #primary article.page div.entry-content p a,
+	#page #primary article.page div.entry-summary p a,
+	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
 	#page #primary article.clash-videos div.entry-content p a:hover,
+	#page #primary article.clash-videos div.entry-summary p a:hover,
+	#page #primary article.clash-videos div.entry-attachment p a:hover,
 	#page #primary article.clash-audio div.entry-content p a:hover,
+	#page #primary article.clash-audio div.entry-summary p a:hover,
+	#page #primary article.clash-audio div.entry-attachment p a:hover,
 	#page #primary article.post div.entry-content p a:hover,
+	#page #primary article.post div.entry-summary p a:hover,
+	#page #primary article.post div.entry-attachment p a:hover,
 	#page #primary article.search-results div.entry-content p a:hover,
-	#page #primary article.page div.entry-content p a:hover {
+	#page #primary article.search-results div.entry-summary p a:hover,
+	#page #primary article.search-results div.entry-attachment p a:hover,
+	#page #primary article.page div.entry-content p a:hover,
+	#page #primary article.page div.entry-summary p a:hover,
+	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
 	#page #primary article.clash-videos div.entry-content a.read-more,
+	#page #primary article.clash-videos div.entry-summary a.read-more,
+	#page #primary article.clash-videos div.entry-attachment a.read-more,
 	#page #primary article.clash-audio div.entry-content a.read-more,
+	#page #primary article.clash-audio div.entry-summary a.read-more,
+	#page #primary article.clash-audio div.entry-attachment a.read-more,
 	#page #primary article.post div.entry-content a.read-more,
+	#page #primary article.post div.entry-summary a.read-more,
+	#page #primary article.post div.entry-attachment a.read-more,
 	#page #primary article.search-results div.entry-content a.read-more,
-	#page #primary article.page div.entry-content a.read-more {
+	#page #primary article.search-results div.entry-summary a.read-more,
+	#page #primary article.search-results div.entry-attachment a.read-more,
+	#page #primary article.page div.entry-content a.read-more,
+	#page #primary article.page div.entry-summary a.read-more,
+	#page #primary article.page div.entry-attachment a.read-more {
 		width: 80%;
+		font-size: 0.8em;
 	}
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta,
@@ -7566,7 +7881,7 @@ a {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.9em;
+		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -7581,6 +7896,7 @@ a {
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li p,
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 100%;
+		font-size: 0.8em;
 	}
 	#page #primary .navigation {
 		margin: 0;
@@ -7609,6 +7925,7 @@ a {
 	#page #primary .navigation .nav-links .nav-next a::after,
 	#page #primary .navigation .nav-links .nav-previous a::after {
 		font-size: 1.6em;
+		width: 8%;
 	}
 	#page #primary .navigation .nav-links .nav-next a:active,
 	#page #primary .navigation .nav-links .nav-previous a:active {
@@ -7992,6 +8309,7 @@ a {
 		line-height: 50px;
 	}
 }
+
 @media only screen and (max-width: 640px) {
 	#tog-menu {
 		width: 30%;
@@ -8019,9 +8337,7 @@ a {
 	}
 	#page {
 		width: 100%;
-
 		/* --- Content --- */
-
 		/* ----- End of Footer ----- */
 	}
 	#page header.site-header {
@@ -8159,8 +8475,7 @@ a {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before,
-	#page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -8201,11 +8516,10 @@ a {
 		color: #ebeadd;
 	}
 	#page #primary {
-		width: 98%;
+		width: 100%;
 	}
 	#page #primary h1 {
 		font-size: 1.3em;
-		padding: 0.5em 0;
 	}
 	#page #primary h1 a {
 		width: 71%;
@@ -8303,7 +8617,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
-		font-size: 0.8em;
+		font-size: 0.75em;
 	}
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
@@ -8502,7 +8816,7 @@ a {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.9em;
+		font-size: 0.8em;
 	}
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -8976,6 +9290,7 @@ a {
 		line-height: 50px;
 	}
 }
+
 @media only screen and (max-width: 536px) {
 	#tog-menu {
 		width: 30%;
@@ -8997,7 +9312,6 @@ a {
 	}
 	#page {
 		width: 100%;
-
 		/* --- Content --- */
 	}
 	#page header.site-header {
@@ -9125,8 +9439,7 @@ a {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before,
-	#page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -9167,13 +9480,11 @@ a {
 		color: #ebeadd;
 	}
 	#page #primary {
-		width: 98%;
-
+		width: 100%;
 		/* blog */
 	}
 	#page #primary h1 {
 		font-size: 1.2em;
-		padding: 0.5em 0;
 	}
 	#page #primary h1 a {
 		width: 71%;
@@ -9193,7 +9504,7 @@ a {
 	#page #primary article.post h2,
 	#page #primary article.search-results h2,
 	#page #primary article.page h2 {
-		font-size: 1em;
+		font-size: 0.9em;
 	}
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
@@ -9277,7 +9588,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
-		font-size: 0.75em;
+		font-size: 0.7em;
 		height: 20px;
 		line-height: 20px;
 	}
@@ -9451,7 +9762,7 @@ a {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.9em;
+		font-size: 0.75em;
 	}
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -10087,8 +10398,7 @@ a {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before,
-	#page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -10137,11 +10447,10 @@ a {
 		color: #ebeadd;
 	}
 	#page #primary {
-		width: 98%;
+		width: 100%;
 	}
 	#page #primary h1 {
 		font-size: 1.1em;
-		padding: 0.5em 0;
 	}
 	#page #primary h1 a {
 		width: 71%;
@@ -10161,7 +10470,7 @@ a {
 	#page #primary article.post h2,
 	#page #primary article.search-results h2,
 	#page #primary article.page h2 {
-		font-size: 1em;
+		font-size: 0.9em;
 		text-align: center;
 	}
 	#page #primary article.clash-videos header.entry-header,
@@ -10176,7 +10485,7 @@ a {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 0.9em;
+		font-size: 0.85em;
 		text-indent: 0;
 		text-align: center;
 		height: auto;
@@ -10384,39 +10693,90 @@ a {
 		margin: 0 auto;
 	}
 	#page #primary article.clash-videos div.entry-content,
+	#page #primary article.clash-videos div.entry-summary,
+	#page #primary article.clash-videos div.entry-attachment,
 	#page #primary article.clash-audio div.entry-content,
+	#page #primary article.clash-audio div.entry-summary,
+	#page #primary article.clash-audio div.entry-attachment,
 	#page #primary article.post div.entry-content,
+	#page #primary article.post div.entry-summary,
+	#page #primary article.post div.entry-attachment,
 	#page #primary article.search-results div.entry-content,
-	#page #primary article.page div.entry-content {
+	#page #primary article.search-results div.entry-summary,
+	#page #primary article.search-results div.entry-attachment,
+	#page #primary article.page div.entry-content,
+	#page #primary article.page div.entry-summary,
+	#page #primary article.page div.entry-attachment {
 		width: 98%;
 	}
 	#page #primary article.clash-videos div.entry-content p,
+	#page #primary article.clash-videos div.entry-summary p,
+	#page #primary article.clash-videos div.entry-attachment p,
 	#page #primary article.clash-audio div.entry-content p,
+	#page #primary article.clash-audio div.entry-summary p,
+	#page #primary article.clash-audio div.entry-attachment p,
 	#page #primary article.post div.entry-content p,
+	#page #primary article.post div.entry-summary p,
+	#page #primary article.post div.entry-attachment p,
 	#page #primary article.search-results div.entry-content p,
-	#page #primary article.page div.entry-content p {
+	#page #primary article.search-results div.entry-summary p,
+	#page #primary article.search-results div.entry-attachment p,
+	#page #primary article.page div.entry-content p,
+	#page #primary article.page div.entry-summary p,
+	#page #primary article.page div.entry-attachment p {
 		line-height: 1.6em;
 	}
 	#page #primary article.clash-videos div.entry-content p a,
+	#page #primary article.clash-videos div.entry-summary p a,
+	#page #primary article.clash-videos div.entry-attachment p a,
 	#page #primary article.clash-audio div.entry-content p a,
+	#page #primary article.clash-audio div.entry-summary p a,
+	#page #primary article.clash-audio div.entry-attachment p a,
 	#page #primary article.post div.entry-content p a,
+	#page #primary article.post div.entry-summary p a,
+	#page #primary article.post div.entry-attachment p a,
 	#page #primary article.search-results div.entry-content p a,
-	#page #primary article.page div.entry-content p a {
+	#page #primary article.search-results div.entry-summary p a,
+	#page #primary article.search-results div.entry-attachment p a,
+	#page #primary article.page div.entry-content p a,
+	#page #primary article.page div.entry-summary p a,
+	#page #primary article.page div.entry-attachment p a {
 		display: inline-block;
 	}
 	#page #primary article.clash-videos div.entry-content p a:hover,
+	#page #primary article.clash-videos div.entry-summary p a:hover,
+	#page #primary article.clash-videos div.entry-attachment p a:hover,
 	#page #primary article.clash-audio div.entry-content p a:hover,
+	#page #primary article.clash-audio div.entry-summary p a:hover,
+	#page #primary article.clash-audio div.entry-attachment p a:hover,
 	#page #primary article.post div.entry-content p a:hover,
+	#page #primary article.post div.entry-summary p a:hover,
+	#page #primary article.post div.entry-attachment p a:hover,
 	#page #primary article.search-results div.entry-content p a:hover,
-	#page #primary article.page div.entry-content p a:hover {
+	#page #primary article.search-results div.entry-summary p a:hover,
+	#page #primary article.search-results div.entry-attachment p a:hover,
+	#page #primary article.page div.entry-content p a:hover,
+	#page #primary article.page div.entry-summary p a:hover,
+	#page #primary article.page div.entry-attachment p a:hover {
 		font-weight: bold;
 	}
 	#page #primary article.clash-videos div.entry-content a.read-more,
+	#page #primary article.clash-videos div.entry-summary a.read-more,
+	#page #primary article.clash-videos div.entry-attachment a.read-more,
 	#page #primary article.clash-audio div.entry-content a.read-more,
+	#page #primary article.clash-audio div.entry-summary a.read-more,
+	#page #primary article.clash-audio div.entry-attachment a.read-more,
 	#page #primary article.post div.entry-content a.read-more,
+	#page #primary article.post div.entry-summary a.read-more,
+	#page #primary article.post div.entry-attachment a.read-more,
 	#page #primary article.search-results div.entry-content a.read-more,
-	#page #primary article.page div.entry-content a.read-more {
+	#page #primary article.search-results div.entry-summary a.read-more,
+	#page #primary article.search-results div.entry-attachment a.read-more,
+	#page #primary article.page div.entry-content a.read-more,
+	#page #primary article.page div.entry-summary a.read-more,
+	#page #primary article.page div.entry-attachment a.read-more {
 		width: 90%;
+		font-size: 0.75em;
 	}
 	#page #primary article.clash-videos footer.speaker-meta,
 	#page #primary article.clash-audio footer.speaker-meta,
@@ -10438,7 +10798,7 @@ a {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.85em;
+		font-size: 0.7em;
 		height: auto;
 	}
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -10670,6 +11030,7 @@ a {
 		font-size: 1.3em;
 	}
 }
+
 @media only screen and (max-width: 414px) {
 	#tog-menu {
 		left: calc(71% - 1vw);
@@ -10809,8 +11170,7 @@ a {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before,
-	#page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -10851,11 +11211,10 @@ a {
 		color: #ebeadd;
 	}
 	#page #primary {
-		width: 98%;
+		width: 100%;
 	}
 	#page #primary h1 {
 		font-size: 1.1em;
-		padding: 0.5em 0;
 	}
 	#page #primary h1 a {
 		width: 71%;
@@ -10875,7 +11234,7 @@ a {
 	#page #primary article.post h2,
 	#page #primary article.search-results h2,
 	#page #primary article.page h2 {
-		font-size: 1em;
+		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
@@ -10958,7 +11317,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
-		font-size: 0.75em;
+		font-size: 0.7em;
 	}
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
@@ -11338,6 +11697,7 @@ a {
 		font-size: 1.3em;
 	}
 }
+
 @media only screen and (max-width: 360px) {
 	#tog-menu {
 		width: 25%;
@@ -11470,8 +11830,7 @@ a {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before,
-	#page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -11512,11 +11871,10 @@ a {
 		color: #ebeadd;
 	}
 	#page #primary {
-		width: 98%;
+		width: 100%;
 	}
 	#page #primary h1 {
 		font-size: 1em;
-		padding: 0.5em 0;
 	}
 	#page #primary h1 a {
 		width: 71%;
@@ -11536,7 +11894,7 @@ a {
 	#page #primary article.post h2,
 	#page #primary article.search-results h2,
 	#page #primary article.page h2 {
-		font-size: 1em;
+		font-size: 0.85em;
 	}
 	#page #primary article.clash-videos header.entry-header,
 	#page #primary article.clash-audio header.entry-header,
@@ -11612,7 +11970,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
-		font-size: 0.7em;
+		font-size: 0.65em;
 	}
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
@@ -11793,7 +12151,7 @@ a {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.8em;
+		font-size: 0.65em;
 	}
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-audio footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -12203,6 +12561,7 @@ a {
 		font-size: 1.1em;
 	}
 }
+
 @media only screen and (max-width: 320px) {
 	#tog-menu button.menu-toggle,
 	#tog-menu button.sidebar-toggle {
@@ -12354,8 +12713,7 @@ a {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before,
-	#page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -12397,7 +12755,6 @@ a {
 	}
 	#page #primary h1 {
 		font-size: 1em;
-		padding: 0.5em 0;
 	}
 	#page #primary h1 a {
 		width: 71%;
@@ -12431,7 +12788,7 @@ a {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 0.85em;
+		font-size: 0.80em;
 	}
 	#page #primary article.clash-videos header.entry-header h1 a,
 	#page #primary article.clash-audio header.entry-header h1 a,
@@ -12445,7 +12802,7 @@ a {
 	#page #primary article.post header.entry-header h2.entry-title,
 	#page #primary article.search-results header.entry-header h2.entry-title,
 	#page #primary article.page header.entry-header h2.entry-title {
-		font-size: 0.8em;
+		font-size: 0.75em;
 	}
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
 	#page #primary article.clash-audio header.entry-header h2.entry-title a,
@@ -12493,7 +12850,7 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
-		font-size: 0.7em;
+		font-size: 0.65em;
 	}
 	#page #primary article.clash-videos header.entry-header section.byline,
 	#page #primary article.clash-audio header.entry-header section.byline,
@@ -13101,3 +13458,5 @@ a {
 		font-size: 1.1em;
 	}
 }
+
+/*# sourceMappingURL=style.css.map */

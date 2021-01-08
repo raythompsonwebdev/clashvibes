@@ -13,8 +13,12 @@ if ( ! function_exists( 'clashvibes_posted_on' ) ) :
 	 */
 	function clashvibes_posted_on() {
 		$clashvibes_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
+		$clashvibes_update_time_string = '<time class="updated" datetime="%3$s">Not updated</time>';
+
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$clashvibes_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>Updated:<time class="updated" datetime="%3$s">%4$s</time>';
+			$clashvibes_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+			$clashvibes_update_time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$clashvibes_time_string = sprintf(
@@ -25,15 +29,29 @@ if ( ! function_exists( 'clashvibes_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
+		$clashvibes_update_time_string = sprintf(
+			$clashvibes_update_time_string,
+			esc_attr( get_the_date( DATE_W3C ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( DATE_W3C ) ),
+			esc_html( get_the_modified_date() )
+		);
+
 		$clashvibes_posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'clashvibes' ),
+			esc_html_x( 'Posted on:  %s', 'post date', 'clashvibes' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $clashvibes_time_string . '</a>'
+		);
+
+		$clashvibes_updated_on = sprintf(
+			/* translators: %s: post date. */
+			esc_html_x( 'Updated:  %s', 'post date', 'clashvibes' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $clashvibes_update_time_string . '</a>'
 		);
 
 		$clashvibes_byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'clashvibes' ),
+			esc_html_x( 'by:  %s', 'post author', 'clashvibes' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -53,6 +71,7 @@ if ( ! function_exists( 'clashvibes_posted_on' ) ) :
 			comments_popup_link( esc_html__( 'Leave a comment', 'clashvibes' ), esc_html__( '1 Comment', 'clashvibes' ), esc_html__( '% Comments', 'clashvibes' ) );
 			echo '</span>';
 		}
+		echo '<span class="updated-on">' . $clashvibes_updated_on . '</span>';
 		echo '</div><!-- .meta-content -->';
 
 	}
@@ -63,8 +82,6 @@ if ( ! function_exists( 'clashvibes_index_posted_on' ) ) :
 	 * Prints HTML with meta information for the current author.
 	 */
 	function clashvibes_index_posted_on() {
-
-		// $clashvibes_index_author_id = get_the_author_meta( 'ID' );
 
 		$clashvibes_index_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {

@@ -32,7 +32,7 @@ if ( have_posts() ) :
 
 		<div class="entry-meta">
 				<?php
-				clashvibes_index_posted_on()
+				clashvibes_posted_on()
 				?>
 		</div><!-- .entry-meta -->
 

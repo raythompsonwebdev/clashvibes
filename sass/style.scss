@@ -66,18 +66,18 @@ License: GNU General Public License v2 or later
 
 	/* page container */
 	#page {
+		max-width: 88%;
 		margin:auto;
-		width: 86%;
 		height: auto;
 		font-family: $font-main;
-		padding: 0.5em;
 		background-color: $color;
 		@include box-sizing($type: border-box);
+
 
 		header.site-header {
 			width: 100%;
 			padding: 0;
-			height: 80px;
+			height: 65px;
 			margin-bottom: 0.25em;
 			display: -webkit-flex;
 			display: -ms-flexbox;
@@ -180,7 +180,7 @@ License: GNU General Public License v2 or later
 				}
 			}
 			aside#socialmediatop {
-				width: 30%;
+				width: 25%;
 				display: flex;
 				height: 40px;
 				-webkit-flex: 0 0 auto;
@@ -199,7 +199,8 @@ License: GNU General Public License v2 or later
 					span {
 						display: block;
 						height: 100%;
-						i,svg {
+						i,
+						svg {
 							font-size: 1.4em;
 							display: block;
 							height: 100%;
@@ -274,12 +275,10 @@ License: GNU General Public License v2 or later
 
 		/* --- Content --- */
 		div.clashvibes-content {
-			padding: 0.25em;
 			margin: 0;
-			height:auto;
+			height: auto;
 			background-color: $color;
-			min-height:600px;
-
+			min-height: 600px;
 		}
 
 		h1 {
@@ -290,31 +289,27 @@ License: GNU General Public License v2 or later
 		}
 		/* --- Error page --- */
 		section.error-404 {
-			margin:0;
-
+			margin: 0;
 		}
 
-		header.page-header{
-
+		header.page-header {
 			h1 {
 				font-size: 1.5em;
 			}
-
 		}
 
 		/* --- Error page content --- */
-		div.page-content{
-
-			p{
-				padding:0;
+		div.page-content {
+			p {
+				padding: 0;
 			}
 
-			ul{
-				margin:0;
-				padding:0;
-				list-style:none;
-				li{
-					a{
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				li {
+					a {
 						color: #000;
 						width: 93%;
 						display: inline-block;
@@ -323,43 +318,40 @@ License: GNU General Public License v2 or later
 				}
 			}
 
-			.search-form{
-				width:50%;
-				margin:2em auto;
+			.search-form {
+				width: 50%;
+				margin: 2em auto;
 			}
-			.widget_recent_entries{
-				width:96%;
-				margin:auto;
-
+			.widget_recent_entries {
+				width: 96%;
+				margin: auto;
 			}
-			.widget_categories{
-				width:96%;
-				margin:auto;
+			.widget_categories {
+				width: 96%;
+				margin: auto;
 			}
-			.widget_archive{
-				width:96%;
-				margin:auto;
-				select#archives-dropdown--1{
-					width:50%;
+			.widget_archive {
+				width: 96%;
+				margin: auto;
+				select#archives-dropdown--1 {
+					width: 50%;
 					display: block;
 					margin: 0;
 					height: 35px;
-
 				}
 			}
-			.widget_tag_cloud{
-				width:96%;
-				margin:2em auto;
-				.tagcloud{
-					color:#000;
-					a{
-						color:#000;
-						width:auto;
-						display:inline-block;
+			.widget_tag_cloud {
+				width: 96%;
+				margin: 2em auto;
+				.tagcloud {
+					color: #000;
+					a {
+						color: #000;
+						width: auto;
+						display: inline-block;
 					}
 				}
 			}
-
 		}
 
 		/* front page */
@@ -510,13 +502,12 @@ License: GNU General Public License v2 or later
 			-ms-flex-align: start;
 			align-items: flex-start;
 
-
 			article.events_box {
 				-webkit-flex: 0 1 auto;
 				-ms-flex: 0 1 auto;
 				flex: 0 1 auto;
 				width: 19.25%;
-				height:auto;
+				height: auto;
 				padding: 0;
 				margin: 0.25em;
 				background-color: $color;
@@ -535,8 +526,7 @@ License: GNU General Public License v2 or later
 					font-weight: bold;
 				}
 
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					width: 90%;
 					text-align: center;
 					color: $color;
@@ -559,7 +549,7 @@ License: GNU General Public License v2 or later
 
 				figure.events {
 					width: 96%;
-					height:auto;
+					height: auto;
 					margin: 0 auto;
 					@include originTran(50% 50%);
 					@include box-sizing($type: border-box);
@@ -573,21 +563,21 @@ License: GNU General Public License v2 or later
 
 					img.attachment-event-image {
 						@include box-sizing($type: border-box);
-						width:70%;
-						margin:0 auto;
-						display:block;
+						width: 70%;
+						margin: 0 auto;
+						display: block;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 						display: block;
 
-						h4{
-							display:block;
-							line-height:35px;
-							margin:0;
-							padding:0;
-							text-align:center;
+						h4 {
+							display: block;
+							line-height: 35px;
+							margin: 0;
+							padding: 0;
+							text-align: center;
 						}
 
 						p {
@@ -914,6 +904,7 @@ License: GNU General Public License v2 or later
 						border: none;
 						outline: none;
 						margin: 0.5em auto;
+						padding: 0;
 						line-height: 35px;
 
 						&:hover {
@@ -939,7 +930,6 @@ License: GNU General Public License v2 or later
 			}
 
 			a {
-				font-size: 0.8em;
 				height: 100%;
 				padding: 0;
 				line-height: 40px;
@@ -1005,6 +995,11 @@ License: GNU General Public License v2 or later
 				div.widget {
 					width: 100%;
 					display: block;
+					.tagcloud{
+						a{
+							width:auto;
+						}
+					}
 
 					h2.widget-title {
 						background-color: $color7;
@@ -1020,6 +1015,10 @@ License: GNU General Public License v2 or later
 						form {
 							select {
 								width: 100%;
+								line-height: 35px;
+								display: block;
+								height: 35px;
+								margin:0.5em 0;
 								option {
 									width: 100%;
 								}
@@ -1098,11 +1097,10 @@ License: GNU General Public License v2 or later
 							}
 						}
 					}
-					select.archives-dropdown--1{
-						display:block;
-						width:100%;
-						line-height:35px;
-
+					select.archives-dropdown--1 {
+						display: block;
+						width: 100%;
+						line-height: 35px;
 					}
 				}
 
@@ -1154,7 +1152,7 @@ License: GNU General Public License v2 or later
 			float: right;
 			padding: 1%;
 			display: block;
-			width: 74%;
+			width: 76%;
 
 			h1 {
 				height: 45px;
@@ -1166,7 +1164,7 @@ License: GNU General Public License v2 or later
 				font-size: 1.5em;
 				text-align: left;
 				text-indent: 0.5em;
-				padding:0;
+				padding: 0;
 			}
 
 			h2,
@@ -1203,13 +1201,13 @@ License: GNU General Public License v2 or later
 					display: block;
 
 					h1 {
-						font-size: 1.3em;
+						font-size: 1.2em;
 						margin: 0;
 						width: 100%;
 						background-color: $color4;
 						color: $color;
 						text-align: center;
-						padding:0;
+						padding: 0;
 
 						a {
 							width: auto;
@@ -1265,7 +1263,7 @@ License: GNU General Public License v2 or later
 								'Image posted-on'
 								'Image byline'
 								'Image comments-link'
-								'Image spare';
+								'Image updated-on';
 
 							.posted-on {
 								grid-area: posted-on;
@@ -1276,8 +1274,8 @@ License: GNU General Public License v2 or later
 							.comments-link {
 								grid-area: comments-link;
 							}
-							.spare {
-								grid-area: spare;
+							.updated-on {
+								grid-area: updated-on;
 							}
 							.author-avatar {
 								display: grid;
@@ -1291,7 +1289,8 @@ License: GNU General Public License v2 or later
 							span.full-size-link,
 							span.comments-link,
 							span.posted-on,
-							span.byline {
+							span.byline,
+							span.updated-on {
 								font-size: 1em;
 								width: 100%;
 								height: 25px;
@@ -1302,7 +1301,8 @@ License: GNU General Public License v2 or later
 								letter-spacing: 0.05em;
 								display: inline-block;
 								text-align: left;
-								text-indent: 0.5em;
+								padding-left:0.25em;
+
 								a {
 									width: auto;
 									display: inline-block;
@@ -1316,7 +1316,7 @@ License: GNU General Public License v2 or later
 
 				/* --- blog image--- */
 				a.post-thumbnail,
-				div.post-thumbnail {
+				figure.post-thumbnail {
 					width: auto;
 					margin: 1em auto;
 					height: auto;
@@ -1332,7 +1332,7 @@ License: GNU General Public License v2 or later
 				/* --- custom post images--- */
 				figure.featured-image,
 				figure.attachment {
-					width: 35%;
+					width: 20%;
 					height: auto;
 					margin: 2em auto;
 					display: block;
@@ -1404,6 +1404,7 @@ License: GNU General Public License v2 or later
 					color: $color;
 					text-indent: 0.25em;
 					background-color: $colors;
+					clear:both;
 
 					span {
 						padding: 0;
@@ -1448,7 +1449,6 @@ License: GNU General Public License v2 or later
 						display: block;
 					}
 				}
-
 
 				/* regular post entry */
 				div.entry-content,
@@ -1502,7 +1502,6 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-
 				/* custom-post-footer */
 				footer.speaker-meta {
 					clear: both;
@@ -1555,7 +1554,7 @@ License: GNU General Public License v2 or later
 				div.sharedaddy {
 					width: 100%;
 					margin: 3% auto;
-					display: block;
+					display: flex;
 
 					h3.sd-title {
 						display: block;
@@ -1633,6 +1632,7 @@ License: GNU General Public License v2 or later
 					margin-bottom: 0.2em;
 					color: $color;
 					background-color: $color4;
+					font-size:1.1em;
 				}
 				.nav-links {
 					margin: 0;
@@ -1675,6 +1675,7 @@ License: GNU General Public License v2 or later
 			}
 
 			#comments {
+
 				.navigation {
 					height: auto;
 					width: 100%;
@@ -1817,10 +1818,9 @@ License: GNU General Public License v2 or later
 						}
 
 						article.comment-body {
-
 							padding: 0.5em;
 							display: block;
-							background-color: $color7;
+							background-color: $colors;
 							height: auto;
 							text-indent: 0;
 							width: 100%;
@@ -1834,7 +1834,7 @@ License: GNU General Public License v2 or later
 									height: auto;
 									width: auto;
 									font-size: 0.9em;
-									background-color: $color7;
+									background-color: $colors;
 									color: $color11;
 									padding: 0.25em;
 
@@ -1855,9 +1855,10 @@ License: GNU General Public License v2 or later
 										text-align: left;
 										line-height: 1.5;
 										color: $color11;
-										background-color: $color7;
-										a, a.url {
-											background-color: $color7;
+										background-color: $colors;
+										a,
+										a.url {
+											background-color: $colors;
 										}
 									}
 
@@ -1865,7 +1866,7 @@ License: GNU General Public License v2 or later
 										display: inline-block;
 										width: auto;
 										height: 100%;
-										color: $color4;
+										color: $color3;
 									}
 								}
 
@@ -1876,7 +1877,7 @@ License: GNU General Public License v2 or later
 									padding: 0 0.5em;
 									width: auto;
 									display: block;
-									background-color: $color7;
+									background-color: $colors;
 									font-size: 0.8em;
 									color: $color11;
 									a {
@@ -1952,7 +1953,8 @@ License: GNU General Public License v2 or later
 						margin: 1em auto;
 						padding: 0;
 						font-size: 1em;
-						background-color: $color7;						color: $color11;
+						background-color: $colors;
+						color: $color11;
 
 						line-height: 35px;
 						text-indent: 0.5em;
@@ -1972,12 +1974,18 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					.comment-form {
-						width: 82%;
+					form#commentform {
+						width: 90%;
 						height: auto;
 						margin: 2% auto;
 						font-family: $font-main;
 						padding: 0;
+
+						label {
+							height: 30px;
+							line-height: 30px;
+							width: 30px;
+						}
 
 						p.comment-notes {
 							font-size: 0.9em;
@@ -1987,21 +1995,20 @@ License: GNU General Public License v2 or later
 							margin: 0;
 						}
 
-						textarea#comment {
+						p.comment-form-comment {
 							@include Transition(all 0.2s ease-in 0s);
 							outline: none;
 							padding: 3px 0 3px 3px;
 							margin: 5px 1px 3px 0;
 							border: 1px solid #ddd;
 							width: 100%;
+
+							#comment{
+								width:100%;
+							}
 						}
 
 						p.comment-form-author {
-							label {
-								height: 30px;
-								line-height: 30px;
-								width: 30px;
-							}
 
 							input {
 								@include Transition(all 0.2s ease-in 0s);
@@ -2014,7 +2021,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 								padding: 3px 0 3px 3px;
 								margin: 5px 1px 3px 0;
@@ -2023,11 +2030,6 @@ License: GNU General Public License v2 or later
 						}
 
 						p.comment-form-email {
-							label {
-								height: 30px;
-								line-height: 30px;
-								width: 30px;
-							}
 
 							input {
 								@include Transition(all 0.2s ease-in 0s);
@@ -2040,7 +2042,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 								padding: 3px 0 3px 3px;
 								margin: 5px 1px 3px 0;
@@ -2049,11 +2051,6 @@ License: GNU General Public License v2 or later
 						}
 
 						p.comment-form-url {
-							label {
-								height: 30px;
-								line-height: 30px;
-								width: 30px;
-							}
 
 							input {
 								@include Transition(all 0.2s ease-in 0s);
@@ -2066,7 +2063,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 								padding: 3px 0 3px 3px;
 								margin: 5px 1px 3px 0;
@@ -2074,11 +2071,16 @@ License: GNU General Public License v2 or later
 							}
 						}
 
+						p.comment-form-cookies-consent{
+							font-size:0.9em;
+
+						}
+
 						p.form-submit {
 							margin: 2% 0;
 							width: 100%;
 
-							input[type="submit"] {
+							input[type='submit'] {
 								height: 35px;
 								list-style: none;
 								background-color: $color4;
@@ -2100,7 +2102,7 @@ License: GNU General Public License v2 or later
 				}
 
 				p {
-					padding: 0.5em;
+					padding: 0;
 					a {
 						background-color: unset;
 
@@ -2157,8 +2159,6 @@ License: GNU General Public License v2 or later
 					font-size: 1.1em;
 				}
 			}
-
-
 		}
 
 		/* ----- Footer ----- */
@@ -2263,7 +2263,6 @@ License: GNU General Public License v2 or later
 				}
 			}
 		}
-
 	}
 	.copy {
 		font-size: 10px;
@@ -2280,17 +2279,15 @@ License: GNU General Public License v2 or later
 			}
 		}
 	}
-
 }
 @media only screen and (max-width: 1440px) {
 	#page {
-		width: 92%;
+		max-width: 88%;
 
 		header.site-header {
-			height: 80px;
+			height: 65px;
 
 			.site-branding {
-
 				#clashvibes-title {
 					width: 92%;
 
@@ -2380,13 +2377,11 @@ License: GNU General Public License v2 or later
 			article.events_box {
 				width: 19.25%;
 
-
 				h1 {
 					font-size: 0.9em;
 				}
 
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					font-size: 0.9em;
 					&:hover {
 						font-weight: bold;
@@ -2398,25 +2393,21 @@ License: GNU General Public License v2 or later
 
 					&:hover {
 						cursor: pointer;
-
 					}
 
 					img.attachment-event-image {
-						margin:0 auto;
+						margin: 0 auto;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 
-						h4{
-
-							line-height:35px;
-
+						h4 {
+							line-height: 35px;
 						}
 
 						p {
 							font-size: 0.9em;
-
 						}
 					}
 				}
@@ -2519,7 +2510,7 @@ License: GNU General Public License v2 or later
 		}
 
 		#secondary {
-			width: 21%;
+			width: 23%;
 
 			section#clashvibes-login {
 				padding: 0.5em 0;
@@ -2631,7 +2622,7 @@ License: GNU General Public License v2 or later
 		}
 
 		#primary {
-			width: 74%;
+			width: 76%;
 
 			h1 {
 				font-size: 1.4em;
@@ -2676,7 +2667,7 @@ License: GNU General Public License v2 or later
 					display: block;
 
 					h1 {
-						font-size: 1.2em;
+						font-size: 1.1em;
 
 						a {
 							width: auto;
@@ -2704,7 +2695,8 @@ License: GNU General Public License v2 or later
 							span.full-size-link,
 							span.comments-link,
 							span.posted-on,
-							span.byline {
+							span.byline,
+							span.updated-on {
 								font-size: 1em;
 							}
 						}
@@ -2712,7 +2704,7 @@ License: GNU General Public License v2 or later
 				}
 
 				a.post-thumbnail,
-				div.post-thumbnail {
+				figure.post-thumbnail {
 					width: auto;
 					img {
 						margin: 0 auto;
@@ -2764,8 +2756,8 @@ License: GNU General Public License v2 or later
 						}
 
 						a {
-							font-size: 0.85em;
-							line-height: 35px;
+							font-size: 0.9em;
+
 
 							&:hover {
 								font-weight: bold;
@@ -2802,7 +2794,6 @@ License: GNU General Public License v2 or later
 
 					ul {
 						font-size: 0.9em;
-
 					}
 
 					ul.post-list {
@@ -2836,7 +2827,7 @@ License: GNU General Public License v2 or later
 						height: 100%;
 
 						li {
-							font-size: 0.9em;
+							font-size: 0.85em;
 
 							span.post-meta-key {
 								width: 20%;
@@ -3098,14 +3089,14 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					.comment-form {
+					form#commentform {
 						padding: 1em;
 
 						p.comment-notes {
 							font-size: 0.9em;
 						}
 
-						textarea#comment {
+						p.comment-form-comment {
 							width: 100%;
 						}
 
@@ -3119,7 +3110,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 							}
 						}
@@ -3134,7 +3125,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
@@ -3149,15 +3140,15 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.form-submit {
-															width: 100%;
+							width: 100%;
 
-							input[type="submit"] {
+							input[type='submit'] {
 								width: 25%;
 
 								&:hover {
@@ -3168,16 +3159,6 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				p {
-					padding: 0.5em;
-					a {
-						background-color: unset;
-
-						&:hover {
-							color: $color11;
-						}
-					}
-				}
 
 				p:last-of-type {
 					text-align: center;
@@ -3206,7 +3187,6 @@ License: GNU General Public License v2 or later
 					font-size: 1.1em;
 				}
 			}
-
 		}
 
 		footer.site-footer {
@@ -3256,13 +3236,13 @@ License: GNU General Public License v2 or later
 }
 @media only screen and (max-width: 1280px) {
 	#page {
-		width: 94%;
+		max-width: 92%;
 
 		header.site-header {
-			height: 75px;
+			height: 70px;
 			.site-branding {
 				.site-logo {
-					width:8%;
+					width: 8%;
 
 					a {
 						div.screen-reader-text {
@@ -3286,7 +3266,6 @@ License: GNU General Public License v2 or later
 					}
 
 					h2.site-description {
-						line-height: 20px;
 						font-size: 0.7em;
 					}
 				}
@@ -3367,9 +3346,7 @@ License: GNU General Public License v2 or later
 			margin: 1% auto;
 
 			div.wpcf7 {
-				span.ajax-loader {
-					margin: 3% auto;
-				}
+
 
 				form {
 					padding: 0.5em;
@@ -3409,17 +3386,14 @@ License: GNU General Public License v2 or later
 		div.results {
 			padding: 0;
 
-
 			article.events_box {
 				width: 19%;
-
 
 				h1 {
 					font-size: 0.85em;
 				}
 
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					font-size: 0.9em;
 					&:hover {
 						font-weight: bold;
@@ -3431,25 +3405,21 @@ License: GNU General Public License v2 or later
 
 					&:hover {
 						cursor: pointer;
-
 					}
 
 					img.attachment-event-image {
-						margin:0 auto;
+						margin: 0 auto;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 
-						h4{
-
+						h4 {
 							font-size: 0.9em;
-
 						}
 
 						p {
 							font-size: 0.85em;
-
 						}
 					}
 				}
@@ -3545,7 +3515,7 @@ License: GNU General Public License v2 or later
 		}
 
 		#secondary {
-			width: 21%;
+			width: 23%;
 
 			section#clashvibes-login {
 				padding: 0.5em 0;
@@ -3601,7 +3571,7 @@ License: GNU General Public License v2 or later
 						li,
 						li#menu-item {
 							a {
-								font-size: 0.8em;
+								font-size: 0.85em;
 
 								&:hover {
 									color: $color4;
@@ -3631,7 +3601,7 @@ License: GNU General Public License v2 or later
 							}
 
 							a {
-								font-size:0.9em;
+								font-size: 0.9em;
 								&:hover {
 									font-weight: bold;
 								}
@@ -3654,7 +3624,7 @@ License: GNU General Public License v2 or later
 
 		#primary {
 			padding: 1%;
-			width: 75%; //global post
+			width: 76%; //global post
 
 			h1 {
 				font-size: 1.2em;
@@ -3688,7 +3658,7 @@ License: GNU General Public License v2 or later
 					display: block;
 
 					h2.entry-title {
-						font-size: 1.3em;
+						font-size: 1.1em;
 
 						a {
 							color: $color;
@@ -3705,7 +3675,8 @@ License: GNU General Public License v2 or later
 							span.full-size-link,
 							span.comments-link,
 							span.posted-on,
-							span.byline {
+							span.byline,
+							span.updated-on {
 								font-size: 0.9em;
 							}
 						}
@@ -3713,7 +3684,7 @@ License: GNU General Public License v2 or later
 				}
 
 				a.post-thumbnail,
-				div.post-thumbnail {
+				figure.post-thumbnail {
 					img {
 						margin: 0 auto;
 					}
@@ -3722,6 +3693,7 @@ License: GNU General Public License v2 or later
 				/* --- custom post images--- */
 				figure.featured-image,
 				figure.attachment {
+					width: 25%;
 					a {
 						img {
 							margin: 0 auto;
@@ -3764,8 +3736,7 @@ License: GNU General Public License v2 or later
 						}
 
 						a {
-							font-size: 0.85em;
-							line-height: 35px;
+							font-size: 0.9em;
 
 							&:hover {
 								font-weight: bold;
@@ -3789,8 +3760,8 @@ License: GNU General Public License v2 or later
 				div.entry-attachment {
 					width: 98%;
 
-					.wp-block-image{
-						height:auto;
+					.wp-block-image {
+						height: auto;
 					}
 
 					//text
@@ -3804,13 +3775,10 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-
 					a.read-more {
 						width: 60%;
 					}
 				}
-
-
 
 				footer.speaker-meta {
 					height: auto;
@@ -3820,7 +3788,7 @@ License: GNU General Public License v2 or later
 						letter-spacing: 0.05em;
 
 						li {
-							font-size: 0.85em;
+							font-size: 0.80em;
 
 							span.post-meta-key {
 								width: 20%;
@@ -3828,7 +3796,6 @@ License: GNU General Public License v2 or later
 
 							p {
 								width: 77%;
-
 							}
 						}
 					}
@@ -4084,14 +4051,14 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					.comment-form {
+					form#commentform {
 						padding: 1em;
 
 						p.comment-notes {
 							font-size: 0.9em;
 						}
 
-						textarea#comment {
+						p.comment-form-comment {
 							width: 100%;
 						}
 
@@ -4105,7 +4072,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 							}
 						}
@@ -4120,7 +4087,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
@@ -4135,15 +4102,15 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.form-submit {
-															width: 100%;
+							width: 100%;
 
-							input[type="submit"] {
+							input[type='submit'] {
 								width: 25%;
 
 								&:hover {
@@ -4154,16 +4121,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				p {
-					padding: 0.5em;
-					a {
-						background-color: unset;
 
-						&:hover {
-							color: $color11;
-						}
-					}
-				}
 
 				p:last-of-type {
 					text-align: center;
@@ -4192,7 +4150,6 @@ License: GNU General Public License v2 or later
 					font-size: 1.1em;
 				}
 			}
-
 		}
 
 		footer.site-footer {
@@ -4244,10 +4201,11 @@ License: GNU General Public License v2 or later
 }
 @media only screen and (max-width: 1024px) {
 	#page {
-		width: 96%;
+		max-width: 98%;
+  padding: 0 1%;
 
 		header.site-header {
-			height: 70px;
+			height: 65px;
 			.site-branding {
 				.site-logo {
 					width: 11%;
@@ -4266,7 +4224,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 				#clashvibes-title {
-					width: 91%;
+					width: 88%;
 
 					h1.site-title {
 						font-size: 2.2em;
@@ -4317,7 +4275,7 @@ License: GNU General Public License v2 or later
 		}
 
 		div.clashvibes-content {
-			margin: 0;;
+			margin: 0;
 		}
 
 		article#clashvibes-text {
@@ -4354,17 +4312,14 @@ License: GNU General Public License v2 or later
 		div.results {
 			padding: 0;
 
-
 			article.events_box {
 				width: 23.5%;
-
 
 				h1 {
 					font-size: 0.85em;
 				}
 
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					font-size: 0.9em;
 					&:hover {
 						font-weight: bold;
@@ -4376,26 +4331,22 @@ License: GNU General Public License v2 or later
 
 					&:hover {
 						cursor: pointer;
-
 					}
 
 					img.attachment-event-image {
-						margin:0 auto;
+						margin: 0 auto;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 
-						h4{
-
+						h4 {
 							font-size: 0.85em;
 							line-height: 25px;
-
 						}
 
 						p {
 							font-size: 0.85em;
-
 						}
 					}
 				}
@@ -4492,7 +4443,7 @@ License: GNU General Public License v2 or later
 		}
 
 		#secondary {
-			width: 21%;
+			width: 23%;
 
 			section#clashvibes-login {
 				padding: 0.5em 0;
@@ -4658,20 +4609,20 @@ License: GNU General Public License v2 or later
 						.meta-content {
 							grid-template-columns: 13% 2fr;
 
-
-						span.parent-post-link,
-						span.full-size-link,
-						span.comments-link,
-						span.posted-on,
-						span.byline {
-							font-size: 0.80em;
+							span.parent-post-link,
+							span.full-size-link,
+							span.comments-link,
+							span.posted-on,
+							span.byline,
+							span.updated-on {
+								font-size: 0.8em;
+							}
 						}
-					}
 					}
 				}
 
 				a.post-thumbnail,
-				div.post-thumbnail {
+				figure.post-thumbnail {
 					width: auto;
 					img {
 						margin: 0 auto;
@@ -4723,8 +4674,7 @@ License: GNU General Public License v2 or later
 						}
 
 						a {
-							font-size: 0.8em;
-							line-height: 35px;
+							font-size: 0.9em;
 
 							&:hover {
 								font-weight: bold;
@@ -4750,7 +4700,7 @@ License: GNU General Public License v2 or later
 
 					//text
 					p {
-						font-size:0.9em;
+						font-size: 0.9em;
 						a {
 							display: inline-block;
 
@@ -4760,19 +4710,17 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-
 					a.read-more {
 						width: 60%;
 					}
 				}
-
 
 				footer.speaker-meta {
 					ul.post-meta {
 						height: 100%;
 
 						li {
-							font-size: 0.8em;
+							font-size: 0.75em;
 
 							span.post-meta-key {
 								width: 23%;
@@ -4992,14 +4940,14 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					.comment-form {
+					form#commentform {
 						padding: 1em;
 
 						p.comment-notes {
 							font-size: 0.9em;
 						}
 
-						textarea#comment {
+						p.comment-form-comment {
 							width: 100%;
 						}
 
@@ -5013,7 +4961,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 							}
 						}
@@ -5028,7 +4976,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
@@ -5043,16 +4991,15 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.form-submit {
-
 							width: 100%;
 
-							input[type="submit"] {
+							input[type='submit'] {
 								width: 25%;
 
 								&:hover {
@@ -5152,23 +5099,22 @@ License: GNU General Public License v2 or later
 }
 @media only screen and (max-width: 800px) {
 	#page {
-		width: 98%;
+		max-width: 98%;
 
 		header.site-header {
-			height: 70px;
+			height: 65px;
 			.site-branding {
 				.site-logo {
 					width: 10%;
 
 					a {
-
 						div.site-firstletter {
 							font-size: 4em;
 						}
 					}
 				}
 				#clashvibes-title {
-					width:88%;
+					width: 88%;
 					h2.site-description {
 						font-size: 0.7em;
 					}
@@ -5242,12 +5188,9 @@ License: GNU General Public License v2 or later
 		}
 
 		#contactform {
-			margin: 1% auto;
+			width:75%;
 
 			div.wpcf7 {
-				span.ajax-loader {
-					margin: 3% auto;
-				}
 
 				form {
 					padding: 0.5em;
@@ -5265,15 +5208,10 @@ License: GNU General Public License v2 or later
 								width: 100%;
 							}
 
-							input[type='text'],
-							input[type='email'],
-							select {
-								height: 35px;
-							}
 						}
 
 						input[type='submit'] {
-							font-size: 1.1em;
+							font-size: 1em;
 
 							&:hover {
 								background-color: $color1;
@@ -5311,17 +5249,14 @@ License: GNU General Public License v2 or later
 		div.results {
 			padding: 0;
 
-
 			article.events_box {
 				width: 23.25%;
-
 
 				h1 {
 					font-size: 0.85em;
 				}
 
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					font-size: 0.8em;
 					&:hover {
 						font-weight: bold;
@@ -5333,25 +5268,21 @@ License: GNU General Public License v2 or later
 
 					&:hover {
 						cursor: pointer;
-
 					}
 
 					img.attachment-event-image {
-						margin:0 auto;
+						margin: 0 auto;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 
-						h4{
-
+						h4 {
 							font-size: 0.8em;
-
 						}
 
 						p {
 							font-size: 0.75em;
-
 						}
 					}
 				}
@@ -5538,7 +5469,7 @@ License: GNU General Public License v2 or later
 							}
 
 							a {
-								font-size:0.85em;
+								font-size: 0.85em;
 								&:hover {
 									font-weight: bold;
 								}
@@ -5560,7 +5491,7 @@ License: GNU General Public License v2 or later
 		}
 
 		#primary {
-			width: 74%;
+			width: 76%;
 
 			h1 {
 				font-size: 1.2em;
@@ -5619,20 +5550,20 @@ License: GNU General Public License v2 or later
 						.meta-content {
 							grid-template-columns: 16% 2fr;
 
-
-						span.parent-post-link,
-						span.full-size-link,
-						span.comments-link,
-						span.posted-on,
-						span.byline {
-							font-size: 0.80em;
-						}
+							span.parent-post-link,
+							span.full-size-link,
+							span.comments-link,
+							span.posted-on,
+							span.byline,
+							span.updated-on {
+								font-size: 0.8em;
+							}
 						}
 					}
 				}
 
 				a.post-thumbnail,
-				div.post-thumbnail {
+				figure.post-thumbnail {
 					width: auto;
 					img {
 						margin: 0 auto;
@@ -5684,7 +5615,7 @@ License: GNU General Public License v2 or later
 						}
 
 						a {
-							font-size: 0.8em;
+							font-size: 0.9em;
 							line-height: 35px;
 
 							&:hover {
@@ -5711,7 +5642,7 @@ License: GNU General Public License v2 or later
 
 					//text
 					p {
-						font-size:0.85em;
+						font-size: 0.85em;
 						a {
 							display: inline-block;
 
@@ -5721,14 +5652,11 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-
-
 					a.read-more {
 						width: 70%;
 						font-size: 0.9em;
 					}
 				}
-
 
 				footer.speaker-meta {
 					height: auto;
@@ -5766,7 +5694,7 @@ License: GNU General Public License v2 or later
 						display: inline-block;
 
 						a {
-							font-size: 1.1em;
+							font-size: 0.85em;
 
 							&:hover {
 								font-weight: bold;
@@ -5959,67 +5887,57 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					.comment-form {
-						padding: 1em;
+					form#commentform {
+						padding: 0.5em;
 
 						p.comment-notes {
 							font-size: 0.85em;
 						}
 
-						textarea#comment {
+						p.comment-form-comment {
 							width: 100%;
+							font-size: 0.85em;
 						}
 
 						p.comment-form-author {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
+							font-size: 0.9em;
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.comment-form-email {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
-
+							font-size: 0.9em;
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.comment-form-url {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
+							font-size: 0.9em;
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
-						p.form-submit {
+						p.comment-form-cookies-consent{
+							font-size:0.8em;
+							line-height:20px;
+							input#wp-comment-cookies-consent{
+								display:inline-block;
+							}
 
+						}
+
+						p.form-submit {
 							width: 100%;
 
-							input[type="submit"] {
+							input[type='submit'] {
 								width: 35%;
 
 								&:hover {
@@ -6030,16 +5948,6 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				p {
-					padding: 0.5em;
-					a {
-						background-color: unset;
-
-						&:hover {
-							color: $color11;
-						}
-					}
-				}
 
 				p:last-of-type {
 					text-align: center;
@@ -6119,9 +6027,6 @@ License: GNU General Public License v2 or later
 
 /* tablet */
 @media only screen and (max-width: 667px) {
-
-
-
 	#tog-menu {
 		position: fixed;
 		top: 0.25em;
@@ -6129,11 +6034,11 @@ License: GNU General Public License v2 or later
 		height: auto;
 		display: block;
 		width: 25%;
-		left: calc(71% - 1vw);
+		left: calc(75% - 1vw);
 		@include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
 		button.menu-toggle,
 		button.sidebar-toggle {
-			display:block;
+			display: block;
 			line-height: 50px;
 			width: 100%;
 			background-color: $color4;
@@ -6157,12 +6062,9 @@ License: GNU General Public License v2 or later
 		left: 100vw;
 	}
 
-
 	#page {
-		width: 100%;
+		max-width: 100%;
 		margin:0;
-
-
 
 		header.site-header {
 			height: 65px;
@@ -6173,7 +6075,6 @@ License: GNU General Public License v2 or later
 					width: 10%;
 
 					a {
-
 						div.site-firstletter {
 							font-size: 4em;
 						}
@@ -6261,7 +6162,6 @@ License: GNU General Public License v2 or later
 
 		div.clashvibes-content {
 			padding: 0;
-
 		}
 
 		#secondary {
@@ -6340,7 +6240,7 @@ License: GNU General Public License v2 or later
 							}
 
 							a {
-								font-size:0.85em;
+								font-size: 0.85em;
 								&:hover {
 									font-weight: bold;
 								}
@@ -6427,15 +6327,15 @@ License: GNU General Public License v2 or later
 						.meta-content {
 							grid-template-columns: 15% 2fr;
 
-
-						span.parent-post-link,
-						span.full-size-link,
-						span.comments-link,
-						span.posted-on,
-						span.byline {
-							font-size: 0.75em;
+							span.parent-post-link,
+							span.full-size-link,
+							span.comments-link,
+							span.posted-on,
+							span.byline,
+							span.updated-on {
+								font-size: 0.75em;
+							}
 						}
-					}
 					}
 
 					section.byline {
@@ -6551,14 +6451,11 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-
-
 					a.read-more {
 						width: 80%;
-						font-size:0.8em;
+						font-size: 0.8em;
 					}
 				}
-
 
 				footer.speaker-meta {
 					ul.post-meta {
@@ -6585,7 +6482,7 @@ License: GNU General Public License v2 or later
 				h2 {
 					color: $color;
 					text-align: center;
-					font-size: 1.2em;
+					font-size: 0.9em;
 				}
 				.nav-links {
 					margin: 0;
@@ -6789,67 +6686,49 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					.comment-form {
-						padding: 1em;
+					form#commentform {
+						padding: 0.5em;
 
 						p.comment-notes {
 							font-size: 0.85em;
 						}
 
-						textarea#comment {
+						p.comment-form-comment {
 							width: 100%;
+							font-size: 0.85em;
 						}
 
 						p.comment-form-author {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
+							font-size: 0.85em;
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.comment-form-email {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
+							font-size: 0.85em;
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.comment-form-url {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
+							font-size: 0.85em;
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.form-submit {
-
 							width: 100%;
 
-							input[type="submit"] {
+							input[type='submit'] {
 								width: 45%;
 
 								&:hover {
@@ -6860,16 +6739,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				p {
-					padding: 0.5em;
-					a {
-						background-color: unset;
 
-						&:hover {
-							color: $color11;
-						}
-					}
-				}
 
 				p:last-of-type {
 					text-align: center;
@@ -6935,17 +6805,14 @@ License: GNU General Public License v2 or later
 		div.results {
 			padding: 0;
 
-
 			article.events_box {
 				width: 31.25%;
-
 
 				h1 {
 					font-size: 0.85em;
 				}
 
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					font-size: 0.85em;
 					&:hover {
 						font-weight: bold;
@@ -6957,26 +6824,22 @@ License: GNU General Public License v2 or later
 
 					&:hover {
 						cursor: pointer;
-
 					}
 
 					img.attachment-event-image {
-						margin:0 auto;
+						margin: 0 auto;
 						width: 80%;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 
-						h4{
-
+						h4 {
 							font-size: 0.8em;
-
 						}
 
 						p {
 							font-size: 0.75em;
-
 						}
 					}
 				}
@@ -7102,8 +6965,8 @@ License: GNU General Public License v2 or later
 }
 @media only screen and (max-width: 640px) {
 	#tog-menu {
-		width: 30%;
-		left: calc(66% - 1vw);
+		width: 25%;
+		left: calc(75% - 1vw);
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
@@ -7131,10 +6994,11 @@ License: GNU General Public License v2 or later
 	}
 
 	#page {
-		width: 100%;
+		max-width: 100%;
+
 
 		header.site-header {
-			height: 70px;
+			height: 65px;
 			.site-branding {
 				.site-logo {
 					width: 11%;
@@ -7158,8 +7022,6 @@ License: GNU General Public License v2 or later
 
 					h1.site-title {
 						font-size: 2em;
-						line-height: 35px;
-						height: 35px;
 					}
 
 					h2.site-description {
@@ -7205,7 +7067,6 @@ License: GNU General Public License v2 or later
 		/* --- Content --- */
 		div.clashvibes-content {
 			padding: 0;
-
 		}
 
 		#secondary {
@@ -7345,18 +7206,18 @@ License: GNU General Public License v2 or later
 
 					div.entry-meta {
 						display: block;
-						.meta-content{
+						.meta-content {
 							grid-template-columns: 17% 2fr;
 
-
-						span.parent-post-link,
-						span.full-size-link,
-						span.comments-link,
-						span.posted-on,
-						span.byline {
-							font-size: 0.75em;
+							span.parent-post-link,
+							span.full-size-link,
+							span.comments-link,
+							span.posted-on,
+							span.byline,
+							span.updated-on {
+								font-size: 0.75em;
+							}
 						}
-					}
 					}
 
 					section.byline {
@@ -7446,7 +7307,7 @@ License: GNU General Public License v2 or later
 				}
 
 				a.post-thumbnail,
-				div.post-thumbnail {
+				figure.post-thumbnail {
 					width: auto;
 					img {
 						margin: 0 auto;
@@ -7455,14 +7316,13 @@ License: GNU General Public License v2 or later
 
 				figure.featured-image,
 				figure.attachment {
-					width: 96%;
+					width: 30%;
 					a {
 						img {
 							margin: 0 auto;
 						}
 					}
 				}
-
 
 				footer.speaker-meta {
 					ul.post-meta {
@@ -7660,85 +7520,59 @@ License: GNU General Public License v2 or later
 							}
 						}
 					}
+					label {
+						height: 30px;
+					}
 
-					.comment-form {
-						padding: 1em;
+					form#commentform {
+						padding: 0.5em;
 
 						p.comment-notes {
 							font-size: 0.8em;
 						}
 
-						textarea#comment {
+						p.comment-form-comment {
 							width: 100%;
+							font-size: 0.8em;
 						}
 
 						p.comment-form-author {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
+							font-size: 0.8em;
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.comment-form-email {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
+							font-size: 0.8em;
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.comment-form-url {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
+							font-size: 0.8em;
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.form-submit {
-
 							width: 100%;
 
-							input[type="submit"] {
+							input[type='submit'] {
 								width: 45%;
 
 								&:hover {
 									cursor: pointer;
 								}
 							}
-						}
-					}
-				}
-
-				p {
-					padding: 0.5em;
-					a {
-						background-color: unset;
-
-						&:hover {
-							color: $color11;
 						}
 					}
 				}
@@ -7770,7 +7604,6 @@ License: GNU General Public License v2 or later
 					font-size: 1.1em;
 				}
 			}
-
 		}
 
 		article#clashvibes-text {
@@ -7803,11 +7636,12 @@ License: GNU General Public License v2 or later
 		}
 
 		#contactform {
-			margin: 1% auto;
+			margin: 0.5% auto;
+			width:85%;
 
 			div.wpcf7 {
 				span.ajax-loader {
-					margin: 3% auto;
+					margin: 4% auto;
 				}
 
 				form {
@@ -7826,15 +7660,10 @@ License: GNU General Public License v2 or later
 								width: 100%;
 							}
 
-							input[type='text'],
-							input[type='email'],
-							select {
-								height: 35px;
-							}
 						}
 
 						input[type='submit'] {
-							font-size: 1.1em;
+							font-size: 1em;
 
 							&:hover {
 								background-color: $color1;
@@ -7848,17 +7677,14 @@ License: GNU General Public License v2 or later
 		div.results {
 			padding: 0;
 
-
 			article.events_box {
 				width: 31.25%;
-
 
 				h1 {
 					font-size: 0.85em;
 				}
 
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					font-size: 0.8em;
 					&:hover {
 						font-weight: bold;
@@ -7870,26 +7696,22 @@ License: GNU General Public License v2 or later
 
 					&:hover {
 						cursor: pointer;
-
 					}
 
 					img.attachment-event-image {
-						margin:0 auto;
+						margin: 0 auto;
 						width: 90%;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 
-						h4{
-
+						h4 {
 							font-size: 0.75em;
-
 						}
 
 						p {
 							font-size: 0.7em;
-
 						}
 					}
 				}
@@ -8017,8 +7839,8 @@ License: GNU General Public License v2 or later
 }
 @media only screen and (max-width: 536px) {
 	#tog-menu {
-		width: 30%;
-		left: calc(66% - 1vw);
+		width: 25%;
+		left: calc(75% - 1vw);
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
@@ -8038,10 +7860,11 @@ License: GNU General Public License v2 or later
 	}
 
 	#page {
-		width: 100%;
+		max-width: 100%;
+
 
 		header.site-header {
-			height: 70px;
+			height: 60px;
 
 			.site-branding {
 				.site-logo {
@@ -8061,7 +7884,7 @@ License: GNU General Public License v2 or later
 				}
 
 				#clashvibes-title {
-					width:85%;
+					width: 85%;
 					h1.site-title {
 						font-size: 2em;
 					}
@@ -8196,7 +8019,6 @@ License: GNU General Public License v2 or later
 			h1 {
 				font-size: 1.2em;
 
-
 				a {
 					width: 71%;
 				}
@@ -8245,21 +8067,21 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
-						.meta-content{
+						.meta-content {
 							grid-template-columns: 16% 2fr;
 							grid-template-rows: 20px 20px 20px 20px;
 
-
-						span.parent-post-link,
-						span.full-size-link,
-						span.comments-link,
-						span.posted-on,
-						span.byline {
-							font-size: 0.7em;
-							height: 20px;
-							line-height: 20px;
+							span.parent-post-link,
+							span.full-size-link,
+							span.comments-link,
+							span.posted-on,
+							span.byline,
+							span.updated-on {
+								font-size: 0.7em;
+								height: 20px;
+								line-height: 20px;
+							}
 						}
-					}
 					}
 
 					section.byline {
@@ -8346,7 +8168,7 @@ License: GNU General Public License v2 or later
 				}
 
 				a.post-thumbnail,
-				div.post-thumbnail {
+				figure.post-thumbnail {
 					img {
 						margin: 0 auto;
 					}
@@ -8361,7 +8183,6 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
-
 
 				footer.speaker-meta {
 					ul.post-meta {
@@ -8396,7 +8217,7 @@ License: GNU General Public License v2 or later
 						display: inline-block;
 
 						a {
-							font-size: 0.9em;
+							font-size: 0.85em;
 
 							&:hover {
 								font-weight: bold;
@@ -8514,7 +8335,7 @@ License: GNU General Public License v2 or later
 
 									img {
 										width: 18%;
-										margin:0;
+										margin: 0;
 									}
 
 									b.fn,
@@ -8535,7 +8356,7 @@ License: GNU General Public License v2 or later
 
 								.comment-metadata {
 									font-size: 0.75em;
-									padding:0;
+									padding: 0;
 
 									a {
 										color: $color11;
@@ -8595,84 +8416,51 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					.comment-form {
+					form#commentform {
 						padding: 1em;
 
 						p.comment-notes {
 							font-size: 0.75em;
 						}
 
-						textarea#comment {
+						p.comment-form-comment {
 							width: 100%;
 						}
 
 						p.comment-form-author {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.comment-form-email {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.comment-form-url {
-							label {
-								height: 30px;
-							}
-
-							input {
-								height: 35px;
-							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.form-submit {
-
 							width: 100%;
 
-							input[type="submit"] {
+							input[type='submit'] {
 								width: 55%;
 
 								&:hover {
 									cursor: pointer;
 								}
 							}
-						}
-					}
-				}
-
-				p {
-					padding: 0.5em;
-					a {
-						background-color: unset;
-
-						&:hover {
-							color: $color11;
 						}
 					}
 				}
@@ -8738,17 +8526,14 @@ License: GNU General Public License v2 or later
 		div.results {
 			padding: 0;
 
-
 			article.events_box {
 				width: 48.25%;
-
 
 				h1 {
 					font-size: 0.85em;
 				}
 
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					font-size: 0.85em;
 					&:hover {
 						font-weight: bold;
@@ -8760,26 +8545,22 @@ License: GNU General Public License v2 or later
 
 					&:hover {
 						cursor: pointer;
-
 					}
 
 					img.attachment-event-image {
-						margin:0 auto;
+						margin: 0 auto;
 						width: 75%;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 
-						h4{
-
+						h4 {
 							font-size: 0.85em;
-
 						}
 
 						p {
 							font-size: 0.8em;
-
 						}
 					}
 				}
@@ -8912,8 +8693,8 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 480px) {
 	#tog-menu {
 		width: 25%;
-		left: calc(71% - 1vw);
-		font-size:0.85em;
+		left: calc(79% - 1vw);
+		font-size: 0.85em;
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
@@ -8933,16 +8714,16 @@ License: GNU General Public License v2 or later
 	}
 
 	#page {
-		width: 100%;
+		max-width: 100%;
+
 
 		header.site-header {
-			height: 65px;
+			height: 55px;
 			.site-branding {
 				.site-logo {
 					width: 13%;
 
 					a {
-
 						div.screen-reader-text {
 							&:focus {
 								font-size: 14px;
@@ -8956,9 +8737,11 @@ License: GNU General Public License v2 or later
 				}
 
 				#clashvibes-title {
-					width:85%;
+					width: 85%;
 					h1.site-title {
 						font-size: 2em;
+						line-height: 30px;
+						height: 30px;
 					}
 
 					h2.site-description {
@@ -8998,7 +8781,6 @@ License: GNU General Public License v2 or later
 
 		div.clashvibes-content {
 			padding: 0;
-
 		}
 
 		#secondary {
@@ -9064,7 +8846,7 @@ License: GNU General Public License v2 or later
 							}
 
 							a {
-								font-size:0.8em;
+								font-size: 0.8em;
 								&:hover {
 									font-weight: bold;
 								}
@@ -9227,7 +9009,7 @@ License: GNU General Public License v2 or later
 				}
 
 				a.post-thumbnail,
-				div.post-thumbnail {
+				figure.post-thumbnail {
 					width: auto;
 					img {
 						margin: 0 auto;
@@ -9237,6 +9019,7 @@ License: GNU General Public License v2 or later
 				//image
 				figure.featured-image,
 				figure.attachment {
+					width: 50%;
 					a {
 						img {
 							margin: 0 auto;
@@ -9262,13 +9045,11 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-
 					a.read-more {
 						width: 90%;
-						font-size:0.75em;
+						font-size: 0.75em;
 					}
 				}
-
 
 				footer.speaker-meta {
 					min-height: 335px;
@@ -9330,17 +9111,14 @@ License: GNU General Public License v2 or later
 		div.results {
 			padding: 0;
 
-
 			article.events_box {
 				width: 47.25%;
-
 
 				h1 {
 					font-size: 0.85em;
 				}
 
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					font-size: 0.85em;
 					&:hover {
 						font-weight: bold;
@@ -9352,26 +9130,22 @@ License: GNU General Public License v2 or later
 
 					&:hover {
 						cursor: pointer;
-
 					}
 
 					img.attachment-event-image {
-						margin:0 auto;
+						margin: 0 auto;
 						width: 75%;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 
-						h4{
-
+						h4 {
 							font-size: 0.85em;
-
 						}
 
 						p {
 							font-size: 0.8em;
-
 						}
 					}
 				}
@@ -9493,11 +9267,12 @@ License: GNU General Public License v2 or later
 			}
 		}
 	}
-
 }
 @media only screen and (max-width: 414px) {
 	#tog-menu {
-		left: calc(71% - 1vw);
+		width: 20%;
+		left: calc(79% - 1vw);
+		font-size: 0.75em;
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
@@ -9518,7 +9293,7 @@ License: GNU General Public License v2 or later
 
 	#page {
 		header.site-header {
-			height: 60px;
+			height: 55px;
 			.site-branding {
 				.site-logo {
 					width: 15%;
@@ -9537,7 +9312,7 @@ License: GNU General Public License v2 or later
 				}
 
 				#clashvibes-title {
-					width:84%;
+					width: 84%;
 					h1.site-title {
 						font-size: 1.8em;
 					}
@@ -9695,6 +9470,7 @@ License: GNU General Public License v2 or later
 
 					h1 {
 						height: auto;
+						font-size: 0.8em;
 
 						a {
 							letter-spacing: 0.03em;
@@ -9706,7 +9482,7 @@ License: GNU General Public License v2 or later
 					}
 
 					h2.entry-title {
-						font-size: 0.9em;
+						font-size: 0.8em;
 
 						a {
 							color: $color;
@@ -9716,17 +9492,18 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
-						.meta-content{
+						.meta-content {
 							grid-template-columns: 18% 2fr;
 
-						span.parent-post-link,
-						span.full-size-link,
-						span.comments-link,
-						span.posted-on,
-						span.byline {
-							font-size: 0.7em;
+							span.parent-post-link,
+							span.full-size-link,
+							span.comments-link,
+							span.posted-on,
+							span.byline,
+							span.updated-on {
+								font-size: 0.7em;
+							}
 						}
-					}
 					}
 
 					section.byline {
@@ -9815,7 +9592,7 @@ License: GNU General Public License v2 or later
 				}
 
 				a.post-thumbnail,
-				div.post-thumbnail {
+				figure.post-thumbnail {
 					img {
 						margin: 0 auto;
 					}
@@ -9824,6 +9601,7 @@ License: GNU General Public License v2 or later
 				//image
 				figure.featured-image,
 				figure.attachment {
+					width: 50%;
 					a {
 						img {
 							margin: 0 auto;
@@ -9863,7 +9641,7 @@ License: GNU General Public License v2 or later
 						display: inline-block;
 
 						a {
-							font-size: 0.85em;
+							font-size: 0.80em;
 
 							&:hover {
 								font-weight: bold;
@@ -9908,21 +9686,60 @@ License: GNU General Public License v2 or later
 				}
 			}
 		}
+		#contactform {
+			width:95%;
+
+			div.wpcf7 {
+				span.ajax-loader {
+					margin: 5% auto;
+				}
+
+				form {
+					padding: 0.25em;
+
+					p {
+						padding: 1% 0;
+
+						label {
+							.wpcf7-form-control-wrap {
+								height: auto;
+								display: block;
+							}
+
+							textarea {
+								width: 100%;
+							}
+
+							input[type='text'],
+							input[type='email'],
+							select {
+								height: 35px;
+							}
+						}
+
+						input[type='submit'] {
+							font-size: 0.9em;
+
+							&:hover {
+								background-color: $color1;
+							}
+						}
+					}
+				}
+			}
+		}
 
 		div.results {
 			padding: 0;
 
-
 			article.events_box {
 				width: 47.25%;
-
 
 				h1 {
 					font-size: 0.85em;
 				}
 
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					font-size: 0.85em;
 					&:hover {
 						font-weight: bold;
@@ -9934,26 +9751,22 @@ License: GNU General Public License v2 or later
 
 					&:hover {
 						cursor: pointer;
-
 					}
 
 					img.attachment-event-image {
-						margin:0 auto;
+						margin: 0 auto;
 						width: 75%;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 
-						h4{
-
+						h4 {
 							font-size: 0.85em;
-
 						}
 
 						p {
 							font-size: 0.8em;
-
 						}
 					}
 				}
@@ -10077,9 +9890,8 @@ License: GNU General Public License v2 or later
 }
 @media only screen and (max-width: 360px) {
 	#tog-menu {
-		width: 25%;
-		left: calc(71% - 1vw);
-		font-size:0.85em;
+		left: calc(79% - 1vw);
+		font-size: 0.7em;
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
@@ -10104,7 +9916,7 @@ License: GNU General Public License v2 or later
 
 	#page {
 		header.site-header {
-			height: 60px;
+			height: 55px;
 			.site-branding {
 				#clashvibes-title {
 					h1.site-title {
@@ -10281,14 +10093,15 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
-						.meta-content{
+						.meta-content {
 							grid-template-columns: 20% 2fr;
 
 							span.parent-post-link,
 							span.full-size-link,
 							span.comments-link,
 							span.posted-on,
-							span.byline {
+							span.byline,
+							span.updated-on {
 								font-size: 0.65em;
 							}
 						}
@@ -10380,7 +10193,7 @@ License: GNU General Public License v2 or later
 				}
 
 				a.post-thumbnail,
-				div.post-thumbnail {
+				figure.post-thumbnail {
 					img {
 						margin: 0 auto;
 					}
@@ -10395,7 +10208,6 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
-
 
 				footer.speaker-meta {
 					min-height: 335px;
@@ -10597,14 +10409,14 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					.comment-form {
+					form#commentform {
 						padding: 1em;
 
 						p.comment-notes {
 							font-size: 0.75em;
 						}
 
-						textarea#comment {
+						p.comment-form-comment {
 							width: 100%;
 						}
 
@@ -10618,7 +10430,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 							}
 						}
@@ -10633,7 +10445,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
@@ -10648,16 +10460,15 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.form-submit {
-
 							width: 100%;
 
-							input[type="submit"] {
+							input[type='submit'] {
 								width: 60%;
 
 								&:hover {
@@ -10668,16 +10479,6 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				p {
-					padding: 0.5em;
-					a {
-						background-color: unset;
-
-						&:hover {
-							color: $color11;
-						}
-					}
-				}
 
 				p:last-of-type {
 					text-align: center;
@@ -10706,7 +10507,37 @@ License: GNU General Public License v2 or later
 					font-size: 1.1em;
 				}
 			}
+			.navigation {
+				margin: 0;
+
+				h2 {
+					color: $color;
+				}
+				.nav-links {
+					margin: 0;
+					display: block;
+					.nav-next,
+					.nav-previous {
+						display: inline-block;
+
+						a {
+							font-size: 0.7em;
+
+							&:hover {
+								font-weight: bold;
+							}
+							&::after {
+								font-size: 1.6em;
+							}
+							&:active {
+								background-color: $color7;
+							}
+						}
+					}
+				}
+			}
 		}
+
 
 		article#clashvibes-text {
 			padding: 1em;
@@ -10737,7 +10568,6 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-
 		div.results {
 			-webkit-flex-flow: column;
 			-ms-flex-flow: column;
@@ -10747,17 +10577,14 @@ License: GNU General Public License v2 or later
 			align-items: center;
 			width: 100%;
 
-
 			article.events_box {
 				width: 75%;
-
 
 				h1 {
 					font-size: 0.85em;
 				}
 
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					font-size: 0.9em;
 					&:hover {
 						font-weight: bold;
@@ -10769,26 +10596,22 @@ License: GNU General Public License v2 or later
 
 					&:hover {
 						cursor: pointer;
-
 					}
 
 					img.attachment-event-image {
-						margin:0 auto;
+						margin: 0 auto;
 						width: 75%;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 
-						h4{
-
+						h4 {
 							font-size: 0.9em;
-
 						}
 
 						p {
 							font-size: 0.85em;
-
 						}
 					}
 				}
@@ -10924,6 +10747,8 @@ License: GNU General Public License v2 or later
 }
 @media only screen and (max-width: 320px) {
 	#tog-menu {
+		left: calc(79% - 1vw);
+		font-size: 0.65em;
 		button.menu-toggle,
 		button.sidebar-toggle {
 			line-height: 60px;
@@ -10944,7 +10769,7 @@ License: GNU General Public License v2 or later
 
 	#page {
 		header.site-header {
-			height: 60px;
+			height: 55px;
 			.site-branding {
 				.site-logo {
 					width: 15%;
@@ -10963,7 +10788,7 @@ License: GNU General Public License v2 or later
 				}
 
 				#clashvibes-title {
-					width:83%;
+					width: 83%;
 					h1.site-title {
 						font-size: 1.7em;
 					}
@@ -11137,7 +10962,7 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					h1 {
-						font-size: 0.80em;
+						font-size: 0.8em;
 
 						a {
 							letter-spacing: 0.03em;
@@ -11155,14 +10980,15 @@ License: GNU General Public License v2 or later
 					div.entry-meta {
 						display: block;
 
-						.meta-content{
+						.meta-content {
 							grid-template-columns: 21% 2fr;
 
 							span.parent-post-link,
 							span.full-size-link,
 							span.comments-link,
 							span.posted-on,
-							span.byline {
+							span.byline,
+							span.updated-on {
 								font-size: 0.65em;
 							}
 						}
@@ -11252,7 +11078,7 @@ License: GNU General Public License v2 or later
 				}
 
 				a.post-thumbnail,
-				div.post-thumbnail {
+				figure.post-thumbnail {
 					img {
 						margin: 0 auto;
 					}
@@ -11271,13 +11097,13 @@ License: GNU General Public License v2 or later
 
 				figure.featured-image,
 				figure.attachment {
+					width: 50%;
 					a {
 						img {
 							margin: 0 auto;
 						}
 					}
 				}
-
 
 				footer.speaker-meta {
 					min-height: 335px;
@@ -11395,7 +11221,7 @@ License: GNU General Public License v2 or later
 
 								.comment-author {
 									font-size: 0.7em;
-									width:45%;
+									width: 45%;
 
 									img {
 										width: 25%;
@@ -11476,14 +11302,14 @@ License: GNU General Public License v2 or later
 						}
 					}
 
-					.comment-form {
+					form#commentform {
 						padding: 1em;
 
 						p.comment-notes {
 							font-size: 0.7em;
 						}
 
-						textarea#comment {
+						p.comment-form-comment {
 							width: 100%;
 						}
 
@@ -11497,7 +11323,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 							}
 						}
@@ -11512,7 +11338,7 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
@@ -11527,33 +11353,21 @@ License: GNU General Public License v2 or later
 							}
 
 							input:focus,
-							textarea#comment:focus {
+							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
 							}
 						}
 
 						p.form-submit {
-
 							width: 100%;
 
-							input[type="submit"] {
+							input[type='submit'] {
 								width: 60%;
 
 								&:hover {
 									cursor: pointer;
 								}
 							}
-						}
-					}
-				}
-
-				p {
-					padding: 0.5em;
-					a {
-						background-color: unset;
-
-						&:hover {
-							color: $color11;
 						}
 					}
 				}
@@ -11583,6 +11397,36 @@ License: GNU General Public License v2 or later
 
 				p.nocomments {
 					font-size: 1.1em;
+				}
+			}
+			.navigation {
+				margin: 0;
+
+				h2 {
+					color: $color;
+					font-size:1em;
+				}
+				.nav-links {
+					margin: 0;
+					display: block;
+					.nav-next,
+					.nav-previous {
+						display: inline-block;
+
+						a {
+							font-size: 0.65em;
+
+							&:hover {
+								font-weight: bold;
+							}
+							&::after {
+								font-size: 1.6em;
+							}
+							&:active {
+								background-color: $color7;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -11617,16 +11461,12 @@ License: GNU General Public License v2 or later
 		}
 
 		div.results {
-
 			width: 100%;
-
 
 			article.events_box {
 				width: 85%;
 
-
-				a#event-submit-btn
-				 {
+				a#event-submit-btn {
 					font-size: 0.9em;
 					&:hover {
 						font-weight: bold;
@@ -11638,26 +11478,22 @@ License: GNU General Public License v2 or later
 
 					&:hover {
 						cursor: pointer;
-
 					}
 
 					img.attachment-event-image {
-						margin:0 auto;
+						margin: 0 auto;
 						width: 75%;
 					}
 
 					figcaption.event-text {
-						height:auto;
+						height: auto;
 
-						h4{
-
+						h4 {
 							font-size: 0.9em;
-
 						}
 
 						p {
 							font-size: 0.85em;
-
 						}
 					}
 				}

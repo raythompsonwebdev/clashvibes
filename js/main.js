@@ -18,28 +18,8 @@ jQuery(document).ready(function ($) {
 		}
 		position = $(this).scrollTop()
 	})
-}) //end of jquery
+})
 
-//USE  IIFE
-// ( function( $ ) {
-// } )( jQuery );
 
-// Hide/show toggle button on scroll
 
-// var prevScrollpos = window.pageYOffset;
 
-// window.onscroll = function() {
-
-// 	var currentScrollPos = window.pageYOffset;
-
-// 	if (prevScrollpos > currentScrollPos) {
-
-// 		document.querySelector('#tog-menu').classList.remove('hide');
-
-// 	} else {
-// 		document.querySelector('#tog-menu').classList.add('hide');
-// 	}
-
-// 	prevScrollpos = currentScrollPos;
-
-// }

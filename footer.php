@@ -39,7 +39,7 @@
 			   target="new"
 			   title="Follow me on LinkedIn">
 				<span>
-					<i class="fab fa-instagram"></i>
+					<i class="fab fa-instagram" aria-hidden="true"></i>
 				</span>
 			</a>
 		</li>
@@ -50,7 +50,7 @@
 			   target="new"
 			   title="Follow me on Twitter">
 				<span>
-					<i class="fab fa-twitter"></i>
+					<i class="fab fa-twitter" aria-hidden="true"></i>
 				</span>
 			</a>
 		</li>
@@ -60,7 +60,7 @@
 			   target="new"
 			   title="Follow me on Facebook">
 				<span>
-					<i class="fab fa-facebook"></i>
+					<i class="fab fa-facebook" aria-hidden="true"></i>
 				</span>
 			</a>
 		</li>

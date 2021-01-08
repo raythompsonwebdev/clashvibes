@@ -28,8 +28,9 @@ License: GNU General Public License v2 or later
 
 html {
 	line-height: 1.15;
-	-webkit-text-size-adjust: 100%;
 	max-width: 100% !important;
+	margin: 0;
+	padding: 0;
 }
 
 * html {
@@ -49,11 +50,74 @@ html[xmlns] .clearfix {
 	display: block;
 }
 
-html,
+/* self-clear floats */
+.clearfix {
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix::after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix::before,
+.group::before,
+.group::after {
+	content: '';
+	display: table;
+}
+
+.group::after {
+	clear: both;
+}
+
+.group {
+	*zoom: 1;
+}
+
 body {
-	margin: 0;
 	padding: 0;
 	width: 100%;
+	font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
+	font-size: 1em;
+	background-color: #fff;
+	overflow-x: hidden;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	vertical-align: middle;
+}
+
+img#wpstats {
+	display: none;
+	width: 1px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	padding: 0;
+	font-weight: bold;
+	font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
+}
+
+a {
+	display: block;
+	font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
 }
 
 /* *GENERAL CLASSES (alpha order)* */
@@ -159,82 +223,58 @@ div.aligncenter {
 	margin: 0;
 }
 
-/* self-clear floats */
-.clearfix {
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
+.wp-block-button {
+	width: auto;
 }
 
-.clearfix::after {
-	content: '.';
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
+.wp-block-cover.alignleft {
+	margin-right: 0.5em;
 }
 
-.clearfix::before,
-.group::before,
-.group::after {
-	content: '';
-	display: table;
+.blocks-gallery-grid {
+	margin-right: 0.5em;
 }
 
-.group::after {
-	clear: both;
-}
-
-.group {
-	*zoom: 1;
-}
-
-img#wpstats {
-	display: none;
-	width: 1px;
-}
-
-img {
+select#cat {
 	width: 100%;
-	max-width: 100%;
-	height: 100%;
-	border: none;
-	outline: none;
-	vertical-align: middle;
-}
-
-body {
-	margin: 0;
-	padding: 0;
-	font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
-	font-size: 1em;
-	background-color: #fff;
-	overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4 {
-	padding: 0;
-	font-weight: bold;
-	width: 100%;
-	font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
+	line-height: 35px;
 	display: block;
-}
-
-a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 1em;
-	display: block;
-	font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
+	height: 35px;
+	margin: 0.5em 0;
 }
 
 /* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #eee;
+	clip: auto !important;
+	clip-path: none;
+	color: #444;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
 @media only screen and (max-width: 1920px) {
 	#tog-menu {
 		display: none;
@@ -274,11 +314,10 @@ a {
 	}
 	/* page container */
 	#page {
+		max-width: 88%;
 		margin: auto;
-		width: 86%;
 		height: auto;
 		font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
-		padding: 0.5em;
 		background-color: #fff;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -298,7 +337,7 @@ a {
 	#page header.site-header {
 		width: 100%;
 		padding: 0;
-		height: 80px;
+		height: 65px;
 		margin-bottom: 0.25em;
 		display: -webkit-flex;
 		display: -ms-flexbox;
@@ -400,7 +439,7 @@ a {
 		margin: 0;
 	}
 	#page header.site-header aside#socialmediatop {
-		width: 30%;
+		width: 25%;
 		display: flex;
 		height: 40px;
 		-webkit-flex: 0 0 auto;
@@ -420,7 +459,8 @@ a {
 		display: block;
 		height: 100%;
 	}
-	#page header.site-header aside#socialmediatop a.social-icon span i, #page header.site-header aside#socialmediatop a.social-icon span svg {
+	#page header.site-header aside#socialmediatop a.social-icon span i,
+	#page header.site-header aside#socialmediatop a.social-icon span svg {
 		font-size: 1.4em;
 		display: block;
 		height: 100%;
@@ -486,7 +526,6 @@ a {
 		font-weight: bold;
 	}
 	#page div.clashvibes-content {
-		padding: 0.25em;
 		margin: 0;
 		height: auto;
 		background-color: #fff;
@@ -1249,6 +1288,7 @@ a {
 		border: none;
 		outline: none;
 		margin: 0.5em auto;
+		padding: 0;
 		line-height: 35px;
 	}
 	#page #secondary section#clashvibes-login form.search-form input.search-submit:hover {
@@ -1269,7 +1309,6 @@ a {
 		letter-spacing: 0.05em;
 	}
 	#page #secondary a {
-		font-size: 0.8em;
 		height: 100%;
 		padding: 0;
 		line-height: 40px;
@@ -1391,6 +1430,9 @@ a {
 		width: 100%;
 		display: block;
 	}
+	#page #secondary section.secondary_column_box div.widget .tagcloud a {
+		width: auto;
+	}
 	#page #secondary section.secondary_column_box div.widget h2.widget-title {
 		background-color: #658905;
 		text-align: center;
@@ -1402,6 +1444,10 @@ a {
 	}
 	#page #secondary section.secondary_column_box div.widget div.textwidget form select {
 		width: 100%;
+		line-height: 35px;
+		display: block;
+		height: 35px;
+		margin: 0.5em 0;
 	}
 	#page #secondary section.secondary_column_box div.widget div.textwidget form select option {
 		width: 100%;
@@ -1573,7 +1619,7 @@ a {
 		float: right;
 		padding: 1%;
 		display: block;
-		width: 74%;
+		width: 76%;
 	}
 	#page #primary h1 {
 		height: 45px;
@@ -1641,7 +1687,7 @@ a {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 1.3em;
+		font-size: 1.2em;
 		margin: 0;
 		width: 100%;
 		background-color: #262626;
@@ -1738,7 +1784,7 @@ a {
 		grid-template-columns: 9% 2fr;
 		grid-template-rows: 25px 25px 25px 25px;
 		gap: 2px 2px;
-		grid-template-areas: 'Image posted-on' 'Image byline' 'Image comments-link' 'Image spare';
+		grid-template-areas: 'Image posted-on' 'Image byline' 'Image comments-link' 'Image updated-on';
 	}
 	#page #primary article.event header.entry-header div.entry-meta .meta-content .posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content .posted-on,
@@ -1764,13 +1810,13 @@ a {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content .comments-link {
 		grid-area: comments-link;
 	}
-	#page #primary article.event header.entry-header div.entry-meta .meta-content .spare,
-	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content .spare,
-	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content .spare,
-	#page #primary article.post header.entry-header div.entry-meta .meta-content .spare,
-	#page #primary article.search-results header.entry-header div.entry-meta .meta-content .spare,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content .spare {
-		grid-area: spare;
+	#page #primary article.event header.entry-header div.entry-meta .meta-content .updated-on,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content .updated-on,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content .updated-on,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content .updated-on,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content .updated-on,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content .updated-on {
+		grid-area: updated-on;
 	}
 	#page #primary article.event header.entry-header div.entry-meta .meta-content .author-avatar,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content .author-avatar,
@@ -1789,31 +1835,37 @@ a {
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
 		font-size: 1em;
 		width: 100%;
 		height: 25px;
@@ -1824,55 +1876,61 @@ a {
 		letter-spacing: 0.05em;
 		display: inline-block;
 		text-align: left;
-		text-indent: 0.5em;
+		padding-left: 0.25em;
 	}
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.parent-post-link a,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.full-size-link a,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link a,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on a,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline a,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on a,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link a,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link a,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link a,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on a,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline a,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on a,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link a,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link a,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link a,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on a,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline a,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on a,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link a,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link a,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link a,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on a,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline a,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on a,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link a,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link a,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link a,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on a,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline a,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on a,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link a,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link a,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link a,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on a,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline a {
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline a,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on a {
 		width: auto;
 		display: inline-block;
 		padding: 0;
 		text-indent: unset;
 	}
 	#page #primary article.event a.post-thumbnail,
-	#page #primary article.event div.post-thumbnail,
+	#page #primary article.event figure.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
-	#page #primary article.clash-videos div.post-thumbnail,
+	#page #primary article.clash-videos figure.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
-	#page #primary article.clash-audio div.post-thumbnail,
+	#page #primary article.clash-audio figure.post-thumbnail,
 	#page #primary article.post a.post-thumbnail,
-	#page #primary article.post div.post-thumbnail,
+	#page #primary article.post figure.post-thumbnail,
 	#page #primary article.search-results a.post-thumbnail,
-	#page #primary article.search-results div.post-thumbnail,
+	#page #primary article.search-results figure.post-thumbnail,
 	#page #primary article.page a.post-thumbnail,
-	#page #primary article.page div.post-thumbnail {
+	#page #primary article.page figure.post-thumbnail {
 		width: auto;
 		margin: 1em auto;
 		height: auto;
@@ -1882,17 +1940,17 @@ a {
 		box-sizing: border-box;
 	}
 	#page #primary article.event a.post-thumbnail img,
-	#page #primary article.event div.post-thumbnail img,
+	#page #primary article.event figure.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
-	#page #primary article.clash-videos div.post-thumbnail img,
+	#page #primary article.clash-videos figure.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
-	#page #primary article.clash-audio div.post-thumbnail img,
+	#page #primary article.clash-audio figure.post-thumbnail img,
 	#page #primary article.post a.post-thumbnail img,
-	#page #primary article.post div.post-thumbnail img,
+	#page #primary article.post figure.post-thumbnail img,
 	#page #primary article.search-results a.post-thumbnail img,
-	#page #primary article.search-results div.post-thumbnail img,
+	#page #primary article.search-results figure.post-thumbnail img,
 	#page #primary article.page a.post-thumbnail img,
-	#page #primary article.page div.post-thumbnail img {
+	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
 		display: block;
 		width: auto;
@@ -1909,7 +1967,7 @@ a {
 	#page #primary article.search-results figure.attachment,
 	#page #primary article.page figure.featured-image,
 	#page #primary article.page figure.attachment {
-		width: 35%;
+		width: 20%;
 		height: auto;
 		margin: 2em auto;
 		display: block;
@@ -2029,6 +2087,7 @@ a {
 		color: #fff;
 		text-indent: 0.25em;
 		background-color: #253901;
+		clear: both;
 	}
 	#page #primary article.event footer.entry-footer span,
 	#page #primary article.clash-videos footer.entry-footer span,
@@ -2333,7 +2392,7 @@ a {
 	#page #primary article.page div.sharedaddy {
 		width: 100%;
 		margin: 3% auto;
-		display: block;
+		display: flex;
 	}
 	#page #primary article.event div.sharedaddy h3.sd-title,
 	#page #primary article.clash-videos div.sharedaddy h3.sd-title,
@@ -2453,6 +2512,7 @@ a {
 		margin-bottom: 0.2em;
 		color: #fff;
 		background-color: #262626;
+		font-size: 1.1em;
 	}
 	#page #primary .navigation .nav-links {
 		margin: 0;
@@ -2635,7 +2695,7 @@ a {
 	#page #primary #comments ol.comment-list li.comment article.comment-body {
 		padding: 0.5em;
 		display: block;
-		background-color: #658905;
+		background-color: #253901;
 		height: auto;
 		text-indent: 0;
 		width: 100%;
@@ -2650,7 +2710,7 @@ a {
 		height: auto;
 		width: auto;
 		font-size: 0.9em;
-		background-color: #658905;
+		background-color: #253901;
 		color: #ebeadd;
 		padding: 0.25em;
 	}
@@ -2670,18 +2730,19 @@ a {
 		text-align: left;
 		line-height: 1.5;
 		color: #ebeadd;
-		background-color: #658905;
+		background-color: #253901;
 	}
-	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a, #page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a.url,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a,
+	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author b.fn a.url,
 	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a,
 	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author cite.fn a.url {
-		background-color: #658905;
+		background-color: #253901;
 	}
 	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author span.says {
 		display: inline-block;
 		width: auto;
 		height: 100%;
-		color: #262626;
+		color: #f0ecec;
 	}
 	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
 		float: right;
@@ -2690,7 +2751,7 @@ a {
 		padding: 0 0.5em;
 		width: auto;
 		display: block;
-		background-color: #658905;
+		background-color: #253901;
 		font-size: 0.8em;
 		color: #ebeadd;
 	}
@@ -2754,7 +2815,7 @@ a {
 		margin: 1em auto;
 		padding: 0;
 		font-size: 1em;
-		background-color: #658905;
+		background-color: #253901;
 		color: #ebeadd;
 		line-height: 35px;
 		text-indent: 0.5em;
@@ -2772,21 +2833,26 @@ a {
 	#page #primary #comments #respond h3#reply-title small a:hover {
 		color: #262626;
 	}
-	#page #primary #comments #respond .comment-form {
-		width: 82%;
+	#page #primary #comments #respond form#commentform {
+		width: 90%;
 		height: auto;
 		margin: 2% auto;
 		font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
 		padding: 0;
 	}
-	#page #primary #comments #respond .comment-form p.comment-notes {
+	#page #primary #comments #respond form#commentform label {
+		height: 30px;
+		line-height: 30px;
+		width: 30px;
+	}
+	#page #primary #comments #respond form#commentform p.comment-notes {
 		font-size: 0.9em;
 		width: 95%;
 		letter-spacing: 0.095em;
 		line-height: 1.7em;
 		margin: 0;
 	}
-	#page #primary #comments #respond .comment-form textarea#comment {
+	#page #primary #comments #respond form#commentform p.comment-form-comment {
 		-webkit-transition: all 0.2s ease-in 0s;
 		-moz-transition: all 0.2s ease-in 0s;
 		-o-transition: all 0.2s ease-in 0s;
@@ -2798,37 +2864,10 @@ a {
 		border: 1px solid #ddd;
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author label {
-		height: 30px;
-		line-height: 30px;
-		width: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input {
-		-webkit-transition: all 0.2s ease-in 0s;
-		-moz-transition: all 0.2s ease-in 0s;
-		-o-transition: all 0.2s ease-in 0s;
-		-ms-transition: all 0.2s ease-in 0s;
-		transition: all 0.2s ease-in 0s;
-		outline: none;
-		padding: 3px 0 3px 3px;
-		margin: 5px 1px 3px 0;
-		border: 1px solid #ddd;
+	#page #primary #comments #respond form#commentform p.comment-form-comment #comment {
 		width: 100%;
-		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
-		box-shadow: 0 0 5px #51cbee;
-		padding: 3px 0 3px 3px;
-		margin: 5px 1px 3px 0;
-		border: 1px solid #51cbee;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email label {
-		height: 30px;
-		line-height: 30px;
-		width: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input {
+	#page #primary #comments #respond form#commentform p.comment-form-author input {
 		-webkit-transition: all 0.2s ease-in 0s;
 		-moz-transition: all 0.2s ease-in 0s;
 		-o-transition: all 0.2s ease-in 0s;
@@ -2841,19 +2880,14 @@ a {
 		width: 100%;
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-author input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-author p.comment-form-comment:focus {
 		box-shadow: 0 0 5px #51cbee;
 		padding: 3px 0 3px 3px;
 		margin: 5px 1px 3px 0;
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url label {
-		height: 30px;
-		line-height: 30px;
-		width: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input {
+	#page #primary #comments #respond form#commentform p.comment-form-email input {
 		-webkit-transition: all 0.2s ease-in 0s;
 		-moz-transition: all 0.2s ease-in 0s;
 		-o-transition: all 0.2s ease-in 0s;
@@ -2866,18 +2900,41 @@ a {
 		width: 100%;
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-email input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-email p.comment-form-comment:focus {
 		box-shadow: 0 0 5px #51cbee;
 		padding: 3px 0 3px 3px;
 		margin: 5px 1px 3px 0;
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit {
+	#page #primary #comments #respond form#commentform p.comment-form-url input {
+		-webkit-transition: all 0.2s ease-in 0s;
+		-moz-transition: all 0.2s ease-in 0s;
+		-o-transition: all 0.2s ease-in 0s;
+		-ms-transition: all 0.2s ease-in 0s;
+		transition: all 0.2s ease-in 0s;
+		outline: none;
+		padding: 3px 0 3px 3px;
+		margin: 5px 1px 3px 0;
+		border: 1px solid #ddd;
+		width: 100%;
+		height: 35px;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-url input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-url p.comment-form-comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+		padding: 3px 0 3px 3px;
+		margin: 5px 1px 3px 0;
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-cookies-consent {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond form#commentform p.form-submit {
 		margin: 2% 0;
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit'] {
 		height: 35px;
 		list-style: none;
 		background-color: #262626;
@@ -2892,13 +2949,13 @@ a {
 		font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
 		width: 15%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		color: #ebeadd;
 		font-weight: bold;
 		cursor: pointer;
 	}
 	#page #primary #comments p {
-		padding: 0.5em;
+		padding: 0;
 	}
 	#page #primary #comments p a {
 		background-color: unset;
@@ -3055,12 +3112,12 @@ a {
 
 @media only screen and (max-width: 1440px) {
 	#page {
-		width: 92%;
+		max-width: 88%;
 		/* front page banner */
 		/* front page top download section */
 	}
 	#page header.site-header {
-		height: 80px;
+		height: 65px;
 	}
 	#page header.site-header .site-branding #clashvibes-title {
 		width: 92%;
@@ -3295,7 +3352,7 @@ a {
 		letter-spacing: 0.055em;
 	}
 	#page #secondary {
-		width: 21%;
+		width: 23%;
 	}
 	#page #secondary section#clashvibes-login {
 		padding: 0.5em 0;
@@ -3426,7 +3483,7 @@ a {
 		color: #ebeadd;
 	}
 	#page #primary {
-		width: 74%;
+		width: 76%;
 	}
 	#page #primary h1 {
 		font-size: 1.4em;
@@ -3507,7 +3564,7 @@ a {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 1.2em;
+		font-size: 1.1em;
 	}
 	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
@@ -3562,59 +3619,65 @@ a {
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
 		font-size: 1em;
 	}
 	#page #primary article.event a.post-thumbnail,
-	#page #primary article.event div.post-thumbnail,
+	#page #primary article.event figure.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
-	#page #primary article.clash-videos div.post-thumbnail,
+	#page #primary article.clash-videos figure.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
-	#page #primary article.clash-audio div.post-thumbnail,
+	#page #primary article.clash-audio figure.post-thumbnail,
 	#page #primary article.post a.post-thumbnail,
-	#page #primary article.post div.post-thumbnail,
+	#page #primary article.post figure.post-thumbnail,
 	#page #primary article.search-results a.post-thumbnail,
-	#page #primary article.search-results div.post-thumbnail,
+	#page #primary article.search-results figure.post-thumbnail,
 	#page #primary article.page a.post-thumbnail,
-	#page #primary article.page div.post-thumbnail {
+	#page #primary article.page figure.post-thumbnail {
 		width: auto;
 	}
 	#page #primary article.event a.post-thumbnail img,
-	#page #primary article.event div.post-thumbnail img,
+	#page #primary article.event figure.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
-	#page #primary article.clash-videos div.post-thumbnail img,
+	#page #primary article.clash-videos figure.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
-	#page #primary article.clash-audio div.post-thumbnail img,
+	#page #primary article.clash-audio figure.post-thumbnail img,
 	#page #primary article.post a.post-thumbnail img,
-	#page #primary article.post div.post-thumbnail img,
+	#page #primary article.post figure.post-thumbnail img,
 	#page #primary article.search-results a.post-thumbnail img,
-	#page #primary article.search-results div.post-thumbnail img,
+	#page #primary article.search-results figure.post-thumbnail img,
 	#page #primary article.page a.post-thumbnail img,
-	#page #primary article.page div.post-thumbnail img {
+	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
 	}
 	#page #primary article.event figure.featured-image a img,
@@ -3709,8 +3772,7 @@ a {
 	#page #primary article.post footer.entry-footer span a,
 	#page #primary article.search-results footer.entry-footer span a,
 	#page #primary article.page footer.entry-footer span a {
-		font-size: 0.85em;
-		line-height: 35px;
+		font-size: 0.9em;
 	}
 	#page #primary article.event footer.entry-footer span a:hover,
 	#page #primary article.clash-videos footer.entry-footer span a:hover,
@@ -3956,7 +4018,7 @@ a {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.9em;
+		font-size: 0.85em;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -4215,62 +4277,53 @@ a {
 	#page #primary #comments #respond h3#reply-title small a:hover {
 		color: #262626;
 	}
-	#page #primary #comments #respond .comment-form {
+	#page #primary #comments #respond form#commentform {
 		padding: 1em;
 	}
-	#page #primary #comments #respond .comment-form p.comment-notes {
+	#page #primary #comments #respond form#commentform p.comment-notes {
 		font-size: 0.9em;
 	}
-	#page #primary #comments #respond .comment-form textarea#comment {
+	#page #primary #comments #respond form#commentform p.comment-form-comment {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author label {
+	#page #primary #comments #respond form#commentform p.comment-form-author label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input {
+	#page #primary #comments #respond form#commentform p.comment-form-author input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-author input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-author p.comment-form-comment:focus {
 		box-shadow: 0 0 5px #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email label {
+	#page #primary #comments #respond form#commentform p.comment-form-email label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input {
+	#page #primary #comments #respond form#commentform p.comment-form-email input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-email input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-email p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url label {
+	#page #primary #comments #respond form#commentform p.comment-form-url label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input {
+	#page #primary #comments #respond form#commentform p.comment-form-url input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-url input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-url p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit {
+	#page #primary #comments #respond form#commentform p.form-submit {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit'] {
 		width: 25%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
-	}
-	#page #primary #comments p {
-		padding: 0.5em;
-	}
-	#page #primary #comments p a {
-		background-color: unset;
-	}
-	#page #primary #comments p a:hover {
-		color: #ebeadd;
 	}
 	#page #primary #comments p:last-of-type {
 		text-align: center;
@@ -4326,10 +4379,10 @@ a {
 
 @media only screen and (max-width: 1280px) {
 	#page {
-		width: 94%;
+		max-width: 92%;
 	}
 	#page header.site-header {
-		height: 75px;
+		height: 70px;
 	}
 	#page header.site-header .site-branding .site-logo {
 		width: 8%;
@@ -4348,7 +4401,6 @@ a {
 		font-size: 2.3em;
 	}
 	#page header.site-header .site-branding #clashvibes-title h2.site-description {
-		line-height: 20px;
 		font-size: 0.7em;
 	}
 	#page header.site-header aside#socialmediatop {
@@ -4400,9 +4452,6 @@ a {
 	}
 	#page #contactform {
 		margin: 1% auto;
-	}
-	#page #contactform div.wpcf7 span.ajax-loader {
-		margin: 3% auto;
 	}
 	#page #contactform div.wpcf7 form {
 		padding: 0.5em;
@@ -4597,7 +4646,7 @@ a {
 		letter-spacing: 0.055em;
 	}
 	#page #secondary {
-		width: 21%;
+		width: 23%;
 	}
 	#page #secondary section#clashvibes-login {
 		padding: 0.5em 0;
@@ -4654,7 +4703,7 @@ a {
 	#page #secondary section.secondary_column_box nav.menu-audio-nav-container ul#menu-audio_nav li#menu-item a,
 	#page #secondary section.secondary_column_box nav.menu-audio-nav-container ul#menu-video_nav li a,
 	#page #secondary section.secondary_column_box nav.menu-audio-nav-container ul#menu-video_nav li#menu-item a {
-		font-size: 0.8em;
+		font-size: 0.85em;
 	}
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul li a:hover,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul li#menu-item a:hover,
@@ -4726,7 +4775,7 @@ a {
 	}
 	#page #primary {
 		padding: 1%;
-		width: 75%;
+		width: 76%;
 		/* post navigation */
 	}
 	#page #primary h1 {
@@ -4768,7 +4817,7 @@ a {
 	#page #primary article.post header.entry-header h2.entry-title,
 	#page #primary article.search-results header.entry-header h2.entry-title,
 	#page #primary article.page header.entry-header h2.entry-title {
-		font-size: 1.3em;
+		font-size: 1.1em;
 	}
 	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
@@ -4800,46 +4849,66 @@ a {
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
 		font-size: 0.9em;
 	}
 	#page #primary article.event a.post-thumbnail img,
-	#page #primary article.event div.post-thumbnail img,
+	#page #primary article.event figure.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
-	#page #primary article.clash-videos div.post-thumbnail img,
+	#page #primary article.clash-videos figure.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
-	#page #primary article.clash-audio div.post-thumbnail img,
+	#page #primary article.clash-audio figure.post-thumbnail img,
 	#page #primary article.post a.post-thumbnail img,
-	#page #primary article.post div.post-thumbnail img,
+	#page #primary article.post figure.post-thumbnail img,
 	#page #primary article.search-results a.post-thumbnail img,
-	#page #primary article.search-results div.post-thumbnail img,
+	#page #primary article.search-results figure.post-thumbnail img,
 	#page #primary article.page a.post-thumbnail img,
-	#page #primary article.page div.post-thumbnail img {
+	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
+	}
+	#page #primary article.event figure.featured-image,
+	#page #primary article.event figure.attachment,
+	#page #primary article.clash-videos figure.featured-image,
+	#page #primary article.clash-videos figure.attachment,
+	#page #primary article.clash-audio figure.featured-image,
+	#page #primary article.clash-audio figure.attachment,
+	#page #primary article.post figure.featured-image,
+	#page #primary article.post figure.attachment,
+	#page #primary article.search-results figure.featured-image,
+	#page #primary article.search-results figure.attachment,
+	#page #primary article.page figure.featured-image,
+	#page #primary article.page figure.attachment {
+		width: 25%;
 	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
@@ -4933,8 +5002,7 @@ a {
 	#page #primary article.post footer.entry-footer span a,
 	#page #primary article.search-results footer.entry-footer span a,
 	#page #primary article.page footer.entry-footer span a {
-		font-size: 0.85em;
-		line-height: 35px;
+		font-size: 0.9em;
 	}
 	#page #primary article.event footer.entry-footer span a:hover,
 	#page #primary article.clash-videos footer.entry-footer span a:hover,
@@ -5084,7 +5152,7 @@ a {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.85em;
+		font-size: 0.80em;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -5343,62 +5411,53 @@ a {
 	#page #primary #comments #respond h3#reply-title small a:hover {
 		color: #262626;
 	}
-	#page #primary #comments #respond .comment-form {
+	#page #primary #comments #respond form#commentform {
 		padding: 1em;
 	}
-	#page #primary #comments #respond .comment-form p.comment-notes {
+	#page #primary #comments #respond form#commentform p.comment-notes {
 		font-size: 0.9em;
 	}
-	#page #primary #comments #respond .comment-form textarea#comment {
+	#page #primary #comments #respond form#commentform p.comment-form-comment {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author label {
+	#page #primary #comments #respond form#commentform p.comment-form-author label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input {
+	#page #primary #comments #respond form#commentform p.comment-form-author input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-author input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-author p.comment-form-comment:focus {
 		box-shadow: 0 0 5px #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email label {
+	#page #primary #comments #respond form#commentform p.comment-form-email label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input {
+	#page #primary #comments #respond form#commentform p.comment-form-email input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-email input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-email p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url label {
+	#page #primary #comments #respond form#commentform p.comment-form-url label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input {
+	#page #primary #comments #respond form#commentform p.comment-form-url input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-url input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-url p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit {
+	#page #primary #comments #respond form#commentform p.form-submit {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit'] {
 		width: 25%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
-	}
-	#page #primary #comments p {
-		padding: 0.5em;
-	}
-	#page #primary #comments p a {
-		background-color: unset;
-	}
-	#page #primary #comments p a:hover {
-		color: #ebeadd;
 	}
 	#page #primary #comments p:last-of-type {
 		text-align: center;
@@ -5457,10 +5516,11 @@ a {
 
 @media only screen and (max-width: 1024px) {
 	#page {
-		width: 96%;
+		max-width: 98%;
+		padding: 0 1%;
 	}
 	#page header.site-header {
-		height: 70px;
+		height: 65px;
 	}
 	#page header.site-header .site-branding .site-logo {
 		width: 11%;
@@ -5473,7 +5533,7 @@ a {
 		font-size: 4em;
 	}
 	#page header.site-header .site-branding #clashvibes-title {
-		width: 91%;
+		width: 88%;
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 2.2em;
@@ -5705,7 +5765,7 @@ a {
 		letter-spacing: 0.055em;
 	}
 	#page #secondary {
-		width: 21%;
+		width: 23%;
 	}
 	#page #secondary section#clashvibes-login {
 		padding: 0.5em 0;
@@ -5923,59 +5983,65 @@ a {
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
-		font-size: 0.80em;
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
+		font-size: 0.8em;
 	}
 	#page #primary article.event a.post-thumbnail,
-	#page #primary article.event div.post-thumbnail,
+	#page #primary article.event figure.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
-	#page #primary article.clash-videos div.post-thumbnail,
+	#page #primary article.clash-videos figure.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
-	#page #primary article.clash-audio div.post-thumbnail,
+	#page #primary article.clash-audio figure.post-thumbnail,
 	#page #primary article.post a.post-thumbnail,
-	#page #primary article.post div.post-thumbnail,
+	#page #primary article.post figure.post-thumbnail,
 	#page #primary article.search-results a.post-thumbnail,
-	#page #primary article.search-results div.post-thumbnail,
+	#page #primary article.search-results figure.post-thumbnail,
 	#page #primary article.page a.post-thumbnail,
-	#page #primary article.page div.post-thumbnail {
+	#page #primary article.page figure.post-thumbnail {
 		width: auto;
 	}
 	#page #primary article.event a.post-thumbnail img,
-	#page #primary article.event div.post-thumbnail img,
+	#page #primary article.event figure.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
-	#page #primary article.clash-videos div.post-thumbnail img,
+	#page #primary article.clash-videos figure.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
-	#page #primary article.clash-audio div.post-thumbnail img,
+	#page #primary article.clash-audio figure.post-thumbnail img,
 	#page #primary article.post a.post-thumbnail img,
-	#page #primary article.post div.post-thumbnail img,
+	#page #primary article.post figure.post-thumbnail img,
 	#page #primary article.search-results a.post-thumbnail img,
-	#page #primary article.search-results div.post-thumbnail img,
+	#page #primary article.search-results figure.post-thumbnail img,
 	#page #primary article.page a.post-thumbnail img,
-	#page #primary article.page div.post-thumbnail img {
+	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
 	}
 	#page #primary article.event figure.featured-image a img,
@@ -6070,8 +6136,7 @@ a {
 	#page #primary article.post footer.entry-footer span a,
 	#page #primary article.search-results footer.entry-footer span a,
 	#page #primary article.page footer.entry-footer span a {
-		font-size: 0.8em;
-		line-height: 35px;
+		font-size: 0.9em;
 	}
 	#page #primary article.event footer.entry-footer span a:hover,
 	#page #primary article.clash-videos footer.entry-footer span a:hover,
@@ -6212,7 +6277,7 @@ a {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.8em;
+		font-size: 0.75em;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -6398,52 +6463,52 @@ a {
 	#page #primary #comments #respond h3#reply-title small a:hover {
 		color: #262626;
 	}
-	#page #primary #comments #respond .comment-form {
+	#page #primary #comments #respond form#commentform {
 		padding: 1em;
 	}
-	#page #primary #comments #respond .comment-form p.comment-notes {
+	#page #primary #comments #respond form#commentform p.comment-notes {
 		font-size: 0.9em;
 	}
-	#page #primary #comments #respond .comment-form textarea#comment {
+	#page #primary #comments #respond form#commentform p.comment-form-comment {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author label {
+	#page #primary #comments #respond form#commentform p.comment-form-author label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input {
+	#page #primary #comments #respond form#commentform p.comment-form-author input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-author input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-author p.comment-form-comment:focus {
 		box-shadow: 0 0 5px #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email label {
+	#page #primary #comments #respond form#commentform p.comment-form-email label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input {
+	#page #primary #comments #respond form#commentform p.comment-form-email input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-email input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-email p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url label {
+	#page #primary #comments #respond form#commentform p.comment-form-url label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input {
+	#page #primary #comments #respond form#commentform p.comment-form-url input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-url input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-url p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit {
+	#page #primary #comments #respond form#commentform p.form-submit {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit'] {
 		width: 25%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
 	}
 	#page #primary #comments p {
@@ -6512,10 +6577,10 @@ a {
 
 @media only screen and (max-width: 800px) {
 	#page {
-		width: 98%;
+		max-width: 98%;
 	}
 	#page header.site-header {
-		height: 70px;
+		height: 65px;
 	}
 	#page header.site-header .site-branding .site-logo {
 		width: 10%;
@@ -6573,10 +6638,7 @@ a {
 		width: 100%;
 	}
 	#page #contactform {
-		margin: 1% auto;
-	}
-	#page #contactform div.wpcf7 span.ajax-loader {
-		margin: 3% auto;
+		width: 75%;
 	}
 	#page #contactform div.wpcf7 form {
 		padding: 0.5em;
@@ -6591,13 +6653,8 @@ a {
 	#page #contactform div.wpcf7 form p label textarea {
 		width: 100%;
 	}
-	#page #contactform div.wpcf7 form p label input[type='text'],
-	#page #contactform div.wpcf7 form p label input[type='email'],
-	#page #contactform div.wpcf7 form p label select {
-		height: 35px;
-	}
 	#page #contactform div.wpcf7 form p input[type='submit'] {
-		font-size: 1.1em;
+		font-size: 1em;
 	}
 	#page #contactform div.wpcf7 form p input[type='submit']:hover {
 		background-color: #256b40;
@@ -6920,7 +6977,7 @@ a {
 		color: #ebeadd;
 	}
 	#page #primary {
-		width: 74%;
+		width: 76%;
 	}
 	#page #primary h1 {
 		font-size: 1.2em;
@@ -7025,59 +7082,65 @@ a {
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
-		font-size: 0.80em;
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
+		font-size: 0.8em;
 	}
 	#page #primary article.event a.post-thumbnail,
-	#page #primary article.event div.post-thumbnail,
+	#page #primary article.event figure.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
-	#page #primary article.clash-videos div.post-thumbnail,
+	#page #primary article.clash-videos figure.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
-	#page #primary article.clash-audio div.post-thumbnail,
+	#page #primary article.clash-audio figure.post-thumbnail,
 	#page #primary article.post a.post-thumbnail,
-	#page #primary article.post div.post-thumbnail,
+	#page #primary article.post figure.post-thumbnail,
 	#page #primary article.search-results a.post-thumbnail,
-	#page #primary article.search-results div.post-thumbnail,
+	#page #primary article.search-results figure.post-thumbnail,
 	#page #primary article.page a.post-thumbnail,
-	#page #primary article.page div.post-thumbnail {
+	#page #primary article.page figure.post-thumbnail {
 		width: auto;
 	}
 	#page #primary article.event a.post-thumbnail img,
-	#page #primary article.event div.post-thumbnail img,
+	#page #primary article.event figure.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
-	#page #primary article.clash-videos div.post-thumbnail img,
+	#page #primary article.clash-videos figure.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
-	#page #primary article.clash-audio div.post-thumbnail img,
+	#page #primary article.clash-audio figure.post-thumbnail img,
 	#page #primary article.post a.post-thumbnail img,
-	#page #primary article.post div.post-thumbnail img,
+	#page #primary article.post figure.post-thumbnail img,
 	#page #primary article.search-results a.post-thumbnail img,
-	#page #primary article.search-results div.post-thumbnail img,
+	#page #primary article.search-results figure.post-thumbnail img,
 	#page #primary article.page a.post-thumbnail img,
-	#page #primary article.page div.post-thumbnail img {
+	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
 	}
 	#page #primary article.event figure.featured-image a img,
@@ -7172,7 +7235,7 @@ a {
 	#page #primary article.post footer.entry-footer span a,
 	#page #primary article.search-results footer.entry-footer span a,
 	#page #primary article.page footer.entry-footer span a {
-		font-size: 0.8em;
+		font-size: 0.9em;
 		line-height: 35px;
 	}
 	#page #primary article.event footer.entry-footer span a:hover,
@@ -7359,7 +7422,7 @@ a {
 	}
 	#page #primary .navigation .nav-links .nav-next a,
 	#page #primary .navigation .nav-links .nav-previous a {
-		font-size: 1.1em;
+		font-size: 0.85em;
 	}
 	#page #primary .navigation .nav-links .nav-next a:hover,
 	#page #primary .navigation .nav-links .nav-previous a:hover {
@@ -7511,62 +7574,52 @@ a {
 	#page #primary #comments #respond h3#reply-title small a:hover {
 		color: #262626;
 	}
-	#page #primary #comments #respond .comment-form {
-		padding: 1em;
-	}
-	#page #primary #comments #respond .comment-form p.comment-notes {
-		font-size: 0.85em;
-	}
-	#page #primary #comments #respond .comment-form textarea#comment {
-		width: 100%;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-author label {
-		height: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
-		box-shadow: 0 0 5px #51cbee;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email label {
-		height: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
-		border: 1px solid #51cbee;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url label {
-		height: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
-		border: 1px solid #51cbee;
-	}
-	#page #primary #comments #respond .comment-form p.form-submit {
-		width: 100%;
-	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
-		width: 35%;
-	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
-		cursor: pointer;
-	}
-	#page #primary #comments p {
+	#page #primary #comments #respond form#commentform {
 		padding: 0.5em;
 	}
-	#page #primary #comments p a {
-		background-color: unset;
+	#page #primary #comments #respond form#commentform p.comment-notes {
+		font-size: 0.85em;
 	}
-	#page #primary #comments p a:hover {
-		color: #ebeadd;
+	#page #primary #comments #respond form#commentform p.comment-form-comment {
+		width: 100%;
+		font-size: 0.85em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-author {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-author input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-author p.comment-form-comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-email {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-email input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-email p.comment-form-comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-url {
+		font-size: 0.9em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-url input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-url p.comment-form-comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-cookies-consent {
+		font-size: 0.8em;
+		line-height: 20px;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-cookies-consent input#wp-comment-cookies-consent {
+		display: inline-block;
+	}
+	#page #primary #comments #respond form#commentform p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit'] {
+		width: 35%;
+	}
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
+		cursor: pointer;
 	}
 	#page #primary #comments p:last-of-type {
 		text-align: center;
@@ -7630,7 +7683,7 @@ a {
 		height: auto;
 		display: block;
 		width: 25%;
-		left: calc(71% - 1vw);
+		left: calc(75% - 1vw);
 		-webkit-transition: all 0.2s linear 0s, color 0.2s linear 0s;
 		-moz-transition: all 0.2s linear 0s, color 0.2s linear 0s;
 		-o-transition: all 0.2s linear 0s, color 0.2s linear 0s;
@@ -7665,7 +7718,7 @@ a {
 		left: 100vw;
 	}
 	#page {
-		width: 100%;
+		max-width: 100%;
 		margin: 0;
 	}
 	#page header.site-header {
@@ -8020,31 +8073,37 @@ a {
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
 		font-size: 0.75em;
 	}
 	#page #primary article.event header.entry-header section.byline,
@@ -8370,7 +8429,7 @@ a {
 	#page #primary .navigation h2 {
 		color: #fff;
 		text-align: center;
-		font-size: 1.2em;
+		font-size: 0.9em;
 	}
 	#page #primary .navigation .nav-links {
 		margin: 0;
@@ -8535,62 +8594,45 @@ a {
 	#page #primary #comments #respond h3#reply-title small a:hover {
 		color: #262626;
 	}
-	#page #primary #comments #respond .comment-form {
-		padding: 1em;
-	}
-	#page #primary #comments #respond .comment-form p.comment-notes {
-		font-size: 0.85em;
-	}
-	#page #primary #comments #respond .comment-form textarea#comment {
-		width: 100%;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-author label {
-		height: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
-		box-shadow: 0 0 5px #51cbee;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email label {
-		height: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
-		border: 1px solid #51cbee;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url label {
-		height: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
-		border: 1px solid #51cbee;
-	}
-	#page #primary #comments #respond .comment-form p.form-submit {
-		width: 100%;
-	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
-		width: 45%;
-	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
-		cursor: pointer;
-	}
-	#page #primary #comments p {
+	#page #primary #comments #respond form#commentform {
 		padding: 0.5em;
 	}
-	#page #primary #comments p a {
-		background-color: unset;
+	#page #primary #comments #respond form#commentform p.comment-notes {
+		font-size: 0.85em;
 	}
-	#page #primary #comments p a:hover {
-		color: #ebeadd;
+	#page #primary #comments #respond form#commentform p.comment-form-comment {
+		width: 100%;
+		font-size: 0.85em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-author {
+		font-size: 0.85em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-author input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-author p.comment-form-comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-email {
+		font-size: 0.85em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-email input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-email p.comment-form-comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-url {
+		font-size: 0.85em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-url input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-url p.comment-form-comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond form#commentform p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit'] {
+		width: 45%;
+	}
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
+		cursor: pointer;
 	}
 	#page #primary #comments p:last-of-type {
 		text-align: center;
@@ -8812,8 +8854,8 @@ a {
 
 @media only screen and (max-width: 640px) {
 	#tog-menu {
-		width: 30%;
-		left: calc(66% - 1vw);
+		width: 25%;
+		left: calc(75% - 1vw);
 	}
 	#tog-menu button.menu-toggle,
 	#tog-menu button.sidebar-toggle {
@@ -8836,12 +8878,12 @@ a {
 		left: 100vw;
 	}
 	#page {
-		width: 100%;
+		max-width: 100%;
 		/* --- Content --- */
 		/* ----- End of Footer ----- */
 	}
 	#page header.site-header {
-		height: 70px;
+		height: 65px;
 	}
 	#page header.site-header .site-branding .site-logo {
 		width: 11%;
@@ -8858,8 +8900,6 @@ a {
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 2em;
-		line-height: 35px;
-		height: 35px;
 	}
 	#page header.site-header .site-branding #clashvibes-title h2.site-description {
 		font-size: 0.65em;
@@ -9106,31 +9146,37 @@ a {
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
 		font-size: 0.75em;
 	}
 	#page #primary article.event header.entry-header section.byline,
@@ -9289,31 +9335,31 @@ a {
 		padding: 0;
 	}
 	#page #primary article.event a.post-thumbnail,
-	#page #primary article.event div.post-thumbnail,
+	#page #primary article.event figure.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
-	#page #primary article.clash-videos div.post-thumbnail,
+	#page #primary article.clash-videos figure.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
-	#page #primary article.clash-audio div.post-thumbnail,
+	#page #primary article.clash-audio figure.post-thumbnail,
 	#page #primary article.post a.post-thumbnail,
-	#page #primary article.post div.post-thumbnail,
+	#page #primary article.post figure.post-thumbnail,
 	#page #primary article.search-results a.post-thumbnail,
-	#page #primary article.search-results div.post-thumbnail,
+	#page #primary article.search-results figure.post-thumbnail,
 	#page #primary article.page a.post-thumbnail,
-	#page #primary article.page div.post-thumbnail {
+	#page #primary article.page figure.post-thumbnail {
 		width: auto;
 	}
 	#page #primary article.event a.post-thumbnail img,
-	#page #primary article.event div.post-thumbnail img,
+	#page #primary article.event figure.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
-	#page #primary article.clash-videos div.post-thumbnail img,
+	#page #primary article.clash-videos figure.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
-	#page #primary article.clash-audio div.post-thumbnail img,
+	#page #primary article.clash-audio figure.post-thumbnail img,
 	#page #primary article.post a.post-thumbnail img,
-	#page #primary article.post div.post-thumbnail img,
+	#page #primary article.post figure.post-thumbnail img,
 	#page #primary article.search-results a.post-thumbnail img,
-	#page #primary article.search-results div.post-thumbnail img,
+	#page #primary article.search-results figure.post-thumbnail img,
 	#page #primary article.page a.post-thumbnail img,
-	#page #primary article.page div.post-thumbnail img {
+	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
 	}
 	#page #primary article.event figure.featured-image,
@@ -9328,7 +9374,7 @@ a {
 	#page #primary article.search-results figure.attachment,
 	#page #primary article.page figure.featured-image,
 	#page #primary article.page figure.attachment {
-		width: 96%;
+		width: 30%;
 	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
@@ -9514,62 +9560,48 @@ a {
 	#page #primary #comments #respond h3#reply-title small a:hover {
 		color: #262626;
 	}
-	#page #primary #comments #respond .comment-form {
-		padding: 1em;
-	}
-	#page #primary #comments #respond .comment-form p.comment-notes {
-		font-size: 0.8em;
-	}
-	#page #primary #comments #respond .comment-form textarea#comment {
-		width: 100%;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-author label {
+	#page #primary #comments #respond label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
-		box-shadow: 0 0 5px #51cbee;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email label {
-		height: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
-		border: 1px solid #51cbee;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url label {
-		height: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
-		border: 1px solid #51cbee;
-	}
-	#page #primary #comments #respond .comment-form p.form-submit {
-		width: 100%;
-	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
-		width: 45%;
-	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
-		cursor: pointer;
-	}
-	#page #primary #comments p {
+	#page #primary #comments #respond form#commentform {
 		padding: 0.5em;
 	}
-	#page #primary #comments p a {
-		background-color: unset;
+	#page #primary #comments #respond form#commentform p.comment-notes {
+		font-size: 0.8em;
 	}
-	#page #primary #comments p a:hover {
-		color: #ebeadd;
+	#page #primary #comments #respond form#commentform p.comment-form-comment {
+		width: 100%;
+		font-size: 0.8em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-author {
+		font-size: 0.8em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-author input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-author p.comment-form-comment:focus {
+		box-shadow: 0 0 5px #51cbee;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-email {
+		font-size: 0.8em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-email input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-email p.comment-form-comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-url {
+		font-size: 0.8em;
+	}
+	#page #primary #comments #respond form#commentform p.comment-form-url input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-url p.comment-form-comment:focus {
+		border: 1px solid #51cbee;
+	}
+	#page #primary #comments #respond form#commentform p.form-submit {
+		width: 100%;
+	}
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit'] {
+		width: 45%;
+	}
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
+		cursor: pointer;
 	}
 	#page #primary #comments p:last-of-type {
 		text-align: center;
@@ -9611,10 +9643,11 @@ a {
 		width: 100%;
 	}
 	#page #contactform {
-		margin: 1% auto;
+		margin: 0.5% auto;
+		width: 85%;
 	}
 	#page #contactform div.wpcf7 span.ajax-loader {
-		margin: 3% auto;
+		margin: 4% auto;
 	}
 	#page #contactform div.wpcf7 form {
 		padding: 0.25em;
@@ -9629,13 +9662,8 @@ a {
 	#page #contactform div.wpcf7 form p label textarea {
 		width: 100%;
 	}
-	#page #contactform div.wpcf7 form p label input[type='text'],
-	#page #contactform div.wpcf7 form p label input[type='email'],
-	#page #contactform div.wpcf7 form p label select {
-		height: 35px;
-	}
 	#page #contactform div.wpcf7 form p input[type='submit'] {
-		font-size: 1.1em;
+		font-size: 1em;
 	}
 	#page #contactform div.wpcf7 form p input[type='submit']:hover {
 		background-color: #256b40;
@@ -9871,8 +9899,8 @@ a {
 
 @media only screen and (max-width: 536px) {
 	#tog-menu {
-		width: 30%;
-		left: calc(66% - 1vw);
+		width: 25%;
+		left: calc(75% - 1vw);
 	}
 	#tog-menu button.menu-toggle,
 	#tog-menu button.sidebar-toggle {
@@ -9889,11 +9917,11 @@ a {
 		left: 100vw;
 	}
 	#page {
-		width: 100%;
+		max-width: 100%;
 		/* --- Content --- */
 	}
 	#page header.site-header {
-		height: 70px;
+		height: 60px;
 	}
 	#page header.site-header .site-branding .site-logo {
 		width: 13%;
@@ -10156,31 +10184,37 @@ a {
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
 		font-size: 0.7em;
 		height: 20px;
 		line-height: 20px;
@@ -10338,17 +10372,17 @@ a {
 		padding: 0;
 	}
 	#page #primary article.event a.post-thumbnail img,
-	#page #primary article.event div.post-thumbnail img,
+	#page #primary article.event figure.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
-	#page #primary article.clash-videos div.post-thumbnail img,
+	#page #primary article.clash-videos figure.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
-	#page #primary article.clash-audio div.post-thumbnail img,
+	#page #primary article.clash-audio figure.post-thumbnail img,
 	#page #primary article.post a.post-thumbnail img,
-	#page #primary article.post div.post-thumbnail img,
+	#page #primary article.post figure.post-thumbnail img,
 	#page #primary article.search-results a.post-thumbnail img,
-	#page #primary article.search-results div.post-thumbnail img,
+	#page #primary article.search-results figure.post-thumbnail img,
 	#page #primary article.page a.post-thumbnail img,
-	#page #primary article.page div.post-thumbnail img {
+	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
 	}
 	#page #primary article.event figure.featured-image a img,
@@ -10414,7 +10448,7 @@ a {
 	}
 	#page #primary .navigation .nav-links .nav-next a,
 	#page #primary .navigation .nav-links .nav-previous a {
-		font-size: 0.9em;
+		font-size: 0.85em;
 	}
 	#page #primary .navigation .nav-links .nav-next a:hover,
 	#page #primary .navigation .nav-links .nav-previous a:hover {
@@ -10571,62 +10605,35 @@ a {
 	#page #primary #comments #respond h3#reply-title small a:hover {
 		color: #262626;
 	}
-	#page #primary #comments #respond .comment-form {
+	#page #primary #comments #respond form#commentform {
 		padding: 1em;
 	}
-	#page #primary #comments #respond .comment-form p.comment-notes {
+	#page #primary #comments #respond form#commentform p.comment-notes {
 		font-size: 0.75em;
 	}
-	#page #primary #comments #respond .comment-form textarea#comment {
+	#page #primary #comments #respond form#commentform p.comment-form-comment {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author label {
-		height: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-author input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-author p.comment-form-comment:focus {
 		box-shadow: 0 0 5px #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email label {
-		height: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-email input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-email p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url label {
-		height: 30px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input {
-		height: 35px;
-	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-url input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-url p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit {
+	#page #primary #comments #respond form#commentform p.form-submit {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit'] {
 		width: 55%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
-	}
-	#page #primary #comments p {
-		padding: 0.5em;
-	}
-	#page #primary #comments p a {
-		background-color: unset;
-	}
-	#page #primary #comments p a:hover {
-		color: #ebeadd;
 	}
 	#page #primary #comments p:last-of-type {
 		text-align: center;
@@ -10907,7 +10914,7 @@ a {
 @media only screen and (max-width: 480px) {
 	#tog-menu {
 		width: 25%;
-		left: calc(71% - 1vw);
+		left: calc(79% - 1vw);
 		font-size: 0.85em;
 	}
 	#tog-menu button.menu-toggle,
@@ -10925,10 +10932,10 @@ a {
 		left: 100vw;
 	}
 	#page {
-		width: 100%;
+		max-width: 100%;
 	}
 	#page header.site-header {
-		height: 65px;
+		height: 55px;
 	}
 	#page header.site-header .site-branding .site-logo {
 		width: 13%;
@@ -10944,6 +10951,8 @@ a {
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 2em;
+		line-height: 30px;
+		height: 30px;
 	}
 	#page header.site-header .site-branding #clashvibes-title h2.site-description {
 		font-size: 0.6em;
@@ -11336,32 +11345,46 @@ a {
 		padding: 0;
 	}
 	#page #primary article.event a.post-thumbnail,
-	#page #primary article.event div.post-thumbnail,
+	#page #primary article.event figure.post-thumbnail,
 	#page #primary article.clash-videos a.post-thumbnail,
-	#page #primary article.clash-videos div.post-thumbnail,
+	#page #primary article.clash-videos figure.post-thumbnail,
 	#page #primary article.clash-audio a.post-thumbnail,
-	#page #primary article.clash-audio div.post-thumbnail,
+	#page #primary article.clash-audio figure.post-thumbnail,
 	#page #primary article.post a.post-thumbnail,
-	#page #primary article.post div.post-thumbnail,
+	#page #primary article.post figure.post-thumbnail,
 	#page #primary article.search-results a.post-thumbnail,
-	#page #primary article.search-results div.post-thumbnail,
+	#page #primary article.search-results figure.post-thumbnail,
 	#page #primary article.page a.post-thumbnail,
-	#page #primary article.page div.post-thumbnail {
+	#page #primary article.page figure.post-thumbnail {
 		width: auto;
 	}
 	#page #primary article.event a.post-thumbnail img,
-	#page #primary article.event div.post-thumbnail img,
+	#page #primary article.event figure.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
-	#page #primary article.clash-videos div.post-thumbnail img,
+	#page #primary article.clash-videos figure.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
-	#page #primary article.clash-audio div.post-thumbnail img,
+	#page #primary article.clash-audio figure.post-thumbnail img,
 	#page #primary article.post a.post-thumbnail img,
-	#page #primary article.post div.post-thumbnail img,
+	#page #primary article.post figure.post-thumbnail img,
 	#page #primary article.search-results a.post-thumbnail img,
-	#page #primary article.search-results div.post-thumbnail img,
+	#page #primary article.search-results figure.post-thumbnail img,
 	#page #primary article.page a.post-thumbnail img,
-	#page #primary article.page div.post-thumbnail img {
+	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
+	}
+	#page #primary article.event figure.featured-image,
+	#page #primary article.event figure.attachment,
+	#page #primary article.clash-videos figure.featured-image,
+	#page #primary article.clash-videos figure.attachment,
+	#page #primary article.clash-audio figure.featured-image,
+	#page #primary article.clash-audio figure.attachment,
+	#page #primary article.post figure.featured-image,
+	#page #primary article.post figure.attachment,
+	#page #primary article.search-results figure.featured-image,
+	#page #primary article.search-results figure.attachment,
+	#page #primary article.page figure.featured-image,
+	#page #primary article.page figure.attachment {
+		width: 50%;
 	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
@@ -11772,7 +11795,9 @@ a {
 
 @media only screen and (max-width: 414px) {
 	#tog-menu {
-		left: calc(71% - 1vw);
+		width: 20%;
+		left: calc(79% - 1vw);
+		font-size: 0.75em;
 	}
 	#tog-menu button.menu-toggle,
 	#tog-menu button.sidebar-toggle {
@@ -11789,7 +11814,7 @@ a {
 		left: 100vw;
 	}
 	#page header.site-header {
-		height: 60px;
+		height: 55px;
 	}
 	#page header.site-header .site-branding .site-logo {
 		width: 15%;
@@ -11992,6 +12017,7 @@ a {
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
 		height: auto;
+		font-size: 0.8em;
 	}
 	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
@@ -12015,7 +12041,7 @@ a {
 	#page #primary article.post header.entry-header h2.entry-title,
 	#page #primary article.search-results header.entry-header h2.entry-title,
 	#page #primary article.page header.entry-header h2.entry-title {
-		font-size: 0.9em;
+		font-size: 0.8em;
 	}
 	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
@@ -12046,31 +12072,37 @@ a {
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
 		font-size: 0.7em;
 	}
 	#page #primary article.event header.entry-header section.byline,
@@ -12228,18 +12260,32 @@ a {
 		padding: 0;
 	}
 	#page #primary article.event a.post-thumbnail img,
-	#page #primary article.event div.post-thumbnail img,
+	#page #primary article.event figure.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
-	#page #primary article.clash-videos div.post-thumbnail img,
+	#page #primary article.clash-videos figure.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
-	#page #primary article.clash-audio div.post-thumbnail img,
+	#page #primary article.clash-audio figure.post-thumbnail img,
 	#page #primary article.post a.post-thumbnail img,
-	#page #primary article.post div.post-thumbnail img,
+	#page #primary article.post figure.post-thumbnail img,
 	#page #primary article.search-results a.post-thumbnail img,
-	#page #primary article.search-results div.post-thumbnail img,
+	#page #primary article.search-results figure.post-thumbnail img,
 	#page #primary article.page a.post-thumbnail img,
-	#page #primary article.page div.post-thumbnail img {
+	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
+	}
+	#page #primary article.event figure.featured-image,
+	#page #primary article.event figure.attachment,
+	#page #primary article.clash-videos figure.featured-image,
+	#page #primary article.clash-videos figure.attachment,
+	#page #primary article.clash-audio figure.featured-image,
+	#page #primary article.clash-audio figure.attachment,
+	#page #primary article.post figure.featured-image,
+	#page #primary article.post figure.attachment,
+	#page #primary article.search-results figure.featured-image,
+	#page #primary article.search-results figure.attachment,
+	#page #primary article.page figure.featured-image,
+	#page #primary article.page figure.attachment {
+		width: 50%;
 	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
@@ -12303,7 +12349,7 @@ a {
 	}
 	#page #primary .navigation .nav-links .nav-next a,
 	#page #primary .navigation .nav-links .nav-previous a {
-		font-size: 0.85em;
+		font-size: 0.80em;
 	}
 	#page #primary .navigation .nav-links .nav-next a:hover,
 	#page #primary .navigation .nav-links .nav-previous a:hover {
@@ -12334,6 +12380,36 @@ a {
 	}
 	#page article#clashvibes-text figure.text-img img {
 		width: 100%;
+	}
+	#page #contactform {
+		width: 95%;
+	}
+	#page #contactform div.wpcf7 span.ajax-loader {
+		margin: 5% auto;
+	}
+	#page #contactform div.wpcf7 form {
+		padding: 0.25em;
+	}
+	#page #contactform div.wpcf7 form p {
+		padding: 1% 0;
+	}
+	#page #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+		height: auto;
+		display: block;
+	}
+	#page #contactform div.wpcf7 form p label textarea {
+		width: 100%;
+	}
+	#page #contactform div.wpcf7 form p label input[type='text'],
+	#page #contactform div.wpcf7 form p label input[type='email'],
+	#page #contactform div.wpcf7 form p label select {
+		height: 35px;
+	}
+	#page #contactform div.wpcf7 form p input[type='submit'] {
+		font-size: 0.9em;
+	}
+	#page #contactform div.wpcf7 form p input[type='submit']:hover {
+		background-color: #256b40;
 	}
 	#page div.results {
 		padding: 0;
@@ -12514,9 +12590,8 @@ a {
 
 @media only screen and (max-width: 360px) {
 	#tog-menu {
-		width: 25%;
-		left: calc(71% - 1vw);
-		font-size: 0.85em;
+		left: calc(79% - 1vw);
+		font-size: 0.7em;
 	}
 	#tog-menu button.menu-toggle,
 	#tog-menu button.sidebar-toggle {
@@ -12536,7 +12611,7 @@ a {
 		left: 200vw;
 	}
 	#page header.site-header {
-		height: 60px;
+		height: 55px;
 	}
 	#page header.site-header .site-branding #clashvibes-title h1.site-title {
 		font-size: 1.7em;
@@ -12773,31 +12848,37 @@ a {
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
 		font-size: 0.65em;
 	}
 	#page #primary article.event header.entry-header section.byline,
@@ -12955,17 +13036,17 @@ a {
 		padding: 0;
 	}
 	#page #primary article.event a.post-thumbnail img,
-	#page #primary article.event div.post-thumbnail img,
+	#page #primary article.event figure.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
-	#page #primary article.clash-videos div.post-thumbnail img,
+	#page #primary article.clash-videos figure.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
-	#page #primary article.clash-audio div.post-thumbnail img,
+	#page #primary article.clash-audio figure.post-thumbnail img,
 	#page #primary article.post a.post-thumbnail img,
-	#page #primary article.post div.post-thumbnail img,
+	#page #primary article.post figure.post-thumbnail img,
 	#page #primary article.search-results a.post-thumbnail img,
-	#page #primary article.search-results div.post-thumbnail img,
+	#page #primary article.search-results figure.post-thumbnail img,
 	#page #primary article.page a.post-thumbnail img,
-	#page #primary article.page div.post-thumbnail img {
+	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
 	}
 	#page #primary article.event figure.featured-image a img,
@@ -13162,62 +13243,53 @@ a {
 	#page #primary #comments #respond h3#reply-title small a:hover {
 		color: #262626;
 	}
-	#page #primary #comments #respond .comment-form {
+	#page #primary #comments #respond form#commentform {
 		padding: 1em;
 	}
-	#page #primary #comments #respond .comment-form p.comment-notes {
+	#page #primary #comments #respond form#commentform p.comment-notes {
 		font-size: 0.75em;
 	}
-	#page #primary #comments #respond .comment-form textarea#comment {
+	#page #primary #comments #respond form#commentform p.comment-form-comment {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author label {
+	#page #primary #comments #respond form#commentform p.comment-form-author label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input {
+	#page #primary #comments #respond form#commentform p.comment-form-author input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-author input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-author p.comment-form-comment:focus {
 		box-shadow: 0 0 5px #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email label {
+	#page #primary #comments #respond form#commentform p.comment-form-email label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input {
+	#page #primary #comments #respond form#commentform p.comment-form-email input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-email input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-email p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url label {
+	#page #primary #comments #respond form#commentform p.comment-form-url label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input {
+	#page #primary #comments #respond form#commentform p.comment-form-url input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-url input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-url p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit {
+	#page #primary #comments #respond form#commentform p.form-submit {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit'] {
 		width: 60%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
-	}
-	#page #primary #comments p {
-		padding: 0.5em;
-	}
-	#page #primary #comments p a {
-		background-color: unset;
-	}
-	#page #primary #comments p a:hover {
-		color: #ebeadd;
 	}
 	#page #primary #comments p:last-of-type {
 		text-align: center;
@@ -13239,6 +13311,36 @@ a {
 	}
 	#page #primary #comments p.nocomments {
 		font-size: 1.1em;
+	}
+	#page #primary .navigation {
+		margin: 0;
+	}
+	#page #primary .navigation h2 {
+		color: #fff;
+	}
+	#page #primary .navigation .nav-links {
+		margin: 0;
+		display: block;
+	}
+	#page #primary .navigation .nav-links .nav-next,
+	#page #primary .navigation .nav-links .nav-previous {
+		display: inline-block;
+	}
+	#page #primary .navigation .nav-links .nav-next a,
+	#page #primary .navigation .nav-links .nav-previous a {
+		font-size: 0.7em;
+	}
+	#page #primary .navigation .nav-links .nav-next a:hover,
+	#page #primary .navigation .nav-links .nav-previous a:hover {
+		font-weight: bold;
+	}
+	#page #primary .navigation .nav-links .nav-next a::after,
+	#page #primary .navigation .nav-links .nav-previous a::after {
+		font-size: 1.6em;
+	}
+	#page #primary .navigation .nav-links .nav-next a:active,
+	#page #primary .navigation .nav-links .nav-previous a:active {
+		background-color: #658905;
 	}
 	#page article#clashvibes-text {
 		padding: 1em;
@@ -13458,6 +13560,10 @@ a {
 }
 
 @media only screen and (max-width: 320px) {
+	#tog-menu {
+		left: calc(79% - 1vw);
+		font-size: 0.65em;
+	}
 	#tog-menu button.menu-toggle,
 	#tog-menu button.sidebar-toggle {
 		line-height: 60px;
@@ -13473,7 +13579,7 @@ a {
 		left: 100vw;
 	}
 	#page header.site-header {
-		height: 60px;
+		height: 55px;
 	}
 	#page header.site-header .site-branding .site-logo {
 		width: 15%;
@@ -13687,7 +13793,7 @@ a {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 0.80em;
+		font-size: 0.8em;
 	}
 	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
@@ -13734,31 +13840,37 @@ a {
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.event header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.event header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-videos header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.clash-audio header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.post header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.post header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.search-results header.entry-header div.entry-meta .meta-content span.updated-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.parent-post-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.full-size-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.comments-link,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
-	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline {
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
+	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
 		font-size: 0.65em;
 	}
 	#page #primary article.event header.entry-header section.byline,
@@ -13915,17 +14027,17 @@ a {
 		padding: 0;
 	}
 	#page #primary article.event a.post-thumbnail img,
-	#page #primary article.event div.post-thumbnail img,
+	#page #primary article.event figure.post-thumbnail img,
 	#page #primary article.clash-videos a.post-thumbnail img,
-	#page #primary article.clash-videos div.post-thumbnail img,
+	#page #primary article.clash-videos figure.post-thumbnail img,
 	#page #primary article.clash-audio a.post-thumbnail img,
-	#page #primary article.clash-audio div.post-thumbnail img,
+	#page #primary article.clash-audio figure.post-thumbnail img,
 	#page #primary article.post a.post-thumbnail img,
-	#page #primary article.post div.post-thumbnail img,
+	#page #primary article.post figure.post-thumbnail img,
 	#page #primary article.search-results a.post-thumbnail img,
-	#page #primary article.search-results div.post-thumbnail img,
+	#page #primary article.search-results figure.post-thumbnail img,
 	#page #primary article.page a.post-thumbnail img,
-	#page #primary article.page div.post-thumbnail img {
+	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
 	}
 	#page #primary article.event a.no-post-thumbnail,
@@ -13946,6 +14058,20 @@ a {
 		display: block;
 		margin: 0.5em auto;
 		width: auto;
+	}
+	#page #primary article.event figure.featured-image,
+	#page #primary article.event figure.attachment,
+	#page #primary article.clash-videos figure.featured-image,
+	#page #primary article.clash-videos figure.attachment,
+	#page #primary article.clash-audio figure.featured-image,
+	#page #primary article.clash-audio figure.attachment,
+	#page #primary article.post figure.featured-image,
+	#page #primary article.post figure.attachment,
+	#page #primary article.search-results figure.featured-image,
+	#page #primary article.search-results figure.attachment,
+	#page #primary article.page figure.featured-image,
+	#page #primary article.page figure.attachment {
+		width: 50%;
 	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
@@ -14131,62 +14257,53 @@ a {
 	#page #primary #comments #respond h3#reply-title small a:hover {
 		color: #262626;
 	}
-	#page #primary #comments #respond .comment-form {
+	#page #primary #comments #respond form#commentform {
 		padding: 1em;
 	}
-	#page #primary #comments #respond .comment-form p.comment-notes {
+	#page #primary #comments #respond form#commentform p.comment-notes {
 		font-size: 0.7em;
 	}
-	#page #primary #comments #respond .comment-form textarea#comment {
+	#page #primary #comments #respond form#commentform p.comment-form-comment {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author label {
+	#page #primary #comments #respond form#commentform p.comment-form-author label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input {
+	#page #primary #comments #respond form#commentform p.comment-form-author input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-author input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-author textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-author input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-author p.comment-form-comment:focus {
 		box-shadow: 0 0 5px #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email label {
+	#page #primary #comments #respond form#commentform p.comment-form-email label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input {
+	#page #primary #comments #respond form#commentform p.comment-form-email input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-email input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-email textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-email input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-email p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url label {
+	#page #primary #comments #respond form#commentform p.comment-form-url label {
 		height: 30px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input {
+	#page #primary #comments #respond form#commentform p.comment-form-url input {
 		height: 35px;
 	}
-	#page #primary #comments #respond .comment-form p.comment-form-url input:focus,
-	#page #primary #comments #respond .comment-form p.comment-form-url textarea#comment:focus {
+	#page #primary #comments #respond form#commentform p.comment-form-url input:focus,
+	#page #primary #comments #respond form#commentform p.comment-form-url p.comment-form-comment:focus {
 		border: 1px solid #51cbee;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit {
+	#page #primary #comments #respond form#commentform p.form-submit {
 		width: 100%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"] {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit'] {
 		width: 60%;
 	}
-	#page #primary #comments #respond .comment-form p.form-submit input[type="submit"]:hover {
+	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
-	}
-	#page #primary #comments p {
-		padding: 0.5em;
-	}
-	#page #primary #comments p a {
-		background-color: unset;
-	}
-	#page #primary #comments p a:hover {
-		color: #ebeadd;
 	}
 	#page #primary #comments p:last-of-type {
 		text-align: center;
@@ -14208,6 +14325,37 @@ a {
 	}
 	#page #primary #comments p.nocomments {
 		font-size: 1.1em;
+	}
+	#page #primary .navigation {
+		margin: 0;
+	}
+	#page #primary .navigation h2 {
+		color: #fff;
+		font-size: 1em;
+	}
+	#page #primary .navigation .nav-links {
+		margin: 0;
+		display: block;
+	}
+	#page #primary .navigation .nav-links .nav-next,
+	#page #primary .navigation .nav-links .nav-previous {
+		display: inline-block;
+	}
+	#page #primary .navigation .nav-links .nav-next a,
+	#page #primary .navigation .nav-links .nav-previous a {
+		font-size: 0.65em;
+	}
+	#page #primary .navigation .nav-links .nav-next a:hover,
+	#page #primary .navigation .nav-links .nav-previous a:hover {
+		font-weight: bold;
+	}
+	#page #primary .navigation .nav-links .nav-next a::after,
+	#page #primary .navigation .nav-links .nav-previous a::after {
+		font-size: 1.6em;
+	}
+	#page #primary .navigation .nav-links .nav-next a:active,
+	#page #primary .navigation .nav-links .nav-previous a:active {
+		background-color: #658905;
 	}
 	#page article#clashvibes-text {
 		padding: 1em;

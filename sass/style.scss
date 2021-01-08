@@ -67,12 +67,11 @@ License: GNU General Public License v2 or later
 	/* page container */
 	#page {
 		max-width: 88%;
-		margin:auto;
+		margin: auto;
 		height: auto;
 		font-family: $font-main;
 		background-color: $color;
 		@include box-sizing($type: border-box);
-
 
 		header.site-header {
 			width: 100%;
@@ -995,9 +994,9 @@ License: GNU General Public License v2 or later
 				div.widget {
 					width: 100%;
 					display: block;
-					.tagcloud{
-						a{
-							width:auto;
+					.tagcloud {
+						a {
+							width: auto;
 						}
 					}
 
@@ -1018,7 +1017,7 @@ License: GNU General Public License v2 or later
 								line-height: 35px;
 								display: block;
 								height: 35px;
-								margin:0.5em 0;
+								margin: 0.5em 0;
 								option {
 									width: 100%;
 								}
@@ -1301,7 +1300,7 @@ License: GNU General Public License v2 or later
 								letter-spacing: 0.05em;
 								display: inline-block;
 								text-align: left;
-								padding-left:0.25em;
+								padding-left: 0.25em;
 
 								a {
 									width: auto;
@@ -1332,7 +1331,7 @@ License: GNU General Public License v2 or later
 				/* --- custom post images--- */
 				figure.featured-image,
 				figure.attachment {
-					width: 20%;
+					width: 90%;
 					height: auto;
 					margin: 2em auto;
 					display: block;
@@ -1346,6 +1345,11 @@ License: GNU General Public License v2 or later
 							display: block;
 							width: auto;
 						}
+					}
+					img.attachment-featured-image{
+						width:auto;
+						margin:auto;
+						display:block;
 					}
 				}
 
@@ -1404,7 +1408,7 @@ License: GNU General Public License v2 or later
 					color: $color;
 					text-indent: 0.25em;
 					background-color: $colors;
-					clear:both;
+					clear: both;
 
 					span {
 						padding: 0;
@@ -1457,7 +1461,7 @@ License: GNU General Public License v2 or later
 					width: 98%;
 					display: block;
 					margin: 0 auto;
-					min-height: 200px;
+
 
 					p {
 						color: $color4;
@@ -1554,68 +1558,75 @@ License: GNU General Public License v2 or later
 				div.sharedaddy {
 					width: 100%;
 					margin: 3% auto;
-					display: flex;
 
-					h3.sd-title {
-						display: block;
-						font-size: 0.95em;
-						margin: 0;
-						outline: none;
-						line-height: 40px;
-						width: 100%;
-						height: auto;
-					}
-
-					h3.sd-title::before {
-						border: none;
-						width: 10%;
-					}
-
-					div.sd-content {
-						margin: 0;
-						width: 100%;
-						display: inline-block;
-
-						ul {
-							font-size: 1em;
-							text-indent: 0;
-							width: 100%;
-							height: auto;
-							display: inline-block;
+					div.sd-sharing {
+						width:98%;
+						display: flex;
+						margin: auto;
+						h3.sd-title {
+							font-size: 0.95em;
+							background-color: $color;
+							color:$font-color;
 							margin: 0;
+							outline: none;
+							width: 12%;
+							height: auto;
+							line-height:unset;
+						}
 
-							li {
-								width: 10%;
+						h3.sd-title::before {
+							border: none;
+							width: 10%;
+
+
+						}
+
+						div.sd-content {
+							margin: 0;
+							width: 88%;
+							ul {
+								font-size: 1em;
+								text-indent: 0;
+								width: 100%;
+								height: auto;
 								display: inline-block;
-								padding: 0;
-								margin: 0 1em 0 0;
-								height: 100%;
-								color: $color4;
+								margin: 0;
 
-								a {
-									background-color: $color1;
-									display: block;
-									margin: 0;
+								li.share-twitter,
+								li.share-facebook,
+								li.share-end {
+									display: inline-block;
+									padding: 0;
+									margin: 0 0.5em;
 									height: 100%;
-									@include originTran(50% 50%);
-									@include Transition(all 0.2s ease-in 0s);
+									color: $color11;
 
-									&:hover {
-										color: $color1;
-										background-color: $color3;
-										width: 100%;
-									}
-
-									&::before {
+									a.share-twitter,
+									a.share-facebook {
+										background-color: $color4;
 										display: block;
-										width: 100%;
-										color: $color4;
-									}
+										margin: 0;
+										height: 100%;
+										@include originTran(50% 50%);
+										@include Transition(all 0.2s ease-in 0s);
 
-									span {
-										display: block;
-										color: $color4;
-										width: 100%;
+										&:hover {
+											background-color: $color11;
+											color: $color4;
+											width: 100%;
+										}
+
+										&::before {
+											display: block;
+											width: 100%;
+											color: $color11;
+										}
+
+										span {
+											display: block;
+											color: $color11;
+											width: 100%;
+										}
 									}
 								}
 							}
@@ -1632,7 +1643,7 @@ License: GNU General Public License v2 or later
 					margin-bottom: 0.2em;
 					color: $color;
 					background-color: $color4;
-					font-size:1.1em;
+					font-size: 1.1em;
 				}
 				.nav-links {
 					margin: 0;
@@ -1675,7 +1686,6 @@ License: GNU General Public License v2 or later
 			}
 
 			#comments {
-
 				.navigation {
 					height: auto;
 					width: 100%;
@@ -1872,7 +1882,7 @@ License: GNU General Public License v2 or later
 
 								.comment-metadata {
 									float: right;
-									line-height: 30px;
+									line-height: 15px;
 									height: auto;
 									padding: 0 0.5em;
 									width: auto;
@@ -1884,8 +1894,10 @@ License: GNU General Public License v2 or later
 										color: $color11;
 									}
 									span.edit-link {
-										display: inline;
-										padding: 10px;
+										display: block;
+    						width: 30%;
+										padding: 5px;
+										line-height: 5px;
 									}
 								}
 							}
@@ -2003,13 +2015,12 @@ License: GNU General Public License v2 or later
 							border: 1px solid #ddd;
 							width: 100%;
 
-							#comment{
-								width:100%;
+							#comment {
+								width: 100%;
 							}
 						}
 
 						p.comment-form-author {
-
 							input {
 								@include Transition(all 0.2s ease-in 0s);
 								outline: none;
@@ -2030,7 +2041,6 @@ License: GNU General Public License v2 or later
 						}
 
 						p.comment-form-email {
-
 							input {
 								@include Transition(all 0.2s ease-in 0s);
 								outline: none;
@@ -2051,7 +2061,6 @@ License: GNU General Public License v2 or later
 						}
 
 						p.comment-form-url {
-
 							input {
 								@include Transition(all 0.2s ease-in 0s);
 								outline: none;
@@ -2071,9 +2080,8 @@ License: GNU General Public License v2 or later
 							}
 						}
 
-						p.comment-form-cookies-consent{
-							font-size:0.9em;
-
+						p.comment-form-cookies-consent {
+							font-size: 0.9em;
 						}
 
 						p.form-submit {
@@ -2105,6 +2113,9 @@ License: GNU General Public License v2 or later
 					padding: 0;
 					a {
 						background-color: unset;
+						width: auto;
+						display: inline-block;
+						color: $color4;
 
 						&:hover {
 							color: $color11;
@@ -2112,10 +2123,10 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				p:last-of-type {
+				p.askimet_comment_form_privacy_notice {
 					text-align: center;
 					a {
-						background-color: $color11;
+						background-color: unset;
 						line-height: 40px;
 						display: inline-block;
 						width: auto;
@@ -2123,10 +2134,28 @@ License: GNU General Public License v2 or later
 						color: $color4;
 
 						&:hover {
-							background-color: $color4;
+							font-weight:bold;
 							color: $color11;
+							cursor:pointer;
 						}
 					}
+				}
+
+				p.logged-in-as{
+					a{
+						width: auto;
+						display: inline-block;
+						margin-right: 0.5em;
+						color:$color4;
+						&:active{
+							font-weight:bold;
+						}
+						&:hover{
+							font-weight:bold;
+							cursor:pointer;
+						}
+					}
+
 				}
 
 				p.must-log-in {
@@ -2714,6 +2743,7 @@ License: GNU General Public License v2 or later
 				/* --- custom post images--- */
 				figure.featured-image,
 				figure.attachment {
+					display: block;
 					a {
 						img {
 							margin: 0 auto;
@@ -2757,7 +2787,6 @@ License: GNU General Public License v2 or later
 
 						a {
 							font-size: 0.9em;
-
 
 							&:hover {
 								font-weight: bold;
@@ -2827,7 +2856,7 @@ License: GNU General Public License v2 or later
 						height: 100%;
 
 						li {
-							font-size: 0.85em;
+							font-size: 0.9em;
 
 							span.post-meta-key {
 								width: 20%;
@@ -2841,39 +2870,25 @@ License: GNU General Public License v2 or later
 				}
 
 				div.sharedaddy {
-					margin: 3% auto;
 
-					h3.sd-title {
-						font-size: 0.95em;
+					div.sd-sharing {
+						h3.sd-title {
+							font-size: 0.95em;
+						}
 
-						line-height: 40px;
-					}
+						h3.sd-title::before {
+							width: 10%;
+						}
 
-					h3.sd-title::before {
-						width: 10%;
-					}
+						div.sd-content {
+							ul {
+								font-size: 1em;
 
-					div.sd-content {
-						ul {
-							font-size: 1em;
+								li.share-twitter,
+								li.share-facebook,
+								li.share-end {
+									padding: 0;
 
-							li {
-								width: 10%;
-
-								a {
-									background-color: $color1;
-
-									&:hover {
-										color: $color1;
-									}
-
-									&::before {
-										display: block;
-									}
-
-									span {
-										display: block;
-									}
 								}
 							}
 						}
@@ -3159,8 +3174,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-
-				p:last-of-type {
+				p.askimet_comment_form_privacy_notice {
 					text-align: center;
 					a {
 						margin: 0 0.25em;
@@ -3346,8 +3360,6 @@ License: GNU General Public License v2 or later
 			margin: 1% auto;
 
 			div.wpcf7 {
-
-
 				form {
 					padding: 0.5em;
 
@@ -3693,7 +3705,7 @@ License: GNU General Public License v2 or later
 				/* --- custom post images--- */
 				figure.featured-image,
 				figure.attachment {
-					width: 25%;
+					display: block;
 					a {
 						img {
 							margin: 0 auto;
@@ -3785,10 +3797,9 @@ License: GNU General Public License v2 or later
 
 					ul.post-meta {
 						height: 100%;
-						letter-spacing: 0.05em;
 
 						li {
-							font-size: 0.80em;
+							font-size: 0.85em;
 
 							span.post-meta-key {
 								width: 20%;
@@ -3802,39 +3813,24 @@ License: GNU General Public License v2 or later
 				}
 
 				div.sharedaddy {
-					margin: 3% auto;
 
-					h3.sd-title {
-						font-size: 0.9em;
-
-						line-height: 40px;
-					}
-
-					h3.sd-title::before {
-						width: 10%;
-					}
-
-					div.sd-content {
-						ul {
+					div.sd-sharing {
+						h3.sd-title {
 							font-size: 0.9em;
+						}
 
-							li {
-								width: 10%;
+						h3.sd-title::before {
+							width: 10%;
+						}
 
-								a {
-									background-color: $color1;
+						div.sd-content {
+							ul {
+								font-size: 0.9em;
 
-									&:hover {
-										color: $color1;
-									}
-
-									&::before {
-										display: block;
-									}
-
-									span {
-										display: block;
-									}
+								li.share-twitter,
+								li.share-facebook,
+								li.share-end {
+									padding: 0;
 								}
 							}
 						}
@@ -4121,12 +4117,12 @@ License: GNU General Public License v2 or later
 					}
 				}
 
+				p.askimet_comment_form_privacy_notice {
+					font-size:0.9em;
 
-
-				p:last-of-type {
-					text-align: center;
 					a {
 						margin: 0 0.25em;
+
 
 						&:hover {
 							background-color: $color4;
@@ -4202,7 +4198,7 @@ License: GNU General Public License v2 or later
 @media only screen and (max-width: 1024px) {
 	#page {
 		max-width: 98%;
-  padding: 0 1%;
+		padding: 0 1%;
 
 		header.site-header {
 			height: 65px;
@@ -4632,6 +4628,7 @@ License: GNU General Public License v2 or later
 				/* --- custom post images--- */
 				figure.featured-image,
 				figure.attachment {
+					display: block;
 					a {
 						img {
 							margin: 0 auto;
@@ -4720,7 +4717,7 @@ License: GNU General Public License v2 or later
 						height: 100%;
 
 						li {
-							font-size: 0.75em;
+							font-size: 0.8em;
 
 							span.post-meta-key {
 								width: 23%;
@@ -4732,7 +4729,35 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+				div.sharedaddy {
+
+					div.sd-sharing {
+						width:98%;
+						h3.sd-title {
+							font-size: 0.9em;
+							width:15%;
+						}
+
+						h3.sd-title::before {
+							width: 13%;
+						}
+
+						div.sd-content {
+							width:86%;
+							ul {
+								font-size: 0.85em;
+
+								li.share-twitter,
+								li.share-facebook,
+								li.share-end {
+									padding: 0;
+								}
+							}
+						}
+					}
+				}
 			}
+
 			.navigation {
 				margin: 0;
 
@@ -5010,18 +5035,9 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				p {
-					padding: 0.5em;
-					a {
-						background-color: unset;
 
-						&:hover {
-							color: $color11;
-						}
-					}
-				}
 
-				p:last-of-type {
+				p.askimet_comment_form_privacy_notice {
 					text-align: center;
 					a {
 						margin: 0 0.25em;
@@ -5188,10 +5204,9 @@ License: GNU General Public License v2 or later
 		}
 
 		#contactform {
-			width:75%;
+			width: 75%;
 
 			div.wpcf7 {
-
 				form {
 					padding: 0.5em;
 
@@ -5207,7 +5222,6 @@ License: GNU General Public License v2 or later
 							textarea {
 								width: 100%;
 							}
-
 						}
 
 						input[type='submit'] {
@@ -5572,6 +5586,7 @@ License: GNU General Public License v2 or later
 
 				figure.featured-image,
 				figure.attachment {
+					display: block;
 					a {
 						img {
 							margin: 0 auto;
@@ -5925,13 +5940,12 @@ License: GNU General Public License v2 or later
 							}
 						}
 
-						p.comment-form-cookies-consent{
-							font-size:0.8em;
-							line-height:20px;
-							input#wp-comment-cookies-consent{
-								display:inline-block;
+						p.comment-form-cookies-consent {
+							font-size: 0.8em;
+							line-height: 20px;
+							input#wp-comment-cookies-consent {
+								display: inline-block;
 							}
-
 						}
 
 						p.form-submit {
@@ -5948,8 +5962,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-
-				p:last-of-type {
+				p.askimet_comment_form_privacy_notice {
 					text-align: center;
 					a {
 						margin: 0 0.25em;
@@ -6064,7 +6077,7 @@ License: GNU General Public License v2 or later
 
 	#page {
 		max-width: 100%;
-		margin:0;
+		margin: 0;
 
 		header.site-header {
 			height: 65px;
@@ -6297,7 +6310,7 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					h1 {
-						font-size: 1.3em;
+						font-size: 1.1em;
 						text-indent: 0;
 						text-align: center;
 						height: 40px;
@@ -6462,7 +6475,7 @@ License: GNU General Public License v2 or later
 						letter-spacing: 0.05em;
 
 						li {
-							font-size: 0.85em;
+							font-size: 0.9em;
 
 							span.post-meta-key {
 								display: block;
@@ -6470,7 +6483,34 @@ License: GNU General Public License v2 or later
 
 							p {
 								width: 100%;
-								font-size: 0.8em;
+								font-size: 0.9em;
+							}
+						}
+					}
+				}
+				div.sharedaddy {
+
+					div.sd-sharing {
+						width:98%;
+						h3.sd-title {
+							font-size: 0.9em;
+							width:17%;
+						}
+
+						h3.sd-title::before {
+							width: 13%;
+						}
+
+						div.sd-content {
+							width:82%;
+							ul {
+								font-size: 0.85em;
+
+								li.share-twitter,
+								li.share-facebook,
+								li.share-end {
+									padding: 0;
+								}
 							}
 						}
 					}
@@ -6739,10 +6779,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-
-
-				p:last-of-type {
-					text-align: center;
+				p.askimet_comment_form_privacy_notice {
+					font-size:0.8em;
 					a {
 						margin: 0 0.25em;
 
@@ -6995,7 +7033,6 @@ License: GNU General Public License v2 or later
 
 	#page {
 		max-width: 100%;
-
 
 		header.site-header {
 			height: 65px;
@@ -7316,7 +7353,7 @@ License: GNU General Public License v2 or later
 
 				figure.featured-image,
 				figure.attachment {
-					width: 30%;
+					display: block;
 					a {
 						img {
 							margin: 0 auto;
@@ -7329,7 +7366,7 @@ License: GNU General Public License v2 or later
 						letter-spacing: 0.05em;
 
 						li {
-							font-size: 0.8em;
+							font-size: 0.9em;
 
 							span.post-meta-key {
 								display: block;
@@ -7577,7 +7614,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				p:last-of-type {
+				p.askimet_comment_form_privacy_notice {
 					text-align: center;
 					a {
 						margin: 0 0.25em;
@@ -7637,7 +7674,7 @@ License: GNU General Public License v2 or later
 
 		#contactform {
 			margin: 0.5% auto;
-			width:85%;
+			width: 85%;
 
 			div.wpcf7 {
 				span.ajax-loader {
@@ -7659,7 +7696,6 @@ License: GNU General Public License v2 or later
 							textarea {
 								width: 100%;
 							}
-
 						}
 
 						input[type='submit'] {
@@ -7861,7 +7897,6 @@ License: GNU General Public License v2 or later
 
 	#page {
 		max-width: 100%;
-
 
 		header.site-header {
 			height: 60px;
@@ -8189,7 +8224,7 @@ License: GNU General Public License v2 or later
 						letter-spacing: 0.05em;
 
 						li {
-							font-size: 0.75em;
+							font-size: 0.85em;
 
 							span.post-meta-key {
 								text-indent: 0.25em;
@@ -8198,6 +8233,33 @@ License: GNU General Public License v2 or later
 
 							p {
 								width: 100%;
+							}
+						}
+					}
+				}
+				div.sharedaddy {
+
+					div.sd-sharing {
+						width:99%;
+						h3.sd-title {
+							font-size: 0.9em;
+							width:20%;
+						}
+
+						h3.sd-title::before {
+							width: 13%;
+						}
+
+						div.sd-content {
+							width:79%;
+							ul {
+								font-size: 0.85em;
+
+								li.share-twitter,
+								li.share-facebook,
+								li.share-end {
+									padding: 0;
+								}
 							}
 						}
 					}
@@ -8428,7 +8490,6 @@ License: GNU General Public License v2 or later
 						}
 
 						p.comment-form-author {
-
 							input:focus,
 							p.comment-form-comment:focus {
 								box-shadow: 0 0 5px rgba(81, 203, 238, 1);
@@ -8436,7 +8497,6 @@ License: GNU General Public License v2 or later
 						}
 
 						p.comment-form-email {
-
 							input:focus,
 							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
@@ -8444,7 +8504,6 @@ License: GNU General Public License v2 or later
 						}
 
 						p.comment-form-url {
-
 							input:focus,
 							p.comment-form-comment:focus {
 								border: 1px solid rgba(81, 203, 238, 1);
@@ -8465,8 +8524,8 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				p:last-of-type {
-					text-align: center;
+				p.askimet_comment_form_privacy_notice {
+					font-size:0.7em;
 					a {
 						margin: 0 0.25em;
 
@@ -8715,7 +8774,6 @@ License: GNU General Public License v2 or later
 
 	#page {
 		max-width: 100%;
-
 
 		header.site-header {
 			height: 55px;
@@ -9019,7 +9077,7 @@ License: GNU General Public License v2 or later
 				//image
 				figure.featured-image,
 				figure.attachment {
-					width: 50%;
+					width: 96%;
 					a {
 						img {
 							margin: 0 auto;
@@ -9059,7 +9117,7 @@ License: GNU General Public License v2 or later
 						height: auto;
 
 						li {
-							font-size: 0.7em;
+							font-size: 0.75em;
 							height: auto;
 
 							span.post-meta-key {
@@ -9601,7 +9659,7 @@ License: GNU General Public License v2 or later
 				//image
 				figure.featured-image,
 				figure.attachment {
-					width: 50%;
+					display: block;
 					a {
 						img {
 							margin: 0 auto;
@@ -9626,6 +9684,33 @@ License: GNU General Public License v2 or later
 						}
 					}
 				}
+				div.sharedaddy {
+					margin: 5% auto;
+					div.sd-sharing {
+
+						h3.sd-title {
+							font-size: 0.85em;
+							width:22%;
+						}
+
+						h3.sd-title::before {
+							width: 13%;
+						}
+
+						div.sd-content {
+							width:77%;
+							ul {
+								font-size: 0.8em;
+
+								li.share-twitter,
+								li.share-facebook,
+								li.share-end {
+									padding: 0;
+								}
+							}
+						}
+					}
+				}
 			}
 			.navigation {
 				margin: 0;
@@ -9641,7 +9726,7 @@ License: GNU General Public License v2 or later
 						display: inline-block;
 
 						a {
-							font-size: 0.80em;
+							font-size: 0.8em;
 
 							&:hover {
 								font-weight: bold;
@@ -9687,7 +9772,7 @@ License: GNU General Public License v2 or later
 			}
 		}
 		#contactform {
-			width:95%;
+			width: 95%;
 
 			div.wpcf7 {
 				span.ajax-loader {
@@ -10207,6 +10292,7 @@ License: GNU General Public License v2 or later
 							margin: 0 auto;
 						}
 					}
+
 				}
 
 				footer.speaker-meta {
@@ -10216,7 +10302,7 @@ License: GNU General Public License v2 or later
 						letter-spacing: 0.05em;
 
 						li {
-							font-size: 0.65em;
+							font-size: 0.7em;
 
 							span.post-meta-key {
 								width: 100%;
@@ -10225,6 +10311,33 @@ License: GNU General Public License v2 or later
 
 						p {
 							width: 100%;
+						}
+					}
+				}
+				div.sharedaddy {
+					margin: 5% auto;
+					div.sd-sharing {
+
+						h3.sd-title {
+							font-size: 0.8em;
+							width:25%;
+						}
+
+						h3.sd-title::before {
+							width: 13%;
+						}
+
+						div.sd-content {
+							width:74%;
+							ul {
+								font-size: 0.8em;
+
+								li.share-twitter,
+								li.share-facebook,
+								li.share-end {
+									padding: 0;
+								}
+							}
 						}
 					}
 				}
@@ -10479,8 +10592,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-
-				p:last-of-type {
+				p.askimet_comment_form_privacy_notice {
 					text-align: center;
 					a {
 						margin: 0 0.25em;
@@ -10537,7 +10649,6 @@ License: GNU General Public License v2 or later
 				}
 			}
 		}
-
 
 		article#clashvibes-text {
 			padding: 1em;
@@ -11097,7 +11208,7 @@ License: GNU General Public License v2 or later
 
 				figure.featured-image,
 				figure.attachment {
-					width: 50%;
+					display: block;
 					a {
 						img {
 							margin: 0 auto;
@@ -11372,7 +11483,7 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-				p:last-of-type {
+				p.askimet_comment_form_privacy_notice {
 					text-align: center;
 					a {
 						margin: 0 0.25em;
@@ -11404,7 +11515,7 @@ License: GNU General Public License v2 or later
 
 				h2 {
 					color: $color;
-					font-size:1em;
+					font-size: 1em;
 				}
 				.nav-links {
 					margin: 0;

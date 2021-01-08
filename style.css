@@ -1967,7 +1967,7 @@ select#cat {
 	#page #primary article.search-results figure.attachment,
 	#page #primary article.page figure.featured-image,
 	#page #primary article.page figure.attachment {
-		width: 20%;
+		width: 90%;
 		height: auto;
 		margin: 2em auto;
 		display: block;
@@ -2004,6 +2004,22 @@ select#cat {
 		margin: 0 auto;
 		display: block;
 		width: auto;
+	}
+	#page #primary article.event figure.featured-image img.attachment-featured-image,
+	#page #primary article.event figure.attachment img.attachment-featured-image,
+	#page #primary article.clash-videos figure.featured-image img.attachment-featured-image,
+	#page #primary article.clash-videos figure.attachment img.attachment-featured-image,
+	#page #primary article.clash-audio figure.featured-image img.attachment-featured-image,
+	#page #primary article.clash-audio figure.attachment img.attachment-featured-image,
+	#page #primary article.post figure.featured-image img.attachment-featured-image,
+	#page #primary article.post figure.attachment img.attachment-featured-image,
+	#page #primary article.search-results figure.featured-image img.attachment-featured-image,
+	#page #primary article.search-results figure.attachment img.attachment-featured-image,
+	#page #primary article.page figure.featured-image img.attachment-featured-image,
+	#page #primary article.page figure.attachment img.attachment-featured-image {
+		width: auto;
+		margin: auto;
+		display: block;
 	}
 	#page #primary article.event header.archive-header,
 	#page #primary article.clash-videos header.archive-header,
@@ -2177,7 +2193,6 @@ select#cat {
 		width: 98%;
 		display: block;
 		margin: 0 auto;
-		min-height: 200px;
 	}
 	#page #primary article.event div.entry-content p,
 	#page #primary article.event div.entry-summary p,
@@ -2392,47 +2407,56 @@ select#cat {
 	#page #primary article.page div.sharedaddy {
 		width: 100%;
 		margin: 3% auto;
-		display: flex;
 	}
-	#page #primary article.event div.sharedaddy h3.sd-title,
-	#page #primary article.clash-videos div.sharedaddy h3.sd-title,
-	#page #primary article.clash-audio div.sharedaddy h3.sd-title,
-	#page #primary article.post div.sharedaddy h3.sd-title,
-	#page #primary article.search-results div.sharedaddy h3.sd-title,
-	#page #primary article.page div.sharedaddy h3.sd-title {
-		display: block;
+	#page #primary article.event div.sharedaddy div.sd-sharing,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing,
+	#page #primary article.post div.sharedaddy div.sd-sharing,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing,
+	#page #primary article.page div.sharedaddy div.sd-sharing {
+		width: 98%;
+		display: flex;
+		margin: auto;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title {
 		font-size: 0.95em;
+		background-color: #fff;
+		color: #262626;
 		margin: 0;
 		outline: none;
-		line-height: 40px;
-		width: 100%;
+		width: 12%;
 		height: auto;
+		line-height: unset;
 	}
-	#page #primary article.event div.sharedaddy h3.sd-title::before,
-	#page #primary article.clash-videos div.sharedaddy h3.sd-title::before,
-	#page #primary article.clash-audio div.sharedaddy h3.sd-title::before,
-	#page #primary article.post div.sharedaddy h3.sd-title::before,
-	#page #primary article.search-results div.sharedaddy h3.sd-title::before,
-	#page #primary article.page div.sharedaddy h3.sd-title::before {
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title::before {
 		border: none;
 		width: 10%;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content,
-	#page #primary article.post div.sharedaddy div.sd-content,
-	#page #primary article.search-results div.sharedaddy div.sd-content,
-	#page #primary article.page div.sharedaddy div.sd-content {
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content {
 		margin: 0;
-		width: 100%;
-		display: inline-block;
+		width: 88%;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content ul,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul,
-	#page #primary article.post div.sharedaddy div.sd-content ul,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul,
-	#page #primary article.page div.sharedaddy div.sd-content ul {
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul {
 		font-size: 1em;
 		text-indent: 0;
 		width: 100%;
@@ -2440,26 +2464,67 @@ select#cat {
 		display: inline-block;
 		margin: 0;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li,
-	#page #primary article.post div.sharedaddy div.sd-content ul li,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li,
-	#page #primary article.page div.sharedaddy div.sd-content ul li {
-		width: 10%;
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end {
 		display: inline-block;
 		padding: 0;
-		margin: 0 1em 0 0;
+		margin: 0 0.5em;
 		height: 100%;
-		color: #262626;
+		color: #ebeadd;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a {
-		background-color: #256b40;
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook {
+		background-color: #262626;
 		display: block;
 		margin: 0;
 		height: 100%;
@@ -2473,34 +2538,124 @@ select#cat {
 		-ms-transition: all 0.2s ease-in 0s;
 		transition: all 0.2s ease-in 0s;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a:hover {
-		color: #256b40;
-		background-color: #f0ecec;
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter:hover,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook:hover,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter:hover,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook:hover,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter:hover,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook:hover,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter:hover,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook:hover,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter:hover,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook:hover,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter:hover,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook:hover,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter:hover,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook:hover,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter:hover,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook:hover,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter:hover,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook:hover,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter:hover,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook:hover,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter:hover,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook:hover,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter:hover,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook:hover,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter:hover,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook:hover,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter:hover,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook:hover,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter:hover,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook:hover,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter:hover,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook:hover,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter:hover,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook:hover,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter:hover,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook:hover {
+		background-color: #ebeadd;
+		color: #262626;
 		width: 100%;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a::before {
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter::before,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook::before,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter::before,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook::before,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter::before,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook::before {
 		display: block;
 		width: 100%;
-		color: #262626;
+		color: #ebeadd;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a span {
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter span,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook span,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter span,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook span,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter span,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook span,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter span,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook span,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter span,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook span,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter span,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook span,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter span,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook span,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter span,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook span,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter span,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook span,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter span,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook span,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter span,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook span,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter span,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook span,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter span,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook span,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter span,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook span,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter span,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook span,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-twitter span,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter a.share-facebook span,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-twitter span,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook a.share-facebook span,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-twitter span,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end a.share-facebook span {
 		display: block;
-		color: #262626;
+		color: #ebeadd;
 		width: 100%;
 	}
 	#page #primary .navigation {
@@ -2746,7 +2901,7 @@ select#cat {
 	}
 	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata {
 		float: right;
-		line-height: 30px;
+		line-height: 15px;
 		height: auto;
 		padding: 0 0.5em;
 		width: auto;
@@ -2759,8 +2914,10 @@ select#cat {
 		color: #ebeadd;
 	}
 	#page #primary #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-metadata span.edit-link {
-		display: inline;
-		padding: 10px;
+		display: block;
+		width: 30%;
+		padding: 5px;
+		line-height: 5px;
 	}
 	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
 		width: 100%;
@@ -2959,24 +3116,41 @@ select#cat {
 	}
 	#page #primary #comments p a {
 		background-color: unset;
+		width: auto;
+		display: inline-block;
+		color: #262626;
 	}
 	#page #primary #comments p a:hover {
 		color: #ebeadd;
 	}
-	#page #primary #comments p:last-of-type {
+	#page #primary #comments p.askimet_comment_form_privacy_notice {
 		text-align: center;
 	}
-	#page #primary #comments p:last-of-type a {
-		background-color: #ebeadd;
+	#page #primary #comments p.askimet_comment_form_privacy_notice a {
+		background-color: unset;
 		line-height: 40px;
 		display: inline-block;
 		width: auto;
 		margin: 0 0.25em;
 		color: #262626;
 	}
-	#page #primary #comments p:last-of-type a:hover {
-		background-color: #262626;
+	#page #primary #comments p.askimet_comment_form_privacy_notice a:hover {
+		font-weight: bold;
 		color: #ebeadd;
+		cursor: pointer;
+	}
+	#page #primary #comments p.logged-in-as a {
+		width: auto;
+		display: inline-block;
+		margin-right: 0.5em;
+		color: #262626;
+	}
+	#page #primary #comments p.logged-in-as a:active {
+		font-weight: bold;
+	}
+	#page #primary #comments p.logged-in-as a:hover {
+		font-weight: bold;
+		cursor: pointer;
 	}
 	#page #primary #comments p.must-log-in {
 		width: 90%;
@@ -3680,6 +3854,20 @@ select#cat {
 	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image,
+	#page #primary article.event figure.attachment,
+	#page #primary article.clash-videos figure.featured-image,
+	#page #primary article.clash-videos figure.attachment,
+	#page #primary article.clash-audio figure.featured-image,
+	#page #primary article.clash-audio figure.attachment,
+	#page #primary article.post figure.featured-image,
+	#page #primary article.post figure.attachment,
+	#page #primary article.search-results figure.featured-image,
+	#page #primary article.search-results figure.attachment,
+	#page #primary article.page figure.featured-image,
+	#page #primary article.page figure.attachment {
+		display: block;
+	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
@@ -4018,7 +4206,7 @@ select#cat {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.85em;
+		font-size: 0.9em;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -4036,78 +4224,49 @@ select#cat {
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 79%;
 	}
-	#page #primary article.event div.sharedaddy,
-	#page #primary article.clash-videos div.sharedaddy,
-	#page #primary article.clash-audio div.sharedaddy,
-	#page #primary article.post div.sharedaddy,
-	#page #primary article.search-results div.sharedaddy,
-	#page #primary article.page div.sharedaddy {
-		margin: 3% auto;
-	}
-	#page #primary article.event div.sharedaddy h3.sd-title,
-	#page #primary article.clash-videos div.sharedaddy h3.sd-title,
-	#page #primary article.clash-audio div.sharedaddy h3.sd-title,
-	#page #primary article.post div.sharedaddy h3.sd-title,
-	#page #primary article.search-results div.sharedaddy h3.sd-title,
-	#page #primary article.page div.sharedaddy h3.sd-title {
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title {
 		font-size: 0.95em;
-		line-height: 40px;
 	}
-	#page #primary article.event div.sharedaddy h3.sd-title::before,
-	#page #primary article.clash-videos div.sharedaddy h3.sd-title::before,
-	#page #primary article.clash-audio div.sharedaddy h3.sd-title::before,
-	#page #primary article.post div.sharedaddy h3.sd-title::before,
-	#page #primary article.search-results div.sharedaddy h3.sd-title::before,
-	#page #primary article.page div.sharedaddy h3.sd-title::before {
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title::before {
 		width: 10%;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content ul,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul,
-	#page #primary article.post div.sharedaddy div.sd-content ul,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul,
-	#page #primary article.page div.sharedaddy div.sd-content ul {
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul {
 		font-size: 1em;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li,
-	#page #primary article.post div.sharedaddy div.sd-content ul li,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li,
-	#page #primary article.page div.sharedaddy div.sd-content ul li {
-		width: 10%;
-	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a {
-		background-color: #256b40;
-	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a:hover {
-		color: #256b40;
-	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a::before {
-		display: block;
-	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a span {
-		display: block;
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end {
+		padding: 0;
 	}
 	#page #primary .navigation {
 		margin: 0;
@@ -4325,13 +4484,13 @@ select#cat {
 	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
 	}
-	#page #primary #comments p:last-of-type {
+	#page #primary #comments p.askimet_comment_form_privacy_notice {
 		text-align: center;
 	}
-	#page #primary #comments p:last-of-type a {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a {
 		margin: 0 0.25em;
 	}
-	#page #primary #comments p:last-of-type a:hover {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a:hover {
 		background-color: #262626;
 	}
 	#page #primary #comments p.must-log-in {
@@ -4908,7 +5067,7 @@ select#cat {
 	#page #primary article.search-results figure.attachment,
 	#page #primary article.page figure.featured-image,
 	#page #primary article.page figure.attachment {
-		width: 25%;
+		display: block;
 	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
@@ -5144,7 +5303,6 @@ select#cat {
 	#page #primary article.search-results footer.speaker-meta ul.post-meta,
 	#page #primary article.page footer.speaker-meta ul.post-meta {
 		height: 100%;
-		letter-spacing: 0.05em;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li,
@@ -5152,7 +5310,7 @@ select#cat {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.80em;
+		font-size: 0.85em;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -5170,78 +5328,49 @@ select#cat {
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 77%;
 	}
-	#page #primary article.event div.sharedaddy,
-	#page #primary article.clash-videos div.sharedaddy,
-	#page #primary article.clash-audio div.sharedaddy,
-	#page #primary article.post div.sharedaddy,
-	#page #primary article.search-results div.sharedaddy,
-	#page #primary article.page div.sharedaddy {
-		margin: 3% auto;
-	}
-	#page #primary article.event div.sharedaddy h3.sd-title,
-	#page #primary article.clash-videos div.sharedaddy h3.sd-title,
-	#page #primary article.clash-audio div.sharedaddy h3.sd-title,
-	#page #primary article.post div.sharedaddy h3.sd-title,
-	#page #primary article.search-results div.sharedaddy h3.sd-title,
-	#page #primary article.page div.sharedaddy h3.sd-title {
-		font-size: 0.9em;
-		line-height: 40px;
-	}
-	#page #primary article.event div.sharedaddy h3.sd-title::before,
-	#page #primary article.clash-videos div.sharedaddy h3.sd-title::before,
-	#page #primary article.clash-audio div.sharedaddy h3.sd-title::before,
-	#page #primary article.post div.sharedaddy h3.sd-title::before,
-	#page #primary article.search-results div.sharedaddy h3.sd-title::before,
-	#page #primary article.page div.sharedaddy h3.sd-title::before {
-		width: 10%;
-	}
-	#page #primary article.event div.sharedaddy div.sd-content ul,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul,
-	#page #primary article.post div.sharedaddy div.sd-content ul,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul,
-	#page #primary article.page div.sharedaddy div.sd-content ul {
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title {
 		font-size: 0.9em;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li,
-	#page #primary article.post div.sharedaddy div.sd-content ul li,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li,
-	#page #primary article.page div.sharedaddy div.sd-content ul li {
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title::before {
 		width: 10%;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a {
-		background-color: #256b40;
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul {
+		font-size: 0.9em;
 	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a:hover,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a:hover {
-		color: #256b40;
-	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a::before,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a::before {
-		display: block;
-	}
-	#page #primary article.event div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.clash-videos div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.clash-audio div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.post div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.search-results div.sharedaddy div.sd-content ul li a span,
-	#page #primary article.page div.sharedaddy div.sd-content ul li a span {
-		display: block;
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end {
+		padding: 0;
 	}
 	#page #primary .navigation {
 		margin: 0;
@@ -5459,13 +5588,13 @@ select#cat {
 	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
 	}
-	#page #primary #comments p:last-of-type {
-		text-align: center;
+	#page #primary #comments p.askimet_comment_form_privacy_notice {
+		font-size: 0.9em;
 	}
-	#page #primary #comments p:last-of-type a {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a {
 		margin: 0 0.25em;
 	}
-	#page #primary #comments p:last-of-type a:hover {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a:hover {
 		background-color: #262626;
 	}
 	#page #primary #comments p.must-log-in {
@@ -6044,6 +6173,20 @@ select#cat {
 	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image,
+	#page #primary article.event figure.attachment,
+	#page #primary article.clash-videos figure.featured-image,
+	#page #primary article.clash-videos figure.attachment,
+	#page #primary article.clash-audio figure.featured-image,
+	#page #primary article.clash-audio figure.attachment,
+	#page #primary article.post figure.featured-image,
+	#page #primary article.post figure.attachment,
+	#page #primary article.search-results figure.featured-image,
+	#page #primary article.search-results figure.attachment,
+	#page #primary article.page figure.featured-image,
+	#page #primary article.page figure.attachment {
+		display: block;
+	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
@@ -6277,7 +6420,7 @@ select#cat {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.75em;
+		font-size: 0.8em;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -6294,6 +6437,67 @@ select#cat {
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li p,
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 76%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing,
+	#page #primary article.post div.sharedaddy div.sd-sharing,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing,
+	#page #primary article.page div.sharedaddy div.sd-sharing {
+		width: 98%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title {
+		font-size: 0.9em;
+		width: 15%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title::before {
+		width: 13%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content {
+		width: 86%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul {
+		font-size: 0.85em;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end {
+		padding: 0;
 	}
 	#page #primary .navigation {
 		margin: 0;
@@ -6511,22 +6715,13 @@ select#cat {
 	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
 	}
-	#page #primary #comments p {
-		padding: 0.5em;
-	}
-	#page #primary #comments p a {
-		background-color: unset;
-	}
-	#page #primary #comments p a:hover {
-		color: #ebeadd;
-	}
-	#page #primary #comments p:last-of-type {
+	#page #primary #comments p.askimet_comment_form_privacy_notice {
 		text-align: center;
 	}
-	#page #primary #comments p:last-of-type a {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a {
 		margin: 0 0.25em;
 	}
-	#page #primary #comments p:last-of-type a:hover {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a:hover {
 		background-color: #262626;
 	}
 	#page #primary #comments p.must-log-in {
@@ -7143,6 +7338,20 @@ select#cat {
 	#page #primary article.page figure.post-thumbnail img {
 		margin: 0 auto;
 	}
+	#page #primary article.event figure.featured-image,
+	#page #primary article.event figure.attachment,
+	#page #primary article.clash-videos figure.featured-image,
+	#page #primary article.clash-videos figure.attachment,
+	#page #primary article.clash-audio figure.featured-image,
+	#page #primary article.clash-audio figure.attachment,
+	#page #primary article.post figure.featured-image,
+	#page #primary article.post figure.attachment,
+	#page #primary article.search-results figure.featured-image,
+	#page #primary article.search-results figure.attachment,
+	#page #primary article.page figure.featured-image,
+	#page #primary article.page figure.attachment {
+		display: block;
+	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
 	#page #primary article.clash-videos figure.featured-image a img,
@@ -7621,13 +7830,13 @@ select#cat {
 	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
 	}
-	#page #primary #comments p:last-of-type {
+	#page #primary #comments p.askimet_comment_form_privacy_notice {
 		text-align: center;
 	}
-	#page #primary #comments p:last-of-type a {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a {
 		margin: 0 0.25em;
 	}
-	#page #primary #comments p:last-of-type a:hover {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a:hover {
 		background-color: #262626;
 	}
 	#page #primary #comments p.must-log-in {
@@ -8013,7 +8222,7 @@ select#cat {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 1.3em;
+		font-size: 1.1em;
 		text-indent: 0;
 		text-align: center;
 		height: 40px;
@@ -8404,7 +8613,7 @@ select#cat {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.85em;
+		font-size: 0.9em;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -8421,7 +8630,68 @@ select#cat {
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li p,
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 100%;
-		font-size: 0.8em;
+		font-size: 0.9em;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing,
+	#page #primary article.post div.sharedaddy div.sd-sharing,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing,
+	#page #primary article.page div.sharedaddy div.sd-sharing {
+		width: 98%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title {
+		font-size: 0.9em;
+		width: 17%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title::before {
+		width: 13%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content {
+		width: 82%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul {
+		font-size: 0.85em;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end {
+		padding: 0;
 	}
 	#page #primary .navigation {
 		margin: 0;
@@ -8634,13 +8904,13 @@ select#cat {
 	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
 	}
-	#page #primary #comments p:last-of-type {
-		text-align: center;
+	#page #primary #comments p.askimet_comment_form_privacy_notice {
+		font-size: 0.8em;
 	}
-	#page #primary #comments p:last-of-type a {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a {
 		margin: 0 0.25em;
 	}
-	#page #primary #comments p:last-of-type a:hover {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a:hover {
 		background-color: #262626;
 	}
 	#page #primary #comments p.must-log-in {
@@ -9374,7 +9644,7 @@ select#cat {
 	#page #primary article.search-results figure.attachment,
 	#page #primary article.page figure.featured-image,
 	#page #primary article.page figure.attachment {
-		width: 30%;
+		display: block;
 	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
@@ -9404,7 +9674,7 @@ select#cat {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.8em;
+		font-size: 0.9em;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -9603,13 +9873,13 @@ select#cat {
 	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
 	}
-	#page #primary #comments p:last-of-type {
+	#page #primary #comments p.askimet_comment_form_privacy_notice {
 		text-align: center;
 	}
-	#page #primary #comments p:last-of-type a {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a {
 		margin: 0 0.25em;
 	}
-	#page #primary #comments p:last-of-type a:hover {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a:hover {
 		background-color: #262626;
 	}
 	#page #primary #comments p.must-log-in {
@@ -10413,7 +10683,7 @@ select#cat {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.75em;
+		font-size: 0.85em;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -10431,6 +10701,67 @@ select#cat {
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li p,
 	#page #primary article.page footer.speaker-meta ul.post-meta li p {
 		width: 100%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing,
+	#page #primary article.post div.sharedaddy div.sd-sharing,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing,
+	#page #primary article.page div.sharedaddy div.sd-sharing {
+		width: 99%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title {
+		font-size: 0.9em;
+		width: 20%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title::before {
+		width: 13%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content {
+		width: 79%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul {
+		font-size: 0.85em;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end {
+		padding: 0;
 	}
 	#page #primary .navigation {
 		margin: 0;
@@ -10635,13 +10966,13 @@ select#cat {
 	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
 	}
-	#page #primary #comments p:last-of-type {
-		text-align: center;
+	#page #primary #comments p.askimet_comment_form_privacy_notice {
+		font-size: 0.7em;
 	}
-	#page #primary #comments p:last-of-type a {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a {
 		margin: 0 0.25em;
 	}
-	#page #primary #comments p:last-of-type a:hover {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a:hover {
 		background-color: #262626;
 	}
 	#page #primary #comments p.must-log-in {
@@ -11384,7 +11715,7 @@ select#cat {
 	#page #primary article.search-results figure.attachment,
 	#page #primary article.page figure.featured-image,
 	#page #primary article.page figure.attachment {
-		width: 50%;
+		width: 96%;
 	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
@@ -11524,7 +11855,7 @@ select#cat {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.7em;
+		font-size: 0.75em;
 		height: auto;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -12285,7 +12616,7 @@ select#cat {
 	#page #primary article.search-results figure.attachment,
 	#page #primary article.page figure.featured-image,
 	#page #primary article.page figure.attachment {
-		width: 50%;
+		display: block;
 	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
@@ -12333,6 +12664,67 @@ select#cat {
 	#page #primary article.page footer.speaker-meta ul.post-meta p {
 		width: 100%;
 	}
+	#page #primary article.event div.sharedaddy,
+	#page #primary article.clash-videos div.sharedaddy,
+	#page #primary article.clash-audio div.sharedaddy,
+	#page #primary article.post div.sharedaddy,
+	#page #primary article.search-results div.sharedaddy,
+	#page #primary article.page div.sharedaddy {
+		margin: 5% auto;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title {
+		font-size: 0.85em;
+		width: 22%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title::before {
+		width: 13%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content {
+		width: 77%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul {
+		font-size: 0.8em;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end {
+		padding: 0;
+	}
 	#page #primary .navigation {
 		margin: 0;
 	}
@@ -12349,7 +12741,7 @@ select#cat {
 	}
 	#page #primary .navigation .nav-links .nav-next a,
 	#page #primary .navigation .nav-links .nav-previous a {
-		font-size: 0.80em;
+		font-size: 0.8em;
 	}
 	#page #primary .navigation .nav-links .nav-next a:hover,
 	#page #primary .navigation .nav-links .nav-previous a:hover {
@@ -13085,7 +13477,7 @@ select#cat {
 	#page #primary article.post footer.speaker-meta ul.post-meta li,
 	#page #primary article.search-results footer.speaker-meta ul.post-meta li,
 	#page #primary article.page footer.speaker-meta ul.post-meta li {
-		font-size: 0.65em;
+		font-size: 0.7em;
 	}
 	#page #primary article.event footer.speaker-meta ul.post-meta li span.post-meta-key,
 	#page #primary article.clash-videos footer.speaker-meta ul.post-meta li span.post-meta-key,
@@ -13102,6 +13494,67 @@ select#cat {
 	#page #primary article.search-results footer.speaker-meta ul.post-meta p,
 	#page #primary article.page footer.speaker-meta ul.post-meta p {
 		width: 100%;
+	}
+	#page #primary article.event div.sharedaddy,
+	#page #primary article.clash-videos div.sharedaddy,
+	#page #primary article.clash-audio div.sharedaddy,
+	#page #primary article.post div.sharedaddy,
+	#page #primary article.search-results div.sharedaddy,
+	#page #primary article.page div.sharedaddy {
+		margin: 5% auto;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title {
+		font-size: 0.8em;
+		width: 25%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.post div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing h3.sd-title::before,
+	#page #primary article.page div.sharedaddy div.sd-sharing h3.sd-title::before {
+		width: 13%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content {
+		width: 74%;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul {
+		font-size: 0.8em;
+	}
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.event div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-videos div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.clash-audio div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.post div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.search-results div.sharedaddy div.sd-sharing div.sd-content ul li.share-end,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-twitter,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-facebook,
+	#page #primary article.page div.sharedaddy div.sd-sharing div.sd-content ul li.share-end {
+		padding: 0;
 	}
 	#page #primary #comments .navigation {
 		width: 100%;
@@ -13291,13 +13744,13 @@ select#cat {
 	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
 	}
-	#page #primary #comments p:last-of-type {
+	#page #primary #comments p.askimet_comment_form_privacy_notice {
 		text-align: center;
 	}
-	#page #primary #comments p:last-of-type a {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a {
 		margin: 0 0.25em;
 	}
-	#page #primary #comments p:last-of-type a:hover {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a:hover {
 		background-color: #262626;
 	}
 	#page #primary #comments p.must-log-in {
@@ -14071,7 +14524,7 @@ select#cat {
 	#page #primary article.search-results figure.attachment,
 	#page #primary article.page figure.featured-image,
 	#page #primary article.page figure.attachment {
-		width: 50%;
+		display: block;
 	}
 	#page #primary article.event figure.featured-image a img,
 	#page #primary article.event figure.attachment a img,
@@ -14305,13 +14758,13 @@ select#cat {
 	#page #primary #comments #respond form#commentform p.form-submit input[type='submit']:hover {
 		cursor: pointer;
 	}
-	#page #primary #comments p:last-of-type {
+	#page #primary #comments p.askimet_comment_form_privacy_notice {
 		text-align: center;
 	}
-	#page #primary #comments p:last-of-type a {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a {
 		margin: 0 0.25em;
 	}
-	#page #primary #comments p:last-of-type a:hover {
+	#page #primary #comments p.askimet_comment_form_privacy_notice a:hover {
 		background-color: #262626;
 	}
 	#page #primary #comments p.must-log-in {

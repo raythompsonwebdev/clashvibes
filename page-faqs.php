@@ -18,90 +18,19 @@
 
 get_header(); ?>
 
-<article id="clashvibes-text">
-	<h1><?php the_title(); ?> Page</h1>
+<?php
+		while ( have_posts() ) :
+			the_post();
 
-	<ul>
-		<li><?php esc_html_e( 'Heading 1', 'clashvibes' ); ?></li>
+			get_template_part( 'template-parts/content', 'page' );
 
-		<li><?php esc_html_e( 'Heading 2', 'clashvibes' ); ?></li>
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
 
-		<li><?php esc_html_e( 'Heading 3', 'clashvibes' ); ?></li>
-
-		<li><?php esc_html_e( 'Heading 4', 'clashvibes' ); ?></li>
-
-		<li><?php esc_html_e( 'Heading 5', 'clashvibes' ); ?></li>
-
-		<li><?php esc_html_e( 'Heading 6', 'clashvibes' ); ?></li>
-	</ul>
-	<br/>
-	<h2><?php esc_html_e( 'Heading 1', 'clashvibes' ); ?></h2>
-
-	<p>
-	<?php
-	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-
-	<h2><?php esc_html_e( 'Heading 2', 'clashvibes' ); ?></h2>
-
-	<p>
-	<?php
-	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-
-	<h2><?php esc_html_e( 'Heading 3', 'clashvibes' ); ?></h2>
-
-	<p>
-	<?php
-	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-
-	<h2><?php esc_html_e( 'Heading 4', 'clashvibes' ); ?></h2>
-
-	<p>
-	<?php
-	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-
-	<h2><?php esc_html_e( 'Heading 5', 'clashvibes' ); ?></h2>
-
-	<p>
-	<?php
-	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-
-	<h2><?php esc_html_e( 'Heading 6', 'clashvibes' ); ?></h2>
-
-	<p>
-	<?php
-	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-
-</article>
+		endwhile; // End of the loop.
+		?>
 
 
 <?php get_footer(); ?>

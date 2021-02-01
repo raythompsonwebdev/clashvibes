@@ -273,12 +273,6 @@ License: GNU General Public License v2 or later
 		}
 
 		/* --- Content --- */
-		div.clashvibes-content {
-			margin: 0;
-			height: auto;
-			background-color: $color;
-			min-height: 600px;
-		}
 
 		h1 {
 			font-size: 1.5em;
@@ -299,6 +293,8 @@ License: GNU General Public License v2 or later
 
 		/* --- Error page content --- */
 		div.page-content {
+			height: auto;
+			background-color: $color;
 			p {
 				padding: 0;
 			}
@@ -310,7 +306,7 @@ License: GNU General Public License v2 or later
 				li {
 					a {
 						color: #000;
-						width: 93%;
+						width: auto;
 						display: inline-block;
 						line-height: 30px;
 					}
@@ -353,44 +349,39 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		/* front page */
-		article#clashvibes-text {
-			padding: 1em;
+		h1 {
+			color: $color4;
+			margin-bottom: 0.5em;
+			text-indent: 0;
+		}
 
-			h1 {
-				color: $color4;
-				margin-bottom: 0.5em;
-				text-indent: 0;
-			}
+		h2 {
+			color: $color4;
+			font-size: 1.2em;
+			line-height: 40px;
+		}
 
-			h2 {
-				color: $color4;
-				font-size: 1.2em;
-				line-height: 40px;
-			}
-
-			ul {
-				li {
-					a {
-						color: #000;
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					color: #000;
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				float: right;
-				display: block;
-				width: 10%;
-				border: 2px solid $color7;
-				margin: 0 0 0.5em 0.5em;
-				min-height: 150px;
+		figure.text-img {
+			float: right;
+			display: block;
+			width: 10%;
+			border: 2px solid $color7;
+			margin: 0 0 0.5em 0.5em;
+			min-height: 150px;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 
@@ -871,6 +862,8 @@ License: GNU General Public License v2 or later
 				padding: 0.5em 0;
 
 				form.search-form {
+					width: 98%;
+					margin: 0.5em auto;
 					label {
 						width: 90%;
 						display: block;
@@ -1346,10 +1339,10 @@ License: GNU General Public License v2 or later
 							width: auto;
 						}
 					}
-					img.attachment-featured-image{
-						width:auto;
-						margin:auto;
-						display:block;
+					img.attachment-featured-image {
+						width: auto;
+						margin: auto;
+						display: block;
 					}
 				}
 
@@ -1406,8 +1399,8 @@ License: GNU General Public License v2 or later
 				footer.entry-footer {
 					height: auto;
 					color: $color;
-					text-indent: 0.25em;
 					background-color: $colors;
+					padding-left: 0.25em;
 					clear: both;
 
 					span {
@@ -1462,15 +1455,14 @@ License: GNU General Public License v2 or later
 					display: block;
 					margin: 0 auto;
 
-
 					p {
 						color: $color4;
 						font-size: 1em;
 						line-height: 1.9em;
 						display: block;
 						margin: 0 auto;
-						width: 90%;
-						padding: 0.5em;
+						width: 96%;
+						padding: 0.25em;
 						//background-color: $color11;
 
 						a {
@@ -1557,28 +1549,27 @@ License: GNU General Public License v2 or later
 				/* Social media share buttons */
 				div.sharedaddy {
 					width: 100%;
-					margin: 3% auto;
+					margin-top: 5%;
+					display: block;
 
 					div.sd-sharing {
-						width:98%;
+						width: 98%;
 						display: flex;
 						margin: auto;
 						h3.sd-title {
 							font-size: 0.95em;
 							background-color: $color;
-							color:$font-color;
+							color: $font-color;
 							margin: 0;
 							outline: none;
 							width: 12%;
 							height: auto;
-							line-height:unset;
+							line-height: unset;
 						}
 
 						h3.sd-title::before {
 							border: none;
 							width: 10%;
-
-
 						}
 
 						div.sd-content {
@@ -1731,6 +1722,42 @@ License: GNU General Public License v2 or later
 					margin: 0;
 					list-style: none;
 
+					li.even,
+					li.pingback {
+						background-color: $colors;
+						padding: 0.25em;
+						margin-bottom: 0.5em;
+						div.comment-body {
+							margin: 0;
+							background-color: $color;
+							line-height: 30px;
+							text-indent: 0.2em;
+							a {
+								display: inline-block;
+								width: auto;
+								color: #000;
+							}
+						}
+					}
+
+					li.odd,
+					li.trackback {
+						background-color: $color7;
+						padding: 0.25em;
+						margin-bottom: 0.5em;
+						div.comment-body {
+							margin: 0;
+							background-color: $color;
+							line-height: 30px;
+							text-indent: 0.2em;
+							a {
+								display: inline-block;
+								width: auto;
+								color: #000;
+							}
+						}
+					}
+
 					li.comment {
 						padding: 0;
 
@@ -1743,7 +1770,7 @@ License: GNU General Public License v2 or later
 								margin: 0;
 
 								article.comment-body {
-									background-color: $color4;
+									//background-color: $color4;
 									footer.comment-meta {
 										height: 60px;
 										margin-top: 0;
@@ -1895,7 +1922,7 @@ License: GNU General Public License v2 or later
 									}
 									span.edit-link {
 										display: block;
-    						width: 30%;
+										width: 30%;
 										padding: 5px;
 										line-height: 5px;
 									}
@@ -2134,28 +2161,27 @@ License: GNU General Public License v2 or later
 						color: $color4;
 
 						&:hover {
-							font-weight:bold;
+							font-weight: bold;
 							color: $color11;
-							cursor:pointer;
+							cursor: pointer;
 						}
 					}
 				}
 
-				p.logged-in-as{
-					a{
+				p.logged-in-as {
+					a {
 						width: auto;
 						display: inline-block;
 						margin-right: 0.5em;
-						color:$color4;
-						&:active{
-							font-weight:bold;
+						color: $color4;
+						&:active {
+							font-weight: bold;
 						}
-						&:hover{
-							font-weight:bold;
-							cursor:pointer;
+						&:hover {
+							font-weight: bold;
+							cursor: pointer;
 						}
 					}
-
 				}
 
 				p.must-log-in {
@@ -2364,38 +2390,31 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		div.clashvibes-content {
-			margin: 0;
+		h1 {
+			margin-bottom: 0.5em;
 		}
 
-		article#clashvibes-text {
-			padding: 1em;
-			h1 {
-				margin-bottom: 0.5em;
-			}
+		h2 {
+			font-size: 1.15em;
+		}
 
-			h2 {
-				font-size: 1.15em;
-			}
-
-			ul {
-				li {
-					a {
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				width: 12%;
+		figure.text-img {
+			width: 12%;
 
-				margin: 0 0 0.5em 0.5em;
+			margin: 0 0 0.5em 0.5em;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 
@@ -2870,7 +2889,6 @@ License: GNU General Public License v2 or later
 				}
 
 				div.sharedaddy {
-
 					div.sd-sharing {
 						h3.sd-title {
 							font-size: 0.95em;
@@ -2888,7 +2906,6 @@ License: GNU General Public License v2 or later
 								li.share-facebook,
 								li.share-end {
 									padding: 0;
-
 								}
 							}
 						}
@@ -3321,38 +3338,31 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		div.clashvibes-content {
-			margin: 0;
+		h1 {
+			margin-bottom: 0.5em;
 		}
 
-		article#clashvibes-text {
-			padding: 1em;
-			h1 {
-				margin-bottom: 0.5em;
-			}
+		h2 {
+			font-size: 1em;
+		}
 
-			h2 {
-				font-size: 1em;
-			}
-
-			ul {
-				li {
-					a {
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				width: 13%;
+		figure.text-img {
+			width: 13%;
 
-				margin: 0 0 0.5em 0.5em;
+			margin: 0 0 0.5em 0.5em;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 
@@ -3813,7 +3823,6 @@ License: GNU General Public License v2 or later
 				}
 
 				div.sharedaddy {
-
 					div.sd-sharing {
 						h3.sd-title {
 							font-size: 0.9em;
@@ -4118,11 +4127,10 @@ License: GNU General Public License v2 or later
 				}
 
 				p.askimet_comment_form_privacy_notice {
-					font-size:0.9em;
+					font-size: 0.9em;
 
 					a {
 						margin: 0 0.25em;
-
 
 						&:hover {
 							background-color: $color4;
@@ -4270,38 +4278,31 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		div.clashvibes-content {
-			margin: 0;
+		h1 {
+			margin-bottom: 0.5em;
 		}
 
-		article#clashvibes-text {
-			padding: 1em;
-			h1 {
-				margin-bottom: 0.5em;
-			}
+		h2 {
+			font-size: 1em;
+		}
 
-			h2 {
-				font-size: 1em;
-			}
-
-			ul {
-				li {
-					a {
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				width: 14%;
+		figure.text-img {
+			width: 14%;
 
-				margin: 0 0 0.5em 0.5em;
+			margin: 0 0 0.5em 0.5em;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 
@@ -4730,12 +4731,11 @@ License: GNU General Public License v2 or later
 					}
 				}
 				div.sharedaddy {
-
 					div.sd-sharing {
-						width:98%;
+						width: 98%;
 						h3.sd-title {
 							font-size: 0.9em;
-							width:15%;
+							width: 15%;
 						}
 
 						h3.sd-title::before {
@@ -4743,7 +4743,7 @@ License: GNU General Public License v2 or later
 						}
 
 						div.sd-content {
-							width:86%;
+							width: 86%;
 							ul {
 								font-size: 0.85em;
 
@@ -5035,8 +5035,6 @@ License: GNU General Public License v2 or later
 					}
 				}
 
-
-
 				p.askimet_comment_form_privacy_notice {
 					text-align: center;
 					a {
@@ -5168,38 +5166,31 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		div.clashvibes-content {
-			margin: 0;
+		h1 {
+			margin-bottom: 0.5em;
 		}
 
-		article#clashvibes-text {
-			padding: 1em;
-			h1 {
-				margin-bottom: 0.5em;
-			}
+		h2 {
+			font-size: 1.2em;
+		}
 
-			h2 {
-				font-size: 1.2em;
-			}
-
-			ul {
-				li {
-					a {
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				width: 15%;
+		figure.text-img {
+			width: 15%;
 
-				margin: 0 0 0.5em 0.5em;
+			margin: 0 0 0.5em 0.5em;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 
@@ -6173,10 +6164,6 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		div.clashvibes-content {
-			padding: 0;
-		}
-
 		#secondary {
 			width: 250px;
 			position: fixed;
@@ -6489,12 +6476,12 @@ License: GNU General Public License v2 or later
 					}
 				}
 				div.sharedaddy {
-
+					margin-top: 7%;
 					div.sd-sharing {
-						width:98%;
+						width: 98%;
 						h3.sd-title {
 							font-size: 0.9em;
-							width:17%;
+							width: 17%;
 						}
 
 						h3.sd-title::before {
@@ -6502,7 +6489,7 @@ License: GNU General Public License v2 or later
 						}
 
 						div.sd-content {
-							width:82%;
+							width: 82%;
 							ul {
 								font-size: 0.85em;
 
@@ -6780,7 +6767,7 @@ License: GNU General Public License v2 or later
 				}
 
 				p.askimet_comment_form_privacy_notice {
-					font-size:0.8em;
+					font-size: 0.8em;
 					a {
 						margin: 0 0.25em;
 
@@ -6808,35 +6795,32 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		article#clashvibes-text {
-			padding: 1em;
-			h1 {
-				margin-bottom: 0.5em;
-			}
+		h1 {
+			margin-bottom: 0.5em;
+		}
 
-			h2 {
-				font-size: 1.2em;
-				text-align: center;
-			}
+		h2 {
+			font-size: 1.2em;
+			text-align: center;
+		}
 
-			ul {
-				li {
-					a {
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				width: 20%;
-				margin: 0 auto;
-				float: none;
+		figure.text-img {
+			width: 20%;
+			margin: 0 auto;
+			float: none;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 
@@ -7099,11 +7083,6 @@ License: GNU General Public License v2 or later
 					overflow: hidden;
 				}
 			}
-		}
-
-		/* --- Content --- */
-		div.clashvibes-content {
-			padding: 0;
 		}
 
 		#secondary {
@@ -7643,32 +7622,29 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		article#clashvibes-text {
-			padding: 1em;
-			h1 {
-				margin-bottom: 0.5em;
-			}
+		h1 {
+			margin-bottom: 0.5em;
+		}
 
-			h2 {
-				font-size: 1.2em;
-			}
+		h2 {
+			font-size: 1.2em;
+		}
 
-			ul {
-				li {
-					a {
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				width: 25%;
+		figure.text-img {
+			width: 25%;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 
@@ -7961,11 +7937,6 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		/* --- Content --- */
-		div.clashvibes-content {
-			padding: 0;
-		}
-
 		#secondary {
 			h1 {
 				position: relative;
@@ -8238,12 +8209,11 @@ License: GNU General Public License v2 or later
 					}
 				}
 				div.sharedaddy {
-
 					div.sd-sharing {
-						width:99%;
+						width: 99%;
 						h3.sd-title {
 							font-size: 0.9em;
-							width:20%;
+							width: 20%;
 						}
 
 						h3.sd-title::before {
@@ -8251,7 +8221,7 @@ License: GNU General Public License v2 or later
 						}
 
 						div.sd-content {
-							width:79%;
+							width: 79%;
 							ul {
 								font-size: 0.85em;
 
@@ -8525,7 +8495,7 @@ License: GNU General Public License v2 or later
 				}
 
 				p.askimet_comment_form_privacy_notice {
-					font-size:0.7em;
+					font-size: 0.7em;
 					a {
 						margin: 0 0.25em;
 
@@ -8553,32 +8523,29 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		article#clashvibes-text {
-			padding: 1em;
-			h1 {
-				margin-bottom: 0.5em;
-			}
+		h1 {
+			margin-bottom: 0.5em;
+		}
 
-			h2 {
-				font-size: 1.15em;
-			}
+		h2 {
+			font-size: 1.15em;
+		}
 
-			ul {
-				li {
-					a {
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				width: 26%;
+		figure.text-img {
+			width: 26%;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 
@@ -8835,10 +8802,6 @@ License: GNU General Public License v2 or later
 					overflow: hidden;
 				}
 			}
-		}
-
-		div.clashvibes-content {
-			padding: 0;
 		}
 
 		#secondary {
@@ -9137,32 +9100,29 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		article#clashvibes-text {
-			padding: 1em;
-			h1 {
-				margin-bottom: 0.5em;
-			}
+		h1 {
+			margin-bottom: 0.5em;
+		}
 
-			h2 {
-				font-size: 1.15em;
-			}
+		h2 {
+			font-size: 1.15em;
+		}
 
-			ul {
-				li {
-					a {
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				width: 28%;
+		figure.text-img {
+			width: 28%;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 
@@ -9408,10 +9368,6 @@ License: GNU General Public License v2 or later
 					overflow: hidden;
 				}
 			}
-		}
-
-		div.clashvibes-content {
-			padding: 0;
 		}
 
 		#secondary {
@@ -9685,12 +9641,10 @@ License: GNU General Public License v2 or later
 					}
 				}
 				div.sharedaddy {
-					margin: 5% auto;
 					div.sd-sharing {
-
 						h3.sd-title {
 							font-size: 0.85em;
-							width:22%;
+							width: 22%;
 						}
 
 						h3.sd-title::before {
@@ -9698,7 +9652,7 @@ License: GNU General Public License v2 or later
 						}
 
 						div.sd-content {
-							width:77%;
+							width: 77%;
 							ul {
 								font-size: 0.8em;
 
@@ -9743,34 +9697,32 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		article#clashvibes-text {
-			padding: 1em;
-			h1 {
-				margin-bottom: 0.5em;
-			}
+		h1 {
+			margin-bottom: 0.5em;
+		}
 
-			h2 {
-				font-size: 1.15em;
-			}
+		h2 {
+			font-size: 1.15em;
+		}
 
-			ul {
-				li {
-					a {
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				width: 32%;
+		figure.text-img {
+			width: 32%;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
+
 		#contactform {
 			width: 95%;
 
@@ -10043,10 +9995,6 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		div.clashvibes-content {
-			padding: 0;
-		}
-
 		#secondary {
 			h1 {
 				position: relative;
@@ -10292,7 +10240,6 @@ License: GNU General Public License v2 or later
 							margin: 0 auto;
 						}
 					}
-
 				}
 
 				footer.speaker-meta {
@@ -10315,12 +10262,10 @@ License: GNU General Public License v2 or later
 					}
 				}
 				div.sharedaddy {
-					margin: 5% auto;
 					div.sd-sharing {
-
 						h3.sd-title {
 							font-size: 0.8em;
-							width:25%;
+							width: 25%;
 						}
 
 						h3.sd-title::before {
@@ -10328,7 +10273,7 @@ License: GNU General Public License v2 or later
 						}
 
 						div.sd-content {
-							width:74%;
+							width: 74%;
 							ul {
 								font-size: 0.8em;
 
@@ -10650,32 +10595,29 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		article#clashvibes-text {
-			padding: 1em;
-			h1 {
-				margin-bottom: 0.5em;
-			}
+		h1 {
+			margin-bottom: 0.5em;
+		}
 
-			h2 {
-				font-size: 1.15em;
-			}
+		h2 {
+			font-size: 1.15em;
+		}
 
-			ul {
-				li {
-					a {
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				width: 33%;
+		figure.text-img {
+			width: 33%;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 
@@ -10937,10 +10879,6 @@ License: GNU General Public License v2 or later
 					overflow: hidden;
 				}
 			}
-		}
-
-		div.clashvibes-content {
-			padding: 0;
 		}
 
 		#secondary {
@@ -11542,32 +11480,29 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		article#clashvibes-text {
-			padding: 1em;
-			h1 {
-				margin-bottom: 0.5em;
-			}
+		h1 {
+			margin-bottom: 0.5em;
+		}
 
-			h2 {
-				font-size: 1.15em;
-			}
+		h2 {
+			font-size: 1.15em;
+		}
 
-			ul {
-				li {
-					a {
-						&:hover {
-							font-weight: bold;
-						}
+		ul {
+			li {
+				a {
+					&:hover {
+						font-weight: bold;
 					}
 				}
 			}
+		}
 
-			figure.text-img {
-				width: 35%;
+		figure.text-img {
+			width: 35%;
 
-				img {
-					width: 100%;
-				}
+			img {
+				width: 100%;
 			}
 		}
 

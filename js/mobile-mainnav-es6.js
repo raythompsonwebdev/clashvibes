@@ -1,23 +1,23 @@
-const toggleNav = document.querySelector( '#toggle-nav' );
+const toggleNav = document.querySelector('#toggle-nav');
 //main nav
-toggleNav.addEventListener( 'click', function (event) {
+toggleNav.addEventListener('click', function (event) {
 	event.preventDefault();
 
 	// create menu variables
-	let slideoutMenu = document.querySelector( '#cv-mobilenav' );
+	const slideoutMenu = document.querySelector('#cv-mobilenav');
 
-	let slideoutMenuHeight = slideoutMenu.offsetHeight;
+	const slideoutMenuHeight = slideoutMenu.offsetHeight;
 
 	// toggle open class
-	slideoutMenu.classList.toggle( 'open' );
+	slideoutMenu.classList.toggle('open');
 
 	slideoutMenu.style.transition = 'all 0.3s ease-in 0s';
 
 	// slide menu
-	if (slideoutMenu.classList.contains( 'open' )) {
+	if (slideoutMenu.classList.contains('open')) {
 		slideoutMenu.style.top = '0px';
 	} else {
 		slideoutMenu.style.transition = 'all 0.3s ease-in 0s';
 		slideoutMenu.style.top = -slideoutMenuHeight + 'px';
 	}
-})
+});

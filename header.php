@@ -150,4 +150,4 @@
 
 		</nav>
 
-<div class="clashvibes-content">
+<div class="page-content">

@@ -23,11 +23,11 @@
 	</header>
 
 	<!--featured Image-->
-	<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+	<a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
 			<?php if ( has_post_thumbnail() ) : ?>
 					<?php clashvibes_post_thumbnail(); ?>
 			<?php else : ?>
-			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+			<a class="post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" aria-hidden="true">
 			<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/sites/2/2020/12/nothing.jpg' ); ?>" alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
 			</a>
 			<?php endif; ?>

@@ -173,69 +173,8 @@ a {
 }
 
 /* WordPress Image Classes */
-img.centered {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.alignright {
-	float: right;
-	width: auto;
-	height: auto;
-}
-
-.alignleft {
-	float: left;
-	width: auto;
-	height: auto;
-}
-
-.aligncenter,
-div.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: auto;
-	height: auto;
-}
-
-.wp-caption {
-	border: 1px solid #ddd;
-	text-align: center;
-	background-color: #d4d4d4;
-	padding-top: 4px;
-	margin: 10px;
-	width: 100%;
-	clear: both;
-}
-
-.wp-caption img {
-	margin: 0;
-	padding: 0;
-	border: 0 none;
-}
-
-.wp-caption p.wp-caption-text {
-	font-size: 0.85em;
-	line-height: 1.214em;
-	padding: 0 4px 5px;
-	margin: 0;
-}
-
-.wp-block-button {
-	width: auto;
-}
-
-.wp-block-cover.alignleft {
-	margin-right: 0.5em;
-}
-
-.blocks-gallery-grid {
-	margin-right: 0.5em;
-}
-
-select#cat {
+select#cat,
+select#archives-dropdown--1 {
 	width: 100%;
 	line-height: 35px;
 	display: block;
@@ -243,6 +182,802 @@ select#cat {
 	margin: 0.5em 0;
 }
 
+#wp-calendar {
+	width: 100%;
+}
+
+#wp-calendar caption {
+	line-height: 40px;
+	font-weight: bold;
+}
+
+#wp-calendar tbody tr td {
+	text-align: center;
+}
+
+nav.wp-calendar-nav {
+	display: flex;
+	font-size: 1.1em;
+}
+
+nav.wp-calendar-nav span.wp-calendar-nav-prev {
+	width: 40%;
+}
+
+nav.wp-calendar-nav .pad {
+	width: 20%;
+}
+
+nav.wp-calendar-nav span.wp-calendar-nav-next {
+	width: 40%;
+}
+
+/* --------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+-------------------------------------------------------------- */
+/* --------------------------------------------------------------
+# Generic
+-------------------------------------------------------------- */
+/* Normalize
+--------------------------------------------- */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+	 ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+/* Sections
+	 ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+	display: block;
+}
+
+/**
+		* Correct the font size and margin on `h1` elements within `section` and
+		* `article` contexts in Chrome, Firefox, and Safari.
+		*/
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* Grouping content
+			========================================================================== */
+/**
+		* 1. Add the correct box sizing in Firefox.
+		* 2. Show the overflow in Edge and IE.
+		*/
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+	box-sizing: content-box;
+	overflow: visible;
+}
+
+/**
+		* 1. Correct the inheritance and scaling of font size in all browsers.
+		* 2. Correct the odd `em` font sizing in all browsers.
+		*/
+/* Text-level semantics
+			========================================================================== */
+/**
+		* Remove the gray background on active links in IE 10.
+		*/
+/**
+		* 1. Remove the bottom border in Chrome 57-
+		* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+		*/
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+
+/**
+		* Add the correct font weight in Chrome, Edge, and Safari.
+		*/
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+		* 1. Correct the inheritance and scaling of font size in all browsers.
+		* 2. Correct the odd `em` font sizing in all browsers.
+		*/
+code,
+kbd,
+samp {
+	font-family: monospace;
+	font-size: 1em;
+}
+
+/**
+		* Add the correct font size in all browsers.
+		*/
+small {
+	font-size: 80%;
+}
+
+/**
+		* Prevent `sub` and `sup` elements from affecting the line height in
+		* all browsers.
+		*/
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* Embedded content
+			========================================================================== */
+/**
+		* Remove the border on images inside links in IE 10.
+		*/
+/* Forms
+			========================================================================== */
+/**
+		* 1. Change the font styles in all browsers.
+		* 2. Remove the margin in Firefox and Safari.
+		*/
+button,
+input,
+optgroup,
+select {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+textarea {
+	width: 100%;
+	overflow: auto;
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+/**
+		* Show the overflow in IE.
+		* 1. Show the overflow in Edge.
+		*/
+button,
+input {
+	overflow: visible;
+}
+
+/**
+		* Remove the inheritance of text transform in Edge, Firefox, and IE.
+		* 1. Remove the inheritance of text transform in Firefox.
+		*/
+button,
+select {
+	text-transform: none;
+}
+
+/**
+		* Correct the inability to style clickable types in iOS and Safari.
+		*/
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+/**
+		* Remove the inner border and padding in Firefox.
+		*/
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+		* Restore the focus styles unset by the previous rule.
+		*/
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+		* Correct the padding in Firefox.
+		*/
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+		* 1. Correct the text wrapping in Edge and IE.
+		* 2. Correct the color inheritance from `fieldset` elements in IE.
+		* 3. Remove the padding so developers are not caught out when they zero out
+		*		`fieldset` elements in all browsers.
+		*/
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+/**
+		* Add the correct vertical alignment in Chrome, Firefox, and Opera.
+		*/
+progress {
+	vertical-align: baseline;
+}
+
+/**
+		* Remove the default vertical scrollbar in IE 10+.
+		*/
+/**
+		* 1. Add the correct box sizing in IE 10.
+		* 2. Remove the padding in IE 10.
+		*/
+[type='checkbox'],
+[type='radio'] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+/**
+		* Correct the cursor style of increment and decrement buttons in Chrome.
+		*/
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+		* 1. Correct the odd appearance in Chrome and Safari.
+		* 2. Correct the outline style in Safari.
+		*/
+[type='search'] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+/**
+		* Remove the inner padding in Chrome and Safari on macOS.
+		*/
+[type='search']::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+		* 1. Correct the inability to style clickable types in iOS and Safari.
+		* 2. Change font properties to `inherit` in Safari.
+		*/
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+/* Interactive
+			========================================================================== */
+/*
+		* Add the correct display in Edge, IE 10+, and Firefox.
+		*/
+details {
+	display: block;
+}
+
+/*
+		* Add the correct display in all browsers.
+		*/
+summary {
+	display: list-item;
+}
+
+/* Misc
+			========================================================================== */
+/**
+		* Add the correct display in IE 10+.
+		*/
+template {
+	display: none;
+}
+
+/**
+		* Add the correct display in IE 10.
+		*/
+[hidden] {
+	display: none;
+}
+
+/* Box sizing
+	--------------------------------------------- */
+/* Inherit box-sizing to more easily change it's value on a component level.
+	@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+/* --------------------------------------------------------------
+	# Base
+	-------------------------------------------------------------- */
+/* Typography
+	--------------------------------------------- */
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+	line-height: 25px;
+}
+
+pre {
+	background: #eee;
+	font-family: 'Courier 10 Pitch', courier, monospace;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+	font-size: 1em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: monaco, consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/* Elements
+	--------------------------------------------- */
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/* Links
+	--------------------------------------------- */
+/* Forms
+	--------------------------------------------- */
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+}
+
+button:hover,
+input[type='button']:hover,
+input[type='reset']:hover,
+input[type='submit']:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type='button']:active,
+input[type='button']:focus,
+input[type='reset']:active,
+input[type='reset']:focus,
+input[type='submit']:active,
+input[type='submit']:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='number']:focus,
+input[type='tel']:focus,
+input[type='range']:focus,
+input[type='date']:focus,
+input[type='month']:focus,
+input[type='week']:focus,
+input[type='time']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='color']:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+/* --------------------------------------------------------------
+	# Layouts
+	-------------------------------------------------------------- */
+/* --------------------------------------------------------------
+	# Components
+	-------------------------------------------------------------- */
+/* Navigation
+	--------------------------------------------- */
+.main-navigation {
+	display: block;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	display: block;
+	left: auto;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+.main-text .comment-navigation,
+.main-text .posts-navigation,
+.main-text .post-navigation {
+	margin: 0 0 1.5em;
+}
+
+.comment-navigation .nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
+	display: flex;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	flex: 1 0 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	text-align: end;
+	flex: 1 0 50%;
+}
+
+/* Posts and pages
+	--------------------------------------------- */
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+	line-height: 35px;
+}
+
+/* Comments
+	--------------------------------------------- */
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/* Widgets
+	--------------------------------------------- */
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/* Media
+	--------------------------------------------- */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/* Captions
+	--------------------------------------------- */
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*='wp-image-'] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/* Galleries
+	--------------------------------------------- */
+.gallery {
+	margin-bottom: 1.5em;
+	display: grid;
+	grid-gap: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	margin: 0;
+}
+
+.gallery-columns-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-columns-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-columns-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+	grid-template-columns: repeat(9, 1fr);
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/* --------------------------------------------------------------
+	# Plugins
+	-------------------------------------------------------------- */
+/* Jetpack infinite scroll
+	--------------------------------------------- */
+/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+
+/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/* --------------------------------------------------------------
+	# Utilities
+	-------------------------------------------------------------- */
+/* Accessibility
+	--------------------------------------------- */
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
@@ -252,18 +987,21 @@ select#cat {
 	margin: -1px;
 	overflow: hidden;
 	padding: 0;
-	position: absolute;
+	position: absolute !important;
 	width: 1px;
 	word-wrap: normal !important;
 }
 
 .screen-reader-text:focus {
-	background-color: #eee;
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	clip-path: none;
-	color: #444;
+	color: #21759b;
 	display: block;
-	font-size: 1em;
+	font-size: 0.875rem;
+	font-weight: 700;
 	height: auto;
 	left: 5px;
 	line-height: normal;
@@ -272,7 +1010,49 @@ select#cat {
 	top: 5px;
 	width: auto;
 	z-index: 100000;
-	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex='-1']:focus {
+	outline: 0;
+}
+
+/* Alignments
+	--------------------------------------------- */
+.alignleft {
+	/* rtl:ignore */
+	float: left;
+	/* rtl:ignore */
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+	/* rtl:ignore */
+	float: right;
+	/* rtl:ignore */
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+
+.alignwide {
+	max-width: calc(100vw - 2rem);
+	margin-right: -1rem;
+	margin-left: -1rem;
+}
+
+.alignfull {
+	max-width: 100vw;
+	margin-right: -2rem;
+	margin-left: -2rem;
 }
 
 @media only screen and (max-width: 1920px) {
@@ -326,7 +1106,6 @@ select#cat {
 		/* --- Content --- */
 		/* --- Error page --- */
 		/* --- Error page content --- */
-		/* front page */
 		/* login form */
 		/* front page banner */
 		/* front page top download section */
@@ -525,12 +1304,6 @@ select#cat {
 		color: #262626;
 		font-weight: bold;
 	}
-	#page div.clashvibes-content {
-		margin: 0;
-		height: auto;
-		background-color: #fff;
-		min-height: 600px;
-	}
 	#page h1 {
 		font-size: 1.5em;
 		line-height: 45px;
@@ -543,6 +1316,10 @@ select#cat {
 	#page header.page-header h1 {
 		font-size: 1.5em;
 	}
+	#page div.page-content {
+		height: auto;
+		background-color: #fff;
+	}
 	#page div.page-content p {
 		padding: 0;
 	}
@@ -553,7 +1330,7 @@ select#cat {
 	}
 	#page div.page-content ul li a {
 		color: #000;
-		width: 93%;
+		width: auto;
 		display: inline-block;
 		line-height: 30px;
 	}
@@ -591,26 +1368,23 @@ select#cat {
 		width: auto;
 		display: inline-block;
 	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		color: #262626;
 		margin-bottom: 0.5em;
 		text-indent: 0;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		color: #262626;
 		font-size: 1.2em;
 		line-height: 40px;
 	}
-	#page article#clashvibes-text ul li a {
+	#page ul li a {
 		color: #000;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		float: right;
 		display: block;
 		width: 10%;
@@ -618,7 +1392,7 @@ select#cat {
 		margin: 0 0 0.5em 0.5em;
 		min-height: 150px;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page #contactform {
@@ -1258,6 +2032,10 @@ select#cat {
 	}
 	#page #secondary section#clashvibes-login {
 		padding: 0.5em 0;
+	}
+	#page #secondary section#clashvibes-login form.search-form {
+		width: 98%;
+		margin: 0.5em auto;
 	}
 	#page #secondary section#clashvibes-login form.search-form label {
 		width: 90%;
@@ -2101,8 +2879,8 @@ select#cat {
 	#page #primary article.page footer.entry-footer {
 		height: auto;
 		color: #fff;
-		text-indent: 0.25em;
 		background-color: #253901;
+		padding-left: 0.25em;
 		clear: both;
 	}
 	#page #primary article.event footer.entry-footer span,
@@ -2217,8 +2995,8 @@ select#cat {
 		line-height: 1.9em;
 		display: block;
 		margin: 0 auto;
-		width: 90%;
-		padding: 0.5em;
+		width: 96%;
+		padding: 0.25em;
 	}
 	#page #primary article.event div.entry-content p a,
 	#page #primary article.event div.entry-summary p a,
@@ -2406,7 +3184,8 @@ select#cat {
 	#page #primary article.search-results div.sharedaddy,
 	#page #primary article.page div.sharedaddy {
 		width: 100%;
-		margin: 3% auto;
+		margin-top: 5%;
+		display: block;
 	}
 	#page #primary article.event div.sharedaddy div.sd-sharing,
 	#page #primary article.clash-videos div.sharedaddy div.sd-sharing,
@@ -2759,6 +3538,44 @@ select#cat {
 		margin: 0;
 		list-style: none;
 	}
+	#page #primary #comments ol.comment-list li.even,
+	#page #primary #comments ol.comment-list li.pingback {
+		background-color: #253901;
+		padding: 0.25em;
+		margin-bottom: 0.5em;
+	}
+	#page #primary #comments ol.comment-list li.even div.comment-body,
+	#page #primary #comments ol.comment-list li.pingback div.comment-body {
+		margin: 0;
+		background-color: #fff;
+		line-height: 30px;
+		text-indent: 0.2em;
+	}
+	#page #primary #comments ol.comment-list li.even div.comment-body a,
+	#page #primary #comments ol.comment-list li.pingback div.comment-body a {
+		display: inline-block;
+		width: auto;
+		color: #000;
+	}
+	#page #primary #comments ol.comment-list li.odd,
+	#page #primary #comments ol.comment-list li.trackback {
+		background-color: #658905;
+		padding: 0.25em;
+		margin-bottom: 0.5em;
+	}
+	#page #primary #comments ol.comment-list li.odd div.comment-body,
+	#page #primary #comments ol.comment-list li.trackback div.comment-body {
+		margin: 0;
+		background-color: #fff;
+		line-height: 30px;
+		text-indent: 0.2em;
+	}
+	#page #primary #comments ol.comment-list li.odd div.comment-body a,
+	#page #primary #comments ol.comment-list li.trackback div.comment-body a {
+		display: inline-block;
+		width: auto;
+		color: #000;
+	}
 	#page #primary #comments ol.comment-list li.comment {
 		padding: 0;
 	}
@@ -2769,9 +3586,6 @@ select#cat {
 	}
 	#page #primary #comments ol.comment-list li.comment ol.children li.odd {
 		margin: 0;
-	}
-	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body {
-		background-color: #262626;
 	}
 	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta {
 		height: 60px;
@@ -3327,26 +4141,20 @@ select#cat {
 	#page nav#cv-mainnav ul#menu-main li.menu-item a {
 		font-size: 0.9em;
 	}
-	#page div.clashvibes-content {
-		margin: 0;
-	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		margin-bottom: 0.5em;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		font-size: 1.15em;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		width: 12%;
 		margin: 0 0 0.5em 0.5em;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page div.results {
@@ -4587,26 +5395,20 @@ select#cat {
 	#page nav#cv-mainnav ul#menu-main li.menu-item .lastmenu {
 		border-right: none;
 	}
-	#page div.clashvibes-content {
-		margin: 0;
-	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		margin-bottom: 0.5em;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		font-size: 1em;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		width: 13%;
 		margin: 0 0 0.5em 0.5em;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page #contactform {
@@ -5698,26 +6500,20 @@ select#cat {
 	#page nav#cv-mainnav ul#menu-main li.menu-item .lastmenu {
 		border-right: none;
 	}
-	#page div.clashvibes-content {
-		margin: 0;
-	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		margin-bottom: 0.5em;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		font-size: 1em;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		width: 14%;
 		margin: 0 0 0.5em 0.5em;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page div.results {
@@ -6810,26 +7606,20 @@ select#cat {
 	#page nav#cv-mainnav ul#menu-main li.menu-item a {
 		font-size: 0.85em;
 	}
-	#page div.clashvibes-content {
-		margin: 0;
-	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		margin-bottom: 0.5em;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		font-size: 1.2em;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		width: 15%;
 		margin: 0 0 0.5em 0.5em;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page #contactform {
@@ -8008,9 +8798,6 @@ select#cat {
 	#page #clashvibes-banner #slider li {
 		overflow: hidden;
 	}
-	#page div.clashvibes-content {
-		padding: 0;
-	}
 	#page #secondary {
 		width: 250px;
 		position: fixed;
@@ -8632,6 +9419,14 @@ select#cat {
 		width: 100%;
 		font-size: 0.9em;
 	}
+	#page #primary article.event div.sharedaddy,
+	#page #primary article.clash-videos div.sharedaddy,
+	#page #primary article.clash-audio div.sharedaddy,
+	#page #primary article.post div.sharedaddy,
+	#page #primary article.search-results div.sharedaddy,
+	#page #primary article.page div.sharedaddy {
+		margin-top: 7%;
+	}
 	#page #primary article.event div.sharedaddy div.sd-sharing,
 	#page #primary article.clash-videos div.sharedaddy div.sd-sharing,
 	#page #primary article.clash-audio div.sharedaddy div.sd-sharing,
@@ -8925,25 +9720,22 @@ select#cat {
 	#page #primary #comments p.nocomments {
 		font-size: 1.1em;
 	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		margin-bottom: 0.5em;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		font-size: 1.2em;
 		text-align: center;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		width: 20%;
 		margin: 0 auto;
 		float: none;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page div.results {
@@ -9149,7 +9941,6 @@ select#cat {
 	}
 	#page {
 		max-width: 100%;
-		/* --- Content --- */
 		/* ----- End of Footer ----- */
 	}
 	#page header.site-header {
@@ -9198,9 +9989,6 @@ select#cat {
 	}
 	#page #clashvibes-banner #slider li {
 		overflow: hidden;
-	}
-	#page div.clashvibes-content {
-		padding: 0;
 	}
 	#page #secondary {
 		position: fixed;
@@ -9894,22 +10682,19 @@ select#cat {
 	#page #primary #comments p.nocomments {
 		font-size: 1.1em;
 	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		margin-bottom: 0.5em;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		font-size: 1.2em;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		width: 25%;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page #contactform {
@@ -10188,7 +10973,6 @@ select#cat {
 	}
 	#page {
 		max-width: 100%;
-		/* --- Content --- */
 	}
 	#page header.site-header {
 		height: 60px;
@@ -10232,9 +11016,6 @@ select#cat {
 	}
 	#page #clashvibes-banner #slider li {
 		overflow: hidden;
-	}
-	#page div.clashvibes-content {
-		padding: 0;
 	}
 	#page #secondary h1 {
 		position: relative;
@@ -10987,22 +11768,19 @@ select#cat {
 	#page #primary #comments p.nocomments {
 		font-size: 1.1em;
 	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		margin-bottom: 0.5em;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		font-size: 1.15em;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		width: 26%;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page div.results {
@@ -11306,9 +12084,6 @@ select#cat {
 	}
 	#page #clashvibes-banner #slider li {
 		overflow: hidden;
-	}
-	#page div.clashvibes-content {
-		padding: 0;
 	}
 	#page #secondary h1 {
 		position: relative;
@@ -11878,22 +12653,19 @@ select#cat {
 		line-height: 20px;
 		padding: 1em 0.5em;
 	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		margin-bottom: 0.5em;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		font-size: 1.15em;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		width: 28%;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page div.results {
@@ -12182,9 +12954,6 @@ select#cat {
 	}
 	#page #clashvibes-banner #slider li {
 		overflow: hidden;
-	}
-	#page div.clashvibes-content {
-		padding: 0;
 	}
 	#page #secondary h1 {
 		position: relative;
@@ -12664,14 +13433,6 @@ select#cat {
 	#page #primary article.page footer.speaker-meta ul.post-meta p {
 		width: 100%;
 	}
-	#page #primary article.event div.sharedaddy,
-	#page #primary article.clash-videos div.sharedaddy,
-	#page #primary article.clash-audio div.sharedaddy,
-	#page #primary article.post div.sharedaddy,
-	#page #primary article.search-results div.sharedaddy,
-	#page #primary article.page div.sharedaddy {
-		margin: 5% auto;
-	}
 	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title,
 	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title,
 	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title,
@@ -12755,22 +13516,19 @@ select#cat {
 	#page #primary .navigation .nav-links .nav-previous a:active {
 		background-color: #658905;
 	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		margin-bottom: 0.5em;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		font-size: 1.15em;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		width: 32%;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page #contactform {
@@ -13028,9 +13786,6 @@ select#cat {
 	}
 	#page #clashvibes-banner #slider li {
 		overflow: hidden;
-	}
-	#page div.clashvibes-content {
-		padding: 0;
 	}
 	#page #secondary h1 {
 		position: relative;
@@ -13495,14 +14250,6 @@ select#cat {
 	#page #primary article.page footer.speaker-meta ul.post-meta p {
 		width: 100%;
 	}
-	#page #primary article.event div.sharedaddy,
-	#page #primary article.clash-videos div.sharedaddy,
-	#page #primary article.clash-audio div.sharedaddy,
-	#page #primary article.post div.sharedaddy,
-	#page #primary article.search-results div.sharedaddy,
-	#page #primary article.page div.sharedaddy {
-		margin: 5% auto;
-	}
 	#page #primary article.event div.sharedaddy div.sd-sharing h3.sd-title,
 	#page #primary article.clash-videos div.sharedaddy div.sd-sharing h3.sd-title,
 	#page #primary article.clash-audio div.sharedaddy div.sd-sharing h3.sd-title,
@@ -13795,22 +14542,19 @@ select#cat {
 	#page #primary .navigation .nav-links .nav-previous a:active {
 		background-color: #658905;
 	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		margin-bottom: 0.5em;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		font-size: 1.15em;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		width: 33%;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page div.results {
@@ -14069,9 +14813,6 @@ select#cat {
 	}
 	#page #clashvibes-banner #slider li {
 		overflow: hidden;
-	}
-	#page div.clashvibes-content {
-		padding: 0;
 	}
 	#page #secondary h1 {
 		position: relative;
@@ -14810,22 +15551,19 @@ select#cat {
 	#page #primary .navigation .nav-links .nav-previous a:active {
 		background-color: #658905;
 	}
-	#page article#clashvibes-text {
-		padding: 1em;
-	}
-	#page article#clashvibes-text h1 {
+	#page h1 {
 		margin-bottom: 0.5em;
 	}
-	#page article#clashvibes-text h2 {
+	#page h2 {
 		font-size: 1.15em;
 	}
-	#page article#clashvibes-text ul li a:hover {
+	#page ul li a:hover {
 		font-weight: bold;
 	}
-	#page article#clashvibes-text figure.text-img {
+	#page figure.text-img {
 		width: 35%;
 	}
-	#page article#clashvibes-text figure.text-img img {
+	#page figure.text-img img {
 		width: 100%;
 	}
 	#page div.results {

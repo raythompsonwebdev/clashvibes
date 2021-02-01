@@ -41,7 +41,7 @@ get_header();
 					<article class="events_box">
 
 						<figure class="events">
-						<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+						<a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
 							<?php the_post_thumbnail( 'event-image' ); ?>
 			</a>
 							<figcaption class="event-text">
@@ -51,7 +51,7 @@ get_header();
 
 						</figure>
 
-						<a href="<?php the_permalink(); ?>" id="event-submit-btn">See details</a>
+						<a href="<?php echo esc_url( get_permalink() ); ?>" id="event-submit-btn">See details</a>
 
 					</article>
 
@@ -88,7 +88,5 @@ get_header();
 
 
 </div>
-
-
 
 <?php get_footer(); ?>

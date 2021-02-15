@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-02-01T02:23:42+00:00\n"
+"POT-Creation-Date: 2021-02-15T20:53:36+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: clashvibes\n"
@@ -106,7 +106,7 @@ msgstr ""
 
 #: front-page.php:72
 #: front-page.php:154
-#: page-clashaudio.php:61
+#: page-clashaudio.php:60
 msgid "Listen"
 msgstr ""
 
@@ -153,27 +153,27 @@ msgstr ""
 msgid "video-nav"
 msgstr ""
 
-#: functions.php:241
+#: functions.php:238
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:243
+#: functions.php:240
 msgid "The primary widget area"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:257
 msgid "Audio-Nav"
 msgstr ""
 
-#: functions.php:262
+#: functions.php:259
 msgid "Audio Side bar"
 msgstr ""
 
-#: functions.php:278
+#: functions.php:275
 msgid "Video-Nav"
 msgstr ""
 
-#: functions.php:280
+#: functions.php:277
 msgid "Video Side bar"
 msgstr ""
 
@@ -300,7 +300,7 @@ msgstr ""
 msgid "clashaudio"
 msgstr ""
 
-#: page-clashaudio.php:82
+#: page-clashaudio.php:81
 msgid "Sorry! No Audio clashes to display."
 msgstr ""
 
@@ -374,7 +374,7 @@ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: taxonomy.php:82
-#: template-parts/content-page.php:18
+#: template-parts/content-page.php:14
 #: template-parts/content.php:67
 msgid "Pages:"
 msgstr ""

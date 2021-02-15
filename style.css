@@ -162,14 +162,17 @@ a {
 
 .sticky {
 	margin: 0;
+	display: block;
 }
 
 .gallery-caption {
 	font-size: 1em;
+	display: block;
 }
 
 .bypostauthor {
 	font-size: 1em;
+	display: block;
 }
 
 /* WordPress Image Classes */
@@ -238,23 +241,31 @@ nav.wp-calendar-nav span.wp-calendar-nav-next {
 	- Accessibility
 	- Alignments
 -------------------------------------------------------------- */
+
 /* --------------------------------------------------------------
 # Generic
 -------------------------------------------------------------- */
+
 /* Normalize
 --------------------------------------------- */
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
 /* Document
 	 ========================================================================== */
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+
 /* Sections
 	 ========================================================================== */
+
 /**
  * Remove the margin in all browsers.
  */
+
 /**
  * Render the `main` element consistently in IE.
  */
@@ -273,6 +284,7 @@ h1 {
 
 /* Grouping content
 			========================================================================== */
+
 /**
 		* 1. Add the correct box sizing in Firefox.
 		* 2. Show the overflow in Edge and IE.
@@ -290,11 +302,14 @@ hr {
 		* 1. Correct the inheritance and scaling of font size in all browsers.
 		* 2. Correct the odd `em` font sizing in all browsers.
 		*/
+
 /* Text-level semantics
 			========================================================================== */
+
 /**
 		* Remove the gray background on active links in IE 10.
 		*/
+
 /**
 		* 1. Remove the bottom border in Chrome 57-
 		* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -353,11 +368,14 @@ sup {
 
 /* Embedded content
 			========================================================================== */
+
 /**
 		* Remove the border on images inside links in IE 10.
 		*/
+
 /* Forms
 			========================================================================== */
+
 /**
 		* 1. Change the font styles in all browsers.
 		* 2. Remove the margin in Firefox and Safari.
@@ -462,6 +480,7 @@ progress {
 /**
 		* Remove the default vertical scrollbar in IE 10+.
 		*/
+
 /**
 		* 1. Add the correct box sizing in IE 10.
 		* 2. Remove the padding in IE 10.
@@ -507,6 +526,7 @@ progress {
 
 /* Interactive
 			========================================================================== */
+
 /*
 		* Add the correct display in Edge, IE 10+, and Firefox.
 		*/
@@ -523,6 +543,7 @@ summary {
 
 /* Misc
 			========================================================================== */
+
 /**
 		* Add the correct display in IE 10+.
 		*/
@@ -539,11 +560,14 @@ template {
 
 /* Box sizing
 	--------------------------------------------- */
+
 /* Inherit box-sizing to more easily change it's value on a component level.
 	@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
 /* --------------------------------------------------------------
 	# Base
 	-------------------------------------------------------------- */
+
 /* Typography
 	--------------------------------------------- */
 button,
@@ -646,6 +670,7 @@ table {
 
 /* Links
 	--------------------------------------------- */
+
 /* Forms
 	--------------------------------------------- */
 button,
@@ -727,9 +752,11 @@ select {
 /* --------------------------------------------------------------
 	# Layouts
 	-------------------------------------------------------------- */
+
 /* --------------------------------------------------------------
 	# Components
 	-------------------------------------------------------------- */
+
 /* Navigation
 	--------------------------------------------- */
 .main-navigation {
@@ -787,7 +814,6 @@ select {
 .main-navigation.toggled ul {
 	display: block;
 }
-
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
@@ -824,10 +850,6 @@ select {
 
 /* Posts and pages
 	--------------------------------------------- */
-.sticky {
-	display: block;
-}
-
 .post,
 .page {
 	margin: 0 0 1.5em;
@@ -853,10 +875,6 @@ select {
 	--------------------------------------------- */
 .comment-content a {
 	word-wrap: break-word;
-}
-
-.bypostauthor {
-	display: block;
 }
 
 /* Widgets
@@ -953,15 +971,13 @@ select {
 	grid-template-columns: repeat(9, 1fr);
 }
 
-.gallery-caption {
-	display: block;
-}
-
 /* --------------------------------------------------------------
 	# Plugins
 	-------------------------------------------------------------- */
+
 /* Jetpack infinite scroll
 	--------------------------------------------- */
+
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
@@ -976,8 +992,10 @@ select {
 /* --------------------------------------------------------------
 	# Utilities
 	-------------------------------------------------------------- */
+
 /* Accessibility
 	--------------------------------------------- */
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
@@ -1022,6 +1040,7 @@ select {
 .alignleft {
 	/* rtl:ignore */
 	float: left;
+
 	/* rtl:ignore */
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
@@ -1030,6 +1049,7 @@ select {
 .alignright {
 	/* rtl:ignore */
 	float: right;
+
 	/* rtl:ignore */
 	margin-left: 1.5em;
 	margin-bottom: 1.5em;
@@ -1054,11 +1074,11 @@ select {
 	margin-right: -2rem;
 	margin-left: -2rem;
 }
-
 @media only screen and (max-width: 1920px) {
 	#tog-menu {
 		display: none;
 	}
+
 	/* Text meant only for screen readers. */
 	.screen-reader-text {
 		border: 0;
@@ -1090,8 +1110,10 @@ select {
 		top: 5px;
 		width: auto;
 		z-index: 100000;
+
 		/* Above WP toolbar. */
 	}
+
 	/* page container */
 	#page {
 		max-width: 88%;
@@ -1102,15 +1124,25 @@ select {
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
+
 		/* navigation */
+
 		/* --- Content --- */
+
 		/* --- Error page --- */
+
 		/* --- Error page content --- */
+
 		/* login form */
+
 		/* front page banner */
+
 		/* front page top download section */
+
 		/* --- Left Column--- */
+
 		/* --- Right Column--- */
+
 		/* ----- Footer ----- */
 	}
 	#page header.site-header {
@@ -1203,6 +1235,7 @@ select {
 		text-shadow: 1px 1px 1px #262626;
 		width: 100%;
 		height: 40px;
+		text-align: left;
 	}
 	#page header.site-header .site-branding #clashvibes-title h2.site-description {
 		text-indent: 0.5em;
@@ -1216,6 +1249,7 @@ select {
 		clear: left;
 		text-shadow: 0.5px 0.5px 0.5px #262626;
 		margin: 0;
+		text-align: left;
 	}
 	#page header.site-header aside#socialmediatop {
 		width: 25%;
@@ -1234,17 +1268,21 @@ select {
 		width: 23.5%;
 		text-align: center;
 	}
-	#page header.site-header aside#socialmediatop a.social-icon span {
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-twitter,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-pinterest,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-facebook,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-instagram {
 		display: block;
-		height: 100%;
-	}
-	#page header.site-header aside#socialmediatop a.social-icon span i,
-	#page header.site-header aside#socialmediatop a.social-icon span svg {
 		font-size: 1.4em;
-		display: block;
-		height: 100%;
 		line-height: 40px;
 		margin: auto;
+	}
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-twitter:hover,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-pinterest:hover,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-facebook:hover,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-instagram:hover {
+		color: #3a9a00;
+		font-weight: bold;
 	}
 	#page nav#cv-mobilenav {
 		display: none;
@@ -1318,7 +1356,7 @@ select {
 		font-size: 1.5em;
 	}
 	#page div.page-content {
-		height: auto;
+		min-height: 85vh;
 		background-color: #fff;
 	}
 	#page div.page-content p {
@@ -1334,6 +1372,10 @@ select {
 		width: auto;
 		display: inline-block;
 		line-height: 30px;
+	}
+	#page div.page-content .wp-block-image {
+		width: 20%;
+		margin: 1em auto;
 	}
 	#page div.page-content .search-form {
 		width: 50%;
@@ -2024,6 +2066,7 @@ select {
 		width: 21%;
 		list-style: none;
 		display: block;
+
 		/* side bar navigation blog and custom posts */
 	}
 	#page #secondary section#clashvibes-login {
@@ -2113,7 +2156,8 @@ select {
 		margin: 0.5em 0;
 		height: auto;
 	}
-	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::before, #page #secondary section.secondary_column_box nav.menu-video-nav-container ul::after,
+	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::before,
+	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::after,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-audio_nav::before,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-audio_nav::after,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-video_nav::before,
@@ -2233,7 +2277,8 @@ select {
 		margin: 0.5em 0;
 		height: auto;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before,
+	#page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -2427,12 +2472,19 @@ select {
 		color: #262626;
 		background-color: #fff;
 		margin-bottom: 1%;
+
 		/* --- blog image--- */
+
 		/* --- custom post images--- */
+
 		/* custom post header */
+
 		/* blog footer */
+
 		/* regular post entry */
+
 		/* custom-post-footer */
+
 		/* Social media share buttons */
 	}
 	#page #primary article.event iframe,
@@ -2966,7 +3018,49 @@ select {
 	#page #primary article.page div.entry-attachment {
 		width: 98%;
 		display: block;
-		margin: 0 auto;
+		margin: 0.5em auto;
+	}
+	#page #primary article.event div.entry-content .vsel-content,
+	#page #primary article.event div.entry-summary .vsel-content,
+	#page #primary article.event div.entry-attachment .vsel-content,
+	#page #primary article.clash-videos div.entry-content .vsel-content,
+	#page #primary article.clash-videos div.entry-summary .vsel-content,
+	#page #primary article.clash-videos div.entry-attachment .vsel-content,
+	#page #primary article.clash-audio div.entry-content .vsel-content,
+	#page #primary article.clash-audio div.entry-summary .vsel-content,
+	#page #primary article.clash-audio div.entry-attachment .vsel-content,
+	#page #primary article.post div.entry-content .vsel-content,
+	#page #primary article.post div.entry-summary .vsel-content,
+	#page #primary article.post div.entry-attachment .vsel-content,
+	#page #primary article.search-results div.entry-content .vsel-content,
+	#page #primary article.search-results div.entry-summary .vsel-content,
+	#page #primary article.search-results div.entry-attachment .vsel-content,
+	#page #primary article.page div.entry-content .vsel-content,
+	#page #primary article.page div.entry-summary .vsel-content,
+	#page #primary article.page div.entry-attachment .vsel-content {
+		clear: both;
+	}
+	#page #primary article.event div.entry-content .vsel-content .vsel-meta,
+	#page #primary article.event div.entry-summary .vsel-content .vsel-meta,
+	#page #primary article.event div.entry-attachment .vsel-content .vsel-meta,
+	#page #primary article.clash-videos div.entry-content .vsel-content .vsel-meta,
+	#page #primary article.clash-videos div.entry-summary .vsel-content .vsel-meta,
+	#page #primary article.clash-videos div.entry-attachment .vsel-content .vsel-meta,
+	#page #primary article.clash-audio div.entry-content .vsel-content .vsel-meta,
+	#page #primary article.clash-audio div.entry-summary .vsel-content .vsel-meta,
+	#page #primary article.clash-audio div.entry-attachment .vsel-content .vsel-meta,
+	#page #primary article.post div.entry-content .vsel-content .vsel-meta,
+	#page #primary article.post div.entry-summary .vsel-content .vsel-meta,
+	#page #primary article.post div.entry-attachment .vsel-content .vsel-meta,
+	#page #primary article.search-results div.entry-content .vsel-content .vsel-meta,
+	#page #primary article.search-results div.entry-summary .vsel-content .vsel-meta,
+	#page #primary article.search-results div.entry-attachment .vsel-content .vsel-meta,
+	#page #primary article.page div.entry-content .vsel-content .vsel-meta,
+	#page #primary article.page div.entry-summary .vsel-content .vsel-meta,
+	#page #primary article.page div.entry-attachment .vsel-content .vsel-meta {
+		width: 100%;
+		float: none;
+		text-align: center;
 	}
 	#page #primary article.event div.entry-content p,
 	#page #primary article.event div.entry-summary p,
@@ -4063,17 +4157,20 @@ select {
 		height: 100%;
 		line-height: 50px;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
 		color: #fff;
 		font-size: 1.6em;
 		line-height: 50px;
-		display: block;
 		text-align: center;
 	}
-	#page footer.site-footer ul#social-media-box li a span i:hover {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
 		color: #3a9a00;
 		font-weight: bold;
 	}
@@ -4093,11 +4190,12 @@ select {
 		font-weight: bold;
 	}
 }
-
 @media only screen and (max-width: 1440px) {
 	#page {
 		max-width: 88%;
+
 		/* front page banner */
+
 		/* front page top download section */
 	}
 	#page header.site-header {
@@ -4116,13 +4214,14 @@ select {
 	#page header.site-header aside#socialmediatop {
 		width: 25%;
 	}
-	#page header.site-header aside#socialmediatop a {
+	#page header.site-header aside#socialmediatop a.social-icon {
 		width: 23.5%;
 	}
-	#page header.site-header aside#socialmediatop a span {
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-twitter,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-pinterest,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-facebook,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-instagram {
 		display: block;
-	}
-	#page header.site-header aside#socialmediatop a span i {
 		font-size: 1.25em;
 	}
 	#page nav#cv-mainnav {
@@ -4488,6 +4587,7 @@ select {
 	#page #primary article.search-results,
 	#page #primary article.page {
 		display: block;
+
 		/* --- custom post images--- */
 	}
 	#page #primary article.event h1,
@@ -5331,15 +5431,19 @@ select {
 	#page footer.site-footer ul#social-media-box li a {
 		line-height: 50px;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
-		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		font-size: 1.5em;
-		line-height: 50px;
+	}
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
+		color: #3a9a00;
 	}
 }
-
 @media only screen and (max-width: 1280px) {
 	#page {
 		max-width: 92%;
@@ -5369,10 +5473,11 @@ select {
 	#page header.site-header aside#socialmediatop {
 		width: 25%;
 	}
-	#page header.site-header aside#socialmediatop a span {
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-twitter,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-pinterest,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-facebook,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-instagram {
 		display: block;
-	}
-	#page header.site-header aside#socialmediatop a span i {
 		font-size: 1.2em;
 	}
 	#page nav#cv-mainnav {
@@ -5733,6 +5838,7 @@ select {
 	#page #primary {
 		padding: 1%;
 		width: 76%;
+
 		/* post navigation */
 	}
 	#page #primary h1 {
@@ -5758,6 +5864,7 @@ select {
 	#page #primary article.search-results,
 	#page #primary article.page {
 		display: block;
+
 		/* --- custom post images--- */
 	}
 	#page #primary article.event header.entry-header,
@@ -6432,15 +6539,19 @@ select {
 	#page footer.site-footer ul#social-media-box li a {
 		line-height: 50px;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
-		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		font-size: 1.4em;
-		line-height: 50px;
+	}
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
+		color: #3a9a00;
 	}
 }
-
 @media only screen and (max-width: 1024px) {
 	#page {
 		max-width: 98%;
@@ -6471,13 +6582,14 @@ select {
 	#page header.site-header aside#socialmediatop {
 		width: 25%;
 	}
-	#page header.site-header aside#socialmediatop a {
+	#page header.site-header aside#socialmediatop a.social-icon {
 		width: 23.5%;
 	}
-	#page header.site-header aside#socialmediatop a span {
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-twitter,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-pinterest,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-facebook,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-instagram {
 		display: block;
-	}
-	#page header.site-header aside#socialmediatop a span i {
 		font-size: 1.1em;
 	}
 	#page nav#cv-mainnav {
@@ -6817,6 +6929,7 @@ select {
 	#page #primary article.search-results,
 	#page #primary article.page {
 		display: block;
+
 		/* --- custom post images--- */
 	}
 	#page #primary article.event h1,
@@ -6849,7 +6962,7 @@ select {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
@@ -7553,15 +7666,19 @@ select {
 	#page footer.site-footer ul#social-media-box li a {
 		line-height: 50px;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
-		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		font-size: 1.3em;
-		line-height: 50px;
+	}
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
+		color: #3a9a00;
 	}
 }
-
 @media only screen and (max-width: 800px) {
 	#page {
 		max-width: 98%;
@@ -7581,13 +7698,14 @@ select {
 	#page header.site-header .site-branding #clashvibes-title h2.site-description {
 		font-size: 0.7em;
 	}
-	#page header.site-header aside#socialmediatop a {
+	#page header.site-header aside#socialmediatop a.social-icon {
 		width: 23.5%;
 	}
-	#page header.site-header aside#socialmediatop a span {
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-twitter,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-pinterest,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-facebook,
+	#page header.site-header aside#socialmediatop a.social-icon span.dashicons-instagram {
 		display: block;
-	}
-	#page header.site-header aside#socialmediatop a span i {
 		font-size: 1em;
 	}
 	#page nav#cv-mainnav {
@@ -7604,6 +7722,7 @@ select {
 	}
 	#page h1 {
 		margin-bottom: 0.5em;
+		text-align: center;
 	}
 	#page h2 {
 		font-size: 1.2em;
@@ -7637,18 +7756,8 @@ select {
 	#page #contactform div.wpcf7 form p input[type='submit']:hover {
 		background-color: #256b40;
 	}
-	#page h2 {
-		font-size: 1.2em;
-	}
 	#page ul li a:hover {
 		font-weight: bold;
-	}
-	#page figure.text-img {
-		width: 15%;
-		margin: 0 0 0.5em 0.5em;
-	}
-	#page figure.text-img img {
-		width: 100%;
 	}
 	#page div.results {
 		padding: 0;
@@ -7973,6 +8082,7 @@ select {
 	#page #primary article.search-results,
 	#page #primary article.page {
 		display: block;
+
 		/* blog footer */
 	}
 	#page #primary article.event h1,
@@ -8005,7 +8115,7 @@ select {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 0.9em;
+		font-size: 1.1em;
 	}
 	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
@@ -8091,7 +8201,7 @@ select {
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.posted-on,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.byline,
 	#page #primary article.page header.entry-header div.entry-meta .meta-content span.updated-on {
-		font-size: 0.8em;
+		font-size: 0.75em;
 	}
 	#page #primary article.event a.post-thumbnail,
 	#page #primary article.event figure.post-thumbnail,
@@ -8536,7 +8646,7 @@ select {
 		display: inline;
 	}
 	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
-		font-size: 0.9em;
+		font-size: 0.85em;
 	}
 	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
 		color: #ebeadd;
@@ -8657,12 +8767,17 @@ select {
 	#page footer.site-footer ul#social-media-box li a {
 		line-height: 50px;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
-		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		font-size: 1.2em;
-		line-height: 50px;
+	}
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
+		color: #3a9a00;
 	}
 }
 
@@ -8710,7 +8825,7 @@ select {
 		left: 100vw;
 	}
 	#page {
-		max-width: 100%;
+		max-width: 96%;
 		margin: 0;
 	}
 	#page header.site-header {
@@ -8781,6 +8896,10 @@ select {
 		background-color: #fff;
 		color: #262626;
 	}
+	#page div.page-content {
+		min-height: unset;
+		height: auto;
+	}
 	#page #clashvibes-banner {
 		width: 99%;
 		height: 300px;
@@ -8828,7 +8947,8 @@ select {
 	#page #secondary section.secondary_column_box nav.menu-audio-nav-container ul#menu-video_nav {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::before, #page #secondary section.secondary_column_box nav.menu-video-nav-container ul::after,
+	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::before,
+	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul::after,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-audio_nav::before,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-audio_nav::after,
 	#page #secondary section.secondary_column_box nav.menu-video-nav-container ul#menu-video_nav::before,
@@ -8906,7 +9026,8 @@ select {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before,
+	#page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -8957,6 +9078,7 @@ select {
 	#page #primary {
 		width: 100%;
 		float: none;
+
 		/* blog */
 	}
 	#page #primary h1 {
@@ -9002,7 +9124,7 @@ select {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 1.1em;
+		font-size: 1em;
 		text-indent: 0;
 		text-align: center;
 		height: 40px;
@@ -9898,15 +10020,19 @@ select {
 	#page footer.site-footer ul#social-media-box li {
 		height: 50px;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
-		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		font-size: 1.5em;
-		line-height: 50px;
+	}
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
+		color: #3a9a00;
 	}
 }
-
 @media only screen and (max-width: 640px) {
 	#tog-menu {
 		width: 25%;
@@ -9933,7 +10059,8 @@ select {
 		left: 100vw;
 	}
 	#page {
-		max-width: 100%;
+		max-width: 96%;
+
 		/* ----- End of Footer ----- */
 	}
 	#page header.site-header {
@@ -10066,7 +10193,8 @@ select {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before,
+	#page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -10936,15 +11064,19 @@ select {
 		width: 100%;
 		height: 100%;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
-		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		font-size: 1.4em;
-		line-height: 50px;
+	}
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
+		color: #3a9a00;
 	}
 }
-
 @media only screen and (max-width: 536px) {
 	#tog-menu {
 		width: 25%;
@@ -10965,7 +11097,7 @@ select {
 		left: 100vw;
 	}
 	#page {
-		max-width: 100%;
+		max-width: 96%;
 	}
 	#page header.site-header {
 		height: 60px;
@@ -11089,7 +11221,8 @@ select {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before,
+	#page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -11131,6 +11264,7 @@ select {
 	}
 	#page #primary {
 		width: 100%;
+
 		/* blog */
 	}
 	#page #primary h1 {
@@ -11172,7 +11306,7 @@ select {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 0.9em;
+		font-size: 0.95em;
 	}
 	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
@@ -11196,7 +11330,7 @@ select {
 	#page #primary article.post header.entry-header h2.entry-title,
 	#page #primary article.search-results header.entry-header h2.entry-title,
 	#page #primary article.page header.entry-header h2.entry-title {
-		font-size: 1em;
+		font-size: 0.9em;
 	}
 	#page #primary article.event header.entry-header h2.entry-title a,
 	#page #primary article.clash-videos header.entry-header h2.entry-title a,
@@ -11634,7 +11768,7 @@ select {
 		display: inline;
 	}
 	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p {
-		font-size: 0.75em;
+		font-size: 0.8em;
 	}
 	#page #primary #comments ol.comment-list li.comment ol.children li.odd article.comment-body .comment-content p a {
 		background-color: #ebeadd;
@@ -11680,7 +11814,7 @@ select {
 		display: inline;
 	}
 	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p {
-		font-size: 0.75em;
+		font-size: 0.8em;
 	}
 	#page #primary #comments ol.comment-list li.comment article.comment-body .comment-content p a:hover {
 		color: #ebeadd;
@@ -12003,12 +12137,17 @@ select {
 		width: 100%;
 		height: 100%;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
-		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		font-size: 1.4em;
-		line-height: 50px;
+	}
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
+		color: #3a9a00;
 	}
 }
 
@@ -12034,7 +12173,7 @@ select {
 		left: 100vw;
 	}
 	#page {
-		max-width: 100%;
+		max-width: 96%;
 	}
 	#page header.site-header {
 		height: 55px;
@@ -12159,7 +12298,8 @@ select {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before,
+	#page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -12250,7 +12390,7 @@ select {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 0.85em;
+		font-size: 0.9em;
 		text-indent: 0;
 		text-align: center;
 		height: auto;
@@ -12278,7 +12418,7 @@ select {
 	#page #primary article.post header.entry-header h2.entry-title,
 	#page #primary article.search-results header.entry-header h2.entry-title,
 	#page #primary article.page header.entry-header h2.entry-title {
-		font-size: 1em;
+		font-size: 0.9em;
 		height: auto;
 	}
 	#page #primary article.event header.entry-header h2.entry-title a,
@@ -12881,14 +13021,19 @@ select {
 	#page footer.site-footer ul#social-media-box li a {
 		width: 100%;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
-		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		font-size: 1.3em;
 	}
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
+		color: #3a9a00;
+	}
 }
-
 @media only screen and (max-width: 414px) {
 	#tog-menu {
 		width: 20%;
@@ -13027,7 +13172,8 @@ select {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before,
+	#page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -13110,7 +13256,7 @@ select {
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
 		height: auto;
-		font-size: 0.8em;
+		font-size: 0.85em;
 	}
 	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
@@ -13723,14 +13869,19 @@ select {
 	#page footer.site-footer ul#social-media-box li a {
 		width: 100%;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
-		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		font-size: 1.3em;
 	}
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
+		color: #3a9a00;
+	}
 }
-
 @media only screen and (max-width: 360px) {
 	#tog-menu {
 		left: calc(79% - 1vw);
@@ -13859,7 +14010,8 @@ select {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before,
+	#page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -13941,7 +14093,7 @@ select {
 	#page #primary article.post header.entry-header h1,
 	#page #primary article.search-results header.entry-header h1,
 	#page #primary article.page header.entry-header h1 {
-		font-size: 0.8em;
+		font-size: 0.85em;
 	}
 	#page #primary article.event header.entry-header h1 a,
 	#page #primary article.clash-videos header.entry-header h1 a,
@@ -14741,14 +14893,19 @@ select {
 	#page footer.site-footer ul#social-media-box li a {
 		width: 100%;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
-		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		font-size: 1.1em;
 	}
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
+		color: #3a9a00;
+	}
 }
-
 @media only screen and (max-width: 320px) {
 	#tog-menu {
 		left: calc(79% - 1vw);
@@ -14901,7 +15058,8 @@ select {
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments {
 		margin: 0.5em 0;
 	}
-	#page #secondary section.secondary_column_box div.widget ul::before, #page #secondary section.secondary_column_box div.widget ul::after,
+	#page #secondary section.secondary_column_box div.widget ul::before,
+	#page #secondary section.secondary_column_box div.widget ul::after,
 	#page #secondary section.secondary_column_box div.widget ul.comments::before,
 	#page #secondary section.secondary_column_box div.widget ul.comments::after,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments::before,
@@ -15751,12 +15909,16 @@ select {
 	#page footer.site-footer ul#social-media-box li a {
 		height: 100%;
 	}
-	#page footer.site-footer ul#social-media-box li a span {
-		display: block;
-	}
-	#page footer.site-footer ul#social-media-box li a span i {
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram {
 		font-size: 1.1em;
 	}
+	#page footer.site-footer ul#social-media-box li a span.dashicons-twitter:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-pinterest:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-facebook:hover,
+	#page footer.site-footer ul#social-media-box li a span.dashicons-instagram:hover {
+		color: #3a9a00;
+	}
 }
-
-/*# sourceMappingURL=style.css.map */

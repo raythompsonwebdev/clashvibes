@@ -19,7 +19,7 @@ get_header(); ?>
 	<!--Banner section-->
 		<section id="clashvibes-banner">
 			<!--2/2018/07-->
-			<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/sites/2/2021/02/sliderimage.jpg" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
+			<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sliderimage.webp" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
 
 		</section>
 

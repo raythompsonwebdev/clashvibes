@@ -22,7 +22,6 @@ License: GNU General Public License v2 or later
 @import 'partials/base';
 @import 'partials/variables';
 @import 'partials/mixins';
-
 @media only screen and (max-width: 1920px) {
 	#tog-menu {
 		display: none;
@@ -161,6 +160,7 @@ License: GNU General Public License v2 or later
 						text-shadow: 1px 1px 1px $color4;
 						width: 100%;
 						height: 40px;
+						text-align: left;
 					}
 
 					h2.site-description {
@@ -175,6 +175,7 @@ License: GNU General Public License v2 or later
 						clear: left;
 						text-shadow: 0.5px 0.5px 0.5px $color4;
 						margin: 0;
+						text-align: left;
 					}
 				}
 			}
@@ -195,16 +196,17 @@ License: GNU General Public License v2 or later
 					width: 23.5%;
 					text-align: center;
 
-					span {
+					span.dashicons-twitter,
+					span.dashicons-pinterest,
+					span.dashicons-facebook,
+					span.dashicons-instagram {
 						display: block;
-						height: 100%;
-						i,
-						svg {
-							font-size: 1.4em;
-							display: block;
-							height: 100%;
-							line-height: 40px;
-							margin: auto;
+						font-size: 1.4em;
+						line-height: 40px;
+						margin: auto;
+						&:hover {
+							color: $color10;
+							font-weight: bold;
 						}
 					}
 				}
@@ -281,6 +283,7 @@ License: GNU General Public License v2 or later
 			margin: 0.5em 0;
 			text-indent: 0;
 		}
+
 		/* --- Error page --- */
 		section.error-404 {
 			margin: 0;
@@ -294,7 +297,7 @@ License: GNU General Public License v2 or later
 
 		/* --- Error page content --- */
 		div.page-content {
-			height: auto;
+			min-height: 85vh;
 			background-color: $color;
 			p {
 				padding: 0;
@@ -314,18 +317,26 @@ License: GNU General Public License v2 or later
 				}
 			}
 
+			.wp-block-image {
+				width: 20%;
+				margin: 1em auto;
+			}
+
 			.search-form {
 				width: 50%;
 				margin: 2em auto;
 			}
+
 			.widget_recent_entries {
 				width: 96%;
 				margin: auto;
 			}
+
 			.widget_categories {
 				width: 96%;
 				margin: auto;
 			}
+
 			.widget_archive {
 				width: 96%;
 				margin: auto;
@@ -336,6 +347,7 @@ License: GNU General Public License v2 or later
 					height: 35px;
 				}
 			}
+
 			.widget_tag_cloud {
 				width: 96%;
 				margin: 2em auto;
@@ -1448,7 +1460,16 @@ License: GNU General Public License v2 or later
 				div.entry-attachment {
 					width: 98%;
 					display: block;
-					margin: 0 auto;
+					margin: 0.5em auto;
+
+					.vsel-content {
+						clear: both;
+						.vsel-meta {
+							width: 100%;
+							float: none;
+							text-align: center;
+						}
+					}
 
 					p {
 						color: $color4;
@@ -2293,20 +2314,19 @@ License: GNU General Public License v2 or later
 						height: 100%;
 						line-height: 50px;
 
-						span {
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
 							display: block;
+							color: $color;
+							font-size: 1.6em;
+							line-height: 50px;
+							text-align: center;
 
-							i {
-								color: $color;
-								font-size: 1.6em;
-								line-height: 50px;
-								display: block;
-								text-align: center;
-
-								&:hover {
-									color: $color10;
-									font-weight: bold;
-								}
+							&:hover {
+								color: $color10;
+								font-weight: bold;
 							}
 						}
 					}
@@ -2355,15 +2375,15 @@ License: GNU General Public License v2 or later
 			aside#socialmediatop {
 				width: 25%;
 
-				a {
+				a.social-icon {
 					width: 23.5%;
 
-					span {
+					span.dashicons-twitter,
+					span.dashicons-pinterest,
+					span.dashicons-facebook,
+					span.dashicons-instagram {
 						display: block;
-
-						i {
-							font-size: 1.25em;
-						}
+						font-size: 1.25em;
 					}
 				}
 			}
@@ -3246,12 +3266,14 @@ License: GNU General Public License v2 or later
 					a {
 						line-height: 50px;
 
-						span {
-							display: block;
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
+							font-size: 1.5em;
 
-							i {
-								font-size: 1.5em;
-								line-height: 50px;
+							&:hover {
+								color: $color10;
 							}
 						}
 					}
@@ -3300,13 +3322,13 @@ License: GNU General Public License v2 or later
 			aside#socialmediatop {
 				width: 25%;
 
-				a {
-					span {
+				a.social-icon {
+					span.dashicons-twitter,
+					span.dashicons-pinterest,
+					span.dashicons-facebook,
+					span.dashicons-instagram {
 						display: block;
-
-						i {
-							font-size: 1.2em;
-						}
+						font-size: 1.2em;
 					}
 				}
 			}
@@ -4184,12 +4206,14 @@ License: GNU General Public License v2 or later
 					a {
 						line-height: 50px;
 
-						span {
-							display: block;
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
+							font-size: 1.4em;
 
-							i {
-								font-size: 1.4em;
-								line-height: 50px;
+							&:hover {
+								color: $color10;
 							}
 						}
 					}
@@ -4238,15 +4262,15 @@ License: GNU General Public License v2 or later
 			aside#socialmediatop {
 				width: 25%;
 
-				a {
+				a.social-icon {
 					width: 23.5%;
 
-					span {
+					span.dashicons-twitter,
+					span.dashicons-pinterest,
+					span.dashicons-facebook,
+					span.dashicons-instagram {
 						display: block;
-
-						i {
-							font-size: 1.1em;
-						}
+						font-size: 1.1em;
 					}
 				}
 			}
@@ -4576,7 +4600,7 @@ License: GNU General Public License v2 or later
 					display: block;
 
 					h1 {
-						font-size: 1em;
+						font-size: 1.1em;
 
 						a {
 							width: auto;
@@ -5092,12 +5116,14 @@ License: GNU General Public License v2 or later
 					a {
 						line-height: 50px;
 
-						span {
-							display: block;
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
+							font-size: 1.3em;
 
-							i {
-								font-size: 1.3em;
-								line-height: 50px;
+							&:hover {
+								color: $color10;
 							}
 						}
 					}
@@ -5131,15 +5157,15 @@ License: GNU General Public License v2 or later
 			}
 
 			aside#socialmediatop {
-				a {
+				a.social-icon {
 					width: 23.5%;
 
-					span {
+					span.dashicons-twitter,
+					span.dashicons-pinterest,
+					span.dashicons-facebook,
+					span.dashicons-instagram {
 						display: block;
-
-						i {
-							font-size: 1em;
-						}
+						font-size: 1em;
 					}
 				}
 			}
@@ -5163,6 +5189,7 @@ License: GNU General Public License v2 or later
 
 		h1 {
 			margin-bottom: 0.5em;
+			text-align: center;
 		}
 
 		h2 {
@@ -5212,10 +5239,6 @@ License: GNU General Public License v2 or later
 			}
 		}
 
-		h2 {
-			font-size: 1.2em;
-		}
-
 		ul {
 			li {
 				a {
@@ -5223,16 +5246,6 @@ License: GNU General Public License v2 or later
 						font-weight: bold;
 					}
 				}
-			}
-		}
-
-		figure.text-img {
-			width: 15%;
-
-			margin: 0 0 0.5em 0.5em;
-
-			img {
-				width: 100%;
 			}
 		}
 
@@ -5515,7 +5528,7 @@ License: GNU General Public License v2 or later
 					display: block;
 
 					h1 {
-						font-size: 0.9em;
+						font-size: 1.1em;
 
 						a {
 							width: auto;
@@ -5546,7 +5559,7 @@ License: GNU General Public License v2 or later
 							span.posted-on,
 							span.byline,
 							span.updated-on {
-								font-size: 0.8em;
+								font-size: 0.75em;
 							}
 						}
 					}
@@ -5831,7 +5844,7 @@ License: GNU General Public License v2 or later
 
 							.comment-content {
 								p {
-									font-size: 0.9em;
+									font-size: 0.85em;
 
 									a {
 										&:hover {
@@ -5999,12 +6012,14 @@ License: GNU General Public License v2 or later
 					a {
 						line-height: 50px;
 
-						span {
-							display: block;
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
+							font-size: 1.2em;
 
-							i {
-								font-size: 1.2em;
-								line-height: 50px;
+							&:hover {
+								color: $color10;
 							}
 						}
 					}
@@ -6052,7 +6067,7 @@ License: GNU General Public License v2 or later
 	}
 
 	#page {
-		max-width: 100%;
+		max-width: 96%;
 		margin: 0;
 
 		header.site-header {
@@ -6135,6 +6150,11 @@ License: GNU General Public License v2 or later
 					}
 				}
 			}
+		}
+
+		div.page-content {
+			min-height: unset;
+			height: auto;
 		}
 
 		#clashvibes-banner {
@@ -6282,7 +6302,7 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					h1 {
-						font-size: 1.1em;
+						font-size: 1em;
 						text-indent: 0;
 						text-align: center;
 						height: 40px;
@@ -6956,12 +6976,14 @@ License: GNU General Public License v2 or later
 					height: 50px;
 
 					a {
-						span {
-							display: block;
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
+							font-size: 1.5em;
 
-							i {
-								font-size: 1.5em;
-								line-height: 50px;
+							&:hover {
+								color: $color10;
 							}
 						}
 					}
@@ -7001,7 +7023,7 @@ License: GNU General Public License v2 or later
 	}
 
 	#page {
-		max-width: 100%;
+		max-width: 96%;
 
 		header.site-header {
 			height: 65px;
@@ -7818,12 +7840,14 @@ License: GNU General Public License v2 or later
 						width: 100%;
 						height: 100%;
 
-						span {
-							display: block;
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
+							font-size: 1.4em;
 
-							i {
-								font-size: 1.4em;
-								line-height: 50px;
+							&:hover {
+								color: $color10;
 							}
 						}
 					}
@@ -7857,7 +7881,7 @@ License: GNU General Public License v2 or later
 	}
 
 	#page {
-		max-width: 100%;
+		max-width: 96%;
 
 		header.site-header {
 			height: 60px;
@@ -8036,7 +8060,7 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					h1 {
-						font-size: 0.9em;
+						font-size: 0.95em;
 
 						a {
 							letter-spacing: 0.03em;
@@ -8048,7 +8072,7 @@ License: GNU General Public License v2 or later
 					}
 
 					h2.entry-title {
-						font-size: 1em;
+						font-size: 0.9em;
 
 						a {
 							color: $color;
@@ -8326,7 +8350,7 @@ License: GNU General Public License v2 or later
 									}
 									.comment-content {
 										p {
-											font-size: 0.75em;
+											font-size: 0.8em;
 
 											a {
 												background-color: $color11;
@@ -8386,7 +8410,7 @@ License: GNU General Public License v2 or later
 
 							.comment-content {
 								p {
-									font-size: 0.75em;
+									font-size: 0.8em;
 
 									a {
 										&:hover {
@@ -8685,12 +8709,14 @@ License: GNU General Public License v2 or later
 						width: 100%;
 						height: 100%;
 
-						span {
-							display: block;
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
+							font-size: 1.4em;
 
-							i {
-								font-size: 1.4em;
-								line-height: 50px;
+							&:hover {
+								color: $color10;
 							}
 						}
 					}
@@ -8725,7 +8751,7 @@ License: GNU General Public License v2 or later
 	}
 
 	#page {
-		max-width: 100%;
+		max-width: 96%;
 
 		header.site-header {
 			height: 55px;
@@ -8905,7 +8931,7 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					h1 {
-						font-size: 0.85em;
+						font-size: 0.9em;
 						text-indent: 0;
 						text-align: center;
 						height: auto;
@@ -8921,7 +8947,7 @@ License: GNU General Public License v2 or later
 					}
 
 					h2.entry-title {
-						font-size: 1em;
+						font-size: 0.9em;
 						height: auto;
 
 						a {
@@ -9258,11 +9284,14 @@ License: GNU General Public License v2 or later
 					a {
 						width: 100%;
 
-						span {
-							display: block;
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
+							font-size: 1.3em;
 
-							i {
-								font-size: 1.3em;
+							&:hover {
+								color: $color10;
 							}
 						}
 					}
@@ -9469,7 +9498,7 @@ License: GNU General Public License v2 or later
 
 					h1 {
 						height: auto;
-						font-size: 0.8em;
+						font-size: 0.85em;
 
 						a {
 							letter-spacing: 0.03em;
@@ -9897,11 +9926,14 @@ License: GNU General Public License v2 or later
 					a {
 						width: 100%;
 
-						span {
-							display: block;
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
+							font-size: 1.3em;
 
-							i {
-								font-size: 1.3em;
+							&:hover {
+								color: $color10;
 							}
 						}
 					}
@@ -10093,7 +10125,7 @@ License: GNU General Public License v2 or later
 					height: auto;
 
 					h1 {
-						font-size: 0.8em;
+						font-size: 0.85em;
 
 						a {
 							letter-spacing: 0.02em;
@@ -10770,11 +10802,14 @@ License: GNU General Public License v2 or later
 					a {
 						width: 100%;
 
-						span {
-							display: block;
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
+							font-size: 1.1em;
 
-							i {
-								font-size: 1.1em;
+							&:hover {
+								color: $color10;
 							}
 						}
 					}
@@ -11641,11 +11676,14 @@ License: GNU General Public License v2 or later
 					a {
 						height: 100%;
 
-						span {
-							display: block;
+						span.dashicons-twitter,
+						span.dashicons-pinterest,
+						span.dashicons-facebook,
+						span.dashicons-instagram {
+							font-size: 1.1em;
 
-							i {
-								font-size: 1.1em;
+							&:hover {
+								color: $color10;
 							}
 						}
 					}

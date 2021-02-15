@@ -34,34 +34,28 @@
 	<ul id="social-media-box">
 
 		<li>
-			<a class="social-icon linkedin-icon"
-			   href=""
+			<a class="social-icon instagram-icon"
+			   href="<?php echo esc_url( __( 'https://instagram.com', 'clashvibes' ) ); ?>"
 			   target="new"
-			   title="Follow me on LinkedIn">
-				<span>
-					<i class="fab fa-instagram" aria-hidden="true"></i>
-				</span>
+			   title="Follow me on Instagram">
+				<span class="dashicons dashicons-instagram"></span>
 			</a>
 		</li>
 
 		<li>
 			<a class="social-icon twitter-icon"
-			   href="<?php echo esc_url( __( 'http://twitter.com/RayThompWeb', 'clashvibes' ) ); ?>"
+			   href="<?php echo esc_url( __( 'https://twitter.com', 'clashvibes' ) ); ?>"
 			   target="new"
 			   title="Follow me on Twitter">
-				<span>
-					<i class="fab fa-twitter" aria-hidden="true"></i>
-				</span>
+				<span class="dashicons dashicons-twitter"></span>
 			</a>
 		</li>
 
 		<li>
-			<a class="social-icon facebook-icon" href="<?php echo esc_url( __( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes' ) ); ?>"
+			<a class="social-icon pinterest-icon" href="<?php echo esc_url( __( 'https://www.pinterest.co.uk/', 'clashvibes' ) ); ?>"
 			   target="new"
-			   title="Follow me on Facebook">
-				<span>
-					<i class="fab fa-facebook" aria-hidden="true"></i>
-				</span>
+			   title="Follow me on Pinterest">
+				<span class="dashicons dashicons-pinterest"></span>
 			</a>
 		</li>
 

@@ -204,6 +204,12 @@ add_action( 'after_setup_theme', 'clashvibes_setup' );
 // remove version from rss
 add_filter( 'the_generator', '__return_empty_string' );
 
+// Enqueue the Dashicons script.
+add_action( 'wp_enqueue_scripts', 'clashvibes_load_dashicons_front_end' );
+function clashvibes_load_dashicons_front_end() {
+	wp_enqueue_style( 'dashicons' );
+}
+
 // remove version from scripts and styles
 function clashvibes_remove_version_scripts_styles( $src ) {
 	if ( strpos( $src, 'ver=' ) ) {
@@ -289,14 +295,14 @@ add_action( 'widgets_init', 'clashvibes_video_widgets_init' );
  *
  * @return void
  */
-function my_jquery_enqueue() {
-	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
-	wp_enqueue_script( 'jquery' );
-}
-if ( ! is_admin() ) {
-	add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
-}
+// function my_jquery_enqueue() {
+// 	wp_deregister_script( 'jquery' );
+// 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), 1.0, true );
+// 	wp_enqueue_script( 'jquery' );
+// }
+// if ( ! is_admin() ) {
+// 	add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
+// }
 
 /**
  * Block Editor Styling.
@@ -322,9 +328,7 @@ function clashvibes_scripts() {
 
 	wp_enqueue_style( 'clashvibes-fonts', 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap', array(), CLASHVIBES_VERSION );
 
-	wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/fonts/fontawesome/js/all.js', array(), CLASHVIBES_VERSION, false );
-
-	wp_enqueue_script( 'clashvibes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), CLASHVIBES_VERSION, true );
+	//wp_enqueue_script( 'clashvibes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), CLASHVIBES_VERSION, true );
 
 	if ( 'clash-audio' === get_post_type() || 'clash-videos' === get_post_type() || ! is_front_page() || is_category() || is_home() ) {
 
@@ -338,9 +342,7 @@ function clashvibes_scripts() {
 	// mobile main menu script for all mobile pages.
 	wp_enqueue_script( 'main-mobile', get_template_directory_uri() . '/js/mobile-mainnav-es6.js', array(), CLASHVIBES_VERSION, true );
 
-	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), CLASHVIBES_VERSION, true );
-
-	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), CLASHVIBES_VERSION, true );
+	//wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), CLASHVIBES_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

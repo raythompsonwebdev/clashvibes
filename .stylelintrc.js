@@ -40,5 +40,6 @@ module.exports = {
 		indentation: 'tab',
 		'number-leading-zero': null,
 		'unit-allowed-list': ['em', 'rem', '%', 'px', 'fr', 'vh', 's', 'vw'],
+		'value-list-comma-newline-after': null,
 	},
-}
+};

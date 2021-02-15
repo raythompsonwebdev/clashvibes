@@ -141,14 +141,17 @@ a {
 
 .sticky {
 	margin: 0;
+	display: block;
 }
 
 .gallery-caption {
 	font-size: 1em;
+	display: block;
 }
 
 .bypostauthor {
 	font-size: 1em;
+	display: block;
 }
 
 /* WordPress Image Classes */
@@ -832,9 +835,6 @@ select {
 
 /* Posts and pages
 	--------------------------------------------- */
-.sticky {
-	display: block;
-}
 
 .post,
 .page {
@@ -861,10 +861,6 @@ select {
 	--------------------------------------------- */
 .comment-content a {
 	word-wrap: break-word;
-}
-
-.bypostauthor {
-	display: block;
 }
 
 /* Widgets
@@ -959,10 +955,6 @@ select {
 
 .gallery-columns-9 {
 	grid-template-columns: repeat(9, 1fr);
-}
-
-.gallery-caption {
-	display: block;
 }
 
 /* --------------------------------------------------------------

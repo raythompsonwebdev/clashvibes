@@ -1309,6 +1309,7 @@ select {
 		line-height: 45px;
 		color: #262626;
 		margin: 0.5em 0;
+		text-indent: 0;
 	}
 	#page section.error-404 {
 		margin: 0;
@@ -1367,11 +1368,6 @@ select {
 		color: #000;
 		width: auto;
 		display: inline-block;
-	}
-	#page h1 {
-		color: #262626;
-		margin-bottom: 0.5em;
-		text-indent: 0;
 	}
 	#page h2 {
 		color: #262626;
@@ -5697,7 +5693,7 @@ select {
 	#page #secondary section.secondary_column_box div.widget ul.comments li.recentcomments,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments li,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments li.recentcomments {
-		font-size: 0.9em;
+		font-size: 1em;
 	}
 	#page #secondary section.secondary_column_box div.widget ul li span.comment-author-link,
 	#page #secondary section.secondary_column_box div.widget ul li.recentcomments span.comment-author-link,
@@ -5713,7 +5709,7 @@ select {
 	#page #secondary section.secondary_column_box div.widget ul.comments li.recentcomments a,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments li a,
 	#page #secondary section.secondary_column_box div.widget ul.recentcomments li.recentcomments a {
-		font-size: 0.9em;
+		font-size: 1em;
 	}
 	#page #secondary section.secondary_column_box div.widget ul li a:hover,
 	#page #secondary section.secondary_column_box div.widget ul li.recentcomments a:hover,
@@ -7611,9 +7607,6 @@ select {
 	}
 	#page h2 {
 		font-size: 1.2em;
-	}
-	#page ul li a:hover {
-		font-weight: bold;
 	}
 	#page figure.text-img {
 		width: 15%;

@@ -19,6 +19,9 @@
 get_header(); ?>
 
 <?php
+
+esc_html( the_title( '<h1 class="page-title">', ' Page</h1>' ) );
+
 		while ( have_posts() ) :
 			the_post();
 

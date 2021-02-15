@@ -17,8 +17,13 @@
 		"url": "https://github.com/Automattic/clashvibes/issues"
 	},
 	"devDependencies": {
+		"@wordpress/eslint-plugin": "^8.0.2",
 		"@wordpress/scripts": "^12.1.0",
 		"dir-archiver": "^1.1.1",
+		"eslint": "^7.20.0",
+		"eslint-plugin-jquery": "^1.5.1",
+		"eslint-plugin-prettier": "^3.3.1",
+		"eslint-plugin-react": "^7.22.0",
 		"node-sass": "^4.14.1",
 		"rtlcss": "^2.5.0",
 		"stylelint-config-standard": "^20.0.0"
@@ -41,7 +46,8 @@
 		"compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
 		"compile:rtl": "rtlcss style.css style-rtl.css",
 		"lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
-		"lint:js": "wp-scripts lint-js 'js/*.js'",
+		"lint:js": "wp-scripts lint-js 'js/*.js' --fix",
 		"bundle": "dir-archiver --src . --dest ../clashvibes.zip --exclude .DS_Store .stylelintrc.js .eslintrc.js .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map prettierrc.js eslintrc.js .editorconfig babelrc"
-	}
+	},
+	"dependencies": {}
 }

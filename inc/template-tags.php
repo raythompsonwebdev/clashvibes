@@ -17,7 +17,7 @@ if ( ! function_exists( 'clashvibes_posted_on' ) ) :
 		$clashvibes_update_time_string = '<time class="updated" datetime="%3$s">Not updated</time>';
 
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$clashvibes_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+			$clashvibes_time_string        = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 			$clashvibes_update_time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
@@ -196,7 +196,7 @@ if ( ! function_exists( 'clashvibes_post_thumbnail' ) ) :
 			?>
 
 			<figure class="featured-image">
-				<?php the_post_thumbnail('featured-image'); ?>
+				<?php the_post_thumbnail( 'featured-image' ); ?>
 			</figure><!-- .post-thumbnail -->
 
 		<?php else : ?>

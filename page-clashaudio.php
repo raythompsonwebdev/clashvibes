@@ -23,7 +23,6 @@
 				esc_html( the_title( '<h1 class="page-title">', '</h1>' ) );
 
 	?>
-	</h1>
 
 	<section id="audio_releases_section">
 

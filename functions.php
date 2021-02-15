@@ -201,21 +201,18 @@ if ( ! function_exists( 'clashvibes_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'clashvibes_setup' );
 
-// remove version from head
-remove_action('wp_head', 'wp_generator');
-
 // remove version from rss
-add_filter('the_generator', '__return_empty_string');
+add_filter( 'the_generator', '__return_empty_string' );
 
 // remove version from scripts and styles
-function clashvibes_remove_version_scripts_styles($src) {
-	if (strpos($src, 'ver=')) {
-		$src = remove_query_arg('ver', $src);
+function clashvibes_remove_version_scripts_styles( $src ) {
+	if ( strpos( $src, 'ver=' ) ) {
+		$src = remove_query_arg( 'ver', $src );
 	}
 	return $src;
 }
-add_filter('style_loader_src', 'clashvibes_remove_version_scripts_styles', 9999);
-add_filter('script_loader_src', 'clashvibes_remove_version_scripts_styles', 9999);
+add_filter( 'style_loader_src', 'clashvibes_remove_version_scripts_styles', 9999 );
+add_filter( 'script_loader_src', 'clashvibes_remove_version_scripts_styles', 9999 );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

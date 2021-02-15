@@ -66,7 +66,7 @@ get_header();
 						<figure class="events">
 
 							<figcaption class="event-text">
-							<h4>No vents</h4>
+							<h4>No Events</h4>
 
 							</figcaption>
 

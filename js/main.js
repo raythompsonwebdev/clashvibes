@@ -1,25 +1,21 @@
 jQuery(document).ready(function ($) {
-	var position, direction, previous
+	let position, direction, previous;
 
 	$(window).scroll(function () {
 		if ($(this).scrollTop() >= position) {
-			direction = 'down'
+			direction = 'down';
 			if (direction !== previous) {
-				$('#tog-menu').addClass('hide')
+				$('#tog-menu').addClass('hide');
 
-				previous = direction
+				previous = direction;
 			}
 		} else {
-			direction = 'up'
+			direction = 'up';
 			if (direction !== previous) {
-				$('#tog-menu').removeClass('hide')
-				previous = direction
+				$('#tog-menu').removeClass('hide');
+				previous = direction;
 			}
 		}
-		position = $(this).scrollTop()
-	})
-})
-
-
-
-
+		position = $(this).scrollTop();
+	});
+});

@@ -279,6 +279,7 @@ License: GNU General Public License v2 or later
 			line-height: 45px;
 			color: $color4;
 			margin: 0.5em 0;
+			text-indent: 0;
 		}
 		/* --- Error page --- */
 		section.error-404 {
@@ -347,12 +348,6 @@ License: GNU General Public License v2 or later
 					}
 				}
 			}
-		}
-
-		h1 {
-			color: $color4;
-			margin-bottom: 0.5em;
-			text-indent: 0;
 		}
 
 		h2 {
@@ -3617,13 +3612,13 @@ License: GNU General Public License v2 or later
 
 						li,
 						li.recentcomments {
-							font-size: 0.9em;
+							font-size: 1em;
 							span.comment-author-link {
 								height: 100%;
 							}
 
 							a {
-								font-size: 0.9em;
+								font-size: 1em;
 								&:hover {
 									font-weight: bold;
 								}
@@ -5172,16 +5167,6 @@ License: GNU General Public License v2 or later
 
 		h2 {
 			font-size: 1.2em;
-		}
-
-		ul {
-			li {
-				a {
-					&:hover {
-						font-weight: bold;
-					}
-				}
-			}
 		}
 
 		figure.text-img {

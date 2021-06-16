@@ -10,7 +10,7 @@ template-parts/content-events.php
 PIE.htc
 style.css.map
 
-
+.vscode/
 fonts/
 spare-docs/
 phpcs.xml

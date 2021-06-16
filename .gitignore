@@ -18,5 +18,6 @@ phpcs.xml
 xmlrpc.php
 videos/
 doumentation/
+.vscode/
 
 vendor/

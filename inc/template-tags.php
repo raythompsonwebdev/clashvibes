@@ -312,9 +312,7 @@ add_filter( 'excerpt_more', 'clashvibes_new_excerpt_more', 21 );
  */
 function clashvibes_the_excerpt_more_link( $excerpt ) {
 	$post = get_post();
-
 	if ( is_tax( 'video-category' ) ) {
-
 		$excerpt .= '<a class="read-more" href="' . get_permalink( $post->ID ) . '">Continue Watching: ' . get_the_title( $post->ID ) . '</a>';
 		return $excerpt;
 
@@ -324,6 +322,7 @@ function clashvibes_the_excerpt_more_link( $excerpt ) {
 		return $excerpt;
 
 	} else {
+
 		$excerpt .= '<a class="read-more" href="' . get_permalink( $post->ID ) . '">continue reading: ' . get_the_title( $post->ID ) . '</a>';
 
 		return $excerpt;
@@ -331,4 +330,4 @@ function clashvibes_the_excerpt_more_link( $excerpt ) {
 	}
 
 }
-add_filter( 'the_excerpt', 'clashvibes_the_excerpt_more_link', 21 );
+

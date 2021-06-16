@@ -77,7 +77,6 @@ License: GNU General Public License v2 or later
 			padding: 0;
 			height: 65px;
 			margin-bottom: 0.25em;
-			display: -webkit-flex;
 			display: -ms-flexbox;
 			display: flex;
 			-webkit-flex-flow: row wrap;
@@ -228,7 +227,6 @@ License: GNU General Public License v2 or later
 				margin: 0;
 				padding: 0;
 				list-style: none;
-				display: -webkit-flex;
 				display: -ms-flexbox;
 				display: flex;
 				-webkit-flex-flow: row wrap;
@@ -489,7 +487,6 @@ License: GNU General Public License v2 or later
 			padding: 0;
 			width: 100%;
 			margin: 0 0 0.5em 0;
-			display: -webkit-flex;
 			display: -ms-flexbox;
 			display: flex;
 			-webkit-flex-flow: row wrap;
@@ -594,7 +591,6 @@ License: GNU General Public License v2 or later
 			padding: 0;
 			width: 100%;
 			margin: 0 0 0.5em 0;
-			display: -webkit-flex;
 			display: -ms-flexbox;
 			display: flex;
 			-webkit-flex-flow: row wrap;
@@ -606,12 +602,10 @@ License: GNU General Public License v2 or later
 			height: auto;
 			h1 {
 				width: 100%;
-				//background-color:$color4;
 				color: $color4;
 				a {
 					font-size: 0.8em;
 					display: block;
-
 					&:hover {
 						text-decoration: none;
 					}
@@ -732,7 +726,6 @@ License: GNU General Public License v2 or later
 		div#popularclashes-section {
 			padding: 0.5em;
 			height: auto;
-			display: -webkit-flex;
 			display: -ms-flexbox;
 			display: flex;
 			-webkit-flex-flow: row wrap;
@@ -768,7 +761,6 @@ License: GNU General Public License v2 or later
 				}
 
 				span.popularclashes-box {
-					display: -webkit-flex;
 					display: -ms-flexbox;
 					display: flex;
 					-webkit-flex-flow: row;
@@ -10691,7 +10683,6 @@ License: GNU General Public License v2 or later
 		#new_releases_section,
 		#video_releases_section,
 		#audio_releases_section {
-			display: -webkit-flex;
 			display: -ms-flexbox;
 			display: flex;
 			-webkit-flex-flow: column;

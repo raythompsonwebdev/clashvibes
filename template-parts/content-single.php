@@ -47,7 +47,7 @@
 <?php endif; ?>
 	<div class="entry-content">
 		<?php
-		the_excerpt(
+		the_content(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */

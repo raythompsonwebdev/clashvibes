@@ -2,7 +2,6 @@
 .phpintel/
 .sass-cache/
 node_modules/
-
 nbproject/
 images/
 js/old-browser-scripts/
@@ -10,8 +9,6 @@ js/sparefiles/
 template-parts/content-events.php
 PIE.htc
 style.css.map
-
-
 fonts/
 spare-docs/
 phpcs.xml
@@ -19,5 +16,5 @@ xmlrpc.php
 videos/
 doumentation/
 .vscode/
-
+audio/
 vendor/

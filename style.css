@@ -1150,7 +1150,6 @@ select {
 		padding: 0;
 		height: 65px;
 		margin-bottom: 0.25em;
-		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-flex-flow: row wrap;
@@ -1297,7 +1296,6 @@ select {
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-flex-flow: row wrap;
@@ -1528,7 +1526,6 @@ select {
 		padding: 0;
 		width: 100%;
 		margin: 0 0 0.5em 0;
-		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-flex-flow: row wrap;
@@ -1636,7 +1633,6 @@ select {
 		padding: 0;
 		width: 100%;
 		margin: 0 0 0.5em 0;
-		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-flex-flow: row wrap;
@@ -1929,7 +1925,6 @@ select {
 	#page div#popularclashes-section {
 		padding: 0.5em;
 		height: auto;
-		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-flex-flow: row wrap;
@@ -1966,7 +1961,6 @@ select {
 	}
 	#page div#popularclashes-section section#popularclashes-audio span.popularclashes-box,
 	#page div#popularclashes-section section#popularclashes-video span.popularclashes-box {
-		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-flex-flow: row;
@@ -14745,7 +14739,6 @@ select {
 	#page #new_releases_section,
 	#page #video_releases_section,
 	#page #audio_releases_section {
-		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-flex-flow: column;

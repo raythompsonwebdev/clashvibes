@@ -16,22 +16,24 @@
  */
 ?>
 
-<aside id="clashvibes_left_column">
+<!--id="secondary"-->
+<aside id="secondary" class="widget-area" >
 
  <h1><?php esc_html_e( 'Video', 'clashvibes' ); ?></h1>
 
-<section id="clashvibes_login">
+<section id="clashvibes-login">
 	<?php get_search_form(); ?>
 </section>
 
-<section class="clashvibes_left_column_box">
+<!--class="widget"-->
+<section class="secondary_column_box">
 
 <?php
 wp_nav_menu(
 	array(
-		'menu'      => 'Video-Nav',
-    'container' => 'nav',
-    'theme_location'    => "video-nav",
+		'menu'           => 'Video-Nav',
+		'container'      => 'nav',
+		'theme_location' => 'video-nav',
 	)
 );
 ?>

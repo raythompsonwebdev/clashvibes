@@ -27,22 +27,22 @@
 
 	<?php
 
-		$the_query = null;
+		$clashvibes_the_query = null;
 
-		$args      = array(
+		$clashvibes_args      = array(
 
 			'post_type'  => 'clash-videos',
 			'post_count' => '20',
 		);
-		$the_query = new WP_Query( $args );
+		$clashvibes_the_query = new WP_Query( $clashvibes_args );
 		?>
 
 	<?php
-	if ( $the_query->have_posts() ) :
-		while ( $the_query->have_posts() ) :
-			$the_query->the_post();
+	if ( $clashvibes_the_query->have_posts() ) :
+		while ( $clashvibes_the_query->have_posts() ) :
+			$clashvibes_the_query->the_post();
 			?>
-			
+
 
 	<figure class="video_releases_box">
 			<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'video-thumb' ) ); ?>
@@ -51,7 +51,7 @@
 				<?php the_title(); ?>
 			</h1>
 
-				<a 
+				<a
 					class="Morebutton"
 					href="<?php echo esc_url( get_permalink() ); ?>">
 				<?php esc_html_e( 'View', 'clashvibes' ); ?>

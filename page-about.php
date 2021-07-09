@@ -17,89 +17,27 @@
  */
 get_header(); ?>
 
-<article id="clashvibes-text">
-
-	<h1><?php the_title(); ?> Page</h1>
-
-		
-	<p>
-	<?php
-		esc_html_e(
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-			'clashvibes'
-		);
-	?>
-	</p>
-
-	<h2><?php esc_html_e( 'Heading 1', 'clashvibes' ); ?></h2>
-
-	<figure class="text-img"><!--/wp-content/themes/clashvibes/images/sampleimage(110x110).gif-->
-		<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/sites/2/2019/04/sampleimage110x110.gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
-	</figure>
-
-	<p>
-	<?php
-	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-	<?php
-	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-
-	<h2><?php esc_html_e( 'Heading 1', 'clashvibes' ); ?></h2>
-
-	<figure class="text-img">
-		<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/sites/2/2019/04/sampleimage110x110.gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
-	</figure>
-
-	<p>
-	<?php
-	_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-	<?php
-	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-
-	<h2><?php esc_html_e( 'Heading 1', 'clashvibes' ); ?></h2>
-
-	<figure class="text-img">
-		<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/sites/2/2019/04/sampleimage110x110.gif" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
-	</figure>
-
-	<p>
-	<?php
-	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-
-	<p>
-	<?php
-	esc_html_e(
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in consequat tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec diam nibh, porttitor in mauris sed, lacinia maximus nulla. Nulla tempus vitae dolor eu aliquet. Proin molestie lacinia metus,',
-		'clashvibes'
-	);
-	?>
-	</p>
-
-</article>
 
 
-<?php get_footer(); ?>
+<?php
+
+esc_html( the_title( '<h1 class="page-title">', ' Page</h1>' ) );
+
+while ( have_posts() ) :
+	the_post();
+
+	get_template_part( 'template-parts/content', 'page' );
+
+	// If comments are open or we have at least one comment, load up the comment template.
+	if ( comments_open() || get_comments_number() ) :
+		comments_template();
+	endif;
+
+		endwhile; // End of the loop.
+?>
+
+
+
+
+<?php
+get_footer();

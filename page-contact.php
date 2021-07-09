@@ -16,12 +16,13 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 
-get_header(); ?>
+get_header();
+
+?>
 
 <h1><?php the_title(); ?> Page</h1>
-
-  <?php //get_template_part( 'template-parts/content', 'contactform' ); ?>
-
-
+<div id="contactform">
+		<?php the_content() ?>
+		</div>
 <?php
 get_footer();

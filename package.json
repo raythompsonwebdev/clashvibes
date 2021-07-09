@@ -1,48 +1,57 @@
 {
-  "name": "clashvibes",
-  "version": "1.0.1",
-  "description": "Sound Clash Theme",
-  "main": "index.php",
-  "scripts": {
-    "start": "npm-run-all lint && build-css",
-    "build-css": "grunt sass",
-    "clean": "rimraf dist",
-    "lint": "esw js/**.js --color",
-    "lint:watch": "npm run lint -- --watch",
-    "uglify": "grunt uglify",
-    "build": ""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/raythompsonwebdev/clashvibes.git"
-  },
-  "keywords": [
-    "Sound",
-    "Clash",
-    "dubplates"
-  ],
-  "author": "Raymond Thompson",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/raythompsonwebdev/clashvibes/issues"
-  },
-  "homepage": "https://github.com/raythompsonwebdev/clashvibes#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.14.5",
-    "@babel/core": "^7.14.6",
-    "@babel/node": "^7.14.5",
-    "@babel/preset-env": "^7.14.5",
-    "@babel/register": "^7.14.5",
-    "eslint": "^7.28.0",
-    "eslint-watch": "^7.0.0",
-    "grunt": "^1.4.1",
-    "grunt-contrib-clean": "~2.0.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-uglify": "^5.0.1",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-sass": "^3.1.0",
-    "load-grunt-tasks": "^5.1.0",
-    "npm-run-all": "^4.1.5",
-    "yargs-parser": "^20.2.7"
-  }
+	"name": "clashvibes",
+	"version": "1.0.0",
+	"description": "Hi. I'm a starter theme called clashvibes, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.",
+	"author": "Raymond Thompson",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"WordPress",
+		"Theme"
+	],
+	"homepage": "https://github.com/Automattic/clashvibes#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Automattic/clashvibes.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Automattic/clashvibes/issues"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^16.1.2",
+		"@wordpress/stylelint-config": "^19.0.5",
+		"dir-archiver": "^1.2.0",
+		"rtlcss": "^3.2.0",
+		"sass": "^1.35.1",
+		"stylelint-config-recommended-scss": "^4.2.0",
+		"stylelint-config-standard": "^22.0.0"
+	},
+	"rtlcssConfig": {
+		"options": {
+			"autoRename": false,
+			"autoRenameStrict": false,
+			"blacklist": {},
+			"clean": true,
+			"greedy": false,
+			"processUrls": false,
+			"stringMap": []
+		},
+		"plugins": [],
+		"map": false
+	},
+	"scripts": {
+		"start": "wp-scripts start",
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"check-engines": "wp-scripts check-engines",
+		"packages-update": "wp-scripts packages-update",
+		"watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+		"compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+		"compile:rtl": "rtlcss style.css style-rtl.css",
+		"lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+		"lint:js": "wp-scripts lint-js 'js/*.js' --fix",
+		"bundle": "dir-archiver --src . --dest ../clashvibes.zip --exclude .DS_Store .stylelintrc.js .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map .prettierrc.json .eslintrc.js .editorconfig .babelrc style.min.css.map editor-style.css.map .sass-cache fonts .vscode .eslintrc"
+	},
+	"dependencies": {
+		"node-sass": "^6.0.1"
+	}
 }

@@ -23,7 +23,6 @@
 				esc_html( the_title( '<h1 class="page-title">', '</h1>' ) );
 
 	?>
-	</h1>
 
 	<section id="audio_releases_section">
 
@@ -31,20 +30,20 @@
 		<?php
 
 
-		$the_query = null;
+		$clashvibes_the_query = null;
 
-		$args      = array(
+		$clashvibes_args      = array(
 
 			'post_type'  => 'clash-audio',
 			'post_count' => '5',
 		);
-		$the_query = new WP_Query( $args );
+		$clashvibes_the_query = new WP_Query( $clashvibes_args );
 		?>
 
 		<?php
-		if ( $the_query->have_posts() ) :
-			while ( $the_query->have_posts() ) :
-				$the_query->the_post();
+		if ( $clashvibes_the_query->have_posts() ) :
+			while ( $clashvibes_the_query->have_posts() ) :
+				$clashvibes_the_query->the_post();
 				?>
 
 

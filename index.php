@@ -1,47 +1,59 @@
 <?php
 /**
- * *PHP version 5
+ * The main template file
  *
- * Index page | core/index.php.
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
  *
- * @category   Index_Page
- * @package    Clashvibes
- * @subpackage Index_Page
- * @author     Raymond Thompson <ray_thomp@hushmail.com>
- * @copyright  2017 Raymond Thompson
- * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
- * @version    GIT: https://github.com/raythompsonwebdev/clashvibes .git
- * @link       http:www.raythompsonwebdev.co.uk custom template
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package clashvibes
  */
-get_header(); ?>
 
+get_header();
 
-    <?php get_sidebar(); ?>
+get_sidebar();
+?>
+<!--<section id="clashvibes_right_column">-->
+	<main id="primary" class="site-main">
 
-    <section id="clashvibes_right_column">
+		<?php
+		if ( have_posts() ) :
 
-    <h1><?php esc_html_e('Blog Page', 'clashvibes');?></h1>
+			if ( is_home() && ! is_front_page() ) :
+				?>
+				<header>
+					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				</header>
+				<?php
+			endif;
 
-        <!--Post loop start -->
-		<?php if ( have_posts() ) : ?>
+			/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
 
-        <?php
-            while ( have_posts() ) :
-            the_post();
-        ?>
+				/*
+				 * Include the Post-Type-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', get_post_type() );
 
-        <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+			endwhile;
 
-        <?php endwhile; ?>
+			the_posts_navigation();
 
-        <?php else : ?>
+		else :
 
-        <?php get_template_part( 'template-parts/content', 'none' ); ?>
+			get_template_part( 'template-parts/content', 'none' );
 
-        <?php endif; ?>
+		endif;
+		?>
 
+	</main><!-- #main -->
 
-    </section><!-- end of right panel -->
+<?php
 
-
-<?php get_footer(); ?>
+get_footer();

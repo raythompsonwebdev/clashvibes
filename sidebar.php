@@ -17,21 +17,21 @@
 
 ?>
 
-<aside id="clashvibes_left_column">
+<aside id="secondary" class="widget-area">
 
  <h1><?php esc_html_e( 'Blog', 'clashvibes' ); ?></h1>
 
-<section id="clashvibes_login">
+<section id="clashvibes-login">
 	<?php get_search_form(); ?>
 </section>
 
-<section class="clashvibes_left_column_box">
-	
+<section class="secondary_column_box">
+
 	<?php
 	if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Primary Sidebar' ) ) :
 		?>
-				   
-		
+
+
 	<section class="widget">
 
 		<h2 class="widget-title"><?php esc_html__( 'Links', 'clashvibes' ); ?></h2>
@@ -40,7 +40,7 @@
 	<?php endif; ?>
 
 </section>
-	   
-											
+
+
 </aside>
 

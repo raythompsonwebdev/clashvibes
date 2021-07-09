@@ -17,31 +17,31 @@
  */
 get_header();
 ?>
-
-
 <?php get_sidebar(); ?>
 
-<section id="clashvibes_right_column">
 
-    <!--Post loop start -->
-    <?php if (have_posts()) : ?>
 
-        <?php
-        while (have_posts()) :
-            the_post();
-            ?>
+<main id="primary" class="site-main">
 
-            <?php get_template_part('template-parts/content', get_post_format()); ?>
+	<!--Post loop start -->
+	<?php if ( have_posts() ) : ?>
 
-        <?php endwhile; ?>
+		<?php
+		while ( have_posts() ) :
+			the_post();
+			?>
 
-    <?php else : ?>
+			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-        <?php get_template_part('template-parts/content', 'none'); ?>
+		<?php endwhile; ?>
+
+	<?php else : ?>
+
+		<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 <?php endif; ?>
 
-</section><!-- end of right panel -->
+</main><!-- end of right panel -->
 
 
 <?php get_footer(); ?>

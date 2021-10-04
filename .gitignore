@@ -11,11 +11,8 @@ PIE.htc
 style.css.map
 fonts/
 spare-docs/
-phpcs.xml
-xmlrpc.php
 videos/
-doumentation/
 .vscode/
 audio/
 vendor/
-package-lock.json
+

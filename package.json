@@ -52,6 +52,6 @@
 		"bundle": "dir-archiver --src . --dest ../clashvibes.zip --exclude .DS_Store .stylelintrc.js .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map .prettierrc.json .eslintrc.js .editorconfig .babelrc style.min.css.map editor-style.css.map .sass-cache fonts .vscode .eslintrc"
 	},
 	"dependencies": {
-		"node-sass": "^6.0.1"
+		"node-sass": "^7.0.0"
 	}
 }

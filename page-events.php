@@ -20,65 +20,65 @@
 get_header();
 ?>
 
-<h1><?php the_title(); ?> Page</h1>
+<h2><?php the_title(); ?> Page</h2>
 
-<div class="results">
+<div class="events-lists">
 
 	<?php
 	$clashvibes_the_query = null;
 
-		$clashvibes_args      = array(
+	$clashvibes_args      = array(
 
-			'post_type'  => 'event',
-			'post_count' => '1',
-		);
-		$clashvibes_the_query = new WP_Query( $clashvibes_args );
+		'post_type'  => 'event',
+		'post_count' => '1',
+	);
+	$clashvibes_the_query = new WP_Query($clashvibes_args);
 
-		if ( $clashvibes_the_query->have_posts() ) :
-			while ( $clashvibes_the_query->have_posts() ) :
-				$clashvibes_the_query->the_post();
-				?>
-					<article class="events_box">
+	if ($clashvibes_the_query->have_posts()) :
+		while ($clashvibes_the_query->have_posts()) :
+			$clashvibes_the_query->the_post();
+	?>
+			<article class="events-item">
 
-						<figure class="events">
-						<a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
-							<?php the_post_thumbnail( 'event-image' ); ?>
-			</a>
-							<figcaption class="event-text">
-								<h4>	<?php the_title(); ?></h4>
+				<figure class="events">
+					<a href="<?php echo esc_url(get_permalink()); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+						<?php the_post_thumbnail('event-image'); ?>
+					</a>
+					<figcaption class="event-text">
+						<h4> <?php the_title(); ?></h4>
 
-							</figcaption>
+					</figcaption>
 
-						</figure>
+				</figure>
 
-						<a href="<?php echo esc_url( get_permalink() ); ?>" id="event-submit-btn">See details</a>
+				<a href="<?php echo esc_url(get_permalink()); ?>" id="event-submit-btn">See details</a>
 
-					</article>
+			</article>
 
-				<?php
-				endwhile;
+		<?php
+		endwhile;
 
-		else :
-			?>
-
-				<article class="events_box">
-
-						<figure class="events">
-
-							<figcaption class="event-text">
-							<h4>No Events</h4>
-
-							</figcaption>
-
-						</figure>
-
-				</article>
-
-
-			<?php
-  endif;
-		wp_reset_postdata();
+	else :
 		?>
+
+		<article class="events_box">
+
+			<figure class="events">
+
+				<figcaption class="event-text">
+					<h4>No Events</h4>
+
+				</figcaption>
+
+			</figure>
+
+		</article>
+
+
+	<?php
+	endif;
+	wp_reset_postdata();
+	?>
 
 
 

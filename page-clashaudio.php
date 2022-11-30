@@ -1,4 +1,5 @@
 <?php
+
 /**
  * *PHP version 7
  *
@@ -16,48 +17,48 @@
  * @link       http:www.raythompsonwebdev.co.uk
  */
 
- get_header();?>
+get_header(); ?>
+
+
+<?php
+esc_html(the_title('<h1 class="page-title">', '</h1>'));
+
+?>
+
+<section id="audio-releases-section">
 
 
 	<?php
-				esc_html( the_title( '<h1 class="page-title">', '</h1>' ) );
 
+
+	$clashvibes_the_query = null;
+
+	$clashvibes_args      = array(
+
+		'post_type'  => 'clash-audio',
+		'post_count' => '5',
+	);
+	$clashvibes_the_query = new WP_Query($clashvibes_args);
 	?>
 
-	<section id="audio_releases_section">
-
-
-		<?php
-
-
-		$clashvibes_the_query = null;
-
-		$clashvibes_args      = array(
-
-			'post_type'  => 'clash-audio',
-			'post_count' => '5',
-		);
-		$clashvibes_the_query = new WP_Query( $clashvibes_args );
-		?>
-
-		<?php
-		if ( $clashvibes_the_query->have_posts() ) :
-			while ( $clashvibes_the_query->have_posts() ) :
-				$clashvibes_the_query->the_post();
-				?>
+	<?php
+	if ($clashvibes_the_query->have_posts()) :
+		while ($clashvibes_the_query->have_posts()) :
+			$clashvibes_the_query->the_post();
+	?>
 
 
 
-			<figure class="audio_releases_box">
+			<figure class="audio-releases-item">
 
-				<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'audio-thumb' ) ); ?>
+				<?php the_post_thumbnail('thumbnail', array('class' => 'audio-thumb')); ?>
 
-				<figcaption>
-				<h1>
-				<?php the_title(); ?>
-			</h1>
-					<a class="Morebutton" href="<?php echo esc_url( get_permalink() ); ?>" alt="">
-					<?php esc_html_e( 'Listen', 'clashvibes' ); ?></a>
+				<figcaption class="audio-releases-caption">
+					<h3 class="audio-releases-header">
+						<?php the_title(); ?>
+					</h3>
+					<a class="audio-releases-btn" href="<?php echo esc_url(get_permalink()); ?>" alt="">
+						<?php esc_html_e('Listen', 'clashvibes'); ?></a>
 
 
 				</figcaption>
@@ -66,10 +67,10 @@
 
 
 
-				<?php
-			endwhile;
-		else :
-			?>
+		<?php
+		endwhile;
+	else :
+		?>
 		<article class="new_released_box">
 
 			<figure class="audio-thumb">
@@ -78,7 +79,7 @@
 				<figcaption>
 
 					<p>
-						<?php esc_html_e( 'Sorry! No Audio clashes to display.', 'clashvibes' ); ?>
+						<?php esc_html_e('Sorry! No Audio clashes to display.', 'clashvibes'); ?>
 					</p>
 
 				</figcaption>
@@ -87,17 +88,17 @@
 
 		</article>
 
-			<?php
-			endif;
-		?>
-			<?php wp_reset_postdata(); ?>
-
-		<div class="clearfix"></div>
-	</section>
+	<?php
+	endif;
+	?>
+	<?php wp_reset_postdata(); ?>
 
 	<div class="clearfix"></div>
+</section>
 
-	<!-- end of right panel -->
+<div class="clearfix"></div>
+
+<!-- end of right panel -->
 
 
 <?php get_footer(); ?>

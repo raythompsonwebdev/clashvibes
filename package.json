@@ -17,13 +17,23 @@
 		"url": "https://github.com/Automattic/clashvibes/issues"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^18.0.1",
-		"@wordpress/stylelint-config": "^19.1.0",
-		"dir-archiver": "^1.2.0",
-		"rtlcss": "^3.3.0",
-		"sass": "^1.42.1",
-		"stylelint-config-recommended-scss": "^4.3.0",
-		"stylelint-config-standard": "^22.0.0"
+		"@wordpress/scripts": "^24.6.0",
+		"@wordpress/stylelint-config": "^21.5.0",
+		"dir-archiver": "^2.1.0",
+		"eslint": "^8.28.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsx-a11y": "^6.6.1",
+		"node-sass": "^8.0.0",
+		"prettier": "^2.8.0",
+		"rtlcss": "^4.0.0",
+		"stylelint-config-prettier": "^9.0.4",
+		"stylelint-config-recommended-scss": "^8.0.0",
+		"stylelint-config-standard": "^29.0.0",
+		"stylelint-config-standard-scss": "^6.1.0",
+		"stylelint-prettier": "^2.0.0",
+		"stylelint-scss": "^4.3.0"
 	},
 	"rtlcssConfig": {
 		"options": {
@@ -38,20 +48,31 @@
 		"plugins": [],
 		"map": false
 	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not ie <= 8"
+	],
 	"scripts": {
 		"start": "wp-scripts start",
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
 		"check-engines": "wp-scripts check-engines",
 		"packages-update": "wp-scripts packages-update",
-		"watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-		"compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+		"watch": "node-sass src/sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+		"compile:css": "node-sass ./sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
 		"compile:rtl": "rtlcss style.css style-rtl.css",
-		"lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
-		"lint:js": "wp-scripts lint-js 'js/*.js' --fix",
+		"lint:scss": "wp-scripts lint-style 'src/sass/**/*.scss'",
+		"lint:js": "wp-scripts lint-js 'src/js/*.js' --fix",
 		"bundle": "dir-archiver --src . --dest ../clashvibes.zip --exclude .DS_Store .stylelintrc.js .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map .prettierrc.json .eslintrc.js .editorconfig .babelrc style.min.css.map editor-style.css.map .sass-cache fonts .vscode .eslintrc"
 	},
 	"dependencies": {
-		"node-sass": "^6.0.1"
+		"@csstools/postcss-sass": "^5.0.1",
+		"autoprefixer": "^10.4.13",
+		"postcss": "^8.4.19",
+		"postcss-preset-env": "^7.8.3",
+		"postcss-scss": "^4.0.6",
+		"react": "^17.0.2",
+		"stylelint": "^14.15.0"
 	}
 }

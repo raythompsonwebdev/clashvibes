@@ -1,4 +1,5 @@
 <?php
+
 /**
  * *PHP version 7
  *
@@ -16,222 +17,217 @@
 
 get_header(); ?>
 
-	<!--Banner section-->
-		<section id="clashvibes-banner">
-			<!--2/2018/07-->
-			<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/clashvibes/images/sliderimage.webp" alt="<?php esc_attr_e( 'sliderimage', 'clashvibes' ); ?>">
+<!--Banner section-->
+<section id="clashvibes-banner">
+	<!--2/2018/07-->
+	<img src="<?php echo esc_url(home_url('/')); ?>/wp-content/themes/clashvibes/images/sliderimage.webp" alt="<?php esc_attr_e('sliderimage', 'clashvibes'); ?>">
 
-		</section>
+</section>
+<h3><?php esc_html_e('Latest Sound Clashes ', 'clashvibes'); ?></h3>
+<!--new releases section-->
+<section id="new-releases-section">
 
-		<!--new releases section-->
-		<section id="new_releases_section">
+	<?php
 
-			<h1><?php esc_html_e( 'Latest Sound Clashes ', 'clashvibes' ); ?></h1>
+	$clashvibes_the_query = null;
 
-			<?php
+	$clashvibes_args      = array(
+		'tax_query'  => array(
+			'relation' => 'OR',
+			array(
+				'taxonomy' => 'audio-category',
+				'field'    => 'slug',
+				'terms'    => 'new-releases',
+			),
+			array(
+				'taxonomy' => 'video-category',
+				'field'    => 'slug',
+				'terms'    => 'new-releases',
+			),
+		),
+		'post_type'  => array('clash-audio', 'clash-videos'),
+		'post_count' => '5',
+	);
+	$clashvibes_the_query = new WP_Query($clashvibes_args);
+	?>
 
-				$clashvibes_the_query = null;
+	<?php
+	if ($clashvibes_the_query->have_posts()) :
+		while ($clashvibes_the_query->have_posts()) :
+			$clashvibes_the_query->the_post();
+	?>
 
-				$clashvibes_args      = array(
-					'tax_query'  => array(
-						'relation' => 'OR',
-						array(
-							'taxonomy' => 'audio-category',
-							'field'    => 'slug',
-							'terms'    => 'new-releases',
-						),
-						array(
-							'taxonomy' => 'video-category',
-							'field'    => 'slug',
-							'terms'    => 'new-releases',
-						),
-					),
-					'post_type'  => array( 'clash-audio', 'clash-videos' ),
-					'post_count' => '5',
-				);
-				$clashvibes_the_query = new WP_Query( $clashvibes_args );
-				?>
+			<figure class="new-releases-item">
 
-			<?php
-			if ( $clashvibes_the_query->have_posts() ) :
-				while ( $clashvibes_the_query->have_posts() ) :
-					$clashvibes_the_query->the_post();
-					?>
+				<?php the_post_thumbnail('thumbnail', array('class' => 'new-release-thumb')); ?>
 
-				<figure class="new_releases_box">
+				<figcaption class="new-releases-caption">
+					<h4 class="new-releases-header">
+						<?php the_title(); ?>
+					</h4>
 
-					<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'new-release-thumb' ) ); ?>
+					<?php if ('clash-audio' === get_post_type()) : ?>
+						<a class="new-release-btn" href=" <?php echo esc_url(get_permalink(), 'clashvibes'); ?> " title="Listen to <?php the_title_attribute(); ?>">
+							<?php esc_html_e('Listen', 'clashvibes'); ?></a>
 
-					<figcaption>
-						<h1>
-							<?php the_title(); ?>
-						</h1>
+					<?php else : ?>
 
-						<?php if ( 'clash-audio' === get_post_type() ) : ?>
-						<a class="Morebutton" href=" <?php echo esc_url( get_permalink(), 'clashvibes' ); ?> " title="Listen to <?php the_title_attribute(); ?>">
-							<?php esc_html_e( 'Listen', 'clashvibes' ); ?></a>
+						<a class="new-release-btn" href=" <?php echo esc_url(get_permalink(), 'clashvibes'); ?> " title="View <?php the_title_attribute(); ?> Video">
+							<?php esc_html_e('View', 'clashvibes'); ?></a>
+					<?php endif; ?>
 
-						<?php else : ?>
+				</figcaption>
 
-						<a class="Morebutton" href=" <?php echo esc_url( get_permalink(), 'clashvibes' ); ?> " title="View <?php the_title_attribute(); ?> Video">
-							<?php esc_html_e( 'View', 'clashvibes' ); ?></a>
-						<?php endif; ?>
+			</figure>
 
-					</figcaption>
+		<?php
+		endwhile;
+	else :
+		?>
 
-				</figure>
+		<article class="new-releases-item">
 
-					<?php
-				endwhile;
-				else :
-					?>
-
-		<article class="new_releases_box">
-
-		 <figure class="new-release-thumb">
+			<figure class="new-release-thumb">
 
 
 				<figcaption>
 
-					<p><?php esc_html_e( 'Sorry! No clashes to display.', 'clashvibes' ); ?></p>
+					<p><?php esc_html_e('Sorry! No clashes to display.', 'clashvibes'); ?></p>
 
 				</figcaption>
 
-		 </figure>
+			</figure>
 
 		</article>
 
-					<?php
-				endif;
-				wp_reset_postdata();
-				?>
+	<?php
+	endif;
+	wp_reset_postdata();
+	?>
 
-		</section>
+</section>
 
-		<!--Top 10 download section-->
-		<div id="popularclashes-section">
+<!--Top 10 download section-->
+<div id="top-clashes-section">
 
-			<!--Top 10 Audio Section-->
-			<section id="popularclashes-audio">
+	<!--Top 10 Audio Section-->
+	<section id="top-audio-clashes">
 
-				<h1><?php esc_html_e( 'Top Audio Clashes ', 'clashvibes' ); ?></h1>
-				<?php
+		<h5 class="top-clashes-title"><?php esc_html_e('Top Audio Clashes ', 'clashvibes'); ?></h5>
+		<?php
 
-					$clashvibes_the_query = null;
-					$clashvibes_args      = array(
-						'tax_query'  => array(
+		$clashvibes_the_query = null;
+		$clashvibes_args      = array(
+			'tax_query'  => array(
 
-							array(
-								'taxonomy' => 'audio-category',
-								'field'    => 'slug',
-								'terms'    => 'top-audio',
-							),
-						),
-						'post_type'  => 'clash-audio',
-						'post_count' => '5',
-					);
-					$clashvibes_the_query = new WP_Query( $clashvibes_args );
-					?>
-				<?php
-				if ( $clashvibes_the_query->have_posts() ) :
-					while ( $clashvibes_the_query->have_posts() ) :
-						$clashvibes_the_query->the_post();
-						?>
+				array(
+					'taxonomy' => 'audio-category',
+					'field'    => 'slug',
+					'terms'    => 'top-audio',
+				),
+			),
+			'post_type'  => 'clash-audio',
+			'post_count' => '5',
+		);
+		$clashvibes_the_query = new WP_Query($clashvibes_args);
+		?>
+		<?php
+		if ($clashvibes_the_query->have_posts()) :
+			while ($clashvibes_the_query->have_posts()) :
+				$clashvibes_the_query->the_post();
+		?>
 
-				<span class="popularclashes-box">
+				<span class="top-clash-item">
 
-					<span class="popularclashes-image">
-						<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail( 'popular-image' ); ?>
+					<span class="top-clash-img">
+						<a href="<?php echo esc_url(get_permalink()); ?>" title="<?php the_title_attribute(); ?>">
+							<?php the_post_thumbnail('popular-image'); ?>
 						</a>
 					</span>
 
-					<span class="popularclashes-title">
+					<span class="top-clash-name">
 						<?php the_title(); ?>
 					</span>
 
-					<a class="popularclashes-link" href="<?php echo esc_url( get_permalink(), 'clashvibes' ); ?>" title="Listen to <?php the_title_attribute(); ?>">
-						<?php esc_html_e( 'Listen', 'clashvibes' ); ?>
+					<a class="top-clash-link" href="<?php echo esc_url(get_permalink(), 'clashvibes'); ?>" title="Listen to <?php the_title_attribute(); ?>">
+						<?php esc_html_e('Listen', 'clashvibes'); ?>
 					</a>
 
 				</span>
 
-						<?php
-					endwhile;
-					else :
-						?>
+			<?php
+			endwhile;
+		else :
+			?>
 
-				<p><?php esc_html_e( 'Oops! There are no posts to display.', 'clashvibes' ); ?></p>
+			<p><?php esc_html_e('Oops! There are no posts to display.', 'clashvibes'); ?></p>
 
-						<?php
-					endif;
-					wp_reset_postdata();
-					?>
+		<?php
+		endif;
+		wp_reset_postdata();
+		?>
 
-			</section>
+	</section>
 
-			<!--Top 10 Video Section-->
-			<section id="popularclashes-video">
+	<!--Top 10 Video Section-->
+	<section id="top-video-clashes">
 
-				<h1><?php esc_html_e( 'Top Video Clashes', 'clashvibes' ); ?></h1>
+		<h5 class="top-clashes-title"><?php esc_html_e('Top Video Clashes', 'clashvibes'); ?></h5>
 
-				<?php
+		<?php
 
-					$clashvibes_the_query     = null;
-					$clashvibes_args          = array(
-						'tax_query'   => array(
+		$clashvibes_the_query     = null;
+		$clashvibes_args          = array(
+			'tax_query'   => array(
 
-							array(
-								'taxonomy' => 'video-category',
-								'field'    => 'slug',
-								'terms'    => 'top-video',
-							),
-						),
-						'post_type'   => 'clash-videos',
-						'post_status' => 'publish',
-						'post_count'  => '5',
-					);
-						$clashvibes_the_query = new WP_Query( $clashvibes_args );
-					?>
+				array(
+					'taxonomy' => 'video-category',
+					'field'    => 'slug',
+					'terms'    => 'top-video',
+				),
+			),
+			'post_type'   => 'clash-videos',
+			'post_status' => 'publish',
+			'post_count'  => '5',
+		);
+		$clashvibes_the_query = new WP_Query($clashvibes_args);
+		?>
 
-				<?php
-				if ( $clashvibes_the_query->have_posts() ) :
-					while ( $clashvibes_the_query->have_posts() ) :
-						$clashvibes_the_query->the_post();
-						?>
+		<?php
+		if ($clashvibes_the_query->have_posts()) :
+			while ($clashvibes_the_query->have_posts()) :
+				$clashvibes_the_query->the_post();
+		?>
 
-				<span class="popularclashes-box">
+				<span class="top-clash-item">
 
-					<span class="popularclashes-image">
-						<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail( 'popular-image' ); ?>
+					<span class="top-clash-img">
+						<a href="<?php echo esc_url(get_permalink()); ?>" title="<?php the_title_attribute(); ?>">
+							<?php the_post_thumbnail('popular-image'); ?>
 						</a>
 					</span>
 
-					<span class="popularclashes-title"><?php the_title(); ?></span>
+					<span class="top-clash-name"><?php the_title(); ?></span>
 
-					<a class="popularclashes-link" href="<?php echo esc_url( get_permalink() ); ?>" title="View <?php the_title_attribute(); ?> Video">
-						<?php esc_html_e( 'View', 'clashvibes' ); ?>
+					<a class="top-clash-link" href="<?php echo esc_url(get_permalink()); ?>" title="View <?php the_title_attribute(); ?> Video">
+						<?php esc_html_e('View', 'clashvibes'); ?>
 					</a>
 
 				</span>
 
-				<?php endwhile; else : ?>
+			<?php endwhile;
+		else : ?>
 
-				<p><?php esc_html_e( 'Oops! There are no posts to display.', 'clashvibes' ); ?></p>
+			<p><?php esc_html_e('Oops! There are no posts to display.', 'clashvibes'); ?></p>
 
-					<?php
-					endif;
-					wp_reset_postdata();
-				?>
+		<?php
+		endif;
+		wp_reset_postdata();
+		?>
 
-			</section>
+	</section>
 
-		</div>
-
-		<div class="clearfix"></div>
-
-
+</div>
 
 
 <?php get_footer(); ?>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHP version 7
  *
@@ -20,9 +21,9 @@ get_header();
 
 ?>
 
-<h1><?php the_title(); ?> Page</h1>
+<h2><?php the_title(); ?> Page</h2>
 <div id="contactform">
-		<?php the_content() ?>
-		</div>
+	<?php the_content() ?>
+</div>
 <?php
 get_footer();

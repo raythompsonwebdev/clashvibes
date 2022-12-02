@@ -1,4 +1,5 @@
 <?php
+
 /**
  * *PHP version 7
  *
@@ -16,92 +17,92 @@
 
 get_header(); ?>
 
-	<?php get_sidebar(); ?>
+<?php get_sidebar(); ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+	<?php if (have_posts()) : ?>
 
 		<article class="post group" <?php post_class(); ?> id="post-
 			<?php the_ID(); ?>">
 
 			<header class="entry-header">
-				<h1 class="page-title">
+				<h2 class="page-title">
 					<?php
-							$clashvibes_current_term = get_queried_object();
-							$clashvibes_taxonomy     = get_taxonomy( $clashvibes_current_term->taxonomy );
-							echo esc_html( $clashvibes_taxonomy->label ) . ':' . esc_html( $clashvibes_current_term->name );
+					$clashvibes_current_term = get_queried_object();
+					$clashvibes_taxonomy     = get_taxonomy($clashvibes_current_term->taxonomy);
+					echo esc_html($clashvibes_taxonomy->label) . ':' . esc_html($clashvibes_current_term->name);
 					?>
-				</h1>
+				</h2>
 				<?php
-						// Show an optional term description.
-						$clashvibes_term_description = term_description();
-				if ( ! empty( $clashvibes_term_description ) ) :
-					printf( '<div class="taxonomy-description">%s</div>', esc_html( $clashvibes_term_description ) );
-						endif;
+				// Show an optional term description.
+				$clashvibes_term_description = term_description();
+				if (!empty($clashvibes_term_description)) :
+					printf('<div class="taxonomy-description">%s</div>', esc_html($clashvibes_term_description));
+				endif;
 				?>
 			</header><!-- .page-header -->
 
 			<?php
-			if ( is_author() && get_the_author_meta( 'description' ) ) {
+			if (is_author() && get_the_author_meta('description')) {
 				echo '<div class="author-index shorter">';
-				get_template_part( 'inc/author', 'box' );
+				get_template_part('inc/author', 'box');
 				echo '</div>';
 			}
 			?>
 
 			<?php /* Start the Loop */ ?>
 			<?php
-			while ( have_posts() ) :
+			while (have_posts()) :
 				the_post();
-				?>
+			?>
 
-			<figure class="thumb">
-				<?php clashvibes_post_thumbnail(); ?>
-			</figure>
+				<figure class="thumb">
+					<?php clashvibes_post_thumbnail(); ?>
+				</figure>
 
-			<div class="entry-content">
-				<?php
-				the_content(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
-					)
-				);
+				<div class="entry-content">
+					<?php
+					the_content(
+						sprintf(
+							wp_kses(
+								/* translators: %s: Name of current post. Only visible to screen readers */
+								__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes'),
+								array(
+									'span' => array(
+										'class' => array(),
+									),
+								)
+							),
+							get_the_title()
+						)
+					);
 
-				wp_link_pages(
-					array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clashvibes' ),
-						'after'  => '</div>',
-					)
-				);
-				?>
-			</div><!-- .entry-content -->
+					wp_link_pages(
+						array(
+							'before' => '<div class="page-links">' . esc_html__('Pages:', 'clashvibes'),
+							'after'  => '</div>',
+						)
+					);
+					?>
+				</div><!-- .entry-content -->
 
-			<footer class="entry-footer">
-				<?php clashvibes_entry_footer(); ?>
-			</footer><!-- .entry-footer -->
+				<footer class="entry-footer">
+					<?php clashvibes_entry_footer(); ?>
+				</footer><!-- .entry-footer -->
 		</article>
 
-		<?php endwhile; ?>
-		<?php else : ?>
+	<?php endwhile; ?>
+<?php else : ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+	<?php get_template_part('template-parts/content', 'none'); ?>
 
-		<?php endif; ?>
-
-
-		<div class="clearfix"></div>
+<?php endif; ?>
 
 
-	</main><!-- end of right panel -->
+<div class="clearfix"></div>
 
-	<?php get_footer(); ?>
+
+</main><!-- end of right panel -->
+
+<?php get_footer(); ?>

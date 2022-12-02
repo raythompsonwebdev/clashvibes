@@ -1,4 +1,5 @@
 <?php
+
 /**
  * *PHP version 7
  *
@@ -21,19 +22,19 @@ get_header(); ?>
 
 <?php
 
-esc_html( the_title( '<h1 class="page-title">', ' Page</h1>' ) );
+esc_html(the_title('<h2 class="page-title">', ' Page</h2>'));
 
-while ( have_posts() ) :
+while (have_posts()) :
 	the_post();
 
-	get_template_part( 'template-parts/content', 'page' );
+	get_template_part('template-parts/content', 'page');
 
 	// If comments are open or we have at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) :
+	if (comments_open() || get_comments_number()) :
 		comments_template();
 	endif;
 
-		endwhile; // End of the loop.
+endwhile; // End of the loop.
 ?>
 
 

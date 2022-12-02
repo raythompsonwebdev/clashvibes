@@ -21,7 +21,7 @@ get_header(); ?>
 
 
 <?php
-esc_html(the_title('<h1 class="page-title">', '</h1>'));
+esc_html(the_title('<h2 class="page-title">', '</h2>'));
 
 ?>
 

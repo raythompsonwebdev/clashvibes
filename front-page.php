@@ -23,7 +23,7 @@ get_header(); ?>
 	<img src="<?php echo esc_url(home_url('/')); ?>/wp-content/themes/clashvibes/images/sliderimage.webp" alt="<?php esc_attr_e('sliderimage', 'clashvibes'); ?>">
 
 </section>
-<h3><?php esc_html_e('Latest Sound Clashes ', 'clashvibes'); ?></h3>
+<h2><?php esc_html_e('Latest Sound Clashes ', 'clashvibes'); ?></h2>
 <!--new releases section-->
 <section id="new-releases-section">
 
@@ -62,9 +62,9 @@ get_header(); ?>
 				<?php the_post_thumbnail('thumbnail', array('class' => 'new-release-thumb')); ?>
 
 				<figcaption class="new-releases-caption">
-					<h4 class="new-releases-header">
+					<h3 class="new-releases-header">
 						<?php the_title(); ?>
-					</h4>
+					</h3>
 
 					<?php if ('clash-audio' === get_post_type()) : ?>
 						<a class="new-release-btn" href=" <?php echo esc_url(get_permalink(), 'clashvibes'); ?> " title="Listen to <?php the_title_attribute(); ?>">
@@ -81,9 +81,8 @@ get_header(); ?>
 			</figure>
 
 		<?php
-		endwhile;
-	else :
-		?>
+		endwhile; ?>
+	<?php else :	?>
 
 		<article class="new-releases-item">
 
@@ -113,66 +112,66 @@ get_header(); ?>
 	<!--Top 10 Audio Section-->
 	<section id="top-audio-clashes">
 
-		<h5 class="top-clashes-title"><?php esc_html_e('Top Audio Clashes ', 'clashvibes'); ?></h5>
-		<?php
-
-		$clashvibes_the_query = null;
-		$clashvibes_args      = array(
-			'tax_query'  => array(
-
-				array(
-					'taxonomy' => 'audio-category',
-					'field'    => 'slug',
-					'terms'    => 'top-audio',
-				),
-			),
-			'post_type'  => 'clash-audio',
-			'post_count' => '5',
-		);
-		$clashvibes_the_query = new WP_Query($clashvibes_args);
-		?>
-		<?php
-		if ($clashvibes_the_query->have_posts()) :
-			while ($clashvibes_the_query->have_posts()) :
-				$clashvibes_the_query->the_post();
-		?>
-
-				<span class="top-clash-item">
-
-					<span class="top-clash-img">
-						<a href="<?php echo esc_url(get_permalink()); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail('popular-image'); ?>
-						</a>
-					</span>
-
-					<span class="top-clash-name">
-						<?php the_title(); ?>
-					</span>
-
-					<a class="top-clash-link" href="<?php echo esc_url(get_permalink(), 'clashvibes'); ?>" title="Listen to <?php the_title_attribute(); ?>">
-						<?php esc_html_e('Listen', 'clashvibes'); ?>
-					</a>
-
-				</span>
-
+		<h4 class="top-clashes-title"><?php esc_html_e('Top Audio Clashes ', 'clashvibes'); ?></h5>
 			<?php
-			endwhile;
-		else :
+
+			$clashvibes_the_query = null;
+			$clashvibes_args      = array(
+				'tax_query'  => array(
+
+					array(
+						'taxonomy' => 'audio-category',
+						'field'    => 'slug',
+						'terms'    => 'top-audio',
+					),
+				),
+				'post_type'  => 'clash-audio',
+				'post_count' => '5',
+			);
+			$clashvibes_the_query = new WP_Query($clashvibes_args);
+			?>
+			<?php
+			if ($clashvibes_the_query->have_posts()) :
+				while ($clashvibes_the_query->have_posts()) :
+					$clashvibes_the_query->the_post();
 			?>
 
-			<p><?php esc_html_e('Oops! There are no posts to display.', 'clashvibes'); ?></p>
+					<span class="top-clash-item">
 
-		<?php
-		endif;
-		wp_reset_postdata();
-		?>
+						<span class="top-clash-img">
+							<a href="<?php echo esc_url(get_permalink()); ?>" title="<?php the_title_attribute(); ?>">
+								<?php the_post_thumbnail('popular-image'); ?>
+							</a>
+						</span>
+
+						<span class="top-clash-name">
+							<?php the_title(); ?>
+						</span>
+
+						<a class="top-clash-link" href="<?php echo esc_url(get_permalink(), 'clashvibes'); ?>" title="Listen to <?php the_title_attribute(); ?>">
+							<?php esc_html_e('Listen', 'clashvibes'); ?>
+						</a>
+
+					</span>
+
+				<?php
+				endwhile;
+			else :
+				?>
+
+				<p><?php esc_html_e('Oops! There are no posts to display.', 'clashvibes'); ?></p>
+
+			<?php
+			endif;
+			wp_reset_postdata();
+			?>
 
 	</section>
 
 	<!--Top 10 Video Section-->
 	<section id="top-video-clashes">
 
-		<h5 class="top-clashes-title"><?php esc_html_e('Top Video Clashes', 'clashvibes'); ?></h5>
+		<h4 class="top-clashes-title"><?php esc_html_e('Top Video Clashes', 'clashvibes'); ?></h4>
 
 		<?php
 

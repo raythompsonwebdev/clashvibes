@@ -59,7 +59,7 @@
 		"format": "wp-scripts format",
 		"check-engines": "wp-scripts check-engines",
 		"packages-update": "wp-scripts packages-update",
-		"watch": "node-sass src/sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+		"watch": "node-sass ./sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
 		"compile:css": "node-sass ./sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
 		"compile:rtl": "rtlcss style.css style-rtl.css",
 		"lint:scss": "wp-scripts lint-style 'src/sass/**/*.scss'",

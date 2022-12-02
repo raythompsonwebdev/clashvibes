@@ -21,7 +21,7 @@ get_header(); ?>
 
 
 <?php
-the_title('<h1 class="page-title">', '</h1>');
+the_title('<h2 class="page-title">', '</h2>');
 ?>
 
 <section id="video-releases-section">

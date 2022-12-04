@@ -1,4 +1,5 @@
 <?php
+
 /**
  * *PHP version 7
  *
@@ -19,26 +20,26 @@
 <!--id="secondary"-->
 <aside id="secondary" class="widget-area">
 
-	<h1>
+	<h2 id="secondary-header">
 		<?php esc_html_e( 'Audio', 'clashvibes' ); ?>
-	</h1>
+	</h2>
 
 	<section id="clashvibes-login">
 		<?php get_search_form(); ?>
 	</section>
 
-<!--class="widget"-->
+	<!--class="widget"-->
 	<section class="secondary_column_box">
 
 		<?php
-			wp_nav_menu(
-				array(
-					'menu'           => 'Audio-Nav',
-					'container'      => 'nav',
-					'theme_location' => 'audio-nav',
-				)
-			);
-			?>
+		wp_nav_menu(
+			array(
+				'menu'           => 'Audio-Nav',
+				'container'      => 'nav',
+				'theme_location' => 'audio-nav',
+			)
+		);
+		?>
 
 	</section>
 

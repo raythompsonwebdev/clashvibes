@@ -19,7 +19,6 @@
 
 get_header(); ?>
 
-
 <?php
 the_title('<h2 class="page-title">', '</h2>');
 ?>
@@ -62,19 +61,16 @@ the_title('<h2 class="page-title">', '</h2>');
 			</figure>
 
 
-
-		<?php endwhile;
-	else : ?>
+		<?php endwhile; ?>
+	<?php else : ?>
 
 		<article class="video_releases_box">
 
 			<figure class="audio-thumb">
 
-
 				<figcaption>
 
 					<p><?php esc_html_e('Sorry! No Video clashes to display.', 'clashvibes'); ?></p>
-
 
 				</figcaption>
 
@@ -88,11 +84,7 @@ the_title('<h2 class="page-title">', '</h2>');
 	<div class="clearfix"></div>
 
 </section>
-<!--End of news release section-->
 
 <div class="clearfix"></div>
-
-<!-- end of right panel -->
-
 
 <?php get_footer(); ?>

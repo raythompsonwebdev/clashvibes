@@ -50,7 +50,7 @@
 
 			<div class="site-branding">
 
-				<!--site logo-->
+
 				<div class="site-logo">
 					<?php $clashvibes_site_title = get_bloginfo('name'); ?>
 					<a href=" <?php echo esc_url(home_url('/')); ?>" rel="home">
@@ -78,7 +78,7 @@
 					</a>
 				</div>
 
-				<!--header title-->
+
 				<section id="clashvibes-title">
 
 					<h1 class="site-title">
@@ -91,7 +91,8 @@
 					?>
 
 						<p class="site-description">
-							<?php echo esc_html($clashvibes_description); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							<?php
+							echo esc_html($clashvibes_description); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							?>
 						</p>
 
@@ -99,28 +100,24 @@
 
 				</section>
 
-			</div><!-- .site-branding -->
+			</div>
 
-			<!--Social Media Icons-->
+
 			<aside id="socialmediatop">
 
 				<a class="social-icon instagram-icon" href="<?php echo esc_url(__('http://www.instagram.com/', 'clashvibes')); ?>" target="new" title=<?php esc_attr_e('Follow me on Instagram', 'clashvibes'); ?>>
-					<!-- <span><i class="fab fa-instagram" aria-hidden="true"></i></span> -->
 					<span class="dashicons dashicons-instagram"></span>
 				</a>
 
 				<a class="social-icon twitter-icon" href="<?php echo esc_url(__('http://twitter.com/RayThompWeb', 'clashvibes')); ?>" target="new" title=<?php esc_attr_e('Follow me on Twitter', 'clashvibes'); ?>>
-					<!-- <span>	<i class="fab fa-twitter" aria-hidden="true"></i>	</span> -->
 					<span class="dashicons dashicons-twitter"></span>
 				</a>
 
 				<a class="social-icon facebook-icon" href="<?php echo esc_url(__('https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'clashvibes')); ?>" target="new" title=<?php esc_attr_e('Follow me on Facebook', 'clashvibes'); ?>>
-					<!-- <span><i class="fab fa-facebook" aria-hidden="true"></i></span> -->
 					<span class="dashicons dashicons-facebook"></span>
 				</a>
 
 				<a class="social-icon pinterest-icon" href="<?php echo esc_url(__('https://www.pinterest.co.uk/', 'clashvibes')); ?>" target="new" title=<?php esc_attr_e('Follow me on Pinterest', 'clashvibes'); ?>>
-					<!-- <span>	<i class="fab fa-facebook" aria-hidden="true"></i></span> -->
 					<span class="dashicons dashicons-pinterest"></span>
 				</a>
 
@@ -131,7 +128,7 @@
 
 		<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'clashvibes'); ?></button> -->
 
-		<!--Main navigation-->
+
 		<nav id="cv-mobilenav" class="mobile-navigation">
 
 			<?php
@@ -147,7 +144,7 @@
 
 		</nav>
 
-		<!--Main navigation-->
+
 		<nav id="cv-mainnav" class="main-navigation">
 
 			<?php

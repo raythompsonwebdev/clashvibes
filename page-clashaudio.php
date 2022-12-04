@@ -47,8 +47,6 @@ esc_html(the_title('<h2 class="page-title">', '</h2>'));
 			$clashvibes_the_query->the_post();
 	?>
 
-
-
 			<figure class="audio-releases-item">
 
 				<?php the_post_thumbnail('thumbnail', array('class' => 'audio-thumb')); ?>
@@ -65,17 +63,12 @@ esc_html(the_title('<h2 class="page-title">', '</h2>'));
 
 			</figure>
 
-
-
 		<?php
 		endwhile;
 	else :
 		?>
 		<article class="new_released_box">
-
 			<figure class="audio-thumb">
-
-
 				<figcaption>
 
 					<p>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * *PHP version 7
  *
@@ -16,18 +17,14 @@
 
 get_header(); ?>
 
-
-
-
-	<?php get_sidebar( 'video' ); ?>
+<?php get_sidebar('video'); ?>
 
 <main id="primary" class="site-main">
 
-	<?php get_template_part( 'template-parts/content', 'video' ); ?>
+	<?php get_template_part('template-parts/content', 'video'); ?>
 
-</main><!-- end of clashvibes_right_panel_fullwidth -->
+</main>
 
 <div class="clearfix"></div>
-
 
 <?php get_footer(); ?>

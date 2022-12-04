@@ -1,4 +1,5 @@
 <?php
+
 /**
  * *PHP version 7
  *
@@ -17,31 +18,30 @@
 ?>
 
 <!--id="secondary"-->
-<aside id="secondary" class="widget-area" >
+<aside id="secondary" class="widget-area">
 
- <h1><?php esc_html_e( 'Video', 'clashvibes' ); ?></h1>
+	<h2 id="secondary-header"><?php esc_html_e( 'Video', 'clashvibes' ); ?></h2>
 
-<section id="clashvibes-login">
-	<?php get_search_form(); ?>
-</section>
+	<section id="clashvibes-login">
+		<?php get_search_form(); ?>
+	</section>
 
-<!--class="widget"-->
-<section class="secondary_column_box">
+	<!--class="widget"-->
+	<section class="secondary_column_box">
 
-<?php
-wp_nav_menu(
-	array(
-		'menu'           => 'Video-Nav',
-		'container'      => 'nav',
-		'theme_location' => 'video-nav',
-	)
-);
-?>
+		<?php
+		wp_nav_menu(
+			array(
+				'menu'           => 'Video-Nav',
+				'container'      => 'nav',
+				'theme_location' => 'video-nav',
+			)
+		);
+		?>
 
-</section>
+	</section>
 
 
- <div class="clearfix"></div>
+	<div class="clearfix"></div>
 
 </aside>
-

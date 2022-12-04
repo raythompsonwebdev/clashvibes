@@ -1,4 +1,5 @@
 <?php
+
 /**
  * *PHP version 7
  *
@@ -21,9 +22,7 @@ get_header(); ?>
 
 	<section id="clashvibes_right_column_front">
 
-		
-
-	</section><!-- end of right panel -->
+	</section>
 
 </div>
 

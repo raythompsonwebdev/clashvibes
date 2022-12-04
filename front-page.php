@@ -17,14 +17,14 @@
 
 get_header(); ?>
 
-<!--Banner section-->
+
 <section id="clashvibes-banner">
-	<!--2/2018/07-->
+
 	<img src="<?php echo esc_url(home_url('/')); ?>/wp-content/themes/clashvibes/images/sliderimage.webp" alt="<?php esc_attr_e('sliderimage', 'clashvibes'); ?>">
 
 </section>
 <h2><?php esc_html_e('Latest Sound Clashes ', 'clashvibes'); ?></h2>
-<!--new releases section-->
+
 <section id="new-releases-section">
 
 	<?php
@@ -81,8 +81,9 @@ get_header(); ?>
 			</figure>
 
 		<?php
-		endwhile; ?>
-	<?php else :	?>
+		endwhile;
+		?>
+	<?php else : ?>
 
 		<article class="new-releases-item">
 
@@ -106,10 +107,10 @@ get_header(); ?>
 
 </section>
 
-<!--Top 10 download section-->
+
 <div id="top-clashes-section">
 
-	<!--Top 10 Audio Section-->
+
 	<section id="top-audio-clashes">
 
 		<h4 class="top-clashes-title"><?php esc_html_e('Top Audio Clashes ', 'clashvibes'); ?></h5>
@@ -168,15 +169,15 @@ get_header(); ?>
 
 	</section>
 
-	<!--Top 10 Video Section-->
+
 	<section id="top-video-clashes">
 
 		<h4 class="top-clashes-title"><?php esc_html_e('Top Video Clashes', 'clashvibes'); ?></h4>
 
 		<?php
 
-		$clashvibes_the_query     = null;
-		$clashvibes_args          = array(
+		$clashvibes_the_query = null;
+		$clashvibes_args      = array(
 			'tax_query'   => array(
 
 				array(
@@ -214,8 +215,8 @@ get_header(); ?>
 
 				</span>
 
-			<?php endwhile;
-		else : ?>
+			<?php endwhile;	?>
+		<?php else :		?>
 
 			<p><?php esc_html_e('Oops! There are no posts to display.', 'clashvibes'); ?></p>
 

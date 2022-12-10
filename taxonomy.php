@@ -100,9 +100,6 @@ get_header(); ?>
 <?php endif; ?>
 
 
-<div class="clearfix"></div>
-
-
 </main><!-- end of right panel -->
 
 <?php get_footer(); ?>

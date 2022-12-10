@@ -86,12 +86,9 @@ esc_html(the_title('<h2 class="page-title">', '</h2>'));
 	?>
 	<?php wp_reset_postdata(); ?>
 
-	<div class="clearfix"></div>
+
 </section>
 
-<div class="clearfix"></div>
-
-<!-- end of right panel -->
 
 
 <?php get_footer(); ?>

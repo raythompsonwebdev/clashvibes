@@ -285,7 +285,6 @@ License: GNU General Public License v2 or later
 	gap: 0.25em;
 
 	.menu-item {
-		display: inline-block;
 		width: 13%;
 		height: 40px;
 		flex: 1 0 auto;
@@ -1428,7 +1427,8 @@ section.error-404 {
 	margin: 0 0 0.5em 0;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: flex-start;
+	justify-content: space-between;
+	align-items: stretch;
 	height: auto;
 }
 .new-releases-item,
@@ -1436,19 +1436,18 @@ section.error-404 {
 .audio-releases-item {
 	flex: 0 1 auto;
 	width: 19.2%;
-	min-height: 320px;
-	padding: 0;
+	height: auto;
+	padding: 0.5em 0;
 	margin: 0.2em;
 	background-color: $color3;
 }
 .audio-thumb,
 .video-thumb,
 .new-release-thumb {
-	width: 50%;
-	margin: 1em auto;
+	width: auto;
+	margin: 0.5em auto;
 	transform-origin: 50% 50%;
 	transform: scale(1.05);
-	box-sizing: border-box;
 	transition: all 0.5s ease-in-out 0s;
 	display: block;
 	height: auto;
@@ -1471,12 +1470,11 @@ section.error-404 {
 .new-releases-header {
 	color: $color4;
 	font-size: 0.9em;
-	min-height: 60px;
 	text-align: center;
 	line-height: 35px;
-	margin: 0;
-	padding: 0 2%;
-	width: 96%;
+	margin: 0 auto;
+	padding: 0;
+	width: 80%;
 	text-transform: capitalize;
 }
 .video-releases-btn,
@@ -1571,10 +1569,9 @@ section.error-404 {
 	background-color: $color3;
 
 	.top-clash-img {
-		float: left;
 		flex: 0 1 auto;
 		background-color: $color;
-		width: 6%;
+		width: auto;
 		color: $color4;
 		height: 100%;
 		display: block;
@@ -1584,9 +1581,8 @@ section.error-404 {
 			background-color: $color2;
 			height: 100%;
 
-			img {
-				box-sizing: border-box;
-				vertical-align: unset;
+			.attachment-popular-image {
+				width: auto;
 			}
 		}
 	}
@@ -1720,7 +1716,6 @@ section.error-404 {
 
 	.menu-item {
 		list-style: none;
-		display: block;
 		text-align: center;
 		width: 100%;
 		margin-bottom: 0.2em;
@@ -2205,7 +2200,6 @@ section.error-404 {
 		gap: 0.25em;
 
 		.menu-item {
-			display: inline-block;
 			width: 13%;
 			height: 40px;
 			flex: 1 0 auto;
@@ -2320,6 +2314,14 @@ section.error-404 {
 			text-indent: 0.5em;
 			padding: 0;
 		}
+	}
+
+	.archive-title {
+		text-align: center;
+		margin: 0;
+		display: block;
+		line-height: 50px;
+		font-size: 1.3em;
 	}
 
 	/* pages,blogs, custom posts */
@@ -3377,20 +3379,16 @@ section.error-404 {
 	.audio-releases-item {
 		flex: 0 1 auto;
 		width: 19.2%;
-		min-height: 320px;
-		padding: 0;
+		height: auto;
+		padding: 1em 0;
 		margin: 0.2em;
 		background-color: $color3;
 	}
 	.audio-thumb,
 	.video-thumb,
 	.new-release-thumb {
-		width: 50%;
-		margin: 1em auto;
-		transform-origin: 50% 50%;
-		transform: scale(1.05);
-		box-sizing: border-box;
-		transition: all 0.5s ease-in-out 0s;
+		width: auto;
+		margin: 0.5em auto;
 		display: block;
 		height: auto;
 		&:hover {
@@ -3410,15 +3408,9 @@ section.error-404 {
 	.video-releases-header,
 	.audio-releases-header,
 	.new-releases-header {
-		color: $color4;
 		font-size: 0.9em;
-		min-height: 60px;
-		text-align: center;
 		line-height: 35px;
-		margin: 0;
-		padding: 0 2%;
-		width: 96%;
-		text-transform: capitalize;
+		width: 80%;
 	}
 	.video-releases-btn,
 	.audio-releases-btn,
@@ -3512,10 +3504,9 @@ section.error-404 {
 		background-color: $color3;
 
 		.top-clash-img {
-			float: left;
 			flex: 0 1 auto;
 			background-color: $color;
-			width: 6%;
+			width: auto;
 			color: $color4;
 			height: 100%;
 			display: block;
@@ -3525,9 +3516,8 @@ section.error-404 {
 				background-color: $color2;
 				height: 100%;
 
-				img {
-					box-sizing: border-box;
-					vertical-align: unset;
+				.attachment-popular-image {
+					width: auto;
 				}
 			}
 		}
@@ -3660,7 +3650,6 @@ section.error-404 {
 		.menu-item {
 			list-style: none;
 			display: block;
-
 			text-align: center;
 			width: 100%;
 			margin-bottom: 0.2em;
@@ -3956,6 +3945,8 @@ section.error-404 {
 
 	#cv-mainnav {
 		height: 45px;
+		display: block;
+		width: 100%;
 	}
 	#menu-main {
 		list-style: none;
@@ -3979,7 +3970,7 @@ section.error-404 {
 		}
 	}
 	#primary {
-		width: 76%;
+		width: 78%;
 
 		h1 {
 			font-size: 1.4em;
@@ -4274,6 +4265,7 @@ section.error-404 {
 
 						.comment-author {
 							font-size: 0.9em;
+							width: 30%;
 
 							img {
 								width: auto;
@@ -4295,6 +4287,7 @@ section.error-404 {
 
 						.comment-metadata {
 							font-size: 0.8em;
+							width: 30%;
 
 							a {
 								color: $color11;
@@ -4505,13 +4498,14 @@ section.error-404 {
 	.video-releases-item,
 	.audio-releases-item {
 		width: 19.2%;
-		min-height: 280px;
+		height: auto;
+		padding: 1em 0;
 	}
 	.audio-thumb,
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: 50%;
+		width: auto;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -4565,13 +4559,13 @@ section.error-404 {
 
 	.top-clash-item {
 		.top-clash-img {
-			width: 7%;
+			width: auto;
 
 			a {
 				height: 100%;
 
-				img {
-					vertical-align: unset;
+				.attachment-popular-image {
+					width: auto;
 				}
 			}
 		}
@@ -4594,7 +4588,9 @@ section.error-404 {
 	}
 
 	#secondary {
-		width: 23%;
+		float: left;
+		width: 21%;
+		display: block;
 		position: unset;
 	}
 	#secondary-header {
@@ -4791,6 +4787,11 @@ section.error-404 {
 
 	#cv-mainnav {
 		height: 45px;
+		display: block;
+	}
+
+	#cv-mobilenav {
+		display: none;
 	}
 	#menu-main {
 		list-style: none;
@@ -5061,7 +5062,7 @@ section.error-404 {
 								margin-top: 0;
 								.comment-author {
 									font-size: 0.9em;
-
+									width: 30%;
 									img {
 										width: auto;
 									}
@@ -5082,7 +5083,7 @@ section.error-404 {
 
 								.comment-metadata {
 									font-size: 0.8em;
-
+									width: 30%;
 									a {
 										color: $color11;
 									}
@@ -5385,13 +5386,14 @@ section.error-404 {
 	.video-releases-item,
 	.audio-releases-item {
 		width: 19.2%;
-		min-height: 265px;
+		height: auto;
+		padding: 1em 0;
 	}
 	.audio-thumb,
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: 50%;
+		width: auto;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -5441,13 +5443,13 @@ section.error-404 {
 
 	.top-clash-item {
 		.top-clash-img {
-			width: 10%;
+			width: auto;
 
 			a {
 				height: 100%;
 
-				img {
-					vertical-align: unset;
+				.attachment-popular-image {
+					width: auto;
 				}
 			}
 		}
@@ -5470,6 +5472,9 @@ section.error-404 {
 
 	#secondary {
 		width: 23%;
+		display: block;
+		position: unset;
+		float: left;
 	}
 	#secondary-header {
 		font-size: 1.2em;
@@ -6220,13 +6225,14 @@ section.error-404 {
 	.video-releases-item,
 	.audio-releases-item {
 		width: 24.115%;
-		min-height: 280px;
+		height: auto;
+		padding: 1em 0;
 	}
 	.audio-thumb,
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: 60%;
+		width: auto;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -6277,13 +6283,13 @@ section.error-404 {
 
 	.top-clash-item {
 		.top-clash-img {
-			width: 10%;
+			width: auto;
 
 			a {
 				height: 100%;
 
-				img {
-					vertical-align: unset;
+				.attachment-popular-image {
+					width: auto;
 				}
 			}
 		}
@@ -7034,13 +7040,13 @@ section.error-404 {
 	.video-releases-item,
 	.audio-releases-item {
 		width: 32.1%;
-		min-height: 300px;
+		height: auto;
 	}
 	.audio-thumb,
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: 60%;
+		width: auto;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -7095,13 +7101,13 @@ section.error-404 {
 
 	.top-clash-item {
 		.top-clash-img {
-			width: 8%;
+			width: auto;
 
 			a {
 				height: 100%;
 
-				img {
-					vertical-align: unset;
+				.attachment-popular-image {
+					width: auto;
 				}
 			}
 		}
@@ -7986,7 +7992,7 @@ section.error-404 {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: 60%;
+		width: auto;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -8023,11 +8029,12 @@ section.error-404 {
 
 	.top-clash-item {
 		.top-clash-img {
+			width: auto;
 			a {
 				background-color: $color2;
 
-				img {
-					vertical-align: unset;
+				.attachment-popular-image {
+					width: auto;
 				}
 			}
 		}
@@ -8730,7 +8737,7 @@ section.error-404 {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: 60%;
+		width: auto;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -8764,11 +8771,12 @@ section.error-404 {
 
 	.top-clash-item {
 		.top-clash-img {
+			width: auto;
 			a {
 				background-color: $color2;
 
-				img {
-					vertical-align: unset;
+				.attachment-popular-image {
+					width: auto;
 				}
 			}
 		}
@@ -9488,7 +9496,7 @@ section.error-404 {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: 55%;
+		width: auto;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -9522,11 +9530,12 @@ section.error-404 {
 
 	.top-clash-item {
 		.top-clash-img {
+			width: auto;
 			a {
 				background-color: $color2;
 
-				img {
-					vertical-align: unset;
+				.attachment-popular-image {
+					width: auto;
 				}
 			}
 		}
@@ -9941,7 +9950,7 @@ section.error-404 {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: 60%;
+		width: auto;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -9977,11 +9986,12 @@ section.error-404 {
 
 	.top-clash-item {
 		.top-clash-img {
+			width: auto;
 			a {
 				background-color: $color2;
 
-				img {
-					vertical-align: unset;
+				.attachment-popular-image {
+					width: auto;
 				}
 			}
 		}
@@ -10469,7 +10479,7 @@ section.error-404 {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: 60%;
+		width: auto;
 	}
 
 	.video-releases-caption,
@@ -10504,13 +10514,13 @@ section.error-404 {
 
 	.top-clash-item {
 		.top-clash-img {
-			width: 6%;
+			width: auto;
 
 			a {
 				background-color: $color2;
 
-				img {
-					vertical-align: unset;
+				.attachment-popular-image {
+					width: auto;
 				}
 			}
 		}

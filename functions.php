@@ -63,9 +63,11 @@ if (!function_exists('clashvibes_setup')) :
 		add_theme_support('post-thumbnails');
 
 		// Create new image sizes.
-		add_image_size('featured-image', 1200, 999);
-		add_image_size('post-thumbnail', 160, 999, true);
-		add_image_size('popular-image', 60, 60); // front page popular video & audio images.
+		add_image_size('featured-image', 1200, 625);
+		add_image_size('blog-thumbnail', 1000, 625);
+		add_image_size('audio-thumbnail', 800, 525);
+		add_image_size('post-thumbnail', 160, 160, true);
+		add_image_size('popular-image', 60, 60, true); // front page popular video & audio images.
 		add_image_size('event-image', 100, 70, true);
 
 		// This theme uses wp_nav_menu() in one location.

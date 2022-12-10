@@ -25,6 +25,5 @@ get_header(); ?>
 
 </main>
 
-<div class="clearfix"></div>
 
 <?php get_footer(); ?>

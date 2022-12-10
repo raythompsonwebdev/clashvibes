@@ -40,9 +40,9 @@ if (have_posts()) :
 				<?php endif; ?>
 
 			</header>
-
-			<?php clashvibes_post_thumbnail(); ?>
-
+			<a class="post-thumbnail" href="<?php echo esc_url(get_permalink()); ?>" aria-hidden="true" tabindex="-1">
+				<?php the_post_thumbnail('audio-thumbnail'); ?>
+			</a>
 			<?php the_content(); ?>
 
 			<br />

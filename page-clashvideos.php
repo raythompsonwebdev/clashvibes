@@ -81,10 +81,6 @@ the_title('<h2 class="page-title">', '</h2>');
 
 	<?php wp_reset_postdata(); ?>
 
-	<div class="clearfix"></div>
-
 </section>
-
-<div class="clearfix"></div>
 
 <?php get_footer(); ?>

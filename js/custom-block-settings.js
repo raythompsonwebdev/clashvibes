@@ -1,10 +1,12 @@
-wp.blocks.registerBlockStyle('core/paragraph', {
-	name: 'default',
-	label: 'Default',
+// eslint-disable-next-line no-undef
+wp.blocks.registerBlockStyle("core/paragraph", {
+	name: "default",
+	label: "Default",
 	isDefault: true,
 });
 
-wp.blocks.registerBlockStyle('core/paragraph', {
-	name: 'lede',
-	label: 'Lede',
+// eslint-disable-next-line no-undef
+wp.blocks.registerBlockStyle("core/paragraph", {
+	name: "lede",
+	label: "Lede",
 });

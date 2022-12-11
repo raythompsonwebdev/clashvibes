@@ -349,8 +349,6 @@ function clashvibes_scripts()
 	// mobile main menu script for all mobile pages.
 	wp_enqueue_script('main-mobile', get_template_directory_uri() . '/js/mobile-mainnav-es6.js', array(), CLASHVIBES_VERSION, true);
 
-	// wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), CLASHVIBES_VERSION, true );
-
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}

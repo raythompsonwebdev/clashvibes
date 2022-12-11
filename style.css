@@ -1062,6 +1062,10 @@ select {
 	box-sizing: border-box;
 }
 
+.dashicons {
+	height: auto;
+}
+
 /* header */
 #masthead {
 	width: 100%;
@@ -3123,6 +3127,7 @@ section.error-404 {
 	z-index: 3;
 	top: 0.25em;
 	float: none;
+	background-color: #f0ecec;
 }
 
 #secondary-header {
@@ -7735,6 +7740,7 @@ section.error-404 {
 	}
 	#cv-mainnav {
 		height: 45px;
+		display: block;
 	}
 	#menu-main {
 		list-style: none;
@@ -8406,9 +8412,9 @@ section.error-404 {
 	.new-releases-item,
 	.video-releases-item,
 	.audio-releases-item {
-		width: 24.115%;
+		width: 19%;
 		height: auto;
-		padding: 1em 0;
+		padding: 0.5em 0;
 	}
 	.audio-thumb,
 	.video-thumb,
@@ -8479,6 +8485,9 @@ section.error-404 {
 	}
 	#secondary {
 		width: 23%;
+		display: block;
+		position: unset;
+		float: left;
 	}
 	#secondary-header {
 		font-size: 1.1em;
@@ -8640,6 +8649,7 @@ section.error-404 {
 	}
 	#cv-mainnav {
 		height: 45px;
+		display: block;
 	}
 	#menu-main {
 		list-style: none;
@@ -9353,6 +9363,9 @@ section.error-404 {
 	}
 	#secondary {
 		width: 23%;
+		display: block;
+		position: unset;
+		float: left;
 	}
 	#secondary-header {
 		font-size: 1em;

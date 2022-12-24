@@ -85,11 +85,11 @@ get_header(); ?>
 						)
 					);
 					?>
-				</div><!-- .entry-content -->
+				</div>
 
 				<footer class="entry-footer">
 					<?php clashvibes_entry_footer(); ?>
-				</footer><!-- .entry-footer -->
+				</footer>
 		</article>
 
 	<?php endwhile; ?>

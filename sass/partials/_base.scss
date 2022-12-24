@@ -1,72 +1,31 @@
 @import "variables";
-@import "mixins";
-
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
-}
-
-html {
-	line-height: 1.15;
-	max-width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-* html {
-	margin: 0;
-	padding: 0;
-	outline: none;
-	box-sizing: border-box;
-}
-
-* html .clearfix {
-	height: 1%;
-}
-
-html[xmlns] .clearfix {
-	display: block;
-}
-
-/* self-clear floats */
-
-.clearfix {
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
-
-.clearfix::after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
-
-.clearfix::before,
-.group::before,
-.group::after {
-	content: "";
-	display: table;
-}
-
-.group::after {
-	clear: both;
-}
-
-.group {
-	*zoom: 1;
-}
 
 body {
 	padding: 0;
 	font-family: $font-main;
 	overflow-x: hidden;
+	margin: 0;
+}
+
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+
+/**
+* Prevent modern browsers from displaying `audio` without controls.
+* Remove excess height in iOS 5 devices.
+*/
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+::placeholder {
+	/* Firefox 18- */
+	color: #e74c3c;
 }
 
 img {
@@ -77,18 +36,9 @@ img {
 	vertical-align: middle;
 }
 
-img#wpstats {
+#wpstats {
 	display: none;
 	width: 1px;
-}
-
-h1,
-h2,
-h3,
-h4 {
-	padding: 0;
-	font-weight: bold;
-	font-family: $font-main;
 }
 
 a {
@@ -212,7 +162,7 @@ h1 {
 		*/
 
 hr {
-	background-color: #ccc;
+	background-color: #cccccc;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -464,6 +414,18 @@ template {
 /* Box sizing
 	--------------------------------------------- */
 
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	line-height: 1.15;
+	text-size-adjust: 100%;
+}
+
 /* Inherit box-sizing to more easily change it's value on a component level.
 	@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 
@@ -480,8 +442,8 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
-		Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -503,7 +465,7 @@ address {
 }
 
 pre {
-	background: #eee;
+	background: #eeeeee;
 	font-family: "Courier 10 Pitch", courier, monospace;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
@@ -522,7 +484,7 @@ var {
 
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted #666666;
 	cursor: help;
 }
 
@@ -569,6 +531,10 @@ object {
 	max-width: 100%;
 }
 
+figure {
+	margin: 1em 0;
+}
+
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
@@ -584,10 +550,10 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+	border-color: #cccccc #cccccc #bbbbbb;
 	border-radius: 3px;
 	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
+	color: #000000;
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
 }
@@ -596,7 +562,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+	border-color: #cccccc #bbbbbb #aaaaaa;
 }
 
 button:active,
@@ -607,7 +573,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+	border-color: #aaaaaa #bbbbbb #bbbbbb;
 }
 
 input[type="text"],
@@ -626,8 +592,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	color: #666666;
+	border: 1px solid #cccccc;
 	border-radius: 3px;
 	padding: 3px;
 }
@@ -648,11 +614,11 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+	color: #111111;
 }
 
 select {
-	border: 1px solid #ccc;
+	border: 1px solid #cccccc;
 }
 
 /* --------------------------------------------------------------
@@ -678,7 +644,7 @@ select {
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 3px 3px #00000033;
 	float: left;
 	position: absolute;
 	top: 100%;
@@ -692,7 +658,7 @@ select {
 }
 
 .main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
+.main-navigation ul ul li:focus > ul {
 	display: block;
 	left: auto;
 }
@@ -702,7 +668,7 @@ select {
 }
 
 .main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+.main-navigation ul li:focus > ul {
 	left: auto;
 }
 
@@ -720,7 +686,6 @@ select {
 .main-navigation.toggled ul {
 	display: block;
 }
-
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
@@ -922,7 +887,7 @@ select {
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0 2px 2px #00000099;
 	clip: auto !important;
 	clip-path: none;
 	color: #21759b;

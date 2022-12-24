@@ -89,7 +89,6 @@ get_header(); ?>
 
 			<figure class="new-release-thumb">
 
-
 				<figcaption>
 
 					<p><?php esc_html_e('Sorry! No clashes to display.', 'clashvibes'); ?></p>
@@ -107,9 +106,7 @@ get_header(); ?>
 
 </section>
 
-
 <div id="top-clashes-section">
-
 
 	<section id="top-audio-clashes">
 
@@ -169,7 +166,6 @@ get_header(); ?>
 
 	</section>
 
-
 	<section id="top-video-clashes">
 
 		<h4 class="top-clashes-title"><?php esc_html_e('Top Video Clashes', 'clashvibes'); ?></h4>
@@ -228,6 +224,5 @@ get_header(); ?>
 	</section>
 
 </div>
-
 
 <?php get_footer(); ?>

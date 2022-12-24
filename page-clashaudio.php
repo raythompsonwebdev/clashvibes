@@ -86,9 +86,6 @@ esc_html(the_title('<h2 class="page-title">', '</h2>'));
 	?>
 	<?php wp_reset_postdata(); ?>
 
-
 </section>
-
-
 
 <?php get_footer(); ?>

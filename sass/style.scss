@@ -21,30 +21,30 @@ License: GNU General Public License v2 or later
 
 @import "partials/base";
 @import "partials/variables";
-@import "partials/mixins";
 
 #tog-menu {
 	position: fixed;
 	top: 0.25em;
 	z-index: 100;
 	height: auto;
-	display: block;
+	display: flex;
 	width: 25%;
-	left: calc(75% - 1vw);
-	@include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
+	left: calc(73% - 1vw);
+	transition: all 0.2s linear 0s, color 0.2s linear 0s;
 }
-.menu-toggle,
+
+#toggle-nav,
 .sidebar-toggle {
-	display: block;
+	width: 50%;
 	line-height: 50px;
-	width: 100%;
 	background-color: $color4;
 	color: $color;
 	border: none;
 	outline: none;
 	text-align: center;
-	@include Transition(all 0.2s linear 0s);
-	font-size: 1.2em;
+	transition: all 0.2s linear 0s;
+	font-size: 0.85em;
+	display: block;
 
 	&:hover {
 		background-color: $color7;
@@ -53,9 +53,11 @@ License: GNU General Public License v2 or later
 		cursor: pointer;
 	}
 }
+
 #tog-menu.hide {
 	left: 100vw;
 }
+
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
@@ -71,7 +73,7 @@ License: GNU General Public License v2 or later
 	&:focus {
 		background-color: #f1f1f1;
 		border-radius: 3px;
-		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		box-shadow: 0 0 2px 2px $color4;
 		clip: auto !important;
 		color: #21759b;
 		display: block;
@@ -90,10 +92,12 @@ License: GNU General Public License v2 or later
 		/* Above WP toolbar. */
 	}
 }
+
 /* page container */
 #page {
-	max-width: 88%;
-	margin: auto;
+	width: 88%;
+	margin-right: auto;
+	margin-left: auto;
 	height: auto;
 	font-family: $font-main;
 	background-color: $color;
@@ -116,11 +120,13 @@ License: GNU General Public License v2 or later
 	align-items: center;
 	background-color: $color;
 }
+
 .site-branding {
 	width: 74%;
 	flex: 0 0 auto;
 	display: flex;
 }
+
 .site-logo {
 	position: relative;
 	top: 0;
@@ -138,11 +144,11 @@ License: GNU General Public License v2 or later
 		text-decoration: none;
 		line-height: 46px;
 		width: 100%;
-		@include originTran(50% 50%);
-		@include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
+		transform-origin: 50% 50%;
+		transition: all 0.2s linear 0s, color 0.2s linear 0s;
 		height: 100%;
 
-		div.site-firstletter {
+		.site-firstletter {
 			font-family: $font-main;
 			font-size: 4em;
 			font-weight: normal;
@@ -153,10 +159,12 @@ License: GNU General Public License v2 or later
 		}
 	}
 }
+
 .site-logo a:focus,
 .site-logo a:hover {
 	outline: 2px solid white;
 }
+
 .site-logo a:focus .site-firstletter,
 .site-logo a:hover .site-firstletter {
 	background-color: $color4;
@@ -172,6 +180,7 @@ License: GNU General Public License v2 or later
 	flex-flow: column;
 	flex: 0 0 auto;
 }
+
 .site-title {
 	color: $color1;
 	margin: 0;
@@ -184,6 +193,7 @@ License: GNU General Public License v2 or later
 	width: 100%;
 	text-align: left;
 }
+
 .site-description {
 	text-indent: 0.5em;
 	height: 20px;
@@ -206,25 +216,26 @@ License: GNU General Public License v2 or later
 	flex: 1 0 auto;
 	display: none;
 }
+
 .social-icon {
 	height: 100%;
 	flex: 1 0 auto;
 	color: $color4;
 	width: 23.5%;
 	text-align: center;
+}
 
-	.dashicons-twitter,
-	.dashicons-pinterest,
-	.dashicons-facebook,
-	.dashicons-instagram {
-		display: block;
-		font-size: 1.4em;
-		line-height: 40px;
-		margin: auto;
-		&:hover {
-			color: $color10;
-			font-weight: bold;
-		}
+.dashicons-twitter,
+.dashicons-pinterest,
+.dashicons-facebook,
+.dashicons-instagram {
+	display: block;
+	font-size: 1.4em;
+	line-height: 40px;
+	margin: auto;
+	&:hover {
+		color: $color10;
+		font-weight: bold;
 	}
 }
 
@@ -237,36 +248,33 @@ License: GNU General Public License v2 or later
 	width: 100%;
 	top: -350px;
 	left: 0;
+}
 
-	ul#menu-mobile {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		-webkit-flex-flow: column;
-		-ms-flex-flow: column;
-		flex-flow: column;
-		-webkit-justify-content: flex-start;
-		-ms-flex-pack: start;
-		justify-content: flex-start;
-		background-color: $color2;
+#menu-mobile {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	flex-flow: column;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	background-color: $color2;
 
-		.menu-item {
-			margin-right: 0;
-			width: 100%;
-			height: 50px;
+	.menu-item {
+		margin-right: 0;
+		width: 100%;
+		height: 50px;
 
-			a {
-				font-size: 0.9em;
-				line-height: 50px;
-				background-color: $color4;
-				color: $color;
-				text-align: center;
-				display: block;
-				&:hover {
-					cursor: pointer;
-					background-color: $color;
-					color: $color4;
-				}
+		a {
+			font-size: 0.9em;
+			line-height: 50px;
+			background-color: $color4;
+			color: $color;
+			text-align: center;
+			display: block;
+			&:hover {
+				cursor: pointer;
+				background-color: $color;
+				color: $color4;
 			}
 		}
 	}
@@ -279,6 +287,7 @@ License: GNU General Public License v2 or later
 	height: 45px;
 	padding: 0;
 }
+
 #menu-main {
 	margin: 0;
 	padding: 0;
@@ -320,7 +329,7 @@ License: GNU General Public License v2 or later
 }
 
 /* --- Error page --- */
-section.error-404 {
+.error-404 {
 	margin: 0;
 }
 
@@ -330,6 +339,7 @@ section.error-404 {
 	background-color: $color;
 	height: auto;
 }
+
 .text-img {
 	float: right;
 	display: block;
@@ -431,8 +441,7 @@ section.error-404 {
 				width: 100%;
 				height: auto;
 				display: grid;
-				grid-template-columns: 15% 2fr;
-				grid-template-rows: 25px 25px 25px 25px;
+				grid-template: 25px 25px 25px 25px / 15% 2fr;
 				gap: 2px 2px;
 				grid-template-areas:
 					"Image posted-on"
@@ -454,8 +463,7 @@ section.error-404 {
 				}
 				.author-avatar {
 					display: grid;
-					grid-template-columns: 1fr;
-					grid-template-rows: 4fr;
+					grid-template: 4fr / 1fr;
 					grid-template-areas: ".";
 					grid-area: Image;
 				}
@@ -520,7 +528,7 @@ section.error-404 {
 				width: auto;
 			}
 		}
-		img.attachment-featured-image {
+		.attachment-featured-image {
 			width: auto;
 			margin: auto;
 			display: block;
@@ -699,76 +707,75 @@ section.error-404 {
 		width: 100%;
 		margin-top: 5%;
 		display: block;
+	}
+	.sd-sharing {
+		width: 98%;
+		display: flex;
+		justify-content: flex-start;
+		margin: auto;
+		.sd-title {
+			font-size: 0.95em;
+			background-color: $color;
+			color: $font-color;
+			margin: 0;
+			outline: none;
+			width: 12%;
+			height: auto;
+			line-height: unset;
+		}
 
-		.sd-sharing {
-			width: 98%;
-			display: flex;
-			justify-content: flex-start;
-			margin: auto;
-			.sd-title {
-				font-size: 0.95em;
-				background-color: $color;
-				color: $font-color;
-				margin: 0;
-				outline: none;
-				width: 12%;
+		.sd-title::before {
+			border: none;
+			width: 10%;
+		}
+
+		.sd-content {
+			margin: 0;
+			width: 88%;
+			ul {
+				font-size: 1em;
+				text-indent: 0;
+				width: 100%;
 				height: auto;
-				line-height: unset;
-			}
-
-			.sd-title::before {
-				border: none;
-				width: 10%;
-			}
-
-			.sd-content {
+				display: inline-block;
 				margin: 0;
-				width: 88%;
-				ul {
-					font-size: 1em;
-					text-indent: 0;
-					width: 100%;
-					height: auto;
+
+				.share-twitter,
+				.share-facebook,
+				.share-end {
 					display: inline-block;
-					margin: 0;
+					padding: 0;
+					margin: 0 0.5em;
+					height: 100%;
+					color: $color11;
 
-					.share-twitter,
-					.share-facebook,
-					.share-end {
-						display: inline-block;
-						padding: 0;
-						margin: 0 0.5em;
+					.sd-button {
+						background-color: $color4;
+						display: block;
+						margin: 0;
 						height: 100%;
-						color: $color11;
+						width: 100%;
+						transform-origin: 50% 50%;
+						transition: all 0.2s ease-in 0s;
 
-						.sd-button {
-							background-color: $color4;
-							display: block;
-							margin: 0;
-							height: 100%;
+						&:hover {
+							background-color: $color11;
+							color: $color4;
 							width: 100%;
-							transform-origin: 50% 50%;
-							transition: all 0.2s ease-in 0s;
+						}
 
-							&:hover {
-								background-color: $color11;
-								color: $color4;
-								width: 100%;
-							}
+						&::before {
+							display: block;
+							width: 100%;
+							color: $color11;
+						}
 
-							&::before {
-								display: block;
-								width: 100%;
-								color: $color11;
-							}
-
-							span {
-								display: block;
-								color: $color11;
-								width: 100%;
-								text-align: center;
-								margin-left: 0;
-							}
+						span {
+							display: block;
+							color: $color11;
+							width: 100%;
+							text-align: center;
+							margin-left: 0;
 						}
 					}
 				}
@@ -804,7 +811,7 @@ section.error-404 {
 				background-color: $color4;
 				line-height: 50px;
 				text-align: center;
-				@include Transition(all 0.2s linear 0s);
+				transition: all 0.2s linear 0s;
 				&:hover {
 					color: $color4;
 					background-color: $color7;
@@ -830,27 +837,228 @@ section.error-404 {
 
 /* comments */
 #comments {
-	.post-navigation {
-		height: auto;
-		width: 100%;
-		margin: 1% auto;
-		background-color: $color4;
-		color: $color1;
+	margin: 0;
+}
+.post-navigation {
+	height: auto;
+	width: 100%;
+	margin: 1% auto;
+	background-color: $color4;
+	color: $color1;
 
-		h1 {
-			margin: 0 auto;
-			color: $color4;
-			font-size: 1.3em;
-			width: 96%;
+	h1 {
+		margin: 0 auto;
+		color: $color4;
+		font-size: 1.3em;
+		width: 96%;
+	}
+
+	.nav-previous,
+	.nav-next {
+		width: 100%;
+
+		a {
+			height: 40px;
+			margin: 0;
+			&:hover {
+				color: $color4;
+			}
+		}
+	}
+}
+
+/* Comment title */
+.comments-title {
+	min-height: 35px;
+	line-height: 35px;
+	text-indent: 1%;
+	width: 96%;
+	font-size: 1em;
+	margin: 2% auto;
+	display: block;
+	height: auto;
+}
+
+.comment-list {
+	padding-left: 0;
+	margin: 0;
+	list-style: none;
+}
+.comment {
+	padding: 0;
+}
+.even,
+.pingback {
+	background-color: $colors;
+	padding: 0.25em;
+	margin-bottom: 0.5em;
+}
+.odd,
+.trackback {
+	background-color: $color7;
+	padding: 0.25em;
+	margin-bottom: 0.5em;
+}
+
+.children {
+	margin: auto;
+	padding: 0;
+	width: 100%;
+}
+
+.comment-body {
+	padding: 0.5em;
+	display: block;
+	background-color: $colors;
+	height: auto;
+	text-indent: 0;
+	width: 100%;
+	margin: 0;
+}
+.comment-meta {
+	height: 50px;
+	margin-top: 0;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	.comment-author {
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		justify-content: flex-start;
+		height: auto;
+		width: 25%;
+		font-size: 1em;
+		background-color: $color1;
+		color: $color11;
+		padding: 0;
+		gap: 0.5em;
+
+		img {
+			width: auto;
+			height: auto;
+			margin-right: 0;
+			display: block;
 		}
 
-		.nav-previous,
-		.nav-next {
-			width: 100%;
+		.fn,
+		cite.fn {
+			height: auto;
+			width: auto;
+			padding: 0;
+			text-align: left;
+			line-height: 1.5;
+			color: $color11;
+			a,
+			.url {
+				background-color: $color1;
+			}
+		}
 
+		.says {
+			width: auto;
+			height: 100%;
+			color: $color4;
+		}
+	}
+
+	.comment-metadata {
+		line-height: 30px;
+		height: auto;
+		padding: 0 0.5em;
+		width: 25%;
+		display: block;
+		background-color: $color1;
+		font-size: 0.8em;
+		color: $color11;
+		a {
+			color: $color11;
+			time {
+				font-size: 1.1em;
+			}
+		}
+		.edit-link {
+			display: block;
+			width: 30%;
+			padding: 5px;
+			line-height: 5px;
+		}
+	}
+}
+.comment-content {
+	p {
+		width: 100%;
+		font-size: 0.9em;
+		line-height: 1.5em;
+		margin: 0 auto;
+		min-height: 100px;
+		color: $color4;
+		background-color: $color11;
+		text-align: left;
+		padding: 0.25em;
+		a {
+			background-color: $color11;
+			&:hover {
+				color: $color11;
+			}
+		}
+	}
+}
+
+.children {
+	width: 100%;
+	margin-left: 0;
+}
+
+.reply {
+	width: 96%;
+	min-height: 35px;
+	margin: 1em auto;
+
+	.comment-reply-link {
+		display: block;
+		margin: 0;
+		height: 35px;
+		list-style: none;
+		width: 100%;
+		background-color: $color4;
+		padding: 0;
+		border: none;
+		color: $color11;
+		font-family: $font-main;
+		line-height: 35px;
+		text-align: center;
+		font-size: 1em;
+
+		&:hover {
+			color: $color11;
+		}
+	}
+}
+
+#respond {
+	display: block;
+	clear: both;
+
+	#reply-title {
+		width: 92%;
+		margin: 1em auto;
+		padding: 0;
+		font-size: 1em;
+		background-color: $colors;
+		color: $color11;
+		line-height: 35px;
+		text-indent: 0.5em;
+
+		small {
 			a {
-				height: 40px;
-				margin: 0;
+				font-size: 1em;
+
+				transition: all 0.2s ease-in 0s;
+				display: inline-block;
+				padding: 0 2%;
+
 				&:hover {
 					color: $color4;
 				}
@@ -858,380 +1066,177 @@ section.error-404 {
 		}
 	}
 
-	/* Comment title */
-	.comments-title {
-		min-height: 35px;
-		line-height: 35px;
-		text-indent: 1%;
-		width: 96%;
-		font-size: 1em;
+	#commentform {
+		width: 90%;
+		height: auto;
 		margin: 2% auto;
-		display: block;
-		height: auto;
-	}
-
-	.comment-list {
-		padding-left: 0;
-		margin: 0;
-		list-style: none;
-	}
-	.comment {
+		font-family: $font-main;
 		padding: 0;
-	}
-	.even,
-	.pingback {
-		background-color: $colors;
-		padding: 0.25em;
-		margin-bottom: 0.5em;
-	}
-	.odd,
-	.trackback {
-		background-color: $color7;
-		padding: 0.25em;
-		margin-bottom: 0.5em;
-		margin: 0;
-	}
 
-	.children {
-		margin: auto;
-		padding: 0;
-		width: 100%;
-	}
-
-	.comment-body {
-		padding: 0.5em;
-		display: block;
-		background-color: $colors;
-		height: auto;
-		text-indent: 0;
-		width: 100%;
-		margin: 0;
-	}
-	.comment-meta {
-		height: 50px;
-		margin-top: 0;
-		display: flex;
-		flex-flow: row;
-		justify-content: space-between;
-		align-items: flex-start;
-		.comment-author {
-			display: flex;
-			flex-flow: row;
-			align-items: center;
-			justify-content: flex-start;
-			height: auto;
-			width: 25%;
-			font-size: 1em;
-			background-color: $color1;
-			color: $color11;
-			padding: 0;
-			gap: 0.5em;
-
-			img {
-				width: auto;
-				height: auto;
-				margin-right: 0;
-				display: block;
-			}
-
-			b.fn,
-			cite.fn {
-				height: auto;
-				width: auto;
-				padding: 0;
-				text-align: left;
-				line-height: 1.5;
-				color: $color11;
-				a,
-				.url {
-					background-color: $color1;
-				}
-			}
-
-			.says {
-				width: auto;
-				height: 100%;
-				color: $color4;
-			}
-		}
-
-		.comment-metadata {
-			line-height: 30px;
-			height: auto;
-			padding: 0 0.5em;
-			width: 25%;
-			display: block;
-			background-color: $color1;
-			color: $color;
-			font-size: 0.8em;
-			color: $color11;
-			a {
-				color: $color11;
-				time {
-					font-size: 1.1em;
-				}
-			}
-			.edit-link {
-				display: block;
-				width: 30%;
-				padding: 5px;
-				line-height: 5px;
-			}
-		}
-	}
-	.comment-content {
-		p {
-			width: 100%;
+		.comment-notes {
 			font-size: 0.9em;
-			line-height: 1.5em;
-			margin: 0 auto;
-			min-height: 100px;
-			color: $color4;
-			background-color: $color11;
-			text-align: left;
-			padding: 0.25em;
-			a {
-				background-color: $color11;
+			width: 95%;
+			letter-spacing: 0.095em;
+			line-height: 1.7em;
+			margin: 0;
+		}
+		#email-notes {
+			display: block;
+		}
+		.required-feild-message {
+			display: block;
+		}
+		.required {
+			font-size: 1em;
+		}
+
+		label[for="wp-comment-cookies-consent"],
+		label[for="url"],
+		label[for="email"],
+		label[for="author"],
+		label[for="comment"] {
+			height: 30px;
+			line-height: 30px;
+			width: 30px;
+		}
+
+		#url,
+		#email,
+		#author,
+		#comment {
+			transition: all 0.2s ease-in 0s;
+			outline: none;
+			padding: 3px 0 3px 3px;
+			margin: 5px 1px 3px 0;
+			border: 1px solid #dddddd;
+			width: 100%;
+			line-height: 35px;
+		}
+
+		#author:focus,
+		#comment:focus,
+		#email:focus,
+		#url:focus,
+		.comment-form-comment:focus {
+			box-shadow: 0 0 5px #51cbee;
+			padding: 3px 0 3px 3px;
+			margin: 5px 1px 3px 0;
+			border: 1px solid #51cbee;
+		}
+
+		.comment-form-url,
+		.comment-form-email,
+		.comment-form-author,
+		.comment-form-comment {
+			padding: 0;
+			width: 100%;
+		}
+
+		.comment-form-cookies-consent {
+			font-size: 0.9em;
+		}
+
+		.form-submit {
+			margin: 2% 0;
+			width: 100%;
+
+			.submit {
+				height: 35px;
+				list-style: none;
+				background-color: $color4;
+				transition: all 0.2s ease-in 0s;
+				padding: 0;
+				border: none;
+				color: $color11;
+				font-family: $font-main;
+				width: 100%;
+
 				&:hover {
 					color: $color11;
+					font-weight: bold;
+					cursor: pointer;
 				}
 			}
 		}
 	}
+}
 
-	ul.children {
-		width: 100%;
-		margin-left: 0;
-	}
+p {
+	padding: 0;
+	a {
+		background-color: unset;
+		width: auto;
+		display: inline-block;
+		color: $color4;
 
-	.reply {
-		width: 96%;
-		min-height: 35px;
-		margin: 1em auto;
-
-		.comment-reply-link {
-			display: block;
-			margin: 0;
-			height: 35px;
-			list-style: none;
-			width: 100%;
-			background-color: $color4;
-			padding: 0;
-			border: none;
+		&:hover {
 			color: $color11;
-			font-family: $font-main;
-			line-height: 35px;
-			text-align: center;
-			font-size: 1em;
-
-			&:hover {
-				color: $color11;
-			}
 		}
 	}
+}
 
-	#respond {
-		display: block;
-		clear: both;
-
-		#reply-title {
-			width: 92%;
-			margin: 1em auto;
-			padding: 0;
-			font-size: 1em;
-			background-color: $colors;
-			color: $color11;
-			line-height: 35px;
-			text-indent: 0.5em;
-
-			small {
-				a {
-					font-size: 1em;
-
-					@include Transition(all 0.2s ease-in 0s);
-					display: inline-block;
-					padding: 0 2%;
-
-					&:hover {
-						color: $color4;
-					}
-				}
-			}
-		}
-
-		#commentform {
-			width: 90%;
-			height: auto;
-			margin: 2% auto;
-			font-family: $font-main;
-			padding: 0;
-
-			.comment-notes {
-				font-size: 0.9em;
-				width: 95%;
-				letter-spacing: 0.095em;
-				line-height: 1.7em;
-				margin: 0;
-			}
-			#email-notes {
-				display: block;
-			}
-			.required-feild-message {
-				display: block;
-			}
-			.required {
-				font-size: 1em;
-			}
-
-			label[for="wp-comment-cookies-consent"],
-			label[for="url"],
-			label[for="email"],
-			label[for="author"],
-			label[for="comment"] {
-				width: 100%;
-				height: 30px;
-				line-height: 30px;
-				width: 30px;
-			}
-
-			#url,
-			#email,
-			#author,
-			#comment {
-				transition: all 0.2s ease-in 0s;
-				outline: none;
-				padding: 3px 0 3px 3px;
-				margin: 5px 1px 3px 0;
-				border: 1px solid #ddd;
-				width: 100%;
-				line-height: 35px;
-			}
-
-			#author:focus,
-			#comment:focus,
-			#email:focus,
-			#url:focus,
-			.comment-form-comment:focus {
-				box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-				padding: 3px 0 3px 3px;
-				margin: 5px 1px 3px 0;
-				border: 1px solid rgba(81, 203, 238, 1);
-			}
-
-			.comment-form-url,
-			.comment-form-email,
-			.comment-form-author,
-			.comment-form-comment {
-				padding: 0;
-				width: 100%;
-			}
-
-			.comment-form-cookies-consent {
-				font-size: 0.9em;
-			}
-
-			.form-submit {
-				margin: 2% 0;
-				width: 100%;
-
-				.submit {
-					height: 35px;
-					list-style: none;
-					background-color: $color4;
-					transition: all 0.2s ease-in 0s;
-					padding: 0;
-					border: none;
-					color: $color11;
-					font-family: $font-main;
-					width: 100%;
-
-					&:hover {
-						color: $color11;
-						font-weight: bold;
-						cursor: pointer;
-					}
-				}
-			}
-		}
-	}
-
-	p {
-		padding: 0;
-		a {
-			background-color: unset;
-			width: auto;
-			display: inline-block;
-			color: $color4;
-
-			&:hover {
-				color: $color11;
-			}
-		}
-	}
-
-	.askimet_comment_form_privacy_notice {
-		text-align: center;
-		a {
-			background-color: unset;
-			line-height: 40px;
-			display: inline-block;
-			width: auto;
-			margin: 0 0.25em;
-			color: $color4;
-
-			&:hover {
-				font-weight: bold;
-				color: $color11;
-				cursor: pointer;
-			}
-		}
-	}
-
-	.logged-in-as {
-		a {
-			width: auto;
-			display: inline-block;
-			margin-right: 0.5em;
-			color: $color4;
-			&:active {
-				font-weight: bold;
-			}
-			&:hover {
-				font-weight: bold;
-				cursor: pointer;
-			}
-		}
-	}
-
-	.must-log-in {
-		width: 90%;
-		display: block;
-		line-height: 35px;
-		margin: 1em auto;
-		text-align: center;
-		background-color: $color4;
-
-		a {
-			display: inline-block;
-			line-height: 25px;
-			background-color: unset;
-			width: auto;
-
-			&:hover {
-				color: $color11;
-			}
-		}
-	}
-
-	.nocomments {
-		display: block;
-		margin: 0 auto;
-		width: 96%;
+.askimet_comment_form_privacy_notice {
+	text-align: center;
+	a {
+		background-color: unset;
 		line-height: 40px;
-		margin-bottom: 1em;
-		text-align: center;
-		font-size: 1.1em;
+		display: inline-block;
+		width: auto;
+		margin: 0 0.25em;
+		color: $color4;
+
+		&:hover {
+			font-weight: bold;
+			color: $color11;
+			cursor: pointer;
+		}
 	}
+}
+
+.logged-in-as {
+	a {
+		width: auto;
+		display: inline-block;
+		margin-right: 0.5em;
+		color: $color4;
+		&:active {
+			font-weight: bold;
+		}
+		&:hover {
+			font-weight: bold;
+			cursor: pointer;
+		}
+	}
+}
+
+.must-log-in {
+	width: 90%;
+	display: block;
+	line-height: 35px;
+	margin: 1em auto;
+	text-align: center;
+	background-color: $color4;
+
+	a {
+		display: inline-block;
+		line-height: 25px;
+		background-color: unset;
+		width: auto;
+
+		&:hover {
+			color: $color11;
+		}
+	}
+}
+
+.nocomments {
+	display: block;
+	margin: 0 auto;
+	width: 96%;
+	line-height: 40px;
+	margin-bottom: 1em;
+	text-align: center;
+	font-size: 1.1em;
 }
 
 /* login form */
@@ -1276,7 +1281,7 @@ section.error-404 {
 						outline: none;
 						padding: 3px 0 3px 3px;
 						margin: 5px 1px 3px 0;
-						border: 1px solid #ddd;
+						border: 1px solid #dddddd;
 						width: 100%;
 					}
 
@@ -1287,7 +1292,7 @@ section.error-404 {
 						outline: none;
 						padding: 3px 0 3px 3px;
 						margin: 5px 1px 3px 0;
-						border: 1px solid #ddd;
+						border: 1px solid #dddddd;
 						width: 100%;
 						height: 35px;
 					}
@@ -1296,10 +1301,10 @@ section.error-404 {
 					input[type="email"]:focus,
 					select:focus,
 					textarea:focus {
-						box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+						box-shadow: 0 0 5px #ccd3de;
 						padding: 3px 0 3px 3px;
 						margin: 5px 1px 3px 0;
-						border: 1px solid rgba(204, 211, 222, 1);
+						border: 1px solid #ccd3de;
 					}
 				}
 
@@ -1331,7 +1336,7 @@ section.error-404 {
 .events-list {
 	padding: 0;
 	width: 100%;
-	margin: 0 0 0.5em 0;
+	margin: 0 0 0.5em;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: flex-start;
@@ -1368,7 +1373,7 @@ section.error-404 {
 			line-height: 40px;
 			letter-spacing: 0.05em;
 			border: none;
-			@include Transition(all 0.2s linear 0s);
+			transition: all 0.2s linear 0s;
 
 			&:hover {
 				font-weight: bold;
@@ -1382,9 +1387,9 @@ section.error-404 {
 			width: 96%;
 			height: auto;
 			margin: 0 auto;
-			@include originTran(50% 50%);
+			transform-origin: 50% 50%;
 			box-sizing: border-box;
-			@include Transition(all 0.2s linear 0s);
+			transition: all 0.2s linear 0s;
 
 			&:hover {
 				cursor: pointer;
@@ -1415,7 +1420,7 @@ section.error-404 {
 					font-size: 0.9em;
 					line-height: 1.6em;
 					display: block;
-					color: #000;
+					color: $color4;
 				}
 			}
 		}
@@ -1428,13 +1433,14 @@ section.error-404 {
 #audio-releases-section {
 	padding: 0;
 	width: 100%;
-	margin: 0 0 0.5em 0;
+	margin: 0 0 0.5em;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: stretch;
 	height: auto;
 }
+
 .new-releases-item,
 .video-releases-item,
 .audio-releases-item {
@@ -1445,6 +1451,7 @@ section.error-404 {
 	margin: 0.2em;
 	background-color: $color3;
 }
+
 .audio-thumb,
 .video-thumb,
 .new-release-thumb {
@@ -1460,6 +1467,7 @@ section.error-404 {
 		border: none;
 	}
 }
+
 .video-releases-caption,
 .audio-releases-caption,
 .new-releases-caption {
@@ -1469,6 +1477,7 @@ section.error-404 {
 	z-index: 100;
 	display: block;
 }
+
 .video-releases-header,
 .audio-releases-header,
 .new-releases-header {
@@ -1481,6 +1490,7 @@ section.error-404 {
 	width: 80%;
 	text-transform: capitalize;
 }
+
 .video-releases-btn,
 .audio-releases-btn,
 .new-release-btn {
@@ -1536,6 +1546,7 @@ section.error-404 {
 	flex-flow: row wrap;
 	align-items: flex-start;
 }
+
 #top-audio-clashes,
 #top-video-clashes {
 	margin: 0;
@@ -1547,6 +1558,7 @@ section.error-404 {
 	display: block;
 	flex: 1 0 auto;
 }
+
 .top-clashes-title {
 	font-size: 1.5em;
 	height: 45px;
@@ -1558,12 +1570,13 @@ section.error-404 {
 	background-color: $color4;
 	text-indent: 0.5em;
 }
+
 .top-clash-item {
 	display: flex;
 	flex-flow: row;
 	align-items: flex-start;
 	width: 100%;
-	margin: 0 0 0.25em 0;
+	margin: 0 0 0.25em;
 	color: $color4;
 	font-weight: bold;
 	height: 45px;
@@ -1629,7 +1642,6 @@ section.error-404 {
 	}
 }
 
-/* --- Left Sidebar --- */
 #secondary {
 	width: 250px;
 	position: fixed;
@@ -1640,6 +1652,7 @@ section.error-404 {
 	float: none;
 	background-color: $color3;
 }
+
 #secondary-header {
 	position: relative;
 	font-size: 1.3em;
@@ -1652,6 +1665,7 @@ section.error-404 {
 	line-height: 40px;
 	letter-spacing: 0.05em;
 }
+
 #clashvibes-login {
 	padding: 0.5em 0;
 
@@ -1702,17 +1716,20 @@ section.error-404 {
 		}
 	}
 }
+
 .secondary_column_box {
 	list-style: none;
 	width: 96%;
 	margin: 0 auto;
 }
+
 .menu-video-nav-container,
 .menu-audio-nav-container {
 	position: unset;
 	height: auto;
 	display: block;
 }
+
 #menu-audio-nav,
 #menu-video-nav {
 	padding: 0;
@@ -1728,7 +1745,7 @@ section.error-404 {
 			font-size: 0.85em;
 			padding: 0;
 			height: 100%;
-			margin: 0 0 1% 0;
+			margin: 0 0 1%;
 			line-height: 40px;
 			text-align: center;
 			display: block;
@@ -1788,7 +1805,7 @@ section.error-404 {
 		height: auto;
 
 		li,
-		li.recentcomments {
+		.recentcomments {
 			list-style: none;
 			display: block;
 			line-height: 40px;
@@ -1797,13 +1814,13 @@ section.error-404 {
 			margin-bottom: 0.2em;
 			background-color: $color4;
 			color: $color;
-			span.comment-author-link {
+			.comment-author-link {
 				margin: 0;
 				padding: 0;
 				height: 100%;
 			}
 
-			span.rss-date {
+			.rss-date {
 				clear: both;
 				display: block;
 			}
@@ -1818,7 +1835,7 @@ section.error-404 {
 				text-decoration: none;
 				background-color: $color4;
 				color: $color;
-				@include Transition(all 0.2s linear 0s);
+				transition: all 0.2s linear 0s;
 				font-size: 0.9em;
 				font-size: 100%;
 
@@ -1861,35 +1878,40 @@ section.error-404 {
 	width: 20%;
 	margin: 1em auto;
 }
+
 .search-form {
 	width: 50%;
 	margin: 2em auto;
 }
+
 .widget_recent_entries {
 	width: 96%;
 	margin: auto;
 }
+
 .widget_categories {
 	width: 96%;
 	margin: auto;
 }
+
 .widget_archive {
 	width: 96%;
 	margin: auto;
-	select#archives-dropdown--1 {
+	#archives-dropdown--1 {
 		width: 50%;
 		display: block;
 		margin: 0;
 		height: 35px;
 	}
 }
+
 .widget_tag_cloud {
 	width: 96%;
 	margin: 2em auto;
 	.tagcloud {
-		color: #000;
+		color: $color4;
 		a {
-			color: #000;
+			color: $color4;
 			width: auto;
 			display: inline-block;
 		}
@@ -1908,6 +1930,7 @@ section.error-404 {
 	min-height: 200px;
 	margin-bottom: 2%;
 }
+
 #menu-secondary {
 	list-style: none;
 	margin: 0;
@@ -1938,6 +1961,7 @@ section.error-404 {
 		}
 	}
 }
+
 #footer-content {
 	width: 79%;
 	display: inline-block;
@@ -1958,6 +1982,7 @@ section.error-404 {
 		}
 	}
 }
+
 #social-media-box {
 	list-style: none;
 	margin: 0;
@@ -1995,6 +2020,7 @@ section.error-404 {
 		}
 	}
 }
+
 .copy {
 	font-size: 10px;
 	margin: 0;
@@ -2002,7 +2028,7 @@ section.error-404 {
 	width: auto;
 	display: inline-block;
 	a {
-		color: #000;
+		color: $color4;
 		display: inline-block;
 		width: auto;
 		&:hover {
@@ -2010,9 +2036,13 @@ section.error-404 {
 		}
 	}
 }
-
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
 	#tog-menu {
+		display: none;
+	}
+
+	#toggle-nav,
+	.sidebar-toggle {
 		display: none;
 	}
 	.screen-reader-text {
@@ -2030,7 +2060,7 @@ section.error-404 {
 		&:focus {
 			background-color: #f1f1f1;
 			border-radius: 3px;
-			box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+			box-shadow: 0 0 2px 2px $color4;
 			clip: auto !important;
 			color: #21759b;
 			display: block;
@@ -2049,10 +2079,12 @@ section.error-404 {
 			/* Above WP toolbar. */
 		}
 	}
+
 	/* page container */
 	#page {
-		max-width: 88%;
-		margin: auto;
+		width: 88%;
+		margin-right: auto;
+		margin-left: auto;
 		height: auto;
 		font-family: $font-main;
 		background-color: $color;
@@ -2093,11 +2125,11 @@ section.error-404 {
 			text-decoration: none;
 			line-height: 46px;
 			width: 100%;
-			@include originTran(50% 50%);
-			@include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
+			transform-origin: 50% 50%;
+			transition: all 0.2s linear 0s, color 0.2s linear 0s;
 			height: 100%;
 
-			div.site-firstletter {
+			.site-firstletter {
 				font-family: $font-main;
 				font-size: 4em;
 				font-weight: normal;
@@ -2167,19 +2199,18 @@ section.error-404 {
 		color: $color4;
 		width: 23.5%;
 		text-align: center;
-
-		.dashicons-twitter,
-		.dashicons-pinterest,
-		.dashicons-facebook,
-		.dashicons-instagram {
-			display: block;
-			font-size: 1.4em;
-			line-height: 40px;
-			margin: auto;
-			&:hover {
-				color: $color10;
-				font-weight: bold;
-			}
+	}
+	.dashicons-twitter,
+	.dashicons-pinterest,
+	.dashicons-facebook,
+	.dashicons-instagram {
+		display: block;
+		font-size: 1.4em;
+		line-height: 40px;
+		margin: auto;
+		&:hover {
+			color: $color10;
+			font-weight: bold;
 		}
 	}
 
@@ -2236,7 +2267,7 @@ section.error-404 {
 	}
 
 	/* --- Error page --- */
-	section.error-404 {
+	.error-404 {
 		margin: 0;
 	}
 
@@ -2266,7 +2297,7 @@ section.error-404 {
 		.widget_archive {
 			width: 96%;
 			margin: auto;
-			select#archives-dropdown--1 {
+			#archives-dropdown--1 {
 				width: 50%;
 				display: block;
 				margin: 0;
@@ -2277,9 +2308,9 @@ section.error-404 {
 			width: 96%;
 			margin: 2em auto;
 			.tagcloud {
-				color: #000;
+				color: $color4;
 				a {
-					color: #000;
+					color: $color4;
 					width: auto;
 					display: inline-block;
 				}
@@ -2388,8 +2419,7 @@ section.error-404 {
 					width: 100%;
 					height: auto;
 					display: grid;
-					grid-template-columns: 9% 2fr;
-					grid-template-rows: 25px 25px 25px 25px;
+					grid-template: 25px 25px 25px 25px / 9% 2fr;
 					gap: 2px 2px;
 					grid-template-areas:
 						"Image posted-on"
@@ -2411,8 +2441,7 @@ section.error-404 {
 					}
 					.author-avatar {
 						display: grid;
-						grid-template-columns: 1fr;
-						grid-template-rows: 4fr;
+						grid-template-rows: 4fr / 1fr;
 						grid-template-areas: ".";
 						grid-area: Image;
 					}
@@ -2476,7 +2505,7 @@ section.error-404 {
 					width: auto;
 				}
 			}
-			img.attachment-featured-image {
+			.attachment-featured-image {
 				width: auto;
 				margin: auto;
 				display: block;
@@ -2650,73 +2679,72 @@ section.error-404 {
 			width: 100%;
 			margin-top: 5%;
 			display: block;
+		}
+		.sd-sharing {
+			width: 98%;
+			display: flex;
+			margin: auto;
+			.sd-title {
+				font-size: 0.95em;
+				background-color: $color;
+				color: $font-color;
+				margin: 0;
+				outline: none;
+				width: 12%;
+				height: auto;
+				line-height: unset;
+			}
 
-			.sd-sharing {
-				width: 98%;
-				display: flex;
-				margin: auto;
-				.sd-title {
-					font-size: 0.95em;
-					background-color: $color;
-					color: $font-color;
-					margin: 0;
-					outline: none;
-					width: 12%;
+			.sd-title::before {
+				border: none;
+				width: 10%;
+			}
+
+			.sd-content {
+				margin: 0;
+				width: 88%;
+				ul {
+					font-size: 1em;
+					text-indent: 0;
+					width: 100%;
 					height: auto;
-					line-height: unset;
-				}
-
-				.sd-title::before {
-					border: none;
-					width: 10%;
-				}
-
-				.sd-content {
+					display: inline-block;
 					margin: 0;
-					width: 88%;
-					ul {
-						font-size: 1em;
-						text-indent: 0;
-						width: 100%;
-						height: auto;
+
+					.share-twitter,
+					.share-facebook,
+					.share-end {
 						display: inline-block;
-						margin: 0;
+						padding: 0;
+						margin: 0 0.5em;
+						height: 100%;
+						color: $color11;
+						width: 10%;
 
-						.share-twitter,
-						.share-facebook,
-						.share-end {
-							display: inline-block;
-							padding: 0;
-							margin: 0 0.5em;
+						.sd-button {
+							background-color: $color4;
+							display: block;
+							margin: 0;
 							height: 100%;
-							color: $color11;
-							width: 10%;
 
-							.sd-button {
-								background-color: $color4;
+							&:hover {
+								background-color: $color11;
+								color: $color4;
+								width: 100%;
+							}
+
+							&::before {
 								display: block;
-								margin: 0;
-								height: 100%;
+								width: 100%;
+								color: $color11;
+							}
 
-								&:hover {
-									background-color: $color11;
-									color: $color4;
-									width: 100%;
-								}
-
-								&::before {
-									display: block;
-									width: 100%;
-									color: $color11;
-								}
-
-								span {
-									display: block;
-									color: $color11;
-									width: 100%;
-									text-align: center;
-									margin-left: 0;
-								}
+							span {
+								display: block;
+								color: $color11;
+								width: 100%;
+								text-align: center;
+								margin-left: 0;
 							}
 						}
 					}
@@ -2751,7 +2779,7 @@ section.error-404 {
 					background-color: $color4;
 					line-height: 50px;
 					text-align: center;
-					@include Transition(all 0.2s linear 0s);
+					transition: all 0.2s linear 0s;
 					&:hover {
 						color: $color4;
 						background-color: $color7;
@@ -2776,27 +2804,228 @@ section.error-404 {
 	}
 
 	#comments {
-		.post-navigation {
-			height: auto;
-			width: 100%;
-			margin: 1% auto;
-			background-color: $color4;
-			color: $color1;
+		margin: 0;
+	}
+	.post-navigation {
+		height: auto;
+		width: 100%;
+		margin: 1% auto;
+		background-color: $color4;
+		color: $color1;
 
-			h1 {
-				margin: 0 auto;
-				color: $color4;
-				font-size: 1.3em;
-				width: 96%;
+		h1 {
+			margin: 0 auto;
+			color: $color4;
+			font-size: 1.3em;
+			width: 96%;
+		}
+
+		.nav-previous,
+		.nav-next {
+			width: 100%;
+
+			a {
+				height: 40px;
+				margin: 0;
+				&:hover {
+					color: $color4;
+				}
+			}
+		}
+	}
+
+	/* Comment title */
+	.comments-title {
+		min-height: 35px;
+		line-height: 35px;
+		text-indent: 1%;
+		width: 96%;
+		font-size: 1em;
+		margin: 2% auto;
+		display: block;
+		height: auto;
+	}
+
+	.comment-list {
+		padding-left: 0;
+		margin: 0;
+		list-style: none;
+	}
+	.comment {
+		padding: 0;
+	}
+	.even,
+	.pingback {
+		background-color: $colors;
+		padding: 0.25em;
+		margin-bottom: 0.5em;
+	}
+	.odd,
+	.trackback {
+		background-color: $color7;
+		padding: 0.25em;
+		margin-bottom: 0.5em;
+	}
+
+	.children {
+		margin: auto;
+		padding: 0;
+		width: 100%;
+	}
+
+	.comment-body {
+		padding: 0.5em;
+		display: block;
+		background-color: $colors;
+		height: auto;
+		text-indent: 0;
+		width: 100%;
+		margin: 0;
+	}
+	.comment-meta {
+		height: 50px;
+		margin-top: 0;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		.comment-author {
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+			justify-content: flex-start;
+			height: auto;
+			width: 25%;
+			font-size: 1em;
+			background-color: $color1;
+			color: $color11;
+			padding: 0;
+			gap: 0.5em;
+
+			img {
+				width: auto;
+				height: auto;
+				margin-right: 0;
+				display: block;
 			}
 
-			.nav-previous,
-			.nav-next {
-				width: 100%;
+			.fn,
+			cite.fn {
+				height: auto;
+				width: auto;
+				padding: 0;
+				text-align: left;
+				line-height: 1.5;
+				color: $color11;
+				a,
+				.url {
+					background-color: $color1;
+				}
+			}
 
+			.says {
+				width: auto;
+				height: 100%;
+				color: $color4;
+			}
+		}
+
+		.comment-metadata {
+			line-height: 30px;
+			height: auto;
+			padding: 0 0.5em;
+			width: 25%;
+			display: block;
+			background-color: $color1;
+			font-size: 0.8em;
+			color: $color11;
+			a {
+				color: $color11;
+				time {
+					font-size: 1.1em;
+				}
+			}
+			.edit-link {
+				display: block;
+				width: 30%;
+				padding: 5px;
+				line-height: 5px;
+			}
+		}
+	}
+	.comment-content {
+		p {
+			width: 100%;
+			font-size: 0.9em;
+			line-height: 1.5em;
+			margin: 0 auto;
+			min-height: 100px;
+			color: $color4;
+			background-color: $color11;
+			text-align: left;
+			padding: 0.25em;
+			a {
+				background-color: $color11;
+				&:hover {
+					color: $color11;
+				}
+			}
+		}
+	}
+
+	.children {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.reply {
+		width: 96%;
+		min-height: 35px;
+		margin: 1em auto;
+
+		.comment-reply-link {
+			display: block;
+			margin: 0;
+			height: 35px;
+			list-style: none;
+			width: 100%;
+			background-color: $color4;
+			padding: 0;
+			border: none;
+			color: $color11;
+			font-family: $font-main;
+			line-height: 35px;
+			text-align: center;
+			font-size: 1em;
+
+			&:hover {
+				color: $color11;
+			}
+		}
+	}
+
+	#respond {
+		display: block;
+		clear: both;
+
+		#reply-title {
+			width: 92%;
+			margin: 1em auto;
+			padding: 0;
+			font-size: 1em;
+			background-color: $colors;
+			color: $color11;
+			line-height: 35px;
+			text-indent: 0.5em;
+
+			small {
 				a {
-					height: 40px;
-					margin: 0;
+					font-size: 1em;
+
+					transition: all 0.2s ease-in 0s;
+					display: inline-block;
+					padding: 0 2%;
+
 					&:hover {
 						color: $color4;
 					}
@@ -2804,380 +3033,177 @@ section.error-404 {
 			}
 		}
 
-		/* Comment title */
-		.comments-title {
-			min-height: 35px;
-			line-height: 35px;
-			text-indent: 1%;
-			width: 96%;
-			font-size: 1em;
+		#commentform {
+			width: 90%;
+			height: auto;
 			margin: 2% auto;
-			display: block;
-			height: auto;
-		}
-
-		.comment-list {
-			padding-left: 0;
-			margin: 0;
-			list-style: none;
-		}
-		.comment {
+			font-family: $font-main;
 			padding: 0;
-		}
-		.even,
-		.pingback {
-			background-color: $colors;
-			padding: 0.25em;
-			margin-bottom: 0.5em;
-		}
-		.odd,
-		.trackback {
-			background-color: $color7;
-			padding: 0.25em;
-			margin-bottom: 0.5em;
-			margin: 0;
-		}
 
-		.children {
-			margin: auto;
-			padding: 0;
-			width: 100%;
-		}
-
-		.comment-body {
-			padding: 0.5em;
-			display: block;
-			background-color: $colors;
-			height: auto;
-			text-indent: 0;
-			width: 100%;
-			margin: 0;
-		}
-		.comment-meta {
-			height: 50px;
-			margin-top: 0;
-			display: flex;
-			flex-flow: row;
-			justify-content: space-between;
-			align-items: flex-start;
-			.comment-author {
-				display: flex;
-				flex-flow: row;
-				align-items: center;
-				justify-content: flex-start;
-				height: auto;
-				width: 25%;
-				font-size: 1em;
-				background-color: $color1;
-				color: $color11;
-				padding: 0;
-				gap: 0.5em;
-
-				img {
-					width: auto;
-					height: auto;
-					margin-right: 0;
-					display: block;
-				}
-
-				b.fn,
-				cite.fn {
-					height: auto;
-					width: auto;
-					padding: 0;
-					text-align: left;
-					line-height: 1.5;
-					color: $color11;
-					a,
-					.url {
-						background-color: $color1;
-					}
-				}
-
-				.says {
-					width: auto;
-					height: 100%;
-					color: $color4;
-				}
-			}
-
-			.comment-metadata {
-				line-height: 30px;
-				height: auto;
-				padding: 0 0.5em;
-				width: 25%;
-				display: block;
-				background-color: $color1;
-				color: $color;
-				font-size: 0.8em;
-				color: $color11;
-				a {
-					color: $color11;
-					time {
-						font-size: 1.1em;
-					}
-				}
-				.edit-link {
-					display: block;
-					width: 30%;
-					padding: 5px;
-					line-height: 5px;
-				}
-			}
-		}
-		.comment-content {
-			p {
-				width: 100%;
+			.comment-notes {
 				font-size: 0.9em;
-				line-height: 1.5em;
-				margin: 0 auto;
-				min-height: 100px;
-				color: $color4;
-				background-color: $color11;
-				text-align: left;
-				padding: 0.25em;
-				a {
-					background-color: $color11;
+				width: 95%;
+				letter-spacing: 0.095em;
+				line-height: 1.7em;
+				margin: 0;
+			}
+			#email-notes {
+				display: block;
+			}
+			.required-feild-message {
+				display: block;
+			}
+			.required {
+				font-size: 1em;
+			}
+
+			label[for="wp-comment-cookies-consent"],
+			label[for="url"],
+			label[for="email"],
+			label[for="author"],
+			label[for="comment"] {
+				height: 30px;
+				line-height: 30px;
+				width: 30px;
+			}
+
+			#url,
+			#email,
+			#author,
+			#comment {
+				transition: all 0.2s ease-in 0s;
+				outline: none;
+				padding: 3px 0 3px 3px;
+				margin: 5px 1px 3px 0;
+				border: 1px solid #dddddd;
+				width: 100%;
+				line-height: 35px;
+			}
+
+			#author:focus,
+			#comment:focus,
+			#email:focus,
+			#url:focus,
+			.comment-form-comment:focus {
+				box-shadow: 0 0 5px #51cbee;
+				padding: 3px 0 3px 3px;
+				margin: 5px 1px 3px 0;
+				border: 1px solid #51cbee;
+			}
+
+			.comment-form-url,
+			.comment-form-email,
+			.comment-form-author,
+			.comment-form-comment {
+				padding: 0;
+				width: 100%;
+			}
+
+			.comment-form-cookies-consent {
+				font-size: 0.9em;
+			}
+
+			.form-submit {
+				margin: 2% 0;
+				width: 100%;
+
+				.submit {
+					height: 35px;
+					list-style: none;
+					background-color: $color4;
+					transition: all 0.2s ease-in 0s;
+					padding: 0;
+					border: none;
+					color: $color11;
+					font-family: $font-main;
+					width: 100%;
+
 					&:hover {
 						color: $color11;
+						font-weight: bold;
+						cursor: pointer;
 					}
 				}
 			}
 		}
+	}
 
-		ul.children {
-			width: 100%;
-			margin-left: 0;
-		}
+	p {
+		padding: 0;
+		a {
+			background-color: unset;
+			width: auto;
+			display: inline-block;
+			color: $color4;
 
-		.reply {
-			width: 96%;
-			min-height: 35px;
-			margin: 1em auto;
-
-			.comment-reply-link {
-				display: block;
-				margin: 0;
-				height: 35px;
-				list-style: none;
-				width: 100%;
-				background-color: $color4;
-				padding: 0;
-				border: none;
+			&:hover {
 				color: $color11;
-				font-family: $font-main;
-				line-height: 35px;
-				text-align: center;
-				font-size: 1em;
-
-				&:hover {
-					color: $color11;
-				}
 			}
 		}
+	}
 
-		#respond {
-			display: block;
-			clear: both;
-
-			#reply-title {
-				width: 92%;
-				margin: 1em auto;
-				padding: 0;
-				font-size: 1em;
-				background-color: $colors;
-				color: $color11;
-				line-height: 35px;
-				text-indent: 0.5em;
-
-				small {
-					a {
-						font-size: 1em;
-
-						@include Transition(all 0.2s ease-in 0s);
-						display: inline-block;
-						padding: 0 2%;
-
-						&:hover {
-							color: $color4;
-						}
-					}
-				}
-			}
-
-			#commentform {
-				width: 90%;
-				height: auto;
-				margin: 2% auto;
-				font-family: $font-main;
-				padding: 0;
-
-				.comment-notes {
-					font-size: 0.9em;
-					width: 95%;
-					letter-spacing: 0.095em;
-					line-height: 1.7em;
-					margin: 0;
-				}
-				#email-notes {
-					display: block;
-				}
-				.required-feild-message {
-					display: block;
-				}
-				.required {
-					font-size: 1em;
-				}
-
-				label[for="wp-comment-cookies-consent"],
-				label[for="url"],
-				label[for="email"],
-				label[for="author"],
-				label[for="comment"] {
-					width: 100%;
-					height: 30px;
-					line-height: 30px;
-					width: 30px;
-				}
-
-				#url,
-				#email,
-				#author,
-				#comment {
-					transition: all 0.2s ease-in 0s;
-					outline: none;
-					padding: 3px 0 3px 3px;
-					margin: 5px 1px 3px 0;
-					border: 1px solid #ddd;
-					width: 100%;
-					line-height: 35px;
-				}
-
-				#author:focus,
-				#comment:focus,
-				#email:focus,
-				#url:focus,
-				.comment-form-comment:focus {
-					box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-					padding: 3px 0 3px 3px;
-					margin: 5px 1px 3px 0;
-					border: 1px solid rgba(81, 203, 238, 1);
-				}
-
-				.comment-form-url,
-				.comment-form-email,
-				.comment-form-author,
-				.comment-form-comment {
-					padding: 0;
-					width: 100%;
-				}
-
-				.comment-form-cookies-consent {
-					font-size: 0.9em;
-				}
-
-				.form-submit {
-					margin: 2% 0;
-					width: 100%;
-
-					.submit {
-						height: 35px;
-						list-style: none;
-						background-color: $color4;
-						transition: all 0.2s ease-in 0s;
-						padding: 0;
-						border: none;
-						color: $color11;
-						font-family: $font-main;
-						width: 100%;
-
-						&:hover {
-							color: $color11;
-							font-weight: bold;
-							cursor: pointer;
-						}
-					}
-				}
-			}
-		}
-
-		p {
-			padding: 0;
-			a {
-				background-color: unset;
-				width: auto;
-				display: inline-block;
-				color: $color4;
-
-				&:hover {
-					color: $color11;
-				}
-			}
-		}
-
-		.askimet_comment_form_privacy_notice {
-			text-align: center;
-			a {
-				background-color: unset;
-				line-height: 40px;
-				display: inline-block;
-				width: auto;
-				margin: 0 0.25em;
-				color: $color4;
-
-				&:hover {
-					font-weight: bold;
-					color: $color11;
-					cursor: pointer;
-				}
-			}
-		}
-
-		.logged-in-as {
-			a {
-				width: auto;
-				display: inline-block;
-				margin-right: 0.5em;
-				color: $color4;
-				&:active {
-					font-weight: bold;
-				}
-				&:hover {
-					font-weight: bold;
-					cursor: pointer;
-				}
-			}
-		}
-
-		.must-log-in {
-			width: 90%;
-			display: block;
-			line-height: 35px;
-			margin: 1em auto;
-			text-align: center;
-			background-color: $color4;
-
-			a {
-				display: inline-block;
-				line-height: 25px;
-				background-color: unset;
-				width: auto;
-
-				&:hover {
-					color: $color11;
-				}
-			}
-		}
-
-		.nocomments {
-			display: block;
-			margin: 0 auto;
-			width: 96%;
+	.askimet_comment_form_privacy_notice {
+		text-align: center;
+		a {
+			background-color: unset;
 			line-height: 40px;
-			margin-bottom: 1em;
-			text-align: center;
-			font-size: 1.1em;
+			display: inline-block;
+			width: auto;
+			margin: 0 0.25em;
+			color: $color4;
+
+			&:hover {
+				font-weight: bold;
+				color: $color11;
+				cursor: pointer;
+			}
 		}
+	}
+
+	.logged-in-as {
+		a {
+			width: auto;
+			display: inline-block;
+			margin-right: 0.5em;
+			color: $color4;
+			&:active {
+				font-weight: bold;
+			}
+			&:hover {
+				font-weight: bold;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.must-log-in {
+		width: 90%;
+		display: block;
+		line-height: 35px;
+		margin: 1em auto;
+		text-align: center;
+		background-color: $color4;
+
+		a {
+			display: inline-block;
+			line-height: 25px;
+			background-color: unset;
+			width: auto;
+
+			&:hover {
+				color: $color11;
+			}
+		}
+	}
+
+	.nocomments {
+		display: block;
+		margin: 0 auto;
+		width: 96%;
+		line-height: 40px;
+		margin-bottom: 1em;
+		text-align: center;
+		font-size: 1.1em;
 	}
 
 	#contactform {
@@ -3221,7 +3247,7 @@ section.error-404 {
 							outline: none;
 							padding: 3px 0 3px 3px;
 							margin: 5px 1px 3px 0;
-							border: 1px solid #ddd;
+							border: 1px solid #dddddd;
 							width: 100%;
 						}
 
@@ -3232,7 +3258,7 @@ section.error-404 {
 							outline: none;
 							padding: 3px 0 3px 3px;
 							margin: 5px 1px 3px 0;
-							border: 1px solid #ddd;
+							border: 1px solid #dddddd;
 							width: 100%;
 							height: 35px;
 						}
@@ -3241,10 +3267,10 @@ section.error-404 {
 						input[type="email"]:focus,
 						select:focus,
 						textarea:focus {
-							box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+							box-shadow: 0 0 5px #ccd3de;
 							padding: 3px 0 3px 3px;
 							margin: 5px 1px 3px 0;
-							border: 1px solid rgba(204, 211, 222, 1);
+							border: 1px solid #ccd3de;
 						}
 					}
 
@@ -3276,7 +3302,7 @@ section.error-404 {
 	.events-list {
 		padding: 0;
 		width: 100%;
-		margin: 0 0 0.5em 0;
+		margin: 0 0 0.5em;
 		display: flex;
 		flex-flow: row wrap;
 		align-items: flex-start;
@@ -3313,7 +3339,7 @@ section.error-404 {
 				line-height: 40px;
 				letter-spacing: 0.05em;
 				border: none;
-				@include Transition(all 0.2s linear 0s);
+				transition: all 0.2s linear 0s;
 
 				&:hover {
 					font-weight: bold;
@@ -3327,9 +3353,9 @@ section.error-404 {
 				width: 96%;
 				height: auto;
 				margin: 0 auto;
-				@include originTran(50% 50%);
+				transform-origin: 50% 50%;
 				box-sizing: border-box;
-				@include Transition(all 0.2s linear 0s);
+				transition: all 0.2s linear 0s;
 
 				&:hover {
 					cursor: pointer;
@@ -3360,7 +3386,7 @@ section.error-404 {
 						font-size: 0.9em;
 						line-height: 1.6em;
 						display: block;
-						color: #000;
+						color: $color4;
 					}
 				}
 			}
@@ -3373,7 +3399,7 @@ section.error-404 {
 	#audio-releases-section {
 		padding: 0;
 		width: 100%;
-		margin: 0 0 0.5em 0;
+		margin: 0 0 0.5em;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: flex-start;
@@ -3499,7 +3525,7 @@ section.error-404 {
 		flex-flow: row;
 		align-items: flex-start;
 		width: 100%;
-		margin: 0 0 0.25em 0;
+		margin: 0 0 0.25em;
 		color: $color4;
 		font-weight: bold;
 		height: 45px;
@@ -3662,7 +3688,7 @@ section.error-404 {
 			a {
 				padding: 0;
 				height: 100%;
-				margin: 0 0 1% 0;
+				margin: 0 0 1%;
 				line-height: 40px;
 				text-align: center;
 				display: block;
@@ -3720,10 +3746,9 @@ section.error-404 {
 			padding: 0;
 			margin: 0.5em 0;
 			height: auto;
-			@include clearfix();
 
 			li,
-			li.recentcomments {
+			.recentcomments {
 				list-style: none;
 				display: block;
 				line-height: 40px;
@@ -3732,13 +3757,13 @@ section.error-404 {
 				margin-bottom: 0.2em;
 				background-color: $color4;
 				color: $color;
-				span.comment-author-link {
+				.comment-author-link {
 					margin: 0;
 					padding: 0;
 					height: 100%;
 				}
 
-				span.rss-date {
+				.rss-date {
 					clear: both;
 					display: block;
 				}
@@ -3753,7 +3778,7 @@ section.error-404 {
 					text-decoration: none;
 					background-color: $color4;
 					color: $color;
-					@include Transition(all 0.2s linear 0s);
+					transition: all 0.2s linear 0s;
 					font-size: 0.9em;
 					font-size: 100%;
 
@@ -3899,7 +3924,7 @@ section.error-404 {
 		width: auto;
 		display: inline-block;
 		a {
-			color: #000;
+			color: $color4;
 			display: inline-block;
 			width: auto;
 			&:hover {
@@ -3912,8 +3937,15 @@ section.error-404 {
 	#tog-menu {
 		display: none;
 	}
+
+	#toggle-nav,
+	.sidebar-toggle {
+		display: none;
+	}
 	#page {
-		max-width: 88%;
+		width: 88%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	#masthead {
 		height: 65px;
@@ -3938,14 +3970,13 @@ section.error-404 {
 	}
 	.social-icon {
 		width: 23.5%;
-
-		.dashicons-twitter,
-		.dashicons-pinterest,
-		.dashicons-facebook,
-		.dashicons-instagram {
-			display: block;
-			font-size: 1.25em;
-		}
+	}
+	.dashicons-twitter,
+	.dashicons-pinterest,
+	.dashicons-facebook,
+	.dashicons-instagram {
+		display: block;
+		font-size: 1.25em;
 	}
 
 	#cv-mainnav {
@@ -4118,24 +4149,26 @@ section.error-404 {
 		}
 
 		.sharedaddy {
-			.sd-sharing {
-				.sd-title {
-					font-size: 0.95em;
-				}
+			width: 100%;
+		}
+		.sd-sharing {
+			margin: auto;
+			.sd-title {
+				font-size: 0.95em;
+			}
 
-				.sd-title::before {
-					width: 10%;
-				}
+			.sd-title::before {
+				width: 10%;
+			}
 
-				.sd-content {
-					ul {
-						font-size: 1em;
+			.sd-content {
+				ul {
+					font-size: 1em;
 
-						.share-twitter,
-						.share-facebook,
-						.share-end {
-							padding: 0;
-						}
+					.share-twitter,
+					.share-facebook,
+					.share-end {
+						padding: 0;
 					}
 				}
 			}
@@ -4173,19 +4206,180 @@ section.error-404 {
 	}
 
 	#comments {
-		.post-navigation {
+		margin: 0;
+	}
+	.post-navigation {
+		width: 100%;
+
+		h1 {
+			font-size: 1.3em;
+		}
+
+		.nav-previous,
+		.nav-next {
 			width: 100%;
 
-			h1 {
-				font-size: 1.3em;
+			a {
+				margin: 0;
+				&:hover {
+					color: $color4;
+				}
+			}
+		}
+	}
+
+	.comments-title {
+		font-size: 1em;
+	}
+
+	.comment-list {
+		padding-left: 0;
+
+		.comment {
+			padding: 0;
+
+			.children {
+				margin: auto;
+
+				.odd {
+					margin: 0;
+
+					.comment-body {
+						background-color: $color4;
+						.comment-meta {
+							height: 60px;
+							margin-top: 0;
+							.comment-author {
+								font-size: 0.9em;
+
+								img {
+									width: auto;
+								}
+
+								.fn,
+								cite.fn {
+									line-height: 1.5;
+
+									a {
+										background-color: $color1;
+									}
+								}
+
+								.says {
+									display: inline-block;
+								}
+							}
+
+							.comment-metadata {
+								font-size: 0.8em;
+
+								a {
+									color: $color11;
+								}
+								.edit-link {
+									display: inline;
+								}
+							}
+						}
+						.comment-content {
+							p {
+								font-size: 0.9em;
+
+								a {
+									background-color: $color11;
+									&:hover {
+										color: $color11;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 
-			.nav-previous,
-			.nav-next {
-				width: 100%;
+			.comment-body {
+				padding: 0.5em;
 
+				.comment-meta {
+					height: 60px;
+
+					.comment-author {
+						font-size: 0.9em;
+						width: 30%;
+
+						img {
+							width: auto;
+						}
+
+						.fn,
+						cite.fn {
+							display: inline-block;
+
+							a {
+								background-color: $color1;
+							}
+						}
+
+						.says {
+							display: inline-block;
+						}
+					}
+
+					.comment-metadata {
+						font-size: 0.8em;
+						width: 30%;
+
+						a {
+							color: $color11;
+						}
+						.edit-link {
+							display: inline;
+						}
+					}
+				}
+
+				.comment-content {
+					p {
+						font-size: 0.9em;
+
+						a {
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				.children {
+					margin-left: 0;
+				}
+			}
+		}
+
+		.reply {
+			width: 96%;
+
+			.comment-reply-link {
+				font-size: 1em;
+
+				&:hover {
+					color: $color11;
+				}
+			}
+		}
+	}
+
+	#respond {
+		display: block;
+		clear: both;
+
+		#reply-title {
+			font-size: 1em;
+
+			small {
 				a {
-					margin: 0;
+					font-size: 0.9em;
+
 					&:hover {
 						color: $color4;
 					}
@@ -4193,266 +4387,106 @@ section.error-404 {
 			}
 		}
 
-		.comments-title {
-			font-size: 1em;
-		}
+		#commentform {
+			padding: 1em;
 
-		.comment-list {
-			padding-left: 0;
+			.comment-notes {
+				font-size: 0.9em;
+			}
 
-			.comment {
-				padding: 0;
+			.comment-form-comment {
+				width: 100%;
+			}
 
-				.children {
-					margin: auto;
-
-					.odd {
-						margin: 0;
-
-						.comment-body {
-							background-color: $color4;
-							.comment-meta {
-								height: 60px;
-								margin-top: 0;
-								.comment-author {
-									font-size: 0.9em;
-
-									img {
-										width: auto;
-									}
-
-									b.fn,
-									cite.fn {
-										line-height: 1.5;
-
-										a {
-											background-color: $color1;
-										}
-									}
-
-									.says {
-										display: inline-block;
-									}
-								}
-
-								.comment-metadata {
-									font-size: 0.8em;
-
-									a {
-										color: $color11;
-									}
-									.edit-link {
-										display: inline;
-									}
-								}
-							}
-							.comment-content {
-								p {
-									font-size: 0.9em;
-
-									a {
-										background-color: $color11;
-										&:hover {
-											color: $color11;
-										}
-									}
-								}
-							}
-						}
-					}
+			.comment-form-author {
+				label {
+					height: 30px;
 				}
 
-				.comment-body {
-					padding: 0.5em;
+				input {
+					height: 35px;
+				}
 
-					.comment-meta {
-						height: 60px;
-
-						.comment-author {
-							font-size: 0.9em;
-							width: 30%;
-
-							img {
-								width: auto;
-							}
-
-							b.fn,
-							cite.fn {
-								display: inline-block;
-
-								a {
-									background-color: $color1;
-								}
-							}
-
-							.says {
-								display: inline-block;
-							}
-						}
-
-						.comment-metadata {
-							font-size: 0.8em;
-							width: 30%;
-
-							a {
-								color: $color11;
-							}
-							.edit-link {
-								display: inline;
-							}
-						}
-					}
-
-					.comment-content {
-						p {
-							font-size: 0.9em;
-
-							a {
-								&:hover {
-									color: $color11;
-								}
-							}
-						}
-					}
-
-					ul.children {
-						margin-left: 0;
-					}
+				input:focus,
+				.comment-form-comment:focus {
+					box-shadow: 0 0 5px #51cbee;
 				}
 			}
 
-			.reply {
-				width: 96%;
+			.comment-form-email {
+				label {
+					height: 30px;
+				}
 
-				.comment-reply-link {
-					font-size: 1em;
+				input {
+					height: 35px;
+				}
+
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.comment-form-url {
+				label {
+					height: 30px;
+				}
+
+				input {
+					height: 35px;
+				}
+
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.form-submit {
+				width: 100%;
+
+				.submit {
+					width: 25%;
 
 					&:hover {
-						color: $color11;
+						cursor: pointer;
 					}
 				}
 			}
 		}
+	}
 
-		#respond {
-			display: block;
-			clear: both;
+	.askimet_comment_form_privacy_notice {
+		text-align: center;
+		a {
+			margin: 0 0.25em;
 
-			#reply-title {
-				font-size: 1em;
-
-				small {
-					a {
-						font-size: 0.9em;
-
-						&:hover {
-							color: $color4;
-						}
-					}
-				}
-			}
-
-			#commentform {
-				padding: 1em;
-
-				.comment-notes {
-					font-size: 0.9em;
-				}
-
-				.comment-form-comment {
-					width: 100%;
-				}
-
-				.comment-form-author {
-					label {
-						height: 30px;
-					}
-
-					input {
-						height: 35px;
-					}
-
-					input:focus,
-					.comment-form-comment:focus {
-						box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-email {
-					label {
-						height: 30px;
-					}
-
-					input {
-						height: 35px;
-					}
-
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-url {
-					label {
-						height: 30px;
-					}
-
-					input {
-						height: 35px;
-					}
-
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.form-submit {
-					width: 100%;
-
-					.submit {
-						width: 25%;
-
-						&:hover {
-							cursor: pointer;
-						}
-					}
-				}
+			&:hover {
+				background-color: $color4;
 			}
 		}
+	}
 
-		.askimet_comment_form_privacy_notice {
-			text-align: center;
-			a {
-				margin: 0 0.25em;
+	.must-log-in {
+		width: 90%;
 
-				&:hover {
-					background-color: $color4;
-				}
+		a {
+			display: inline-block;
+
+			&:hover {
+				color: $color11;
 			}
 		}
+	}
 
-		.must-log-in {
-			width: 90%;
-
-			a {
-				display: inline-block;
-
-				&:hover {
-					color: $color11;
-				}
-			}
-		}
-
-		.nocomments {
-			font-size: 1.1em;
-		}
+	.nocomments {
+		font-size: 1.1em;
 	}
 
 	.events-list {
 		padding: 0;
-		margin: 0 0 0.5em 0;
+		margin: 0 0 0.5em;
 
 		.events-item {
 			width: 19.25%;
@@ -4541,7 +4575,7 @@ section.error-404 {
 		margin: 0.5%;
 
 		#slider {
-			background: url(images/bg_slider.gif) top center repeat-x;
+			background: url("images/bg_slider.gif") top center repeat-x;
 
 			li {
 				overflow: hidden;
@@ -4666,9 +4700,9 @@ section.error-404 {
 			margin: 0.5em 0;
 
 			li,
-			li.recentcomments {
+			.recentcomments {
 				font-size: 0.9em;
-				span.comment-author-link {
+				.comment-author-link {
 					height: 100%;
 				}
 
@@ -4740,8 +4774,15 @@ section.error-404 {
 	#tog-menu {
 		display: none;
 	}
+
+	#toggle-nav,
+	.sidebar-toggle {
+		display: none;
+	}
 	#page {
-		max-width: 92%;
+		width: 92%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	#masthead {
 		height: 70px;
@@ -4753,14 +4794,14 @@ section.error-404 {
 		width: 8%;
 
 		a {
-			div.screen-reader-text {
+			.screen-reader-text {
 				&:focus {
 					font-size: 14px;
 					font-size: 0.875rem;
 				}
 			}
 
-			div.site-firstletter {
+			.site-firstletter {
 				font-size: 4em;
 			}
 		}
@@ -4781,13 +4822,14 @@ section.error-404 {
 		width: 25%;
 	}
 	.social-icon {
-		.dashicons-twitter,
-		.dashicons-pinterest,
-		.dashicons-facebook,
-		.dashicons-instagram {
-			display: block;
-			font-size: 1.2em;
-		}
+		width: 23.5%;
+	}
+	.dashicons-twitter,
+	.dashicons-pinterest,
+	.dashicons-facebook,
+	.dashicons-instagram {
+		display: block;
+		font-size: 1.2em;
 	}
 
 	#cv-mainnav {
@@ -4826,7 +4868,7 @@ section.error-404 {
 	}
 	#primary {
 		padding: 1%;
-		width: 76%; //global post
+		width: 76%; // global post
 
 		h1 {
 			font-size: 1.2em;
@@ -4968,24 +5010,26 @@ section.error-404 {
 		}
 
 		.sharedaddy {
-			.sd-sharing {
-				.sd-title {
+			width: 100%;
+		}
+		.sd-sharing {
+			margin: auto;
+			.sd-title {
+				font-size: 0.9em;
+			}
+
+			.sd-title::before {
+				width: 10%;
+			}
+
+			.sd-content {
+				ul {
 					font-size: 0.9em;
-				}
 
-				.sd-title::before {
-					width: 10%;
-				}
-
-				.sd-content {
-					ul {
-						font-size: 0.9em;
-
-						.share-twitter,
-						.share-facebook,
-						.share-end {
-							padding: 0;
-						}
+					.share-twitter,
+					.share-facebook,
+					.share-end {
+						padding: 0;
 					}
 				}
 			}
@@ -5024,19 +5068,178 @@ section.error-404 {
 	}
 
 	#comments {
-		.post-navigation {
+		margin: 0;
+	}
+	.post-navigation {
+		width: 100%;
+
+		h1 {
+			font-size: 1.3em;
+		}
+
+		.nav-previous,
+		.nav-next {
 			width: 100%;
 
-			h1 {
-				font-size: 1.3em;
+			a {
+				margin: 0;
+				&:hover {
+					color: $color4;
+				}
+			}
+		}
+	}
+
+	.comments-title {
+		font-size: 1em;
+	}
+
+	.comment-list {
+		padding-left: 0;
+
+		.comment {
+			padding: 0;
+
+			.children {
+				margin: auto;
+
+				.odd {
+					margin: 0;
+
+					.comment-body {
+						background-color: $color4;
+						.comment-meta {
+							height: 60px;
+							margin-top: 0;
+							.comment-author {
+								font-size: 0.9em;
+								width: 30%;
+								img {
+									width: auto;
+								}
+
+								.fn,
+								cite.fn {
+									line-height: 1.5;
+
+									a {
+										background-color: $color1;
+									}
+								}
+
+								.says {
+									display: inline-block;
+								}
+							}
+
+							.comment-metadata {
+								font-size: 0.8em;
+								width: 30%;
+								a {
+									color: $color11;
+								}
+								.edit-link {
+									display: inline;
+								}
+							}
+						}
+						.comment-content {
+							p {
+								font-size: 0.9em;
+
+								a {
+									background-color: $color11;
+									&:hover {
+										color: $color11;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 
-			.nav-previous,
-			.nav-next {
-				width: 100%;
+			.comment-body {
+				padding: 0.5em;
 
+				.comment-meta {
+					height: 60px;
+
+					.comment-author {
+						font-size: 0.9em;
+
+						img {
+							width: auto;
+						}
+
+						.fn,
+						cite.fn {
+							display: inline-block;
+
+							a {
+								background-color: $color1;
+							}
+						}
+
+						.says {
+							display: inline-block;
+						}
+					}
+
+					.comment-metadata {
+						font-size: 0.8em;
+
+						a {
+							color: $color11;
+						}
+						.edit-link {
+							display: inline;
+						}
+					}
+				}
+
+				.comment-content {
+					p {
+						font-size: 0.9em;
+
+						a {
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				.children {
+					margin-left: 0;
+				}
+			}
+		}
+
+		.reply {
+			width: 96%;
+
+			.comment-reply-link {
+				font-size: 1em;
+
+				&:hover {
+					color: $color11;
+				}
+			}
+		}
+	}
+
+	#respond {
+		display: block;
+		clear: both;
+
+		#reply-title {
+			font-size: 1em;
+
+			small {
 				a {
-					margin: 0;
+					font-size: 0.9em;
+
 					&:hover {
 						color: $color4;
 					}
@@ -5044,260 +5247,102 @@ section.error-404 {
 			}
 		}
 
-		.comments-title {
-			font-size: 1em;
-		}
+		#commentform {
+			padding: 1em;
 
-		.comment-list {
-			padding-left: 0;
+			.comment-notes {
+				font-size: 0.9em;
+			}
 
-			.comment {
-				padding: 0;
+			.comment-form-comment {
+				width: 100%;
+			}
 
-				.children {
-					margin: auto;
-
-					.odd {
-						margin: 0;
-
-						.comment-body {
-							background-color: $color4;
-							.comment-meta {
-								height: 60px;
-								margin-top: 0;
-								.comment-author {
-									font-size: 0.9em;
-									width: 30%;
-									img {
-										width: auto;
-									}
-
-									b.fn,
-									cite.fn {
-										line-height: 1.5;
-
-										a {
-											background-color: $color1;
-										}
-									}
-
-									.says {
-										display: inline-block;
-									}
-								}
-
-								.comment-metadata {
-									font-size: 0.8em;
-									width: 30%;
-									a {
-										color: $color11;
-									}
-									.edit-link {
-										display: inline;
-									}
-								}
-							}
-							.comment-content {
-								p {
-									font-size: 0.9em;
-
-									a {
-										background-color: $color11;
-										&:hover {
-											color: $color11;
-										}
-									}
-								}
-							}
-						}
-					}
+			.comment-form-author {
+				label {
+					height: 30px;
 				}
 
-				.comment-body {
-					padding: 0.5em;
+				input {
+					height: 35px;
+				}
 
-					.comment-meta {
-						height: 60px;
-
-						.comment-author {
-							font-size: 0.9em;
-
-							img {
-								width: auto;
-							}
-
-							b.fn,
-							cite.fn {
-								display: inline-block;
-
-								a {
-									background-color: $color1;
-								}
-							}
-
-							.says {
-								display: inline-block;
-							}
-						}
-
-						.comment-metadata {
-							font-size: 0.8em;
-
-							a {
-								color: $color11;
-							}
-							.edit-link {
-								display: inline;
-							}
-						}
-					}
-
-					.comment-content {
-						p {
-							font-size: 0.9em;
-
-							a {
-								&:hover {
-									color: $color11;
-								}
-							}
-						}
-					}
-
-					ul.children {
-						margin-left: 0;
-					}
+				input:focus,
+				.comment-form-comment:focus {
+					box-shadow: 0 0 5px #51cbee;
 				}
 			}
 
-			.reply {
-				width: 96%;
+			.comment-form-email {
+				label {
+					height: 30px;
+				}
 
-				.comment-reply-link {
-					font-size: 1em;
+				input {
+					height: 35px;
+				}
+
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.comment-form-url {
+				label {
+					height: 30px;
+				}
+
+				input {
+					height: 35px;
+				}
+
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.form-submit {
+				width: 100%;
+
+				.submit {
+					width: 25%;
 
 					&:hover {
-						color: $color11;
+						cursor: pointer;
 					}
 				}
 			}
 		}
+	}
 
-		#respond {
-			display: block;
-			clear: both;
+	.askimet_comment_form_privacy_notice {
+		font-size: 0.9em;
 
-			#reply-title {
-				font-size: 1em;
+		a {
+			margin: 0 0.25em;
 
-				small {
-					a {
-						font-size: 0.9em;
-
-						&:hover {
-							color: $color4;
-						}
-					}
-				}
-			}
-
-			#commentform {
-				padding: 1em;
-
-				.comment-notes {
-					font-size: 0.9em;
-				}
-
-				.comment-form-comment {
-					width: 100%;
-				}
-
-				.comment-form-author {
-					label {
-						height: 30px;
-					}
-
-					input {
-						height: 35px;
-					}
-
-					input:focus,
-					.comment-form-comment:focus {
-						box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-email {
-					label {
-						height: 30px;
-					}
-
-					input {
-						height: 35px;
-					}
-
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-url {
-					label {
-						height: 30px;
-					}
-
-					input {
-						height: 35px;
-					}
-
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.form-submit {
-					width: 100%;
-
-					.submit {
-						width: 25%;
-
-						&:hover {
-							cursor: pointer;
-						}
-					}
-				}
+			&:hover {
+				background-color: $color4;
 			}
 		}
+	}
 
-		.askimet_comment_form_privacy_notice {
-			font-size: 0.9em;
+	.must-log-in {
+		width: 90%;
 
-			a {
-				margin: 0 0.25em;
+		a {
+			display: inline-block;
 
-				&:hover {
-					background-color: $color4;
-				}
+			&:hover {
+				color: $color11;
 			}
 		}
+	}
 
-		.must-log-in {
-			width: 90%;
-
-			a {
-				display: inline-block;
-
-				&:hover {
-					color: $color11;
-				}
-			}
-		}
-
-		.nocomments {
-			font-size: 1.1em;
-		}
+	.nocomments {
+		font-size: 1.1em;
 	}
 
 	#contactform {
@@ -5385,7 +5430,7 @@ section.error-404 {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		margin: 0 0 0.5em 0;
+		margin: 0 0 0.5em;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -5427,7 +5472,7 @@ section.error-404 {
 		margin: 0.5%;
 
 		#slider {
-			background: url(images/bg_slider.gif) top center repeat-x;
+			background: url("images/bg_slider.gif") top center repeat-x;
 
 			li {
 				overflow: hidden;
@@ -5547,9 +5592,9 @@ section.error-404 {
 			margin: 0.5em 0;
 
 			li,
-			li.recentcomments {
+			.recentcomments {
 				font-size: 1em;
-				span.comment-author-link {
+				.comment-author-link {
 					height: 100%;
 				}
 
@@ -5622,9 +5667,15 @@ section.error-404 {
 	#tog-menu {
 		display: none;
 	}
+
+	#toggle-nav,
+	.sidebar-toggle {
+		display: none;
+	}
 	#page {
-		max-width: 98%;
-		padding: 0 1%;
+		width: 94%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	#masthead {
 		height: 65px;
@@ -5636,14 +5687,14 @@ section.error-404 {
 		width: 11%;
 
 		a {
-			div.screen-reader-text {
+			.screen-reader-text {
 				&:focus {
 					font-size: 14px;
 					font-size: 0.875rem;
 				}
 			}
 
-			div.site-firstletter {
+			.site-firstletter {
 				font-size: 4em;
 			}
 		}
@@ -5664,14 +5715,13 @@ section.error-404 {
 	}
 	.social-icon {
 		width: 23.5%;
-
-		.dashicons-twitter,
-		.dashicons-pinterest,
-		.dashicons-facebook,
-		.dashicons-instagram {
-			display: block;
-			font-size: 1.1em;
-		}
+	}
+	.dashicons-twitter,
+	.dashicons-pinterest,
+	.dashicons-facebook,
+	.dashicons-instagram {
+		display: block;
+		font-size: 1.1em;
 	}
 
 	#cv-mainnav {
@@ -5707,7 +5757,7 @@ section.error-404 {
 
 	#primary {
 		padding: 1%;
-		width: 76%; //global post
+		width: 76%; // global pattern
 
 		h1 {
 			font-size: 1.2em;
@@ -5846,27 +5896,29 @@ section.error-404 {
 			}
 		}
 		.sharedaddy {
-			.sd-sharing {
-				width: 98%;
-				.sd-title {
-					font-size: 0.9em;
-					width: 15%;
-				}
+			width: 100%;
+		}
+		.sd-sharing {
+			margin: auto;
 
-				.sd-title::before {
-					width: 13%;
-				}
+			.sd-title {
+				font-size: 0.9em;
+				width: 15%;
+			}
 
-				.sd-content {
-					width: 86%;
-					ul {
-						font-size: 0.85em;
+			.sd-title::before {
+				width: 13%;
+			}
 
-						.share-twitter,
-						.share-facebook,
-						.share-end {
-							padding: 0;
-						}
+			.sd-content {
+				width: 86%;
+				ul {
+					font-size: 0.85em;
+
+					.share-twitter,
+					.share-facebook,
+					.share-end {
+						padding: 0;
 					}
 				}
 			}
@@ -5903,19 +5955,178 @@ section.error-404 {
 		}
 	}
 	#comments {
-		.post-navigation {
+		margin: 0;
+	}
+	.post-navigation {
+		width: 100%;
+
+		h1 {
+			font-size: 1.3em;
+		}
+
+		.nav-previous,
+		.nav-next {
 			width: 100%;
 
-			h1 {
-				font-size: 1.3em;
+			a {
+				margin: 0;
+				&:hover {
+					color: $color4;
+				}
+			}
+		}
+	}
+
+	.comments-title {
+		font-size: 1em;
+	}
+
+	.comment-list {
+		padding-left: 0;
+
+		.comment {
+			padding: 0;
+
+			.children {
+				margin: auto;
+
+				.odd {
+					margin: 0;
+
+					.comment-body {
+						background-color: $color4;
+						.comment-meta {
+							height: 60px;
+							margin-top: 0;
+							.comment-author {
+								font-size: 0.9em;
+
+								img {
+									width: auto;
+								}
+
+								.fn,
+								cite.fn {
+									line-height: 1.5;
+
+									a {
+										background-color: $color1;
+									}
+								}
+
+								.says {
+									display: inline-block;
+								}
+							}
+
+							.comment-metadata {
+								font-size: 0.8em;
+
+								a {
+									color: $color11;
+								}
+								.edit-link {
+									display: inline;
+								}
+							}
+						}
+						.comment-content {
+							p {
+								font-size: 0.9em;
+
+								a {
+									background-color: $color11;
+									&:hover {
+										color: $color11;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 
-			.nav-previous,
-			.nav-next {
-				width: 100%;
+			.comment-body {
+				padding: 0.5em;
 
+				.comment-meta {
+					height: 60px;
+
+					.comment-author {
+						font-size: 0.9em;
+
+						img {
+							width: auto;
+						}
+
+						.fn,
+						cite.fn {
+							display: inline-block;
+
+							a {
+								background-color: $color1;
+							}
+						}
+
+						.says {
+							display: inline-block;
+						}
+					}
+
+					.comment-metadata {
+						font-size: 0.8em;
+
+						a {
+							color: $color11;
+						}
+						.edit-link {
+							display: inline;
+						}
+					}
+				}
+
+				.comment-content {
+					p {
+						font-size: 0.9em;
+
+						a {
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				.children {
+					margin-left: 0;
+				}
+			}
+		}
+
+		.reply {
+			width: 96%;
+
+			.comment-reply-link {
+				font-size: 1em;
+
+				&:hover {
+					color: $color11;
+				}
+			}
+		}
+	}
+
+	#respond {
+		display: block;
+		clear: both;
+
+		#reply-title {
+			font-size: 1em;
+
+			small {
 				a {
-					margin: 0;
+					font-size: 0.9em;
+
 					&:hover {
 						color: $color4;
 					}
@@ -5923,259 +6134,101 @@ section.error-404 {
 			}
 		}
 
-		.comments-title {
-			font-size: 1em;
-		}
+		#commentform {
+			padding: 1em;
 
-		.comment-list {
-			padding-left: 0;
+			.comment-notes {
+				font-size: 0.9em;
+			}
 
-			.comment {
-				padding: 0;
+			.comment-form-comment {
+				width: 100%;
+			}
 
-				.children {
-					margin: auto;
-
-					.odd {
-						margin: 0;
-
-						.comment-body {
-							background-color: $color4;
-							.comment-meta {
-								height: 60px;
-								margin-top: 0;
-								.comment-author {
-									font-size: 0.9em;
-
-									img {
-										width: auto;
-									}
-
-									b.fn,
-									cite.fn {
-										line-height: 1.5;
-
-										a {
-											background-color: $color1;
-										}
-									}
-
-									.says {
-										display: inline-block;
-									}
-								}
-
-								.comment-metadata {
-									font-size: 0.8em;
-
-									a {
-										color: $color11;
-									}
-									.edit-link {
-										display: inline;
-									}
-								}
-							}
-							.comment-content {
-								p {
-									font-size: 0.9em;
-
-									a {
-										background-color: $color11;
-										&:hover {
-											color: $color11;
-										}
-									}
-								}
-							}
-						}
-					}
+			.comment-form-author {
+				label {
+					height: 30px;
 				}
 
-				.comment-body {
-					padding: 0.5em;
+				input {
+					height: 35px;
+				}
 
-					.comment-meta {
-						height: 60px;
-
-						.comment-author {
-							font-size: 0.9em;
-
-							img {
-								width: auto;
-							}
-
-							b.fn,
-							cite.fn {
-								display: inline-block;
-
-								a {
-									background-color: $color1;
-								}
-							}
-
-							.says {
-								display: inline-block;
-							}
-						}
-
-						.comment-metadata {
-							font-size: 0.8em;
-
-							a {
-								color: $color11;
-							}
-							.edit-link {
-								display: inline;
-							}
-						}
-					}
-
-					.comment-content {
-						p {
-							font-size: 0.9em;
-
-							a {
-								&:hover {
-									color: $color11;
-								}
-							}
-						}
-					}
-
-					ul.children {
-						margin-left: 0;
-					}
+				input:focus,
+				.comment-form-comment:focus {
+					box-shadow: 0 0 5px #51cbee;
 				}
 			}
 
-			.reply {
-				width: 96%;
+			.comment-form-email {
+				label {
+					height: 30px;
+				}
 
-				.comment-reply-link {
-					font-size: 1em;
+				input {
+					height: 35px;
+				}
+
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.comment-form-url {
+				label {
+					height: 30px;
+				}
+
+				input {
+					height: 35px;
+				}
+
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.form-submit {
+				width: 100%;
+
+				.submit {
+					width: 25%;
 
 					&:hover {
-						color: $color11;
+						cursor: pointer;
 					}
 				}
 			}
 		}
+	}
 
-		#respond {
-			display: block;
-			clear: both;
+	.askimet_comment_form_privacy_notice {
+		text-align: center;
+		a {
+			margin: 0 0.25em;
 
-			#reply-title {
-				font-size: 1em;
-
-				small {
-					a {
-						font-size: 0.9em;
-
-						&:hover {
-							color: $color4;
-						}
-					}
-				}
-			}
-
-			#commentform {
-				padding: 1em;
-
-				.comment-notes {
-					font-size: 0.9em;
-				}
-
-				.comment-form-comment {
-					width: 100%;
-				}
-
-				.comment-form-author {
-					label {
-						height: 30px;
-					}
-
-					input {
-						height: 35px;
-					}
-
-					input:focus,
-					.comment-form-comment:focus {
-						box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-email {
-					label {
-						height: 30px;
-					}
-
-					input {
-						height: 35px;
-					}
-
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-url {
-					label {
-						height: 30px;
-					}
-
-					input {
-						height: 35px;
-					}
-
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.form-submit {
-					width: 100%;
-
-					.submit {
-						width: 25%;
-
-						&:hover {
-							cursor: pointer;
-						}
-					}
-				}
+			&:hover {
+				background-color: $color4;
 			}
 		}
+	}
 
-		.askimet_comment_form_privacy_notice {
-			text-align: center;
-			a {
-				margin: 0 0.25em;
+	.must-log-in {
+		width: 90%;
 
-				&:hover {
-					background-color: $color4;
-				}
+		a {
+			display: inline-block;
+
+			&:hover {
+				color: $color11;
 			}
 		}
+	}
 
-		.must-log-in {
-			width: 90%;
-
-			a {
-				display: inline-block;
-
-				&:hover {
-					color: $color11;
-				}
-			}
-		}
-
-		.nocomments {
-			font-size: 1.1em;
-		}
+	.nocomments {
+		font-size: 1.1em;
 	}
 
 	.events-list {
@@ -6225,7 +6278,7 @@ section.error-404 {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		margin: 0 0 0.5em 0;
+		margin: 0 0 0.5em;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -6267,7 +6320,7 @@ section.error-404 {
 		margin: 0.5%;
 
 		#slider {
-			background: url(images/bg_slider.gif) top center repeat-x;
+			background: url("images/bg_slider.gif") top center repeat-x;
 
 			li {
 				overflow: hidden;
@@ -6386,8 +6439,8 @@ section.error-404 {
 			margin: 0.5em 0;
 
 			li,
-			li.recentcomments {
-				span.comment-author-link {
+			.recentcomments {
+				.comment-author-link {
 					height: 100%;
 				}
 
@@ -6459,8 +6512,15 @@ section.error-404 {
 	#tog-menu {
 		display: none;
 	}
+
+	#toggle-nav,
+	.sidebar-toggle {
+		display: none;
+	}
 	#page {
-		max-width: 98%;
+		width: 94%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	#masthead {
 		height: 65px;
@@ -6472,7 +6532,7 @@ section.error-404 {
 		width: 10%;
 
 		a {
-			div.site-firstletter {
+			.site-firstletter {
 				font-size: 4em;
 			}
 		}
@@ -6489,14 +6549,13 @@ section.error-404 {
 	}
 	.social-icon {
 		width: 23.5%;
-
-		.dashicons-twitter,
-		.dashicons-pinterest,
-		.dashicons-facebook,
-		.dashicons-instagram {
-			display: block;
-			font-size: 1em;
-		}
+	}
+	.dashicons-twitter,
+	.dashicons-pinterest,
+	.dashicons-facebook,
+	.dashicons-instagram {
+		display: block;
+		font-size: 1em;
 	}
 
 	#cv-mainnav {
@@ -6700,19 +6759,178 @@ section.error-404 {
 		}
 	}
 	#comments {
-		.post-navigation {
+		margin: 0;
+	}
+	.post-navigation {
+		width: 100%;
+
+		h1 {
+			font-size: 1.3em;
+		}
+
+		.nav-previous,
+		.nav-next {
 			width: 100%;
 
-			h1 {
-				font-size: 1.3em;
+			a {
+				margin: 0;
+				&:hover {
+					color: $color4;
+				}
+			}
+		}
+	}
+
+	.comments-title {
+		font-size: 0.9em;
+	}
+
+	.comment-list {
+		padding-left: 0;
+
+		.comment {
+			padding: 0;
+
+			.children {
+				margin: auto;
+
+				.odd {
+					margin: 0;
+
+					.comment-body {
+						background-color: $color4;
+						.comment-meta {
+							height: 60px;
+							margin-top: 0;
+							.comment-author {
+								font-size: 0.9em;
+
+								img {
+									width: auto;
+								}
+
+								.fn,
+								cite.fn {
+									line-height: 1.5;
+
+									a {
+										background-color: $color1;
+									}
+								}
+
+								.says {
+									display: inline-block;
+								}
+							}
+
+							.comment-metadata {
+								font-size: 0.8em;
+
+								a {
+									color: $color11;
+								}
+								.edit-link {
+									display: inline;
+								}
+							}
+						}
+						.comment-content {
+							p {
+								font-size: 0.9em;
+
+								a {
+									background-color: $color11;
+									&:hover {
+										color: $color11;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 
-			.nav-previous,
-			.nav-next {
-				width: 100%;
+			.comment-body {
+				padding: 0.5em;
 
+				.comment-meta {
+					height: 60px;
+
+					.comment-author {
+						font-size: 0.9em;
+
+						img {
+							width: auto;
+						}
+
+						.fn,
+						cite.fn {
+							display: inline-block;
+
+							a {
+								background-color: $color1;
+							}
+						}
+
+						.says {
+							display: inline-block;
+						}
+					}
+
+					.comment-metadata {
+						font-size: 0.8em;
+
+						a {
+							color: $color11;
+						}
+						.edit-link {
+							display: inline;
+						}
+					}
+				}
+
+				.comment-content {
+					p {
+						font-size: 0.85em;
+
+						a {
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				.children {
+					margin-left: 0;
+				}
+			}
+		}
+
+		.reply {
+			width: 96%;
+
+			.comment-reply-link {
+				font-size: 1em;
+
+				&:hover {
+					color: $color11;
+				}
+			}
+		}
+	}
+
+	#respond {
+		display: block;
+		clear: both;
+
+		#reply-title {
+			font-size: 1em;
+
+			small {
 				a {
-					margin: 0;
+					font-size: 0.9em;
+
 					&:hover {
 						color: $color4;
 					}
@@ -6720,249 +6938,91 @@ section.error-404 {
 			}
 		}
 
-		.comments-title {
-			font-size: 0.9em;
-		}
+		#commentform {
+			padding: 0.5em;
 
-		.comment-list {
-			padding-left: 0;
+			.comment-notes {
+				font-size: 0.85em;
+			}
 
-			.comment {
-				padding: 0;
+			.comment-form-comment {
+				width: 100%;
+				font-size: 0.85em;
+			}
 
-				.children {
-					margin: auto;
+			.comment-form-author {
+				font-size: 0.9em;
 
-					.odd {
-						margin: 0;
-
-						.comment-body {
-							background-color: $color4;
-							.comment-meta {
-								height: 60px;
-								margin-top: 0;
-								.comment-author {
-									font-size: 0.9em;
-
-									img {
-										width: auto;
-									}
-
-									b.fn,
-									cite.fn {
-										line-height: 1.5;
-
-										a {
-											background-color: $color1;
-										}
-									}
-
-									.says {
-										display: inline-block;
-									}
-								}
-
-								.comment-metadata {
-									font-size: 0.8em;
-
-									a {
-										color: $color11;
-									}
-									.edit-link {
-										display: inline;
-									}
-								}
-							}
-							.comment-content {
-								p {
-									font-size: 0.9em;
-
-									a {
-										background-color: $color11;
-										&:hover {
-											color: $color11;
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-
-				.comment-body {
-					padding: 0.5em;
-
-					.comment-meta {
-						height: 60px;
-
-						.comment-author {
-							font-size: 0.9em;
-
-							img {
-								width: auto;
-							}
-
-							b.fn,
-							cite.fn {
-								display: inline-block;
-
-								a {
-									background-color: $color1;
-								}
-							}
-
-							.says {
-								display: inline-block;
-							}
-						}
-
-						.comment-metadata {
-							font-size: 0.8em;
-
-							a {
-								color: $color11;
-							}
-							.edit-link {
-								display: inline;
-							}
-						}
-					}
-
-					.comment-content {
-						p {
-							font-size: 0.85em;
-
-							a {
-								&:hover {
-									color: $color11;
-								}
-							}
-						}
-					}
-
-					ul.children {
-						margin-left: 0;
-					}
+				input:focus,
+				.comment-form-comment:focus {
+					box-shadow: 0 0 5px #51cbee;
 				}
 			}
 
-			.reply {
-				width: 96%;
+			.comment-form-email {
+				font-size: 0.9em;
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
 
-				.comment-reply-link {
-					font-size: 1em;
+			.comment-form-url {
+				font-size: 0.9em;
+
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.comment-form-cookies-consent {
+				font-size: 0.8em;
+				line-height: 20px;
+				#wp-comment-cookies-consent {
+					display: inline-block;
+				}
+			}
+
+			.form-submit {
+				width: 100%;
+
+				.submit {
+					width: 35%;
 
 					&:hover {
-						color: $color11;
+						cursor: pointer;
 					}
 				}
 			}
 		}
+	}
 
-		#respond {
-			display: block;
-			clear: both;
+	.askimet_comment_form_privacy_notice {
+		text-align: center;
+		a {
+			margin: 0 0.25em;
 
-			#reply-title {
-				font-size: 1em;
-
-				small {
-					a {
-						font-size: 0.9em;
-
-						&:hover {
-							color: $color4;
-						}
-					}
-				}
-			}
-
-			#commentform {
-				padding: 0.5em;
-
-				.comment-notes {
-					font-size: 0.85em;
-				}
-
-				.comment-form-comment {
-					width: 100%;
-					font-size: 0.85em;
-				}
-
-				.comment-form-author {
-					font-size: 0.9em;
-
-					input:focus,
-					.comment-form-comment:focus {
-						box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-email {
-					font-size: 0.9em;
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-url {
-					font-size: 0.9em;
-
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-cookies-consent {
-					font-size: 0.8em;
-					line-height: 20px;
-					input#wp-comment-cookies-consent {
-						display: inline-block;
-					}
-				}
-
-				.form-submit {
-					width: 100%;
-
-					.submit {
-						width: 35%;
-
-						&:hover {
-							cursor: pointer;
-						}
-					}
-				}
+			&:hover {
+				background-color: $color4;
 			}
 		}
+	}
 
-		.askimet_comment_form_privacy_notice {
-			text-align: center;
-			a {
-				margin: 0 0.25em;
+	.must-log-in {
+		width: 90%;
 
-				&:hover {
-					background-color: $color4;
-				}
+		a {
+			display: inline-block;
+
+			&:hover {
+				color: $color11;
 			}
 		}
+	}
 
-		.must-log-in {
-			width: 90%;
-
-			a {
-				display: inline-block;
-
-				&:hover {
-					color: $color11;
-				}
-			}
-		}
-
-		.nocomments {
-			font-size: 1.1em;
-		}
+	.nocomments {
+		font-size: 1.1em;
 	}
 
 	#contactform {
@@ -7084,7 +7144,7 @@ section.error-404 {
 		margin: 0.5%;
 
 		#slider {
-			background: url(images/bg_slider.gif) top center repeat-x;
+			background: url("images/bg_slider.gif") top center repeat-x;
 
 			li {
 				overflow: hidden;
@@ -7094,10 +7154,7 @@ section.error-404 {
 
 	#top-clashes-section {
 		padding: 0.5em;
-		-webkit-flex-flow: column;
-		-ms-flex-flow: column;
 		flex-flow: column;
-		-webkit-align-items: center;
 		-ms-flex-align: center;
 		align-items: center;
 	}
@@ -7208,10 +7265,10 @@ section.error-404 {
 			margin: 0.5em 0;
 
 			li,
-			li.recentcomments {
+			.recentcomments {
 				line-height: 40px;
 
-				span.comment-author-link {
+				.comment-author-link {
 					height: 100%;
 				}
 
@@ -7287,12 +7344,12 @@ section.error-404 {
 		top: 0.25em;
 		z-index: 100;
 		height: auto;
-		display: block;
+		display: flex;
 		width: 25%;
-		left: calc(75% - 1vw);
-		@include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
+		left: calc(73% - 1vw);
+		transition: all 0.2s linear 0s, color 0.2s linear 0s;
 	}
-	.menu-toggle,
+	#toggle-nav,
 	.sidebar-toggle {
 		display: block;
 		line-height: 50px;
@@ -7302,8 +7359,8 @@ section.error-404 {
 		border: none;
 		outline: none;
 		text-align: center;
-		@include Transition(all 0.2s linear 0s);
-		font-size: 1.2em;
+		transition: all 0.2s linear 0s;
+		font-size: 0.85em;
 
 		&:hover {
 			background-color: $color7;
@@ -7316,8 +7373,9 @@ section.error-404 {
 		left: 100vw;
 	}
 	#page {
-		max-width: 96%;
-		margin: 0;
+		width: 96%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	#masthead {
 		height: 65px;
@@ -7329,7 +7387,7 @@ section.error-404 {
 		width: 10%;
 
 		a {
-			div.site-firstletter {
+			.site-firstletter {
 				font-size: 4em;
 			}
 		}
@@ -7364,36 +7422,32 @@ section.error-404 {
 		width: 100%;
 		top: -350px;
 		left: 0;
+	}
+	#menu-mobile {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		flex-flow: column;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		background-color: $color2;
 
-		ul#menu-mobile {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			-webkit-flex-flow: column;
-			-ms-flex-flow: column;
-			flex-flow: column;
-			-webkit-justify-content: flex-start;
-			-ms-flex-pack: start;
-			justify-content: flex-start;
-			background-color: $color2;
+		.menu-item {
+			margin-right: 0;
+			width: 100%;
+			height: 50px;
 
-			.menu-item {
-				margin-right: 0;
-				width: 100%;
-				height: 50px;
-
-				a {
-					font-size: 0.9em;
-					line-height: 50px;
-					background-color: $color4;
-					color: $color;
-					text-align: center;
-					display: block;
-					&:hover {
-						cursor: pointer;
-						background-color: $color;
-						color: $color4;
-					}
+			a {
+				font-size: 0.9em;
+				line-height: 50px;
+				background-color: $color4;
+				color: $color;
+				text-align: center;
+				display: block;
+				&:hover {
+					cursor: pointer;
+					background-color: $color;
+					color: $color4;
 				}
 			}
 		}
@@ -7472,11 +7526,10 @@ section.error-404 {
 		.comments,
 		.recentcomments {
 			margin: 0.5em 0;
-			@include clearfix();
 
 			li,
-			li.recentcomments {
-				span.comment-author-link {
+			.recentcomments {
+				.comment-author-link {
 					height: 100%;
 				}
 
@@ -7515,6 +7568,7 @@ section.error-404 {
 			}
 		}
 	}
+
 	/* blog */
 	.event,
 	.clash-videos,
@@ -7620,27 +7674,28 @@ section.error-404 {
 		}
 		.sharedaddy {
 			margin-top: 7%;
-			.sd-sharing {
-				width: 98%;
-				.sd-title {
-					font-size: 0.9em;
-					width: 17%;
-				}
+		}
+		.sd-sharing {
+			margin: auto;
 
-				.sd-title::before {
-					width: 13%;
-				}
+			.sd-title {
+				font-size: 0.9em;
+				width: 17%;
+			}
 
-				.sd-content {
-					width: 82%;
-					ul {
-						font-size: 0.85em;
+			.sd-title::before {
+				width: 13%;
+			}
 
-						.share-twitter,
-						.share-facebook,
-						.share-end {
-							padding: 0;
-						}
+			.sd-content {
+				width: 82%;
+				ul {
+					font-size: 0.85em;
+
+					.share-twitter,
+					.share-facebook,
+					.share-end {
+						padding: 0;
 					}
 				}
 			}
@@ -7679,19 +7734,180 @@ section.error-404 {
 		}
 	}
 	#comments {
-		.post-navigation {
+		margin: 0;
+	}
+	.post-navigation {
+		width: 100%;
+
+		h1 {
+			font-size: 1.3em;
+		}
+
+		.nav-previous,
+		.nav-next {
 			width: 100%;
 
-			h1 {
-				font-size: 1.3em;
+			a {
+				margin: 0;
+				&:hover {
+					color: $color4;
+				}
+			}
+		}
+	}
+
+	.comments-title {
+		font-size: 0.85em;
+	}
+
+	.comment-list {
+		padding-left: 0;
+
+		.comment {
+			padding: 0;
+
+			.children {
+				margin: auto;
+
+				.odd {
+					margin: 0;
+
+					.comment-body {
+						background-color: $color4;
+						.comment-meta {
+							height: 60px;
+							margin-top: 0;
+							.comment-author {
+								font-size: 0.85em;
+								width: 40%;
+
+								img {
+									width: auto;
+								}
+
+								.fn,
+								cite.fn {
+									line-height: 1.5;
+
+									a {
+										background-color: $color1;
+									}
+								}
+
+								.says {
+									display: inline-block;
+								}
+							}
+
+							.comment-metadata {
+								font-size: 0.8em;
+
+								a {
+									color: $color11;
+								}
+								.edit-link {
+									display: inline;
+								}
+							}
+						}
+						.comment-content {
+							p {
+								font-size: 0.85em;
+
+								a {
+									background-color: $color11;
+									&:hover {
+										color: $color11;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 
-			.nav-previous,
-			.nav-next {
-				width: 100%;
+			.comment-body {
+				padding: 0.5em;
 
+				.comment-meta {
+					height: 60px;
+
+					.comment-author {
+						font-size: 0.85em;
+						width: 40%;
+
+						img {
+							width: auto;
+						}
+
+						.fn,
+						cite.fn {
+							display: inline-block;
+
+							a {
+								background-color: $color1;
+							}
+						}
+
+						.says {
+							display: inline-block;
+						}
+					}
+
+					.comment-metadata {
+						font-size: 0.75em;
+						width: 35%;
+						a {
+							color: $color11;
+						}
+						.edit-link {
+							display: inline;
+						}
+					}
+				}
+
+				.comment-content {
+					p {
+						font-size: 0.85em;
+
+						a {
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				.children {
+					margin-left: 0;
+				}
+			}
+		}
+
+		.reply {
+			width: 96%;
+
+			.comment-reply-link {
+				font-size: 1em;
+
+				&:hover {
+					color: $color11;
+				}
+			}
+		}
+	}
+
+	#respond {
+		display: block;
+		clear: both;
+
+		#reply-title {
+			font-size: 1em;
+
+			small {
 				a {
-					margin: 0;
+					font-size: 0.9em;
+
 					&:hover {
 						color: $color4;
 					}
@@ -7699,242 +7915,84 @@ section.error-404 {
 			}
 		}
 
-		.comments-title {
-			font-size: 0.85em;
-		}
+		#commentform {
+			padding: 0.5em;
 
-		.comment-list {
-			padding-left: 0;
+			.comment-notes {
+				font-size: 0.85em;
+			}
 
-			.comment {
-				padding: 0;
+			.comment-form-comment {
+				width: 100%;
+				font-size: 0.85em;
+			}
 
-				.children {
-					margin: auto;
+			.comment-form-author {
+				font-size: 0.85em;
 
-					.odd {
-						margin: 0;
-
-						.comment-body {
-							background-color: $color4;
-							.comment-meta {
-								height: 60px;
-								margin-top: 0;
-								.comment-author {
-									font-size: 0.85em;
-
-									img {
-										width: auto;
-									}
-
-									b.fn,
-									cite.fn {
-										line-height: 1.5;
-
-										a {
-											background-color: $color1;
-										}
-									}
-
-									.says {
-										display: inline-block;
-									}
-								}
-
-								.comment-metadata {
-									font-size: 0.8em;
-
-									a {
-										color: $color11;
-									}
-									.edit-link {
-										display: inline;
-									}
-								}
-							}
-							.comment-content {
-								p {
-									font-size: 0.85em;
-
-									a {
-										background-color: $color11;
-										&:hover {
-											color: $color11;
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-
-				.comment-body {
-					padding: 0.5em;
-
-					.comment-meta {
-						height: 60px;
-
-						.comment-author {
-							font-size: 0.85em;
-
-							img {
-								width: auto;
-							}
-
-							b.fn,
-							cite.fn {
-								display: inline-block;
-
-								a {
-									background-color: $color1;
-								}
-							}
-
-							.says {
-								display: inline-block;
-							}
-						}
-
-						.comment-metadata {
-							font-size: 0.75em;
-
-							a {
-								color: $color11;
-							}
-							.edit-link {
-								display: inline;
-							}
-						}
-					}
-
-					.comment-content {
-						p {
-							font-size: 0.85em;
-
-							a {
-								&:hover {
-									color: $color11;
-								}
-							}
-						}
-					}
-
-					ul.children {
-						margin-left: 0;
-					}
+				input:focus,
+				.comment-form-comment:focus {
+					box-shadow: 0 0 5px #51cbee;
 				}
 			}
 
-			.reply {
-				width: 96%;
+			.comment-form-email {
+				font-size: 0.85em;
 
-				.comment-reply-link {
-					font-size: 1em;
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.comment-form-url {
+				font-size: 0.85em;
+
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.form-submit {
+				width: 100%;
+
+				.submit {
+					width: 45%;
 
 					&:hover {
-						color: $color11;
+						cursor: pointer;
 					}
 				}
 			}
 		}
+	}
 
-		#respond {
-			display: block;
-			clear: both;
+	.askimet_comment_form_privacy_notice {
+		font-size: 0.8em;
+		a {
+			margin: 0 0.25em;
 
-			#reply-title {
-				font-size: 1em;
-
-				small {
-					a {
-						font-size: 0.9em;
-
-						&:hover {
-							color: $color4;
-						}
-					}
-				}
-			}
-
-			#commentform {
-				padding: 0.5em;
-
-				.comment-notes {
-					font-size: 0.85em;
-				}
-
-				.comment-form-comment {
-					width: 100%;
-					font-size: 0.85em;
-				}
-
-				.comment-form-author {
-					font-size: 0.85em;
-
-					input:focus,
-					.comment-form-comment:focus {
-						box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-email {
-					font-size: 0.85em;
-
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-url {
-					font-size: 0.85em;
-
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.form-submit {
-					width: 100%;
-
-					.submit {
-						width: 45%;
-
-						&:hover {
-							cursor: pointer;
-						}
-					}
-				}
+			&:hover {
+				background-color: $color4;
 			}
 		}
+	}
 
-		.askimet_comment_form_privacy_notice {
-			font-size: 0.8em;
-			a {
-				margin: 0 0.25em;
+	.must-log-in {
+		width: 90%;
 
-				&:hover {
-					background-color: $color4;
-				}
+		a {
+			display: inline-block;
+
+			&:hover {
+				color: $color11;
 			}
 		}
+	}
 
-		.must-log-in {
-			width: 90%;
-
-			a {
-				display: inline-block;
-
-				&:hover {
-					color: $color11;
-				}
-			}
-		}
-
-		.nocomments {
-			font-size: 1.1em;
-		}
+	.nocomments {
+		font-size: 1.1em;
 	}
 
 	.text-img {
@@ -8116,11 +8174,13 @@ section.error-404 {
 @media only screen and (min-width: 537px) and (max-width: 640px) {
 	#tog-menu {
 		width: 25%;
-		left: calc(75% - 1vw);
+		left: calc(73% - 1vw);
+		display: flex;
 	}
-	.menu-toggle,
+	#toggle-nav,
 	.sidebar-toggle {
 		line-height: 60px;
+		font-size: 0.85em;
 
 		&:hover {
 			text-align: center;
@@ -8132,7 +8192,9 @@ section.error-404 {
 	}
 
 	#page {
-		max-width: 96%;
+		width: 96%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	#masthead {
 		height: 65px;
@@ -8144,14 +8206,14 @@ section.error-404 {
 		width: 11%;
 
 		a {
-			div.screen-reader-text {
+			.screen-reader-text {
 				&:focus {
 					font-size: 14px;
 					font-size: 0.875rem;
 				}
 			}
 
-			div.site-firstletter {
+			.site-firstletter {
 				font-size: 4em;
 			}
 		}
@@ -8170,20 +8232,19 @@ section.error-404 {
 
 	#cv-mobilenav {
 		position: fixed;
+	}
+	#menu-mobile {
+		list-style: none;
 
-		ul#menu-mobile {
-			list-style: none;
+		.menu-item {
+			height: 50px;
 
-			.menu-item {
-				height: 50px;
+			a {
+				font-size: 0.9em;
+				line-height: 50px;
 
-				a {
-					font-size: 0.9em;
+				&:hover {
 					line-height: 50px;
-
-					&:hover {
-						line-height: 50px;
-					}
 				}
 			}
 		}
@@ -8247,11 +8308,10 @@ section.error-404 {
 		.comments,
 		.recentcomments {
 			margin: 0.5em 0;
-			@include clearfix();
 
 			li,
-			li.recentcomments {
-				span.comment-author-link {
+			.recentcomments {
+				.comment-author-link {
 					height: 100%;
 				}
 
@@ -8385,265 +8445,266 @@ section.error-404 {
 	}
 
 	#comments {
-		.post-navigation {
+		margin: 0;
+	}
+	.post-navigation {
+		width: 100%;
+
+		h1 {
+			font-size: 1.3em;
+		}
+
+		.nav-previous,
+		.nav-next {
 			width: 100%;
 
-			h1 {
-				font-size: 1.3em;
+			a {
+				margin: 0;
+				&:hover {
+					color: $color4;
+				}
 			}
+		}
+	}
 
-			.nav-previous,
-			.nav-next {
-				width: 100%;
+	.comments-title {
+		font-size: 0.85em;
+	}
 
-				a {
+	.comment-list {
+		padding-left: 0;
+
+		.comment {
+			padding: 0;
+
+			.children {
+				margin: auto;
+
+				.odd {
 					margin: 0;
-					&:hover {
-						color: $color4;
-					}
-				}
-			}
-		}
 
-		.comments-title {
-			font-size: 0.85em;
-		}
+					.comment-body {
+						background-color: $color4;
+						.comment-meta {
+							height: 60px;
+							margin-top: 0;
+							.comment-author {
+								font-size: 0.8em;
 
-		.comment-list {
-			padding-left: 0;
-
-			.comment {
-				padding: 0;
-
-				.children {
-					margin: auto;
-
-					.odd {
-						margin: 0;
-
-						.comment-body {
-							background-color: $color4;
-							.comment-meta {
-								height: 60px;
-								margin-top: 0;
-								.comment-author {
-									font-size: 0.8em;
-
-									img {
-										width: auto;
-									}
-
-									b.fn,
-									cite.fn {
-										line-height: 1.5;
-
-										a {
-											background-color: $color1;
-										}
-									}
-
-									.says {
-										display: inline-block;
-									}
+								img {
+									width: auto;
 								}
 
-								.comment-metadata {
-									font-size: 0.8em;
+								.fn,
+								cite.fn {
+									line-height: 1.5;
 
 									a {
-										color: $color11;
-									}
-									.edit-link {
-										display: inline;
+										background-color: $color1;
 									}
 								}
-							}
-							.comment-content {
-								p {
-									font-size: 0.85em;
 
-									a {
-										background-color: $color11;
-										&:hover {
-											color: $color11;
-										}
-									}
+								.says {
+									display: inline-block;
 								}
 							}
-						}
-					}
-				}
 
-				.comment-body {
-					padding: 0.5em;
-
-					.comment-meta {
-						height: 60px;
-
-						.comment-author {
-							font-size: 0.8em;
-
-							img {
-								width: auto;
-							}
-
-							b.fn,
-							cite.fn {
-								display: inline-block;
+							.comment-metadata {
+								font-size: 0.8em;
 
 								a {
-									background-color: $color1;
-								}
-							}
-
-							.says {
-								display: inline-block;
-							}
-						}
-
-						.comment-metadata {
-							font-size: 0.7em;
-
-							a {
-								color: $color11;
-							}
-							.edit-link {
-								display: inline;
-							}
-						}
-					}
-
-					.comment-content {
-						p {
-							font-size: 0.85em;
-
-							a {
-								&:hover {
 									color: $color11;
 								}
+								.edit-link {
+									display: inline;
+								}
+							}
+						}
+						.comment-content {
+							p {
+								font-size: 0.85em;
+
+								a {
+									background-color: $color11;
+									&:hover {
+										color: $color11;
+									}
+								}
 							}
 						}
 					}
-
-					ul.children {
-						margin-left: 0;
-					}
 				}
 			}
 
-			.reply {
-				width: 96%;
-
-				.comment-reply-link {
-					font-size: 1em;
-
-					&:hover {
-						color: $color11;
-					}
-				}
-			}
-		}
-
-		#respond {
-			display: block;
-			clear: both;
-
-			#reply-title {
-				font-size: 1em;
-
-				small {
-					a {
-						font-size: 0.9em;
-
-						&:hover {
-							color: $color4;
-						}
-					}
-				}
-			}
-			label {
-				height: 30px;
-			}
-
-			#commentform {
+			.comment-body {
 				padding: 0.5em;
 
-				.comment-notes {
-					font-size: 0.8em;
-				}
+				.comment-meta {
+					height: 60px;
 
-				.comment-form-comment {
-					width: 100%;
-					font-size: 0.8em;
-				}
+					.comment-author {
+						font-size: 0.8em;
 
-				.comment-form-author {
-					font-size: 0.8em;
+						img {
+							width: auto;
+						}
 
-					input:focus,
-					.comment-form-comment:focus {
-						box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+						.fn,
+						cite.fn {
+							display: inline-block;
+
+							a {
+								background-color: $color1;
+							}
+						}
+
+						.says {
+							display: inline-block;
+						}
 					}
-				}
 
-				.comment-form-email {
-					font-size: 0.8em;
+					.comment-metadata {
+						font-size: 0.7em;
 
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-url {
-					font-size: 0.8em;
-
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.form-submit {
-					width: 100%;
-
-					.submit {
-						width: 45%;
-
-						&:hover {
-							cursor: pointer;
+						a {
+							color: $color11;
+						}
+						.edit-link {
+							display: inline;
 						}
 					}
 				}
-			}
-		}
 
-		.askimet_comment_form_privacy_notice {
-			text-align: center;
-			a {
-				margin: 0 0.25em;
+				.comment-content {
+					p {
+						font-size: 0.85em;
 
-				&:hover {
-					background-color: $color4;
+						a {
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				.children {
+					margin-left: 0;
 				}
 			}
 		}
 
-		.must-log-in {
-			width: 90%;
+		.reply {
+			width: 96%;
 
-			a {
-				display: inline-block;
+			.comment-reply-link {
+				font-size: 1em;
 
 				&:hover {
 					color: $color11;
 				}
 			}
 		}
+	}
 
-		.nocomments {
-			font-size: 1.1em;
+	#respond {
+		display: block;
+		clear: both;
+
+		#reply-title {
+			font-size: 1em;
+
+			small {
+				a {
+					font-size: 0.9em;
+
+					&:hover {
+						color: $color4;
+					}
+				}
+			}
 		}
+		label {
+			height: 30px;
+		}
+
+		#commentform {
+			padding: 0.5em;
+
+			.comment-notes {
+				font-size: 0.8em;
+			}
+
+			.comment-form-comment {
+				width: 100%;
+				font-size: 0.8em;
+			}
+
+			.comment-form-author {
+				font-size: 0.8em;
+
+				input:focus,
+				.comment-form-comment:focus {
+					box-shadow: 0 0 5px #51cbee;
+				}
+			}
+
+			.comment-form-email {
+				font-size: 0.8em;
+
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.comment-form-url {
+				font-size: 0.8em;
+
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.form-submit {
+				width: 100%;
+
+				.submit {
+					width: 45%;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+
+	.askimet_comment_form_privacy_notice {
+		text-align: center;
+		a {
+			margin: 0 0.25em;
+
+			&:hover {
+				background-color: $color4;
+			}
+		}
+	}
+
+	.must-log-in {
+		width: 90%;
+
+		a {
+			display: inline-block;
+
+			&:hover {
+				color: $color11;
+			}
+		}
+	}
+
+	.nocomments {
+		font-size: 1.1em;
 	}
 
 	.text-img {
@@ -8864,11 +8925,14 @@ section.error-404 {
 @media only screen and (min-width: 481px) and (max-width: 536px) {
 	#tog-menu {
 		width: 25%;
-		left: calc(75% - 1vw);
+		left: calc(73% - 1vw);
+		display: flex;
 	}
-	.menu-toggle,
+	#toggle-nav,
 	.sidebar-toggle {
 		line-height: 60px;
+		display: block;
+		font-size: 0.85em;
 
 		&:hover {
 			text-align: center;
@@ -8882,7 +8946,9 @@ section.error-404 {
 	}
 
 	#page {
-		max-width: 96%;
+		width: 98%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	#masthead {
 		height: 60px;
@@ -8894,13 +8960,13 @@ section.error-404 {
 		width: 13%;
 
 		a {
-			div.screen-reader-text {
+			.screen-reader-text {
 				&:focus {
 					font-size: 14px;
 				}
 			}
 
-			div.site-firstletter {
+			.site-firstletter {
 				font-size: 4em;
 			}
 		}
@@ -8918,18 +8984,19 @@ section.error-404 {
 	}
 
 	#cv-mobilenav {
-		ul#menu-mobile {
-			list-style: none;
+		width: 23.5%;
+	}
+	#menu-mobile {
+		list-style: none;
 
-			.menu-item {
-				height: 45px;
+		.menu-item {
+			height: 45px;
 
-				a {
-					font-size: 0.9em;
+			a {
+				font-size: 0.9em;
+				line-height: 45px;
+				&:hover {
 					line-height: 45px;
-					&:hover {
-						line-height: 45px;
-					}
 				}
 			}
 		}
@@ -8993,11 +9060,10 @@ section.error-404 {
 		.comments,
 		.recentcomments {
 			margin: 0.5em 0;
-			@include clearfix();
 
 			li,
-			li.recentcomments {
-				span.comment-author-link {
+			.recentcomments {
+				.comment-author-link {
 					height: 100%;
 				}
 
@@ -9031,6 +9097,7 @@ section.error-404 {
 			}
 		}
 	}
+
 	/* blog */
 	.event,
 	.clash-videos,
@@ -9055,8 +9122,7 @@ section.error-404 {
 				display: block;
 
 				.meta-content {
-					grid-template-columns: 16% 2fr;
-					grid-template-rows: 20px 20px 20px 20px;
+					grid-template: 20px 20px 20px 20px / 16% 2fr;
 
 					.parent-post-link,
 					.full-size-link,
@@ -9130,27 +9196,28 @@ section.error-404 {
 			}
 		}
 		.sharedaddy {
-			.sd-sharing {
-				width: 99%;
-				.sd-title {
-					font-size: 0.9em;
-					width: 20%;
-				}
+			margin-top: 7%;
+		}
+		.sd-sharing {
+			margin: auto;
+			.sd-title {
+				font-size: 0.9em;
+				width: 20%;
+			}
 
-				.sd-title::before {
-					width: 13%;
-				}
+			.sd-title::before {
+				width: 13%;
+			}
 
-				.sd-content {
-					width: 79%;
-					ul {
-						font-size: 0.85em;
+			.sd-content {
+				width: 79%;
+				ul {
+					font-size: 0.85em;
 
-						.share-twitter,
-						.share-facebook,
-						.share-end {
-							padding: 0;
-						}
+					.share-twitter,
+					.share-facebook,
+					.share-end {
+						padding: 0;
 					}
 				}
 			}
@@ -9187,19 +9254,181 @@ section.error-404 {
 	}
 
 	#comments {
-		.post-navigation {
+		margin: 0;
+	}
+
+	.post-navigation {
+		width: 100%;
+
+		h1 {
+			font-size: 1.3em;
+		}
+
+		.nav-previous,
+		.nav-next {
 			width: 100%;
 
-			h1 {
-				font-size: 1.3em;
+			a {
+				margin: 0;
+				&:hover {
+					color: $color4;
+				}
+			}
+		}
+	}
+	.comments-title {
+		font-size: 0.8em;
+	}
+	.comment-list {
+		padding-left: 0;
+
+		.comment {
+			padding: 0;
+
+			.children {
+				margin: auto;
+
+				.odd {
+					margin: 0;
+
+					.comment-body {
+						background-color: $color4;
+						.comment-meta {
+							height: 60px;
+							margin-top: 0;
+							.comment-author {
+								font-size: 0.75em;
+
+								img {
+									width: auto;
+								}
+
+								.fn,
+								cite.fn {
+									line-height: 1.5;
+
+									a {
+										background-color: $color1;
+									}
+								}
+
+								.says {
+									display: inline-block;
+								}
+							}
+
+							.comment-metadata {
+								font-size: 0.8em;
+
+								a {
+									color: $color11;
+								}
+								.edit-link {
+									display: inline;
+								}
+							}
+						}
+						.comment-content {
+							p {
+								font-size: 0.8em;
+
+								a {
+									background-color: $color11;
+									&:hover {
+										color: $color11;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 
-			.nav-previous,
-			.nav-next {
-				width: 100%;
+			.comment-body {
+				padding: 0.25em;
 
+				.comment-meta {
+					height: 60px;
+
+					.comment-author {
+						font-size: 0.8em;
+						width: 48%;
+
+						img {
+							width: auto;
+							margin: 0;
+						}
+
+						.fn,
+						cite.fn {
+							display: inline-block;
+							font-size: 0.9em;
+
+							a {
+								background-color: $color1;
+							}
+						}
+
+						.says {
+							display: inline-block;
+							font-size: 0.9em;
+						}
+					}
+
+					.comment-metadata {
+						font-size: 0.75em;
+						padding: 0;
+
+						a {
+							color: $color11;
+						}
+						.edit-link {
+							display: inline;
+						}
+					}
+				}
+
+				.comment-content {
+					p {
+						font-size: 0.8em;
+
+						a {
+							&:hover {
+								color: $color11;
+							}
+						}
+					}
+				}
+
+				.children {
+					margin-left: 0;
+				}
+			}
+		}
+
+		.reply {
+			width: 96%;
+
+			.comment-reply-link {
+				font-size: 1em;
+
+				&:hover {
+					color: $color11;
+				}
+			}
+		}
+	}
+	#respond {
+		display: block;
+		clear: both;
+
+		#reply-title {
+			font-size: 1em;
+
+			small {
 				a {
-					margin: 0;
+					font-size: 0.9em;
+
 					&:hover {
 						color: $color4;
 					}
@@ -9207,240 +9436,74 @@ section.error-404 {
 			}
 		}
 
-		.comments-title {
-			font-size: 0.8em;
-		}
+		#commentform {
+			padding: 1em;
 
-		.comment-list {
-			padding-left: 0;
+			.comment-notes {
+				font-size: 0.75em;
+			}
 
-			.comment {
-				padding: 0;
+			.comment-form-comment {
+				width: 100%;
+			}
 
-				.children {
-					margin: auto;
-
-					.odd {
-						margin: 0;
-
-						.comment-body {
-							background-color: $color4;
-							.comment-meta {
-								height: 60px;
-								margin-top: 0;
-								.comment-author {
-									font-size: 0.75em;
-
-									img {
-										width: auto;
-									}
-
-									b.fn,
-									cite.fn {
-										line-height: 1.5;
-
-										a {
-											background-color: $color1;
-										}
-									}
-
-									.says {
-										display: inline-block;
-									}
-								}
-
-								.comment-metadata {
-									font-size: 0.8em;
-
-									a {
-										color: $color11;
-									}
-									.edit-link {
-										display: inline;
-									}
-								}
-							}
-							.comment-content {
-								p {
-									font-size: 0.8em;
-
-									a {
-										background-color: $color11;
-										&:hover {
-											color: $color11;
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-
-				.comment-body {
-					padding: 0.25em;
-
-					.comment-meta {
-						height: 60px;
-
-						.comment-author {
-							font-size: 0.8em;
-							width: 48%;
-
-							img {
-								width: auto;
-								margin: 0;
-							}
-
-							b.fn,
-							cite.fn {
-								display: inline-block;
-								font-size: 0.9em;
-
-								a {
-									background-color: $color1;
-								}
-							}
-
-							.says {
-								display: inline-block;
-								font-size: 0.9em;
-							}
-						}
-
-						.comment-metadata {
-							font-size: 0.75em;
-							padding: 0;
-
-							a {
-								color: $color11;
-							}
-							.edit-link {
-								display: inline;
-							}
-						}
-					}
-
-					.comment-content {
-						p {
-							font-size: 0.8em;
-
-							a {
-								&:hover {
-									color: $color11;
-								}
-							}
-						}
-					}
-
-					ul.children {
-						margin-left: 0;
-					}
+			.comment-form-author {
+				input:focus,
+				.comment-form-comment:focus {
+					box-shadow: 0 0 5px #51cbee;
 				}
 			}
 
-			.reply {
-				width: 96%;
+			.comment-form-email {
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
 
-				.comment-reply-link {
-					font-size: 1em;
+			.comment-form-url {
+				input:focus,
+				.comment-form-comment:focus {
+					border: 1px solid #51cbee;
+				}
+			}
+
+			.form-submit {
+				width: 100%;
+
+				.submit {
+					width: 55%;
 
 					&:hover {
-						color: $color11;
+						cursor: pointer;
 					}
 				}
 			}
 		}
+	}
+	.askimet_comment_form_privacy_notice {
+		font-size: 0.7em;
+		a {
+			margin: 0 0.25em;
 
-		#respond {
-			display: block;
-			clear: both;
-
-			#reply-title {
-				font-size: 1em;
-
-				small {
-					a {
-						font-size: 0.9em;
-
-						&:hover {
-							color: $color4;
-						}
-					}
-				}
-			}
-
-			#commentform {
-				padding: 1em;
-
-				.comment-notes {
-					font-size: 0.75em;
-				}
-
-				.comment-form-comment {
-					width: 100%;
-				}
-
-				.comment-form-author {
-					input:focus,
-					.comment-form-comment:focus {
-						box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-email {
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.comment-form-url {
-					input:focus,
-					.comment-form-comment:focus {
-						border: 1px solid rgba(81, 203, 238, 1);
-					}
-				}
-
-				.form-submit {
-					width: 100%;
-
-					.submit {
-						width: 55%;
-
-						&:hover {
-							cursor: pointer;
-						}
-					}
-				}
+			&:hover {
+				background-color: $color4;
 			}
 		}
+	}
+	.must-log-in {
+		width: 90%;
 
-		.askimet_comment_form_privacy_notice {
-			font-size: 0.7em;
-			a {
-				margin: 0 0.25em;
+		a {
+			display: inline-block;
 
-				&:hover {
-					background-color: $color4;
-				}
+			&:hover {
+				color: $color11;
 			}
 		}
-
-		.must-log-in {
-			width: 90%;
-
-			a {
-				display: inline-block;
-
-				&:hover {
-					color: $color11;
-				}
-			}
-		}
-
-		.nocomments {
-			font-size: 1.1em;
-		}
+	}
+	.nocomments {
+		font-size: 1.1em;
 	}
 
 	.text-img {
@@ -9625,12 +9688,14 @@ section.error-404 {
 @media only screen and (min-width: 415px) and (max-width: 480px) {
 	#tog-menu {
 		width: 25%;
-		left: calc(79% - 1vw);
+		left: calc(77% - 1vw);
 		font-size: 0.85em;
+		display: flex;
 	}
-	.menu-toggle,
+	#toggle-nav,
 	.sidebar-toggle {
 		line-height: 60px;
+		display: block;
 
 		&:hover {
 			text-align: center;
@@ -9644,7 +9709,9 @@ section.error-404 {
 	}
 
 	#page {
-		max-width: 96%;
+		width: 98%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	#masthead {
 		height: 55px;
@@ -9656,13 +9723,13 @@ section.error-404 {
 		width: 13%;
 
 		a {
-			div.screen-reader-text {
+			.screen-reader-text {
 				&:focus {
 					font-size: 14px;
 				}
 			}
 
-			div.site-firstletter {
+			.site-firstletter {
 				font-size: 4em;
 			}
 		}
@@ -9682,16 +9749,17 @@ section.error-404 {
 	}
 
 	#cv-mobilenav {
-		ul#menu-mobile {
-			list-style: none;
+		width: 23.5%;
+	}
+	#menu-mobile {
+		list-style: none;
 
-			.menu-item {
-				a {
-					font-size: 0.9em;
+		.menu-item {
+			a {
+				font-size: 0.9em;
 
-					&:hover {
-						line-height: 40px;
-					}
+				&:hover {
+					line-height: 40px;
 				}
 			}
 		}
@@ -9756,11 +9824,10 @@ section.error-404 {
 		.comments,
 		.recentcomments {
 			margin: 0.5em 0;
-			@include clearfix();
 
 			li,
-			li.recentcomments {
-				span.comment-author-link {
+			.recentcomments {
+				.comment-author-link {
 					height: 100%;
 				}
 
@@ -10074,12 +10141,13 @@ section.error-404 {
 	#tog-menu {
 		width: 20%;
 		left: calc(79% - 1vw);
-		font-size: 0.75em;
+		display: flex;
 	}
-	.menu-toggle,
+	#toggle-nav,
 	.sidebar-toggle {
 		line-height: 60px;
-
+		display: block;
+		font-size: 0.85em;
 		&:hover {
 			text-align: center;
 		}
@@ -10092,7 +10160,9 @@ section.error-404 {
 	}
 
 	#page {
-		height: auto;
+		width: 98%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	#masthead {
 		height: 55px;
@@ -10104,13 +10174,13 @@ section.error-404 {
 		width: 15%;
 
 		a {
-			div.screen-reader-text {
+			.screen-reader-text {
 				&:focus {
 					font-size: 14px;
 				}
 			}
 
-			div.site-firstletter {
+			.site-firstletter {
 				font-size: 4em;
 			}
 		}
@@ -10128,16 +10198,17 @@ section.error-404 {
 	}
 
 	#cv-mobilenav {
-		ul#menu-mobile {
-			list-style: none;
+		width: 23.5%;
+	}
+	#menu-mobile {
+		list-style: none;
 
-			.menu-item {
-				a {
-					font-size: 0.9em;
+		.menu-item {
+			a {
+				font-size: 0.9em;
 
-					&:hover {
-						line-height: 40px;
-					}
+				&:hover {
+					line-height: 40px;
 				}
 			}
 		}
@@ -10201,11 +10272,10 @@ section.error-404 {
 		.comments,
 		.recentcomments {
 			margin: 0.5em 0;
-			@include clearfix();
 
 			li,
-			li.recentcomments {
-				span.comment-author-link {
+			.recentcomments {
+				.comment-author-link {
 					height: 100%;
 				}
 
@@ -10335,26 +10405,28 @@ section.error-404 {
 			}
 		}
 		.sharedaddy {
-			.sd-sharing {
-				.sd-title {
-					font-size: 0.85em;
-					width: 22%;
-				}
+			margin-top: 7%;
+		}
+		.sd-sharing {
+			margin: auto;
+			.sd-title {
+				font-size: 0.85em;
+				width: 22%;
+			}
 
-				.sd-title::before {
-					width: 13%;
-				}
+			.sd-title::before {
+				width: 13%;
+			}
 
-				.sd-content {
-					width: 77%;
-					ul {
-						font-size: 0.8em;
+			.sd-content {
+				width: 77%;
+				ul {
+					font-size: 0.8em;
 
-						.share-twitter,
-						.share-facebook,
-						.share-end {
-							padding: 0;
-						}
+					.share-twitter,
+					.share-facebook,
+					.share-end {
+						padding: 0;
 					}
 				}
 			}

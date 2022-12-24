@@ -18,8 +18,6 @@
  */
 get_header(); ?>
 
-
-
 <?php
 
 esc_html(the_title('<h2 class="page-title">', ' Page</h2>'));
@@ -35,9 +33,6 @@ while (have_posts()) :
 
 endwhile;
 ?>
-
-
-
 
 <?php
 get_footer();

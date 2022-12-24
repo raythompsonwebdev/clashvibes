@@ -13,8 +13,8 @@
 
 	if (isIe && document.getElementById && win.addEventListener) {
 		win.addEventListener(
-			'hashchange',
-			function () {
+			"hashchange",
+			() => {
 				const id = location.hash.substring(1);
 				let element = null;
 

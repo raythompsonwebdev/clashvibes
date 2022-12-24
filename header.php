@@ -124,9 +124,9 @@
 			</aside>
 
 
-		</header><!-- #masthead -->
+		</header>
 
-		<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'clashvibes'); ?></button> -->
+		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'clashvibes'); ?></button>
 
 
 		<nav id="cv-mobilenav" class="mobile-navigation">

@@ -4,6 +4,7 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
+
 (function () {
 	const siteNavigation = document.getElementById("site-navigation");
 
@@ -12,13 +13,14 @@
 		return;
 	}
 
+	// eslint-disable-next-line prefer-destructuring
 	const button = siteNavigation.getElementsByTagName("button")[0];
 
 	// Return early if the button don't exist.
 	if (typeof button === "undefined") {
 		return;
 	}
-
+	// eslint-disable-next-line prefer-destructuring
 	const menu = siteNavigation.getElementsByTagName("ul")[0];
 
 	// Hide menu toggle button if menu is empty and return early.
@@ -43,6 +45,7 @@
 	});
 
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
+	// eslint-disable-next-line prefer-destructuring
 	const doc = document.ownerDocument;
 	const win = doc.defaultView || doc.parentWindow;
 
@@ -76,8 +79,11 @@
 
 	/**
 	 * Sets or removes .focus class on an element.
+	 *
+	 * @param  event
 	 */
-	function toggleFocus() {
+	// eslint-disable-next-line func-style
+	function toggleFocus(event) {
 		if (event.type === "focus" || event.type === "blur") {
 			let self = this;
 			// Move up through the ancestors of the current link until we hit .nav-menu.
@@ -86,11 +92,13 @@
 				if (self.tagName.toLowerCase() === "li") {
 					self.classList.toggle("focus");
 				}
+				// eslint-disable-next-line prefer-destructuring
 				self = self.parentNode;
 			}
 		}
 
 		if (event.type === "touchstart") {
+			// eslint-disable-next-line prefer-destructuring
 			const menuItem = this.parentNode;
 			event.preventDefault();
 			for (const link of menuItem.parentNode.children) {

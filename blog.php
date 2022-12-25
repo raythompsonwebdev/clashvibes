@@ -16,11 +16,11 @@
  * @version    GIT: https://github.com/raythompsonwebdev/mannering-music.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
+
 get_header();
 ?>
+
 <?php get_sidebar(); ?>
-
-
 
 <main id="primary" class="site-main">
 

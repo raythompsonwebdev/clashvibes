@@ -20,7 +20,7 @@
 get_header(); ?>
 
 <?php
-the_title('<h2 class="page-title">', '</h2>');
+the_title( '<h2 class="page-title">', '</h2>' );
 ?>
 
 <section id="video-releases-section">
@@ -34,25 +34,36 @@ the_title('<h2 class="page-title">', '</h2>');
 		'post_type'  => 'clash-videos',
 		'post_count' => '20',
 	);
-	$clashvibes_the_query = new WP_Query($clashvibes_args);
+	$clashvibes_the_query = new WP_Query( $clashvibes_args );
 	?>
 
 	<?php
-	if ($clashvibes_the_query->have_posts()) :
-		while ($clashvibes_the_query->have_posts()) :
+	if ( $clashvibes_the_query->have_posts() ) :
+		while ( $clashvibes_the_query->have_posts() ) :
 			$clashvibes_the_query->the_post();
-	?>
+			?>
 
 
 			<figure class="video-releases-item">
-				<?php the_post_thumbnail('thumbnail', array('class' => 'video-thumb')); ?>
+				<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'video-thumb' ) ); ?>
 				<figcaption class=" video-releases-caption">
 					<h1 class="video-releases-header">
-						<?php the_title(); ?>
+						<?php
+						// the_title();
+
+						$thetitle  = get_the_title(); /* or you can use get_the_title() */
+						$getlength = strlen( $thetitle );
+						$thelength = 25;
+						echo substr( $thetitle, 0, $thelength );
+						if ( $getlength > $thelength ) {
+							echo '...';
+						}
+
+						?>
 					</h1>
 
-					<a class="video-releases-btn" href="<?php echo esc_url(get_permalink()); ?>">
-						<?php esc_html_e('View', 'clashvibes'); ?>
+					<a class="video-releases-btn" href="<?php echo esc_url( get_permalink() ); ?>">
+						<?php esc_html_e( 'View', 'clashvibes' ); ?>
 					</a>
 
 
@@ -64,19 +75,19 @@ the_title('<h2 class="page-title">', '</h2>');
 		<?php endwhile; ?>
 	<?php else : ?>
 
-		<article class="video_releases_box">
+		<figure class="video-releases-item">
 
-			<figure class="audio-thumb">
+			<figcaption class=" video-releases-caption">
 
-				<figcaption>
+				<h1 class="video-releases-header">
+					<?php esc_html_e( 'Sorry! No Video clashes to display.', 'clashvibes' ); ?>
+				</h1>
 
-					<p><?php esc_html_e('Sorry! No Video clashes to display.', 'clashvibes'); ?></p>
+			</figcaption>
 
-				</figcaption>
+		</figure>
 
-			</figure>
 
-		</article>
 	<?php endif; ?>
 
 	<?php wp_reset_postdata(); ?>

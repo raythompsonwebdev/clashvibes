@@ -8,6 +8,7 @@ if (toggleSide) {
 		// create menu variables
 		const slideoutSideMenu = document.querySelector("#secondary");
 
+		// eslint-disable-next-line prefer-destructuring
 		const slideoutSideMenuWidth = slideoutSideMenu.offsetWidth;
 
 		// toggle open class

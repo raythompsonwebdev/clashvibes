@@ -21,18 +21,19 @@ get_header(); ?>
 
 <?php
 
-esc_html(the_title('<h2 class="page-title">', ' Page</h2>'));
+esc_html( the_title( '<h2 class="page-title">', ' Page</h2>' ) );
 
-while (have_posts()) :
+while ( have_posts() ) :
 	the_post();
 
-	get_template_part('template-parts/content', 'page');
+	get_template_part( 'template-parts/content', 'page' );
 
-	if (comments_open() || get_comments_number()) :
+	if ( comments_open() || get_comments_number() ) :
 		comments_template();
 	endif;
 
 endwhile;
 ?>
 
-<?php get_footer(); ?>
+<?php
+get_footer();

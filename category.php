@@ -20,7 +20,6 @@ get_header();
 
 <?php get_sidebar(); ?>
 
-<!--<main id="primary" class="site-main">-->
 <main id="primary" class="site-main">
 
 	<?php
@@ -48,7 +47,6 @@ get_header();
 
 			<article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
 
-
 				<header class="entry-header">
 					<?php
 					if (is_singular()) :
@@ -64,11 +62,11 @@ get_header();
 							clashvibes_posted_on();
 
 							?>
-						</div><!-- .entry-meta -->
+						</div>
 					<?php
 					endif;
 					?>
-				</header><!-- .entry-header -->
+				</header>
 
 				<!--featured Image-->
 				<a href="<?php echo esc_url(get_permalink()); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
@@ -88,7 +86,6 @@ get_header();
 					<?php endif; ?>
 
 				</a>
-				<!--featured Image end-->
 
 				<div class="entry-content">
 					<?php
@@ -96,22 +93,19 @@ get_header();
 
 					?>
 
-				</div><!-- .entry-content -->
+				</div>
 
 
 				<?php if (get_edit_post_link()) : ?>
 					<footer class="entry-footer">
 						<?php clashvibes_entry_footer(); ?>
-					</footer><!-- .entry-footer -->
+					</footer>
 				<?php endif; ?>
 
 			</article>
 
-		<?php
-		endwhile;
-	else :
-		?>
-
+		<?php endwhile; ?>
+	<?php else :	?>
 		<?php get_template_part('template-part/content', 'none'); ?>
 
 	<?php endif; ?>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * *PHP version 5
  *
@@ -21,10 +22,10 @@
 	<div>
 		<label>
 			<span class="screen-reader-text">
-				<?php echo esc_html( 'Search', 'label', 'clashvibes' ); ?>
+				<?php echo esc_html__( 'Search', 'label', 'clashvibes' ); ?>
 			</span>
 
-			<input type="search" class="search-field" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr( 'Search', 'label', 'clashvibes' ); ?>" />
+			<input type="search" class="search-field" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr__( 'Search', 'label', 'clashvibes' ); ?>" />
 		</label>
 
 		<input type="submit" class="search-submit" value="Find" />

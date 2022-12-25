@@ -1,7 +1,14 @@
 {
 	"extends": [
-			"plugin:@wordpress/eslint-plugin/esnext"
+			"plugin:@wordpress/eslint-plugin/esnext",
+			"airbnb",
+			"plugin:prettier/recommended",
+			"plugin:jsx-a11y/recommended"
 	],
+  "plugins": [
+    "prettier",
+		"jsx-a11y"
+  ],
 	"env": {
 			"browser": true,
 			"commonjs":true,
@@ -18,14 +25,14 @@
 		"SharedArrayBuffer": "readonly"
 		},
 	"rules": {
-				"strict" : ["error","global"],
+		"prettier/prettier": "error",
+		"strict" : ["error","global"],
 		"prefer-destructuring":["error",{"array":true, "object":true},{"enforceForRenamedProperties":true}],
 		"new-cap": "error",
 		"no-invalid-this": "off",
 		"prefer-const":"error",
 		"func-style":["error", "expression"],
 		"no-new-func":"error",
-		"prettier/prettier": "error",
 		"no-unused-vars": "warn",
 		"no-console": "warn",
 		"func-names": "off",
@@ -49,7 +56,10 @@
 			"anonymous": "always",
 			"named": "always",
 			"asyncArrow": "always"
-	}]
-
+			}
+		],
+		"eslint wrap-iife": ["error", "any"],
+		"quotes": ["error", "double"],
+		"jsx-a11y/label-has-for": 0
 	}
 }

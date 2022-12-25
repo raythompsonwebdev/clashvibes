@@ -11,8 +11,6 @@
 get_header();
 ?>
 
-
-
 <section class="error-404 not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'clashvibes'); ?></h1>
@@ -42,7 +40,7 @@ get_header();
 				);
 				?>
 			</ul>
-		</div><!-- .widget -->
+		</div>
 
 		<?php
 		/* translators: %1$s: smiley */

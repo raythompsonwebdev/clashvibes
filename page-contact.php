@@ -23,7 +23,7 @@ get_header();
 
 <h2><?php the_title(); ?> Page</h2>
 <div id="contactform">
-	<?php the_content() ?>
+	<?php the_content(); ?>
 </div>
 <?php
 get_footer();

@@ -12,7 +12,6 @@
 
 ?>
 
-
 </div>
 
 <footer id="colophon" class="site-footer">
@@ -26,9 +25,7 @@
 	);
 	?>
 
-	<ul id="footer-content">
-
-	</ul>
+	<ul id="footer-content"></ul>
 
 	<ul id="social-media-box">
 

@@ -13,23 +13,23 @@ get_header();
 
 <main id="primary" class="site-main">
 
-	<?php if (have_posts()) : ?>
+	<?php if ( have_posts() ) : ?>
 
 		<header class="page-header">
 			<h2 class="page-title">
 				<?php
 				/* translators: %s: search query. */
-				printf(esc_html__('Search Results for: %s', 'clashvibes'), '<span>' . get_search_query() . '</span>');
+				printf( esc_html__( 'Search Results for: %s', 'clashvibes' ), '<span>' . get_search_query() . '</span>' );
 				?>
 			</h2>
 		</header>
 
-	<?php
+		<?php
 
-		while (have_posts()) :
+		while ( have_posts() ) :
 			the_post();
 
-			get_template_part('template-parts/content', 'search');
+			get_template_part( 'template-parts/content', 'search' );
 
 		endwhile;
 
@@ -37,7 +37,7 @@ get_header();
 
 	else :
 
-		get_template_part('template-parts/content', 'none');
+		get_template_part( 'template-parts/content', 'none' );
 
 	endif;
 	?>

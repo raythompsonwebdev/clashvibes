@@ -36,8 +36,8 @@ $text-shadow: 1px 1px 1px $black;
 	z-index: 100;
 	height: auto;
 	display: flex;
-	width: 25%;
-	left: calc(74% - 1%);
+	width: 40%;
+	left: calc(58% - 1%);
 	transition: $clash-transition;
 }
 
@@ -51,7 +51,7 @@ $text-shadow: 1px 1px 1px $black;
 	outline: none;
 	text-align: center;
 	transition: $clash-transition;
-	font-size: 0.85em;
+	font-size: 0.8em;
 	display: block;
 
 	&:hover {
@@ -63,7 +63,7 @@ $text-shadow: 1px 1px 1px $black;
 }
 
 #tog-menu.hide {
-	left: 100vw;
+	left: 105vw;
 }
 
 .screen-reader-text {
@@ -103,9 +103,9 @@ $text-shadow: 1px 1px 1px $black;
 
 /* page container */
 #page {
-	width: 88%;
-	margin-right: auto;
-	margin-left: auto;
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
 	height: auto;
 	font-family: $font-main;
 	background-color: $white;
@@ -130,7 +130,7 @@ $text-shadow: 1px 1px 1px $black;
 }
 
 .site-branding {
-	width: 74%;
+	width: 100%;
 	flex: 0 0 auto;
 	display: flex;
 }
@@ -183,7 +183,7 @@ $text-shadow: 1px 1px 1px $black;
 
 /* logo */
 #clashvibes-title {
-	width: 88%;
+	width: 84%;
 	display: flex;
 	flex-flow: column;
 	flex: 0 0 auto;
@@ -193,7 +193,7 @@ $text-shadow: 1px 1px 1px $black;
 	color: $green;
 	margin: 0;
 	padding: 0;
-	font-size: 2.2em;
+	font-size: 1.7em;
 	line-height: 35px;
 	height: 35px;
 	text-indent: 0.1em;
@@ -364,10 +364,9 @@ $text-shadow: 1px 1px 1px $black;
 /* --- Right Side content--- */
 #primary {
 	background-color: $yellow;
-	float: right;
-	padding: 1%;
-	display: block;
-	width: 76%;
+	width: 100%;
+	float: none;
+	padding: 0.25em;
 
 	h1 {
 		height: 45px;
@@ -388,6 +387,7 @@ $text-shadow: 1px 1px 1px $black;
 	margin: 0;
 	display: block;
 	line-height: 50px;
+	font-size: 1.05em;
 }
 
 /* pages,blogs, custom posts */
@@ -418,12 +418,14 @@ $text-shadow: 1px 1px 1px $black;
 			width: 100%;
 			background-color: $black;
 			color: $grey-white;
-			font-size: 1.5em;
+			text-indent: 0;
 			text-align: center;
-			line-height: 45px;
+			font-size: 1em;
+			line-height: 35px;
 
 			a {
 				color: $white;
+				display: block;
 			}
 		}
 
@@ -449,7 +451,7 @@ $text-shadow: 1px 1px 1px $black;
 				width: 100%;
 				height: auto;
 				display: grid;
-				grid-template: 25px 25px 25px 25px / 15% 2fr;
+				grid-template: 20px 20px 20px 20px / 20% 2fr;
 				gap: 2px 2px;
 				grid-template-areas:
 					"Image posted-on"
@@ -482,11 +484,11 @@ $text-shadow: 1px 1px 1px $black;
 				.posted-on,
 				.byline,
 				.updated-on {
-					font-size: 0.75em;
+					font-size: 0.7em;
 					text-indent: 0.5em;
 					width: 100%;
-					height: 25px;
-					line-height: 25px;
+					height: 20px;
+					line-height: 20px;
 					background-color: $dark-green;
 					border-bottom: 1px solid $white;
 					color: $white;
@@ -607,6 +609,8 @@ $text-shadow: 1px 1px 1px $black;
 		display: inline-block;
 		width: 100%;
 		height: 35px;
+		line-height: 35px;
+		font-size: 0.8em;
 	}
 	a[rel="tag"],
 	a[rel^="category"] {
@@ -637,6 +641,9 @@ $text-shadow: 1px 1px 1px $black;
 		width: 98%;
 		display: block;
 		margin: 0.5em auto;
+		ul {
+			margin: 0;
+		}
 	}
 	.vsel-content {
 		clear: both;
@@ -649,13 +656,14 @@ $text-shadow: 1px 1px 1px $black;
 
 	.read-more {
 		display: block;
-		width: 40%;
+		width: 90%;
 		height: auto;
-		line-height: 30px;
+		line-height: 35px;
 		margin: 1em auto;
 		color: $white2;
 		text-align: center;
 		background-color: $black;
+		font-size: 0.85em;
 		&:hover {
 			background-color: $white2;
 			color: $black;
@@ -687,21 +695,22 @@ $text-shadow: 1px 1px 1px $black;
 				color: $black;
 				text-indent: 0;
 				margin-bottom: 0.25em;
-				font-size: 0.9em;
+				font-size: 0.75em;
+				height: auto;
 
 				.post-meta-key {
-					width: 20%;
-					display: inline-block;
+					width: 100%;
+					display: block;
 					height: 40px;
 					line-height: 40px;
-					text-indent: 0.5em;
+					text-indent: 0.2em;
 					background-color: $dark-green;
 					color: $white;
 				}
 
 				p {
-					width: 79%;
-					display: inline-block;
+					width: 100%;
+					display: block;
 					margin: 0;
 					padding: 0;
 					text-indent: 0.2em;
@@ -812,7 +821,7 @@ $text-shadow: 1px 1px 1px $black;
 			width: 100%;
 			height: 100%;
 			a {
-				font-size: 0.9em;
+				font-size: 0.75em;
 				width: 100%;
 				display: inline-block;
 				color: $white;
@@ -1419,22 +1428,22 @@ p {
 #audio-releases-section {
 	padding: 0;
 	width: 100%;
-	margin: 0 0 0.5em;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: stretch;
 	height: auto;
+	gap: 0.5em;
 }
 
 .new-releases-item,
 .video-releases-item,
 .audio-releases-item {
 	flex: 0 1 auto;
-	width: 19.2%;
+	width: 80%;
 	height: auto;
 	padding: 0.5em 0;
-	margin: 0.2em;
+	margin: 0;
 	background-color: $white2;
 }
 
@@ -1473,8 +1482,9 @@ p {
 	line-height: 35px;
 	margin: 0.5em auto;
 	padding: 0;
-	width: 96%;
+	width: 100%;
 	text-transform: capitalize;
+	text-indent: 0;
 }
 
 .video-releases-btn,
@@ -1536,17 +1546,15 @@ p {
 #top-audio-clashes,
 #top-video-clashes {
 	margin: 0;
-	width: 48%;
-	padding: 0.5em;
+	width: 98%;
+	padding: 0.25em;
 	background-color: $white;
 	color: $black;
-	float: left;
-	display: block;
 	flex: 1 0 auto;
 }
 
 .top-clashes-title {
-	font-size: 1.5em;
+	font-size: 1em;
 	height: 45px;
 	line-height: 45px;
 	clear: both;
@@ -1592,12 +1600,12 @@ p {
 
 	.top-clash-name {
 		flex: 0 1 auto;
-		text-indent: 0.5em;
+		text-indent: 0.2em;
 		width: 79%;
 		color: $black;
 		height: 100%;
 		line-height: 45px;
-		font-size: 0.85em;
+		font-size: 0.7em;
 		display: block;
 		font-weight: normal;
 		float: left;
@@ -1607,7 +1615,7 @@ p {
 		flex: 0 1 auto;
 		height: auto;
 		width: 15%;
-		font-size: 0.95em;
+		font-size: 0.65em;
 		line-height: 45px;
 		padding: 0;
 		background-color: $black;
@@ -1630,7 +1638,7 @@ p {
 
 #secondary {
 	width: 250px;
-	position: fixed;
+	position: absolute;
 	left: -250px;
 	height: auto;
 	z-index: 3;
@@ -1924,7 +1932,7 @@ p {
 	margin: 0;
 	padding: 0;
 	float: left;
-	width: 12%;
+	width: 25%;
 	display: block;
 
 	.menu-item {
@@ -1951,7 +1959,7 @@ p {
 }
 
 #footer-content {
-	width: 79%;
+	width: 70%;
 	display: inline-block;
 	list-style: none;
 	margin: 0;
@@ -1976,7 +1984,7 @@ p {
 	margin: 0;
 	padding: 0;
 	float: right;
-	width: 5%;
+	width: 10%;
 	display: block;
 
 	li {
@@ -2128,10 +2136,7 @@ p {
 	}
 
 	#socialmediatop {
-		width: 25%;
 		display: flex;
-		height: 40px;
-		flex: 1 0 auto;
 	}
 	.social-icon {
 		flex: 1 0 auto;
@@ -2244,6 +2249,7 @@ p {
 	#primary {
 		float: right;
 		display: block;
+		float: right;
 		width: 78%;
 
 		h1 {
@@ -2256,7 +2262,7 @@ p {
 	.archive-title {
 		display: block;
 		line-height: 50px;
-		font-size: 1.3em;
+		font-size: 1.1em;
 	}
 
 	.event,
@@ -2280,7 +2286,7 @@ p {
 			display: block;
 
 			.entry-title {
-				font-size: 1.5em;
+				font-size: 1.2em;
 				line-height: 45px;
 
 				a {
@@ -2437,6 +2443,7 @@ p {
 		.comments-link {
 			display: inline-block;
 			height: 35px;
+			font-size: 1em;
 		}
 		a[rel="tag"],
 		a[rel^="category"] {
@@ -2471,10 +2478,8 @@ p {
 		}
 
 		.read-more {
-			display: block;
 			width: 40%;
-			line-height: 30px;
-			margin: 1em auto;
+			line-height: 40px;
 			&:hover {
 				background-color: $white2;
 				color: $black;
@@ -3008,15 +3013,13 @@ p {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: flex-start;
+		justify-content: space-between;
+		align-items: stretch;
 		height: auto;
 	}
 	.new-releases-item,
 	.video-releases-item,
 	.audio-releases-item {
-		flex: 0 1 auto;
 		width: 19.2%;
 		height: auto;
 	}
@@ -3041,7 +3044,6 @@ p {
 	.new-releases-header {
 		font-size: 0.9em;
 		line-height: 35px;
-		width: 80%;
 	}
 	.video-releases-btn,
 	.audio-releases-btn,
@@ -3079,12 +3081,10 @@ p {
 	#top-audio-clashes,
 	#top-video-clashes {
 		width: 48%;
-		float: left;
-		display: block;
 		flex: 1 0 auto;
 	}
 	.top-clashes-title {
-		font-size: 1.5em;
+		font-size: 1.25em;
 		height: 45px;
 		line-height: 45px;
 	}
@@ -3363,7 +3363,7 @@ p {
 		display: none;
 	}
 	#page {
-		width: 88%;
+		width: 90%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -3386,7 +3386,7 @@ p {
 	}
 
 	#socialmediatop {
-		width: 25%;
+		display: flex;
 	}
 	.social-icon {
 		width: 23.5%;
@@ -3427,6 +3427,8 @@ p {
 	}
 	#primary {
 		width: 78%;
+		padding: 0.5em;
+		float: right;
 
 		h1 {
 			font-size: 1.4em;
@@ -3440,6 +3442,10 @@ p {
 			}
 		}
 	}
+
+	.archive-title {
+		font-size: 1.15em;
+	}
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -3452,7 +3458,8 @@ p {
 			display: block;
 
 			.entry-title {
-				font-size: 1.4em;
+				font-size: 1.15em;
+				line-height: 45px;
 
 				a {
 					color: $white;
@@ -3463,6 +3470,11 @@ p {
 				display: block;
 				.meta-content {
 					grid-template-columns: 10% 2fr;
+					grid-template-areas:
+						"Image posted-on"
+						"Image byline"
+						"Image comments-link"
+						"Image updated-on";
 
 					.parent-post-link,
 					.full-size-link,
@@ -3523,6 +3535,7 @@ p {
 		.cat-links,
 		.comments-link {
 			height: 35px;
+			font-size: 0.9em;
 		}
 		.screen-reader-text {
 			width: auto;
@@ -3548,21 +3561,24 @@ p {
 
 		.read-more {
 			width: 50%;
+			line-height: 40px;
 		}
 
 		.speaker-meta {
 			.post-meta {
-				height: 100%;
+				display: block;
 
 				li {
 					font-size: 0.9em;
 
 					.post-meta-key {
 						width: 20%;
+						display: inline-block;
 					}
 
 					p {
 						width: 79%;
+						display: inline-block;
 					}
 				}
 			}
@@ -3932,7 +3948,8 @@ p {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		padding: 0;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -3991,9 +4008,10 @@ p {
 	#top-audio-clashes,
 	#top-video-clashes {
 		padding: 0.5em;
+		width: 48%;
 	}
 	.top-clashes-title {
-		font-size: 1.2em;
+		font-size: 1.15em;
 		margin-bottom: 0.25em;
 	}
 
@@ -4140,6 +4158,7 @@ p {
 	}
 
 	#footer-content {
+		width: 79%;
 		li {
 			font-size: 0.85em;
 
@@ -4183,7 +4202,7 @@ p {
 		display: none;
 	}
 	#page {
-		width: 92%;
+		width: 94%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -4222,7 +4241,7 @@ p {
 	}
 
 	#socialmediatop {
-		width: 25%;
+		display: flex;
 	}
 	.social-icon {
 		width: 23.5%;
@@ -4270,8 +4289,9 @@ p {
 		}
 	}
 	#primary {
-		padding: 1%;
+		padding: 0.5em;
 		width: 76%; // global post
+		float: right;
 
 		h1 {
 			font-size: 1.2em;
@@ -4285,6 +4305,9 @@ p {
 			}
 		}
 	}
+	.archive-title {
+		font-size: 1.15em;
+	}
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -4297,7 +4320,8 @@ p {
 			display: block;
 
 			.entry-title {
-				font-size: 1.1em;
+				font-size: 1.15em;
+				line-height: 40px;
 
 				a {
 					color: $white;
@@ -4309,6 +4333,11 @@ p {
 				.meta-content {
 					width: 100%;
 					grid-template-columns: 11% 2fr;
+					grid-template-areas:
+						"Image posted-on"
+						"Image byline"
+						"Image comments-link"
+						"Image updated-on";
 
 					.parent-post-link,
 					.full-size-link,
@@ -4368,6 +4397,7 @@ p {
 		.cat-links,
 		.comments-link {
 			height: 35px;
+			font-size: 0.85em;
 		}
 		a[rel="tag"],
 		a[rel^="category"] {
@@ -4389,24 +4419,27 @@ p {
 		}
 
 		.read-more {
-			width: 60%;
+			width: 55%;
+			line-height: 40px;
 		}
 
 		.speaker-meta {
 			height: auto;
 
 			.post-meta {
-				height: 100%;
+				display: block;
 
 				li {
 					font-size: 0.85em;
 
 					.post-meta-key {
 						width: 20%;
+						display: inline-block;
 					}
 
 					p {
 						width: 77%;
+						display: inline-block;
 					}
 				}
 			}
@@ -4814,7 +4847,8 @@ p {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		margin: 0 0 0.5em;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -4870,6 +4904,7 @@ p {
 	#top-audio-clashes,
 	#top-video-clashes {
 		padding: 0.5em;
+		width: 48%;
 	}
 	.top-clashes-title {
 		font-size: 1.1em;
@@ -5059,7 +5094,7 @@ p {
 		display: none;
 	}
 	#page {
-		width: 94%;
+		width: 96%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -5097,7 +5132,7 @@ p {
 	}
 
 	#socialmediatop {
-		width: 25%;
+		display: flex;
 	}
 	.social-icon {
 		width: 23.5%;
@@ -5142,8 +5177,9 @@ p {
 	}
 
 	#primary {
-		padding: 1%;
+		padding: 0.5em;
 		width: 76%; // global pattern
+		float: right;
 
 		h1 {
 			font-size: 1.2em;
@@ -5157,6 +5193,9 @@ p {
 			}
 		}
 	}
+	.archive-title {
+		font-size: 1.1em;
+	}
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -5169,7 +5208,8 @@ p {
 			display: block;
 
 			.entry-title {
-				font-size: 1.3em;
+				font-size: 1.15em;
+				line-height: 45px;
 
 				a {
 					color: $white;
@@ -5181,6 +5221,11 @@ p {
 
 				.meta-content {
 					grid-template-columns: 13% 2fr;
+					grid-template-areas:
+						"Image posted-on"
+						"Image byline"
+						"Image comments-link"
+						"Image updated-on";
 
 					.parent-post-link,
 					.full-size-link,
@@ -5241,6 +5286,7 @@ p {
 		.cat-links,
 		.comments-link {
 			height: 35px;
+			font-size: 0.85em;
 		}
 		a[rel="tag"],
 		a[rel^="category"] {
@@ -5262,21 +5308,24 @@ p {
 
 		.read-more {
 			width: 60%;
+			line-height: 40px;
 		}
 
 		.speaker-meta {
 			.post-meta {
-				height: 100%;
+				display: block;
 
 				li {
 					font-size: 0.8em;
 
 					.post-meta-key {
-						width: 23%;
+						width: 25%;
+						display: inline-block;
 					}
 
 					p {
-						width: 76%;
+						width: 74%;
+						display: inline-block;
 					}
 				}
 			}
@@ -5645,7 +5694,8 @@ p {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		margin: 0 0 0.5em;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -5658,7 +5708,7 @@ p {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -5704,7 +5754,7 @@ p {
 		padding: 0.25em;
 	}
 	.top-clashes-title {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 
 	.top-clash-item {
@@ -5723,7 +5773,7 @@ p {
 		}
 
 		.top-clash-name {
-			font-size: 0.75em;
+			font-size: 0.7em;
 		}
 
 		.top-clash-link {
@@ -5844,6 +5894,7 @@ p {
 	}
 
 	#footer-content {
+		width: 79%;
 		li {
 			font-size: 0.8em;
 
@@ -5887,7 +5938,7 @@ p {
 		display: none;
 	}
 	#page {
-		width: 94%;
+		width: 96%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -5914,7 +5965,7 @@ p {
 	}
 
 	#socialmediatop {
-		width: 25%;
+		display: none;
 	}
 	.social-icon {
 		width: 23.5%;
@@ -5955,6 +6006,8 @@ p {
 
 	#primary {
 		width: 76%;
+		float: right;
+		padding: 0.5em;
 
 		h1 {
 			font-size: 1.2em;
@@ -5968,6 +6021,9 @@ p {
 			}
 		}
 	}
+	.archive-title {
+		font-size: 1.1em;
+	}
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -5980,7 +6036,8 @@ p {
 			display: block;
 
 			.entry-title {
-				font-size: 1.1em;
+				font-size: 1.15em;
+				line-height: 45px;
 
 				a {
 					color: $white;
@@ -5992,6 +6049,11 @@ p {
 
 				.meta-content {
 					grid-template-columns: 16% 2fr;
+					grid-template-areas:
+						"Image posted-on"
+						"Image byline"
+						"Image comments-link"
+						"Image updated-on";
 
 					.parent-post-link,
 					.full-size-link,
@@ -6052,6 +6114,7 @@ p {
 		.cat-links,
 		.comments-link {
 			height: 35px;
+			font-size: 0.8em;
 		}
 		a[rel="tag"],
 		a[rel^="category"] {
@@ -6073,17 +6136,18 @@ p {
 			width: 98%;
 		}
 		.read-more {
-			width: 70%;
+			width: 90%;
 			font-size: 0.9em;
+			line-height: 40px;
 		}
 		.speaker-meta {
 			height: auto;
 
 			.post-meta {
-				height: 100%;
+				display: block;
 
 				li {
-					font-size: 0.75em;
+					font-size: 0.9em;
 					height: auto;
 
 					.post-meta-key {
@@ -6093,6 +6157,7 @@ p {
 
 					p {
 						width: 100%;
+						display: block;
 					}
 				}
 			}
@@ -6454,7 +6519,8 @@ p {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		margin-bottom: 0.5em;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -6466,7 +6532,7 @@ p {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -6512,9 +6578,10 @@ p {
 	#top-audio-clashes,
 	#top-video-clashes {
 		width: 98%;
+		padding: 0.25em;
 	}
 	.top-clashes-title {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 
 	.top-clash-item {
@@ -6533,12 +6600,14 @@ p {
 		}
 
 		.top-clash-name {
-			width: 77%;
+			width: 78%;
 			text-indent: 0.25em;
+			font-size: 0.85em;
 		}
 
 		.top-clash-link {
 			width: 15%;
+			font-size: 0.9em;
 
 			&:hover {
 				letter-spacing: 0.055em;
@@ -6722,10 +6791,10 @@ p {
 		}
 	}
 	#tog-menu.hide {
-		left: 100vw;
+		left: 110vw;
 	}
 	#page {
-		width: 96%;
+		width: 98%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -6816,7 +6885,7 @@ p {
 
 	#secondary {
 		width: 250px;
-		position: fixed;
+		position: absolute;
 		left: -250px;
 		height: auto;
 		z-index: 3;
@@ -6896,6 +6965,7 @@ p {
 	#primary {
 		width: 100%;
 		float: none;
+		padding: 0.25em;
 		h1 {
 			font-size: 1.3em;
 			text-align: center;
@@ -6912,7 +6982,9 @@ p {
 			}
 		}
 	}
-
+	.archive-title {
+		font-size: 1.1em;
+	}
 	/* blog */
 	.event,
 	.clash-videos,
@@ -6926,8 +6998,9 @@ p {
 			height: auto;
 
 			.entry-title {
-				text-indent: 0;
 				text-align: center;
+				font-size: 1.1em;
+				line-height: 40px;
 
 				a {
 					color: $white;
@@ -6939,6 +7012,11 @@ p {
 
 				.meta-content {
 					grid-template-columns: 15% 2fr;
+					grid-template-areas:
+						"Image posted-on"
+						"Image byline"
+						"Image comments-link"
+						"Image updated-on";
 
 					.parent-post-link,
 					.full-size-link,
@@ -6994,24 +7072,26 @@ p {
 			width: 98%;
 		}
 		.read-more {
-			width: 80%;
-			font-size: 0.8em;
+			width: 90%;
+			font-size: 0.85em;
+			line-height: 35px;
 		}
 
 		.speaker-meta {
 			.post-meta {
-				letter-spacing: 0.05em;
+				display: block;
 
 				li {
 					font-size: 0.9em;
-
+					height: auto;
 					.post-meta-key {
 						display: block;
+						width: 100%;
 					}
 
 					p {
 						width: 100%;
-						font-size: 0.9em;
+						display: block;
 					}
 				}
 			}
@@ -7378,6 +7458,8 @@ p {
 	#video-releases-section,
 	#audio-releases-section {
 		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -7388,7 +7470,7 @@ p {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -7417,8 +7499,7 @@ p {
 	#top-audio-clashes,
 	#top-video-clashes {
 		width: 98%;
-		padding: 0.5em;
-		display: block;
+		padding: 0.25em;
 	}
 	.top-clashes-title {
 		font-size: 1em;
@@ -7437,11 +7518,12 @@ p {
 		}
 
 		.top-clash-name {
-			font-size: 0.7em;
+			width: 78%;
+			font-size: 0.85em;
 		}
 
 		.top-clash-link {
-			font-size: 0.8em;
+			font-size: 0.85em;
 			letter-spacing: 0.05em;
 
 			&:hover {
@@ -7469,6 +7551,7 @@ p {
 	}
 
 	#footer-content {
+		width: 79%;
 		li {
 			a {
 				text-align: center;
@@ -7477,7 +7560,7 @@ p {
 	}
 
 	#social-media-box {
-		width: 8%;
+		width: 9%;
 
 		li {
 			height: 50px;
@@ -7519,7 +7602,7 @@ p {
 	}
 
 	#page {
-		width: 96%;
+		width: 98%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -7558,7 +7641,7 @@ p {
 	}
 
 	#cv-mobilenav {
-		position: fixed;
+		width: 100%;
 	}
 	#menu-mobile {
 		list-style: none;
@@ -7593,7 +7676,13 @@ p {
 	}
 
 	#secondary {
-		position: fixed;
+		width: 250px;
+		position: absolute;
+		left: -250px;
+		height: auto;
+		z-index: 3;
+		top: 0.25em;
+		float: none;
 	}
 	#secondary-header {
 		position: relative;
@@ -7662,6 +7751,8 @@ p {
 
 	#primary {
 		width: 100%;
+		float: none;
+		padding: 0.25em;
 
 		h1 {
 			font-size: 1.3em;
@@ -7677,6 +7768,9 @@ p {
 			}
 		}
 	}
+	.archive-title {
+		font-size: 1.1em;
+	}
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -7689,6 +7783,9 @@ p {
 			height: auto;
 
 			.entry-title {
+				text-align: center;
+				font-size: 1.1em;
+				line-height: 40px;
 				a {
 					color: $white;
 				}
@@ -7697,7 +7794,12 @@ p {
 			.entry-meta {
 				display: block;
 				.meta-content {
-					grid-template-columns: 17% 2fr;
+					grid-template-columns: 20px 20px 20px 20px / 17% 2fr;
+					grid-template-areas:
+						"Image posted-on"
+						"Image byline"
+						"Image comments-link"
+						"Image updated-on";
 
 					.parent-post-link,
 					.full-size-link,
@@ -7706,6 +7808,7 @@ p {
 					.byline,
 					.updated-on {
 						font-size: 0.75em;
+						line-height: 20px;
 					}
 				}
 			}
@@ -7757,17 +7860,19 @@ p {
 
 		.speaker-meta {
 			.post-meta {
-				letter-spacing: 0.05em;
+				display: block;
 
 				li {
 					font-size: 0.9em;
-
+					height: auto;
 					.post-meta-key {
 						display: block;
+						width: 100%;
 					}
 
 					p {
 						width: 100%;
+						display: block;
 					}
 				}
 			}
@@ -8136,6 +8241,8 @@ p {
 	#video-releases-section,
 	#audio-releases-section {
 		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -8146,7 +8253,7 @@ p {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -8173,7 +8280,8 @@ p {
 	}
 	#top-audio-clashes,
 	#top-video-clashes {
-		padding: 0.5em;
+		width: 98%;
+		padding: 0.25em;
 	}
 	.top-clashes-title {
 		font-size: 1em;
@@ -8192,11 +8300,12 @@ p {
 		}
 
 		.top-clash-name {
-			font-size: 0.75em;
+			width: 78%;
+			font-size: 0.8em;
 		}
 
 		.top-clash-link {
-			font-size: 0.75em;
+			font-size: 0.85em;
 
 			&:hover {
 				letter-spacing: 0.05em;
@@ -8260,8 +8369,8 @@ p {
 }
 @media only screen and (min-width: 481px) and (max-width: 536px) {
 	#tog-menu {
-		width: 25%;
-		left: calc(74% - 1%);
+		width: 30%;
+		left: calc(68% - 1%);
 		display: flex;
 	}
 	#toggle-nav,
@@ -8321,7 +8430,7 @@ p {
 	}
 
 	#cv-mobilenav {
-		width: 23.5%;
+		width: 100%;
 	}
 	#menu-mobile {
 		list-style: none;
@@ -8355,7 +8464,13 @@ p {
 	}
 
 	#secondary {
-		margin: 0;
+		width: 250px;
+		position: absolute;
+		left: -250px;
+		height: auto;
+		z-index: 3;
+		top: 0.25em;
+		float: none;
 	}
 	#secondary-header {
 		position: relative;
@@ -8424,6 +8539,8 @@ p {
 
 	#primary {
 		width: 100%;
+		float: none;
+		padding: 0.25em;
 
 		h1 {
 			font-size: 1.2em;
@@ -8437,7 +8554,9 @@ p {
 			}
 		}
 	}
-
+	.archive-title {
+		font-size: 1.1em;
+	}
 	/* blog */
 	.event,
 	.clash-videos,
@@ -8451,7 +8570,9 @@ p {
 			height: auto;
 
 			.entry-title {
-				font-size: 0.9em;
+				text-align: center;
+				font-size: 1.1em;
+				line-height: 40px;
 
 				a {
 					color: $white;
@@ -8463,6 +8584,11 @@ p {
 
 				.meta-content {
 					grid-template: 20px 20px 20px 20px / 16% 2fr;
+					grid-template-areas:
+						"Image posted-on"
+						"Image byline"
+						"Image comments-link"
+						"Image updated-on";
 
 					.parent-post-link,
 					.full-size-link,
@@ -8519,18 +8645,20 @@ p {
 
 		.speaker-meta {
 			.post-meta {
-				letter-spacing: 0.05em;
+				display: block;
 
 				li {
 					font-size: 0.85em;
-
+					height: auto;
 					.post-meta-key {
 						text-indent: 0.25em;
 						display: block;
+						width: 100%;
 					}
 
 					p {
 						width: 100%;
+						display: block;
 					}
 				}
 			}
@@ -8905,17 +9033,19 @@ p {
 	#video-releases-section,
 	#audio-releases-section {
 		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
 	.audio-releases-item {
-		width: 48%;
+		width: 46%;
 	}
 	.audio-thumb,
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -8942,10 +9072,12 @@ p {
 	}
 	#top-audio-clashes,
 	#top-video-clashes {
+		width: 98%;
+		padding: 0.25em;
 		margin: 0.15em;
 	}
 	.top-clashes-title {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 
 	.top-clash-item {
@@ -8961,11 +9093,12 @@ p {
 		}
 
 		.top-clash-name {
-			font-size: 0.7em;
+			width: 78%;
+			font-size: 0.8em;
 		}
 
 		.top-clash-link {
-			font-size: 0.8em;
+			font-size: 0.85em;
 
 			&:hover {
 				letter-spacing: 0.05em;
@@ -8991,7 +9124,7 @@ p {
 	}
 
 	#footer-content {
-		width: 70%;
+		width: 65%;
 
 		li {
 			text-indent: 0;
@@ -9003,7 +9136,7 @@ p {
 	}
 
 	#social-media-box {
-		width: 10%;
+		width: 11%;
 
 		li {
 			width: 100%;
@@ -9031,9 +9164,8 @@ p {
 /* mobile */
 @media only screen and (min-width: 415px) and (max-width: 480px) {
 	#tog-menu {
-		width: 25%;
-		left: calc(78% - 1%);
-		font-size: 0.85em;
+		width: 30%;
+		left: calc(65% - 1%);
 		display: flex;
 	}
 	#toggle-nav,
@@ -9042,6 +9174,7 @@ p {
 		display: block;
 		width: 50%;
 		line-height: 50px;
+		font-size: 0.85em;
 		&:hover {
 			text-align: center;
 		}
@@ -9084,7 +9217,7 @@ p {
 		width: 85%;
 	}
 	.site-title {
-		font-size: 2em;
+		font-size: 1.9em;
 		line-height: 30px;
 		height: 30px;
 	}
@@ -9094,7 +9227,7 @@ p {
 	}
 
 	#cv-mobilenav {
-		width: 23.5%;
+		width: 100%;
 	}
 	#menu-mobile {
 		list-style: none;
@@ -9126,7 +9259,13 @@ p {
 	}
 
 	#secondary {
-		margin: 0;
+		width: 250px;
+		position: absolute;
+		left: -250px;
+		height: auto;
+		z-index: 3;
+		top: 0.25em;
+		float: none;
 	}
 	#secondary-header {
 		position: relative;
@@ -9197,6 +9336,8 @@ p {
 
 	#primary {
 		width: 100%;
+		float: none;
+		padding: 0.25em;
 
 		h1 {
 			font-size: 1.1em;
@@ -9210,6 +9351,9 @@ p {
 			}
 		}
 	}
+	.archive-title {
+		font-size: 1.1em;
+	}
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -9222,8 +9366,9 @@ p {
 			height: auto;
 
 			.entry-title {
-				font-size: 0.9em;
-				height: auto;
+				text-align: center;
+				font-size: 1.1em;
+				line-height: 35px;
 
 				a {
 					color: $white;
@@ -9282,18 +9427,18 @@ p {
 
 		.read-more {
 			width: 90%;
-			font-size: 0.75em;
+			font-size: 0.85em;
+			line-height: 35px;
 		}
 
 		.speaker-meta {
 			min-height: 335px;
 
 			.post-meta {
-				letter-spacing: 0.05em;
 				height: auto;
 
 				li {
-					font-size: 0.75em;
+					font-size: 0.85em;
 					height: auto;
 
 					.post-meta-key {
@@ -9303,10 +9448,8 @@ p {
 				}
 
 				p {
-					width: 97%;
+					width: 100%;
 					display: block;
-					line-height: 20px;
-					padding: 1em 0.5em;
 				}
 			}
 		}
@@ -9368,17 +9511,19 @@ p {
 	#video-releases-section,
 	#audio-releases-section {
 		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
 	.audio-releases-item {
-		width: 48%;
+		width: 46%;
 	}
 	.audio-thumb,
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -9390,7 +9535,6 @@ p {
 	.new-releases-header {
 		font-size: 0.75em;
 		line-height: 35px;
-		text-indent: 0;
 	}
 
 	.video-releases-btn,
@@ -9406,10 +9550,12 @@ p {
 	}
 	#top-audio-clashes,
 	#top-video-clashes {
-		width: 95.79%;
+		width: 98%;
+		padding: 0.25em;
+		margin: 0.15em;
 	}
 	.top-clashes-title {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 
 	.top-clash-item {
@@ -9425,11 +9571,12 @@ p {
 		}
 
 		.top-clash-name {
-			font-size: 0.6em;
+			width: 78%;
+			font-size: 0.75em;
 		}
 
 		.top-clash-link {
-			font-size: 0.75em;
+			font-size: 0.8em;
 			letter-spacing: 0.05em;
 
 			&:hover {
@@ -9442,6 +9589,7 @@ p {
 		width: 100%;
 	}
 	#menu-secondary {
+		width: 25%;
 		.menu-item {
 			a {
 				&:hover {
@@ -9452,7 +9600,7 @@ p {
 	}
 
 	#footer-content {
-		height: 100%;
+		height: 60%;
 
 		li {
 			text-indent: 0;
@@ -9465,6 +9613,7 @@ p {
 	}
 
 	#social-media-box {
+		width: 11%;
 		li {
 			height: 50px;
 
@@ -9487,19 +9636,22 @@ p {
 }
 @media only screen and (min-width: 361px) and (max-width: 414px) {
 	#tog-menu {
-		width: 20%;
-		left: calc(80% - 1%);
+		width: 35%;
+		left: calc(65% - 1%);
 		display: flex;
 	}
 	#toggle-nav,
 	.sidebar-toggle {
 		display: block;
-		font-size: 0.85em;
+		font-size: 0.8em;
 		width: 50%;
 		line-height: 50px;
 		&:hover {
 			text-align: center;
 		}
+	}
+	#tog-menu.hide {
+		left: 110vw;
 	}
 	.hide-side {
 		left: 150vw;
@@ -9509,9 +9661,9 @@ p {
 	}
 
 	#page {
-		width: 98%;
-		margin-right: auto;
-		margin-left: auto;
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
 	}
 	#masthead {
 		height: 55px;
@@ -9547,7 +9699,7 @@ p {
 	}
 
 	#cv-mobilenav {
-		width: 23.5%;
+		width: 100%;
 	}
 	#menu-mobile {
 		list-style: none;
@@ -9579,7 +9731,13 @@ p {
 	}
 
 	#secondary {
-		margin: 0;
+		width: 250px;
+		position: absolute;
+		left: -250px;
+		height: auto;
+		z-index: 3;
+		top: 0.25em;
+		float: none;
 	}
 	#secondary-header {
 		position: relative;
@@ -9648,6 +9806,8 @@ p {
 
 	#primary {
 		width: 100%;
+		float: none;
+		padding: 0.25em;
 
 		h1 {
 			font-size: 1.1em;
@@ -9661,6 +9821,9 @@ p {
 			}
 		}
 	}
+	.archive-title {
+		font-size: 1.1em;
+	}
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -9673,7 +9836,9 @@ p {
 			height: auto;
 
 			.entry-title {
-				font-size: 0.8em;
+				text-align: center;
+				font-size: 1em;
+				line-height: 35px;
 
 				a {
 					color: $white;
@@ -9684,7 +9849,12 @@ p {
 				display: block;
 
 				.meta-content {
-					grid-template-columns: 18% 2fr;
+					grid-template-columns: 20px 20px 20px 20px / 18% 2fr;
+					grid-template-areas:
+						"Image posted-on"
+						"Image byline"
+						"Image comments-link"
+						"Image updated-on";
 
 					.parent-post-link,
 					.full-size-link,
@@ -9693,6 +9863,7 @@ p {
 					.byline,
 					.updated-on {
 						font-size: 0.7em;
+						line-height: 20px;
 					}
 				}
 			}
@@ -9743,16 +9914,19 @@ p {
 			min-height: 335px;
 
 			.post-meta {
-				letter-spacing: 0.05em;
-
+				height: auto;
 				li {
+					font-size: 0.8em;
+					height: auto;
 					.post-meta-key {
 						width: 100%;
+						display: block;
 					}
 				}
 
 				p {
 					width: 100%;
+					display: block;
 				}
 			}
 		}
@@ -9910,11 +10084,13 @@ p {
 	#video-releases-section,
 	#audio-releases-section {
 		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
 	.audio-releases-item {
-		width: 48%;
+		width: 46%;
 	}
 	.audio-thumb,
 	.video-thumb,
@@ -9948,7 +10124,9 @@ p {
 	}
 	#top-audio-clashes,
 	#top-video-clashes {
-		width: 95.79%;
+		width: 98%;
+		padding: 0.25em;
+		margin: 0.15em;
 	}
 	.top-clashes-title {
 		font-size: 1em;
@@ -9969,7 +10147,7 @@ p {
 
 		.top-clash-name {
 			width: 74%;
-			font-size: 0.6em;
+			font-size: 0.7em;
 			text-indent: 0.2em;
 		}
 
@@ -9987,6 +10165,7 @@ p {
 		width: 100%;
 	}
 	#menu-secondary {
+		width: 25%;
 		.menu-item {
 			a {
 				font-size: 0.8em;
@@ -9995,7 +10174,7 @@ p {
 	}
 
 	#footer-content {
-		height: 100%;
+		height: 65%;
 
 		li {
 			font-size: 0.8em;
@@ -10007,6 +10186,7 @@ p {
 	}
 
 	#social-media-box {
+		width: 12%;
 		li {
 			height: 50px;
 

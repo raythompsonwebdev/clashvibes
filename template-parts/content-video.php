@@ -23,7 +23,7 @@ if (have_posts()) :
 				<?php
 
 				if (is_singular()) :
-					the_title('<h2 class="entry-title"><span> Sound Clash Video:</span> <a href="' . esc_url(get_permalink()) . '"></a>', '</h2>');
+					the_title('<h2 class="entry-title"><span> Sound Clash Video:</span> <a href="' . esc_url(get_permalink()) . '"> </a>', '</h2>');
 				else :
 					the_title('<h2 class="entry-title"><span> Sound Clash Video:</span><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
 				endif;

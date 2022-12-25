@@ -931,8 +931,8 @@ select {
 	z-index: 100;
 	height: auto;
 	display: flex;
-	width: 25%;
-	left: calc(74% - 1%);
+	width: 40%;
+	left: calc(58% - 1%);
 	transition: all 0.2s ease-in-out 0s;
 }
 
@@ -946,7 +946,7 @@ select {
 	outline: none;
 	text-align: center;
 	transition: all 0.2s ease-in-out 0s;
-	font-size: 0.85em;
+	font-size: 0.8em;
 	display: block;
 }
 
@@ -959,7 +959,7 @@ select {
 }
 
 #tog-menu.hide {
-	left: 100vw;
+	left: 105vw;
 }
 
 .screen-reader-text {
@@ -998,9 +998,9 @@ select {
 
 /* page container */
 #page {
-	width: 88%;
-	margin-right: auto;
-	margin-left: auto;
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
 	height: auto;
 	font-family: "Titillium Web", arial, sans-serif, verdana, helvetica;
 	background-color: #ffffff;
@@ -1025,7 +1025,7 @@ select {
 }
 
 .site-branding {
-	width: 74%;
+	width: 100%;
 	flex: 0 0 auto;
 	display: flex;
 }
@@ -1078,7 +1078,7 @@ select {
 
 /* logo */
 #clashvibes-title {
-	width: 88%;
+	width: 84%;
 	display: flex;
 	flex-flow: column;
 	flex: 0 0 auto;
@@ -1088,7 +1088,7 @@ select {
 	color: #256b40;
 	margin: 0;
 	padding: 0;
-	font-size: 2.2em;
+	font-size: 1.7em;
 	line-height: 35px;
 	height: 35px;
 	text-indent: 0.1em;
@@ -1264,10 +1264,9 @@ select {
 /* --- Right Side content--- */
 #primary {
 	background-color: #fdd015;
-	float: right;
-	padding: 1%;
-	display: block;
-	width: 76%;
+	width: 100%;
+	float: none;
+	padding: 0.25em;
 }
 
 #primary h1 {
@@ -1288,6 +1287,7 @@ select {
 	margin: 0;
 	display: block;
 	line-height: 50px;
+	font-size: 1.05em;
 }
 
 /* pages,blogs, custom posts */
@@ -1342,9 +1342,10 @@ select {
 	width: 100%;
 	background-color: #262626;
 	color: #ebeadd;
-	font-size: 1.5em;
+	text-indent: 0;
 	text-align: center;
-	line-height: 45px;
+	font-size: 1em;
+	line-height: 35px;
 }
 
 .event .entry-header .entry-title a,
@@ -1354,6 +1355,7 @@ select {
 .search-results .entry-header .entry-title a,
 .page .entry-header .entry-title a {
 	color: #ffffff;
+	display: block;
 }
 
 .event .entry-header .entry-meta,
@@ -1406,7 +1408,7 @@ select {
 	width: 100%;
 	height: auto;
 	display: grid;
-	grid-template: 25px 25px 25px 25px / 15% 2fr;
+	grid-template: 20px 20px 20px 20px / 20% 2fr;
 	gap: 2px 2px;
 	grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image updated-on";
 }
@@ -1495,11 +1497,11 @@ select {
 .page .entry-header .entry-meta .meta-content .posted-on,
 .page .entry-header .entry-meta .meta-content .byline,
 .page .entry-header .entry-meta .meta-content .updated-on {
-	font-size: 0.75em;
+	font-size: 0.7em;
 	text-indent: 0.5em;
 	width: 100%;
-	height: 25px;
-	line-height: 25px;
+	height: 20px;
+	line-height: 20px;
 	background-color: #253901;
 	border-bottom: 1px solid #ffffff;
 	color: #ffffff;
@@ -1750,6 +1752,8 @@ select {
 	display: inline-block;
 	width: 100%;
 	height: 35px;
+	line-height: 35px;
+	font-size: 0.8em;
 }
 
 .event a[rel="tag"],
@@ -1824,6 +1828,27 @@ select {
 	margin: 0.5em auto;
 }
 
+.event .entry-content ul,
+.event .entry-summary ul,
+.event .entry-attachment ul,
+.clash-videos .entry-content ul,
+.clash-videos .entry-summary ul,
+.clash-videos .entry-attachment ul,
+.clash-audio .entry-content ul,
+.clash-audio .entry-summary ul,
+.clash-audio .entry-attachment ul,
+.post .entry-content ul,
+.post .entry-summary ul,
+.post .entry-attachment ul,
+.search-results .entry-content ul,
+.search-results .entry-summary ul,
+.search-results .entry-attachment ul,
+.page .entry-content ul,
+.page .entry-summary ul,
+.page .entry-attachment ul {
+	margin: 0;
+}
+
 .event .vsel-content,
 .clash-videos .vsel-content,
 .clash-audio .vsel-content,
@@ -1851,13 +1876,14 @@ select {
 .search-results .read-more,
 .page .read-more {
 	display: block;
-	width: 40%;
+	width: 90%;
 	height: auto;
-	line-height: 30px;
+	line-height: 35px;
 	margin: 1em auto;
 	color: #f0ecec;
 	text-align: center;
 	background-color: #262626;
+	font-size: 0.85em;
 }
 
 .event .read-more:hover,
@@ -1911,7 +1937,8 @@ select {
 	color: #262626;
 	text-indent: 0;
 	margin-bottom: 0.25em;
-	font-size: 0.9em;
+	font-size: 0.75em;
+	height: auto;
 }
 
 .event .speaker-meta .post-meta li .post-meta-key,
@@ -1920,11 +1947,11 @@ select {
 .post .speaker-meta .post-meta li .post-meta-key,
 .search-results .speaker-meta .post-meta li .post-meta-key,
 .page .speaker-meta .post-meta li .post-meta-key {
-	width: 20%;
-	display: inline-block;
+	width: 100%;
+	display: block;
 	height: 40px;
 	line-height: 40px;
-	text-indent: 0.5em;
+	text-indent: 0.2em;
 	background-color: #253901;
 	color: #ffffff;
 }
@@ -1935,8 +1962,8 @@ select {
 .post .speaker-meta .post-meta li p,
 .search-results .speaker-meta .post-meta li p,
 .page .speaker-meta .post-meta li p {
-	width: 79%;
-	display: inline-block;
+	width: 100%;
+	display: block;
 	margin: 0;
 	padding: 0;
 	text-indent: 0.2em;
@@ -2166,7 +2193,7 @@ select {
 
 .post-navigation .nav-links .nav-next a,
 .post-navigation .nav-links .nav-previous a {
-	font-size: 0.9em;
+	font-size: 0.75em;
 	width: 100%;
 	display: inline-block;
 	color: #ffffff;
@@ -2784,22 +2811,22 @@ p a:hover {
 #audio-releases-section {
 	padding: 0;
 	width: 100%;
-	margin: 0 0 0.5em;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: stretch;
 	height: auto;
+	gap: 0.5em;
 }
 
 .new-releases-item,
 .video-releases-item,
 .audio-releases-item {
 	flex: 0 1 auto;
-	width: 19.2%;
+	width: 80%;
 	height: auto;
 	padding: 0.5em 0;
-	margin: 0.2em;
+	margin: 0;
 	background-color: #f0ecec;
 }
 
@@ -2841,8 +2868,9 @@ p a:hover {
 	line-height: 35px;
 	margin: 0.5em auto;
 	padding: 0;
-	width: 96%;
+	width: 100%;
 	text-transform: capitalize;
+	text-indent: 0;
 }
 
 .video-releases-btn,
@@ -2907,17 +2935,15 @@ p a:hover {
 #top-audio-clashes,
 #top-video-clashes {
 	margin: 0;
-	width: 48%;
-	padding: 0.5em;
+	width: 98%;
+	padding: 0.25em;
 	background-color: #ffffff;
 	color: #262626;
-	float: left;
-	display: block;
 	flex: 1 0 auto;
 }
 
 .top-clashes-title {
-	font-size: 1.5em;
+	font-size: 1em;
 	height: 45px;
 	line-height: 45px;
 	clear: both;
@@ -2964,12 +2990,12 @@ p a:hover {
 
 .top-clash-item .top-clash-name {
 	flex: 0 1 auto;
-	text-indent: 0.5em;
+	text-indent: 0.2em;
 	width: 79%;
 	color: #262626;
 	height: 100%;
 	line-height: 45px;
-	font-size: 0.85em;
+	font-size: 0.7em;
 	display: block;
 	font-weight: normal;
 	float: left;
@@ -2979,7 +3005,7 @@ p a:hover {
 	flex: 0 1 auto;
 	height: auto;
 	width: 15%;
-	font-size: 0.95em;
+	font-size: 0.65em;
 	line-height: 45px;
 	padding: 0;
 	background-color: #262626;
@@ -3001,7 +3027,7 @@ p a:hover {
 
 #secondary {
 	width: 250px;
-	position: fixed;
+	position: absolute;
 	left: -250px;
 	height: auto;
 	z-index: 3;
@@ -3348,7 +3374,7 @@ p a:hover {
 	margin: 0;
 	padding: 0;
 	float: left;
-	width: 12%;
+	width: 25%;
 	display: block;
 }
 
@@ -3375,7 +3401,7 @@ p a:hover {
 }
 
 #footer-content {
-	width: 79%;
+	width: 70%;
 	display: inline-block;
 	list-style: none;
 	margin: 0;
@@ -3400,7 +3426,7 @@ p a:hover {
 	margin: 0;
 	padding: 0;
 	float: right;
-	width: 5%;
+	width: 10%;
 	display: block;
 }
 
@@ -3549,10 +3575,7 @@ p a:hover {
 		font-size: 1em;
 	}
 	#socialmediatop {
-		width: 25%;
 		display: flex;
-		height: 40px;
-		flex: 1 0 auto;
 	}
 	.social-icon {
 		flex: 1 0 auto;
@@ -3656,6 +3679,7 @@ p a:hover {
 	#primary {
 		float: right;
 		display: block;
+		float: right;
 		width: 78%;
 	}
 	#primary h1 {
@@ -3666,7 +3690,7 @@ p a:hover {
 	.archive-title {
 		display: block;
 		line-height: 50px;
-		font-size: 1.3em;
+		font-size: 1.1em;
 	}
 	.event,
 	.clash-videos,
@@ -3703,7 +3727,7 @@ p a:hover {
 	.post .entry-header .entry-title,
 	.search-results .entry-header .entry-title,
 	.page .entry-header .entry-title {
-		font-size: 1.5em;
+		font-size: 1.2em;
 		line-height: 45px;
 	}
 	.event .entry-header .entry-title a,
@@ -4055,6 +4079,7 @@ p a:hover {
 	.page .comments-link {
 		display: inline-block;
 		height: 35px;
+		font-size: 1em;
 	}
 	.event a[rel="tag"],
 	.event a[rel^="category"],
@@ -4142,10 +4167,8 @@ p a:hover {
 	.post .read-more,
 	.search-results .read-more,
 	.page .read-more {
-		display: block;
 		width: 40%;
-		line-height: 30px;
-		margin: 1em auto;
+		line-height: 40px;
 	}
 	.event .read-more:hover,
 	.clash-videos .read-more:hover,
@@ -4748,15 +4771,13 @@ p a:hover {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: flex-start;
+		justify-content: space-between;
+		align-items: stretch;
 		height: auto;
 	}
 	.new-releases-item,
 	.video-releases-item,
 	.audio-releases-item {
-		flex: 0 1 auto;
 		width: 19.2%;
 		height: auto;
 	}
@@ -4783,7 +4804,6 @@ p a:hover {
 	.new-releases-header {
 		font-size: 0.9em;
 		line-height: 35px;
-		width: 80%;
 	}
 	.video-releases-btn,
 	.audio-releases-btn,
@@ -4818,12 +4838,10 @@ p a:hover {
 	#top-audio-clashes,
 	#top-video-clashes {
 		width: 48%;
-		float: left;
-		display: block;
 		flex: 1 0 auto;
 	}
 	.top-clashes-title {
-		font-size: 1.5em;
+		font-size: 1.25em;
 		height: 45px;
 		line-height: 45px;
 	}
@@ -5111,7 +5129,7 @@ p a:hover {
 		display: none;
 	}
 	#page {
-		width: 88%;
+		width: 90%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -5132,7 +5150,7 @@ p a:hover {
 		font-size: 1em;
 	}
 	#socialmediatop {
-		width: 25%;
+		display: flex;
 	}
 	.social-icon {
 		width: 23.5%;
@@ -5167,6 +5185,8 @@ p a:hover {
 	}
 	#primary {
 		width: 78%;
+		padding: 0.5em;
+		float: right;
 	}
 	#primary h1 {
 		font-size: 1.4em;
@@ -5176,6 +5196,9 @@ p a:hover {
 	}
 	#primary h1 span {
 		width: 27%;
+	}
+	.archive-title {
+		font-size: 1.15em;
 	}
 	.event,
 	.clash-videos,
@@ -5199,7 +5222,8 @@ p a:hover {
 	.post .entry-header .entry-title,
 	.search-results .entry-header .entry-title,
 	.page .entry-header .entry-title {
-		font-size: 1.4em;
+		font-size: 1.15em;
+		line-height: 45px;
 	}
 	.event .entry-header .entry-title a,
 	.clash-videos .entry-header .entry-title a,
@@ -5224,6 +5248,7 @@ p a:hover {
 	.search-results .entry-header .entry-meta .meta-content,
 	.page .entry-header .entry-meta .meta-content {
 		grid-template-columns: 10% 2fr;
+		grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image updated-on";
 	}
 	.event .entry-header .entry-meta .meta-content .parent-post-link,
 	.event .entry-header .entry-meta .meta-content .full-size-link,
@@ -5376,6 +5401,7 @@ p a:hover {
 	.page .cat-links,
 	.page .comments-link {
 		height: 35px;
+		font-size: 0.9em;
 	}
 	.event .screen-reader-text,
 	.clash-videos .screen-reader-text,
@@ -5449,6 +5475,7 @@ p a:hover {
 	.search-results .read-more,
 	.page .read-more {
 		width: 50%;
+		line-height: 40px;
 	}
 	.event .speaker-meta .post-meta,
 	.clash-videos .speaker-meta .post-meta,
@@ -5456,7 +5483,7 @@ p a:hover {
 	.post .speaker-meta .post-meta,
 	.search-results .speaker-meta .post-meta,
 	.page .speaker-meta .post-meta {
-		height: 100%;
+		display: block;
 	}
 	.event .speaker-meta .post-meta li,
 	.clash-videos .speaker-meta .post-meta li,
@@ -5473,6 +5500,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li .post-meta-key,
 	.page .speaker-meta .post-meta li .post-meta-key {
 		width: 20%;
+		display: inline-block;
 	}
 	.event .speaker-meta .post-meta li p,
 	.clash-videos .speaker-meta .post-meta li p,
@@ -5481,6 +5509,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li p,
 	.page .speaker-meta .post-meta li p {
 		width: 79%;
+		display: inline-block;
 	}
 	.event .sharedaddy,
 	.clash-videos .sharedaddy,
@@ -5803,7 +5832,8 @@ p a:hover {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		padding: 0;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -5858,9 +5888,10 @@ p a:hover {
 	#top-audio-clashes,
 	#top-video-clashes {
 		padding: 0.5em;
+		width: 48%;
 	}
 	.top-clashes-title {
-		font-size: 1.2em;
+		font-size: 1.15em;
 		margin-bottom: 0.25em;
 	}
 	.top-clash-item {
@@ -5999,6 +6030,9 @@ p a:hover {
 	#menu-secondary .menu-item a {
 		font-size: 0.9em;
 	}
+	#footer-content {
+		width: 79%;
+	}
 	#footer-content li {
 		font-size: 0.85em;
 	}
@@ -6038,7 +6072,7 @@ p a:hover {
 		display: none;
 	}
 	#page {
-		width: 92%;
+		width: 94%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -6068,7 +6102,7 @@ p a:hover {
 		font-size: 1em;
 	}
 	#socialmediatop {
-		width: 25%;
+		display: flex;
 	}
 	.social-icon {
 		width: 23.5%;
@@ -6108,8 +6142,9 @@ p a:hover {
 		width: 100%;
 	}
 	#primary {
-		padding: 1%;
+		padding: 0.5em;
 		width: 76%;
+		float: right;
 	}
 	#primary h1 {
 		font-size: 1.2em;
@@ -6119,6 +6154,9 @@ p a:hover {
 	}
 	#primary h1 span {
 		width: 27%;
+	}
+	.archive-title {
+		font-size: 1.15em;
 	}
 	.event,
 	.clash-videos,
@@ -6142,7 +6180,8 @@ p a:hover {
 	.post .entry-header .entry-title,
 	.search-results .entry-header .entry-title,
 	.page .entry-header .entry-title {
-		font-size: 1.1em;
+		font-size: 1.15em;
+		line-height: 40px;
 	}
 	.event .entry-header .entry-title a,
 	.clash-videos .entry-header .entry-title a,
@@ -6168,6 +6207,7 @@ p a:hover {
 	.page .entry-header .entry-meta .meta-content {
 		width: 100%;
 		grid-template-columns: 11% 2fr;
+		grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image updated-on";
 	}
 	.event .entry-header .entry-meta .meta-content .parent-post-link,
 	.event .entry-header .entry-meta .meta-content .full-size-link,
@@ -6312,6 +6352,7 @@ p a:hover {
 	.page .cat-links,
 	.page .comments-link {
 		height: 35px;
+		font-size: 0.85em;
 	}
 	.event a[rel="tag"],
 	.event a[rel^="category"],
@@ -6376,7 +6417,8 @@ p a:hover {
 	.post .read-more,
 	.search-results .read-more,
 	.page .read-more {
-		width: 60%;
+		width: 55%;
+		line-height: 40px;
 	}
 	.event .speaker-meta,
 	.clash-videos .speaker-meta,
@@ -6392,7 +6434,7 @@ p a:hover {
 	.post .speaker-meta .post-meta,
 	.search-results .speaker-meta .post-meta,
 	.page .speaker-meta .post-meta {
-		height: 100%;
+		display: block;
 	}
 	.event .speaker-meta .post-meta li,
 	.clash-videos .speaker-meta .post-meta li,
@@ -6409,6 +6451,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li .post-meta-key,
 	.page .speaker-meta .post-meta li .post-meta-key {
 		width: 20%;
+		display: inline-block;
 	}
 	.event .speaker-meta .post-meta li p,
 	.clash-videos .speaker-meta .post-meta li p,
@@ -6417,6 +6460,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li p,
 	.page .speaker-meta .post-meta li p {
 		width: 77%;
+		display: inline-block;
 	}
 	.event .sharedaddy,
 	.clash-videos .sharedaddy,
@@ -6766,7 +6810,8 @@ p a:hover {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		margin: 0 0 0.5em;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -6818,6 +6863,7 @@ p a:hover {
 	#top-audio-clashes,
 	#top-video-clashes {
 		padding: 0.5em;
+		width: 48%;
 	}
 	.top-clashes-title {
 		font-size: 1.1em;
@@ -6997,7 +7043,7 @@ p a:hover {
 		display: none;
 	}
 	#page {
-		width: 94%;
+		width: 96%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -7027,7 +7073,7 @@ p a:hover {
 		font-size: 1em;
 	}
 	#socialmediatop {
-		width: 25%;
+		display: flex;
 	}
 	.social-icon {
 		width: 23.5%;
@@ -7064,8 +7110,9 @@ p a:hover {
 		width: 100%;
 	}
 	#primary {
-		padding: 1%;
+		padding: 0.5em;
 		width: 76%;
+		float: right;
 	}
 	#primary h1 {
 		font-size: 1.2em;
@@ -7075,6 +7122,9 @@ p a:hover {
 	}
 	#primary h1 span {
 		width: 27%;
+	}
+	.archive-title {
+		font-size: 1.1em;
 	}
 	.event,
 	.clash-videos,
@@ -7098,7 +7148,8 @@ p a:hover {
 	.post .entry-header .entry-title,
 	.search-results .entry-header .entry-title,
 	.page .entry-header .entry-title {
-		font-size: 1.3em;
+		font-size: 1.15em;
+		line-height: 45px;
 	}
 	.event .entry-header .entry-title a,
 	.clash-videos .entry-header .entry-title a,
@@ -7123,6 +7174,7 @@ p a:hover {
 	.search-results .entry-header .entry-meta .meta-content,
 	.page .entry-header .entry-meta .meta-content {
 		grid-template-columns: 13% 2fr;
+		grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image updated-on";
 	}
 	.event .entry-header .entry-meta .meta-content .parent-post-link,
 	.event .entry-header .entry-meta .meta-content .full-size-link,
@@ -7275,6 +7327,7 @@ p a:hover {
 	.page .cat-links,
 	.page .comments-link {
 		height: 35px;
+		font-size: 0.85em;
 	}
 	.event a[rel="tag"],
 	.event a[rel^="category"],
@@ -7340,6 +7393,7 @@ p a:hover {
 	.search-results .read-more,
 	.page .read-more {
 		width: 60%;
+		line-height: 40px;
 	}
 	.event .speaker-meta .post-meta,
 	.clash-videos .speaker-meta .post-meta,
@@ -7347,7 +7401,7 @@ p a:hover {
 	.post .speaker-meta .post-meta,
 	.search-results .speaker-meta .post-meta,
 	.page .speaker-meta .post-meta {
-		height: 100%;
+		display: block;
 	}
 	.event .speaker-meta .post-meta li,
 	.clash-videos .speaker-meta .post-meta li,
@@ -7363,7 +7417,8 @@ p a:hover {
 	.post .speaker-meta .post-meta li .post-meta-key,
 	.search-results .speaker-meta .post-meta li .post-meta-key,
 	.page .speaker-meta .post-meta li .post-meta-key {
-		width: 23%;
+		width: 25%;
+		display: inline-block;
 	}
 	.event .speaker-meta .post-meta li p,
 	.clash-videos .speaker-meta .post-meta li p,
@@ -7371,7 +7426,8 @@ p a:hover {
 	.post .speaker-meta .post-meta li p,
 	.search-results .speaker-meta .post-meta li p,
 	.page .speaker-meta .post-meta li p {
-		width: 76%;
+		width: 74%;
+		display: inline-block;
 	}
 	.event .sharedaddy,
 	.clash-videos .sharedaddy,
@@ -7701,7 +7757,8 @@ p a:hover {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		margin: 0 0 0.5em;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -7714,7 +7771,7 @@ p a:hover {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -7756,7 +7813,7 @@ p a:hover {
 		padding: 0.25em;
 	}
 	.top-clashes-title {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 	.top-clash-item {
 		flex-flow: row;
@@ -7772,7 +7829,7 @@ p a:hover {
 		width: auto;
 	}
 	.top-clash-item .top-clash-name {
-		font-size: 0.75em;
+		font-size: 0.7em;
 	}
 	.top-clash-item .top-clash-link {
 		font-size: 0.75em;
@@ -7877,6 +7934,9 @@ p a:hover {
 	#menu-secondary .menu-item a {
 		font-size: 0.9em;
 	}
+	#footer-content {
+		width: 79%;
+	}
 	#footer-content li {
 		font-size: 0.8em;
 	}
@@ -7916,7 +7976,7 @@ p a:hover {
 		display: none;
 	}
 	#page {
-		width: 94%;
+		width: 96%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -7939,7 +7999,7 @@ p a:hover {
 		font-size: 1em;
 	}
 	#socialmediatop {
-		width: 25%;
+		display: none;
 	}
 	.social-icon {
 		width: 23.5%;
@@ -7973,6 +8033,8 @@ p a:hover {
 	}
 	#primary {
 		width: 76%;
+		float: right;
+		padding: 0.5em;
 	}
 	#primary h1 {
 		font-size: 1.2em;
@@ -7982,6 +8044,9 @@ p a:hover {
 	}
 	#primary h1 span {
 		width: 27%;
+	}
+	.archive-title {
+		font-size: 1.1em;
 	}
 	.event,
 	.clash-videos,
@@ -8005,7 +8070,8 @@ p a:hover {
 	.post .entry-header .entry-title,
 	.search-results .entry-header .entry-title,
 	.page .entry-header .entry-title {
-		font-size: 1.1em;
+		font-size: 1.15em;
+		line-height: 45px;
 	}
 	.event .entry-header .entry-title a,
 	.clash-videos .entry-header .entry-title a,
@@ -8030,6 +8096,7 @@ p a:hover {
 	.search-results .entry-header .entry-meta .meta-content,
 	.page .entry-header .entry-meta .meta-content {
 		grid-template-columns: 16% 2fr;
+		grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image updated-on";
 	}
 	.event .entry-header .entry-meta .meta-content .parent-post-link,
 	.event .entry-header .entry-meta .meta-content .full-size-link,
@@ -8182,6 +8249,7 @@ p a:hover {
 	.page .cat-links,
 	.page .comments-link {
 		height: 35px;
+		font-size: 0.8em;
 	}
 	.event a[rel="tag"],
 	.event a[rel^="category"],
@@ -8247,8 +8315,9 @@ p a:hover {
 	.post .read-more,
 	.search-results .read-more,
 	.page .read-more {
-		width: 70%;
+		width: 90%;
 		font-size: 0.9em;
+		line-height: 40px;
 	}
 	.event .speaker-meta,
 	.clash-videos .speaker-meta,
@@ -8264,7 +8333,7 @@ p a:hover {
 	.post .speaker-meta .post-meta,
 	.search-results .speaker-meta .post-meta,
 	.page .speaker-meta .post-meta {
-		height: 100%;
+		display: block;
 	}
 	.event .speaker-meta .post-meta li,
 	.clash-videos .speaker-meta .post-meta li,
@@ -8272,7 +8341,7 @@ p a:hover {
 	.post .speaker-meta .post-meta li,
 	.search-results .speaker-meta .post-meta li,
 	.page .speaker-meta .post-meta li {
-		font-size: 0.75em;
+		font-size: 0.9em;
 		height: auto;
 	}
 	.event .speaker-meta .post-meta li .post-meta-key,
@@ -8291,6 +8360,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li p,
 	.page .speaker-meta .post-meta li p {
 		width: 100%;
+		display: block;
 	}
 	.post-navigation {
 		margin: 0;
@@ -8571,7 +8641,8 @@ p a:hover {
 	#new-releases-section,
 	#video-releases-section,
 	#audio-releases-section {
-		margin-bottom: 0.5em;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -8583,7 +8654,7 @@ p a:hover {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -8625,9 +8696,10 @@ p a:hover {
 	#top-audio-clashes,
 	#top-video-clashes {
 		width: 98%;
+		padding: 0.25em;
 	}
 	.top-clashes-title {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 	.top-clash-item {
 		flex-flow: row;
@@ -8643,11 +8715,13 @@ p a:hover {
 		width: auto;
 	}
 	.top-clash-item .top-clash-name {
-		width: 77%;
+		width: 78%;
 		text-indent: 0.25em;
+		font-size: 0.85em;
 	}
 	.top-clash-item .top-clash-link {
 		width: 15%;
+		font-size: 0.9em;
 	}
 	.top-clash-item .top-clash-link:hover {
 		letter-spacing: 0.055em;
@@ -8824,10 +8898,10 @@ p a:hover {
 		cursor: pointer;
 	}
 	#tog-menu.hide {
-		left: 100vw;
+		left: 110vw;
 	}
 	#page {
-		width: 96%;
+		width: 98%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -8904,7 +8978,7 @@ p a:hover {
 	}
 	#secondary {
 		width: 250px;
-		position: fixed;
+		position: absolute;
 		left: -250px;
 		height: auto;
 		z-index: 3;
@@ -8992,6 +9066,7 @@ p a:hover {
 	#primary {
 		width: 100%;
 		float: none;
+		padding: 0.25em;
 	}
 	#primary h1 {
 		font-size: 1.3em;
@@ -9005,6 +9080,9 @@ p a:hover {
 	#primary h1 span {
 		display: inline-block;
 		width: 27%;
+	}
+	.archive-title {
+		font-size: 1.1em;
 	}
 	/* blog */
 	.event,
@@ -9029,8 +9107,9 @@ p a:hover {
 	.post .entry-header .entry-title,
 	.search-results .entry-header .entry-title,
 	.page .entry-header .entry-title {
-		text-indent: 0;
 		text-align: center;
+		font-size: 1.1em;
+		line-height: 40px;
 	}
 	.event .entry-header .entry-title a,
 	.clash-videos .entry-header .entry-title a,
@@ -9055,6 +9134,7 @@ p a:hover {
 	.search-results .entry-header .entry-meta .meta-content,
 	.page .entry-header .entry-meta .meta-content {
 		grid-template-columns: 15% 2fr;
+		grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image updated-on";
 	}
 	.event .entry-header .entry-meta .meta-content .parent-post-link,
 	.event .entry-header .entry-meta .meta-content .full-size-link,
@@ -9199,8 +9279,9 @@ p a:hover {
 	.post .read-more,
 	.search-results .read-more,
 	.page .read-more {
-		width: 80%;
-		font-size: 0.8em;
+		width: 90%;
+		font-size: 0.85em;
+		line-height: 35px;
 	}
 	.event .speaker-meta .post-meta,
 	.clash-videos .speaker-meta .post-meta,
@@ -9208,7 +9289,7 @@ p a:hover {
 	.post .speaker-meta .post-meta,
 	.search-results .speaker-meta .post-meta,
 	.page .speaker-meta .post-meta {
-		letter-spacing: 0.05em;
+		display: block;
 	}
 	.event .speaker-meta .post-meta li,
 	.clash-videos .speaker-meta .post-meta li,
@@ -9217,6 +9298,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li,
 	.page .speaker-meta .post-meta li {
 		font-size: 0.9em;
+		height: auto;
 	}
 	.event .speaker-meta .post-meta li .post-meta-key,
 	.clash-videos .speaker-meta .post-meta li .post-meta-key,
@@ -9225,6 +9307,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li .post-meta-key,
 	.page .speaker-meta .post-meta li .post-meta-key {
 		display: block;
+		width: 100%;
 	}
 	.event .speaker-meta .post-meta li p,
 	.clash-videos .speaker-meta .post-meta li p,
@@ -9233,7 +9316,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li p,
 	.page .speaker-meta .post-meta li p {
 		width: 100%;
-		font-size: 0.9em;
+		display: block;
 	}
 	.event .sharedaddy,
 	.clash-videos .sharedaddy,
@@ -9570,6 +9653,8 @@ p a:hover {
 	#video-releases-section,
 	#audio-releases-section {
 		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -9580,7 +9665,7 @@ p a:hover {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -9605,8 +9690,7 @@ p a:hover {
 	#top-audio-clashes,
 	#top-video-clashes {
 		width: 98%;
-		padding: 0.5em;
-		display: block;
+		padding: 0.25em;
 	}
 	.top-clashes-title {
 		font-size: 1em;
@@ -9621,10 +9705,11 @@ p a:hover {
 		width: auto;
 	}
 	.top-clash-item .top-clash-name {
-		font-size: 0.7em;
+		width: 78%;
+		font-size: 0.85em;
 	}
 	.top-clash-item .top-clash-link {
-		font-size: 0.8em;
+		font-size: 0.85em;
 		letter-spacing: 0.05em;
 	}
 	.top-clash-item .top-clash-link:hover {
@@ -9643,11 +9728,14 @@ p a:hover {
 	#menu-secondary .menu-item a:hover {
 		font-weight: bold;
 	}
+	#footer-content {
+		width: 79%;
+	}
 	#footer-content li a {
 		text-align: center;
 	}
 	#social-media-box {
-		width: 8%;
+		width: 9%;
 	}
 	#social-media-box li {
 		height: 50px;
@@ -9686,7 +9774,7 @@ p a:hover {
 		left: 100vw;
 	}
 	#page {
-		width: 96%;
+		width: 98%;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -9716,7 +9804,7 @@ p a:hover {
 		font-size: 0.9em;
 	}
 	#cv-mobilenav {
-		position: fixed;
+		width: 100%;
 	}
 	#menu-mobile {
 		list-style: none;
@@ -9744,7 +9832,13 @@ p a:hover {
 		overflow: hidden;
 	}
 	#secondary {
-		position: fixed;
+		width: 250px;
+		position: absolute;
+		left: -250px;
+		height: auto;
+		z-index: 3;
+		top: 0.25em;
+		float: none;
 	}
 	#secondary-header {
 		position: relative;
@@ -9814,6 +9908,8 @@ p a:hover {
 	}
 	#primary {
 		width: 100%;
+		float: none;
+		padding: 0.25em;
 	}
 	#primary h1 {
 		font-size: 1.3em;
@@ -9825,6 +9921,9 @@ p a:hover {
 	#primary h1 span {
 		display: inline-block;
 		width: 27%;
+	}
+	.archive-title {
+		font-size: 1.1em;
 	}
 	.event,
 	.clash-videos,
@@ -9841,6 +9940,16 @@ p a:hover {
 	.search-results .entry-header,
 	.page .entry-header {
 		height: auto;
+	}
+	.event .entry-header .entry-title,
+	.clash-videos .entry-header .entry-title,
+	.clash-audio .entry-header .entry-title,
+	.post .entry-header .entry-title,
+	.search-results .entry-header .entry-title,
+	.page .entry-header .entry-title {
+		text-align: center;
+		font-size: 1.1em;
+		line-height: 40px;
 	}
 	.event .entry-header .entry-title a,
 	.clash-videos .entry-header .entry-title a,
@@ -9864,7 +9973,8 @@ p a:hover {
 	.post .entry-header .entry-meta .meta-content,
 	.search-results .entry-header .entry-meta .meta-content,
 	.page .entry-header .entry-meta .meta-content {
-		grid-template-columns: 17% 2fr;
+		grid-template-columns: 20px 20px 20px 20px / 17% 2fr;
+		grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image updated-on";
 	}
 	.event .entry-header .entry-meta .meta-content .parent-post-link,
 	.event .entry-header .entry-meta .meta-content .full-size-link,
@@ -9903,6 +10013,7 @@ p a:hover {
 	.page .entry-header .entry-meta .meta-content .byline,
 	.page .entry-header .entry-meta .meta-content .updated-on {
 		font-size: 0.75em;
+		line-height: 20px;
 	}
 	.event .archive-header,
 	.clash-videos .archive-header,
@@ -10005,7 +10116,7 @@ p a:hover {
 	.post .speaker-meta .post-meta,
 	.search-results .speaker-meta .post-meta,
 	.page .speaker-meta .post-meta {
-		letter-spacing: 0.05em;
+		display: block;
 	}
 	.event .speaker-meta .post-meta li,
 	.clash-videos .speaker-meta .post-meta li,
@@ -10014,6 +10125,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li,
 	.page .speaker-meta .post-meta li {
 		font-size: 0.9em;
+		height: auto;
 	}
 	.event .speaker-meta .post-meta li .post-meta-key,
 	.clash-videos .speaker-meta .post-meta li .post-meta-key,
@@ -10022,6 +10134,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li .post-meta-key,
 	.page .speaker-meta .post-meta li .post-meta-key {
 		display: block;
+		width: 100%;
 	}
 	.event .speaker-meta .post-meta li p,
 	.clash-videos .speaker-meta .post-meta li p,
@@ -10030,6 +10143,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li p,
 	.page .speaker-meta .post-meta li p {
 		width: 100%;
+		display: block;
 	}
 	#comments {
 		margin: 0;
@@ -10311,6 +10425,8 @@ p a:hover {
 	#video-releases-section,
 	#audio-releases-section {
 		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
@@ -10321,7 +10437,7 @@ p a:hover {
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -10344,7 +10460,8 @@ p a:hover {
 	}
 	#top-audio-clashes,
 	#top-video-clashes {
-		padding: 0.5em;
+		width: 98%;
+		padding: 0.25em;
 	}
 	.top-clashes-title {
 		font-size: 1em;
@@ -10359,10 +10476,11 @@ p a:hover {
 		width: auto;
 	}
 	.top-clash-item .top-clash-name {
-		font-size: 0.75em;
+		width: 78%;
+		font-size: 0.8em;
 	}
 	.top-clash-item .top-clash-link {
-		font-size: 0.75em;
+		font-size: 0.85em;
 	}
 	.top-clash-item .top-clash-link:hover {
 		letter-spacing: 0.05em;
@@ -10413,8 +10531,8 @@ p a:hover {
 
 @media only screen and (min-width: 481px) and (max-width: 536px) {
 	#tog-menu {
-		width: 25%;
-		left: calc(74% - 1%);
+		width: 30%;
+		left: calc(68% - 1%);
 		display: flex;
 	}
 	#toggle-nav,
@@ -10464,7 +10582,7 @@ p a:hover {
 		font-size: 0.9em;
 	}
 	#cv-mobilenav {
-		width: 23.5%;
+		width: 100%;
 	}
 	#menu-mobile {
 		list-style: none;
@@ -10492,7 +10610,13 @@ p a:hover {
 		overflow: hidden;
 	}
 	#secondary {
-		margin: 0;
+		width: 250px;
+		position: absolute;
+		left: -250px;
+		height: auto;
+		z-index: 3;
+		top: 0.25em;
+		float: none;
 	}
 	#secondary-header {
 		position: relative;
@@ -10562,6 +10686,8 @@ p a:hover {
 	}
 	#primary {
 		width: 100%;
+		float: none;
+		padding: 0.25em;
 	}
 	#primary h1 {
 		font-size: 1.2em;
@@ -10571,6 +10697,9 @@ p a:hover {
 	}
 	#primary h1 span {
 		width: 27%;
+	}
+	.archive-title {
+		font-size: 1.1em;
 	}
 	/* blog */
 	.event,
@@ -10595,7 +10724,9 @@ p a:hover {
 	.post .entry-header .entry-title,
 	.search-results .entry-header .entry-title,
 	.page .entry-header .entry-title {
-		font-size: 0.9em;
+		text-align: center;
+		font-size: 1.1em;
+		line-height: 40px;
 	}
 	.event .entry-header .entry-title a,
 	.clash-videos .entry-header .entry-title a,
@@ -10620,6 +10751,7 @@ p a:hover {
 	.search-results .entry-header .entry-meta .meta-content,
 	.page .entry-header .entry-meta .meta-content {
 		grid-template: 20px 20px 20px 20px / 16% 2fr;
+		grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image updated-on";
 	}
 	.event .entry-header .entry-meta .meta-content .parent-post-link,
 	.event .entry-header .entry-meta .meta-content .full-size-link,
@@ -10737,7 +10869,7 @@ p a:hover {
 	.post .speaker-meta .post-meta,
 	.search-results .speaker-meta .post-meta,
 	.page .speaker-meta .post-meta {
-		letter-spacing: 0.05em;
+		display: block;
 	}
 	.event .speaker-meta .post-meta li,
 	.clash-videos .speaker-meta .post-meta li,
@@ -10746,6 +10878,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li,
 	.page .speaker-meta .post-meta li {
 		font-size: 0.85em;
+		height: auto;
 	}
 	.event .speaker-meta .post-meta li .post-meta-key,
 	.clash-videos .speaker-meta .post-meta li .post-meta-key,
@@ -10755,6 +10888,7 @@ p a:hover {
 	.page .speaker-meta .post-meta li .post-meta-key {
 		text-indent: 0.25em;
 		display: block;
+		width: 100%;
 	}
 	.event .speaker-meta .post-meta li p,
 	.clash-videos .speaker-meta .post-meta li p,
@@ -10763,6 +10897,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li p,
 	.page .speaker-meta .post-meta li p {
 		width: 100%;
+		display: block;
 	}
 	.event .sharedaddy,
 	.clash-videos .sharedaddy,
@@ -11108,17 +11243,19 @@ p a:hover {
 	#video-releases-section,
 	#audio-releases-section {
 		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
 	.audio-releases-item {
-		width: 48%;
+		width: 46%;
 	}
 	.audio-thumb,
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -11141,10 +11278,12 @@ p a:hover {
 	}
 	#top-audio-clashes,
 	#top-video-clashes {
+		width: 98%;
+		padding: 0.25em;
 		margin: 0.15em;
 	}
 	.top-clashes-title {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 	.top-clash-item .top-clash-img {
 		width: auto;
@@ -11156,10 +11295,11 @@ p a:hover {
 		width: auto;
 	}
 	.top-clash-item .top-clash-name {
-		font-size: 0.7em;
+		width: 78%;
+		font-size: 0.8em;
 	}
 	.top-clash-item .top-clash-link {
-		font-size: 0.8em;
+		font-size: 0.85em;
 	}
 	.top-clash-item .top-clash-link:hover {
 		letter-spacing: 0.05em;
@@ -11177,7 +11317,7 @@ p a:hover {
 		font-weight: bold;
 	}
 	#footer-content {
-		width: 70%;
+		width: 65%;
 	}
 	#footer-content li {
 		text-indent: 0;
@@ -11186,7 +11326,7 @@ p a:hover {
 		text-align: center;
 	}
 	#social-media-box {
-		width: 10%;
+		width: 11%;
 	}
 	#social-media-box li {
 		width: 100%;
@@ -11213,9 +11353,8 @@ p a:hover {
 /* mobile */
 @media only screen and (min-width: 415px) and (max-width: 480px) {
 	#tog-menu {
-		width: 25%;
-		left: calc(78% - 1%);
-		font-size: 0.85em;
+		width: 30%;
+		left: calc(65% - 1%);
 		display: flex;
 	}
 	#toggle-nav,
@@ -11224,6 +11363,7 @@ p a:hover {
 		display: block;
 		width: 50%;
 		line-height: 50px;
+		font-size: 0.85em;
 	}
 	#toggle-nav:hover,
 	.sidebar-toggle:hover {
@@ -11259,7 +11399,7 @@ p a:hover {
 		width: 85%;
 	}
 	.site-title {
-		font-size: 2em;
+		font-size: 1.9em;
 		line-height: 30px;
 		height: 30px;
 	}
@@ -11267,7 +11407,7 @@ p a:hover {
 		font-size: 0.8em;
 	}
 	#cv-mobilenav {
-		width: 23.5%;
+		width: 100%;
 	}
 	#menu-mobile {
 		list-style: none;
@@ -11292,7 +11432,13 @@ p a:hover {
 		overflow: hidden;
 	}
 	#secondary {
-		margin: 0;
+		width: 250px;
+		position: absolute;
+		left: -250px;
+		height: auto;
+		z-index: 3;
+		top: 0.25em;
+		float: none;
 	}
 	#secondary-header {
 		position: relative;
@@ -11372,6 +11518,8 @@ p a:hover {
 	}
 	#primary {
 		width: 100%;
+		float: none;
+		padding: 0.25em;
 	}
 	#primary h1 {
 		font-size: 1.1em;
@@ -11381,6 +11529,9 @@ p a:hover {
 	}
 	#primary h1 span {
 		width: 27%;
+	}
+	.archive-title {
+		font-size: 1.1em;
 	}
 	.event,
 	.clash-videos,
@@ -11404,8 +11555,9 @@ p a:hover {
 	.post .entry-header .entry-title,
 	.search-results .entry-header .entry-title,
 	.page .entry-header .entry-title {
-		font-size: 0.9em;
-		height: auto;
+		text-align: center;
+		font-size: 1.1em;
+		line-height: 35px;
 	}
 	.event .entry-header .entry-title a,
 	.clash-videos .entry-header .entry-title a,
@@ -11536,7 +11688,8 @@ p a:hover {
 	.search-results .read-more,
 	.page .read-more {
 		width: 90%;
-		font-size: 0.75em;
+		font-size: 0.85em;
+		line-height: 35px;
 	}
 	.event .speaker-meta,
 	.clash-videos .speaker-meta,
@@ -11552,7 +11705,6 @@ p a:hover {
 	.post .speaker-meta .post-meta,
 	.search-results .speaker-meta .post-meta,
 	.page .speaker-meta .post-meta {
-		letter-spacing: 0.05em;
 		height: auto;
 	}
 	.event .speaker-meta .post-meta li,
@@ -11561,7 +11713,7 @@ p a:hover {
 	.post .speaker-meta .post-meta li,
 	.search-results .speaker-meta .post-meta li,
 	.page .speaker-meta .post-meta li {
-		font-size: 0.75em;
+		font-size: 0.85em;
 		height: auto;
 	}
 	.event .speaker-meta .post-meta li .post-meta-key,
@@ -11579,10 +11731,8 @@ p a:hover {
 	.post .speaker-meta .post-meta p,
 	.search-results .speaker-meta .post-meta p,
 	.page .speaker-meta .post-meta p {
-		width: 97%;
+		width: 100%;
 		display: block;
-		line-height: 20px;
-		padding: 1em 0.5em;
 	}
 	.text-img {
 		width: 28%;
@@ -11628,17 +11778,19 @@ p a:hover {
 	#video-releases-section,
 	#audio-releases-section {
 		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
 	.audio-releases-item {
-		width: 48%;
+		width: 46%;
 	}
 	.audio-thumb,
 	.video-thumb,
 	.new-release-thumb {
 		height: auto;
-		width: auto;
+		width: 85%;
 	}
 	.video-releases-caption,
 	.audio-releases-caption,
@@ -11650,7 +11802,6 @@ p a:hover {
 	.new-releases-header {
 		font-size: 0.75em;
 		line-height: 35px;
-		text-indent: 0;
 	}
 	.video-releases-btn:hover,
 	.audio-releases-btn:hover,
@@ -11662,10 +11813,12 @@ p a:hover {
 	}
 	#top-audio-clashes,
 	#top-video-clashes {
-		width: 95.79%;
+		width: 98%;
+		padding: 0.25em;
+		margin: 0.15em;
 	}
 	.top-clashes-title {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 	.top-clash-item .top-clash-img {
 		width: auto;
@@ -11677,10 +11830,11 @@ p a:hover {
 		width: auto;
 	}
 	.top-clash-item .top-clash-name {
-		font-size: 0.6em;
+		width: 78%;
+		font-size: 0.75em;
 	}
 	.top-clash-item .top-clash-link {
-		font-size: 0.75em;
+		font-size: 0.8em;
 		letter-spacing: 0.05em;
 	}
 	.top-clash-item .top-clash-link:hover {
@@ -11689,11 +11843,14 @@ p a:hover {
 	.site-footer {
 		width: 100%;
 	}
+	#menu-secondary {
+		width: 25%;
+	}
 	#menu-secondary .menu-item a:hover {
 		font-weight: bold;
 	}
 	#footer-content {
-		height: 100%;
+		height: 60%;
 	}
 	#footer-content li {
 		text-indent: 0;
@@ -11701,6 +11858,9 @@ p a:hover {
 	}
 	#footer-content li a {
 		text-align: center;
+	}
+	#social-media-box {
+		width: 11%;
 	}
 	#social-media-box li {
 		height: 50px;
@@ -11724,20 +11884,23 @@ p a:hover {
 
 @media only screen and (min-width: 361px) and (max-width: 414px) {
 	#tog-menu {
-		width: 20%;
-		left: calc(80% - 1%);
+		width: 35%;
+		left: calc(65% - 1%);
 		display: flex;
 	}
 	#toggle-nav,
 	.sidebar-toggle {
 		display: block;
-		font-size: 0.85em;
+		font-size: 0.8em;
 		width: 50%;
 		line-height: 50px;
 	}
 	#toggle-nav:hover,
 	.sidebar-toggle:hover {
 		text-align: center;
+	}
+	#tog-menu.hide {
+		left: 110vw;
 	}
 	.hide-side {
 		left: 150vw;
@@ -11746,9 +11909,9 @@ p a:hover {
 		left: 100vw;
 	}
 	#page {
-		width: 98%;
-		margin-right: auto;
-		margin-left: auto;
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
 	}
 	#masthead {
 		height: 55px;
@@ -11775,7 +11938,7 @@ p a:hover {
 		font-size: 0.8em;
 	}
 	#cv-mobilenav {
-		width: 23.5%;
+		width: 100%;
 	}
 	#menu-mobile {
 		list-style: none;
@@ -11799,7 +11962,13 @@ p a:hover {
 		overflow: hidden;
 	}
 	#secondary {
-		margin: 0;
+		width: 250px;
+		position: absolute;
+		left: -250px;
+		height: auto;
+		z-index: 3;
+		top: 0.25em;
+		float: none;
 	}
 	#secondary-header {
 		position: relative;
@@ -11869,6 +12038,8 @@ p a:hover {
 	}
 	#primary {
 		width: 100%;
+		float: none;
+		padding: 0.25em;
 	}
 	#primary h1 {
 		font-size: 1.1em;
@@ -11878,6 +12049,9 @@ p a:hover {
 	}
 	#primary h1 span {
 		width: 27%;
+	}
+	.archive-title {
+		font-size: 1.1em;
 	}
 	.event,
 	.clash-videos,
@@ -11901,7 +12075,9 @@ p a:hover {
 	.post .entry-header .entry-title,
 	.search-results .entry-header .entry-title,
 	.page .entry-header .entry-title {
-		font-size: 0.8em;
+		text-align: center;
+		font-size: 1em;
+		line-height: 35px;
 	}
 	.event .entry-header .entry-title a,
 	.clash-videos .entry-header .entry-title a,
@@ -11925,7 +12101,8 @@ p a:hover {
 	.post .entry-header .entry-meta .meta-content,
 	.search-results .entry-header .entry-meta .meta-content,
 	.page .entry-header .entry-meta .meta-content {
-		grid-template-columns: 18% 2fr;
+		grid-template-columns: 20px 20px 20px 20px / 18% 2fr;
+		grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image updated-on";
 	}
 	.event .entry-header .entry-meta .meta-content .parent-post-link,
 	.event .entry-header .entry-meta .meta-content .full-size-link,
@@ -11964,6 +12141,7 @@ p a:hover {
 	.page .entry-header .entry-meta .meta-content .byline,
 	.page .entry-header .entry-meta .meta-content .updated-on {
 		font-size: 0.7em;
+		line-height: 20px;
 	}
 	.event .archive-header,
 	.clash-videos .archive-header,
@@ -12065,7 +12243,16 @@ p a:hover {
 	.post .speaker-meta .post-meta,
 	.search-results .speaker-meta .post-meta,
 	.page .speaker-meta .post-meta {
-		letter-spacing: 0.05em;
+		height: auto;
+	}
+	.event .speaker-meta .post-meta li,
+	.clash-videos .speaker-meta .post-meta li,
+	.clash-audio .speaker-meta .post-meta li,
+	.post .speaker-meta .post-meta li,
+	.search-results .speaker-meta .post-meta li,
+	.page .speaker-meta .post-meta li {
+		font-size: 0.8em;
+		height: auto;
 	}
 	.event .speaker-meta .post-meta li .post-meta-key,
 	.clash-videos .speaker-meta .post-meta li .post-meta-key,
@@ -12074,6 +12261,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta li .post-meta-key,
 	.page .speaker-meta .post-meta li .post-meta-key {
 		width: 100%;
+		display: block;
 	}
 	.event .speaker-meta .post-meta p,
 	.clash-videos .speaker-meta .post-meta p,
@@ -12082,6 +12270,7 @@ p a:hover {
 	.search-results .speaker-meta .post-meta p,
 	.page .speaker-meta .post-meta p {
 		width: 100%;
+		display: block;
 	}
 	.event .sharedaddy,
 	.clash-videos .sharedaddy,
@@ -12254,11 +12443,13 @@ p a:hover {
 	#video-releases-section,
 	#audio-releases-section {
 		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 	.new-releases-item,
 	.video-releases-item,
 	.audio-releases-item {
-		width: 48%;
+		width: 46%;
 	}
 	.audio-thumb,
 	.video-thumb,
@@ -12287,7 +12478,9 @@ p a:hover {
 	}
 	#top-audio-clashes,
 	#top-video-clashes {
-		width: 95.79%;
+		width: 98%;
+		padding: 0.25em;
+		margin: 0.15em;
 	}
 	.top-clashes-title {
 		font-size: 1em;
@@ -12303,7 +12496,7 @@ p a:hover {
 	}
 	.top-clash-item .top-clash-name {
 		width: 74%;
-		font-size: 0.6em;
+		font-size: 0.7em;
 		text-indent: 0.2em;
 	}
 	.top-clash-item .top-clash-link {
@@ -12316,17 +12509,23 @@ p a:hover {
 	.site-footer {
 		width: 100%;
 	}
+	#menu-secondary {
+		width: 25%;
+	}
 	#menu-secondary .menu-item a {
 		font-size: 0.8em;
 	}
 	#footer-content {
-		height: 100%;
+		height: 65%;
 	}
 	#footer-content li {
 		font-size: 0.8em;
 	}
 	#footer-content li a {
 		text-align: center;
+	}
+	#social-media-box {
+		width: 12%;
 	}
 	#social-media-box li {
 		height: 50px;

@@ -21,7 +21,7 @@ get_header(); ?>
 
 
 <?php
-esc_html( the_title( '<h2 class="page-title">', '</h2>' ) );
+esc_html(the_title('<h2 class="page-title">', '</h2>'));
 
 ?>
 
@@ -38,33 +38,33 @@ esc_html( the_title( '<h2 class="page-title">', '</h2>' ) );
 		'post_type'  => 'clash-audio',
 		'post_count' => '5',
 	);
-	$clashvibes_the_query = new WP_Query( $clashvibes_args );
+	$clashvibes_the_query = new WP_Query($clashvibes_args);
 	?>
 
 	<?php
-	if ( $clashvibes_the_query->have_posts() ) :
-		while ( $clashvibes_the_query->have_posts() ) :
+	if ($clashvibes_the_query->have_posts()) :
+		while ($clashvibes_the_query->have_posts()) :
 			$clashvibes_the_query->the_post();
-			?>
+	?>
 
 			<figure class="audio-releases-item">
 
-				<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'audio-thumb' ) ); ?>
+				<?php the_post_thumbnail('thumbnail', array('class' => 'audio-thumb')); ?>
 
 				<figcaption class="audio-releases-caption">
 					<h3 class="audio-releases-header">
 						<?php
-						$thetitle  = get_the_title(); /* or you can use get_the_title() */
-						$getlength = strlen( $thetitle );
+						$thetitle  = get_the_title();
+						$getlength = strlen($thetitle);
 						$thelength = 25;
-						echo substr( $thetitle, 0, $thelength );
-						if ( $getlength > $thelength ) {
+						echo esc_html__(substr($thetitle, 0, $thelength), 'clashvibes');
+						if ($getlength > $thelength) {
 							echo '...';
 						}
 						?>
 					</h3>
-					<a class="audio-releases-btn" href="<?php echo esc_url( get_permalink() ); ?>" alt="">
-						<?php esc_html_e( 'Listen', 'clashvibes' ); ?></a>
+					<a class="audio-releases-btn" href="<?php echo esc_url(get_permalink()); ?>" alt="">
+						<?php esc_html_e('Listen', 'clashvibes'); ?></a>
 
 
 				</figcaption>
@@ -77,14 +77,14 @@ esc_html( the_title( '<h2 class="page-title">', '</h2>' ) );
 		<figure class="audio-releases-item">
 			<figcaption class="audio-releases-caption">
 				<h3 class="audio-releases-header">
-					<?php esc_html_e( 'Sorry! No Audio clashes to display.', 'clashvibes' ); ?>
+					<?php esc_html_e('Sorry! No Audio clashes to display.', 'clashvibes'); ?>
 				</h3>
 
 			</figcaption>
 
 		</figure>
 
-		<?php
+	<?php
 	endif;
 	?>
 	<?php wp_reset_postdata(); ?>

@@ -78,50 +78,6 @@ if (!function_exists('clashvibes_posted_on')) :
 	}
 endif;
 
-if (!function_exists('clashvibes_index_posted_on')) :
-	/**
-	 * Prints HTML with meta information for the current author.
-	 */
-	function clashvibes_index_posted_on()
-	{
-
-		$clashvibes_index_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if (get_the_time('U') !== get_the_modified_time('U')) {
-			$clashvibes_index_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>Updated: <time class="updated" datetime="%3$s">%4$s</time>';
-		}
-		$clashvibes_index_time_string = sprintf(
-			$clashvibes_index_time_string,
-			esc_attr(get_the_date(DATE_W3C)),
-			esc_html(get_the_date()),
-			esc_attr(get_the_modified_date(DATE_W3C)),
-			esc_html(get_the_modified_date())
-		);
-
-		$clashvibes_index_posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x('Published %s', 'post date', 'clashvibes'),
-			'<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $clashvibes_index_time_string . '</a>'
-		);
-
-		$clashvibes_index_byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x('by %s', 'post author', 'clashvibes'),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
-		);
-
-		echo '<div class="meta-content">';
-
-		echo '<span class="byline">' . $clashvibes_index_byline . ' </span><span class="posted-on"> ' . $clashvibes_index_posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		if (!post_password_required() && (comments_open() || get_comments_number())) {
-			echo '<span class="comments-link">';
-			comments_popup_link(esc_html__('Leave a comment', 'clashvibes'), esc_html__('1 Comment', 'clashvibes'), esc_html__('% Comments', 'clashvibes'));
-			echo '</span>';
-		}
-		echo '</div><!-- .meta-content -->';
-	}
-
-endif;
-
 if (!function_exists('clashvibes_entry_footer')) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -196,12 +152,11 @@ if (!function_exists('clashvibes_post_thumbnail')) :
 			return;
 		}
 
-		if (is_singular()) :
-?>
+		if (is_singular()) : ?>
 
 			<figure class="featured-image">
 				<?php the_post_thumbnail('featured-image'); ?>
-			</figure><!-- .post-thumbnail -->
+			</figure>
 
 		<?php else : ?>
 
@@ -221,14 +176,13 @@ if (!function_exists('clashvibes_post_thumbnail')) :
 					);
 					?>
 				</a>
-			</figure><!-- featured-image -->
-
-
-
+			</figure>
 <?php
 		endif; // End is_singular().
 	}
-endif;
+endif; ?>
+
+<?php
 
 if (!function_exists('clashvibes_validate_gravatar')) :
 	/**

@@ -68,7 +68,7 @@ get_header(); ?>
 						$getlength = strlen( $thetitle );
 						$thelength = 25;
 
-						echo esc_html( substr( $thetitle, 0, $thelength ) );
+						echo esc_html__( substr( $thetitle, 0, $thelength ), 'clashvibes' );
 						if ( $getlength > $thelength ) {
 							echo '...';
 						}
@@ -152,7 +152,16 @@ get_header(); ?>
 						</span>
 
 						<span class="top-clash-name">
-							<?php the_title(); ?>
+							<?php
+							$thetitle  = get_the_title(); /* or you can use get_the_title() */
+							$getlength = strlen( $thetitle );
+							$thelength = 25;
+
+							echo esc_html__( substr( $thetitle, 0, $thelength ), 'clashvibes' );
+							if ( $getlength > $thelength ) {
+								echo '...';
+							}
+							?>
 						</span>
 
 						<a class="top-clash-link" href="<?php echo esc_url( get_permalink(), 'clashvibes' ); ?>" title="Listen to <?php the_title_attribute(); ?>">
@@ -210,7 +219,18 @@ get_header(); ?>
 						</a>
 					</span>
 
-					<span class="top-clash-name"><?php the_title(); ?></span>
+					<span class="top-clash-name">
+						<?php
+						$thetitle  = get_the_title(); /* or you can use get_the_title() */
+						$getlength = strlen( $thetitle );
+						$thelength = 25;
+
+						echo esc_html__( substr( $thetitle, 0, $thelength ), 'clashvibes' );
+						if ( $getlength > $thelength ) {
+							echo '...';
+						}
+						?>
+					</span>
 
 					<a class="top-clash-link" href="<?php echo esc_url( get_permalink() ); ?>" title="View <?php the_title_attribute(); ?> Video">
 						<?php esc_html_e( 'View', 'clashvibes' ); ?>

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * *PHP version 7
+ * *PHP version 8.1
  *
  * *
  * Sidebar Audio | core/sidebar-audio.php.
@@ -21,7 +21,7 @@
 <aside id="secondary" class="widget-area">
 
 	<h2 id="secondary-header">
-		<?php esc_html_e( 'Audio', 'clashvibes' ); ?>
+		<?php esc_html_e('Audio', 'clashvibes'); ?>
 	</h2>
 
 	<section id="clashvibes-login">
@@ -29,7 +29,7 @@
 	</section>
 
 	<!--class="widget"-->
-	<section class="secondary_column_box">
+	<section class="sidebar-navigation">
 
 		<?php
 		wp_nav_menu(

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * *PHP version 7
+ * *PHP version 8.1
  *
  * Single Clash Audio page | core/single-clash_audio.php.
  *
@@ -17,11 +17,11 @@
 
 get_header(); ?>
 
-<?php get_sidebar( 'audio' ); ?>
+<?php get_sidebar('audio'); ?>
 
 <main id="primary" class="site-main">
 
-	<?php get_template_part( 'template-parts/content', 'audio' ); ?>
+	<?php get_template_part('template-parts/content', 'audio'); ?>
 
 </main>
 

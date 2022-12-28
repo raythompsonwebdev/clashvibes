@@ -1,7 +1,7 @@
 <?php
 
 /**
- * *PHP version 7
+ * *PHP version 8.1
  *
  * Template Name: blog
  *
@@ -24,20 +24,20 @@ get_header();
 
 <main id="primary" class="site-main">
 
-	<?php if ( have_posts() ) : ?>
+	<?php if (have_posts()) : ?>
 
 		<?php
-		while ( have_posts() ) :
+		while (have_posts()) :
 			the_post();
-			?>
+		?>
 
-			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+			<?php get_template_part('template-parts/content', get_post_format()); ?>
 
 		<?php endwhile; ?>
 
 	<?php else : ?>
 
-		<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		<?php get_template_part('template-parts/content', 'none'); ?>
 
 	<?php endif; ?>
 

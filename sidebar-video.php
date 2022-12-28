@@ -1,7 +1,7 @@
 <?php
 
 /**
- * *PHP version 7
+ * *PHP version 8.1
  *
  * *
  * Sidebar Video | core/sidebar-video.php.
@@ -20,14 +20,14 @@
 <!--id="secondary"-->
 <aside id="secondary" class="widget-area">
 
-	<h2 id="secondary-header"><?php esc_html_e( 'Video', 'clashvibes' ); ?></h2>
+	<h2 id="secondary-header"><?php esc_html_e('Video', 'clashvibes'); ?></h2>
 
 	<section id="clashvibes-login">
 		<?php get_search_form(); ?>
 	</section>
 
 	<!--class="widget"-->
-	<section class="secondary_column_box">
+	<section class="sidebar-navigation">
 
 		<?php
 		wp_nav_menu(

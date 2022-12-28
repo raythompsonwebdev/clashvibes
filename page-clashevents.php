@@ -1,9 +1,9 @@
 <?php
 
 /**
- * *PHP version 7
+ * *PHP version 8.1
  *
- * Template Name: Events
+ * Template Name: clashevents
  *
  * Events page | core/page-events.php.
  *
@@ -29,33 +29,34 @@ get_header();
 
 	$clashvibes_args      = array(
 
-		'post_type'  => 'event',
+		'post_type'  => 'clash-events',
 		'post_count' => '1',
 	);
-	$clashvibes_the_query = new WP_Query( $clashvibes_args );
+	$clashvibes_the_query = new WP_Query($clashvibes_args);
 
-	if ( $clashvibes_the_query->have_posts() ) :
-		while ( $clashvibes_the_query->have_posts() ) :
+	if ($clashvibes_the_query->have_posts()) :
+		while ($clashvibes_the_query->have_posts()) :
 			$clashvibes_the_query->the_post();
-			?>
-			<article class="events-item">
+	?>
 
-				<figure class="events">
-					<a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
-						<?php the_post_thumbnail( 'event-image' ); ?>
-					</a>
-					<figcaption class="event-text">
-						<h4> <?php the_title(); ?></h4>
+			<figure class="events-item">
+				<h4 class="events-item-title"> <?php the_title(); ?></h4>
+				<a href="<?php echo esc_url(get_permalink()); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" class="attachment-event-image">
+					<?php the_post_thumbnail('event-image'); ?>
+				</a>
+				<figcaption class="events-item-caption">
 
-					</figcaption>
+					<p class="events-item-txt"></p>
+					<a href="<?php echo esc_url(get_permalink()); ?>" id="events-link">See details</a>
+				</figcaption>
 
-				</figure>
+			</figure>
 
-				<a href="<?php echo esc_url( get_permalink() ); ?>" id="event-submit-btn">See details</a>
 
-			</article>
 
-			<?php
+
+
+		<?php
 		endwhile;
 
 	else :
@@ -75,7 +76,7 @@ get_header();
 		</article>
 
 
-		<?php
+	<?php
 	endif;
 	wp_reset_postdata();
 	?>

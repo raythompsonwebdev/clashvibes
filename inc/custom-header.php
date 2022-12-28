@@ -29,6 +29,7 @@ function clashvibes_custom_header_setup()
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
+				'flex-height'        => true,
 				'wp-head-callback'   => 'clashvibes_header_style',
 			)
 		)
@@ -66,10 +67,7 @@ if (!function_exists('clashvibes_header_style')) :
 				clip: rect(1px, 1px, 1px, 1px);
 			}
 
-			<?php
-			// If the user has set a custom color for the text use that.
-			else :
-			?>.site-title a,
+			<?php else : ?>.site-title a,
 			.site-description {
 				color: <?= esc_attr($header_text_color); ?>;
 			}

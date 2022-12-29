@@ -895,7 +895,6 @@ select {
 .alignleft {
 	/* rtl:ignore */
 	float: left;
-
 	/* rtl:ignore */
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
@@ -911,7 +910,6 @@ select {
 }
 
 .aligncenter {
-	clear: both;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -921,7 +919,8 @@ select {
 .alignwide {
 	max-width: calc(100vw - 2rem);
 	margin-right: -1rem;
-	margin-left: -1rem;
+	/*margin-left: -1rem;*/
+	margin-left: 0;
 }
 
 .alignfull {

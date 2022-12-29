@@ -2,17 +2,11 @@
 .phpintel/
 .sass-cache/
 node_modules/
-nbproject/
 images/
 js/old-browser-scripts/
 js/sparefiles/
-template-parts/content-events.php
-PIE.htc
-style.css.map
 fonts/
-spare-docs/
-videos/
-.vscode/
-audio/
 vendor/
+build/
+pattern.txt
 

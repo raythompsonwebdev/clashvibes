@@ -387,7 +387,7 @@ $text-shadow: 1px 1px 1px $black;
 		width: 100%;
 		background-color: $black;
 		color: $white;
-		margin-top: 0;
+		margin: 0;
 		font-size: 1.1em;
 		text-align: center;
 		text-indent: 0.5em;
@@ -1438,6 +1438,11 @@ a[href$="#comments"],
 .wp-block-button {
 	display: block;
 }
+
+.wp-block-buttons.wp-container-4 {
+	justify-content: space-around;
+}
+
 /* audio & video items and containers */
 #new-releases-section,
 #video-releases-section,
@@ -3522,6 +3527,7 @@ a[href$="#comments"],
 			height: 45px;
 			line-height: 45px;
 			font-size: 1.5em;
+			text-align: left;
 		}
 	}
 
@@ -4659,6 +4665,7 @@ a[href$="#comments"],
 
 		h2 {
 			font-size: 1.4em;
+			text-align: left;
 		}
 	}
 
@@ -5451,6 +5458,7 @@ a[href$="#comments"],
 
 		h2 {
 			font-size: 1.2em;
+			text-align: left;
 		}
 	}
 	.archive-title {
@@ -6270,6 +6278,7 @@ a[href$="#comments"],
 
 		h2 {
 			font-size: 1.2em;
+			text-align: left;
 		}
 	}
 	.archive-title {
@@ -7029,6 +7038,7 @@ a[href$="#comments"],
 
 		h2 {
 			font-size: 1.2em;
+			text-align: left;
 		}
 	}
 	.archive-title {

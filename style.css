@@ -1292,7 +1292,7 @@ select {
 	width: 100%;
 	background-color: #262626;
 	color: #ffffff;
-	margin-top: 0;
+	margin: 0;
 	font-size: 1.1em;
 	text-align: center;
 	text-indent: 0.5em;
@@ -2435,6 +2435,10 @@ a[href$="#comments"]:hover,
 
 .wp-block-button {
 	display: block;
+}
+
+.wp-block-buttons.wp-container-4 {
+	justify-content: space-around;
 }
 
 /* audio & video items and containers */
@@ -4530,6 +4534,7 @@ a[href$="#comments"]:hover,
 		height: 45px;
 		line-height: 45px;
 		font-size: 1.5em;
+		text-align: left;
 	}
 	.archive-title {
 		display: block;
@@ -5622,6 +5627,7 @@ a[href$="#comments"]:hover,
 	}
 	#primary h2 {
 		font-size: 1.4em;
+		text-align: left;
 	}
 	.archive-title {
 		font-size: 1.15em;
@@ -6331,6 +6337,7 @@ a[href$="#comments"]:hover,
 	}
 	#primary h2 {
 		font-size: 1.2em;
+		text-align: left;
 	}
 	.archive-title {
 		font-size: 1.15em;
@@ -7059,6 +7066,7 @@ a[href$="#comments"]:hover,
 	}
 	#primary h2 {
 		font-size: 1.2em;
+		text-align: left;
 	}
 	.archive-title {
 		font-size: 1.1em;
@@ -7734,6 +7742,7 @@ a[href$="#comments"]:hover,
 	}
 	#primary h2 {
 		font-size: 1.2em;
+		text-align: left;
 	}
 	.archive-title {
 		font-size: 1.1em;

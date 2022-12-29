@@ -27,12 +27,9 @@ esc_html(the_title('<h2 class="page-title">', '</h2>'));
 
 <section id="audio-releases-section">
 
-
 	<?php
 
-
 	$clashvibes_the_query = null;
-
 	$clashvibes_args      = array(
 
 		'post_type'  => 'clash-audio',
@@ -65,7 +62,6 @@ esc_html(the_title('<h2 class="page-title">', '</h2>'));
 					</h3>
 					<a class="audio-releases-btn" href="<?php echo esc_url(get_permalink()); ?>" alt="">
 						<?php esc_html_e('Listen', 'clashvibes'); ?></a>
-
 
 				</figcaption>
 

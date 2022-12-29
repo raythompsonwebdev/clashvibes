@@ -18,12 +18,16 @@
  */
 get_header(); ?>
 
-<div id="clashvibes_content_front">
+<?php
 
-	<section id="clashvibes_right_column_front">
+esc_html(the_title('<h2 class="page-title">', ' Page</h2>'));
 
-	</section>
+while (have_posts()) :
+	the_post();
 
-</div>
+	get_template_part('template-parts/content', 'page');
+
+endwhile;
+?>
 
 <?php get_footer(); ?>

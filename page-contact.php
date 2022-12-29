@@ -21,9 +21,17 @@ get_header();
 
 ?>
 
-<h2><?php the_title(); ?> Page</h2>
-<div id="contactform">
-	<?php the_content(); ?>
-</div>
+<?php
+
+esc_html(the_title('<h2 class="page-title">', ' Page</h2>'));
+
+while (have_posts()) :
+	the_post();
+
+	get_template_part('template-parts/content', 'page');
+
+
+endwhile;
+?>
 <?php
 get_footer();

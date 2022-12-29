@@ -43,7 +43,22 @@ if (have_posts()) :
 			<a class="post-thumbnail" href="<?php echo esc_url(get_permalink()); ?>" aria-hidden="true" tabindex="-1">
 				<?php the_post_thumbnail('audio-thumbnail'); ?>
 			</a>
-			<?php the_content(); ?>
+			<?php
+			the_content(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'clashvibes'),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					wp_kses_post(get_the_title())
+				)
+			);
+			?>
 
 			<br />
 

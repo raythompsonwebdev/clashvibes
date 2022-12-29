@@ -34,7 +34,7 @@ $clashvibes_audioterm = get_term_by('slug', get_query_var('term'), get_query_var
 	<?php get_template_part('template-parts/content', 'custom'); ?>
 
 
-</main><!-- #main -->
+</main>
 
 
 

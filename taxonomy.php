@@ -41,15 +41,7 @@ get_header(); ?>
 					printf('<div class="taxonomy-description">%s</div>', esc_html($clashvibes_term_description));
 				endif;
 				?>
-			</header><!-- .page-header -->
-
-			<?php
-			if (is_author() && get_the_author_meta('description')) {
-				echo '<div class="author-index shorter">';
-				get_template_part('inc/author', 'box');
-				echo '</div>';
-			}
-			?>
+			</header>
 
 			<?php /* Start the Loop */ ?>
 			<?php
@@ -99,7 +91,6 @@ get_header(); ?>
 
 <?php endif; ?>
 
-
-</main><!-- end of right panel -->
+</main>
 
 <?php get_footer(); ?>

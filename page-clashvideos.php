@@ -19,16 +19,11 @@
 
 get_header(); ?>
 
-<?php
-the_title('<h2 class="page-title">', '</h2>');
-?>
+<?php the_title('<h2 class="page-title">', '</h2>'); ?>
 
 <section id="video-releases-section">
-
 	<?php
-
 	$clashvibes_the_query = null;
-
 	$clashvibes_args      = array(
 
 		'post_type'  => 'clash-videos',
@@ -36,20 +31,16 @@ the_title('<h2 class="page-title">', '</h2>');
 	);
 	$clashvibes_the_query = new WP_Query($clashvibes_args);
 	?>
-
 	<?php
 	if ($clashvibes_the_query->have_posts()) :
 		while ($clashvibes_the_query->have_posts()) :
 			$clashvibes_the_query->the_post();
 	?>
-
-
 			<figure class="video-releases-item">
 				<?php the_post_thumbnail('thumbnail', array('class' => 'video-thumb')); ?>
 				<figcaption class=" video-releases-caption">
 					<h1 class="video-releases-header">
 						<?php
-
 						$thetitle  = get_the_title();
 						$getlength = strlen($thetitle);
 						$thelength = 25;
@@ -57,40 +48,26 @@ the_title('<h2 class="page-title">', '</h2>');
 						if ($getlength > $thelength) {
 							echo '...';
 						}
-
 						?>
 					</h1>
-
 					<a class="video-releases-btn" href="<?php echo esc_url(get_permalink()); ?>">
 						<?php esc_html_e('View', 'clashvibes'); ?>
 					</a>
-
-
 				</figcaption>
-
 			</figure>
-
 
 		<?php endwhile; ?>
 	<?php else : ?>
 
 		<figure class="video-releases-item">
-
 			<figcaption class=" video-releases-caption">
-
 				<h1 class="video-releases-header">
 					<?php esc_html_e('Sorry! No Video clashes to display.', 'clashvibes'); ?>
 				</h1>
-
 			</figcaption>
-
 		</figure>
 
-
 	<?php endif; ?>
-
 	<?php wp_reset_postdata(); ?>
-
 </section>
-
 <?php get_footer(); ?>

@@ -31,18 +31,15 @@ get_header();
 			</h2>
 		</header>
 
-	<?php
-
+		<?php
 		while (have_posts()) :
 			the_post();
-
 			get_template_part('template-parts/content', 'search');
-
 		endwhile;
-
 		the_posts_navigation();
+		?>
 
-	else :
+	<?php else :
 
 		get_template_part('template-parts/content', 'none');
 

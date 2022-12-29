@@ -52,29 +52,17 @@ get_header();
 
 			</figure>
 
+		<?php endwhile; ?>
 
-
-
-
-		<?php
-		endwhile;
-
-	else :
-		?>
+	<?php else : ?>
 
 		<article class="events_box">
-
 			<figure class="events">
-
 				<figcaption class="event-text">
 					<h4>No Events</h4>
-
 				</figcaption>
-
 			</figure>
-
 		</article>
-
 
 	<?php
 	endif;

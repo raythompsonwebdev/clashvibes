@@ -1878,7 +1878,7 @@ a[href$="#comments"],
 	}
 }
 .wp-block-image {
-	width: 20%;
+	width: auto;
 	margin: 1em auto;
 }
 .widget_recent_entries {
@@ -2197,7 +2197,7 @@ a[href$="#comments"],
 		background-color: $white;
 
 		.wp-block-image {
-			width: 20%;
+			width: auto;
 			margin: 1em auto;
 		}
 
@@ -3474,7 +3474,7 @@ a[href$="#comments"],
 		background-color: $white;
 
 		.wp-block-image {
-			width: 20%;
+			width: auto;
 			margin: 1em auto;
 		}
 

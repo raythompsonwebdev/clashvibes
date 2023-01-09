@@ -27,7 +27,6 @@ get_header();
 
 		<?php
 		the_archive_title('<h2 class="page-title">', '</h2>');
-		the_archive_description('<div class="archive-description">', '</div>');
 		?>
 
 

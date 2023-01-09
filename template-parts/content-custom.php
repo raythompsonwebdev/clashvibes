@@ -26,12 +26,12 @@
 	</header>
 
 	<!--featured Image-->
-	<a href="<?php echo esc_url(get_permalink()); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+	<a href="<?= esc_url(get_permalink()); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
 		<?php if (has_post_thumbnail()) : ?>
 			<?php clashvibes_post_thumbnail(); ?>
 		<?php else : ?>
-			<a class="post-thumbnail" href="<?php echo esc_url(get_permalink()); ?>" aria-hidden="true">
-				<img src="<?php echo esc_url(home_url('/') . 'wp-content/uploads/2022/12/no-image.jpg'); ?>" alt="<?php esc_attr_e('No image Available', 'clashvibes'); ?>" rel="prefetch" />
+			<a class="post-thumbnail" href="<?= esc_url(get_permalink()); ?>" aria-hidden="true">
+				<img src="<?= esc_url(home_url('/') . 'wp-content/uploads/2022/12/no-image.jpg'); ?>" alt="<?php esc_attr_e('No image Available', 'clashvibes'); ?>" rel="prefetch" />
 			</a>
 		<?php endif; ?>
 	</a>
@@ -54,20 +54,7 @@
 			)
 		);
 		?>
-		<a href="<?php echo esc_url(get_permalink()); ?>" class="read_more" rel="bookmark">
-			<?php
-			if (is_tax('video-category')) {
 
-				esc_html_e('Continue Watching : ', 'clashvibes');
-			} elseif (is_tax('audio-category')) {
-
-				esc_html_e('Continue Listening : ', 'clashvibes');
-			} else {
-
-				esc_html_e('Continue : ', 'clashvibes');
-			}
-			?>
-		</a>
 	</div>
 
 	<footer class="entry-footer">

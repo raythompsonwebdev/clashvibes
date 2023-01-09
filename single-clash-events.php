@@ -17,11 +17,11 @@
 
 get_header(); ?>
 
-<?php get_sidebar('events'); ?>
+<?php get_sidebar( 'events' ); ?>
 
 <main id="primary" class="site-main">
 
-	<?php get_template_part('template-parts/content', 'events'); ?>
+	<?php get_template_part( 'template-parts/content', 'events' ); ?>
 
 </main>
 

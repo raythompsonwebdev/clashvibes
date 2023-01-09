@@ -20,6 +20,7 @@
 
 <aside id="secondary" class="widget-area">
 
+
 	<h2 id="secondary-header"><?php esc_html_e('Blog', 'clashvibes'); ?></h2>
 
 	<section id="clashvibes-login">

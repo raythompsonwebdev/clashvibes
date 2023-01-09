@@ -20,7 +20,7 @@
 <!--id="secondary"-->
 <aside id="secondary" class="widget-area">
 
-	<h2 id="secondary-header"><?php esc_html_e('Video', 'clashvibes'); ?></h2>
+	<h2 id="secondary-header"><?php esc_html_e( 'Video', 'clashvibes' ); ?></h2>
 
 	<section id="clashvibes-login">
 		<?php get_search_form(); ?>

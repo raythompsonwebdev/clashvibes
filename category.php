@@ -29,16 +29,8 @@ get_header();
 	if (have_posts()) :
 	?>
 
-		<h1 class="archive-title">Category: <?php single_cat_title('', true); ?></h1>
+		<h2 class="archive-title"><?php single_cat_title('Category : ', 'clashvibes'); ?></h2>
 
-		<?php
-		/**
-		 * Display optional category description.
-		 */
-		if (category_description()) :
-		?>
-
-		<?php endif; ?>
 
 		<?php
 		while (have_posts()) :
@@ -49,9 +41,7 @@ get_header();
 
 				<header class="entry-header">
 					<?php
-					if (is_singular()) :
-						the_title('<h1 class="entry-title">', '</h1>');
-					else :
+					if (is_category()) :
 						the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
 					endif;
 

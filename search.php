@@ -22,14 +22,13 @@ get_header();
 
 	<?php if (have_posts()) : ?>
 
-		<header class="page-header">
-			<h2 class="page-title">
-				<?php
-				/* translators: %s: search query. */
-				printf(esc_html__('Search Results for: %s', 'clashvibes'), '<span>' . get_search_query() . '</span>');
-				?>
-			</h2>
-		</header>
+		<h2 class="page-title">
+			<?php
+			/* translators: %s: search query. */
+			printf(esc_html__('Search Results for: %s', 'clashvibes'), '<span>' . get_search_query() . '</span>');
+			?>
+		</h2>
+
 
 		<?php
 		while (have_posts()) :
@@ -39,7 +38,8 @@ get_header();
 		the_posts_navigation();
 		?>
 
-	<?php else :
+	<?php
+	else :
 
 		get_template_part('template-parts/content', 'none');
 

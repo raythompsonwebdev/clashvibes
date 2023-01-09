@@ -20,7 +20,10 @@
 get_header();
 ?>
 
-<h2><?php the_title(); ?> Page</h2>
+<?php
+esc_html(the_title('<h2 class="page-title">', '</h2>'));
+
+?>
 
 <div class="events-lists">
 

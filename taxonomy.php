@@ -27,7 +27,7 @@ get_header(); ?>
 			<?php the_ID(); ?>">
 
 			<header class="entry-header">
-				<h2 class="page-title">
+				<h2 class="entry-title">
 					<?php
 					$clashvibes_current_term = get_queried_object();
 					$clashvibes_taxonomy     = get_taxonomy($clashvibes_current_term->taxonomy);

@@ -18,17 +18,17 @@ get_header();
 
 <main id="primary" class="site-main">
 
-    <?php
+	<?php
 
-    esc_html(the_title('<h2 class="page-title">', ' Page</h2>'));
+	esc_html( the_title( '<h2 class="page-title">', ' Page</h2>' ) );
 
-    while (have_posts()) :
-        the_post();
+	while ( have_posts() ) :
+		the_post();
 
-        get_template_part('template-parts/content', 'page');
+		get_template_part( 'template-parts/content', 'page' );
 
-    endwhile;
-    ?>
+	endwhile;
+	?>
 
 </main>
 

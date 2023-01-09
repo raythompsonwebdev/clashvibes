@@ -20,14 +20,9 @@ if (have_posts()) :
 
 			<header class="entry-header">
 
+				<h2 class="entry-title"><span><?= esc_html("Sound Clash Video:"); ?></span> <a href="<?= esc_url(get_permalink()); ?>"><?= esc_html(get_the_title()); ?></a></h2>
+
 				<?php
-
-				if (is_singular()) :
-					the_title('<h2 class="entry-title"><span> Sound Clash Video:</span> <a href="' . esc_url(get_permalink()) . '"> </a>', '</h2>');
-				else :
-					the_title('<h2 class="entry-title"><span> Sound Clash Video:</span><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
-				endif;
-
 				if ('clash-videos' === get_post_type()) :
 				?>
 

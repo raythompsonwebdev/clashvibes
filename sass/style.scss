@@ -380,35 +380,39 @@ $text-shadow: 1px 1px 1px $black;
 	width: 100%;
 	float: none;
 	padding: 0.25em;
-
-	h2 {
-		height: 45px;
-		line-height: 45px;
-		width: 100%;
-		background-color: $black;
-		color: $white;
-		margin: 0;
-		font-size: 1.1em;
-		text-align: center;
-		text-indent: 0.5em;
-		padding: 0;
-		a {
-			width: 100%;
-		}
-
-		span {
-			width: 100%;
-		}
-	}
 }
 
 /* --- archive page title--- */
-.archive-title {
-	text-align: center;
-	margin: 0;
-	display: block;
+.page-title {
+	height: 50px;
 	line-height: 50px;
-	font-size: 1.05em;
+	width: 100%;
+	color: $black;
+	background-color: $white;
+	margin: 0;
+	font-size: 1.1em;
+	text-align: left;
+	text-indent: 0;
+	padding: 0;
+}
+
+.archive-title {
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	color: $black;
+	background-color: $white;
+	margin: 0;
+	font-size: 1.1em;
+	text-align: center;
+	text-indent: 0;
+	padding: 0;
+	a {
+		width: 100%;
+	}
+	span {
+		width: 100%;
+	}
 }
 
 /* pages,blogs, custom posts */
@@ -446,6 +450,9 @@ iframe {
 		text-align: center;
 		font-size: 1em;
 		line-height: 35px;
+		span {
+			display: inline-block;
+		}
 		a {
 			color: $white;
 			display: block;
@@ -694,6 +701,7 @@ a[href$="#comments"],
 /* read more button */
 .read-more {
 	display: block;
+	text-decoration: none;
 	width: 90%;
 	height: auto;
 	line-height: 35px;
@@ -899,7 +907,6 @@ a[href$="#comments"],
 			width: auto;
 			display: inline-block;
 			color: $black;
-
 			&:hover {
 				color: $grey-white;
 			}
@@ -1427,6 +1434,7 @@ a[href$="#comments"],
 	}
 }
 
+/*
 .wp-block-column {
 	background-color: $white;
 }
@@ -1434,6 +1442,7 @@ a[href$="#comments"],
 .wp-block-column:last-of-type {
 	background-color: $yellow;
 }
+*/
 
 .wp-block-button {
 	display: block;
@@ -2245,18 +2254,15 @@ a[href$="#comments"],
 		display: block;
 		float: right;
 		width: 78%;
-
-		h2 {
-			height: 45px;
-			line-height: 45px;
-			font-size: 1.5em;
-		}
 	}
-
+	.page-title {
+		font-size: 1.5em;
+		text-align: left;
+	}
 	.archive-title {
 		display: block;
-		line-height: 50px;
-		font-size: 1.1em;
+		font-size: 1.5em;
+		text-align: center;
 	}
 
 	.event,
@@ -3522,19 +3528,15 @@ a[href$="#comments"],
 		display: block;
 		float: right;
 		width: 78%;
-
-		h2 {
-			height: 45px;
-			line-height: 45px;
-			font-size: 1.5em;
-			text-align: left;
-		}
 	}
-
+	.page-title {
+		font-size: 1.4em;
+		text-align: left;
+	}
 	.archive-title {
+		font-size: 1.4em;
+		text-align: center;
 		display: block;
-		line-height: 50px;
-		font-size: 1.1em;
 	}
 
 	.event,
@@ -4662,16 +4664,16 @@ a[href$="#comments"],
 		width: 78%;
 		padding: 0.5em;
 		float: right;
-
-		h2 {
-			font-size: 1.4em;
-			text-align: left;
-		}
 	}
-
+	.page-title {
+		font-size: 1.4em;
+		text-align: left;
+	}
 	.archive-title {
-		font-size: 1.15em;
+		font-size: 1.4em;
+		text-align: center;
 	}
+
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -5455,15 +5457,16 @@ a[href$="#comments"],
 		padding: 0.5em;
 		width: 76%; // global post
 		float: right;
-
-		h2 {
-			font-size: 1.2em;
-			text-align: left;
-		}
+	}
+	.page-title {
+		font-size: 1.2em;
+		text-align: left;
 	}
 	.archive-title {
-		font-size: 1.15em;
+		font-size: 1.2em;
+		text-align: center;
 	}
+
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -6275,15 +6278,16 @@ a[href$="#comments"],
 		padding: 0.5em;
 		width: 76%; // global pattern
 		float: right;
-
-		h2 {
-			font-size: 1.2em;
-			text-align: left;
-		}
+	}
+	.page-title {
+		font-size: 1.2em;
+		text-align: left;
 	}
 	.archive-title {
-		font-size: 1.1em;
+		font-size: 1.2em;
+		text-align: center;
 	}
+
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -7035,15 +7039,16 @@ a[href$="#comments"],
 		width: 76%;
 		float: right;
 		padding: 0.5em;
-
-		h2 {
-			font-size: 1.2em;
-			text-align: left;
-		}
+	}
+	.page-title {
+		font-size: 1.2em;
+		text-align: left;
 	}
 	.archive-title {
-		font-size: 1.1em;
+		font-size: 1.2em;
+		text-align: center;
 	}
+
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -7922,15 +7927,17 @@ a[href$="#comments"],
 		width: 100%;
 		float: none;
 		padding: 0.25em;
-		h2 {
-			font-size: 1.3em;
-			text-align: center;
-			text-indent: 0;
-		}
+	}
+	.page-title {
+		font-size: 1.3em;
+		text-align: left;
 	}
 	.archive-title {
-		font-size: 1.1em;
+		font-size: 1.3em;
+		text-align: center;
+		text-indent: 0;
 	}
+
 	/* blog */
 	.event,
 	.clash-videos,
@@ -8660,15 +8667,17 @@ a[href$="#comments"],
 		width: 100%;
 		float: none;
 		padding: 0.25em;
+	}
 
-		h2 {
-			font-size: 1.2em;
-			text-align: center;
-		}
+	.page-title {
+		font-size: 1.2em;
+		text-align: left;
 	}
 	.archive-title {
-		font-size: 1.1em;
+		font-size: 1.2em;
+		text-align: center;
 	}
+
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -9398,15 +9407,16 @@ a[href$="#comments"],
 		width: 100%;
 		float: none;
 		padding: 0.25em;
-
-		h2 {
-			font-size: 1.2em;
-			text-align: center;
-		}
+	}
+	.page-title {
+		font-size: 1.2em;
+		text-align: left;
 	}
 	.archive-title {
-		font-size: 1.1em;
+		font-size: 1.2em;
+		text-align: center;
 	}
+
 	/* blog */
 	.event,
 	.clash-videos,
@@ -10147,15 +10157,17 @@ a[href$="#comments"],
 		width: 100%;
 		float: none;
 		padding: 0.25em;
+	}
 
-		h2 {
-			font-size: 1.1em;
-			text-align: center;
-		}
+	.page-title {
+		font-size: 1.1em;
+		text-align: left;
 	}
 	.archive-title {
 		font-size: 1.1em;
+		text-align: center;
 	}
+
 	.event,
 	.clash-videos,
 	.clash-audio,
@@ -10621,15 +10633,16 @@ a[href$="#comments"],
 		width: 100%;
 		float: none;
 		padding: 0.25em;
-
-		h2 {
-			font-size: 1.1em;
-			text-align: center;
-		}
+	}
+	.page-title {
+		font-size: 1.1em;
+		text-align: left;
 	}
 	.archive-title {
 		font-size: 1.1em;
+		text-align: center;
 	}
+
 	.event,
 	.clash-videos,
 	.clash-audio,

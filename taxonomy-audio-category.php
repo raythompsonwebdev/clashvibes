@@ -25,9 +25,7 @@ $clashvibes_audioterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_
 
 	<?php $clashvibes_archivetitle = apply_filters( 'the_title', $clashvibes_audioterm->name ); ?>
 
-	<h2 class="archive-title">Audio Category:
-		<?php echo esc_html( $clashvibes_archivetitle ); ?>
-	</h2>
+	<h2 class="archive-title"><?php esc_html( single_tag_title( 'Audio Category : ', $clashvibes_archivetitle ) ); ?> </h2>
 
 	<?php get_template_part( 'template-parts/content', 'custom' ); ?>
 

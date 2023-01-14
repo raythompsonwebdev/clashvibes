@@ -55,7 +55,6 @@
 
 				<div class="site-branding">
 
-
 					<div class="site-logo">
 						<?php $clashvibes_site_title = get_bloginfo( 'name' ); ?>
 						<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -68,12 +67,10 @@
 
 							</div>
 							<?php
-
 							if ( has_custom_logo() ) :
 								the_custom_logo();
-							else :
-
 								?>
+							<?php else : ?>
 								<div class="site-firstletter" aria-hidden="true">
 									<?php echo esc_html( substr( $clashvibes_site_title, 0, 1 ) ); ?>
 								</div>

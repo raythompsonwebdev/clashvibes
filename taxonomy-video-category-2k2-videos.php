@@ -28,9 +28,7 @@ $clashvibes_videoterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_
 
 	<?php $clashvibes_archivetitle = apply_filters( 'the_title', $clashvibes_videoterm->name ); ?>
 
-	<h2 class="archive-title">Video Category:
-		<?php echo esc_html( $clashvibes_archivetitle ); ?>
-	</h2>
+	<h2 class="archive-title"><?php esc_html( single_tag_title( 'Video Category : ', $clashvibes_archivetitle ) ); ?> </h2>
 
 	<?php get_template_part( 'template-parts/content', 'custom' ); ?>
 

@@ -22,7 +22,7 @@
 	<div>
 		<label>
 			<span class="screen-reader-text">
-				<?php echo esc_html__( 'Search', 'clashvibes' ); ?>
+				<?php esc_html_e( 'Search', 'clashvibes' ); ?>
 			</span>
 			<input type="search" class="search-field" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr__( 'Search', 'clashvibes' ); ?>" />
 		</label>

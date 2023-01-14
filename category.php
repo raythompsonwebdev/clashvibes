@@ -26,50 +26,50 @@ get_header();
 	/**
 	 * Check if there are any posts to display.
 	 */
-	if (have_posts()) :
-	?>
+	if ( have_posts() ) :
+		?>
 
-		<h2 class="archive-title"><?php single_cat_title('Category : ', 'clashvibes'); ?></h2>
+		<h2 class="archive-title"><?php single_cat_title( 'Category : ', 'clashvibes' ); ?></h2>
 
 
 		<?php
-		while (have_posts()) :
+		while ( have_posts() ) :
 			the_post();
-		?>
+			?>
 
 			<article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
 
 				<header class="entry-header">
 					<?php
-					if (is_category()) :
-						the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
+					if ( is_category() ) :
+						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 					endif;
 
-					if ('post' === get_post_type()) :
-					?>
+					if ( 'post' === get_post_type() ) :
+						?>
 						<div class="entry-meta">
 							<?php
 							clashvibes_posted_on();
 
 							?>
 						</div>
-					<?php
+						<?php
 					endif;
 					?>
 				</header>
 
 				<!--featured Image-->
-				<a href="<?php echo esc_url(get_permalink()); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+				<a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
 
-					<?php if (has_post_thumbnail()) : ?>
+					<?php if ( has_post_thumbnail() ) : ?>
 
 						<?php clashvibes_post_thumbnail(); ?>
 
 					<?php else : ?>
 
-						<a class="post-thumbnail" href="<?php echo esc_url(get_permalink()); ?>" aria-hidden="true">
+						<a class="post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" aria-hidden="true">
 
-							<img src="<?php echo esc_url(home_url('/')); ?>wp-content/uploads/sites/2/2020/12/nothing.jpg" alt="<?php esc_attr_e('No image Available', 'clashvibes'); ?>" rel="prefetch" />
+							<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/sites/2/2020/12/nothing.jpg" alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
 
 						</a>
 
@@ -86,7 +86,7 @@ get_header();
 				</div>
 
 
-				<?php if (get_edit_post_link()) : ?>
+				<?php if ( get_edit_post_link() ) : ?>
 					<footer class="entry-footer">
 						<?php clashvibes_entry_footer(); ?>
 					</footer>
@@ -96,7 +96,7 @@ get_header();
 
 		<?php endwhile; ?>
 	<?php else : ?>
-		<?php get_template_part('template-part/content', 'none'); ?>
+		<?php get_template_part( 'template-part/content', 'none' ); ?>
 
 	<?php endif; ?>
 

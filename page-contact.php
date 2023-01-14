@@ -21,9 +21,9 @@ get_header();
 
 ?>
 
-<?php
+<h2 class="page-title"><?php echo esc_html( get_the_title() ); ?></h2>
 
-esc_html( the_title( '<h2 class="page-title">', ' Page</h2>' ) );
+<?php
 
 while ( have_posts() ) :
 	the_post();

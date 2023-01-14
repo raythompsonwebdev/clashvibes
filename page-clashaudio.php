@@ -20,10 +20,7 @@
 get_header(); ?>
 
 
-<?php
-esc_html( the_title( '<h2 class="page-title">', '</h2>' ) );
-
-?>
+<h2 class="page-title"><?php echo esc_html( get_the_title() ); ?></h2>
 
 <section id="audio-releases-section">
 

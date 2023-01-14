@@ -19,7 +19,7 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 
-<h1 class="archive-title">Tag: <?php single_tag_title( '', true ); ?></h1>
+<h1 class="archive-title"><?php single_tag_title( 'Tags', true ); ?></h1>
 <main id="primary" class="site-main">
 
 	<!-- Display optional tag description-->

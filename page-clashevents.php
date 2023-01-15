@@ -40,7 +40,7 @@ get_header();
 			?>
 
 			<figure class="events-item">
-				<h4 class="events-item-title"> <?php esc_html( the_title() ); ?></h4>
+				<h3 class="events-item-title"> <?php esc_html( the_title() ); ?></h3>
 				<a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" class="attachment-event-image">
 					<?php the_post_thumbnail( 'event-image' ); ?>
 				</a>

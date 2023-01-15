@@ -39,18 +39,9 @@ get_header(); ?>
 			<figure class="video-releases-item">
 				<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'video-thumb' ) ); ?>
 				<figcaption class=" video-releases-caption">
-					<h1 class="video-releases-header">
-						<?php
-						$thetitle  = get_the_title();
-						$getlength = strlen( $thetitle );
-						$thelength = 25;
-						$subber    = substr( $thetitle, 0, $thelength );
-						echo esc_html( $subber );
-						if ( $getlength > $thelength ) {
-							echo '...';
-						}
-						?>
-					</h1>
+					<h3 class="video-releases-header">
+						<?php echo esc_html( the_title() ); ?>
+					</h3>
 					<a class="video-releases-btn" href="<?php echo esc_url( get_permalink() ); ?>">
 						<?php esc_html_e( 'View', 'clashvibes' ); ?>
 					</a>

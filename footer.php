@@ -60,6 +60,7 @@
 
 
 <div class="site-info copy">
+	<?php echo esc_html__('&copy; 2016 - Raymond Thompson - UK :', 'clashvibes'); ?>
 	<a href="<?php echo esc_url(__('https://wordpress.org/', 'clashvibes')); ?>">
 		<?php
 		/* translators: %s: CMS name, i.e. WordPress. */
@@ -68,8 +69,17 @@
 	</a>
 	<span class="sep"> | </span>
 	<?php
-	/* translators: 1: Theme name, 2: Theme author. */
-	printf(esc_html__('Theme: %1$s by %2$s.', 'clashvibes'), 'clashvibes', '<a href="https://underscores.me/">raythompsonwebdev</a>');
+	/* translators: 1: Clashvibes, 2: Raymond Thompson. */
+	printf(esc_html__('Theme: %1$s by %2$s.', 'clashvibes'), 'Clashvibes', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>');
+	?>
+	<?php
+
+	$dt = current_datetime();
+
+	$mysql_datetime = $dt->format('l jS \o\f F Y h:i:s A');
+
+	printf('Page was last updated : %s', esc_html($mysql_datetime));
+
 	?>
 </div>
 

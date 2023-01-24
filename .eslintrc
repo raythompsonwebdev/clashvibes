@@ -54,12 +54,13 @@
 		"space-in-parens": ["error", "never"],
 		"space-before-function-paren": ["error", {
 			"anonymous": "always",
-			"named": "always",
+			"named": "never",
 			"asyncArrow": "always"
 			}
 		],
-		"eslint wrap-iife": ["error", "any"],
+		"eslint wrap-iife": "off",
 		"quotes": ["error", "double"],
 		"jsx-a11y/label-has-for": 0
+
 	}
 }

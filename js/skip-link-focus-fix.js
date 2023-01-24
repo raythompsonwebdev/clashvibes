@@ -8,13 +8,14 @@
 (function () {
 	const isIe = /(trident|msie)/i.test(navigator.userAgent);
 
-	const doc = document.ownerDocument;
+	const { doc } = { ...document.ownerDocument };
 	const win = doc.defaultView || doc.parentWindow;
 
 	if (isIe && document.getElementById && win.addEventListener) {
 		win.addEventListener(
 			"hashchange",
 			() => {
+				// eslint-disable-next-line no-restricted-globals
 				const id = location.hash.substring(1);
 				let element = null;
 

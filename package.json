@@ -64,7 +64,7 @@
 		"compile:rtl": "rtlcss style.css style-rtl.css",
 		"lint:scss": "wp-scripts lint-style './sass/**/*.scss' --fix",
 		"lint:js": "wp-scripts lint-js './js/*.js' --fix",
-		"bundle": "dir-archiver --src . --dest ../clashvibes.zip --exclude .DS_Store .stylelintrc.js .eslintrc .git .gitattributes .github .gitignore postcss.config.js composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map .prettierrc .stylelintrc .editorconfig .babelrc style.min.css.map editor-style.css.map .sass-cache fonts .vscode .eslintrc"
+		"bundle": "dir-archiver --src . --dest ../clashvibes.zip --exclude .DS_Store .stylelintrc.js .eslintrc .git .gitattributes .github .gitignore postcss.config.js composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map .prettierrc .stylelintrc .editorconfig .babelrc editor-style.css.map fonts .vscode"
 	},
 	"dependencies": {
 		"@csstools/postcss-sass": "^5.0.1",

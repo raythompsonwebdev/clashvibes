@@ -50,7 +50,7 @@ $text-shadow: 1px 1px 1px $black;
 	gap: 0.2em;
 }
 
-/* mobile side menus*/
+/* mobile side menus */
 #toggle-nav,
 .sidebar-toggle {
 	width: 50%;
@@ -121,6 +121,7 @@ $text-shadow: 1px 1px 1px $black;
 	font-family: $font-main;
 	background-color: $white;
 	box-sizing: border-box;
+	margin-top: 0.25em;
 }
 
 /* header */
@@ -141,6 +142,7 @@ $text-shadow: 1px 1px 1px $black;
 	width: 100%;
 	flex: 0 0 auto;
 	display: flex;
+	height: 100%;
 }
 
 /* logo */
@@ -172,14 +174,16 @@ $text-shadow: 1px 1px 1px $black;
 			text-align: center;
 			margin: 0;
 			padding: 0;
-			height: auto;
+			height: 100%;
 		}
 	}
 }
+
 .site-logo a:focus,
 .site-logo a:hover {
 	outline: 2px solid $yellow;
 }
+
 .site-logo a:focus .site-firstletter,
 .site-logo a:hover .site-firstletter {
 	background-color: $black;
@@ -195,6 +199,7 @@ $text-shadow: 1px 1px 1px $black;
 	flex-flow: column;
 	flex: 0 0 auto;
 }
+
 /* site title */
 .site-title {
 	color: $green;
@@ -232,6 +237,7 @@ $text-shadow: 1px 1px 1px $black;
 	flex: 1 0 auto;
 	display: none;
 }
+
 .social-icon {
 	height: 100%;
 	flex: 1 0 auto;
@@ -636,6 +642,7 @@ iframe {
 	background-color: $dark-green;
 	padding-left: 0.25em;
 }
+
 .entry-footer .cat-links,
 .entry-footer .tags-links,
 .entry-footer .comments-link,
@@ -649,6 +656,7 @@ iframe {
 	line-height: 35px;
 	font-size: 0.75em;
 }
+
 a[rel="tag"],
 a[rel^="category"],
 a[href$="#respond"],
@@ -667,6 +675,7 @@ a[href$="#comments"],
 		font-weight: bold;
 	}
 }
+
 .comments-count {
 	height: 50px;
 	font-size: 1.2em;
@@ -736,7 +745,6 @@ a[href$="#comments"],
 		li {
 			list-style: none;
 			line-height: 39px;
-			height: 40px;
 			background-color: $yellow;
 			color: $black;
 			text-indent: 0;
@@ -771,6 +779,7 @@ a[href$="#comments"],
 	margin-top: 5%;
 	display: block;
 }
+
 .sd-sharing {
 	width: 98%;
 	display: flex;
@@ -913,6 +922,7 @@ a[href$="#comments"],
 		}
 	}
 }
+
 .comments-title {
 	min-height: 35px;
 	line-height: 35px;
@@ -923,32 +933,38 @@ a[href$="#comments"],
 	display: block;
 	height: auto;
 }
+
 .comment-list {
 	padding-left: 0;
 	margin: 0;
 	list-style: none;
 }
+
 .comment {
 	padding: 0;
 }
+
 .even,
 .pingback {
 	background-color: $dark-green;
 	padding: 0.25em;
 	margin-bottom: 0.5em;
 }
+
 .odd,
 .trackback {
 	background-color: $army-green;
 	padding: 0.25em;
 	margin-bottom: 0.5em;
 }
+
 .children {
 	margin: auto;
 	padding: 0;
 	width: 100%;
 	margin-left: 0;
 }
+
 .comment-body {
 	padding: 0.5em;
 	display: block;
@@ -958,6 +974,7 @@ a[href$="#comments"],
 	width: 100%;
 	margin: 0;
 }
+
 .comment-meta {
 	height: 50px;
 	margin-top: 0;
@@ -966,6 +983,7 @@ a[href$="#comments"],
 	justify-content: space-between;
 	align-items: flex-start;
 }
+
 .comment-author {
 	display: flex;
 	flex-flow: row;
@@ -1054,6 +1072,7 @@ a[href$="#comments"],
 		}
 	}
 }
+
 .reply {
 	width: 96%;
 	min-height: 35px;
@@ -1079,6 +1098,7 @@ a[href$="#comments"],
 		}
 	}
 }
+
 #respond {
 	display: block;
 	clear: both;
@@ -1202,6 +1222,7 @@ a[href$="#comments"],
 		}
 	}
 }
+
 .askimet_comment_form_privacy_notice {
 	text-align: center;
 	a {
@@ -1219,6 +1240,7 @@ a[href$="#comments"],
 		}
 	}
 }
+
 .logged-in-as {
 	a {
 		width: auto;
@@ -1234,6 +1256,7 @@ a[href$="#comments"],
 		}
 	}
 }
+
 .must-log-in {
 	width: 90%;
 	display: block;
@@ -1253,6 +1276,7 @@ a[href$="#comments"],
 		}
 	}
 }
+
 .nocomments {
 	display: block;
 	margin: 0 auto;
@@ -1262,6 +1286,7 @@ a[href$="#comments"],
 	text-align: center;
 	font-size: 1.1em;
 }
+
 /* comments end */
 
 /* login form */
@@ -1366,6 +1391,7 @@ a[href$="#comments"],
 	flex-flow: row wrap;
 	align-items: flex-start;
 }
+
 .events-item {
 	flex: 0 1 auto;
 	width: 19.25%;
@@ -1375,6 +1401,7 @@ a[href$="#comments"],
 	background-color: $white;
 	transition: $clash-transition;
 }
+
 .events-item-title {
 	margin: 0;
 	display: block;
@@ -1388,6 +1415,7 @@ a[href$="#comments"],
 	font-weight: bold;
 	line-height: 35px;
 }
+
 #events-link {
 	width: 90%;
 	text-align: center;
@@ -1408,15 +1436,18 @@ a[href$="#comments"],
 		color: $dark-green;
 	}
 }
+
 .attachment-event-image {
 	width: 90%;
 	margin: 0 auto;
 	display: block;
 }
+
 .events-item-caption {
 	height: auto;
 	display: block;
 }
+
 .events-item-txt {
 	font-size: 0.9em;
 	line-height: 1.6em;
@@ -1573,6 +1604,7 @@ a[href$="#comments"],
 	flex-flow: row wrap;
 	align-items: flex-start;
 }
+
 #top-audio-clashes,
 #top-video-clashes {
 	margin: 0;
@@ -1582,6 +1614,7 @@ a[href$="#comments"],
 	color: $black;
 	flex: 1 0 auto;
 }
+
 .top-clashes-title {
 	font-size: 1em;
 	height: 45px;
@@ -1593,6 +1626,7 @@ a[href$="#comments"],
 	background-color: $black;
 	text-indent: 0.5em;
 }
+
 .top-clash-item {
 	display: flex;
 	flex-flow: row;
@@ -1678,6 +1712,7 @@ a[href$="#comments"],
 	margin: 0;
 	padding: 0;
 }
+
 #secondary-header {
 	position: relative;
 	font-size: 1.3em;
@@ -1690,10 +1725,12 @@ a[href$="#comments"],
 	line-height: 40px;
 	letter-spacing: 0.05em;
 }
+
 /* login form */
 #clashvibes-login {
 	padding: 0.5em 0;
 }
+
 .search-form {
 	width: 98%;
 	margin: 0.5em auto;
@@ -1738,12 +1775,14 @@ a[href$="#comments"],
 	width: 96%;
 	margin: 0 auto;
 }
+
 .menu-video-nav-container,
 .menu-audio-nav-container {
 	position: unset;
 	height: auto;
 	display: block;
 }
+
 #menu-audio-nav,
 #menu-video-nav {
 	padding: 0;
@@ -1776,6 +1815,7 @@ a[href$="#comments"],
 		}
 	}
 }
+
 .widget {
 	width: 100%;
 	display: block;
@@ -1886,18 +1926,22 @@ a[href$="#comments"],
 		line-height: 35px;
 	}
 }
+
 .wp-block-image {
 	width: auto;
 	margin: 1em auto;
 }
+
 .widget_recent_entries {
 	width: 96%;
 	margin: auto;
 }
+
 .widget_categories {
 	width: 96%;
 	margin: auto;
 }
+
 .widget_archive {
 	width: 96%;
 	margin: auto;
@@ -1908,6 +1952,7 @@ a[href$="#comments"],
 		height: 35px;
 	}
 }
+
 .widget_tag_cloud {
 	width: 96%;
 	margin: 2em auto;
@@ -2113,7 +2158,6 @@ a[href$="#comments"],
 
 			.site-firstletter {
 				font-size: 4em;
-				height: auto;
 			}
 		}
 	}
@@ -2250,7 +2294,6 @@ a[href$="#comments"],
 	}
 
 	#primary {
-		float: right;
 		display: block;
 		float: right;
 		width: 78%;
@@ -3387,7 +3430,6 @@ a[href$="#comments"],
 
 			.site-firstletter {
 				font-size: 4em;
-				height: auto;
 			}
 		}
 	}
@@ -3524,7 +3566,6 @@ a[href$="#comments"],
 	}
 
 	#primary {
-		float: right;
 		display: block;
 		float: right;
 		width: 78%;
@@ -9989,7 +10030,6 @@ a[href$="#comments"],
 	}
 	#toggle-nav,
 	.sidebar-toggle {
-		line-height: 60px;
 		display: block;
 		width: 50%;
 		line-height: 50px;

@@ -58,29 +58,11 @@
 		}
 	});
 
-	// Get all the link elements within the menu.
-	const links = menu.getElementsByTagName("a");
-
-	// Get all the link elements with children within the menu.
-	const linksWithChildren = menu.querySelectorAll(
-		".menu-item-has-children > a, .page_item_has_children > a"
-	);
-
-	// Toggle focus each time a menu link is focused or blurred.
-	for (const link of links) {
-		link.addEventListener("focus", toggleFocus, true);
-		link.addEventListener("blur", toggleFocus, true);
-	}
-
-	// Toggle focus each time a menu link with children receive a touch event.
-	for (const link of linksWithChildren) {
-		link.addEventListener("touchstart", toggleFocus, false);
-	}
-
 	/**
 	 * Sets or removes .focus class on an element.
 	 *
-	 * @param  event
+	 *
+	 * @param {Object} event
 	 */
 	// eslint-disable-next-line func-style
 	function toggleFocus(event) {
@@ -101,6 +83,7 @@
 			// eslint-disable-next-line prefer-destructuring
 			const menuItem = this.parentNode;
 			event.preventDefault();
+			// eslint-disable-next-line no-restricted-syntax
 			for (const link of menuItem.parentNode.children) {
 				if (menuItem !== link) {
 					link.classList.remove("focus");
@@ -108,5 +91,26 @@
 			}
 			menuItem.classList.toggle("focus");
 		}
+	}
+
+	// Get all the link elements within the menu.
+	const links = Array.from(menu.getElementsByTagName("a"));
+
+	// Get all the link elements with children within the menu.
+	const linksWithChildren = menu.querySelectorAll(
+		".menu-item-has-children > a, .page_item_has_children > a"
+	);
+
+	// Toggle focus each time a menu link is focused or blurred.
+	// eslint-disable-next-line no-restricted-syntax
+	for (const link of links) {
+		link.addEventListener("focus", toggleFocus, true);
+		link.addEventListener("blur", toggleFocus, true);
+	}
+
+	// Toggle focus each time a menu link with children receive a touch event.
+	// eslint-disable-next-line no-restricted-syntax
+	for (const link of linksWithChildren) {
+		link.addEventListener("touchstart", toggleFocus, false);
 	}
 })();

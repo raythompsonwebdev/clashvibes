@@ -1,13 +1,13 @@
 <?php
 
 /**
- * *PHP version 8.1.9
+ * *PHP version 8.1
  *
- * Single Clash Events page | core/single-clash_events.php.
+ * Single Clash Audio page | core/single-clash_audio.php.
  *
- * @category   Single_Clash_Events_Page
+ * @category   Single_Clash_Audio_Page
  * @package    Clashvibes
- * @subpackage Single_Clash_Events_Page
+ * @subpackage Single_Clash_Audio_Page
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
@@ -17,11 +17,11 @@
 
 get_header(); ?>
 
-<?php get_sidebar( 'events' ); ?>
+<?php get_sidebar(); ?>
 
 <main id="primary" class="site-main">
 
-	<?php get_template_part( 'template-parts/content', 'events' ); ?>
+	<?php get_template_part('template-parts/content', 'single');	?>
 
 </main>
 

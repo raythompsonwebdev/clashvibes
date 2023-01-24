@@ -1,4 +1,5 @@
 /* eslint-disable-next-line no-undef */
+
 jQuery(document).ready(($) => {
 	let position;
 	let direction;

@@ -32,7 +32,7 @@ get_header(); ?>
 	$clashvibes_the_query = null;
 
 	$clashvibes_args      = array(
-		'tax_query'  => array(
+		'tax_query'      => array(
 			'relation' => 'OR',
 			array(
 				'taxonomy' => 'audio-category',
@@ -45,10 +45,8 @@ get_header(); ?>
 				'terms'    => 'new-releases',
 			),
 		),
-		'post_type'  => array('clash-audio', 'clash-videos'),
-		'post_count' => '5',
-		'post_status'    => 'publish',
-		'posts_per_page' => -1,
+
+
 	);
 	$clashvibes_the_query = new WP_Query($clashvibes_args);
 	?>
@@ -115,10 +113,8 @@ get_header(); ?>
 		<h4 class="top-clashes-title"><?php esc_html_e('Top Audio Clashes ', 'clashvibes'); ?></h5>
 			<?php
 
-			$clashvibes_the_query = null;
-			$clashvibes_args      = array(
+			$clashaudio_args      = array(
 				'tax_query'  => array(
-
 					array(
 						'taxonomy' => 'audio-category',
 						'field'    => 'slug',
@@ -128,12 +124,12 @@ get_header(); ?>
 				'post_type'  => 'clash-audio',
 				'post_count' => '5',
 			);
-			$clashvibes_the_query = new WP_Query($clashvibes_args);
+			$clashaudio_the_query = new WP_Query($clashaudio_args);
 			?>
 			<?php
-			if ($clashvibes_the_query->have_posts()) :
-				while ($clashvibes_the_query->have_posts()) :
-					$clashvibes_the_query->the_post();
+			if ($clashaudio_the_query->have_posts()) :
+				while ($clashaudio_the_query->have_posts()) :
+					$clashaudio_the_query->the_post();
 			?>
 
 					<span class="top-clash-item">
@@ -172,8 +168,8 @@ get_header(); ?>
 
 		<?php
 
-		$clashvibes_the_query = null;
-		$clashvibes_args      = array(
+		$clashvideo_the_query = null;
+		$clashvideo_args      = array(
 			'tax_query'   => array(
 
 				array(
@@ -186,13 +182,13 @@ get_header(); ?>
 			'post_status' => 'publish',
 			'post_count'  => '5',
 		);
-		$clashvibes_the_query = new WP_Query($clashvibes_args);
+		$clashvideo_the_query = new WP_Query($clashvideo_args);
 		?>
 
 		<?php
-		if ($clashvibes_the_query->have_posts()) :
-			while ($clashvibes_the_query->have_posts()) :
-				$clashvibes_the_query->the_post();
+		if ($clashvideo_the_query->have_posts()) :
+			while ($clashvideo_the_query->have_posts()) :
+				$clashvideo_the_query->the_post();
 		?>
 
 				<span class="top-clash-item">

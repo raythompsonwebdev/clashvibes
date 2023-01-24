@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-/* global wp, jQuery */
+/* global wp,  */
 /**
  * File customizer.js.
  *

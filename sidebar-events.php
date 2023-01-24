@@ -32,7 +32,7 @@
 		<?php
 		wp_nav_menu(
 			array(
-				'menu'           => 'Events-Nav',
+				'menu'           => 'Events',
 				'container'      => 'nav',
 				'theme_location' => 'events-nav',
 			)

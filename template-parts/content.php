@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
-		if (is_singular()) :
+		if (is_home() || is_single()) :
 			the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
 		endif;
 
@@ -34,18 +34,11 @@
 
 	<?php else : ?>
 
-		<figure class="post-thumbnail">
 
-			<a href="#" aria-hidden="true" title="no image available">
-
-				<img src="<?php echo esc_url(home_url('/') . 'wp-content/uploads/2022/12/no-image.jpg'); ?>" alt="<?php esc_attr_e('No image Available', 'clashvibes'); ?>" rel="prefetch" />
-
-			</a>
-		</figure><!-- featured-image -->
 	<?php endif; ?>
 	<div class="entry-content">
 		<?php
-		the_content(
+		the_excerpt(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */

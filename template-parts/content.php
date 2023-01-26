@@ -10,7 +10,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('blog-card'); ?>>
 	<header class="entry-header">
 		<?php
 		if (is_home() || is_single()) :

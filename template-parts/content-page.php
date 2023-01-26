@@ -8,6 +8,8 @@
  * @package clashvibes
  */
 
+
+
 the_content(
 	sprintf(
 		wp_kses(

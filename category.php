@@ -37,7 +37,7 @@ get_header();
 			the_post();
 			?>
 
-			<article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+			<article <?php post_class( 'blog-card' ); ?> id="post-<?php the_ID(); ?>">
 
 				<header class="entry-header">
 					<?php

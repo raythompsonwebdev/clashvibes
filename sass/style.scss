@@ -382,10 +382,15 @@ $text-shadow: 1px 1px 1px $black;
 
 /* --- Right Side content--- */
 #primary {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: stretch;
 	background-color: $yellow;
 	width: 100%;
 	float: none;
 	padding: 0.25em;
+	gap: 0.5em;
 }
 
 /* --- archive page title--- */
@@ -432,6 +437,11 @@ $text-shadow: 1px 1px 1px $black;
 	color: $black;
 	background-color: $white;
 	margin-bottom: 1%;
+}
+
+.blog-card {
+	width: 49%;
+	display: block;
 }
 
 /* --- video--- */
@@ -2294,9 +2304,9 @@ a[href$="#comments"],
 	}
 
 	#primary {
-		display: block;
 		float: right;
 		width: 78%;
+		padding: 0.5em;
 	}
 	.page-title {
 		font-size: 1.5em;
@@ -2305,7 +2315,7 @@ a[href$="#comments"],
 	.archive-title {
 		display: block;
 		font-size: 1.5em;
-		text-align: center;
+		text-align: left;
 	}
 
 	.event,
@@ -2329,8 +2339,10 @@ a[href$="#comments"],
 		display: block;
 
 		.entry-title {
-			font-size: 1.45em;
+			font-size: 1.25em;
 			line-height: 45px;
+			text-align: left;
+			text-indent: 0.25em;
 
 			a {
 				color: $white;
@@ -2528,7 +2540,7 @@ a[href$="#comments"],
 	}
 
 	.read-more {
-		width: 40%;
+		width: 90%;
 		line-height: 40px;
 		&:hover {
 			background-color: $white2;
@@ -3566,9 +3578,9 @@ a[href$="#comments"],
 	}
 
 	#primary {
-		display: block;
 		float: right;
 		width: 78%;
+		padding: 0.5em;
 	}
 	.page-title {
 		font-size: 1.4em;
@@ -3576,7 +3588,7 @@ a[href$="#comments"],
 	}
 	.archive-title {
 		font-size: 1.4em;
-		text-align: center;
+		text-align: left;
 		display: block;
 	}
 
@@ -3601,9 +3613,10 @@ a[href$="#comments"],
 		display: block;
 
 		.entry-title {
-			font-size: 1.45em;
+			font-size: 1.2em;
 			line-height: 45px;
-
+			text-align: left;
+			text-indent: 0.25em;
 			a {
 				color: $white;
 			}
@@ -3800,7 +3813,7 @@ a[href$="#comments"],
 	}
 
 	.read-more {
-		width: 40%;
+		width: 90%;
 		line-height: 40px;
 		&:hover {
 			background-color: $white2;
@@ -4703,8 +4716,8 @@ a[href$="#comments"],
 	}
 	#primary {
 		width: 78%;
-		padding: 0.5em;
 		float: right;
+		padding: 0.5em;
 	}
 	.page-title {
 		font-size: 1.4em;
@@ -4712,7 +4725,7 @@ a[href$="#comments"],
 	}
 	.archive-title {
 		font-size: 1.4em;
-		text-align: center;
+		text-align: left;
 	}
 
 	.event,
@@ -4727,9 +4740,10 @@ a[href$="#comments"],
 		display: block;
 
 		.entry-title {
-			font-size: 1.35em;
+			font-size: 1.2em;
 			line-height: 45px;
-
+			text-align: left;
+			text-indent: 0.25em;
 			a {
 				color: $white;
 			}
@@ -4845,7 +4859,7 @@ a[href$="#comments"],
 	}
 
 	.read-more {
-		width: 50%;
+		width: 90%;
 		line-height: 40px;
 	}
 
@@ -5505,7 +5519,7 @@ a[href$="#comments"],
 	}
 	.archive-title {
 		font-size: 1.2em;
-		text-align: center;
+		text-align: left;
 	}
 
 	.event,
@@ -5520,9 +5534,10 @@ a[href$="#comments"],
 		display: block;
 
 		.entry-title {
-			font-size: 1.25em;
+			font-size: 1.2em;
 			line-height: 40px;
-
+			text-align: left;
+			text-indent: 0.25em;
 			a {
 				color: $white;
 			}
@@ -5638,7 +5653,7 @@ a[href$="#comments"],
 	}
 
 	.read-more {
-		width: 55%;
+		width: 90%;
 		line-height: 40px;
 	}
 
@@ -6326,7 +6341,7 @@ a[href$="#comments"],
 	}
 	.archive-title {
 		font-size: 1.2em;
-		text-align: center;
+		text-align: left;
 	}
 
 	.event,
@@ -6343,7 +6358,8 @@ a[href$="#comments"],
 		.entry-title {
 			font-size: 1.15em;
 			line-height: 45px;
-
+			text-align: left;
+			text-indent: 0.25em;
 			a {
 				color: $white;
 			}
@@ -6460,7 +6476,7 @@ a[href$="#comments"],
 	}
 
 	.read-more {
-		width: 60%;
+		width: 90%;
 		line-height: 40px;
 	}
 
@@ -7087,7 +7103,7 @@ a[href$="#comments"],
 	}
 	.archive-title {
 		font-size: 1.2em;
-		text-align: center;
+		text-align: left;
 	}
 
 	.event,
@@ -7104,7 +7120,7 @@ a[href$="#comments"],
 		.entry-title {
 			font-size: 1.15em;
 			line-height: 45px;
-
+			text-align: left;
 			a {
 				color: $white;
 			}

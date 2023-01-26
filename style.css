@@ -706,6 +706,7 @@ select {
 .post,
 .page {
 	margin: 0 0 1.5em;
+	width: 100%;
 }
 
 .updated:not(.published) {
@@ -948,7 +949,7 @@ select {
 	gap: 0.2em;
 }
 
-/* mobile side menus*/
+/* mobile side menus */
 #toggle-nav,
 .sidebar-toggle {
 	width: 50%;
@@ -1285,10 +1286,15 @@ select {
 
 /* --- Right Side content--- */
 #primary {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: stretch;
 	background-color: #fdd015;
 	width: 100%;
 	float: none;
 	padding: 0.25em;
+	gap: 0.5em;
 }
 
 /* --- archive page title--- */
@@ -1337,6 +1343,11 @@ select {
 	color: #262626;
 	background-color: #ffffff;
 	margin-bottom: 1%;
+}
+
+.blog-card {
+	width: 49%;
+	display: block;
 }
 
 /* --- video--- */
@@ -1694,7 +1705,6 @@ a[href$="#comments"]:hover,
 .speaker-meta .post-meta li {
 	list-style: none;
 	line-height: 39px;
-	height: 40px;
 	background-color: #fdd015;
 	color: #262626;
 	text-indent: 0;
@@ -3317,9 +3327,8 @@ a[href$="#comments"]:hover,
 	}
 	#primary {
 		float: right;
-		display: block;
-		float: right;
 		width: 78%;
+		padding: 0.5em;
 	}
 	.page-title {
 		font-size: 1.5em;
@@ -3328,7 +3337,7 @@ a[href$="#comments"]:hover,
 	.archive-title {
 		display: block;
 		font-size: 1.5em;
-		text-align: center;
+		text-align: left;
 	}
 	.event,
 	.clash-videos,
@@ -3350,8 +3359,10 @@ a[href$="#comments"]:hover,
 		display: block;
 	}
 	.entry-header .entry-title {
-		font-size: 1.45em;
+		font-size: 1.25em;
 		line-height: 45px;
+		text-align: left;
+		text-indent: 0.25em;
 	}
 	.entry-header .entry-title a {
 		color: #ffffff;
@@ -3551,7 +3562,7 @@ a[href$="#comments"]:hover,
 		text-align: center;
 	}
 	.read-more {
-		width: 40%;
+		width: 90%;
 		line-height: 40px;
 	}
 	.read-more:hover {
@@ -4539,9 +4550,8 @@ a[href$="#comments"]:hover,
 	}
 	#primary {
 		float: right;
-		display: block;
-		float: right;
 		width: 78%;
+		padding: 0.5em;
 	}
 	.page-title {
 		font-size: 1.4em;
@@ -4549,7 +4559,7 @@ a[href$="#comments"]:hover,
 	}
 	.archive-title {
 		font-size: 1.4em;
-		text-align: center;
+		text-align: left;
 		display: block;
 	}
 	.event,
@@ -4572,8 +4582,10 @@ a[href$="#comments"]:hover,
 		display: block;
 	}
 	.entry-header .entry-title {
-		font-size: 1.45em;
+		font-size: 1.2em;
 		line-height: 45px;
+		text-align: left;
+		text-indent: 0.25em;
 	}
 	.entry-header .entry-title a {
 		color: #ffffff;
@@ -4773,7 +4785,7 @@ a[href$="#comments"]:hover,
 		text-align: center;
 	}
 	.read-more {
-		width: 40%;
+		width: 90%;
 		line-height: 40px;
 	}
 	.read-more:hover {
@@ -5633,8 +5645,8 @@ a[href$="#comments"]:hover,
 	}
 	#primary {
 		width: 78%;
-		padding: 0.5em;
 		float: right;
+		padding: 0.5em;
 	}
 	.page-title {
 		font-size: 1.4em;
@@ -5642,7 +5654,7 @@ a[href$="#comments"]:hover,
 	}
 	.archive-title {
 		font-size: 1.4em;
-		text-align: center;
+		text-align: left;
 	}
 	.event,
 	.clash-videos,
@@ -5656,8 +5668,10 @@ a[href$="#comments"]:hover,
 		display: block;
 	}
 	.entry-header .entry-title {
-		font-size: 1.35em;
+		font-size: 1.2em;
 		line-height: 45px;
+		text-align: left;
+		text-indent: 0.25em;
 	}
 	.entry-header .entry-title a {
 		color: #ffffff;
@@ -5776,7 +5790,7 @@ a[href$="#comments"]:hover,
 		width: 98%;
 	}
 	.read-more {
-		width: 50%;
+		width: 90%;
 		line-height: 40px;
 	}
 	.speaker-meta .post-meta {
@@ -6353,7 +6367,7 @@ a[href$="#comments"]:hover,
 	}
 	.archive-title {
 		font-size: 1.2em;
-		text-align: center;
+		text-align: left;
 	}
 	.event,
 	.clash-videos,
@@ -6367,8 +6381,10 @@ a[href$="#comments"]:hover,
 		display: block;
 	}
 	.entry-header .entry-title {
-		font-size: 1.25em;
+		font-size: 1.2em;
 		line-height: 40px;
+		text-align: left;
+		text-indent: 0.25em;
 	}
 	.entry-header .entry-title a {
 		color: #ffffff;
@@ -6487,7 +6503,7 @@ a[href$="#comments"]:hover,
 		width: 98%;
 	}
 	.read-more {
-		width: 55%;
+		width: 90%;
 		line-height: 40px;
 	}
 	.speaker-meta {
@@ -7083,7 +7099,7 @@ a[href$="#comments"]:hover,
 	}
 	.archive-title {
 		font-size: 1.2em;
-		text-align: center;
+		text-align: left;
 	}
 	.event,
 	.clash-videos,
@@ -7099,6 +7115,8 @@ a[href$="#comments"]:hover,
 	.entry-header .entry-title {
 		font-size: 1.15em;
 		line-height: 45px;
+		text-align: left;
+		text-indent: 0.25em;
 	}
 	.entry-header .entry-title a {
 		color: #ffffff;
@@ -7217,7 +7235,7 @@ a[href$="#comments"]:hover,
 		width: 98%;
 	}
 	.read-more {
-		width: 60%;
+		width: 90%;
 		line-height: 40px;
 	}
 	.speaker-meta .post-meta {
@@ -7760,7 +7778,7 @@ a[href$="#comments"]:hover,
 	}
 	.archive-title {
 		font-size: 1.2em;
-		text-align: center;
+		text-align: left;
 	}
 	.event,
 	.clash-videos,
@@ -7776,6 +7794,7 @@ a[href$="#comments"]:hover,
 	.entry-header .entry-title {
 		font-size: 1.15em;
 		line-height: 45px;
+		text-align: left;
 	}
 	.entry-header .entry-title a {
 		color: #ffffff;
@@ -10404,7 +10423,6 @@ a[href$="#comments"]:hover,
 	}
 	#toggle-nav,
 	.sidebar-toggle {
-		line-height: 60px;
 		display: block;
 		width: 50%;
 		line-height: 50px;

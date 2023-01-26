@@ -18,66 +18,87 @@
 get_header(); ?>
 
 
+<?php get_sidebar( 'events' ); ?>
 
-<h2 class="page-title"><?php single_cat_title('', true) ?></h2>
-
-
-<div class="events-lists">
+<main id="primary" class="site-main">
 
 	<?php
-	$clashvibes_the_query = null;
+	/**
+	 * Check if there are any posts to display.
+	 */
+	if ( have_posts() ) :
+		?>
 
-	$clashvibes_args      = array(
-		'post_type'  => 'post',
-		'category_name' => 'clash-events',
-		'post_count'     => '5',
-		'post_status'    => 'publish',
-		'posts_per_page' => -1,
-	);
-	$clashvibes_the_query = new WP_Query($clashvibes_args);
+		<h2 class="archive-title"><?php single_cat_title( 'Category : ', 'clashvibes' ); ?></h2>
 
-	if ($clashvibes_the_query->have_posts()) :
-		while ($clashvibes_the_query->have_posts()) :
-			$clashvibes_the_query->the_post();
-	?>
 
-			<figure class="events-item">
-				<h3 class="events-item-title"> <?php esc_html(the_title()); ?></h3>
-				<a href="<?php echo esc_url(get_permalink()); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" class="attachment-event-image">
-					<?php the_post_thumbnail('event-image'); ?>
+		<?php
+		while ( have_posts() ) :
+			the_post();
+			?>
+
+			<article <?php post_class( 'blog-card' ); ?> id="post-<?php the_ID(); ?>">
+
+				<header class="entry-header">
+					<?php
+					if ( is_category() ) :
+						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+					endif;
+
+					if ( 'post' === get_post_type() ) :
+						?>
+						<div class="entry-meta">
+							<?php
+							clashvibes_posted_on();
+
+							?>
+						</div>
+						<?php
+					endif;
+					?>
+				</header>
+
+				<!--featured Image-->
+				<a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+
+					<?php if ( has_post_thumbnail() ) : ?>
+
+						<?php clashvibes_post_thumbnail(); ?>
+
+					<?php else : ?>
+
+
+
+					<?php endif; ?>
+
 				</a>
-				<figcaption class="events-item-caption">
 
-					<p class="events-item-txt"></p>
-					<a href="<?php echo esc_url(get_permalink()); ?>" id="events-link">See details</a>
-				</figcaption>
+				<div class="entry-content">
+					<?php
+					the_excerpt();
 
-			</figure>
+					?>
+
+				</div>
+
+
+				<?php if ( get_edit_post_link() ) : ?>
+					<footer class="entry-footer">
+						<?php clashvibes_entry_footer(); ?>
+					</footer>
+				<?php endif; ?>
+
+			</article>
 
 		<?php endwhile; ?>
-
 	<?php else : ?>
+		<?php get_template_part( 'template-part/content', 'none' ); ?>
 
-		<article class="events_box">
-			<figure class="events">
-				<figcaption class="event-text">
-					<h4><?php echo esc_html__('No Events', 'clashvibes'); ?></h4>
-				</figcaption>
-			</figure>
-		</article>
-
-	<?php
-	endif;
-	wp_reset_postdata();
-	?>
+	<?php endif; ?>
 
 
 
 
-
-
-
-
-</div>
+</main>
 
 <?php get_footer(); ?>

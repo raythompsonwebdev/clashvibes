@@ -47,8 +47,6 @@ get_header(); ?>
 		while ($new_clashes_query->have_posts()) :
 			$new_clashes_query->the_post();
 
-			var_dump($new_clashes_query);
-
 	?>
 			<figure class="new-releases-item">
 

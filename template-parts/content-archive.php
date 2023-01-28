@@ -35,18 +35,11 @@
 
 	<?php else : ?>
 
-		<figure class="post-thumbnail">
 
-			<a href="#" aria-hidden="true" title="no image available">
-
-				<img src="<?php echo esc_url(home_url('/') . 'wp-content/uploads/2022/12/no-image.jpg'); ?>" alt="<?php esc_attr_e('No image Available', 'clashvibes'); ?>" rel="prefetch" />
-
-			</a>
-		</figure><!-- featured-image -->
 	<?php endif; ?>
 	<div class="entry-content">
 		<?php
-		the_content(
+		the_excerpt(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */

@@ -8,7 +8,7 @@ Tags: custom-header, editor-style, left-sidebar, flexible-header, custom-backgro
 Version: 2.0
 Requires at least: 5.9
 Tested up to: 6.2
-Requires PHP: 8.1.9
+Requires PHP: 8.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: clashvibes
@@ -165,7 +165,9 @@ h1 {
 
 /* Grouping content
 			========================================================================== */
+
 /**
+
 		* 1. Add the correct box sizing in Firefox.
 		* 2. Show the overflow in Edge and IE.
 		*/
@@ -427,7 +429,8 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -8087,7 +8090,10 @@ a[href$="#comments"]:hover,
 		font-size: 0.8em;
 		line-height: 20px;
 	}
-	#respond #commentform .comment-form-cookies-consent #wp-comment-cookies-consent {
+	#respond
+		#commentform
+		.comment-form-cookies-consent
+		#wp-comment-cookies-consent {
 		display: inline-block;
 	}
 	#respond #commentform .form-submit {

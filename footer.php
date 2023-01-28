@@ -61,17 +61,19 @@
 
 <div class="site-info copy">
 	<?php echo esc_html__('&copy; 2016 - Raymond Thompson - UK :', 'clashvibes'); ?>
-	<a href="<?php echo esc_url(__('https://wordpress.org/', 'clashvibes')); ?>">
+
+	<?php
+	/* translators: %s: CMS name, i.e. WordPress. */
+	printf(esc_html__('Proudly powered by %s', 'clashvibes'), 'WordPress');
+	?>
+
+	<span class="sep"> | </span>
+	<a href="http://www.raythompsonwebdev.co.uk" rel="designer">
 		<?php
-		/* translators: %s: CMS name, i.e. WordPress. */
-		printf(esc_html__('Proudly powered by %s', 'clashvibes'), 'WordPress');
+		/* translators: 1: Clashvibes, 2: Raymond Thompson. */
+		printf(esc_html__('Theme: %1$s by %2$s.', 'clashvibes'), 'Clashvibes', 'Raymond Thompson.');
 		?>
 	</a>
-	<span class="sep"> | </span>
-	<?php
-	/* translators: 1: Clashvibes, 2: Raymond Thompson. */
-	printf(esc_html__('Theme: %1$s by %2$s.', 'clashvibes'), 'Clashvibes', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>');
-	?>
 	<?php
 
 	$dt = current_datetime();

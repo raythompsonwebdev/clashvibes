@@ -29,36 +29,40 @@ get_header(); ?>
 
 	<?php
 
-	$clashvibes_the_query = null;
-
-	$clashvibes_args = array(
+	$new_releases_args = array(
 		'post_type'      => 'post',
-		'category_name'  => 'audio-clashes',
+		'category_name'  => 'new releases',
 		'post_count'     => '5',
 		'post_status'    => 'publish',
 		'posts_per_page' => -1,
 	);
 
-	$new_clashes = get_posts($clashvibes_args);
+	$new_clashes_query = new WP_Query($new_releases_args);
 	?>
 
 	<?php
-	if ($new_clashes) :
-		foreach ($new_clashes as $new_clash) :
 
-			setup_postdata($new_clash);
+
+	if ($new_clashes_query->have_posts()) :
+		while ($new_clashes_query->have_posts()) :
+			$new_clashes_query->the_post();
+
+			var_dump($new_clashes_query);
 
 	?>
 			<figure class="new-releases-item">
 
-				<?php the_post_thumbnail('thumbnail', array('class' => 'new-release-thumb')); ?>
+				<?php
+				the_post_thumbnail('thumbnail', array('class' => 'new-release-thumb'));
+				?>
+
 
 				<figcaption class="new-releases-caption">
 					<h3 class="new-releases-header">
 						<?php echo esc_html(the_title()); ?>
 					</h3>
 
-					<?php if ('clash-audio' === get_post_type()) : ?>
+					<?php if (is_category('audio-clashes')) : ?>
 						<a class="new-release-btn" href=" <?php echo esc_url(get_permalink(), 'clashvibes'); ?> " title="Listen to <?php the_title_attribute(); ?>">
 							<?php esc_html_e('Listen', 'clashvibes'); ?></a>
 
@@ -71,10 +75,10 @@ get_header(); ?>
 				</figcaption>
 
 			</figure>
-		<?php
-		endforeach;
-		wp_reset_postdata();
-		?>
+			<?php
+			wp_reset_postdata();
+			?>
+		<?php endwhile; ?>
 	<?php else : ?>
 
 		<article class="new-releases-item">
@@ -104,22 +108,20 @@ get_header(); ?>
 		<h4 class="top-clashes-title"><?php esc_html_e('Top Audio Clashes ', 'clashvibes'); ?></h5>
 			<?php
 
-			$clashaudio_args = array(
+			$top_audio_args  = array(
 				'post_type'      => 'post',
-				'category_name'  => 'audio-clashes',
+				'category_name'  => 'top-audio',
 				'post_count'     => '5',
 				'post_status'    => 'publish',
 				'posts_per_page' => -1,
 			);
-
-			$audio_clashes = get_posts($clashaudio_args);
+			$top_audio_query = new WP_Query($top_audio_args);
 
 			?>
 			<?php
-			if ($audio_clashes) {
-				foreach ($audio_clashes as $audio_clash) :
-
-					setup_postdata($audio_clash);
+			if ($top_audio_query->have_posts()) :
+				while ($top_audio_query->have_posts()) :
+					$top_audio_query->the_post();
 			?>
 					<span class="top-clash-item">
 
@@ -138,16 +140,15 @@ get_header(); ?>
 						</a>
 
 					</span>
-				<?php
-				endforeach;
-
-				wp_reset_postdata();
-			} else {
-				?>
+					<?php
+					wp_reset_postdata();
+					?>
+				<?php endwhile; ?>
+			<?php else : ?>
 
 				<p><?php esc_html_e('Oops! There are no posts to display.', 'clashvibes'); ?></p>
 
-			<?php	} ?>
+			<?php endif; ?>
 
 	</section>
 
@@ -157,22 +158,22 @@ get_header(); ?>
 
 		<?php
 
-		$clashvideo_the_query = null;
-		$clashvideo_args      = array(
+		$top_video_args = null;
+		$top_video_args = array(
 			'post_type'      => 'post',
-			'category_name'  => 'top-videos',
+			'category_name'  => 'top-video',
 			'post_count'     => '5',
 			'post_status'    => 'publish',
 			'posts_per_page' => -1,
 
 		);
-		$clashvideo_the_query = new WP_Query($clashvideo_args);
+		$top_video_query = new WP_Query($top_video_args);
 		?>
 
 		<?php
-		if ($clashvideo_the_query->have_posts()) :
-			while ($clashvideo_the_query->have_posts()) :
-				$clashvideo_the_query->the_post();
+		if ($top_video_query->have_posts()) :
+			while ($top_video_query->have_posts()) :
+				$top_video_query->the_post();
 		?>
 
 				<span class="top-clash-item">

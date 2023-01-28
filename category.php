@@ -18,7 +18,18 @@
 get_header();
 ?>
 
-<?php get_sidebar(); ?>
+<?php
+
+if (is_category('audio-clashes')) :
+	get_sidebar('audio');
+elseif (is_category('video-clashes')) :
+	get_sidebar('video');
+elseif (is_category('clash-events')) :
+	get_sidebar('events');
+else :
+	get_sidebar();
+endif;
+?>
 
 <main id="primary" class="site-main">
 
@@ -41,9 +52,7 @@ get_header();
 
 				<header class="entry-header">
 					<?php
-					if (is_category()) :
-						the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
-					endif;
+					the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
 
 					if ('post' === get_post_type()) :
 					?>
@@ -66,12 +75,6 @@ get_header();
 						<?php clashvibes_post_thumbnail(); ?>
 
 					<?php else : ?>
-
-						<a class="post-thumbnail" href="<?php echo esc_url(get_permalink()); ?>" aria-hidden="true">
-
-							<img src="<?php echo esc_url(home_url('/')); ?>wp-content/uploads/sites/2/2020/12/nothing.jpg" alt="<?php esc_attr_e('No image Available', 'clashvibes'); ?>" rel="prefetch" />
-
-						</a>
 
 					<?php endif; ?>
 

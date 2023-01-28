@@ -281,13 +281,13 @@ function clashvibes_the_excerpt_more_link($excerpt)
 {
 	$post = get_post();
 
-	if (is_tax('video-category')) {
+	if (is_category('video-clashes')) {
 
-		$excerpt .= '<a class="read-more" href="' . get_permalink($post->ID) . '">Continue Watching: ' . get_the_title($post->ID) . '</a>';
+		$excerpt .= '<a class="read-more" href="' . get_permalink($post->ID) . '">Continue watching: ' . get_the_title($post->ID) . '</a>';
 		return $excerpt;
-	} elseif (is_tax('audio-category')) {
+	} elseif (is_category('audio-clashes')) {
 
-		$excerpt .= '<a class="read-more" href="' . get_permalink($post->ID) . '">Continue Listening: ' . get_the_title($post->ID) . '</a>';
+		$excerpt .= '<a class="read-more" href="' . get_permalink($post->ID) . '">Continue listening to: ' . get_the_title($post->ID) . '</a>';
 		return $excerpt;
 	} else {
 		$excerpt .= '<a class="read-more" href="' . get_permalink($post->ID) . '">continue reading: ' . get_the_title($post->ID) . '</a>';

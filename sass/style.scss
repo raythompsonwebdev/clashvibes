@@ -290,12 +290,13 @@ $text-shadow: 1px 1px 1px $black;
 		height: 50px;
 
 		a {
-			font-size: 0.9em;
+			font-size: 1em;
 			line-height: 50px;
 			background-color: $black;
 			color: $white;
 			text-align: center;
 			display: block;
+			text-decoration: none;
 			&:hover {
 				cursor: pointer;
 				background-color: $white;
@@ -399,7 +400,6 @@ $text-shadow: 1px 1px 1px $black;
 	line-height: 50px;
 	width: 100%;
 	color: $black;
-	background-color: $white;
 	margin: 0;
 	font-size: 1.1em;
 	text-align: left;
@@ -412,7 +412,7 @@ $text-shadow: 1px 1px 1px $black;
 	line-height: 50px;
 	width: 100%;
 	color: $black;
-	background-color: $white;
+	font-weight: bold;
 	margin: 0;
 	font-size: 1.1em;
 	text-align: center;
@@ -723,12 +723,12 @@ a[href$="#comments"],
 	text-decoration: none;
 	width: 90%;
 	height: auto;
-	line-height: 35px;
+	line-height: 30px;
 	margin: 1em auto;
 	color: $white2;
 	text-align: center;
 	background-color: $black;
-	font-size: 0.85em;
+	font-size: 0.75em;
 	&:hover {
 		background-color: $white2;
 		color: $black;
@@ -1829,13 +1829,14 @@ a[href$="#comments"],
 .widget {
 	width: 100%;
 	display: block;
+
 	.tagcloud {
 		a {
 			width: auto;
 		}
 	}
 
-	.widgettitle {
+	.widget-title {
 		background-color: $army-green;
 		text-align: center;
 		height: 40px;
@@ -1857,6 +1858,27 @@ a[href$="#comments"],
 					width: 100%;
 				}
 			}
+		}
+	}
+
+	a {
+		padding: 0;
+		margin: 0;
+		height: 100%;
+		width: auto;
+		text-align: center;
+		display: inline-block;
+		text-decoration: none;
+		color: $white;
+		transition: $clash-transition;
+		font-size: 0.9em;
+		text-decoration: none;
+
+		&:hover {
+			font-weight: bold;
+		}
+		&:active {
+			color: $yellow;
 		}
 	}
 
@@ -1886,28 +1908,14 @@ a[href$="#comments"],
 			.rss-date {
 				clear: both;
 				display: block;
+				color: $black;
+				background-color: $white;
+				font-weight: bold;
 			}
 
-			a {
-				padding: 0;
-				margin: 0;
-				height: 100%;
-				width: auto;
-				text-align: center;
-				display: inline-block;
-				text-decoration: none;
-				background-color: $black;
-				color: $white;
-				transition: $clash-transition;
-				font-size: 0.9em;
-				font-size: 100%;
-
-				&:hover {
-					font-weight: bold;
-				}
-				&:active {
-					background-color: $yellow;
-				}
+			.rssSummary {
+				color: $black;
+				background-color: $white;
 			}
 
 			.url {
@@ -2540,8 +2548,8 @@ a[href$="#comments"],
 	}
 
 	.read-more {
-		width: 90%;
 		line-height: 40px;
+		font-size: 1em;
 		&:hover {
 			background-color: $white2;
 			color: $black;
@@ -3220,7 +3228,7 @@ a[href$="#comments"],
 			}
 		}
 
-		.widgettitle {
+		.widget-title {
 			height: 40px;
 			line-height: 40px;
 			font-size: 1.2em;
@@ -3237,6 +3245,10 @@ a[href$="#comments"],
 					}
 				}
 			}
+		}
+
+		a {
+			font-size: 1rem;
 		}
 
 		ul,
@@ -3256,17 +3268,6 @@ a[href$="#comments"],
 				.rss-date {
 					clear: both;
 					display: block;
-				}
-
-				a {
-					font-size: 0.9em;
-
-					&:hover {
-						font-weight: bold;
-					}
-					&:active {
-						background-color: $yellow;
-					}
 				}
 
 				.url {
@@ -3813,8 +3814,8 @@ a[href$="#comments"],
 	}
 
 	.read-more {
-		width: 90%;
 		line-height: 40px;
+		font-size: 1em;
 		&:hover {
 			background-color: $white2;
 			color: $black;
@@ -4493,7 +4494,7 @@ a[href$="#comments"],
 			}
 		}
 
-		.widgettitle {
+		.widget-title {
 			height: 40px;
 			line-height: 40px;
 			font-size: 1.2em;
@@ -4510,6 +4511,10 @@ a[href$="#comments"],
 					}
 				}
 			}
+		}
+
+		a {
+			font-size: 1rem;
 		}
 
 		ul,
@@ -4529,17 +4534,6 @@ a[href$="#comments"],
 				.rss-date {
 					clear: both;
 					display: block;
-				}
-
-				a {
-					font-size: 0.9em;
-
-					&:hover {
-						font-weight: bold;
-					}
-					&:active {
-						background-color: $yellow;
-					}
 				}
 
 				.url {
@@ -4859,8 +4853,8 @@ a[href$="#comments"],
 	}
 
 	.read-more {
-		width: 90%;
 		line-height: 40px;
+		font-size: 1em;
 	}
 
 	.speaker-meta {
@@ -5331,8 +5325,12 @@ a[href$="#comments"],
 		width: 100%;
 		display: block;
 
-		.widgettitle {
+		.widget-title {
 			font-size: 1.15em;
+		}
+
+		a {
+			font-size: 1rem;
 		}
 
 		ul,
@@ -5345,14 +5343,6 @@ a[href$="#comments"],
 				font-size: 0.9em;
 				.comment-author-link {
 					height: 100%;
-				}
-
-				a {
-					font-size: 1em;
-
-					&:hover {
-						font-weight: bold;
-					}
 				}
 
 				.url {
@@ -5653,8 +5643,8 @@ a[href$="#comments"],
 	}
 
 	.read-more {
-		width: 90%;
 		line-height: 40px;
+		font-size: 1em;
 	}
 
 	.speaker-meta {
@@ -6157,8 +6147,12 @@ a[href$="#comments"],
 	.widget {
 		width: 100%;
 
-		.widgettitle {
+		.widget-title {
 			font-size: 1.1em;
+		}
+
+		a {
+			font-size: 1rem;
 		}
 
 		ul,
@@ -6171,13 +6165,6 @@ a[href$="#comments"],
 				font-size: 1em;
 				.comment-author-link {
 					height: 100%;
-				}
-
-				a {
-					font-size: 1em;
-					&:hover {
-						font-weight: bold;
-					}
 				}
 
 				.url {
@@ -6476,8 +6463,8 @@ a[href$="#comments"],
 	}
 
 	.read-more {
-		width: 90%;
 		line-height: 40px;
+		font-size: 1em;
 	}
 
 	.speaker-meta {
@@ -6936,8 +6923,12 @@ a[href$="#comments"],
 	.widget {
 		width: 100%;
 
-		.widgettitle {
+		.widget-title {
 			font-size: 1.1em;
+		}
+
+		a {
+			font-size: 0.9rem;
 		}
 
 		ul,
@@ -6949,12 +6940,6 @@ a[href$="#comments"],
 			.recentcomments {
 				.comment-author-link {
 					height: 100%;
-				}
-
-				a {
-					&:hover {
-						font-weight: bold;
-					}
 				}
 
 				.url {
@@ -7236,9 +7221,8 @@ a[href$="#comments"],
 		width: 98%;
 	}
 	.read-more {
-		width: 90%;
 		font-size: 0.9em;
-		line-height: 40px;
+		line-height: 30px;
 	}
 	.speaker-meta {
 		height: auto;
@@ -7695,8 +7679,12 @@ a[href$="#comments"],
 	.widget {
 		width: 100%;
 
-		.widgettitle {
+		.widget-title {
 			font-size: 1em;
+		}
+
+		a {
+			font-size: 0.85rem;
 		}
 
 		ul,
@@ -7710,13 +7698,6 @@ a[href$="#comments"],
 
 				.comment-author-link {
 					height: 100%;
-				}
-
-				a {
-					font-size: 0.85em;
-					&:hover {
-						font-weight: bold;
-					}
 				}
 
 				.url {
@@ -7873,7 +7854,7 @@ a[href$="#comments"],
 			height: 50px;
 
 			a {
-				font-size: 0.9em;
+				font-size: 1em;
 				line-height: 50px;
 				&:hover {
 					cursor: pointer;
@@ -7949,8 +7930,12 @@ a[href$="#comments"],
 		width: 100%;
 		display: block;
 
-		.widgettitle {
+		.widget-title {
 			font-size: 1.1em;
+		}
+
+		a {
+			font-size: 0.85rem;
 		}
 
 		ul,
@@ -7962,13 +7947,6 @@ a[href$="#comments"],
 			.recentcomments {
 				.comment-author-link {
 					height: 100%;
-				}
-
-				a {
-					font-size: 0.85em;
-					&:hover {
-						font-weight: bold;
-					}
 				}
 
 				.url {
@@ -8120,9 +8098,8 @@ a[href$="#comments"],
 		width: 98%;
 	}
 	.read-more {
-		width: 90%;
-		font-size: 0.85em;
-		line-height: 35px;
+		font-size: 0.9em;
+		line-height: 30px;
 	}
 
 	.speaker-meta {
@@ -8624,9 +8601,8 @@ a[href$="#comments"],
 			height: 50px;
 
 			a {
-				font-size: 0.9em;
+				font-size: 1em;
 				line-height: 50px;
-
 				&:hover {
 					line-height: 50px;
 				}
@@ -8690,8 +8666,12 @@ a[href$="#comments"],
 		width: 100%;
 		display: block;
 
-		.widgettitle {
+		.widget-title {
 			font-size: 1.1em;
+		}
+
+		a {
+			font-size: 0.85rem;
 		}
 
 		ul,
@@ -8703,12 +8683,6 @@ a[href$="#comments"],
 			.recentcomments {
 				.comment-author-link {
 					height: 100%;
-				}
-
-				a {
-					&:hover {
-						font-weight: bold;
-					}
 				}
 
 				.url {
@@ -9365,7 +9339,7 @@ a[href$="#comments"],
 			height: 45px;
 
 			a {
-				font-size: 0.9em;
+				font-size: 1em;
 				line-height: 45px;
 				&:hover {
 					line-height: 45px;
@@ -9430,8 +9404,12 @@ a[href$="#comments"],
 		width: 100%;
 		display: block;
 
-		.widgettitle {
+		.widget-title {
 			font-size: 1.1em;
+		}
+
+		a {
+			font-size: 0.85rem;
 		}
 
 		ul,
@@ -9443,12 +9421,6 @@ a[href$="#comments"],
 			.recentcomments {
 				.comment-author-link {
 					height: 100%;
-				}
-
-				a {
-					&:hover {
-						font-weight: bold;
-					}
 				}
 
 				.url {
@@ -9488,7 +9460,7 @@ a[href$="#comments"],
 
 		.entry-title {
 			text-align: center;
-			font-size: 1.1em;
+			font-size: 1em;
 			line-height: 40px;
 
 			a {
@@ -10112,8 +10084,7 @@ a[href$="#comments"],
 
 		.menu-item {
 			a {
-				font-size: 0.9em;
-
+				font-size: 1em;
 				&:hover {
 					line-height: 40px;
 				}
@@ -10178,8 +10149,12 @@ a[href$="#comments"],
 		width: 100%;
 		display: block;
 
-		.widgettitle {
+		.widget-title {
 			font-size: 1.1em;
+		}
+
+		a {
+			font-size: 0.8rem;
 		}
 
 		ul,
@@ -10191,13 +10166,6 @@ a[href$="#comments"],
 			.recentcomments {
 				.comment-author-link {
 					height: 100%;
-				}
-
-				a {
-					font-size: 0.8em;
-					&:hover {
-						font-weight: bold;
-					}
 				}
 
 				.url {
@@ -10237,7 +10205,7 @@ a[href$="#comments"],
 
 		.entry-title {
 			text-align: center;
-			font-size: 1.1em;
+			font-size: 1em;
 			line-height: 35px;
 
 			a {
@@ -10322,9 +10290,8 @@ a[href$="#comments"],
 	}
 
 	.read-more {
-		width: 90%;
-		font-size: 0.85em;
-		line-height: 35px;
+		font-size: 0.8em;
+		line-height: 30px;
 	}
 
 	.speaker-meta {
@@ -10590,8 +10557,7 @@ a[href$="#comments"],
 
 		.menu-item {
 			a {
-				font-size: 0.9em;
-
+				font-size: 1em;
 				&:hover {
 					line-height: 40px;
 				}
@@ -10655,8 +10621,12 @@ a[href$="#comments"],
 		width: 100%;
 		display: block;
 
-		.widgettitle {
+		.widget-title {
 			font-size: 1.1em;
+		}
+
+		a {
+			font-size: 0.8em;
 		}
 
 		ul,
@@ -10668,12 +10638,6 @@ a[href$="#comments"],
 			.recentcomments {
 				.comment-author-link {
 					height: 100%;
-				}
-
-				a {
-					&:hover {
-						font-weight: bold;
-					}
 				}
 
 				.url {

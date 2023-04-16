@@ -8,10 +8,6 @@
  * @author  Raymond Thompson <raymond.thompson@raythompsonwebdev.co.uk>
  */
 
-if (!defined('CLASHVIBES_VERSION')) {
-	define('CLASHVIBES_VERSION', '1.0.0');
-}
-
 /**
  * Returns a custom login error message.
  */
@@ -347,7 +343,7 @@ function clashvibes_scripts()
 	}
 
 	// mobile main menu script for mobile menu.
-	wp_enqueue_script('main-mobile', get_template_directory_uri() . '/js/mobile-mainnav-es6.js', array(), filemtime(get_template_directory() . '/style.css'), false);
+	wp_enqueue_script('main-mobile', get_template_directory_uri() . '/js/mobile-mainnav-es6.js', array(), '1.0', false);
 
 	// mobile main menu script for built in mobile menu.
 	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), filemtime(get_template_directory() . '/style.css'), false);

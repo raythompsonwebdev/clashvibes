@@ -19,11 +19,11 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 
-<h1 class="archive-title"><?php single_tag_title('Tags', true); ?></h1>
+<h1 class="archive-title"><?php single_tag_title( 'Tags', true ); ?></h1>
 <main id="primary" class="site-main">
 
 	<!-- Display optional tag description-->
-	<?php if (tag_description()) : ?>
+	<?php if ( tag_description() ) : ?>
 
 		<div class="archive-meta"><?php echo tag_description(); ?></div>
 
@@ -31,7 +31,7 @@ get_header(); ?>
 
 	<?php
 
-	get_template_part('template-parts/content', get_post_format());
+	get_template_part( 'template-parts/content', get_post_format() );
 
 	?>
 

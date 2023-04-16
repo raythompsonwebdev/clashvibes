@@ -19,13 +19,13 @@
 get_header(); ?>
 
 
-<h2 class="page-title"><?php echo esc_html(get_the_title()); ?></h2>
+<h2 class="page-title"><?php echo esc_html( get_the_title() ); ?></h2>
 
 <?php
-while (have_posts()) :
+while ( have_posts() ) :
 	the_post();
 
-	get_template_part('template-parts/content', 'page');
+	get_template_part( 'template-parts/content', 'page' );
 
 
 endwhile;

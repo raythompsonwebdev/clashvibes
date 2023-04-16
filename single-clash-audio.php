@@ -1,7 +1,7 @@
 <?php
 
 /**
- * *PHP version 7
+ * *PHP version 8.1
  *
  * Single Clash Audio page | core/single-clash_audio.php.
  *

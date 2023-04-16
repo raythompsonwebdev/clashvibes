@@ -8,7 +8,7 @@ Tags: custom-header, editor-style, left-sidebar, flexible-header, custom-backgro
 Version: 2.0
 Requires at least: 5.9
 Tested up to: 6.2
-Requires PHP: 8.1
+Requires PHP: 8.1.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: clashvibes
@@ -61,6 +61,7 @@ img {
 
 a {
 	display: block;
+	text-decoration: none;
 }
 
 /* *GENERAL CLASSES (alpha order)* */
@@ -165,9 +166,7 @@ h1 {
 
 /* Grouping content
 			========================================================================== */
-
 /**
-
 		* 1. Add the correct box sizing in Firefox.
 		* 2. Show the overflow in Edge and IE.
 		*/
@@ -429,8 +428,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -1198,12 +1196,13 @@ select {
 }
 
 #menu-mobile .menu-item a {
-	font-size: 0.9em;
+	font-size: 1em;
 	line-height: 50px;
 	background-color: #262626;
 	color: #ffffff;
 	text-align: center;
 	display: block;
+	text-decoration: none;
 }
 
 #menu-mobile .menu-item a:hover {
@@ -1306,7 +1305,6 @@ select {
 	line-height: 50px;
 	width: 100%;
 	color: #262626;
-	background-color: #ffffff;
 	margin: 0;
 	font-size: 1.1em;
 	text-align: left;
@@ -1319,7 +1317,7 @@ select {
 	line-height: 50px;
 	width: 100%;
 	color: #262626;
-	background-color: #ffffff;
+	font-weight: bold;
 	margin: 0;
 	font-size: 1.1em;
 	text-align: center;
@@ -1673,12 +1671,12 @@ a[href$="#comments"]:hover,
 	text-decoration: none;
 	width: 90%;
 	height: auto;
-	line-height: 35px;
+	line-height: 30px;
 	margin: 1em auto;
 	color: #f0ecec;
 	text-align: center;
 	background-color: #262626;
-	font-size: 0.85em;
+	font-size: 0.75em;
 }
 
 .read-more:hover {
@@ -2824,7 +2822,7 @@ a[href$="#comments"]:hover,
 	width: auto;
 }
 
-.widget .widgettitle {
+.widget .widget-title {
 	background-color: #658905;
 	text-align: center;
 	height: 40px;
@@ -2844,6 +2842,28 @@ a[href$="#comments"]:hover,
 
 .widget .textwidget form select option {
 	width: 100%;
+}
+
+.widget a {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: auto;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+	color: #ffffff;
+	transition: all 0.2s ease-in-out 0s;
+	font-size: 0.9em;
+	text-decoration: none;
+}
+
+.widget a:hover {
+	font-weight: bold;
+}
+
+.widget a:active {
+	color: #fdd015;
 }
 
 .widget ul,
@@ -2889,44 +2909,19 @@ a[href$="#comments"]:hover,
 .widget .recentcomments .recentcomments .rss-date {
 	clear: both;
 	display: block;
-}
-
-.widget ul li a,
-.widget ul .recentcomments a,
-.widget .comments li a,
-.widget .comments .recentcomments a,
-.widget .recentcomments li a,
-.widget .recentcomments .recentcomments a {
-	padding: 0;
-	margin: 0;
-	height: 100%;
-	width: auto;
-	text-align: center;
-	display: inline-block;
-	text-decoration: none;
-	background-color: #262626;
-	color: #ffffff;
-	transition: all 0.2s ease-in-out 0s;
-	font-size: 0.9em;
-	font-size: 100%;
-}
-
-.widget ul li a:hover,
-.widget ul .recentcomments a:hover,
-.widget .comments li a:hover,
-.widget .comments .recentcomments a:hover,
-.widget .recentcomments li a:hover,
-.widget .recentcomments .recentcomments a:hover {
+	color: #262626;
+	background-color: #ffffff;
 	font-weight: bold;
 }
 
-.widget ul li a:active,
-.widget ul .recentcomments a:active,
-.widget .comments li a:active,
-.widget .comments .recentcomments a:active,
-.widget .recentcomments li a:active,
-.widget .recentcomments .recentcomments a:active {
-	background-color: #fdd015;
+.widget ul li .rssSummary,
+.widget ul .recentcomments .rssSummary,
+.widget .comments li .rssSummary,
+.widget .comments .recentcomments .rssSummary,
+.widget .recentcomments li .rssSummary,
+.widget .recentcomments .recentcomments .rssSummary {
+	color: #262626;
+	background-color: #ffffff;
 }
 
 .widget ul li .url,
@@ -3565,8 +3560,8 @@ a[href$="#comments"]:hover,
 		text-align: center;
 	}
 	.read-more {
-		width: 90%;
 		line-height: 40px;
+		font-size: 1em;
 	}
 	.read-more:hover {
 		background-color: #f0ecec;
@@ -4187,7 +4182,7 @@ a[href$="#comments"]:hover,
 	.widget .tagcloud a {
 		width: auto;
 	}
-	.widget .widgettitle {
+	.widget .widget-title {
 		height: 40px;
 		line-height: 40px;
 		font-size: 1.2em;
@@ -4199,6 +4194,9 @@ a[href$="#comments"]:hover,
 	}
 	.widget .textwidget form select option {
 		width: 100%;
+	}
+	.widget a {
+		font-size: 1rem;
 	}
 	.widget ul,
 	.widget .comments,
@@ -4231,30 +4229,6 @@ a[href$="#comments"]:hover,
 	.widget .recentcomments .recentcomments .rss-date {
 		clear: both;
 		display: block;
-	}
-	.widget ul li a,
-	.widget ul .recentcomments a,
-	.widget .comments li a,
-	.widget .comments .recentcomments a,
-	.widget .recentcomments li a,
-	.widget .recentcomments .recentcomments a {
-		font-size: 0.9em;
-	}
-	.widget ul li a:hover,
-	.widget ul .recentcomments a:hover,
-	.widget .comments li a:hover,
-	.widget .comments .recentcomments a:hover,
-	.widget .recentcomments li a:hover,
-	.widget .recentcomments .recentcomments a:hover {
-		font-weight: bold;
-	}
-	.widget ul li a:active,
-	.widget ul .recentcomments a:active,
-	.widget .comments li a:active,
-	.widget .comments .recentcomments a:active,
-	.widget .recentcomments li a:active,
-	.widget .recentcomments .recentcomments a:active {
-		background-color: #fdd015;
 	}
 	.widget ul li .url,
 	.widget ul .recentcomments .url,
@@ -4788,8 +4762,8 @@ a[href$="#comments"]:hover,
 		text-align: center;
 	}
 	.read-more {
-		width: 90%;
 		line-height: 40px;
+		font-size: 1em;
 	}
 	.read-more:hover {
 		background-color: #f0ecec;
@@ -5410,7 +5384,7 @@ a[href$="#comments"]:hover,
 	.widget .tagcloud a {
 		width: auto;
 	}
-	.widget .widgettitle {
+	.widget .widget-title {
 		height: 40px;
 		line-height: 40px;
 		font-size: 1.2em;
@@ -5422,6 +5396,9 @@ a[href$="#comments"]:hover,
 	}
 	.widget .textwidget form select option {
 		width: 100%;
+	}
+	.widget a {
+		font-size: 1rem;
 	}
 	.widget ul,
 	.widget .comments,
@@ -5454,30 +5431,6 @@ a[href$="#comments"]:hover,
 	.widget .recentcomments .recentcomments .rss-date {
 		clear: both;
 		display: block;
-	}
-	.widget ul li a,
-	.widget ul .recentcomments a,
-	.widget .comments li a,
-	.widget .comments .recentcomments a,
-	.widget .recentcomments li a,
-	.widget .recentcomments .recentcomments a {
-		font-size: 0.9em;
-	}
-	.widget ul li a:hover,
-	.widget ul .recentcomments a:hover,
-	.widget .comments li a:hover,
-	.widget .comments .recentcomments a:hover,
-	.widget .recentcomments li a:hover,
-	.widget .recentcomments .recentcomments a:hover {
-		font-weight: bold;
-	}
-	.widget ul li a:active,
-	.widget ul .recentcomments a:active,
-	.widget .comments li a:active,
-	.widget .comments .recentcomments a:active,
-	.widget .recentcomments li a:active,
-	.widget .recentcomments .recentcomments a:active {
-		background-color: #fdd015;
 	}
 	.widget ul li .url,
 	.widget ul .recentcomments .url,
@@ -5793,8 +5746,8 @@ a[href$="#comments"]:hover,
 		width: 98%;
 	}
 	.read-more {
-		width: 90%;
 		line-height: 40px;
+		font-size: 1em;
 	}
 	.speaker-meta .post-meta {
 		display: block;
@@ -6191,8 +6144,11 @@ a[href$="#comments"]:hover,
 		width: 100%;
 		display: block;
 	}
-	.widget .widgettitle {
+	.widget .widget-title {
 		font-size: 1.15em;
+	}
+	.widget a {
+		font-size: 1rem;
 	}
 	.widget ul,
 	.widget .comments,
@@ -6214,22 +6170,6 @@ a[href$="#comments"]:hover,
 	.widget .recentcomments li .comment-author-link,
 	.widget .recentcomments .recentcomments .comment-author-link {
 		height: 100%;
-	}
-	.widget ul li a,
-	.widget ul .recentcomments a,
-	.widget .comments li a,
-	.widget .comments .recentcomments a,
-	.widget .recentcomments li a,
-	.widget .recentcomments .recentcomments a {
-		font-size: 1em;
-	}
-	.widget ul li a:hover,
-	.widget ul .recentcomments a:hover,
-	.widget .comments li a:hover,
-	.widget .comments .recentcomments a:hover,
-	.widget .recentcomments li a:hover,
-	.widget .recentcomments .recentcomments a:hover {
-		font-weight: bold;
 	}
 	.widget ul li .url:hover,
 	.widget ul .recentcomments .url:hover,
@@ -6506,8 +6446,8 @@ a[href$="#comments"]:hover,
 		width: 98%;
 	}
 	.read-more {
-		width: 90%;
 		line-height: 40px;
+		font-size: 1em;
 	}
 	.speaker-meta {
 		height: auto;
@@ -6926,8 +6866,11 @@ a[href$="#comments"]:hover,
 	.widget {
 		width: 100%;
 	}
-	.widget .widgettitle {
+	.widget .widget-title {
 		font-size: 1.1em;
+	}
+	.widget a {
+		font-size: 1rem;
 	}
 	.widget ul,
 	.widget .comments,
@@ -6949,22 +6892,6 @@ a[href$="#comments"]:hover,
 	.widget .recentcomments li .comment-author-link,
 	.widget .recentcomments .recentcomments .comment-author-link {
 		height: 100%;
-	}
-	.widget ul li a,
-	.widget ul .recentcomments a,
-	.widget .comments li a,
-	.widget .comments .recentcomments a,
-	.widget .recentcomments li a,
-	.widget .recentcomments .recentcomments a {
-		font-size: 1em;
-	}
-	.widget ul li a:hover,
-	.widget ul .recentcomments a:hover,
-	.widget .comments li a:hover,
-	.widget .comments .recentcomments a:hover,
-	.widget .recentcomments li a:hover,
-	.widget .recentcomments .recentcomments a:hover {
-		font-weight: bold;
 	}
 	.widget ul li .url:hover,
 	.widget ul .recentcomments .url:hover,
@@ -7238,8 +7165,8 @@ a[href$="#comments"]:hover,
 		width: 98%;
 	}
 	.read-more {
-		width: 90%;
 		line-height: 40px;
+		font-size: 1em;
 	}
 	.speaker-meta .post-meta {
 		display: block;
@@ -7629,8 +7556,11 @@ a[href$="#comments"]:hover,
 	.widget {
 		width: 100%;
 	}
-	.widget .widgettitle {
+	.widget .widget-title {
 		font-size: 1.1em;
+	}
+	.widget a {
+		font-size: 0.9rem;
 	}
 	.widget ul,
 	.widget .comments,
@@ -7644,14 +7574,6 @@ a[href$="#comments"]:hover,
 	.widget .recentcomments li .comment-author-link,
 	.widget .recentcomments .recentcomments .comment-author-link {
 		height: 100%;
-	}
-	.widget ul li a:hover,
-	.widget ul .recentcomments a:hover,
-	.widget .comments li a:hover,
-	.widget .comments .recentcomments a:hover,
-	.widget .recentcomments li a:hover,
-	.widget .recentcomments .recentcomments a:hover {
-		font-weight: bold;
 	}
 	.widget ul li .url:hover,
 	.widget ul .recentcomments .url:hover,
@@ -7916,9 +7838,8 @@ a[href$="#comments"]:hover,
 		width: 98%;
 	}
 	.read-more {
-		width: 90%;
 		font-size: 0.9em;
-		line-height: 40px;
+		line-height: 30px;
 	}
 	.speaker-meta {
 		height: auto;
@@ -8090,10 +8011,7 @@ a[href$="#comments"]:hover,
 		font-size: 0.8em;
 		line-height: 20px;
 	}
-	#respond
-		#commentform
-		.comment-form-cookies-consent
-		#wp-comment-cookies-consent {
+	#respond #commentform .comment-form-cookies-consent #wp-comment-cookies-consent {
 		display: inline-block;
 	}
 	#respond #commentform .form-submit {
@@ -8313,8 +8231,11 @@ a[href$="#comments"]:hover,
 	.widget {
 		width: 100%;
 	}
-	.widget .widgettitle {
+	.widget .widget-title {
 		font-size: 1em;
+	}
+	.widget a {
+		font-size: 0.85rem;
 	}
 	.widget ul,
 	.widget .comments,
@@ -8336,22 +8257,6 @@ a[href$="#comments"]:hover,
 	.widget .recentcomments li .comment-author-link,
 	.widget .recentcomments .recentcomments .comment-author-link {
 		height: 100%;
-	}
-	.widget ul li a,
-	.widget ul .recentcomments a,
-	.widget .comments li a,
-	.widget .comments .recentcomments a,
-	.widget .recentcomments li a,
-	.widget .recentcomments .recentcomments a {
-		font-size: 0.85em;
-	}
-	.widget ul li a:hover,
-	.widget ul .recentcomments a:hover,
-	.widget .comments li a:hover,
-	.widget .comments .recentcomments a:hover,
-	.widget .recentcomments li a:hover,
-	.widget .recentcomments .recentcomments a:hover {
-		font-weight: bold;
 	}
 	.widget ul li .url:hover,
 	.widget ul .recentcomments .url:hover,
@@ -8489,7 +8394,7 @@ a[href$="#comments"]:hover,
 		height: 50px;
 	}
 	#menu-mobile .menu-item a {
-		font-size: 0.9em;
+		font-size: 1em;
 		line-height: 50px;
 	}
 	#menu-mobile .menu-item a:hover {
@@ -8558,8 +8463,11 @@ a[href$="#comments"]:hover,
 		width: 100%;
 		display: block;
 	}
-	.widget .widgettitle {
+	.widget .widget-title {
 		font-size: 1.1em;
+	}
+	.widget a {
+		font-size: 0.85rem;
 	}
 	.widget ul,
 	.widget .comments,
@@ -8573,22 +8481,6 @@ a[href$="#comments"]:hover,
 	.widget .recentcomments li .comment-author-link,
 	.widget .recentcomments .recentcomments .comment-author-link {
 		height: 100%;
-	}
-	.widget ul li a,
-	.widget ul .recentcomments a,
-	.widget .comments li a,
-	.widget .comments .recentcomments a,
-	.widget .recentcomments li a,
-	.widget .recentcomments .recentcomments a {
-		font-size: 0.85em;
-	}
-	.widget ul li a:hover,
-	.widget ul .recentcomments a:hover,
-	.widget .comments li a:hover,
-	.widget .comments .recentcomments a:hover,
-	.widget .recentcomments li a:hover,
-	.widget .recentcomments .recentcomments a:hover {
-		font-weight: bold;
 	}
 	.widget ul li .url:hover,
 	.widget ul .recentcomments .url:hover,
@@ -8738,9 +8630,8 @@ a[href$="#comments"]:hover,
 		width: 98%;
 	}
 	.read-more {
-		width: 90%;
-		font-size: 0.85em;
-		line-height: 35px;
+		font-size: 0.9em;
+		line-height: 30px;
 	}
 	.speaker-meta .post-meta {
 		display: block;
@@ -9164,7 +9055,7 @@ a[href$="#comments"]:hover,
 		height: 50px;
 	}
 	#menu-mobile .menu-item a {
-		font-size: 0.9em;
+		font-size: 1em;
 		line-height: 50px;
 	}
 	#menu-mobile .menu-item a:hover {
@@ -9222,8 +9113,11 @@ a[href$="#comments"]:hover,
 		width: 100%;
 		display: block;
 	}
-	.widget .widgettitle {
+	.widget .widget-title {
 		font-size: 1.1em;
+	}
+	.widget a {
+		font-size: 0.85rem;
 	}
 	.widget ul,
 	.widget .comments,
@@ -9237,14 +9131,6 @@ a[href$="#comments"]:hover,
 	.widget .recentcomments li .comment-author-link,
 	.widget .recentcomments .recentcomments .comment-author-link {
 		height: 100%;
-	}
-	.widget ul li a:hover,
-	.widget ul .recentcomments a:hover,
-	.widget .comments li a:hover,
-	.widget .comments .recentcomments a:hover,
-	.widget .recentcomments li a:hover,
-	.widget .recentcomments .recentcomments a:hover {
-		font-weight: bold;
 	}
 	.widget ul li .url:hover,
 	.widget ul .recentcomments .url:hover,
@@ -9817,7 +9703,7 @@ a[href$="#comments"]:hover,
 		height: 45px;
 	}
 	#menu-mobile .menu-item a {
-		font-size: 0.9em;
+		font-size: 1em;
 		line-height: 45px;
 	}
 	#menu-mobile .menu-item a:hover {
@@ -9875,8 +9761,11 @@ a[href$="#comments"]:hover,
 		width: 100%;
 		display: block;
 	}
-	.widget .widgettitle {
+	.widget .widget-title {
 		font-size: 1.1em;
+	}
+	.widget a {
+		font-size: 0.85rem;
 	}
 	.widget ul,
 	.widget .comments,
@@ -9890,14 +9779,6 @@ a[href$="#comments"]:hover,
 	.widget .recentcomments li .comment-author-link,
 	.widget .recentcomments .recentcomments .comment-author-link {
 		height: 100%;
-	}
-	.widget ul li a:hover,
-	.widget ul .recentcomments a:hover,
-	.widget .comments li a:hover,
-	.widget .comments .recentcomments a:hover,
-	.widget .recentcomments li a:hover,
-	.widget .recentcomments .recentcomments a:hover {
-		font-weight: bold;
 	}
 	.widget ul li .url:hover,
 	.widget ul .recentcomments .url:hover,
@@ -9934,7 +9815,7 @@ a[href$="#comments"]:hover,
 	}
 	.entry-header .entry-title {
 		text-align: center;
-		font-size: 1.1em;
+		font-size: 1em;
 		line-height: 40px;
 	}
 	.entry-header .entry-title a {
@@ -10485,7 +10366,7 @@ a[href$="#comments"]:hover,
 		align-items: flex-start;
 	}
 	#menu-mobile .menu-item a {
-		font-size: 0.9em;
+		font-size: 1em;
 	}
 	#menu-mobile .menu-item a:hover {
 		line-height: 40px;
@@ -10545,8 +10426,11 @@ a[href$="#comments"]:hover,
 		width: 100%;
 		display: block;
 	}
-	.widget .widgettitle {
+	.widget .widget-title {
 		font-size: 1.1em;
+	}
+	.widget a {
+		font-size: 0.8rem;
 	}
 	.widget ul,
 	.widget .comments,
@@ -10560,22 +10444,6 @@ a[href$="#comments"]:hover,
 	.widget .recentcomments li .comment-author-link,
 	.widget .recentcomments .recentcomments .comment-author-link {
 		height: 100%;
-	}
-	.widget ul li a,
-	.widget ul .recentcomments a,
-	.widget .comments li a,
-	.widget .comments .recentcomments a,
-	.widget .recentcomments li a,
-	.widget .recentcomments .recentcomments a {
-		font-size: 0.8em;
-	}
-	.widget ul li a:hover,
-	.widget ul .recentcomments a:hover,
-	.widget .comments li a:hover,
-	.widget .comments .recentcomments a:hover,
-	.widget .recentcomments li a:hover,
-	.widget .recentcomments .recentcomments a:hover {
-		font-weight: bold;
 	}
 	.widget ul li .url:hover,
 	.widget ul .recentcomments .url:hover,
@@ -10611,7 +10479,7 @@ a[href$="#comments"]:hover,
 	}
 	.entry-header .entry-title {
 		text-align: center;
-		font-size: 1.1em;
+		font-size: 1em;
 		line-height: 35px;
 	}
 	.entry-header .entry-title a {
@@ -10689,9 +10557,8 @@ a[href$="#comments"]:hover,
 		width: 98%;
 	}
 	.read-more {
-		width: 90%;
-		font-size: 0.85em;
-		line-height: 35px;
+		font-size: 0.8em;
+		line-height: 30px;
 	}
 	.speaker-meta {
 		min-height: 335px;
@@ -10915,7 +10782,7 @@ a[href$="#comments"]:hover,
 		align-items: flex-start;
 	}
 	#menu-mobile .menu-item a {
-		font-size: 0.9em;
+		font-size: 1em;
 	}
 	#menu-mobile .menu-item a:hover {
 		line-height: 40px;
@@ -10972,8 +10839,11 @@ a[href$="#comments"]:hover,
 		width: 100%;
 		display: block;
 	}
-	.widget .widgettitle {
+	.widget .widget-title {
 		font-size: 1.1em;
+	}
+	.widget a {
+		font-size: 0.8em;
 	}
 	.widget ul,
 	.widget .comments,
@@ -10987,14 +10857,6 @@ a[href$="#comments"]:hover,
 	.widget .recentcomments li .comment-author-link,
 	.widget .recentcomments .recentcomments .comment-author-link {
 		height: 100%;
-	}
-	.widget ul li a:hover,
-	.widget ul .recentcomments a:hover,
-	.widget .comments li a:hover,
-	.widget .comments .recentcomments a:hover,
-	.widget .recentcomments li a:hover,
-	.widget .recentcomments .recentcomments a:hover {
-		font-weight: bold;
 	}
 	.widget ul li .url:hover,
 	.widget ul .recentcomments .url:hover,

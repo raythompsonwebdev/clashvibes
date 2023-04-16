@@ -1,13 +1,15 @@
-const toggleNav = document.querySelector("#toggle-nav");
-// main nav
-if (toggleNav) {
+document.addEventListener("DOMContentLoaded", () => {
+	const toggleNav = document.querySelector("#toggle-nav");
+	// main nav
+
 	toggleNav.addEventListener("click", (event) => {
 		event.preventDefault();
 
 		// create menu variables
 		const slideoutMenu = document.querySelector("#cv-mobilenav");
 
-		const { slideoutMenuHeight } = { ...slideoutMenu.offsetHeight };
+		// eslint-disable-next-line prefer-destructuring
+		const slideoutMenuHeight = slideoutMenu.offsetHeight;
 
 		// toggle open class
 		slideoutMenu.classList.toggle("open");
@@ -22,4 +24,4 @@ if (toggleNav) {
 			slideoutMenu.style.top = `${-slideoutMenuHeight}px`;
 		}
 	});
-}
+});

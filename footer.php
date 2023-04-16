@@ -68,7 +68,7 @@
 	?>
 
 	<span class="sep"> | </span>
-	<a href="http://www.raythompsonwebdev.co.uk" rel="designer">
+	<a href="<?php echo esc_url(__('http://www.raythompsonwebdev.co.uk', 'clashvibes')); ?>" rel="designer">
 		<?php
 		/* translators: 1: Clashvibes, 2: Raymond Thompson. */
 		printf(esc_html__('Theme: %1$s by %2$s.', 'clashvibes'), 'Clashvibes', 'Raymond Thompson.');

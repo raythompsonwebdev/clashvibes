@@ -17,23 +17,23 @@
 		"url": "https://github.com/Automattic/clashvibes/issues"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^25.0.0",
-		"@wordpress/stylelint-config": "^21.6.0",
+		"@wordpress/scripts": "^17.1.0",
+		"@wordpress/stylelint-config": "^21.14.0",
 		"dir-archiver": "^2.1.0",
-		"eslint": "^8.29.0",
+		"eslint": "^8.38.0",
 		"eslint-config-airbnb": "^19.0.4",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-import": "^2.26.0",
-		"eslint-plugin-jsx-a11y": "^6.6.1",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-jsx-a11y": "^6.7.1",
 		"node-sass": "^8.0.0",
-		"prettier": "^2.8.1",
-		"rtlcss": "^4.0.0",
-		"stylelint-config-prettier": "^9.0.4",
-		"stylelint-config-recommended-scss": "^8.0.0",
-		"stylelint-config-standard": "^29.0.0",
-		"stylelint-config-standard-scss": "^6.1.0",
-		"stylelint-prettier": "^2.0.0",
-		"stylelint-scss": "^4.3.0"
+		"prettier": "^2.8.7",
+		"rtlcss": "^4.1.0",
+		"stylelint-config-prettier": "^9.0.5",
+		"stylelint-config-recommended-scss": "^10.0.0",
+		"stylelint-config-standard": "^33.0.0",
+		"stylelint-config-standard-scss": "^8.0.0",
+		"stylelint-prettier": "^3.0.0",
+		"stylelint-scss": "^4.6.0"
 	},
 	"rtlcssConfig": {
 		"options": {
@@ -68,11 +68,11 @@
 	},
 	"dependencies": {
 		"@csstools/postcss-sass": "^5.0.1",
-		"autoprefixer": "^10.4.13",
-		"postcss": "^8.4.20",
-		"postcss-preset-env": "^7.8.3",
+		"autoprefixer": "^10.4.14",
+		"postcss": "^8.4.21",
+		"postcss-preset-env": "^8.3.1",
 		"postcss-scss": "^4.0.6",
 		"react": "^18.2.0",
-		"stylelint": "^14.16.0"
+		"stylelint": "^15.5.0"
 	}
 }

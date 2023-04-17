@@ -139,7 +139,7 @@ if (!function_exists('clashvibes_entry_footer')) :
 	}
 endif;
 
-if (!function_exists('clashvibes_post_thumbnail')) :
+if (!function_exists('clashvibes_post_thumbnail')) {
 	/**
 	 * Displays an optional post thumbnail.
 	 *
@@ -152,13 +152,13 @@ if (!function_exists('clashvibes_post_thumbnail')) :
 			return;
 		}
 
-		if (is_singular()) : ?>
+		if (is_singular()) { ?>
 
 			<figure class="featured-image">
 				<?php the_post_thumbnail('featured-image'); ?>
 			</figure>
 
-		<?php else : ?>
+		<?php } else { ?>
 
 			<figure class="post-thumbnail">
 
@@ -178,11 +178,10 @@ if (!function_exists('clashvibes_post_thumbnail')) :
 				</a>
 			</figure>
 <?php
-		endif; // End is_singular().
-	}
-endif; ?>
 
-<?php
+		} // End is_singular().
+	}
+}
 
 if (!function_exists('clashvibes_validate_gravatar')) :
 	/**

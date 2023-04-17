@@ -58,6 +58,6 @@ function clashvibes_customize_partial_blogdescription()
  */
 function clashvibes_customize_preview_js()
 {
-	wp_enqueue_script('clashvibes-customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), filemtime(get_template_directory() . '/style.css'), true);
+	wp_enqueue_script('clashvibes-customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), wp_get_theme()->get('Version'), true);
 }
 add_action('customize_preview_init', 'clashvibes_customize_preview_js');

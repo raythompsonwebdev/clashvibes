@@ -716,7 +716,6 @@ select {
 	display: none;
 }
 
-.page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
@@ -846,13 +845,6 @@ select {
 	display: block;
 }
 
-/* --------------------------------------------------------------
-	# Utilities
-	-------------------------------------------------------------- */
-
-/* Accessibility
-	--------------------------------------------- */
-
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
@@ -890,49 +882,6 @@ select {
 /* Do not show the outline on the skip link target. */
 #primary[tabindex="-1"]:focus {
 	outline: 0;
-}
-
-/* Alignments
-	--------------------------------------------- */
-.alignleft {
-	/* rtl:ignore */
-	float: left;
-
-	/* rtl:ignore */
-	margin-right: 1.5em;
-	margin-bottom: 1.5em;
-}
-
-.alignright {
-	/* rtl:ignore */
-	float: right;
-
-	/* rtl:ignore */
-	margin-left: 1.5em;
-	margin-bottom: 1.5em;
-}
-
-.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 1.5em;
-}
-
-.alignwide {
-	max-width: calc(100vw - 2rem);
-
-	// margin-right: -1rem;
-	// margin-left: -1rem;
-	margin: auto;
-}
-
-.alignfull {
-	max-width: 100vw;
-
-	// margin-right: -2rem;
-	// margin-left: -2rem;
-	margin: auto;
 }
 
 .dashicons {

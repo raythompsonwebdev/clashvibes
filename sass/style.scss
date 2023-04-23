@@ -54,8 +54,11 @@ $text-shadow: 1px 1px 1px $black;
 #toggle-nav,
 .sidebar-toggle {
 	width: 50%;
-	line-height: 50px;
+	line-height: 40px;
 	background-color: $black;
+	top: 0.25em;
+	z-index: 100;
+	height: auto;
 	color: $white;
 	border: none;
 	outline: none;
@@ -128,7 +131,7 @@ $text-shadow: 1px 1px 1px $black;
 #masthead {
 	width: 100%;
 	padding: 0;
-	height: 65px;
+	height: 60px;
 	margin-bottom: 0.25em;
 	display: flex;
 	flex-flow: row wrap;
@@ -150,7 +153,7 @@ $text-shadow: 1px 1px 1px $black;
 	position: relative;
 	top: 0;
 	left: 0;
-	width: 8%;
+	width: 12%;
 	flex: 1 0 auto;
 
 	a {
@@ -194,7 +197,7 @@ $text-shadow: 1px 1px 1px $black;
 
 /* site title container */
 #clashvibes-title {
-	width: 84%;
+	width: 88%;
 	display: flex;
 	flex-flow: column;
 	flex: 0 0 auto;
@@ -205,9 +208,9 @@ $text-shadow: 1px 1px 1px $black;
 	color: $green;
 	margin: 0;
 	padding: 0;
-	font-size: 1.7em;
+	font-size: 1.5em;
 	line-height: 35px;
-	height: 35px;
+	height: auto;
 	text-indent: 0.1em;
 	text-shadow: 1px 1px 1px $black;
 	width: 100%;
@@ -217,11 +220,11 @@ $text-shadow: 1px 1px 1px $black;
 /* site description */
 .site-description {
 	text-indent: 0.5em;
-	height: 20px;
+	height: auto;
 	color: $red;
 	width: 100%;
 	line-height: 20px;
-	font-size: 0.9em;
+	font-size: 0.75em;
 	font-weight: normal;
 	padding: 0;
 	clear: left;
@@ -361,10 +364,45 @@ $text-shadow: 1px 1px 1px $black;
 }
 
 /* pages content */
+
 .page-content {
-	min-height: 85vh;
+	min-height: unset;
 	background-color: $white;
 	height: auto;
+
+	.wp-block-image {
+		width: auto;
+		margin: 1em auto;
+	}
+
+	.widget_recent_entries {
+		width: 96%;
+		margin: auto;
+	}
+	.widget_categories {
+		width: 96%;
+		margin: auto;
+	}
+	.widget_archive {
+		width: 96%;
+		margin: auto;
+		#archives-dropdown--1 {
+			width: 50%;
+			display: block;
+			height: 35px;
+		}
+	}
+	.widget_tag_cloud {
+		width: 96%;
+		margin: 2em auto;
+		.tagcloud {
+			color: $black;
+			a {
+				width: auto;
+				display: inline-block;
+			}
+		}
+	}
 }
 
 /* --- Global Image--- */
@@ -396,12 +434,12 @@ $text-shadow: 1px 1px 1px $black;
 
 /* --- archive page title--- */
 .page-title {
-	height: 50px;
-	line-height: 50px;
+	height: 40px;
+	line-height: 40px;
 	width: 100%;
 	color: $black;
 	margin: 0;
-	font-size: 1.1em;
+	font-size: 1.2em;
 	text-align: left;
 	text-indent: 0;
 	padding: 0;
@@ -1808,7 +1846,7 @@ a[href$="#comments"],
 		width: 100%;
 		margin-bottom: 0.2em;
 		a {
-			font-size: 0.85em;
+			font-size: 0.85rem;
 			padding: 0;
 			height: 100%;
 			margin: 0 0 1%;
@@ -1839,6 +1877,10 @@ a[href$="#comments"],
 		}
 	}
 
+	#wp-calendar {
+		font-size: 0.75rem;
+	}
+
 	.widget-title {
 		background-color: $army-green;
 		text-align: center;
@@ -1846,7 +1888,7 @@ a[href$="#comments"],
 		line-height: 40px;
 		margin: 0;
 		padding: 0;
-		font-size: 1.1em;
+		font-size: 0.85rem;
 	}
 
 	.textwidget {
@@ -1875,7 +1917,7 @@ a[href$="#comments"],
 		text-decoration: none;
 		color: $white;
 		transition: $clash-transition;
-		font-size: 0.9em;
+		font-size: 0.75rem;
 		text-decoration: none;
 
 		&:hover {
@@ -2159,7 +2201,6 @@ a[href$="#comments"],
 	}
 
 	#masthead {
-		height: 65px;
 		flex-flow: row wrap;
 		justify-content: flex-start;
 		align-items: center;
@@ -2204,8 +2245,7 @@ a[href$="#comments"],
 		font-size: 2.5em;
 	}
 	.site-description {
-		height: 20px;
-		line-height: 20px;
+		line-height: 15px;
 		font-size: 1em;
 	}
 
@@ -3244,7 +3284,11 @@ a[href$="#comments"],
 		.widget-title {
 			height: 40px;
 			line-height: 40px;
-			font-size: 1.2em;
+			font-size: 1.2rem;
+		}
+
+		#wp-calendar {
+			font-size: 0.9rem;
 		}
 
 		.textwidget {
@@ -3435,7 +3479,6 @@ a[href$="#comments"],
 	}
 
 	#masthead {
-		height: 65px;
 		flex-flow: row wrap;
 		justify-content: flex-start;
 		align-items: center;
@@ -3477,12 +3520,11 @@ a[href$="#comments"],
 	}
 	.site-title {
 		line-height: 40px;
-		font-size: 2.5em;
+		font-size: 2.4em;
 	}
 	.site-description {
-		height: 20px;
-		line-height: 20px;
-		font-size: 1em;
+		line-height: 15px;
+		font-size: 0.9em;
 	}
 
 	#socialmediatop {
@@ -4515,10 +4557,14 @@ a[href$="#comments"],
 			}
 		}
 
+		#wp-calendar {
+			font-size: 0.9rem;
+		}
+
 		.widget-title {
 			height: 40px;
 			line-height: 40px;
-			font-size: 1.2em;
+			font-size: 1.2rem;
 		}
 
 		.textwidget {
@@ -4672,7 +4718,9 @@ a[href$="#comments"],
 		margin-left: auto;
 	}
 	#masthead {
-		height: 65px;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
 	}
 	.site-branding {
 		width: 74%;
@@ -4681,12 +4729,13 @@ a[href$="#comments"],
 		width: 92%;
 	}
 	.site-title {
-		font-size: 2.4em;
+		font-size: 2.3em;
+		line-height: 40px;
 	}
 
 	.site-description {
-		line-height: 20px;
-		font-size: 1em;
+		line-height: 15px;
+		font-size: 0.85em;
 	}
 
 	#socialmediatop {
@@ -4716,6 +4765,45 @@ a[href$="#comments"],
 
 			a {
 				font-size: 1em;
+			}
+		}
+	}
+
+	.page-content {
+		min-height: 85vh;
+		background-color: $white;
+
+		.wp-block-image {
+			width: auto;
+			margin: 1em auto;
+		}
+
+		.widget_recent_entries {
+			width: 96%;
+			margin: auto;
+		}
+		.widget_categories {
+			width: 96%;
+			margin: auto;
+		}
+		.widget_archive {
+			width: 96%;
+			margin: auto;
+			#archives-dropdown--1 {
+				width: 50%;
+				display: block;
+				height: 35px;
+			}
+		}
+		.widget_tag_cloud {
+			width: 96%;
+			margin: 2em auto;
+			.tagcloud {
+				color: $black;
+				a {
+					width: auto;
+					display: inline-block;
+				}
 			}
 		}
 	}
@@ -5354,7 +5442,11 @@ a[href$="#comments"],
 		display: block;
 
 		.widget-title {
-			font-size: 1.15em;
+			font-size: 1.15rem;
+		}
+
+		#wp-calendar {
+			font-size: 0.9rem;
 		}
 
 		a {
@@ -5445,13 +5537,15 @@ a[href$="#comments"],
 		margin-left: auto;
 	}
 	#masthead {
-		height: 70px;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
 	}
 	.site-branding {
 		width: 74%;
 	}
 	.site-logo {
-		width: 8%;
+		width: 9%;
 
 		a {
 			.screen-reader-text {
@@ -5471,11 +5565,13 @@ a[href$="#comments"],
 		width: 91%;
 	}
 	.site-title {
-		font-size: 2.3em;
+		font-size: 2.2em;
+		line-height: 40px;
 	}
 
 	.site-description {
-		font-size: 1em;
+		font-size: 0.85em;
+		line-height: 15px;
 	}
 
 	#socialmediatop {
@@ -5513,6 +5609,45 @@ a[href$="#comments"],
 
 			.lastmenu {
 				border-right: none;
+			}
+		}
+	}
+
+	.page-content {
+		min-height: 85vh;
+		background-color: $white;
+
+		.wp-block-image {
+			width: auto;
+			margin: 1em auto;
+		}
+
+		.widget_recent_entries {
+			width: 96%;
+			margin: auto;
+		}
+		.widget_categories {
+			width: 96%;
+			margin: auto;
+		}
+		.widget_archive {
+			width: 96%;
+			margin: auto;
+			#archives-dropdown--1 {
+				width: 50%;
+				display: block;
+				height: 35px;
+			}
+		}
+		.widget_tag_cloud {
+			width: 96%;
+			margin: 2em auto;
+			.tagcloud {
+				color: $black;
+				a {
+					width: auto;
+					display: inline-block;
+				}
 			}
 		}
 	}
@@ -6170,7 +6305,7 @@ a[href$="#comments"],
 
 		.menu-item {
 			a {
-				font-size: 0.85em;
+				font-size: 0.85rem;
 
 				&:hover {
 					color: $black;
@@ -6183,7 +6318,11 @@ a[href$="#comments"],
 		width: 100%;
 
 		.widget-title {
-			font-size: 1.1em;
+			font-size: 1.1rem;
+		}
+
+		#wp-calendar {
+			font-size: 0.85rem;
 		}
 
 		a {
@@ -6275,13 +6414,15 @@ a[href$="#comments"],
 		margin-left: auto;
 	}
 	#masthead {
-		height: 65px;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
 	}
 	.site-branding {
 		width: 74%;
 	}
 	.site-logo {
-		width: 11%;
+		width: 10%;
 
 		a {
 			.screen-reader-text {
@@ -6297,14 +6438,16 @@ a[href$="#comments"],
 		}
 	}
 	#clashvibes-title {
-		width: 88%;
+		width: 90%;
 	}
 	.site-title {
-		font-size: 2.2em;
+		font-size: 2.1em;
+		line-height: 40px;
 	}
 
 	.site-description {
-		font-size: 1em;
+		font-size: 0.8em;
+		line-height: 15px;
 	}
 
 	#socialmediatop {
@@ -6338,6 +6481,45 @@ a[href$="#comments"],
 
 			.lastmenu {
 				border-right: none;
+			}
+		}
+	}
+
+	.page-content {
+		min-height: 85vh;
+		background-color: $white;
+
+		.wp-block-image {
+			width: auto;
+			margin: 1em auto;
+		}
+
+		.widget_recent_entries {
+			width: 96%;
+			margin: auto;
+		}
+		.widget_categories {
+			width: 96%;
+			margin: auto;
+		}
+		.widget_archive {
+			width: 96%;
+			margin: auto;
+			#archives-dropdown--1 {
+				width: 50%;
+				display: block;
+				height: 35px;
+			}
+		}
+		.widget_tag_cloud {
+			width: 96%;
+			margin: 2em auto;
+			.tagcloud {
+				color: $black;
+				a {
+					width: auto;
+					display: inline-block;
+				}
 			}
 		}
 	}
@@ -6953,7 +7135,7 @@ a[href$="#comments"],
 
 		.menu-item {
 			a {
-				font-size: 0.8em;
+				font-size: 0.8rem;
 
 				&:hover {
 					color: $black;
@@ -6966,10 +7148,14 @@ a[href$="#comments"],
 		width: 100%;
 
 		.widget-title {
-			font-size: 1.1em;
+			font-size: 1rem;
 		}
 
 		a {
+			font-size: 0.85rem;
+		}
+
+		#wp-calendar {
 			font-size: 0.85rem;
 		}
 
@@ -7058,7 +7244,9 @@ a[href$="#comments"],
 		margin-left: auto;
 	}
 	#masthead {
-		height: 65px;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
 	}
 	.site-branding {
 		width: 74%;
@@ -7073,14 +7261,19 @@ a[href$="#comments"],
 		}
 	}
 	#clashvibes-title {
-		width: 88%;
+		width: 90%;
+	}
+	.site-title {
+		font-size: 2.1em;
+		line-height: 40px;
 	}
 	.site-description {
-		font-size: 1em;
+		font-size: 0.8em;
+		line-height: 15px;
 	}
 
 	#socialmediatop {
-		display: none;
+		display: flex;
 	}
 	.social-icon {
 		width: 23.5%;
@@ -7116,6 +7309,45 @@ a[href$="#comments"],
 
 		img {
 			width: 100%;
+		}
+	}
+
+	.page-content {
+		min-height: 85vh;
+		background-color: $white;
+
+		.wp-block-image {
+			width: auto;
+			margin: 1em auto;
+		}
+
+		.widget_recent_entries {
+			width: 96%;
+			margin: auto;
+		}
+		.widget_categories {
+			width: 96%;
+			margin: auto;
+		}
+		.widget_archive {
+			width: 96%;
+			margin: auto;
+			#archives-dropdown--1 {
+				width: 50%;
+				display: block;
+				height: 35px;
+			}
+		}
+		.widget_tag_cloud {
+			width: 96%;
+			margin: 2em auto;
+			.tagcloud {
+				color: $black;
+				a {
+					width: auto;
+					display: inline-block;
+				}
+			}
 		}
 	}
 
@@ -7719,7 +7951,7 @@ a[href$="#comments"],
 
 		.menu-item {
 			a {
-				font-size: 0.75em;
+				font-size: 0.75rem;
 
 				&:hover {
 					color: $black;
@@ -7731,11 +7963,15 @@ a[href$="#comments"],
 		width: 100%;
 
 		.widget-title {
-			font-size: 1em;
+			font-size: 0.9rem;
+		}
+
+		#wp-calendar {
+			font-size: 0.85rem;
 		}
 
 		a {
-			font-size: 0.85rem;
+			font-size: 0.8rem;
 		}
 
 		ul,
@@ -7813,9 +8049,6 @@ a[href$="#comments"],
 @media only screen and (min-width: 641px) and (max-width: 667px) {
 	#tog-menu {
 		position: fixed;
-		top: 0.25em;
-		z-index: 100;
-		height: auto;
 		display: flex;
 		width: 25%;
 		left: calc(74% - 1%);
@@ -7823,19 +8056,9 @@ a[href$="#comments"],
 	#toggle-nav,
 	.sidebar-toggle {
 		display: block;
-		line-height: 60px;
-		width: 50%;
-		background-color: $black;
-		color: $white;
-		border: none;
-		outline: none;
-		text-align: center;
-		transition: $clash-transition;
 		font-size: 0.85em;
 
 		&:hover {
-			background-color: $army-green;
-			color: $black;
 			text-align: center;
 			cursor: pointer;
 		}
@@ -7849,7 +8072,9 @@ a[href$="#comments"],
 		margin-left: auto;
 	}
 	#masthead {
-		height: 65px;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
 	}
 	.site-branding {
 		width: 100%;
@@ -7865,16 +8090,16 @@ a[href$="#comments"],
 	}
 
 	#clashvibes-title {
-		width: 88%;
+		width: 89%;
 	}
 	.site-title {
-		font-size: 2.2em;
+		font-size: 2em;
 		line-height: 35px;
-		height: 35px;
 	}
 
 	.site-description {
-		font-size: 0.9em;
+		font-size: 0.8em;
+		line-height: 20px;
 	}
 
 	#socialmediatop {
@@ -7914,11 +8139,6 @@ a[href$="#comments"],
 				}
 			}
 		}
-	}
-
-	.page-content {
-		min-height: unset;
-		height: auto;
 	}
 
 	#clashvibes-banner {
@@ -7968,7 +8188,7 @@ a[href$="#comments"],
 
 			a {
 				padding: 0;
-				font-size: 0.85em;
+				font-size: 0.85rem;
 
 				&:hover {
 					color: $black;
@@ -7977,16 +8197,25 @@ a[href$="#comments"],
 		}
 	}
 
+	.page-content {
+		min-height: unset;
+		height: auto;
+	}
+
 	.widget {
 		width: 100%;
 		display: block;
 
 		.widget-title {
-			font-size: 1.1em;
+			font-size: 0.9rem;
+		}
+
+		#wp-calendar {
+			font-size: 0.8rem;
 		}
 
 		a {
-			font-size: 0.85rem;
+			font-size: 0.8rem;
 		}
 
 		ul,
@@ -8595,8 +8824,7 @@ a[href$="#comments"],
 	}
 	#toggle-nav,
 	.sidebar-toggle {
-		width: 50%;
-		line-height: 60px;
+		display: block;
 		font-size: 0.85em;
 
 		&:hover {
@@ -8614,13 +8842,15 @@ a[href$="#comments"],
 		margin-left: auto;
 	}
 	#masthead {
-		height: 65px;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
 	}
 	.site-branding {
 		width: 100%;
 	}
 	.site-logo {
-		width: 11%;
+		width: 10%;
 
 		a {
 			.screen-reader-text {
@@ -8637,14 +8867,16 @@ a[href$="#comments"],
 	}
 
 	#clashvibes-title {
-		width: 88%;
+		width: 89%;
 	}
 	.site-title {
-		font-size: 2em;
+		font-size: 1.9em;
+		line-height: 35px;
 	}
 
 	.site-description {
-		font-size: 0.9em;
+		font-size: 0.8em;
+		line-height: 20px;
 	}
 
 	#cv-mobilenav {
@@ -8712,7 +8944,7 @@ a[href$="#comments"],
 			display: block;
 
 			a {
-				font-size: 0.85em;
+				font-size: 0.85rem;
 
 				&:hover {
 					color: $black;
@@ -8726,11 +8958,15 @@ a[href$="#comments"],
 		display: block;
 
 		.widget-title {
-			font-size: 1.1em;
+			font-size: 0.9rem;
+		}
+
+		#wp-calendar {
+			font-size: 0.8rem;
 		}
 
 		a {
-			font-size: 0.85rem;
+			font-size: 0.8rem;
 		}
 
 		ul,
@@ -8751,6 +8987,11 @@ a[href$="#comments"],
 				}
 			}
 		}
+	}
+
+	.page-content {
+		min-height: unset;
+		height: auto;
 	}
 
 	#primary {
@@ -9335,8 +9576,6 @@ a[href$="#comments"],
 	}
 	#toggle-nav,
 	.sidebar-toggle {
-		width: 50%;
-		line-height: 50px;
 		display: block;
 		font-size: 0.85em;
 
@@ -9357,13 +9596,15 @@ a[href$="#comments"],
 		margin-left: auto;
 	}
 	#masthead {
-		height: 60px;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
 	}
 	.site-branding {
 		width: 100%;
 	}
 	.site-logo {
-		width: 13%;
+		width: 11%;
 
 		a {
 			.screen-reader-text {
@@ -9379,14 +9620,16 @@ a[href$="#comments"],
 	}
 
 	#clashvibes-title {
-		width: 85%;
+		width: 89%;
 	}
 	.site-title {
-		font-size: 2em;
+		font-size: 1.8em;
+		line-height: 35px;
 	}
 
 	.site-description {
-		font-size: 0.9em;
+		font-size: 0.75em;
+		line-height: 20px;
 	}
 
 	#cv-mobilenav {
@@ -9468,11 +9711,14 @@ a[href$="#comments"],
 		display: block;
 
 		.widget-title {
-			font-size: 1.1em;
+			font-size: 0.9rem;
+		}
+		#wp-calendar {
+			font-size: 0.8rem;
 		}
 
 		a {
-			font-size: 0.85rem;
+			font-size: 0.8rem;
 		}
 
 		ul,
@@ -9493,6 +9739,11 @@ a[href$="#comments"],
 				}
 			}
 		}
+	}
+
+	.page-content {
+		min-height: unset;
+		height: auto;
 	}
 
 	#primary {
@@ -10086,8 +10337,6 @@ a[href$="#comments"],
 	#toggle-nav,
 	.sidebar-toggle {
 		display: block;
-		width: 50%;
-		line-height: 50px;
 		font-size: 0.85em;
 		&:hover {
 			text-align: center;
@@ -10106,13 +10355,15 @@ a[href$="#comments"],
 		margin-left: auto;
 	}
 	#masthead {
-		height: 55px;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
 	}
 	.site-branding {
 		width: 100%;
 	}
 	.site-logo {
-		width: 13%;
+		width: 12%;
 
 		a {
 			.screen-reader-text {
@@ -10128,16 +10379,16 @@ a[href$="#comments"],
 	}
 
 	#clashvibes-title {
-		width: 85%;
+		width: 88%;
 	}
 	.site-title {
-		font-size: 1.9em;
-		line-height: 30px;
-		height: 30px;
+		font-size: 1.7em;
+		line-height: 35px;
 	}
 
 	.site-description {
-		font-size: 0.8em;
+		font-size: 0.75em;
+		line-height: 20px;
 	}
 
 	#cv-mobilenav {
@@ -10217,11 +10468,15 @@ a[href$="#comments"],
 		display: block;
 
 		.widget-title {
-			font-size: 1.1em;
+			font-size: 0.85rem;
+		}
+
+		#wp-calendar {
+			font-size: 0.8rem;
 		}
 
 		a {
-			font-size: 0.8rem;
+			font-size: 0.75rem;
 		}
 
 		ul,
@@ -10250,8 +10505,13 @@ a[href$="#comments"],
 		padding: 0.25em;
 	}
 
+	.page-content {
+		min-height: unset;
+		height: auto;
+	}
+
 	.page-title {
-		font-size: 1.1em;
+		font-size: 1.2em;
 		text-align: left;
 	}
 	.archive-title {
@@ -10567,8 +10827,6 @@ a[href$="#comments"],
 	.sidebar-toggle {
 		display: block;
 		font-size: 0.8em;
-		width: 50%;
-		line-height: 50px;
 		&:hover {
 			text-align: center;
 		}
@@ -10589,13 +10847,15 @@ a[href$="#comments"],
 		margin-left: 0;
 	}
 	#masthead {
-		height: 55px;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
 	}
 	.site-branding {
 		width: 100%;
 	}
 	.site-logo {
-		width: 15%;
+		width: 12%;
 
 		a {
 			.screen-reader-text {
@@ -10611,14 +10871,16 @@ a[href$="#comments"],
 	}
 
 	#clashvibes-title {
-		width: 84%;
+		width: 88%;
 	}
 	.site-title {
-		font-size: 1.8em;
+		font-size: 1.6em;
+		line-height: 35px;
 	}
 
 	.site-description {
-		font-size: 0.8em;
+		font-size: 0.75em;
+		line-height: 20px;
 	}
 
 	#cv-mobilenav {
@@ -10692,16 +10954,25 @@ a[href$="#comments"],
 		}
 	}
 
+	.page-content {
+		min-height: unset;
+		height: auto;
+	}
+
 	.widget {
 		width: 100%;
 		display: block;
 
 		.widget-title {
-			font-size: 1.1em;
+			font-size: 0.85rem;
+		}
+
+		#wp-calendar {
+			font-size: 0.75rem;
 		}
 
 		a {
-			font-size: 0.8em;
+			font-size: 0.75rem;
 		}
 
 		ul,
@@ -10730,7 +11001,7 @@ a[href$="#comments"],
 		padding: 0.25em;
 	}
 	.page-title {
-		font-size: 1.1em;
+		font-size: 1.2em;
 		text-align: left;
 	}
 	.archive-title {

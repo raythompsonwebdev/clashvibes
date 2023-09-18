@@ -17,11 +17,11 @@
 
 get_header(); ?>
 
-<?php get_sidebar( 'video' ); ?>
+<?php get_sidebar('video'); ?>
 
 <main id="primary" class="site-main">
 
-	<?php get_template_part( 'template-parts/content', 'video' ); ?>
+    <?php get_template_part('template-parts/content', 'video'); ?>
 
 </main>
 

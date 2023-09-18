@@ -24,6 +24,7 @@ audio:not([controls]) {
 }
 
 ::placeholder {
+
 	/* Firefox 18- */
 	color: #e74c3c;
 }
@@ -424,8 +425,8 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family:
+ -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -668,7 +669,7 @@ select {
 .main-navigation.toggled ul {
 	display: block;
 }
-@media screen and (min-width: 37.5em) {
+@media screen and (width >= 37.5em) {
 	.menu-toggle {
 		display: none;
 	}

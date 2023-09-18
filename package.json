@@ -17,23 +17,22 @@
 		"url": "https://github.com/Automattic/clashvibes/issues"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^26.2.0",
-		"@wordpress/stylelint-config": "^21.14.0",
+		"@wordpress/browserslist-config": "^5.24.0",
+		"@wordpress/scripts": "^26.12.0",
+		"browserslist": "^4.21.10",
 		"dir-archiver": "^2.1.0",
-		"eslint": "^8.38.0",
+		"eslint": "^8.49.0",
 		"eslint-config-airbnb": "^19.0.4",
-		"eslint-config-prettier": "^8.8.0",
-		"eslint-plugin-import": "^2.27.5",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-import": "^2.28.1",
 		"eslint-plugin-jsx-a11y": "^6.7.1",
-		"node-sass": "^8.0.0",
-		"prettier": "^2.8.7",
+		"prettier": "^3.0.3",
 		"rtlcss": "^4.1.0",
-		"stylelint-config-prettier": "^9.0.5",
-		"stylelint-config-recommended-scss": "^10.0.0",
-		"stylelint-config-standard": "^33.0.0",
-		"stylelint-config-standard-scss": "^8.0.0",
-		"stylelint-prettier": "^3.0.0",
-		"stylelint-scss": "^4.6.0"
+		"stylelint": "^15.10.3",
+		"stylelint-config-recommended-scss": "^13.0.0",
+		"stylelint-config-standard": "^34.0.0",
+		"stylelint-config-standard-scss": "^11.0.0",
+		"stylelint-scss": "^5.2.1"
 	},
 	"rtlcssConfig": {
 		"options": {
@@ -59,20 +58,21 @@
 		"format": "wp-scripts format",
 		"check-engines": "wp-scripts check-engines",
 		"packages-update": "wp-scripts packages-update",
-		"watch": "node-sass ./sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-		"compile:css": "node-sass sass/ -o ./ && stylelint '*.css' || true && stylelint '*.css'",
+		"watch": "node-sass ./assets/sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+		"compile:css": "node-sass assets/sass/ -o ./ && stylelint '*.css' || true && stylelint '*.css'",
 		"compile:rtl": "rtlcss style.css style-rtl.css",
-		"lint:scss": "wp-scripts lint-style './sass/**/*.scss' --fix",
+		"lint:scss": "wp-scripts lint-style './assets/sass/**/*.scss' --fix",
 		"lint:js": "wp-scripts lint-js './js/*.js' --fix",
 		"bundle": "dir-archiver --src . --dest ../clashvibes.zip --exclude .DS_Store .stylelintrc .eslintrc .git .gitattributes .github .gitignore postcss.config.js composer.json composer.lock node_modules vendor .babelrc package-lock.json package.json phpcs.xml.dist sass style.css.map .prettierrc .stylelintrc .editorconfig .vscode"
 	},
 	"dependencies": {
 		"@csstools/postcss-sass": "^5.0.1",
-		"autoprefixer": "^10.4.14",
-		"postcss": "^8.4.21",
-		"postcss-preset-env": "^8.3.1",
-		"postcss-scss": "^4.0.6",
+		"autoprefixer": "^10.4.15",
+		"node-sass": "^9.0.0",
+		"postcss": "^8.4.29",
+		"postcss-preset-env": "^9.1.3",
+		"postcss-scss": "^4.0.8",
 		"react": "^18.2.0",
-		"stylelint": "^15.5.0"
+		"stylelint-config-recommended": "^13.0.0"
 	}
 }

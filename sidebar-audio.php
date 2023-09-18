@@ -1,9 +1,8 @@
 <?php
 
 /**
+ * *PHP version 8.0
  *
- *
- * *
  * Sidebar Audio | core/sidebar-audio.php.
  *
  * @category   Sidebar_Audio
@@ -20,27 +19,27 @@
 <!--id="secondary"-->
 <aside id="secondary" class="widget-area">
 
-	<h2 id="secondary-header">
-		<?php esc_html_e( 'Audio', 'clashvibes' ); ?>
-	</h2>
+    <h2 id="secondary-header">
+        <?php esc_html_e('Audio', 'clashvibes'); ?>
+    </h2>
 
-	<section id="clashvibes-login">
-		<?php get_search_form(); ?>
-	</section>
+    <section id="clashvibes-login">
+        <?php get_search_form(); ?>
+    </section>
 
-	<!--class="widget"-->
-	<section class="sidebar-navigation">
+    <!--class="widget"-->
+    <section class="sidebar-navigation">
 
-		<?php
-		wp_nav_menu(
-			array(
-				'menu'           => 'Audio-Nav',
-				'container'      => 'nav',
-				'theme_location' => 'audio-nav',
-			)
-		);
-		?>
+        <?php
+        wp_nav_menu(
+            array(
+                'menu'           => 'Audio-Nav',
+                'container'      => 'nav',
+                'theme_location' => 'audio-nav',
+            )
+        );
+        ?>
 
-	</section>
+    </section>
 
 </aside>

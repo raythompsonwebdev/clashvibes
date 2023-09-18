@@ -1,16 +1,18 @@
 <?php
 
 /**
- * The template for displaying all pages
+ * *PHP version 8.0
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * Privacy Policy page | core/privacy-policy-page.php.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package clashvibes
+ * @category   Privacy_Policy_Page
+ * @package    Clashvibes
+ * @subpackage Privacy_Policy_Page
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/clashvibes .git
+ * @link       http:www.raythompsonwebdev.co.uk custom template.
  */
 
 get_header();
@@ -18,17 +20,17 @@ get_header();
 
 <main id="primary" class="site-main">
 
-	<h2 class="page-title"><?php echo esc_html( get_the_title() ); ?></h2>
+    <h2 class="page-title"><?php echo esc_html(get_the_title()); ?></h2>
 
-	<?php
+    <?php
 
-	while ( have_posts() ) :
-		the_post();
+    while ( have_posts() ) :
+        the_post();
 
-		get_template_part( 'template-parts/content', 'page' );
+        get_template_part('template-parts/content', 'page');
 
-	endwhile;
-	?>
+    endwhile;
+    ?>
 
 </main>
 

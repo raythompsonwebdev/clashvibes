@@ -1,10 +1,14 @@
 <?php
-
-function clashvibes_plugin_register_block_patterns()
+/**
+ * Clashvibes Block Patterns.
+ *
+ * @package clashvibes
+ */
+function Clashvibes_Plugin_Register_Block_patterns()
 {
-	if (class_exists('WP_Block_Patterns_Registry')) {
+    if (class_exists('WP_Block_Patterns_Registry')) {
 
-		$events = '<!-- wp:columns {"style":{"color":{"gradient":"radial-gradient(rgb(255,105,0) 0%,rgb(207,46,46) 100%)"}},"textColor":"white","fontSize":"medium"} -->
+        $events = '<!-- wp:columns {"style":{"color":{"gradient":"radial-gradient(rgb(255,105,0) 0%,rgb(207,46,46) 100%)"}},"textColor":"white","fontSize":"medium"} -->
     <div class="wp-block-columns has-white-color has-text-color has-background has-medium-font-size" style="background:radial-gradient(rgb(255,105,0) 0%,rgb(207,46,46) 100%)"><!-- wp:column {"width":"33.33%"} -->
     <div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"id":2562,"sizeSlug":"large","linkDestination":"none"} -->
     <figure class="wp-block-image size-large"><img src="" alt="" class="wp-image-2562"/></figure>
@@ -52,23 +56,23 @@ function clashvibes_plugin_register_block_patterns()
     <!-- /wp:column --></div>
     <!-- /wp:columns -->';
 
-		register_block_pattern_category(
-			'event-page-block-pattern',
-			array(
-				'label' => __('Single Event Page Pattern', 'clashvibes'),
-			)
-		);
+        register_block_pattern_category(
+            'event-page-block-pattern',
+            array(
+            'label' => __('Single Event Page Pattern', 'clashvibes'),
+            )
+        );
 
-		register_block_pattern(
-			'clashvibes/events-page-pattern',
-			array(
-				'title'       => __('Single Event Pattern', 'clashvibes'),
-				'description' => _x('Columns for making lists with event details. ', 'Block pattern description', 'clashvibes'),
-				'keywords'    => array('events', 'event location', 'events details , event date'),
-				'content'     => $events,
-				'categories'  => array('events-page-block-pattern'),
-			)
-		);
-	}
+        register_block_pattern(
+            'clashvibes/events-page-pattern',
+            array(
+            'title'       => __('Single Event Pattern', 'clashvibes'),
+            'description' => _x('Columns for making lists with event details. ', 'Block pattern description', 'clashvibes'),
+            'keywords'    => array('events', 'event location', 'events details , event date'),
+            'content'     => $events,
+            'categories'  => array('events-page-block-pattern'),
+            )
+        );
+    }
 }
-add_action('init', 'clashvibes_plugin_register_block_patterns');
+add_action('init', 'Clashvibes_Plugin_Register_Block_patterns');

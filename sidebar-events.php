@@ -1,9 +1,8 @@
 <?php
 
 /**
+ * *PHP version 8.0
  *
- *
- * *
  * Sidebar Video | core/sidebar-video.php.
  *
  * @category   Sidebar_Video
@@ -20,25 +19,25 @@
 <!--id="secondary"-->
 <aside id="secondary" class="widget-area">
 
-	<h2 id="secondary-header"><?php esc_html_e( 'Events', 'clashvibes' ); ?></h2>
+    <h2 id="secondary-header"><?php esc_html_e('Events', 'clashvibes'); ?></h2>
 
-	<section id="clashvibes-login">
-		<?php get_search_form(); ?>
-	</section>
+    <section id="clashvibes-login">
+        <?php get_search_form(); ?>
+    </section>
 
-	<!--class="widget"-->
-	<section class="sidebar-navigation">
+    <!--class="widget"-->
+    <section class="sidebar-navigation">
 
-		<?php
-		wp_nav_menu(
-			array(
-				'menu'           => 'Events',
-				'container'      => 'nav',
-				'theme_location' => 'events-nav',
-			)
-		);
-		?>
+        <?php
+        wp_nav_menu(
+            array(
+                'menu'           => 'Events',
+                'container'      => 'nav',
+                'theme_location' => 'events-nav',
+            )
+        );
+        ?>
 
-	</section>
+    </section>
 
 </aside>

@@ -2,9 +2,9 @@
 	"extends": [
 		"stylelint-config-standard",
 		"stylelint-config-standard-scss",
-		"stylelint-prettier/recommended"
+		"stylelint-config-recommended"
 	],
-	"plugins": ["stylelint-scss", "stylelint-prettier"],
+	"plugins": ["stylelint-scss" ],
 	"rules": {
 		"prettier/prettier": true,
 		"scss/dollar-variable-pattern": null,
@@ -16,10 +16,7 @@
 		"selector-class-pattern": null,
 		"number-leading-zero": null,
 		"at-rule-no-unknown": null,
-
 		"scss/at-rule-no-unknown": true,
-		"value-list-comma-newline-after": "never-multi-line",
-		"declaration-colon-newline-after": "always-multi-line",
 		"unit-allowed-list": [
 			"em",
 			"rem",
@@ -60,7 +57,6 @@
 				]
 			}
 		],
-		"indentation": "tab",
 		"color-hex-length": "long",
 		"color-named": null,
 		"selector-no-qualifying-type": [true, {"ignore": ["attribute"]}],
@@ -70,8 +66,6 @@
 		"comment-whitespace-inside": "always",
 		"comment-empty-line-before": "always",
 		"selector-pseudo-element-colon-notation": "double",
-		"media-feature-range-operator-space-before": "always",
-		"media-feature-range-operator-space-after": "always",
 		"keyframe-block-no-duplicate-selectors": true,
 		"selector-id-pattern": null
 	},

@@ -1,15 +1,15 @@
 <?php
 
 /**
- *
+ * *PHP version 8.0
  *
  * This is the template that displays the area of the page that contains archives
  *
  * Archives Page | core/archives.php.
  *
- * @category   Archives Page
+ * @category   Archives_Page
  * @package    Clashvibes
- * @subpackage Archives Page
+ * @subpackage Archives_Page
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
@@ -22,31 +22,31 @@ get_header();
 
 <main id="primary" class="site-main">
 
-	<?php if ( have_posts() ) : ?>
+    <?php if (have_posts() ) : ?>
 
 
-		<?php
-		the_archive_title( '<h2 class="page-title">', '</h2>' );
-		?>
+        <?php
+        the_archive_title('<h2 class="page-title">', '</h2>');
+        ?>
 
 
-		<?php
-		/* Start the Loop */
-		while ( have_posts() ) :
-			the_post();
+        <?php
+        /* Start the Loop */
+        while ( have_posts() ) :
+            the_post();
 
-			get_template_part( 'template-parts/content', 'archive' );
+            get_template_part('template-parts/content', 'archive');
 
-		endwhile;
-		?>
+        endwhile;
+        ?>
 
-	<?php else : ?>
-		<?php
+    <?php else : ?>
+        <?php
 
-		get_template_part( 'template-parts/content', 'none' );
+        get_template_part('template-parts/content', 'none');
 
-	endif;
-	?>
+    endif;
+    ?>
 
 
 </main>

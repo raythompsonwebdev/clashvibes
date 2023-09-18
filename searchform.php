@@ -1,9 +1,7 @@
 <?php
 
 /**
- *
- *
- * Template part for displaying results in search pages
+ * *PHP version 8.0
  *
  * Search | core/searchform.php.
  *
@@ -18,16 +16,16 @@
  */
 ?>
 
-<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<div>
-		<label>
-			<span class="screen-reader-text">
-				<?php esc_html_e( 'Search', 'clashvibes' ); ?>
-			</span>
+<form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
+    <div>
+        <label>
+            <span class="screen-reader-text">
+                <?php esc_html_e('Search', 'clashvibes'); ?>
+            </span>
 
-			<input type="search" class="search-field" value="<?php echo get_search_query(); ?>" name="s" title="<?php esc_attr_e( 'Search', 'clashvibes' ); ?>" />
-		</label>
+            <input type="search" class="search-field" value="<?php echo get_search_query(); ?>" name="s" title="<?php esc_attr_e('Search', 'clashvibes'); ?>" />
+        </label>
 
-		<input type="submit" class="search-submit" value="SEARCH" />
-	</div>
+        <input type="submit" class="search-submit" value="SEARCH" />
+    </div>
 </form>

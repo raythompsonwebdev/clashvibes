@@ -9,4 +9,5 @@ fonts/
 vendor/
 build/
 pattern.txt
-
+assets/js/skip-link-focus-fix.js
+.vscode/

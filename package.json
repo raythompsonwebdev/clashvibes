@@ -18,7 +18,7 @@
 	},
 	"devDependencies": {
 		"@wordpress/browserslist-config": "^5.27.0",
-		"@wordpress/scripts": "^26.15.0",
+		"@wordpress/scripts": "^26.19.0",
 		"browserslist": "^4.22.1",
 		"dir-archiver": "^2.1.0",
 		"eslint": "^8.52.0",

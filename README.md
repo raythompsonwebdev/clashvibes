@@ -1,11 +1,19 @@
 === Clashvibes ===
+
 Contributors: automattic
+
 Donate link: https://example.com/
+
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
 Requires at least: 6.0
+
 Tested up to: 6.2
+
 Requires PHP: 5.6
+
 Stable tag: 1.0.0
+
 License: GNU General Public License v2 or later
 
 ## Please be aware that this theme has been completed yet. download and use at your own risk.

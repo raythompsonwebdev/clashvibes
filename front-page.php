@@ -23,6 +23,7 @@ get_header(); ?>
     <img src="<?php echo esc_url(home_url('/')); ?>/wp-content/uploads/2023/06/sliderimage.webp" alt="<?php esc_attr_e('sliderimage', 'clashvibes'); ?>">
 
 </section>
+
 <h2><?php esc_html_e('Latest Sound Clashes ', 'clashvibes'); ?></h2>
 
 <section id="new-releases-section">

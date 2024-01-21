@@ -1,14 +1,22 @@
 === Clashvibes ===
+
 Contributors: automattic
+
 Donate link: https://example.com/
+
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
 Requires at least: 6.0
+
 Tested up to: 6.2
+
 Requires PHP: 5.6
+
 Stable tag: 1.0.0
+
 License: GNU General Public License v2 or later
 
-## Please be aware that this theme has been completed yet. download and use at your own risk.
+=== Please be aware that this theme has been completed yet. download and use at your own risk. ===
 
 Community Wordpress Theme.
 
@@ -32,14 +40,14 @@ My ultra-minimal CSS might make me look like theme tartare but that means less s
 
 == Installation ==
 
-### Requirements
+=== Requirements ===
 
 `clashvibes` requires the following dependencies:
 
 - [Node.js](https://nodejs.org/)
 - [Composer](https://getcomposer.org/)
 
-### Quick Start
+=== Quick Start ===
 
 Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
 
@@ -52,44 +60,32 @@ Clone or download this repository, change its name to something else (like, say,
 
 Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `clashvibes.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
 
-## Setup
-
-### Installation
+=== Setup ===
 
 Clone the repo
 
-```sh
 git clone git@github.com:raythompsonwebdev/mannering-woocommerce-theme.git
-```
 
 To start using all the tools that come with `clashvibes` you need to install the necessary Node.js and Composer dependencies :
 
 Install NPM packages :
 
-```sh
 npm install
-```
 
-### or
+or
 
-```sh
 yarn install
-```
 
-### or
+or
 
-```sh
 pnpm install
-```
 
 Install Composer packages :
 
-```sh
 $ composer install
 $ npm install
-```
 
-### Available CLI commands
+=== Available CLI commands ===
 
 `clashvibes` comes packed with CLI commands tailored for WordPress theme development :
 

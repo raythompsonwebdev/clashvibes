@@ -50,7 +50,7 @@
 		"eqeqeq":"error",
 		"no-with":"error",
 		"no-plusplus":"error",
-		"indent": ["error", "tab"],
+		"indent": ["error", "space"],
 		"space-in-parens": ["error", "never"],
 		"space-before-function-paren": ["error", {
 			"anonymous": "always",

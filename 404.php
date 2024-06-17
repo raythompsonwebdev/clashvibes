@@ -29,12 +29,12 @@ get_header();
 
 <div class="error-404 not-found">
     <p>
-            <?php esc_html_e(
-                'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-                'clashvibes'
-            );
+        <?php esc_html_e(
+            'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
+            'clashvibes'
+        );
 ?>
-        </p>
+    </p>
 
     <?php
     get_search_form();
